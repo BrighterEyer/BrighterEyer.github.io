@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>centos7+jdk8+maven3.5+tomcat8.5+solo | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#jdk8123456789rpm -qa | grep jdk#yum install java-1.8.0-openjdk.x86_64yum remove java-1.8.0-openjdkwget http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181">
+<meta name="keywords" content="solo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos7+jdk8+maven3.5+tomcat8.5+solo">
+<meta property="og:url" content="http://brightereyer.xyz/2018/09/25//articles/2018/09/25/1537857557716.html/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#jdk8123456789rpm -qa | grep jdk#yum install java-1.8.0-openjdk.x86_64yum remove java-1.8.0-openjdkwget http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2018-09-25T06:44:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="centos7+jdk8+maven3.5+tomcat8.5+solo">
+<meta name="twitter:description" content="#jdk8123456789rpm -qa | grep jdk#yum install java-1.8.0-openjdk.x86_64yum remove java-1.8.0-openjdkwget http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://brightereyer.xyz"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-/articles/2018/09/25/1537857557716.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/25/articles/2018/09/25/1537857557716.html/" class="article-date">
+  <time datetime="2018-09-25T06:39:17.000Z" itemprop="datePublished">2018-09-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      centos7+jdk8+maven3.5+tomcat8.5+solo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#jdk8<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep jdk</span><br><span class="line">#yum install java-1.8.0-openjdk.x86_64</span><br><span class="line">yum remove java-1.8.0-openjdk</span><br><span class="line"></span><br><span class="line">wget http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.tar.gz?AuthParam=1537775743_4940afcb8606087f72fcfb730c09aae1</span><br><span class="line"></span><br><span class="line">mv jdk-8* jdk8.tar.gz</span><br><span class="line">tar zxvf jdk8.tar.gz</span><br><span class="line">mv jdk-8u181 /usr/lib/jvm/jdk8</span><br></pre></td></tr></table></figure></p>
+<p>#下载maven<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">http://maven.apache.org/download.cgi</span><br><span class="line"></span><br><span class="line">wget http://mirrors.shu.edu.cn/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz</span><br><span class="line">tar zxvf apache-maven-3.5.4-bin.tar.gz</span><br><span class="line">mv apache-maven-3.5.4 /usr/local/maven</span><br><span class="line">chmod -R 755 /usr/local/maven</span><br></pre></td></tr></table></figure></p>
+<p>#tomcat<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.tar.gz</span><br><span class="line">tar zxvf apache-tomcat-8.5.34.tar.gz </span><br><span class="line">mv apache-tomcat-8.5.34 /usr/local/tomcat8</span><br><span class="line">chmod -R 755 /usr/local/tomcat8</span><br></pre></td></tr></table></figure></p>
+<p>#环境变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/jdk8</span><br><span class="line">export JRE_HOME=/usr/lib/jvm/jdk8/jre</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH</span><br><span class="line"></span><br><span class="line">CATALINA_HOME=/usr/local/tomcat8</span><br><span class="line">PATH=$CATALINA_HOME/bin:$PATH</span><br><span class="line">export PATH CATALINA_HOME</span><br><span class="line"></span><br><span class="line">export MAVEN_HOME=/usr/local/maven</span><br><span class="line">export PATH=$MAVEN_HOME/bin:$PATH</span><br><span class="line">#:wq</span><br><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure></p>
+<p>#solo+solo皮肤部署<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/b3log/solo.git</span><br><span class="line">cd solo/src/main/webapp/</span><br><span class="line">git clone https://github.com/b3log/solo-skins.git skins</span><br><span class="line">cd ..</span><br><span class="line">mvn install -Dmaven.test.skip=true</span><br><span class="line">cp target/solo.war /usr/local/tomcat8/webapps/</span><br><span class="line">cd /usr/local/tomcat8/webapps/solo/WEB-INF/classes</span><br><span class="line">vim latke.properties</span><br><span class="line">serverHost=域名</span><br><span class="line">serverPort=80</span><br><span class="line"></span><br><span class="line">vim /usr/local/tomcat8/conf/server.xml</span><br><span class="line">#8080改为80</span><br></pre></td></tr></table></figure></p>
+<p>#启动tomcat<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">startup.sh</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://brightereyer.xyz/2018/09/25/articles/2018/09/25/1537857557716.html/" data-id="cjmr8d9zh000g4kuq8cgpef85" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/solo/">solo</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/09/25/articles/2018/09/25/1537857714941.html/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          我的github
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/genymotion/">genymotion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-native/">react-native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/solo/">solo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/genymotion/" style="font-size: 10px;">genymotion</a> <a href="/tags/github/" style="font-size: 20px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 20px;">react-native</a> <a href="/tags/solo/" style="font-size: 10px;">solo</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/01/articles/2018/10/01/1538366260581.html/">[博客] 博客收集</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/01/articles/2018/10/01/1538358849873.html/">[hexo] github + hexo</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/01/articles/2018/10/01/1538358532907.html/">[github]windows github ssh-key</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/01/articles/2018/10/01/1538326137822.html/">[chrome] 插件大全</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/30/articles/2018/09/30/1538322120355.html/">[vpn] ssserver</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 brightereyer<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
