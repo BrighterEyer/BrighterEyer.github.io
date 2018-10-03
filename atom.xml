@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brightereyer.xyz/"/>
-  <updated>2018-10-02T23:32:14.000Z</updated>
+  <updated>2018-10-02T23:32:16.000Z</updated>
   <id>http://brightereyer.xyz/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[ios] ios</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523280000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523280000.html/</id>
+    <published>2018-10-02T23:32:16.000Z</published>
+    <updated>2018-10-02T23:32:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_31810357?t=1" target="_blank">ios</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_31810357?t=1&quot; target=&quot;_blank&quot;&gt;ios&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="ios" scheme="http://brightereyer.xyz/tags/ios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[python] python</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523270000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523270000.html/</id>
+    <published>2018-10-02T23:32:15.000Z</published>
+    <updated>2018-10-02T23:32:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/yanbober" target="_blank">python</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/yanbober&quot; target=&quot;_blank&quot;&gt;python&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://brightereyer.xyz/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>[golang] golang</title>
@@ -352,7 +400,7 @@
     <published>2018-10-02T23:32:00.000Z</published>
     <updated>2018-10-02T23:32:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>微信小程序获取当前页面的路径的方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#使用getCurrentPages可以获取当前加载中所有的页面对象的一个数组，数组最后一个就是当前页面。</span><br><span class="line"></span><br><span class="line">#获取加载的页面</span><br><span class="line">var pages = getCurrentPages();</span><br><span class="line">#获取当前页面的对象</span><br><span class="line">var currentPage = pages[pages.length-1];</span><br><span class="line">#当前页面url</span><br><span class="line">var url = currentPage.route;</span><br><span class="line">#如果要获取url中所带的参数可以查看options</span><br><span class="line">var options = currentPage.options;</span><br></pre></td></tr></table></figure></p><p><a href="http://www.wxapp-union.com" targer="_blank" target="_blank" rel="noopener">小程序社区</a><br><a href="http://pan.baidu.com/s/1c2qTFUw" targer="_blank" target="_blank" rel="noopener">小程序手册</a><br>提取码：<br>ikms</p><p><a href="http://www.lanrenmb.com/x/wenhuajiaoyu/4785.html" targer="_blank" target="_blank" rel="noopener">小程序懒人模板</a><br><a href="https://blog.csdn.net/tommenx/article/details/79773101" targer="_blank" target="_blank" rel="noopener">CSDN|考勤签到小程序</a><br><a href="http://www.cnblogs.com/kevinCoder/p/8961748.html" targer="_blank" target="_blank" rel="noopener">小程序：如何在wxml页面中调用JavaScript函数</a><br><a href="https://github.com/Tencent/weui-wxss" targer="_blank" target="_blank" rel="noopener">官方github小程序样式库</a><br><a href="https://help.aliyun.com/document_detail/59210.html?spm=5176.sms-account.108.3.22ed1cbefyaGGJ" target="_blank">阿里云短信服务文档使用指引</a><br><a href="https://github.com/BeijiYang/minaSmsVerification" target="_blank">基于阿里云的 微信小程序 短信验证 功能模块</a></p><p><a href="https://mp.weixin.qq.com/" target="_blank">微信公众平台</a><br><a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_3&index=1" target="_blank">小程序支付开发步骤</a><br><a href="https://blog.csdn.net/zhuming3834/article/details/73168056" target="_blank">微信小程序开发(五)小程序支付-统一下单</a><br><a href="https://blog.csdn.net/futruejet/article/details/72965429" target="_blank">微信小程序例子——获取用户唯一标识openid</a></p>]]></content>
+    <content type="html"><![CDATA[<p>微信小程序获取当前页面的路径的方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#使用getCurrentPages可以获取当前加载中所有的页面对象的一个数组，数组最后一个就是当前页面。</span><br><span class="line"></span><br><span class="line">#获取加载的页面</span><br><span class="line">var pages = getCurrentPages();</span><br><span class="line">#获取当前页面的对象</span><br><span class="line">var currentPage = pages[pages.length-1];</span><br><span class="line">#当前页面url</span><br><span class="line">var url = currentPage.route;</span><br><span class="line">#如果要获取url中所带的参数可以查看options</span><br><span class="line">var options = currentPage.options;</span><br></pre></td></tr></table></figure></p><p><a href="http://www.wxapp-union.com" targer="_blank" target="_blank" rel="noopener">小程序社区</a><br><a href="http://pan.baidu.com/s/1c2qTFUw" targer="_blank" target="_blank" rel="noopener">小程序手册</a><br>提取码：<br>ikms</p><p><a href="http://www.lanrenmb.com/x/wenhuajiaoyu/4785.html" targer="_blank" target="_blank" rel="noopener">小程序懒人模板</a><br><a href="https://blog.csdn.net/tommenx/article/details/79773101" targer="_blank" target="_blank" rel="noopener">CSDN|考勤签到小程序</a><br><a href="http://www.cnblogs.com/kevinCoder/p/8961748.html" targer="_blank" target="_blank" rel="noopener">小程序：如何在wxml页面中调用JavaScript函数</a><br><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/" targer="_blank" target="_blank" rel="noopener">小程序官方:WXS</a><br><a href="https://github.com/Tencent/weui-wxss" targer="_blank" target="_blank" rel="noopener">官方github小程序样式库</a><br><a href="https://help.aliyun.com/document_detail/59210.html?spm=5176.sms-account.108.3.22ed1cbefyaGGJ" target="_blank">阿里云短信服务文档使用指引</a><br><a href="https://github.com/BeijiYang/minaSmsVerification" target="_blank">基于阿里云的 微信小程序 短信验证 功能模块</a></p><p><a href="https://mp.weixin.qq.com/" target="_blank">微信公众平台</a><br><a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_3&index=1" target="_blank">小程序支付开发步骤</a><br><a href="https://blog.csdn.net/zhuming3834/article/details/73168056" target="_blank">微信小程序开发(五)小程序支付-统一下单</a><br><a href="https://blog.csdn.net/futruejet/article/details/72965429" target="_blank">微信小程序例子——获取用户唯一标识openid</a></p>]]></content>
     
     <summary type="html">
     
@@ -422,7 +470,7 @@
     <published>2018-10-01T01:54:09.000Z</published>
     <updated>2018-10-01T06:01:17.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://hexo.io/zh-cn/" target="_blank">hexo中文官网</a><br><a href="https://www.cnblogs.com/visugar/p/6821777.html" target="_blank">hexo</a><br><a href="https://blog.csdn.net/Greenovia/article/details/60576985" target="_blank">解决用Hexo和GitHub搭建博客时hexo d命令报错问题</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱地址&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;邮箱地址&quot;</span><br><span class="line">cd ~/.ssh</span><br><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br><span class="line">#hexo配置</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">vim _config.yml</span><br><span class="line">#</span><br><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> #这里的repo需要设置成git仓库的ssh链接,github用户名注意区分大小写</span><br><span class="line"> repo: git@github.com:&lt;github用户名&gt;/&lt;github用户名&gt;.github.io.git</span><br><span class="line"> branch: master</span><br><span class="line"></span><br><span class="line">#网站部署</span><br><span class="line">hexo clean  #清除缓存文件db.json和已生成的静态文件public</span><br><span class="line">hexo g   #生成网站静态文件到默认设置的public文件夹</span><br><span class="line">hexo d   #部署网站到设定的仓库</span><br></pre></td></tr></table></figure><p><a href="http://visugar.com/2017/08/01/20170801HexoPlugins/" target="_blank">Hexo博客添加SEO-评论系统-阅读统计-站长统计</a><br><a href="https://www.jianshu.com/p/465830080ea9" target="_blank">hexo+github,搭建属于自己的博客</a><br><a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank">hexo主题</a><br><a href="https://link.jianshu.com?t=https://github.com/daisygao/hexo-themes-cover" target="_blank" rel="noopener">Cover</a>- A chic theme with facebook-like cover photo<br><a href="https://link.jianshu.com?t=https://github.com/henryhuang/oishi" target="_blank" rel="noopener">Oishi</a>- A white theme based on Landscape plus and Writing.<br><a href="https://link.jianshu.com?t=https://github.com/hardywu/hexo-theme-sidebar" target="_blank" rel="noopener">Sidebar</a>- Another theme based on Light with a simple sidebar<br><a href="https://link.jianshu.com?t=https://github.com/SuperKieran/TKL" target="_blank" rel="noopener">TKL</a>- A responsive design theme for Hexo. 一个设计优雅的响应式主题<br><a href="https://link.jianshu.com?t=https://github.com/levonlin/Tinnypp" target="_blank" rel="noopener">Tinnypp</a>- A clean, simple theme based on Tinny<br><a href="https://link.jianshu.com?t=https://github.com/yunlzheng/hexo-themes-writing" target="_blank" rel="noopener">Writing</a>- A small and simple hexo theme based on Light<br><a href="https://link.jianshu.com?t=https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia</a>- Responsive and simple style 优雅简洁响应式主题，我用得就是这个<br><a href="https://link.jianshu.com?t=https://github.com/Voidly/pacman" target="_blank" rel="noopener">Pacman voidy</a>- A theme with dynamic tagcloud and dynamic snow</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://hexo.io/zh-cn/" target="_blank">hexo中文官网</a><br><a href="https://www.cnblogs.com/visugar/p/6821777.html" target="_blank">hexo</a><br><a href="https://blog.csdn.net/Greenovia/article/details/60576985" target="_blank">解决用Hexo和GitHub搭建博客时hexo d命令报错问题</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱地址&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;邮箱地址&quot;</span><br><span class="line">cd ~/.ssh</span><br><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br><span class="line">#hexo配置</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">vim _config.yml</span><br><span class="line">#</span><br><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> #这里的repo需要设置成git仓库的ssh链接,github用户名注意区分大小写</span><br><span class="line"> repo: git@github.com:&lt;github用户名&gt;/&lt;github用户名&gt;.github.io.git</span><br><span class="line"> branch: master</span><br><span class="line"></span><br><span class="line">#网站部署</span><br><span class="line">hexo clean  #清除缓存文件db.json和已生成的静态文件public</span><br><span class="line">hexo g   #生成网站静态文件到默认设置的public文件夹</span><br><span class="line">hexo d   #部署网站到设定的仓库</span><br></pre></td></tr></table></figure><p><a href="http://visugar.com/2017/08/01/20170801HexoPlugins/" target="_blank">Hexo博客添加SEO-评论系统-阅读统计-站长统计</a><br><a href="https://ziyuan.baidu.com" target="_blank">百度站长统计</a><br><a href="https://www.jianshu.com/p/465830080ea9" target="_blank">hexo+github,搭建属于自己的博客</a><br><a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank">hexo主题</a><br><a href="https://link.jianshu.com?t=https://github.com/daisygao/hexo-themes-cover" target="_blank" rel="noopener">Cover</a>- A chic theme with facebook-like cover photo<br><a href="https://link.jianshu.com?t=https://github.com/henryhuang/oishi" target="_blank" rel="noopener">Oishi</a>- A white theme based on Landscape plus and Writing.<br><a href="https://link.jianshu.com?t=https://github.com/hardywu/hexo-theme-sidebar" target="_blank" rel="noopener">Sidebar</a>- Another theme based on Light with a simple sidebar<br><a href="https://link.jianshu.com?t=https://github.com/SuperKieran/TKL" target="_blank" rel="noopener">TKL</a>- A responsive design theme for Hexo. 一个设计优雅的响应式主题<br><a href="https://link.jianshu.com?t=https://github.com/levonlin/Tinnypp" target="_blank" rel="noopener">Tinnypp</a>- A clean, simple theme based on Tinny<br><a href="https://link.jianshu.com?t=https://github.com/yunlzheng/hexo-themes-writing" target="_blank" rel="noopener">Writing</a>- A small and simple hexo theme based on Light<br><a href="https://link.jianshu.com?t=https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia</a>- Responsive and simple style 优雅简洁响应式主题，我用得就是这个<br><a href="https://link.jianshu.com?t=https://github.com/Voidly/pacman" target="_blank" rel="noopener">Pacman voidy</a>- A theme with dynamic tagcloud and dynamic snow</p>]]></content>
     
     <summary type="html">
     
@@ -435,53 +483,6 @@
     
     
       <category term="hexo" scheme="http://brightereyer.xyz/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[github]windows github ssh-key</title>
-    <link href="http://brightereyer.xyz/2018/10/01//articles/2018/10/01/1538358532907.html/"/>
-    <id>http://brightereyer.xyz/2018/10/01//articles/2018/10/01/1538358532907.html/</id>
-    <published>2018-10-01T01:52:57.000Z</published>
-    <updated>2018-10-01T01:52:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://git-scm.com/downloads" target="_blank">git bash</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱地址&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;邮箱地址&quot;</span><br><span class="line">cd ~/.ssh</span><br><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br><span class="line">echo &quot;# hexo&quot; &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git remote add origin https://github.com/&lt;github用户名&gt;/hexo.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot; target=&quot;_blank&quot;&gt;git bash&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr
-      
-    
-    </summary>
-    
-    
-      <category term="github" scheme="http://brightereyer.xyz/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[工具] 时间戳转换</title>
-    <link href="http://brightereyer.xyz/2018/10/01//articles/2018/10/01/1538352002000.html/"/>
-    <id>http://brightereyer.xyz/2018/10/01//articles/2018/10/01/1538352002000.html/</id>
-    <published>2018-10-01T00:00:02.000Z</published>
-    <updated>2018-10-01T00:00:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://tool.chinaz.com/Tools/unixtime.aspx" target="_blank">站长工具</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://tool.chinaz.com/Tools/unixtime.aspx&quot; target=&quot;_blank&quot;&gt;站长工具&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="http://brightereyer.xyz/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
