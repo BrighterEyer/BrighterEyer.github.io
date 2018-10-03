@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brightereyer.xyz/"/>
-  <updated>2018-10-01T04:09:17.000Z</updated>
+  <updated>2018-10-02T23:32:06.000Z</updated>
   <id>http://brightereyer.xyz/</id>
   
   <author>
@@ -15,6 +15,192 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[svn] svn获取指定版本号</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523180000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523180000.html/</id>
+    <published>2018-10-02T23:32:06.000Z</published>
+    <updated>2018-10-02T23:32:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn update -r r&lt;版本数字&gt; &lt;文件名&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla
+      
+    
+    </summary>
+    
+    
+      <category term="svn" scheme="http://brightereyer.xyz/tags/svn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Android] Android SDK代理服务器解决国内不能更新下载问题</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523170000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523170000.html/</id>
+    <published>2018-10-02T23:32:05.000Z</published>
+    <updated>2018-10-02T23:32:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">File-&gt;Settings-&gt;Appearance &amp; Behavior-&gt;System Settings-&gt;Android SDK-&gt;</span><br><span class="line">SDK Update Sites-&gt;&quot;+&quot;-&gt;</span><br><span class="line">neusoft</span><br><span class="line">http://mirrors.neusoft.edu.cn/android/repository/repository-12.xml</span><br></pre></td></tr></table></figure><p><a href="http://tools.android-studio.org/index.php/proxy" target="_blank">Android SDK 在线更新镜像服务器资源</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://brightereyer.xyz/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[git] gitbash闪退</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523160000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523160000.html/</id>
+    <published>2018-10-02T23:32:04.000Z</published>
+    <updated>2018-10-02T23:32:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#报错:</span><br><span class="line">#fatal: open /dev/null or dup failed: No Such file or directory</span><br><span class="line"></span><br><span class="line">若以下方法解决不了:</span><br><span class="line">应当重装电脑</span><br><span class="line"></span><br><span class="line">#非即插即用驱动文件null.sys问题</span><br><span class="line">&lt;a href=&quot;https://pan.baidu.com/s/11N_Dtnv5Twn9LFQFoIytjg&quot; target=&quot;_blank&quot;&gt;null.sys&lt;/a&gt;</span><br><span class="line">提取码:</span><br><span class="line">ctrn</span><br><span class="line">#null.sys位置:C:\Windows\System32\drivers\null.sys</span><br><span class="line">cd C:\Windows\System32</span><br><span class="line">#以管理员身份运行cmd.exe</span><br><span class="line">#sfc /scannow</span><br><span class="line">DISM.exe /Online /Cleanup-image /Scanhealth</span><br><span class="line">DISM.exe /Online /Cleanup-image /Restorehealth</span><br><span class="line">sfc /scannow</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/sdhongjun/article/details/52134172</span><br><span class="line">右键点击&quot;我的电脑&quot;-&gt;管理-&gt;计算机管理(本地)-&gt;系统工具-&gt;设备管理器，勾选显示隐藏的设备：</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://brightereyer.xyz/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[java] websocket</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523150000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523150000.html/</id>
+    <published>2018-10-02T23:32:03.000Z</published>
+    <updated>2018-10-02T23:32:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/yjc_1111/article/details/78831610" target="_blank">WebSocket的两种简单实现，Html5与STOMP</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/yjc_1111/article/details/78831610&quot; target=&quot;_blank&quot;&gt;WebSocket的两种简单实现，Html5与STOMP&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[ngrok] ngrok搭建</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523140000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523140000.html/</id>
+    <published>2018-10-02T23:32:02.000Z</published>
+    <updated>2018-10-02T23:32:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/zhangguo5/article/details/77848658" target="_blank">一分钟实现内网穿透（ngrok服务器搭建）</a><br><a href="https://blog.csdn.net/yjc_1111/article/details/79353718" target="_blank">10分钟教你搭建自己的ngrok服务器</a><br><a href="https://github.com/fatedier/frp/blob/master/README_zh.md" target="_blank">frp</a><br><a href="http://ngrok.ciqiuwl.cn/" target="_blank">小米球</a><br><a href="http://www.ngrok.cn/" target="_blank">ngrok中文</a><br><a href="https://www.ngrok.cc/" target="_blank">Sunny-Ngrok</a><br><a href="" target="_blank"></a><br><a href="" target="_blank"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">#https://github.com/inconshreveable/ngrok</span><br><span class="line"></span><br><span class="line">mkdir ngrok</span><br><span class="line">apt-get update</span><br><span class="line">apt-get install git golang</span><br><span class="line">git clone https://github.com/inconshreveable/ngrok.git ngrok</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">域名添加A记录</span><br><span class="line">将*.ngrok与ngrok指向服务器公网ip</span><br><span class="line"></span><br><span class="line">#设置环境变量，Go语言的安装位置</span><br><span class="line">export GOPATH=/usr/local/ngrok/</span><br><span class="line">export NGROK_DOMAIN=&quot;ngrok.&lt;域名&gt;&quot;</span><br><span class="line">#为域名生成证书</span><br><span class="line">openssl genrsa -out rootCA.key 2048</span><br><span class="line">openssl req -x509 -new -nodes -key rootCA.key -subj &quot;/CN=$NGROK_DOMAIN&quot; -days 5000 -out rootCA.pem</span><br><span class="line">openssl genrsa -out server.key 2048</span><br><span class="line">openssl req -new -key server.key -subj &quot;/CN=$NGROK_DOMAIN&quot; -out server.csr</span><br><span class="line">openssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out server.crt -days 5000</span><br><span class="line"></span><br><span class="line">#拷贝证书到指定位置</span><br><span class="line">cp rootCA.pem assets/client/tls/ngrokroot.crt</span><br><span class="line">cp server.crt assets/server/tls/snakeoil.crt</span><br><span class="line">cp server.key assets/server/tls/snakeoil.key</span><br><span class="line"></span><br><span class="line">#########   编译 start   #########</span><br><span class="line">#86位</span><br><span class="line">#win服务端</span><br><span class="line">GOOS=windows GOARCH=386 make release-server </span><br><span class="line">#win客户端</span><br><span class="line">GOOS=windows GOARCH=386 make release-client</span><br><span class="line">#linux服务端</span><br><span class="line">GOOS=linux GOARCH=386 make release-server</span><br><span class="line">#linux客户端</span><br><span class="line">GOOS=linux GOARCH=386 make release-client</span><br><span class="line"></span><br><span class="line">#64位</span><br><span class="line">#win服务端</span><br><span class="line">GOOS=windows GOARCH=amd64 make release-server </span><br><span class="line">#win客户端</span><br><span class="line">GOOS=windows GOARCH=amd64 make release-client</span><br><span class="line">#linux服务端</span><br><span class="line">GOOS=linux GOARCH=amd64 make release-server</span><br><span class="line">#linux客户端</span><br><span class="line">GOOS=linux GOARCH=amd64 make release-client</span><br><span class="line"></span><br><span class="line">#########   编译 end   #########</span><br><span class="line">ls bin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#编辑服务端启动脚本</span><br><span class="line">vim start_ngrokd.sh</span><br><span class="line">#!/bin/bash</span><br><span class="line">./bin/ngrokd -tlsKey=&quot;snakeoil.key&quot; -tlsCrt=&quot;snakeoil.crt&quot; -domain=&quot;ngrok.&lt;域名&gt;&quot; -httpAddr=&quot;:801&quot; -httpsAddr=&quot;:802&quot; #-tunnelAddr=&quot;:4443&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#一键部署ngrok服务器（CentOS、Debian、Ubuntu）</span><br><span class="line">https://github.com/clangcn/ngrok-one-key-install</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#编辑ngrok配置文件</span><br><span class="line">notepad ngrok.cfg</span><br><span class="line">server_addr: &quot;ngrok.&lt;域名&gt;:4443&quot;</span><br><span class="line">trust_host_root_certs: false</span><br><span class="line">#</span><br><span class="line">ngrok.exe -subdomain &lt;二级域名&gt; -config=ngrok.cfg 8987</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/zhangguo5/article/details/77848658&quot; target=&quot;_blank&quot;&gt;一分钟实现内网穿透（ngrok服务器搭建）&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csd
+      
+    
+    </summary>
+    
+    
+      <category term="ngrok" scheme="http://brightereyer.xyz/tags/ngrok/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[linux] Linux禁止IP、解封IP的方法</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523130000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523130000.html/</id>
+    <published>2018-10-02T23:32:01.000Z</published>
+    <updated>2018-10-02T23:32:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#屏蔽单个IP的命令是</span><br><span class="line">iptables -I INPUT -s 123.45.6.7 -j DROP</span><br><span class="line">#封IP段即从123.45.6.1到123.45.6.254的命令是</span><br><span class="line">iptables -I INPUT -s 123.45.6.0/24 -j DROP</span><br><span class="line">#封IP段即从123.45.0.1到123.45.255.254的命令</span><br><span class="line">iptables -I INPUT -s 124.45.0.0/16 -j DROP</span><br><span class="line">#封整个段即从123.0.0.1到123.255.255.254的命令</span><br><span class="line">iptables -I INPUT -s 123.0.0.0/8 -j DROP</span><br><span class="line">#指令I是insert指令</span><br><span class="line">iptables-save</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://brightereyer.xyz/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[小程序] 微信小程序</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523120000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523120000.html/</id>
+    <published>2018-10-02T23:32:00.000Z</published>
+    <updated>2018-10-02T23:32:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>微信小程序获取当前页面的路径的方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#使用getCurrentPages可以获取当前加载中所有的页面对象的一个数组，数组最后一个就是当前页面。</span><br><span class="line"></span><br><span class="line">#获取加载的页面</span><br><span class="line">var pages = getCurrentPages();</span><br><span class="line">#获取当前页面的对象</span><br><span class="line">var currentPage = pages[pages.length-1];</span><br><span class="line">#当前页面url</span><br><span class="line">var url = currentPage.route;</span><br><span class="line">#如果要获取url中所带的参数可以查看options</span><br><span class="line">var options = currentPage.options;</span><br></pre></td></tr></table></figure></p><p><a href="http://www.wxapp-union.com" targer="_blank" target="_blank" rel="noopener">小程序社区</a><br><a href="http://pan.baidu.com/s/1c2qTFUw" targer="_blank" target="_blank" rel="noopener">小程序手册</a><br>密码：<br>ikms</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;微信小程序获取当前页面的路径的方式&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="小程序" scheme="http://brightereyer.xyz/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[工具] 在线工具</title>
+    <link href="http://brightereyer.xyz/2018/10/02//articles/2018/10/02/1538438401000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/02//articles/2018/10/02/1538438401000.html/</id>
+    <published>2018-10-02T00:00:01.000Z</published>
+    <updated>2018-10-02T00:00:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.it1352.com/OnLineTools/Index" target="_blank">IT屋</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.it1352.com/OnLineTools/Index&quot; target=&quot;_blank&quot;&gt;IT屋&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="http://brightereyer.xyz/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>[博客] 博客收集</title>
@@ -293,75 +479,6 @@
     
     
       <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[工具] sublime text3</title>
-    <link href="http://brightereyer.xyz/2018/09/30//articles/2018/09/30/1538295403924.html/"/>
-    <id>http://brightereyer.xyz/2018/09/30//articles/2018/09/30/1538295403924.html/</id>
-    <published>2018-09-30T08:20:19.000Z</published>
-    <updated>2018-09-30T08:20:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.sublimetext.com/" target="_blank">sublime text3</a><br><a href="https://packagecontrol.io/" target="_blank">插件</a></p><p>Package Control<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os; pf = &apos;PackageControl.sublime-package&apos;; ipp = sublime.installed_packages_path();urllib.request.install_opener( urllib.request.build_opener(urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf),&apos;wb&apos;).write(urllib.request.urlopen( &apos;http://sublime.wbond.net/&apos; + pf.replace(&apos;&apos;,&apos;%20&apos;)).read())</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://www.sublimetext.com/&quot; target=&quot;_blank&quot;&gt;sublime text3&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://packagecontrol.io/&quot; target=&quot;_blank&quot;&gt;插件&lt;/a&gt;&lt;/p
-      
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="http://brightereyer.xyz/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的github</title>
-    <link href="http://brightereyer.xyz/2018/09/25//articles/2018/09/25/1537857714941.html/"/>
-    <id>http://brightereyer.xyz/2018/09/25//articles/2018/09/25/1537857714941.html/</id>
-    <published>2018-09-25T06:41:55.000Z</published>
-    <updated>2018-09-25T06:42:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/BrighterEyer" target="_blank">我的github</a><br><a href="https://brightereyer.github.io/Chess" target="_blank">象棋</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://github.com/BrighterEyer&quot; target=&quot;_blank&quot;&gt;我的github&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://brightereyer.github.io/Chess&quot; target=&quot;_blank&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="github" scheme="http://brightereyer.xyz/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>centos7+jdk8+maven3.5+tomcat8.5+solo</title>
-    <link href="http://brightereyer.xyz/2018/09/25//articles/2018/09/25/1537857557716.html/"/>
-    <id>http://brightereyer.xyz/2018/09/25//articles/2018/09/25/1537857557716.html/</id>
-    <published>2018-09-25T06:39:17.000Z</published>
-    <updated>2018-09-25T06:44:47.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>#jdk8<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep jdk</span><br><span class="line">#yum install java-1.8.0-openjdk.x86_64</span><br><span class="line">yum remove java-1.8.0-openjdk</span><br><span class="line"></span><br><span class="line">wget http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.tar.gz?AuthParam=1537775743_4940afcb8606087f72fcfb730c09aae1</span><br><span class="line"></span><br><span class="line">mv jdk-8* jdk8.tar.gz</span><br><span class="line">tar zxvf jdk8.tar.gz</span><br><span class="line">mv jdk-8u181 /usr/lib/jvm/jdk8</span><br></pre></td></tr></table></figure></p><p>#下载maven<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">http://maven.apache.org/download.cgi</span><br><span class="line"></span><br><span class="line">wget http://mirrors.shu.edu.cn/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz</span><br><span class="line">tar zxvf apache-maven-3.5.4-bin.tar.gz</span><br><span class="line">mv apache-maven-3.5.4 /usr/local/maven</span><br><span class="line">chmod -R 755 /usr/local/maven</span><br></pre></td></tr></table></figure></p><p>#tomcat<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.tar.gz</span><br><span class="line">tar zxvf apache-tomcat-8.5.34.tar.gz </span><br><span class="line">mv apache-tomcat-8.5.34 /usr/local/tomcat8</span><br><span class="line">chmod -R 755 /usr/local/tomcat8</span><br></pre></td></tr></table></figure></p><p>#环境变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/jdk8</span><br><span class="line">export JRE_HOME=/usr/lib/jvm/jdk8/jre</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH</span><br><span class="line"></span><br><span class="line">CATALINA_HOME=/usr/local/tomcat8</span><br><span class="line">PATH=$CATALINA_HOME/bin:$PATH</span><br><span class="line">export PATH CATALINA_HOME</span><br><span class="line"></span><br><span class="line">export MAVEN_HOME=/usr/local/maven</span><br><span class="line">export PATH=$MAVEN_HOME/bin:$PATH</span><br><span class="line">#:wq</span><br><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure></p><p>#solo+solo皮肤部署<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/b3log/solo.git</span><br><span class="line">cd solo/src/main/webapp/</span><br><span class="line">git clone https://github.com/b3log/solo-skins.git skins</span><br><span class="line">cd ..</span><br><span class="line">mvn install -Dmaven.test.skip=true</span><br><span class="line">cp target/solo.war /usr/local/tomcat8/webapps/</span><br><span class="line">cd /usr/local/tomcat8/webapps/solo/WEB-INF/classes</span><br><span class="line">vim latke.properties</span><br><span class="line">serverHost=域名</span><br><span class="line">serverPort=80</span><br><span class="line"></span><br><span class="line">vim /usr/local/tomcat8/conf/server.xml</span><br><span class="line">#8080改为80</span><br></pre></td></tr></table></figure></p><p>#启动tomcat<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">startup.sh</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;#jdk8&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br
-      
-    
-    </summary>
-    
-    
-      <category term="solo" scheme="http://brightereyer.xyz/tags/solo/"/>
     
   </entry>
   
