@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brightereyer.xyz/"/>
-  <updated>2018-10-02T23:32:11.000Z</updated>
+  <updated>2018-10-02T23:32:14.000Z</updated>
   <id>http://brightereyer.xyz/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[golang] golang</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523260000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523260000.html/</id>
+    <published>2018-10-02T23:32:14.000Z</published>
+    <updated>2018-10-02T23:32:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://studygolang.com/" target="_blank">Go语言中文网</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://studygolang.com/&quot; target=&quot;_blank&quot;&gt;Go语言中文网&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="golang" scheme="http://brightereyer.xyz/tags/golang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[springboot] springboot</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523250000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523250000.html/</id>
+    <published>2018-10-02T23:32:13.000Z</published>
+    <updated>2018-10-02T23:32:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://gitee.com/y_project/RuoYi" target="_blank">RuoYi</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://gitee.com/y_project/RuoYi&quot; target=&quot;_blank&quot;&gt;RuoYi&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[cocos] CocosCreator教程</title>
+    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523240000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523240000.html/</id>
+    <published>2018-10-02T23:32:12.000Z</published>
+    <updated>2018-10-02T23:32:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.byjth.com/CocosCreator/66.html" target="_blank">CocosCreator教程</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.byjth.com/CocosCreator/66.html&quot; target=&quot;_blank&quot;&gt;CocosCreator教程&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="cocos" scheme="http://brightereyer.xyz/tags/cocos/"/>
+    
+  </entry>
   
   <entry>
     <title>[npm] cnpmjc和sinopia搭建私有仓库</title>
@@ -47,7 +119,7 @@
     <published>2018-10-02T23:32:10.000Z</published>
     <updated>2018-10-02T23:32:10.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/mingforyou/p/7153706.html" target="_blank">js实现map</a><br><a href="https://blog.csdn.net/zhangli865621030/article/details/45307087" target="_blank">JS中的Map基本操作</a><br><a href="https://github.com/BrighterEyer/Chess/blob/master/js/commons.js" target="_blank">JS中的Map基本操作</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/mingforyou/p/7153706.html" target="_blank">js实现map</a><br><a href="https://blog.csdn.net/zhangli865621030/article/details/45307087" target="_blank">JS中的Map基本操作</a><br><a href="https://github.com/BrighterEyer/Chess/blob/master/js/commons.js" target="_blank">JS中的Map基本操作</a></p><p>小程序HashMap.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">var app = getApp();</span><br><span class="line"></span><br><span class="line">/** js实现hashmap数据结构 */</span><br><span class="line">class HashMap &#123;</span><br><span class="line"></span><br><span class="line">  constructor() &#123;</span><br><span class="line">    /** 存放键的数组(遍历用到) */</span><br><span class="line">    this.keys = new Array();</span><br><span class="line">    /** 存放数据 */</span><br><span class="line">    this.data = new Object();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 放入一个键值对   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   * @param &#123;Object&#125; value   </span><br><span class="line">   */</span><br><span class="line">  put(key, value) &#123;</span><br><span class="line">    if (this.data[key] == null) &#123;</span><br><span class="line">      this.keys.push(key);</span><br><span class="line">    &#125;</span><br><span class="line">    this.data[key] = value;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取某键对应的值   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   * @return &#123;Object&#125; value   </span><br><span class="line">   */</span><br><span class="line">  get(key) &#123;</span><br><span class="line">    return this.data[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 删除一个键值对   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   */</span><br><span class="line">  remove(key) &#123;</span><br><span class="line">    this.keys.remove(key);</span><br><span class="line">    this.data[key] = null;</span><br><span class="line">    //delete this.data[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 遍历Map,执行处理函数   </span><br><span class="line">   * @param &#123;Function&#125; 回调函数 function(key,value,index)&#123;..&#125;   </span><br><span class="line">   */</span><br><span class="line">  each(fn) &#123;</span><br><span class="line">    if (typeof fn != &apos;function&apos;) &#123;</span><br><span class="line">      return;</span><br><span class="line">    &#125;</span><br><span class="line">    var len = this.keys.length;</span><br><span class="line">    for (var i = 0; i &lt; len; i++) &#123;</span><br><span class="line">      var k = this.keys[i];</span><br><span class="line">      fn(k, this.data[k], i);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取键值数组(类似Java的entrySet())   </span><br><span class="line">   * @return 键值对象&#123;key,value&#125;的数组   </span><br><span class="line">   */</span><br><span class="line">  entrys() &#123;</span><br><span class="line">    var len = this.keys.length;</span><br><span class="line">    var entrys = new Array(len);</span><br><span class="line">    for (var i = 0; i &lt; len; i++) &#123;</span><br><span class="line">      entrys[i] = &#123;</span><br><span class="line">        key: this.keys[i],</span><br><span class="line">        value: this.data[i]</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    return entrys;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 判断Map是否为空   </span><br><span class="line">   */</span><br><span class="line">  isEmpty() &#123;</span><br><span class="line">    return this.keys.length == 0;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取键值对数量   </span><br><span class="line">   */</span><br><span class="line">  size() &#123;</span><br><span class="line">    return this.keys.length;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 重写toString    </span><br><span class="line">   */</span><br><span class="line">  toString() &#123;</span><br><span class="line">    var s = &quot;&#123;&quot;;</span><br><span class="line">    for (var i = 0; i &lt; this.keys.length; i++, s += &apos;,&apos;) &#123;</span><br><span class="line">      var k = this.keys[i];</span><br><span class="line">      s += k + &quot;=&quot; + this.data[k];</span><br><span class="line">    &#125;</span><br><span class="line">    s += &quot;&#125;&quot;;</span><br><span class="line">    return s;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default HashMap;</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
@@ -234,7 +306,7 @@
     <published>2018-10-02T23:32:02.000Z</published>
     <updated>2018-10-02T23:32:02.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/zhangguo5/article/details/77848658" target="_blank">一分钟实现内网穿透（ngrok服务器搭建）</a><br><a href="https://blog.csdn.net/yjc_1111/article/details/79353718" target="_blank">10分钟教你搭建自己的ngrok服务器</a><br><a href="https://github.com/fatedier/frp/blob/master/README_zh.md" target="_blank">frp</a><br><a href="http://ngrok.ciqiuwl.cn/" target="_blank">小米球</a><br><a href="http://www.ngrok.cn/" target="_blank">ngrok中文</a><br><a href="https://www.ngrok.cc/" target="_blank">Sunny-Ngrok</a><br><a href="" target="_blank"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">#https://github.com/inconshreveable/ngrok</span><br><span class="line"></span><br><span class="line">mkdir ngrok</span><br><span class="line">apt-get update</span><br><span class="line">apt-get install git golang</span><br><span class="line">git clone https://github.com/inconshreveable/ngrok.git ngrok</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">域名添加A记录</span><br><span class="line">将*.ngrok与ngrok指向服务器公网ip</span><br><span class="line"></span><br><span class="line">#设置环境变量，Go语言的安装位置</span><br><span class="line">export GOPATH=/usr/local/ngrok/</span><br><span class="line">export NGROK_DOMAIN=&quot;ngrok.&lt;域名&gt;&quot;</span><br><span class="line">#为域名生成证书</span><br><span class="line">openssl genrsa -out rootCA.key 2048</span><br><span class="line">openssl req -x509 -new -nodes -key rootCA.key -subj &quot;/CN=$NGROK_DOMAIN&quot; -days 5000 -out rootCA.pem</span><br><span class="line">openssl genrsa -out server.key 2048</span><br><span class="line">openssl req -new -key server.key -subj &quot;/CN=$NGROK_DOMAIN&quot; -out server.csr</span><br><span class="line">openssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out server.crt -days 5000</span><br><span class="line"></span><br><span class="line">#拷贝证书到指定位置</span><br><span class="line">cp rootCA.pem assets/client/tls/ngrokroot.crt</span><br><span class="line">cp server.crt assets/server/tls/snakeoil.crt</span><br><span class="line">cp server.key assets/server/tls/snakeoil.key</span><br><span class="line"></span><br><span class="line">#########   编译 start   #########</span><br><span class="line">#86位</span><br><span class="line">#win服务端</span><br><span class="line">GOOS=windows GOARCH=386 make release-server </span><br><span class="line">#win客户端</span><br><span class="line">GOOS=windows GOARCH=386 make release-client</span><br><span class="line">#linux服务端</span><br><span class="line">GOOS=linux GOARCH=386 make release-server</span><br><span class="line">#linux客户端</span><br><span class="line">GOOS=linux GOARCH=386 make release-client</span><br><span class="line"></span><br><span class="line">#64位</span><br><span class="line">#win服务端</span><br><span class="line">GOOS=windows GOARCH=amd64 make release-server </span><br><span class="line">#win客户端</span><br><span class="line">GOOS=windows GOARCH=amd64 make release-client</span><br><span class="line">#linux服务端</span><br><span class="line">GOOS=linux GOARCH=amd64 make release-server</span><br><span class="line">#linux客户端</span><br><span class="line">GOOS=linux GOARCH=amd64 make release-client</span><br><span class="line"></span><br><span class="line">#########   编译 end   #########</span><br><span class="line">ls bin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#编辑服务端启动脚本</span><br><span class="line">vim start_ngrokd.sh</span><br><span class="line">#!/bin/bash</span><br><span class="line">./bin/ngrokd -tlsKey=&quot;snakeoil.key&quot; -tlsCrt=&quot;snakeoil.crt&quot; -domain=&quot;ngrok.&lt;域名&gt;&quot; -httpAddr=&quot;:801&quot; -httpsAddr=&quot;:802&quot; #-tunnelAddr=&quot;:4443&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#一键部署ngrok服务器（CentOS、Debian、Ubuntu）</span><br><span class="line">https://github.com/clangcn/ngrok-one-key-install</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#编辑ngrok配置文件</span><br><span class="line">notepad ngrok.cfg</span><br><span class="line">server_addr: &quot;ngrok.&lt;域名&gt;:4443&quot;</span><br><span class="line">trust_host_root_certs: false</span><br><span class="line">#</span><br><span class="line">ngrok.exe -subdomain &lt;二级域名&gt; -config=ngrok.cfg 8987</span><br></pre></td></tr></table></figure><p><a href="http://freenat.win/" target="_blank">免费frp内网穿透服务</a><br><a href="https://www.jianshu.com/p/405fed75486c" target="_blank">Ngrok配置和使用</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/zhangguo5/article/details/77848658" target="_blank">一分钟实现内网穿透（ngrok服务器搭建）</a><br><a href="https://blog.csdn.net/yjc_1111/article/details/79353718" target="_blank">10分钟教你搭建自己的ngrok服务器</a><br><a href="https://github.com/fatedier/frp/blob/master/README_zh.md" target="_blank">frp</a><br><a href="http://ngrok.ciqiuwl.cn/" target="_blank">小米球</a><br><a href="http://www.ngrok.cn/" target="_blank">ngrok中文</a><br><a href="https://www.ngrok.cc/" target="_blank">Sunny-Ngrok</a><br><a href="" target="_blank"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">#https://github.com/inconshreveable/ngrok</span><br><span class="line"></span><br><span class="line">mkdir ngrok</span><br><span class="line">apt-get update</span><br><span class="line">apt-get install git golang</span><br><span class="line">git clone https://github.com/inconshreveable/ngrok.git ngrok</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">域名添加A记录</span><br><span class="line">将*.ngrok与ngrok指向服务器公网ip</span><br><span class="line"></span><br><span class="line">#设置环境变量，Go语言的安装位置</span><br><span class="line">export GOPATH=/usr/local/ngrok/</span><br><span class="line">export NGROK_DOMAIN=&quot;ngrok.&lt;域名&gt;&quot;</span><br><span class="line">#为域名生成证书</span><br><span class="line">openssl genrsa -out rootCA.key 2048</span><br><span class="line">openssl req -x509 -new -nodes -key rootCA.key -subj &quot;/CN=$NGROK_DOMAIN&quot; -days 5000 -out rootCA.pem</span><br><span class="line">openssl genrsa -out server.key 2048</span><br><span class="line">openssl req -new -key server.key -subj &quot;/CN=$NGROK_DOMAIN&quot; -out server.csr</span><br><span class="line">openssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out server.crt -days 5000</span><br><span class="line"></span><br><span class="line">#拷贝证书到指定位置</span><br><span class="line">cp rootCA.pem assets/client/tls/ngrokroot.crt</span><br><span class="line">cp server.crt assets/server/tls/snakeoil.crt</span><br><span class="line">cp server.key assets/server/tls/snakeoil.key</span><br><span class="line"></span><br><span class="line">#########   编译 start   #########</span><br><span class="line">#86位</span><br><span class="line">#win服务端</span><br><span class="line">GOOS=windows GOARCH=386 make release-server </span><br><span class="line">#win客户端</span><br><span class="line">GOOS=windows GOARCH=386 make release-client</span><br><span class="line">#linux服务端</span><br><span class="line">GOOS=linux GOARCH=386 make release-server</span><br><span class="line">#linux客户端</span><br><span class="line">GOOS=linux GOARCH=386 make release-client</span><br><span class="line"></span><br><span class="line">#64位</span><br><span class="line">#win服务端</span><br><span class="line">GOOS=windows GOARCH=amd64 make release-server </span><br><span class="line">#win客户端</span><br><span class="line">GOOS=windows GOARCH=amd64 make release-client</span><br><span class="line">#linux服务端</span><br><span class="line">GOOS=linux GOARCH=amd64 make release-server</span><br><span class="line">#linux客户端</span><br><span class="line">GOOS=linux GOARCH=amd64 make release-client</span><br><span class="line"></span><br><span class="line">#########   编译 end   #########</span><br><span class="line">ls bin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#编辑服务端启动脚本</span><br><span class="line">vim start_ngrokd.sh</span><br><span class="line">#!/bin/bash</span><br><span class="line">./bin/ngrokd -tlsKey=&quot;snakeoil.key&quot; -tlsCrt=&quot;snakeoil.crt&quot; -domain=&quot;ngrok.&lt;域名&gt;&quot; -httpAddr=&quot;:801&quot; -httpsAddr=&quot;:802&quot; #-tunnelAddr=&quot;:4443&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#一键部署ngrok服务器（CentOS、Debian、Ubuntu）</span><br><span class="line">https://github.com/clangcn/ngrok-one-key-install</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#编辑ngrok配置文件</span><br><span class="line">notepad ngrok.cfg</span><br><span class="line">server_addr: &quot;ngrok.&lt;域名&gt;:4443&quot;</span><br><span class="line">trust_host_root_certs: false</span><br><span class="line">#</span><br><span class="line">ngrok.exe -subdomain &lt;二级域名&gt; -config=ngrok.cfg &lt;客户端端口&gt;</span><br></pre></td></tr></table></figure><p><a href="http://freenat.win/" target="_blank">免费frp内网穿透服务</a><br><a href="https://www.jianshu.com/p/405fed75486c" target="_blank">Ngrok配置和使用</a></p>]]></content>
     
     <summary type="html">
     
@@ -410,76 +482,6 @@
     
     
       <category term="工具" scheme="http://brightereyer.xyz/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[二维码] 微信二维码生成</title>
-    <link href="http://brightereyer.xyz/2018/10/01//articles/2018/10/01/1538352001000.html/"/>
-    <id>http://brightereyer.xyz/2018/10/01//articles/2018/10/01/1538352001000.html/</id>
-    <published>2018-10-01T00:00:01.000Z</published>
-    <updated>2018-10-01T00:00:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://cli.im/weixin" target="_blank">草料二维码</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://cli.im/weixin&quot; target=&quot;_blank&quot;&gt;草料二维码&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="二维码" scheme="http://brightereyer.xyz/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[thinkphp] thinkphp</title>
-    <link href="http://brightereyer.xyz/2018/10/01//articles/2018/10/01/1538352000.html/"/>
-    <id>http://brightereyer.xyz/2018/10/01//articles/2018/10/01/1538352000.html/</id>
-    <published>2018-10-01T00:00:00.000Z</published>
-    <updated>2018-10-01T00:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/24ab78f619b6" target="_blank">简书|快速上手ThinkPHP 5.0</a><br><a href="https://github.com/SperkJJ/ThinkPHP5" target="_blank">基于ThinkPHP5实现微信自动登录、微信支付、支付宝支付、Web推送、阿里云短信、极光推送、二维码生成</a></p><p>qrcode<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/SperkJJ/ThinkPHP5/tree/master/TP5-QRcode/controller</span><br><span class="line">https://github.com/endroid/QrCode</span><br></pre></td></tr></table></figure></p><p><a href="http://www.hotxf.com/27" target="_blank">小风博客</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/24ab78f619b6&quot; target=&quot;_blank&quot;&gt;简书|快速上手ThinkPHP 5.0&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/SperkJJ/ThinkPHP5
-      
-    
-    </summary>
-    
-    
-      <category term="thinkphp" scheme="http://brightereyer.xyz/tags/thinkphp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[chrome] 插件大全</title>
-    <link href="http://brightereyer.xyz/2018/10/01//articles/2018/10/01/1538326137822.html/"/>
-    <id>http://brightereyer.xyz/2018/10/01//articles/2018/10/01/1538326137822.html/</id>
-    <published>2018-09-30T16:48:57.000Z</published>
-    <updated>2018-10-01T05:35:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://chromecj.com/</span><br></pre></td></tr></table></figure><p><a href="http://www.cnplugins.com/devtool/postman/" target="_blank">postman插件</a></p><p>详解<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">https://www.jianshu.com/p/35678284ce78</span><br><span class="line">https://www.cnblogs.com/mafly/p/postman.html</span><br><span class="line">http://chromecj.com/utilities/2015-04/423/download.html</span><br><span class="line">http://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip</span><br><span class="line">http://chromecj.com/Handler/Download/423</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla
-      
-    
-    </summary>
-    
-    
-      <category term="chrome" scheme="http://brightereyer.xyz/tags/chrome/"/>
     
   </entry>
   
