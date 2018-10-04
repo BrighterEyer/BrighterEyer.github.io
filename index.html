@@ -96,7 +96,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/04/1538661790000.html/" data-id="cjmunw8y2001fsouqnuwh83ir" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/04/1538661790000.html/" data-id="cjmuolrq3001h5ouqbhp8pjdg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
@@ -130,13 +130,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Could not GET xxx, Received status code 400 from server Bad Request<br><a href="https://blog.csdn.net/lqx_sunhan/article/details/82598600" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">notepad %USERPROFILE%/.gradle/gradle.properties</span><br><span class="line"></span><br><span class="line">systemProp.https.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyPort=80</span><br><span class="line">#systemProp.http.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">systemProp.http.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">#systemProp.http.proxyPort=80</span><br></pre></td></tr></table></figure></p>
+        <p>Could not GET xxx, Received status code 400 from server Bad Request<br><a href="https://blog.csdn.net/lqx_sunhan/article/details/82633275" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#build.gradle中的maven url去远程下载,这里的本地缓存目录</span><br><span class="line">start %USERPROFILE%\.gradle\caches\modules-2\files-2.1</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">notepad %USERPROFILE%\.gradle\gradle.properties</span><br><span class="line"></span><br><span class="line">systemProp.https.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyPort=80</span><br><span class="line">#systemProp.http.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">systemProp.http.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">#systemProp.http.proxyPort=80</span><br></pre></td></tr></table></figure>
 <p><a href="https://blog.csdn.net/lqx_sunhan/article/details/82598600" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://services.gradle.org/distributions/</span><br><span class="line">distributionUrl=file:///&lt;...&gt;/gradle-4.0-all.zip</span><br></pre></td></tr></table></figure></p>
-
+<p><a href="https://www.jianshu.com/p/b0bb42ed69d0" target="_blank">react-native-video的坑</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yarn add react-native-video</span><br><span class="line">react-native link react-native-video</span><br><span class="line"></span><br><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        mavenLocal()</span><br><span class="line">        jcenter()</span><br><span class="line">        maven &#123;</span><br><span class="line">            url &quot;https://maven.google.com&quot;</span><br><span class="line">			// url &quot;$rootDir/../node_modules/react-native/android&quot;</span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.sunqizheng.com/blog/687.html" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">react-native工程android目录下新建</span><br><span class="line">local.properties:</span><br><span class="line">sdk.dir=&lt;Sdk路径&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A problem occurred configuring project &apos;:app&apos;. &gt; </span><br><span class="line">  failed to find Build Tools revision 23.0.1</span><br><span class="line"></span><br><span class="line">android/app/build.gradle文件中buildToolsVersion &quot;23.0.1&quot;改为&quot;23.0.2&quot;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/04/1538661785000.html/" data-id="cjmunw8xu0014souqrwdzc51x" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/04/1538661785000.html/" data-id="cjmuolrpr00105ouqnud6q8lm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react-native</a></li></ul>
@@ -181,7 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/03/1538617315000.html/" data-id="cjmunw8xn000tsouqabs5r7hs" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/03/1538617315000.html/" data-id="cjmuolrpn000s5ouqj837w7yx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
@@ -221,7 +224,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523290000.html/" data-id="cjmunw8xk000psouq2btvw7st" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523290000.html/" data-id="cjmuolrpk000p5ouqduxo5vw3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
@@ -260,7 +263,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523280000.html/" data-id="cjmunw8x7000fsouqlkb4710o" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523280000.html/" data-id="cjmuolrpb000d5ouq8zs8u2qi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
@@ -299,7 +302,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523270000.html/" data-id="cjmunw8xr000ysouqtf92740p" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523270000.html/" data-id="cjmuolrpo000u5ouq1afi9kn3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
@@ -338,7 +341,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523260000.html/" data-id="cjmunw8x20009souqeyyncbk9" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523260000.html/" data-id="cjmuolrp5000b5ouqq3vklmqs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/golang/">golang</a></li></ul>
@@ -377,7 +380,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523250000.html/" data-id="cjmunw8xy001asouqq5qqal2j" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523250000.html/" data-id="cjmuolrpt00125ouq6jj4zxl2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
@@ -416,7 +419,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523240000.html/" data-id="cjmunw8ws0001souq6w13rmmx" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523240000.html/" data-id="cjmuolrp000055ouqxuh18bvj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos/">cocos</a></li></ul>
@@ -455,7 +458,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523230000.html/" data-id="cjmunw8xo000usouqap5ylqj1" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523230000.html/" data-id="cjmuolrpz001b5ouq8erku86h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
