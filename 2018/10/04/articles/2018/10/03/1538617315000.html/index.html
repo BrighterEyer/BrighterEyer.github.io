@@ -5,18 +5,20 @@
   
 
   
-  <title>BrighterEyer</title>
+  <title>[maven] nexus私有仓库搭建 | BrighterEyer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术改变命运">
-<meta property="og:type" content="website">
-<meta property="og:title" content="BrighterEyer">
-<meta property="og:url" content="http://brightereyer.xyz/index.html">
+  <meta name="description" content="nexus官网nexus-2.14.1-01-bundle.zip ######## nexus-3.13 start ######## #启动时间较长nexus.exe /run #nexus.exe /install nexus3 #nexus.exe /start #nexus.exe /stop #nexus.exe /status #nexus.exe /restart ########">
+<meta name="keywords" content="maven">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[maven] nexus私有仓库搭建">
+<meta property="og:url" content="http://brightereyer.xyz/2018/10/04//articles/2018/10/03/1538617315000.html/index.html">
 <meta property="og:site_name" content="BrighterEyer">
-<meta property="og:description" content="技术改变命运">
+<meta property="og:description" content="nexus官网nexus-2.14.1-01-bundle.zip ######## nexus-3.13 start ######## #启动时间较长nexus.exe /run #nexus.exe /install nexus3 #nexus.exe /start #nexus.exe /stop #nexus.exe /status #nexus.exe /restart ########">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-04T01:41:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BrighterEyer">
-<meta name="twitter:description" content="技术改变命运">
+<meta name="twitter:title" content="[maven] nexus私有仓库搭建">
+<meta name="twitter:description" content="nexus官网nexus-2.14.1-01-bundle.zip ######## nexus-3.13 start ######## #启动时间较长nexus.exe /run #nexus.exe /install nexus3 #nexus.exe /start #nexus.exe /stop #nexus.exe /status #nexus.exe /restart ########">
   
     <link rel="alternate" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
@@ -67,9 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-/articles/2018/10/03/1538617315000.html" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-/articles/2018/10/03/1538617315000.html" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/10/04/articles/2018/10/03/1538617315000.html/" class="article-date">
   <time datetime="2018-10-04T01:41:55.000Z" itemprop="datePublished">2018-10-04</time>
@@ -82,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/04/articles/2018/10/03/1538617315000.html/">[maven] nexus私有仓库搭建</a>
+    <h1 class="article-title" itemprop="name">
+      [maven] nexus私有仓库搭建
     </h1>
   
 
@@ -118,369 +118,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-/articles/2018/10/03/1538523290000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/03/articles/2018/10/03/1538523290000.html/" class="article-date">
-  <time datetime="2018-10-02T23:32:17.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/articles/2018/10/03/1538523290000.html/">[maven] maven</a>
-    </h1>
+    <a href="/2018/10/03/articles/2018/10/03/1538523290000.html/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">[maven] maven</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://www.cnblogs.com/rexfang/p/7625696.html" target="_blank">Nexus 私有仓库搭建与 Maven 集成</a><br><a href="https://blog.csdn.net/boling_cavalry/article/details/79059021" target="_blank">实战maven私有仓库三部曲之一：搭建和使用</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">https://www.sonatype.com/download-oss-sonatype</span><br><span class="line">cd bin</span><br><span class="line">nexus install</span><br><span class="line">#安装完成后,浏览器访问:</span><br><span class="line">http://localhost:8081/nexus </span><br><span class="line">#默认账号:</span><br><span class="line">admin</span><br><span class="line">#密码</span><br><span class="line">admin123</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">左边 Views/Repositories 菜单下的 Repositories</span><br><span class="line">-&gt;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523290000.html/" data-id="cjmu4fl64000mksuqovlivrn3" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-/articles/2018/10/03/1538523280000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/03/articles/2018/10/03/1538523280000.html/" class="article-date">
-  <time datetime="2018-10-02T23:32:16.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/articles/2018/10/03/1538523280000.html/">[ios] ios</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://blog.csdn.net/qq_31810357?t=1" target="_blank">ios</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523280000.html/" data-id="cjmu4fl5r000dksuq9llyhtda" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-/articles/2018/10/03/1538523270000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/03/articles/2018/10/03/1538523270000.html/" class="article-date">
-  <time datetime="2018-10-02T23:32:15.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/articles/2018/10/03/1538523270000.html/">[python] python</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://blog.csdn.net/yanbober" target="_blank">python</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523270000.html/" data-id="cjmu4fl6c000wksuqnr3fr6hp" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-/articles/2018/10/03/1538523260000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/03/articles/2018/10/03/1538523260000.html/" class="article-date">
-  <time datetime="2018-10-02T23:32:14.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/articles/2018/10/03/1538523260000.html/">[golang] golang</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://studygolang.com/" target="_blank">Go语言中文网</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523260000.html/" data-id="cjmu4fl5p000bksuqx9x52xn1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/golang/">golang</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-/articles/2018/10/03/1538523250000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/03/articles/2018/10/03/1538523250000.html/" class="article-date">
-  <time datetime="2018-10-02T23:32:13.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/articles/2018/10/03/1538523250000.html/">[springboot] springboot</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://gitee.com/y_project/RuoYi" target="_blank">RuoYi</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523250000.html/" data-id="cjmu4fl6k0017ksuqy4zkw20p" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-/articles/2018/10/03/1538523240000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/03/articles/2018/10/03/1538523240000.html/" class="article-date">
-  <time datetime="2018-10-02T23:32:12.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/articles/2018/10/03/1538523240000.html/">[cocos] CocosCreator教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://www.byjth.com/CocosCreator/66.html" target="_blank">CocosCreator教程</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523240000.html/" data-id="cjmu4fl5l0008ksuqyjmciwh6" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos/">cocos</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-/articles/2018/10/03/1538523230000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/03/articles/2018/10/03/1538523230000.html/" class="article-date">
-  <time datetime="2018-10-02T23:32:11.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/articles/2018/10/03/1538523230000.html/">[npm] cnpmjc和sinopia搭建私有仓库</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://blog.csdn.net/achenyuan/article/details/82813512" target="_blank">cnpmjc和sinopia搭建私有仓库</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523230000.html/" data-id="cjmu4fl69000sksuq0aqfs9ae" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-/articles/2018/10/03/1538523220000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/03/articles/2018/10/03/1538523220000.html/" class="article-date">
-  <time datetime="2018-10-02T23:32:10.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/articles/2018/10/03/1538523220000.html/">[js] js实现map</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://www.cnblogs.com/mingforyou/p/7153706.html" target="_blank">js实现map</a><br><a href="https://blog.csdn.net/zhangli865621030/article/details/45307087" target="_blank">JS中的Map基本操作</a><br><a href="https://github.com/BrighterEyer/Chess/blob/master/js/commons.js" target="_blank">JS中的Map基本操作</a></p>
-<p>小程序HashMap.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">var app = getApp();</span><br><span class="line"></span><br><span class="line">/** js实现hashmap数据结构 */</span><br><span class="line">class HashMap &#123;</span><br><span class="line"></span><br><span class="line">  constructor() &#123;</span><br><span class="line">    /** 存放键的数组(遍历用到) */</span><br><span class="line">    this.keys = new Array();</span><br><span class="line">    /** 存放数据 */</span><br><span class="line">    this.data = new Object();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 放入一个键值对   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   * @param &#123;Object&#125; value   </span><br><span class="line">   */</span><br><span class="line">  put(key, value) &#123;</span><br><span class="line">    if (this.data[key] == null) &#123;</span><br><span class="line">      this.keys.push(key);</span><br><span class="line">    &#125;</span><br><span class="line">    this.data[key] = value;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取某键对应的值   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   * @return &#123;Object&#125; value   </span><br><span class="line">   */</span><br><span class="line">  get(key) &#123;</span><br><span class="line">    return this.data[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 删除一个键值对   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   */</span><br><span class="line">  remove(key) &#123;</span><br><span class="line">    this.keys.remove(key);</span><br><span class="line">    this.data[key] = null;</span><br><span class="line">    //		delete this.data[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 遍历Map,执行处理函数   </span><br><span class="line">   * @param &#123;Function&#125; 回调函数 function(key,value,index)&#123;..&#125;   </span><br><span class="line">   */</span><br><span class="line">  each(fn) &#123;</span><br><span class="line">    if (typeof fn != &apos;function&apos;) &#123;</span><br><span class="line">      return;</span><br><span class="line">    &#125;</span><br><span class="line">    var len = this.keys.length;</span><br><span class="line">    for (var i = 0; i &lt; len; i++) &#123;</span><br><span class="line">      var k = this.keys[i];</span><br><span class="line">      fn(k, this.data[k], i);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取键值数组(类似Java的entrySet())   </span><br><span class="line">   * @return 键值对象&#123;key,value&#125;的数组   </span><br><span class="line">   */</span><br><span class="line">  entrys() &#123;</span><br><span class="line">    var len = this.keys.length;</span><br><span class="line">    var entrys = new Array(len);</span><br><span class="line">    for (var i = 0; i &lt; len; i++) &#123;</span><br><span class="line">      entrys[i] = &#123;</span><br><span class="line">        key: this.keys[i],</span><br><span class="line">        value: this.data[i]</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    return entrys;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 判断Map是否为空   </span><br><span class="line">   */</span><br><span class="line">  isEmpty() &#123;</span><br><span class="line">    return this.keys.length == 0;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取键值对数量   </span><br><span class="line">   */</span><br><span class="line">  size() &#123;</span><br><span class="line">    return this.keys.length;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 重写toString    </span><br><span class="line">   */</span><br><span class="line">  toString() &#123;</span><br><span class="line">    var s = &quot;&#123;&quot;;</span><br><span class="line">    for (var i = 0; i &lt; this.keys.length; i++, s += &apos;,&apos;) &#123;</span><br><span class="line">      var k = this.keys[i];</span><br><span class="line">      s += k + &quot;=&quot; + this.data[k];</span><br><span class="line">    &#125;</span><br><span class="line">    s += &quot;&#125;&quot;;</span><br><span class="line">    return s;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default HashMap;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523220000.html/" data-id="cjmu4fl61000jksuqtbi9izrc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-/articles/2018/10/03/1538523210000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/03/articles/2018/10/03/1538523210000.html/" class="article-date">
-  <time datetime="2018-10-02T23:32:09.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/articles/2018/10/03/1538523210000.html/">[简历] java程序员简历</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://github.com/chenxingxing6/readmecxx/blob/master/README.md" target="_blank">README.md|蓝星花</a><br><a href="https://blog.csdn.net/m0_37499059/" target="_blank">csdn|蓝星花</a><br><a href="https://gitee.com/chenxingxing6/pms" target="_blank">蓝星花</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/03/articles/2018/10/03/1538523210000.html/" data-id="cjmu4fl6y001rksuqesxgk7or" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简历/">简历</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
-  </nav>
 
 </section>
         
