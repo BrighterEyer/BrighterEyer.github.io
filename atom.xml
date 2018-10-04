@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brightereyer.xyz/"/>
-  <updated>2018-10-04T01:41:55.000Z</updated>
+  <updated>2018-10-04T14:03:10.000Z</updated>
   <id>http://brightereyer.xyz/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[webpack] webpack搭建前端项目</title>
+    <link href="http://brightereyer.xyz/2018/10/04//articles/2018/10/04/1538661790000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/04//articles/2018/10/04/1538661790000.html/</id>
+    <published>2018-10-04T14:03:10.000Z</published>
+    <updated>2018-10-04T14:03:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Could not GET xxx, Received status code 400 from server Bad Request<br><a href="https://blog.csdn.net/lqx_sunhan/article/details/82598600" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">notepad %USERPROFILE%/.gradle/gradle.properties</span><br><span class="line"></span><br><span class="line">systemProp.https.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyPort=80</span><br><span class="line">#systemProp.http.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">systemProp.http.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">#systemProp.http.proxyPort=80</span><br></pre></td></tr></table></figure></p><p><a href="https://blog.csdn.net/lqx_sunhan/article/details/82598600" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://services.gradle.org/distributions/</span><br><span class="line">distributionUrl=file:///&lt;...&gt;/gradle-4.0-all.zip</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Could not GET xxx, Received status code 400 from server Bad Request&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/lqx_sunhan/article/details/82598600
+      
+    
+    </summary>
+    
+    
+      <category term="webpack" scheme="http://brightereyer.xyz/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[react-native] react-native填坑</title>
+    <link href="http://brightereyer.xyz/2018/10/04//articles/2018/10/04/1538661785000.html/"/>
+    <id>http://brightereyer.xyz/2018/10/04//articles/2018/10/04/1538661785000.html/</id>
+    <published>2018-10-04T14:03:05.000Z</published>
+    <updated>2018-10-04T14:03:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Could not GET xxx, Received status code 400 from server Bad Request<br><a href="https://blog.csdn.net/lqx_sunhan/article/details/82633275" target="_blank">参考</a></p><p>react-native …android项目gradle编译慢，编译失败的坑及解决办法<br><a href="https://blog.csdn.net/lqx_sunhan/article/details/82598600" target="_blank">参考</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Could not GET xxx, Received status code 400 from server Bad Request&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/lqx_sunhan/article/details/82633275
+      
+    
+    </summary>
+    
+    
+      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
+    
+  </entry>
   
   <entry>
     <title>[maven] nexus私有仓库搭建</title>
@@ -436,53 +482,6 @@
     
     
       <category term="linux" scheme="http://brightereyer.xyz/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[小程序] 微信小程序</title>
-    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523120000.html/"/>
-    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523120000.html/</id>
-    <published>2018-10-02T23:32:00.000Z</published>
-    <updated>2018-10-02T23:32:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>微信小程序获取当前页面的路径的方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#使用getCurrentPages可以获取当前加载中所有的页面对象的一个数组，数组最后一个就是当前页面。</span><br><span class="line"></span><br><span class="line">#获取加载的页面</span><br><span class="line">var pages = getCurrentPages();</span><br><span class="line">#获取当前页面的对象</span><br><span class="line">var currentPage = pages[pages.length-1];</span><br><span class="line">#当前页面url</span><br><span class="line">var url = currentPage.route;</span><br><span class="line">#如果要获取url中所带的参数可以查看options</span><br><span class="line">var options = currentPage.options;</span><br></pre></td></tr></table></figure></p><p><a href="http://www.wxapp-union.com" targer="_blank" target="_blank" rel="noopener">小程序社区</a><br><a href="http://pan.baidu.com/s/1c2qTFUw" targer="_blank" target="_blank" rel="noopener">小程序手册</a><br>提取码：<br>ikms</p><p><a href="http://www.lanrenmb.com/x/wenhuajiaoyu/4785.html" targer="_blank" target="_blank" rel="noopener">小程序懒人模板</a><br><a href="https://blog.csdn.net/tommenx/article/details/79773101" targer="_blank" target="_blank" rel="noopener">CSDN|考勤签到小程序</a><br><a href="http://www.cnblogs.com/kevinCoder/p/8961748.html" targer="_blank" target="_blank" rel="noopener">小程序：如何在wxml页面中调用JavaScript函数</a><br><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/" targer="_blank" target="_blank" rel="noopener">小程序官方:WXS</a><br><a href="https://github.com/Tencent/weui-wxss" targer="_blank" target="_blank" rel="noopener">官方github小程序样式库</a><br><a href="https://help.aliyun.com/document_detail/59210.html?spm=5176.sms-account.108.3.22ed1cbefyaGGJ" target="_blank">阿里云短信服务文档使用指引</a><br><a href="https://github.com/BeijiYang/minaSmsVerification" target="_blank">基于阿里云的 微信小程序 短信验证 功能模块</a></p><p><a href="https://mp.weixin.qq.com/" target="_blank">微信公众平台</a><br><a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_3&index=1" target="_blank">小程序支付开发步骤</a><br><a href="https://blog.csdn.net/zhuming3834/article/details/73168056" target="_blank">微信小程序开发(五)小程序支付-统一下单</a><br><a href="https://blog.csdn.net/futruejet/article/details/72965429" target="_blank">微信小程序例子——获取用户唯一标识openid</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;微信小程序获取当前页面的路径的方式&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;
-      
-    
-    </summary>
-    
-    
-      <category term="小程序" scheme="http://brightereyer.xyz/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[工具] 在线工具</title>
-    <link href="http://brightereyer.xyz/2018/10/02//articles/2018/10/02/1538438401000.html/"/>
-    <id>http://brightereyer.xyz/2018/10/02//articles/2018/10/02/1538438401000.html/</id>
-    <published>2018-10-02T00:00:01.000Z</published>
-    <updated>2018-10-02T00:00:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.it1352.com/OnLineTools/Index" target="_blank">IT屋</a><br><a href="https://tool.lu/" target="_blank">在线工具</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://www.it1352.com/OnLineTools/Index&quot; target=&quot;_blank&quot;&gt;IT屋&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://tool.lu/&quot; target=&quot;_blank&quot;&gt;在线工具&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="http://brightereyer.xyz/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
