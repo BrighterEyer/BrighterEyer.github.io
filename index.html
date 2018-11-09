@@ -69,6 +69,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-/articles/2018/11/09/1541766655000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/09/articles/2018/11/09/1541766655000.html/" class="article-date">
+  <time datetime="2018-11-09T12:30:55.000Z" itemprop="datePublished">2018-11-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/09/articles/2018/11/09/1541766655000.html/">[cocos2d] lua</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://luadist.org/" target="_blank">lua官网</a><br><a href="https://tieba.baidu.com/p/4029642660?red_tag=0674754917&traceid=" target="_blank">用Notepad++搭建lua开发环境</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#如果配置了lua环境变量（也就是把lua解析器的路径添加到系统环境变量Path），那么输入命令：</span><br><span class="line">cmd /k lua &quot;$(FULL_CURRENT_PATH)&quot;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.imooc.com/video/9381" target="_blank">慕课网 Lua 开发环境搭建</a><br><a href="https://www.byjth.com/lua/33.html" target="_blank">Windows7+VS2015搭建Lua开发环境</a><br><a href="https://blog.csdn.net/column/details/cocos2dx1.html" target="_blank">cocos2dx游戏开发入门指南</a><br><a href="https://blog.csdn.net/szm_cuit/article/details/53208932" target="_blank">cocos2d-x Lua安装配置</a><br><a href="https://blog.csdn.net/zhouyongku/article/details/72891661" target="_blank">参考|Cocos2d Lua开发环境完全搭建</a><br>环境与工具<br><a href="https://github.com/cocos2d/cocos2d-x/releases" target="_blank">cocos2d-x源文件</a><br><a href="https://github.com/cocos2d/cocos2d-x/archive/cocos2d-x-3.10.zip" target="_blank">cocos2d-x-3.10.zip</a><br><a href="https://ant.apache.org/bindownload.cgi" target="_blank">ant</a><br><a href="http://pan.baidu.com/s/1i5QMW1v" target="_blank">vs2013</a><br><a href="http://pan.baidu.com/s/1nvoLf1B" target="_blank">vs2013 lua插件 babelua</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">========= 设置环境变量 start =========</span><br><span class="line">#设置环境变量</span><br><span class="line">COCOS_X_ROOT</span><br><span class="line">E:\Cocos\Cocos\Cocos2d-x\Cocos2d-x-3.10</span><br><span class="line">COCOS_TEMPLATES_ROOT</span><br><span class="line">E:\Cocos\Cocos\Cocos2d-x\Cocos2d-x-3.10\templates</span><br><span class="line">COCOS_CONSOLE_ROOT</span><br><span class="line">E:\Cocos\Cocos\Cocos2d-x\Cocos2d-x-3.10\tools\cocos2d-console\bin</span><br><span class="line"></span><br><span class="line">ANDROID_HOME</span><br><span class="line">E:\Android\android-sdk</span><br><span class="line">ANDROID_SDK_ROOT</span><br><span class="line">E:\Android\android-sdk</span><br><span class="line">ANT_ROOT</span><br><span class="line">E:\Android\ant</span><br><span class="line">NDK_ROOT</span><br><span class="line">E:\Android\ndk</span><br><span class="line">========= 设置环境变量 end =========</span><br><span class="line"></span><br><span class="line">========= vs2013 lua插件 start =========</span><br><span class="line">https://blog.csdn.net/fjdmy001/article/details/52882779</span><br><span class="line"></span><br><span class="line">lua scripts folder：脚本目录</span><br><span class="line">lua exe path：运行的exe文件路径</span><br><span class="line">Working path：工作目录</span><br><span class="line">Command line：没用过，也用不到</span><br><span class="line">Lua project name：lua项目名称</span><br><span class="line"></span><br><span class="line">lua scripts folder：&lt;项目父目录路径&gt;\demo\src</span><br><span class="line">lua exe path：&lt;项目父目录路径&gt;\demo\simulator\win32\demo.exe</span><br><span class="line">Working path：&lt;项目父目录路径&gt;\demo\src</span><br><span class="line">Lua project name：demo</span><br><span class="line">========= vs2013 lua插件 end =========</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">========= vs2013编译启动项目 start =========</span><br><span class="line">#创建一个cocos-lua项目</span><br><span class="line">#cocos new &lt;项目名&gt; -p com.&lt;项目名&gt;.app -l lua -d G:\workspaces\cocos-lua\</span><br><span class="line">cocos new demo -p com.demo.app -l lua -d G:\workspaces\cocos-lua\</span><br><span class="line"></span><br><span class="line">#创建一个cocos-c++工程</span><br><span class="line">#cocos new demo -p com.demo.app -l cpp -d G:\workspaces\cocos2dx\</span><br><span class="line"></span><br><span class="line">#打开</span><br><span class="line">frameworks\runtime-src\proj.win32\&lt;项目名&gt;.sln</span><br><span class="line">#打开解决方案，并开始编译</span><br><span class="line">https://blog.csdn.net/yuan2053/article/category/6774853</span><br><span class="line">========= vs2013编译启动项目 end =========</span><br></pre></td></tr></table></figure></p>
+<p>Quick-Cocos2dx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Quick-Cocos2dx-Community 稳定版下载</span><br><span class="line">http://cocos2d-lua.org/download/index.md</span><br><span class="line">Quick初学者游戏教程1 ~ 12</span><br><span class="line">https://github.com/u0u0/Quick-Cocos2dx-Community/tree/3.6.1_Release</span><br></pre></td></tr></table></figure></p>
+<p>游戏素材资源与编辑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">游戏素材</span><br><span class="line">http://www.aigei.com/</span><br><span class="line"></span><br><span class="line">plist生成</span><br><span class="line">TexturePacker|多多软件站|4.+版</span><br><span class="line">http://www.ddooo.com/softdown/112849.htm</span><br><span class="line">TexturePacker破解版 TexturePacker_3.0.9.rar</span><br><span class="line">https://blog.csdn.net/u013654125/article/details/80676715</span><br><span class="line">TexturePacker|使用教程</span><br><span class="line">https://www.jianshu.com/p/217d211cf3b1</span><br><span class="line">plist编辑器</span><br><span class="line">http://www.ddooo.com/softdown/14702.htm</span><br><span class="line"></span><br><span class="line">Tiled Map Editor|地图编辑器|官网可以不收费</span><br><span class="line">https://www.mapeditor.org/</span><br><span class="line">https://thorbjorn.itch.io/tiled/download/eyJleHBpcmVzIjoxNTQxNTk5Mzc3LCJpZCI6Mjg3Njh9.iOPtAxMdCGKvNth8muFsGtXeFYQ%3d</span><br></pre></td></tr></table></figure></p>
+<p>CocosCreator<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">============ CocosCreator start ============</span><br><span class="line">官方安装配置原生开发环境</span><br><span class="line">https://docs.cocos.com/creator/manual/zh/publish/setup-native-development.html</span><br><span class="line">打包发布原生平台</span><br><span class="line">https://docs.cocos.com/creator/manual/zh/publish/publish-native.html</span><br><span class="line">Visual Studio Code</span><br><span class="line">https://docs.cocos.com/creator/manual/zh/getting-started/coding-setup.html</span><br><span class="line">============ CocosCreator end ============</span><br></pre></td></tr></table></figure></p>
+<p>Cocos2d-JS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">============ Cocos2d-JS start ============</span><br><span class="line">https://www.cocos.com/docs/js/</span><br><span class="line">cocos2d-js 入门 （主要是HTML5）</span><br><span class="line">https://www.cnblogs.com/kenkofox/p/4153848.html</span><br><span class="line">https://github.com/kenkozheng/cocos2d-js</span><br><span class="line">============ Cocos2d-JS end ============</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://brightereyer.xyz/2018/11/09/articles/2018/11/09/1541766655000.html/" data-id="cjoa0cgaw0004nsuqx92bzaf6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d/">cocos2d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-/articles/2018/11/03/1541215156000.html" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/11/03/articles/2018/11/03/1541215156000.html/" class="article-date">
@@ -100,54 +144,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/11/03/articles/2018/11/03/1541215156000.html/" data-id="cjoa0941p0001icuqh1hkizk4" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/11/03/articles/2018/11/03/1541215156000.html/" data-id="cjoa0cgam0000nsuqxk84um65" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/golang/">golang</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-/articles/2018/11/09/1541766655000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/11/03/articles/2018/11/09/1541766655000.html/" class="article-date">
-  <time datetime="2018-11-03T03:19:16.000Z" itemprop="datePublished">2018-11-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/03/articles/2018/11/09/1541766655000.html/">[cocos2d] lua</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://luadist.org/" target="_blank">lua官网</a><br><a href="https://tieba.baidu.com/p/4029642660?red_tag=0674754917&traceid=" target="_blank">用Notepad++搭建lua开发环境</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#如果配置了lua环境变量（也就是把lua解析器的路径添加到系统环境变量Path），那么输入命令：</span><br><span class="line">cmd /k lua &quot;$(FULL_CURRENT_PATH)&quot;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.imooc.com/video/9381" target="_blank">慕课网 Lua 开发环境搭建</a><br><a href="https://www.byjth.com/lua/33.html" target="_blank">Windows7+VS2015搭建Lua开发环境</a><br><a href="https://blog.csdn.net/column/details/cocos2dx1.html" target="_blank">cocos2dx游戏开发入门指南</a><br><a href="https://blog.csdn.net/szm_cuit/article/details/53208932" target="_blank">cocos2d-x Lua安装配置</a><br><a href="https://blog.csdn.net/zhouyongku/article/details/72891661" target="_blank">参考|Cocos2d Lua开发环境完全搭建</a><br>环境与工具<br><a href="https://github.com/cocos2d/cocos2d-x/releases" target="_blank">cocos2d-x源文件</a><br><a href="https://github.com/cocos2d/cocos2d-x/archive/cocos2d-x-3.10.zip" target="_blank">cocos2d-x-3.10.zip</a><br><a href="https://ant.apache.org/bindownload.cgi" target="_blank">ant</a><br><a href="http://pan.baidu.com/s/1i5QMW1v" target="_blank">vs2013</a><br><a href="http://pan.baidu.com/s/1nvoLf1B" target="_blank">vs2013 lua插件 babelua</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">========= 设置环境变量 start =========</span><br><span class="line">#设置环境变量</span><br><span class="line">COCOS_X_ROOT</span><br><span class="line">E:\Cocos\Cocos\Cocos2d-x\Cocos2d-x-3.10</span><br><span class="line">COCOS_TEMPLATES_ROOT</span><br><span class="line">E:\Cocos\Cocos\Cocos2d-x\Cocos2d-x-3.10\templates</span><br><span class="line">COCOS_CONSOLE_ROOT</span><br><span class="line">E:\Cocos\Cocos\Cocos2d-x\Cocos2d-x-3.10\tools\cocos2d-console\bin</span><br><span class="line"></span><br><span class="line">ANDROID_HOME</span><br><span class="line">E:\Android\android-sdk</span><br><span class="line">ANDROID_SDK_ROOT</span><br><span class="line">E:\Android\android-sdk</span><br><span class="line">ANT_ROOT</span><br><span class="line">E:\Android\ant</span><br><span class="line">NDK_ROOT</span><br><span class="line">E:\Android\ndk</span><br><span class="line">========= 设置环境变量 end =========</span><br><span class="line"></span><br><span class="line">========= vs2013 lua插件 start =========</span><br><span class="line">https://blog.csdn.net/fjdmy001/article/details/52882779</span><br><span class="line"></span><br><span class="line">lua scripts folder：脚本目录</span><br><span class="line">lua exe path：运行的exe文件路径</span><br><span class="line">Working path：工作目录</span><br><span class="line">Command line：没用过，也用不到</span><br><span class="line">Lua project name：lua项目名称</span><br><span class="line"></span><br><span class="line">lua scripts folder：&lt;项目父目录路径&gt;\demo\src</span><br><span class="line">lua exe path：&lt;项目父目录路径&gt;\demo\simulator\win32\demo.exe</span><br><span class="line">Working path：&lt;项目父目录路径&gt;\demo\src</span><br><span class="line">Lua project name：demo</span><br><span class="line">========= vs2013 lua插件 end =========</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">========= vs2013编译启动项目 start =========</span><br><span class="line">#创建一个cocos-lua项目</span><br><span class="line">#cocos new &lt;项目名&gt; -p com.&lt;项目名&gt;.app -l lua -d G:\workspaces\cocos-lua\</span><br><span class="line">cocos new demo -p com.demo.app -l lua -d G:\workspaces\cocos-lua\</span><br><span class="line"></span><br><span class="line">#创建一个cocos-c++工程</span><br><span class="line">#cocos new demo -p com.demo.app -l cpp -d G:\workspaces\cocos2dx\</span><br><span class="line"></span><br><span class="line">#打开</span><br><span class="line">frameworks\runtime-src\proj.win32\&lt;项目名&gt;.sln</span><br><span class="line">#打开解决方案，并开始编译</span><br><span class="line">https://blog.csdn.net/yuan2053/article/category/6774853</span><br><span class="line">========= vs2013编译启动项目 end =========</span><br></pre></td></tr></table></figure></p>
-<p>Quick-Cocos2dx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Quick-Cocos2dx-Community 稳定版下载</span><br><span class="line">http://cocos2d-lua.org/download/index.md</span><br><span class="line">Quick初学者游戏教程1 ~ 12</span><br><span class="line">https://github.com/u0u0/Quick-Cocos2dx-Community/tree/3.6.1_Release</span><br></pre></td></tr></table></figure></p>
-<p>游戏素材资源与编辑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">游戏素材</span><br><span class="line">http://www.aigei.com/</span><br><span class="line"></span><br><span class="line">plist生成</span><br><span class="line">TexturePacker|多多软件站|4.+版</span><br><span class="line">http://www.ddooo.com/softdown/112849.htm</span><br><span class="line">TexturePacker破解版 TexturePacker_3.0.9.rar</span><br><span class="line">https://blog.csdn.net/u013654125/article/details/80676715</span><br><span class="line">TexturePacker|使用教程</span><br><span class="line">https://www.jianshu.com/p/217d211cf3b1</span><br><span class="line">plist编辑器</span><br><span class="line">http://www.ddooo.com/softdown/14702.htm</span><br><span class="line"></span><br><span class="line">Tiled Map Editor|地图编辑器|官网可以不收费</span><br><span class="line">https://www.mapeditor.org/</span><br><span class="line">https://thorbjorn.itch.io/tiled/download/eyJleHBpcmVzIjoxNTQxNTk5Mzc3LCJpZCI6Mjg3Njh9.iOPtAxMdCGKvNth8muFsGtXeFYQ%3d</span><br></pre></td></tr></table></figure></p>
-<p>CocosCreator<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">============ CocosCreator start ============</span><br><span class="line">官方安装配置原生开发环境</span><br><span class="line">https://docs.cocos.com/creator/manual/zh/publish/setup-native-development.html</span><br><span class="line">打包发布原生平台</span><br><span class="line">https://docs.cocos.com/creator/manual/zh/publish/publish-native.html</span><br><span class="line">Visual Studio Code</span><br><span class="line">https://docs.cocos.com/creator/manual/zh/getting-started/coding-setup.html</span><br><span class="line">============ CocosCreator end ============</span><br></pre></td></tr></table></figure></p>
-<p>Cocos2d-JS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">============ Cocos2d-JS start ============</span><br><span class="line">https://www.cocos.com/docs/js/</span><br><span class="line">cocos2d-js 入门 （主要是HTML5）</span><br><span class="line">https://www.cnblogs.com/kenkofox/p/4153848.html</span><br><span class="line">https://github.com/kenkozheng/cocos2d-js</span><br><span class="line">============ Cocos2d-JS end ============</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/11/03/articles/2018/11/09/1541766655000.html/" data-id="cjoa0941s0003icuqg7bofq0j" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d/">cocos2d</a></li></ul>
 
     </footer>
   </div>
@@ -200,7 +200,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/23/articles/2018/10/23/1540250495000.html/" data-id="cjoa0942y001ficuql9bnr26r" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/23/articles/2018/10/23/1540250495000.html/" data-id="cjoa0cgc0001fnsuqotu00n1z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li></ul>
@@ -241,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/16/articles/2018/10/16/1539679553000.html/" data-id="cjoa0942e000licuqe1yrz9o1" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/16/articles/2018/10/16/1539679553000.html/" data-id="cjoa0cgbc000hnsuq1yxrck0j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
@@ -285,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/14/articles/2018/10/14/1539510733000.html/" data-id="cjoa0943d0020icuq5ivmdh3f" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/14/articles/2018/10/14/1539510733000.html/" data-id="cjoa0cgcg0024nsuqkairx1ge" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/源码/">源码</a></li></ul>
@@ -324,7 +324,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/07/articles/2018/10/03/1538921243000.html/" data-id="cjoa0941z0009icuq0whk0s0e" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/07/articles/2018/10/03/1538921243000.html/" data-id="cjoa0cgb00008nsuquaa703p7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos/">cocos</a></li></ul>
@@ -366,7 +366,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/04/1538665472000.html/" data-id="cjoa0943e0022icuqffmw9sy1" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/04/1538665472000.html/" data-id="cjoa0cgcb001wnsuqa9k7j402" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/快应用/">快应用</a></li></ul>
@@ -405,7 +405,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/04/1538661790000.html/" data-id="cjoa09435001picuq6vly2xon" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/04/1538661790000.html/" data-id="cjoa0cgc4001lnsuq4e6fkf5u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
@@ -454,7 +454,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/04/1538661785000.html/" data-id="cjoa0942u0018icuq88vvpfgb" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/04/1538661785000.html/" data-id="cjoa0cgbv0018nsuqg6cw29f8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react-native</a></li></ul>
@@ -499,7 +499,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/03/1538617315000.html/" data-id="cjoa0942m000wicuqo1ioxlm9" class="article-share-link">Share</a>
+      <a data-url="http://brightereyer.xyz/2018/10/04/articles/2018/10/03/1538617315000.html/" data-id="cjoa0cgbn000wnsuqzgx7jdm4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
@@ -561,11 +561,11 @@
       <ul>
         
           <li>
-            <a href="/2018/11/03/articles/2018/11/03/1541215156000.html/">[Go] Go实战</a>
+            <a href="/2018/11/09/articles/2018/11/09/1541766655000.html/">[cocos2d] lua</a>
           </li>
         
           <li>
-            <a href="/2018/11/03/articles/2018/11/09/1541766655000.html/">[cocos2d] lua</a>
+            <a href="/2018/11/03/articles/2018/11/03/1541215156000.html/">[Go] Go实战</a>
           </li>
         
           <li>
