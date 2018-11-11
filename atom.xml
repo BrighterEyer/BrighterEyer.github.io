@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brightereyer.xyz/"/>
-  <updated>2018-11-09T12:30:55.000Z</updated>
+  <updated>2018-11-11T04:12:53.000Z</updated>
   <id>http://brightereyer.xyz/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[cocos2d] quick-cocos2dx-community</title>
+    <link href="http://brightereyer.xyz/2018/11/11//articles/2018/11/11/1541909573000.html/"/>
+    <id>http://brightereyer.xyz/2018/11/11//articles/2018/11/11/1541909573000.html/</id>
+    <published>2018-11-11T04:12:53.000Z</published>
+    <updated>2018-11-11T04:12:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://tairan.com/archives/11280/" target="_blank">官方开发环境说明</a><br><a href="https://github.com/iTyran/quick-comminuty-dev/archive/master.zip" target="_blank">点击下载 sublime text插件 quick-comminuty-dev</a><br><a href="http://www.tairan.com/archives/10542/" target="_blank">quick-community-dev插件安装教程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#git clone https://github.com/iTyran/quick-comminuty-dev.git</span><br></pre></td></tr></table></figure></p><p><a href="http://www.cocos2d-lua.org/doc/index.md" target="_blank">开发文档</a><br><a href="http://www.cocos2d-lua.org/api/index.md" target="_blank">API手册</a><br><a href="http://www.cocos2d-lua.org/book/index.md" target="_blank">《Cocos2d-x 之 Lua 核心编程》第二版 源码</a></p><p>cocos2d-js 3.x API手册<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#quick-cocos2d-community 3.7版的 ccui 跟 cocos2d-js 3.x 版的类、方法、属性相似</span><br><span class="line">http://docs.cocos2d-x.org/api-ref/js/v3x/</span><br><span class="line">http://docs.cocos2d-x.org/api-ref/</span><br></pre></td></tr></table></figure></p><p><a href="http://www.cocos2d-lua.org/" target="_blank">首页|Quick-Cocos2dx-Community - Cocos2d-Lua 社区版</a><br>使用Quick初学者系列教程<br><a href="http://www.tairan.com/engines-download" target="_blank" rel="noopener">http://www.tairan.com/engines-download</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://tairan.com/archives/11280/&quot; target=&quot;_blank&quot;&gt;官方开发环境说明&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/iTyran/quick-comminuty-dev/archiv
+      
+    
+    </summary>
+    
+    
+      <category term="cocos2d" scheme="http://brightereyer.xyz/tags/cocos2d/"/>
+    
+  </entry>
   
   <entry>
     <title>[cocos2d] lua</title>
@@ -457,30 +480,6 @@
     
     
       <category term="npm" scheme="http://brightereyer.xyz/tags/npm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[jsp] jsp</title>
-    <link href="http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523190000.html/"/>
-    <id>http://brightereyer.xyz/2018/10/03//articles/2018/10/03/1538523190000.html/</id>
-    <published>2018-10-02T23:32:07.000Z</published>
-    <updated>2018-10-02T23:32:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/column/details/13938.html" target="_blank">jsp</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/column/details/13938.html&quot; target=&quot;_blank&quot;&gt;jsp&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="jsp" scheme="http://brightereyer.xyz/tags/jsp/"/>
     
   </entry>
   
