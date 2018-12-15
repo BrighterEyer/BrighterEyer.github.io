@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brightereyer.xyz/"/>
-  <updated>2018-12-15T03:08:10.000Z</updated>
+  <updated>2018-12-15T10:37:48.000Z</updated>
   <id>http://brightereyer.xyz/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[鬼畜视频制作] BiLiBiLi</title>
+    <link href="http://brightereyer.xyz/2018/12/15//articles/2018/12/15/1544870268000.html/"/>
+    <id>http://brightereyer.xyz/2018/12/15//articles/2018/12/15/1544870268000.html/</id>
+    <published>2018-12-15T10:37:48.000Z</published>
+    <updated>2018-12-15T10:37:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://search.bilibili.com/all?keyword=%E9%AC%BC%E7%95%9C%E5%88%B6%E4%BD%9C" target="_blank">关键词搜索|鬼畜制作</a><br><a href="https://www.bilibili.com/video/av6485321" target="_blank">少年想学鬼畜吗？零基础鬼畜入门教程，软件我都教你怎么安装了！还不赶紧去尝试？</a><br><a href="https://www.bilibili.com/video/av19241621" target="_blank">【水蛭】教你制作一个简单的鬼畜！</a><br><a href="https://space.bilibili.com/43976732" target="_blank">【水蛭】</a><br><a href="https://www.bilibili.com/video/av5809298" target="_blank">【Vegas进阶教程】骚虹教你制作一个完整的鬼畜视频！</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://search.bilibili.com/all?keyword=%E9%AC%BC%E7%95%9C%E5%88%B6%E4%BD%9C&quot; target=&quot;_blank&quot;&gt;关键词搜索|鬼畜制作&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https:/
+      
+    
+    </summary>
+    
+    
+      <category term="鬼畜视频制作" scheme="http://brightereyer.xyz/tags/%E9%AC%BC%E7%95%9C%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[ionic3] ionic3</title>
+    <link href="http://brightereyer.xyz/2018/12/15//articles/2018/12/15/1544870267000.html/"/>
+    <id>http://brightereyer.xyz/2018/12/15//articles/2018/12/15/1544870267000.html/</id>
+    <published>2018-12-15T10:37:47.000Z</published>
+    <updated>2018-12-15T10:37:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.ionic.wang/css_doc-v3.html#overview" target="_blank" rel="noopener">Ionic3中文文档-Ionic3 Components</a><br><a href="https://ionicframework.com/docs/components/#overview" target="_blank" rel="noopener">Ionic3英文官方</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.ionic.wang/css_doc-v3.html#overview&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Ionic3中文文档-Ionic3 Components&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http
+      
+    
+    </summary>
+    
+    
+      <category term="ionic3" scheme="http://brightereyer.xyz/tags/ionic3/"/>
+    
+  </entry>
   
   <entry>
     <title>[jquery] jquery实用笔记</title>
@@ -434,52 +480,6 @@
     
     
       <category term="cocos" scheme="http://brightereyer.xyz/tags/cocos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[快应用] 快应用</title>
-    <link href="http://brightereyer.xyz/2018/10/04//articles/2018/10/04/1538665472000.html/"/>
-    <id>http://brightereyer.xyz/2018/10/04//articles/2018/10/04/1538665472000.html/</id>
-    <published>2018-10-04T15:04:32.000Z</published>
-    <updated>2018-10-04T15:04:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://doc.quickapp.cn/" target="_blank">快应用</a><br><a href="http://quickapp.dcloud.io/#wxconvert" target="_blank">快应用转换工具 - 小程序转快应用</a><br>纯ui<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/wuxinzhe/QuixUI.git</span><br></pre></td></tr></table></figure></p><p>快应用常用组件库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/wuxinzhe/Quix.git</span><br></pre></td></tr></table></figure></p><p><a href="https://www.jianshu.com/p/05dcce08b1ab" target="_blank">简书|快应用开发资源汇总</a><br><a href="https://www.w3cschool.cn/quickapp/" target="_blank">w3cschool|quickapp</a><br><a href="https://cnpmjs.org/package/" target="_blank">cnpmjs包</a><br><a href="https://blog.csdn.net/zhangteng22/article/details/76438776" target="_blank">检查package.json中dependencies的最新版本</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm-check-updates</span><br><span class="line"></span><br><span class="line">#在快应用源码根目录执行:</span><br><span class="line">ncu</span><br><span class="line">#更新dependencies到新版本:</span><br><span class="line">ncu -u</span><br><span class="line">#更新全部dependencies到最新版本:</span><br><span class="line">ncu -a</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">#常用组件库</span><br><span class="line">git clone https://github.com/wuxinzhe/Quix.git</span><br><span class="line">cd Quix</span><br><span class="line">npm install</span><br><span class="line">npm uninstall @showings_quix/common</span><br><span class="line">npm uninstall @showings_quix/quix_ui</span><br><span class="line">cnpm install @showings_quix/common</span><br><span class="line">cnpm install @showings_quix/quix_ui</span><br><span class="line">npm install</span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://doc.quickapp.cn/&quot; target=&quot;_blank&quot;&gt;快应用&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://quickapp.dcloud.io/#wxconvert&quot; target=&quot;_blank&quot;&gt;快应用转换工具 - 小程
-      
-    
-    </summary>
-    
-    
-      <category term="快应用" scheme="http://brightereyer.xyz/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[webpack] webpack搭建前端项目</title>
-    <link href="http://brightereyer.xyz/2018/10/04//articles/2018/10/04/1538661790000.html/"/>
-    <id>http://brightereyer.xyz/2018/10/04//articles/2018/10/04/1538661790000.html/</id>
-    <published>2018-10-04T14:03:10.000Z</published>
-    <updated>2018-10-04T14:03:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/lqx_sunhan/article/details/79662069" target="_blank">webpack搭建前端项目</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack --save -dev #-g #不建议使用全局</span><br><span class="line">#相关的依赖包</span><br><span class="line">#babel的包</span><br><span class="line">npm install babel babel-loader babel-core babel-preset-es2015 babel-preset-stage-0 --save-dev</span><br><span class="line">npm install babel-preset-react --save-dev</span><br><span class="line">#react的包</span><br><span class="line">npm install react react-dom --save-dev</span><br><span class="line">#在项目根目录新建一个webpack.config.js</span><br><span class="line">#webpack.config.js</span><br><span class="line">const  webpack = require(&apos;webpack&apos;);</span><br><span class="line">const path = require(&apos;path&apos;);</span><br><span class="line">module.exports = &#123;</span><br><span class="line">    mode: &apos;development&apos;,</span><br><span class="line">    // 这个配置是项目的入口文件的配置</span><br><span class="line">    entry: &#123;</span><br><span class="line">        myBuild: &apos;./src/index.js&apos; </span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        // 这个是指定项目打包后的输出目录,__dirname就是webpack.config.js所在的目录,这里就是打包时打包到项目根目录下的build文件夹下(如没有webpack会自己创建)</span><br><span class="line">        path: path.resolve(__dirname, &apos;./build&apos;),</span><br><span class="line">        // 这个是关系到我们项目发布后，一些资源的访问路径问题，后面会讲到，而且这个也跟我们开发时候的热部署有关，让他指向我们的打包后的路径就行。</span><br><span class="line">        publicPath:&quot;build/&quot;,</span><br><span class="line">        // 这是打包后的js文件名字,这个[name]就是我们在上面的entry中指定的Key.也就是myBuild</span><br><span class="line">        filename: &apos;[name].js&apos; </span><br><span class="line">    &#125;,</span><br><span class="line">    // 这是跟服务相关的配置，具体可以去看官网</span><br><span class="line">   devServer: &#123;</span><br><span class="line">       port:9090 //端口你可以自定义</span><br><span class="line">   &#125;,</span><br><span class="line">   module: &#123;</span><br><span class="line"> rules: [</span><br><span class="line"> &#123;</span><br><span class="line"> test: /\.js$/,</span><br><span class="line"> exclude: /(node_modules|bower_components)/,</span><br><span class="line"> use: &#123;</span><br><span class="line"> loader: &apos;babel-loader&apos;,</span><br><span class="line"> options: &#123;</span><br><span class="line"> presets: [&quot;es2015&quot;,&quot;react&quot;,&apos;stage-0&apos;]</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;,</span><br><span class="line"> &#123;</span><br><span class="line"> test: /\.css$/,</span><br><span class="line"> use: [ &apos;style-loader&apos;, &apos;css-loader&apos; ]</span><br><span class="line"> &#125;,</span><br><span class="line"> &#123;</span><br><span class="line"> test: /\.(png|jpg|gif)$/,</span><br><span class="line"> use: [</span><br><span class="line"> &#123;</span><br><span class="line"> loader: &apos;file-loader&apos;,</span><br><span class="line"> options: &#123;</span><br><span class="line"> name: &apos;[name]_[hash].[ext]&apos;,</span><br><span class="line"> outputPath: &apos;./img&apos;,</span><br><span class="line"> publicPath: &apos;build/img/&apos;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> ]</span><br><span class="line"> &#125;,</span><br><span class="line"> &#123;test: /\.json$/, loader: &apos;json-loader&apos;&#125;,</span><br><span class="line"> &#123;test: /\.(woff|woff2|svg|eot|ttf)$/, loader: &apos;url-loader?limit=50000&amp;name=fonts/[name].[hash].[ext]&apos;&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#在根目录下新建一个index.html</span><br><span class="line">#index.html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">&lt;title&gt;react&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;./build/myBuild.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">#id为app的入口 , build目录为:publicPath </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#新建一个index.js,这个文件就是我们webpack.config.js中的entry中的文件,若配置时有目录则我们建好相应的目录,我这里的index.js是在src下,所以我们建立一个src的文件夹</span><br><span class="line">此时的目录结构是这样的,在src下有index.js</span><br><span class="line">#在index中写入以下代码进行测试</span><br><span class="line">setTimeout(() =&gt; &#123; alert(&quot;author: sunh&quot;)&#125;, 1000);</span><br><span class="line"></span><br><span class="line">npm install webpack-cli –-save-dev</span><br><span class="line">#打包命令</span><br><span class="line">webpack</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/lqx_sunhan/article/details/79662069&quot; target=&quot;_blank&quot;&gt;webpack搭建前端项目&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="webpack" scheme="http://brightereyer.xyz/tags/webpack/"/>
     
   </entry>
   
