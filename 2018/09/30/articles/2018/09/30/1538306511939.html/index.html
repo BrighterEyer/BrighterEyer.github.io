@@ -1,95 +1,175 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="[react-native] react-native expo create-react-native-app"/>
+
+
+
+
+  <meta name="keywords" content="react-native, BrighterEyer" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="BrighterEyer">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.10.1" />
+
+
+
+<link rel="canonical" href="http://brightereyer.xyz/2018/09/30//articles/2018/09/30/1538306511939.html/"/>
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.10.1" />
+
+
 
   
-  <title>[react-native] react-native expo create-react-native-app | BrighterEyer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="React Native高效开发React Native之expoexpo在线运行nodejsxdeexpo-cli 123456#因为版本号是2.0.1+，到后期运行react-native项目会报错#npm install -g react-native-cli#卸载已经安装的react-native-clinpm uninstall -g react-native-clinpm instal">
-<meta name="keywords" content="react-native">
-<meta property="og:type" content="article">
-<meta property="og:title" content="[react-native] react-native expo create-react-native-app">
-<meta property="og:url" content="http://brightereyer.xyz/2018/09/30//articles/2018/09/30/1538306511939.html/index.html">
-<meta property="og:site_name" content="BrighterEyer">
-<meta property="og:description" content="React Native高效开发React Native之expoexpo在线运行nodejsxdeexpo-cli 123456#因为版本号是2.0.1+，到后期运行react-native项目会报错#npm install -g react-native-cli#卸载已经安装的react-native-clinpm uninstall -g react-native-clinpm instal">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-30T13:22:26.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[react-native] react-native expo create-react-native-app">
-<meta name="twitter:description" content="React Native高效开发React Native之expoexpo在线运行nodejsxdeexpo-cli 123456#因为版本号是2.0.1+，到后期运行react-native项目会报错#npm install -g react-native-cli#卸载已经安装的react-native-clinpm uninstall -g react-native-clinpm instal">
-  
-    <link rel="alternate" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-</head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">BrighterEyer</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">用心看清世界，不要驻足停留</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">首页</a>
-        
-          <a class="main-nav-link" href="/archives">归档</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://brightereyer.xyz"></form>
-      </div>
-    </div>
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true};
+</script>
+
+    <title> [react-native] react-native expo create-react-native-app - BrighterEyer </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">BrighterEyer</a>
   </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-/articles/2018/09/30/1538306511939.html" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/09/30/articles/2018/09/30/1538306511939.html/" class="article-date">
-  <time datetime="2018-09-30T11:21:52.000Z" itemprop="datePublished">2018-09-30</time>
-</a>
-    
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-  <div class="article-inner">
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
     
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
     
-      <header class="article-header">
-        
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">BrighterEyer</a>
+</div>
+
+<nav class="site-navbar">
   
-    <h1 class="article-title" itemprop="name">
-      [react-native] react-native expo create-react-native-app
-    </h1>
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+    </ul>
   
+</nav>
 
       </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          [react-native] react-native expo create-react-native-app
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-09-30
+        </span>
+        
+        
+      </div>
+    </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+
+
+    <div class="post-content">
       
         <p><a href="https://www.jianshu.com/p/6e3b5fb60211" target="_blank">React Native高效开发</a><br><a href="https://expo.io/learn" target="_blank">React Native之expo</a><br><a href="https://snack.expo.io/" target="_blank">expo在线运行</a><br><a href="https://nodejs.org/" target="_blank">nodejs</a><br><a href="https://github.com/expo/xde/releases" target="_blank">xde</a><br><a href="https://github.com/expo/expo-cli/releases" target="_blank">expo-cli</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#因为版本号是2.0.1+，到后期运行react-native项目会报错</span><br><span class="line">#npm install -g react-native-cli</span><br><span class="line">#卸载已经安装的react-native-cli</span><br><span class="line">npm uninstall -g react-native-cli</span><br><span class="line">npm install react-native@0.55.4</span><br><span class="line">npm install -g react-native-cli@1.2.0</span><br></pre></td></tr></table></figure>
@@ -97,138 +177,198 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://brightereyer.xyz/2018/09/30/articles/2018/09/30/1538306511939.html/" data-id="cjpsemcac001fgoqsc6k8rmzy" class="article-share-link">Share</a>
+
+    
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react-native</a></li></ul>
 
-    </footer>
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://brightereyer.xyz">brightereyer</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://brightereyer.xyz/2018/09/30/articles/2018/09/30/1538306511939.html/">http://brightereyer.xyz/2018/09/30/articles/2018/09/30/1538306511939.html/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
   </div>
-  
+
+
+
+      
+      
     
-<nav id="article-nav">
-  
-    <a href="/2018/09/30/articles/2018/09/30/1538316890381.html/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
+
+    
+      <footer class="post-footer">
         
-          [服务器] 服务器
+          <div class="post-tags">
+            
+              <a href="/tags/react-native/">react-native</a>
+            
+          </div>
         
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2018/09/30/articles/2018/09/30/1538316890381.html/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">[服务器] 服务器</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/2018/09/30/articles/2018/09/30/1538296725436.html/">
+        <span class="next-text nav-default">[genymotion] genymotion2.12</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/ahonn" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">brightereyer</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
       </div>
-    </a>
-  
-  
-    <a href="/2018/09/30/articles/2018/09/30/1538296725436.html/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">[genymotion] genymotion2.12</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocos/">cocos</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cocos2d/">cocos2d</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/genymotion/">genymotion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ionic3/">ionic3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsp/">jsp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ngrok/">ngrok</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-native/">react-native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/solo/">solo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/">spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springcloud/">springcloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svn/">svn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkphp/">thinkphp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/">vpn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二维码/">二维码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快应用/">快应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/源码/">源码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/简历/">简历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/鬼畜视频制作/">鬼畜视频制作</a></li></ul>
     </div>
-  </div>
 
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/cocos/" style="font-size: 13.33px;">cocos</a> <a href="/tags/cocos2d/" style="font-size: 13.33px;">cocos2d</a> <a href="/tags/genymotion/" style="font-size: 10px;">genymotion</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/ionic3/" style="font-size: 10px;">ionic3</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/jsp/" style="font-size: 10px;">jsp</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/maven/" style="font-size: 13.33px;">maven</a> <a href="/tags/ngrok/" style="font-size: 10px;">ngrok</a> <a href="/tags/npm/" style="font-size: 13.33px;">npm</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/react-native/" style="font-size: 20px;">react-native</a> <a href="/tags/solo/" style="font-size: 10px;">solo</a> <a href="/tags/spring/" style="font-size: 16.67px;">spring</a> <a href="/tags/springboot/" style="font-size: 16.67px;">springboot</a> <a href="/tags/springcloud/" style="font-size: 10px;">springcloud</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/thinkphp/" style="font-size: 10px;">thinkphp</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/二维码/" style="font-size: 10px;">二维码</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a> <a href="/tags/工具/" style="font-size: 16.67px;">工具</a> <a href="/tags/快应用/" style="font-size: 10px;">快应用</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a> <a href="/tags/源码/" style="font-size: 10px;">源码</a> <a href="/tags/简历/" style="font-size: 10px;">简历</a> <a href="/tags/鬼畜视频制作/" style="font-size: 10px;">鬼畜视频制作</a>
-    </div>
-  </div>
+  
+  
 
   
+
+
+
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li></ul>
-    </div>
-  </div>
+  
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/12/15/articles/2018/12/15/1544870268000.html/">[鬼畜视频制作] BiLiBiLi</a>
-          </li>
-        
-          <li>
-            <a href="/2018/12/15/articles/2018/12/15/1544870267000.html/">[ionic3] ionic3</a>
-          </li>
-        
-          <li>
-            <a href="/2018/12/15/articles/2018/12/15/1544843210000.html/">[jquery] jquery实用笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2018/12/15/articles/2018/12/15/1544843289000.html/">[spring] spring+layui图片上传</a>
-          </li>
-        
-          <li>
-            <a href="/2018/12/15/articles/2018/12/15/1544843288000.html/">[spring] spring-data-jpa</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+  
+
+
+
+
 
   
-</aside>
-        
-      </div>
-      <footer id="footer">
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 brightereyer<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+
   
-    <a href="/" class="mobile-nav-link">首页</a>
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
   
-    <a href="/archives" class="mobile-nav-link">归档</a>
+
   
-</nav>
-    
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  
+    <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  
 
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
+  
+    <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  
 
 
-  </div>
-</body>
+    <script type="text/javascript" src="/js/src/even.js?v=2.10.1"></script>
+
+  </body>
 </html>
