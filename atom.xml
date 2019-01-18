@@ -88,7 +88,7 @@
   </entry>
   
   <entry>
-    <title>[springboot] springboot+jpa+sqlite</title>
+    <title>[springboot] springboot+sqlite</title>
     <link href="http://brightereyer.xyz/2019/01/17//articles/2019/01/17/1547724475000.html/"/>
     <id>http://brightereyer.xyz/2019/01/17//articles/2019/01/17/1547724475000.html/</id>
     <published>2019-01-17T11:27:55.000Z</published>
@@ -273,25 +273,25 @@
   </entry>
   
   <entry>
-    <title>[electronjs] electronjs桌面应用开发</title>
-    <link href="http://brightereyer.xyz/2019/01/13//articles/2019/01/13/1547346252000.html/"/>
-    <id>http://brightereyer.xyz/2019/01/13//articles/2019/01/13/1547346252000.html/</id>
-    <published>2019-01-13T02:24:12.000Z</published>
-    <updated>2019-01-13T02:24:12.000Z</updated>
+    <title>[cocos2d] quick-cocos2d-x demos</title>
+    <link href="http://brightereyer.xyz/2019/01/13//articles/2019/01/13/1547346253000.html/"/>
+    <id>http://brightereyer.xyz/2019/01/13//articles/2019/01/13/1547346253000.html/</id>
+    <published>2019-01-13T02:24:13.000Z</published>
+    <updated>2019-01-13T02:24:13.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="http://xianwx.xyz/2018/08/29/quick-cocos-shader-share/" target="_blank" rel="noopener">http://xianwx.xyz/2018/08/29/quick-cocos-shader-share/</a><br><a href="https://gitee.com/xianwx/quick_cocos_shader_demo" target="_blank" rel="noopener">https://gitee.com/xianwx/quick_cocos_shader_demo</a></p><p>quick-cocos2d-x 模仿愤怒的包子<br><a href="https://gitee.com/blackcushion/baozi.git" target="_blank" rel="noopener">https://gitee.com/blackcushion/baozi.git</a></p><p>2048<br><a href="https://github.com/hanxi/quick-cocos2d-x-2048" target="_blank" rel="noopener">https://github.com/hanxi/quick-cocos2d-x-2048</a></p><p>月球战士<br><a href="https://github.com/booirror/MoonWarriors-Quick" target="_blank" rel="noopener">https://github.com/booirror/MoonWarriors-Quick</a></p><p>cocos2d-x lua 贪吃蛇完整项目<br><a href="https://github.com/doctording/cocos2dx_lua_snake" target="_blank" rel="noopener">https://github.com/doctording/cocos2dx_lua_snake</a></p><p>开发环境：Cocos2d-x 3.2, Lua 5.1, Cocos Code IDE 1.0<br><a href="https://gitee.com/roll1987/cocos2dx-lua-simple-plane-game.git" target="_blank" rel="noopener">https://gitee.com/roll1987/cocos2dx-lua-simple-plane-game.git</a></p><p>包含过程<br><a href="https://gitee.com/linuxing3/cars01" target="_blank" rel="noopener">https://gitee.com/linuxing3/cars01</a><br>贪吃蛇<br><a href="https://gitee.com/linuxing3/cars05" target="_blank" rel="noopener">https://gitee.com/linuxing3/cars05</a></p><p>Quick Cocos2dx v3.2rc1 学习笔记<br><a href="https://gitee.com/maruce/Quick_V3_Study" target="_blank" rel="noopener">https://gitee.com/maruce/Quick_V3_Study</a></p><p><a href="https://gitee.com/yuanwu123" target="_blank" rel="noopener">https://gitee.com/yuanwu123</a></p><p>马里奥<br><a href="https://gitee.com/yuanwu123/mario/blob/master/Mario" target="_blank" rel="noopener">https://gitee.com/yuanwu123/mario/blob/master/Mario</a></p><p>复刻PopCap的游戏MummyMaze，用于学习quick-Cocos2d<br><a href="https://gitee.com/qink1564/MummyMaze" target="_blank" rel="noopener">https://gitee.com/qink1564/MummyMaze</a></p><p>麻将<br><a href="https://gitee.com/362484032/mj_client" target="_blank" rel="noopener">https://gitee.com/362484032/mj_client</a></p><p>使用cocos2d-lua编写六边形连线游戏<br><a href="https://gitee.com/fuatnow/hexlink" target="_blank" rel="noopener">https://gitee.com/fuatnow/hexlink</a></p><p>基于Quick-Cocos2d-x的鼹鼠挖地游戏，包含玩法介绍<br><a href="https://gitee.com/caohongtao/digger" target="_blank" rel="noopener">https://gitee.com/caohongtao/digger</a><br><a href="https://github.com/caohongtao/quick-cocos-demo" target="_blank" rel="noopener">https://github.com/caohongtao/quick-cocos-demo</a></p><p>曹操传 quick-cocos2dx-lua 3.3 复刻<br><a href="https://gitee.com/uhziel/ccz_csdn" target="_blank" rel="noopener">https://gitee.com/uhziel/ccz_csdn</a></p><p><a href="https://gitee.com/linjinxin_scau/PlantsVsZombies" target="_blank" rel="noopener">https://gitee.com/linjinxin_scau/PlantsVsZombies</a></p><p>贪吃蛇<br><a href="https://gitee.com/mcyHome/Snake" target="_blank" rel="noopener">https://gitee.com/mcyHome/Snake</a></p><p><a href="https://github.com/ls9527/tsc" target="_blank" rel="noopener">https://github.com/ls9527/tsc</a><br>斗地主<br><a href="https://github.com/ls9527/ddz" target="_blank" rel="noopener">https://github.com/ls9527/ddz</a></p><p>走迷宫<br><a href="https://github.com/philianbit/QuickCocos-maze" target="_blank" rel="noopener">https://github.com/philianbit/QuickCocos-maze</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="" target="_blank"></a><br><a href="https://github.com/doctording/cocos2dx_lua_snake" target="_blank">cocos2d-x lua 贪吃蛇完整项目</a><br><a href="https://gitee.com/mcyHome/Snake" target="_blank">贪吃蛇1</a><br><a href="https://github.com/ls9527/tsc" target="_blank">贪吃蛇2</a><br><a href="https://gitee.com/linuxing3/cars01" target="_blank">贪吃蛇-场景</a><br><a href="https://gitee.com/linuxing3/cars05" target="_blank">贪吃蛇-运动</a></p><p><a href="http://xianwx.xyz/2018/08/29/quick-cocos-shader-share/" target="_blank">blog|quick_cocos_shader_demo</a><br><a href="https://gitee.com/xianwx/quick_cocos_shader_demo" target="_blank">github|quick_cocos_shader_demo</a><br><a href="https://gitee.com/blackcushion/baozi.git" target="_blank">quick-cocos2d-x 模仿愤怒的包子</a><br><a href="https://github.com/hanxi/quick-cocos2d-x-2048" target="_blank">2048</a><br><a href="https://github.com/booirror/MoonWarriors-Quick" target="_blank">月球战士</a><br><a href="https://gitee.com/roll1987/cocos2dx-lua-simple-plane-game.git" target="_blank">飞机战斗|开发环境：Cocos2d-x 3.2, Lua 5.1, Cocos Code IDE 1.0</a></p><p><a href="https://gitee.com/yuanwu123/mario/blob/master/Mario" target="_blank">马里奥</a><br><a href="https://gitee.com/qink1564/MummyMaze" target="_blank">复刻PopCap的游戏MummyMaze，用于学习quick-Cocos2d</a><br><a href="https://gitee.com/362484032/mj_client" target="_blank">麻将</a><br><a href="https://gitee.com/fuatnow/hexlink" target="_blank">使用cocos2d-lua编写六边形连线游戏</a><br><a href="https://gitee.com/caohongtao/digger" target="_blank">基于Quick-Cocos2d-x的鼹鼠挖地游戏，包含玩法介绍</a><br><a href="https://gitee.com/uhziel/ccz_csdn" target="_blank">曹操传 quick-cocos2dx-lua 3.3 复刻</a><br><a href="https://gitee.com/linjinxin_scau/PlantsVsZombies" target="_blank">植物大战僵尸</a><br><a href="https://github.com/ls9527/ddz" target="_blank">斗地主</a><br><a href="https://github.com/philianbit/QuickCocos-maze" target="_blank">走迷宫</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;http://xianwx.xyz/2018/08/29/quick-cocos-shader-share/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://xianwx.xyz/2018/08/29/quick-cocos-
+        &lt;p&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/doctording/cocos2dx_lua_snake&quot; target=&quot;_blank&quot;&gt;cocos2d-x lua 贪吃蛇完整项目&lt;/a&gt;&lt;b
       
     
     </summary>
     
     
-      <category term="electronjs" scheme="http://brightereyer.xyz/tags/electronjs/"/>
+      <category term="cocos2d" scheme="http://brightereyer.xyz/tags/cocos2d/"/>
     
   </entry>
   
@@ -436,29 +436,6 @@
   </entry>
   
   <entry>
-    <title>[h5game] h5游戏开发</title>
-    <link href="http://brightereyer.xyz/2019/01/13//articles/2019/01/13/1547340797000.html/"/>
-    <id>http://brightereyer.xyz/2019/01/13//articles/2019/01/13/1547340797000.html/</id>
-    <published>2019-01-13T00:53:17.000Z</published>
-    <updated>2019-01-13T00:53:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://aotu.io/index.html" target="_blank">凹凸实验室</a><br><a href="https://fwon.github.io/escape" target="_blank">基于canvas的粒子逃脱小游戏</a><br><a href="https://github.com/fwon/Sinuous" target="_blank">源码</a><br><a href="https://cloud.tencent.com/developer/information/h5%E6%B8%B8%E6%88%8Fjs%E6%BA%90%E7%A0%81" target="_blank">腾讯云社区|h5游戏js源码</a><br><a href="https://cloud.tencent.com/developer/article/1074023" target="_blank">JS+canvas实现人机大战之五子棋</a></p><p><a href="http://www.phaser.io/download/stable" target="_blank">phaser</a><br><a href="http://phaser.io/examples" target="_blank">phaser|examples</a><br><a href="https://github.com/zhangrj/Snake_Game" target="_blank">phaser|Snake_Game</a><br><a href="https://blog.csdn.net/jessicaiu/article/details/83057619" target="_blank">使用Phaser开发你的第一个H5游戏</a><br><a href="https://gitee.com/xwintop/wxGameRank" target="_blank">微信小游戏子域排行榜系统cocos示例程序</a></p><p>完整的上线版微信小游戏（大鸟撞小鸟）示例程序源码<br><a href="https://gitee.com/xwintop/watchout" target="_blank">gitee地址</a><br><a href="https://github.com/864381832/watchout" target="_blank">GitHub地址</a></p><p><a href="http://programmer.ischoolbar.com/index.php/article/article/id/124.html" target="_blank">收费|450多款H5小游戏源码之微信H5小游戏源码大集合持续更新中</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://aotu.io/index.html&quot; target=&quot;_blank&quot;&gt;凹凸实验室&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://fwon.github.io/escape&quot; target=&quot;_blank&quot;&gt;基于canvas的粒子逃脱小游
-      
-    
-    </summary>
-    
-    
-      <category term="h5game" scheme="http://brightereyer.xyz/tags/h5game/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[egret] Egret白鹭H5小游戏开发入门</title>
     <link href="http://brightereyer.xyz/2019/01/13//articles/2019/01/13/1547340797000.html/"/>
     <id>http://brightereyer.xyz/2019/01/13//articles/2019/01/13/1547340797000.html/</id>
@@ -479,6 +456,29 @@
     
     
       <category term="egret" scheme="http://brightereyer.xyz/tags/egret/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[h5game] h5游戏开发</title>
+    <link href="http://brightereyer.xyz/2019/01/13//articles/2019/01/13/1547340797000.html/"/>
+    <id>http://brightereyer.xyz/2019/01/13//articles/2019/01/13/1547340797000.html/</id>
+    <published>2019-01-13T00:53:17.000Z</published>
+    <updated>2019-01-13T00:53:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://aotu.io/index.html" target="_blank">凹凸实验室</a><br><a href="https://fwon.github.io/escape" target="_blank">基于canvas的粒子逃脱小游戏</a><br><a href="https://github.com/fwon/Sinuous" target="_blank">源码</a><br><a href="https://cloud.tencent.com/developer/information/h5%E6%B8%B8%E6%88%8Fjs%E6%BA%90%E7%A0%81" target="_blank">腾讯云社区|h5游戏js源码</a><br><a href="https://cloud.tencent.com/developer/article/1074023" target="_blank">JS+canvas实现人机大战之五子棋</a></p><p><a href="http://www.phaser.io/download/stable" target="_blank">phaser</a><br><a href="http://phaser.io/examples" target="_blank">phaser|examples</a><br><a href="https://github.com/zhangrj/Snake_Game" target="_blank">phaser|Snake_Game</a><br><a href="https://blog.csdn.net/jessicaiu/article/details/83057619" target="_blank">使用Phaser开发你的第一个H5游戏</a><br><a href="https://gitee.com/xwintop/wxGameRank" target="_blank">微信小游戏子域排行榜系统cocos示例程序</a></p><p>完整的上线版微信小游戏（大鸟撞小鸟）示例程序源码<br><a href="https://gitee.com/xwintop/watchout" target="_blank">gitee地址</a><br><a href="https://github.com/864381832/watchout" target="_blank">GitHub地址</a></p><p><a href="http://programmer.ischoolbar.com/index.php/article/article/id/124.html" target="_blank">收费|450多款H5小游戏源码之微信H5小游戏源码大集合持续更新中</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://aotu.io/index.html&quot; target=&quot;_blank&quot;&gt;凹凸实验室&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://fwon.github.io/escape&quot; target=&quot;_blank&quot;&gt;基于canvas的粒子逃脱小游
+      
+    
+    </summary>
+    
+    
+      <category term="h5game" scheme="http://brightereyer.xyz/tags/h5game/"/>
     
   </entry>
   
