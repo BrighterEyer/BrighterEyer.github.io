@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>BrighterEyer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BrighterEyer">
+<meta property="og:url" content="http://brightereyer.xyz/page/17/index.html">
+<meta property="og:site_name" content="BrighterEyer">
+<meta property="og:description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BrighterEyer">
+<meta name="twitter:description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+  
+    <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">brightereyer</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">用心看清世界，不要驻足停留</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/brightereyer" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Android/" style="font-size: 17.27px;">Android</a> <a href="/tags/C/" style="font-size: 10.91px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/UE4/" style="font-size: 10px;">UE4</a> <a href="/tags/api/" style="font-size: 10px;">api</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/cocos/" style="font-size: 10.91px;">cocos</a> <a href="/tags/cocos2d/" style="font-size: 13.64px;">cocos2d</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css3/" style="font-size: 10.91px;">css3</a> <a href="/tags/docker/" style="font-size: 15.45px;">docker</a> <a href="/tags/egret/" style="font-size: 10px;">egret</a> <a href="/tags/electronjs/" style="font-size: 10px;">electronjs</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/flutter/" style="font-size: 10.91px;">flutter</a> <a href="/tags/genymotion/" style="font-size: 10px;">genymotion</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 11.82px;">github</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/h5/" style="font-size: 10.91px;">h5</a> <a href="/tags/h5game/" style="font-size: 10px;">h5game</a> <a href="/tags/hexo/" style="font-size: 11.82px;">hexo</a> <a href="/tags/ionic3/" style="font-size: 10px;">ionic3</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/java/" style="font-size: 19.09px;">java</a> <a href="/tags/javaswing/" style="font-size: 10px;">javaswing</a> <a href="/tags/jq/" style="font-size: 10px;">jq</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 12.73px;">js</a> <a href="/tags/jsp/" style="font-size: 11.82px;">jsp</a> <a href="/tags/kotlin/" style="font-size: 10.91px;">kotlin</a> <a href="/tags/layui/" style="font-size: 10.91px;">layui</a> <a href="/tags/linux/" style="font-size: 12.73px;">linux</a> <a href="/tags/maven/" style="font-size: 12.73px;">maven</a> <a href="/tags/maven插件/" style="font-size: 10.91px;">maven插件</a> <a href="/tags/mysql/" style="font-size: 13.64px;">mysql</a> <a href="/tags/ngrok/" style="font-size: 10.91px;">ngrok</a> <a href="/tags/npm/" style="font-size: 10.91px;">npm</a> <a href="/tags/office/" style="font-size: 10.91px;">office</a> <a href="/tags/pdm/" style="font-size: 10px;">pdm</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/pygame/" style="font-size: 12.73px;">pygame</a> <a href="/tags/python/" style="font-size: 14.55px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/qt/" style="font-size: 10px;">qt</a> <a href="/tags/react-native/" style="font-size: 16.36px;">react-native</a> <a href="/tags/requirejs/" style="font-size: 10.91px;">requirejs</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/solo/" style="font-size: 10px;">solo</a> <a href="/tags/spring/" style="font-size: 15.45px;">spring</a> <a href="/tags/springboot/" style="font-size: 20px;">springboot</a> <a href="/tags/springboot2/" style="font-size: 10px;">springboot2</a> <a href="/tags/springcloud/" style="font-size: 10.91px;">springcloud</a> <a href="/tags/springmvc/" style="font-size: 10.91px;">springmvc</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/thinkphp/" style="font-size: 10px;">thinkphp</a> <a href="/tags/thymeleaf/" style="font-size: 10px;">thymeleaf</a> <a href="/tags/ubuntu/" style="font-size: 10.91px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vue/" style="font-size: 10.91px;">vue</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/webservice/" style="font-size: 10px;">webservice</a> <a href="/tags/二维码/" style="font-size: 10px;">二维码</a> <a href="/tags/优秀毕业设计/" style="font-size: 10px;">优秀毕业设计</a> <a href="/tags/优秀程序媛/" style="font-size: 10px;">优秀程序媛</a> <a href="/tags/前端/" style="font-size: 15.45px;">前端</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/小程序/" style="font-size: 18.18px;">小程序</a> <a href="/tags/嵌入式/" style="font-size: 10px;">嵌入式</a> <a href="/tags/工具/" style="font-size: 11.82px;">工具</a> <a href="/tags/微信/" style="font-size: 10.91px;">微信</a> <a href="/tags/微信小游戏/" style="font-size: 10px;">微信小游戏</a> <a href="/tags/快应用/" style="font-size: 10px;">快应用</a> <a href="/tags/批处理/" style="font-size: 10px;">批处理</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a> <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a> <a href="/tags/架构/" style="font-size: 10px;">架构</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/源码/" style="font-size: 10px;">源码</a> <a href="/tags/硬件/" style="font-size: 10px;">硬件</a> <a href="/tags/第三方接口/" style="font-size: 10px;">第三方接口</a> <a href="/tags/简历/" style="font-size: 10px;">简历</a> <a href="/tags/素材/" style="font-size: 10px;">素材</a> <a href="/tags/鬼畜视频制作/" style="font-size: 10px;">鬼畜视频制作</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">brightereyer</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">brightereyer</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">用心看清世界，不要驻足停留</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
+                
+                    <li><a href="/categories/digital">玩转数码</a></li>
+                
+                    <li><a href="/categories/algorithm">算法学习</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/brightereyer" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-/articles/2019/02/05/1549344287000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/05/articles/2019/02/05/1549344287000.html/" class="article-date">
+      <time datetime="2019-02-05T05:24:47.000Z" itemprop="datePublished">2019-02-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/05/articles/2019/02/05/1549344287000.html/">[css3] css3动画库animate.css</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://daneden.github.io/animate.css/" target="_blank">animate.css官网</a><br><a href="https://blog.csdn.net/qq_27682041/article/details/77568787" target="_blank">参考</a><br>预设了抖动（shake）、闪烁（flash）、弹跳（bounce）、翻转（flip）、旋转（rotateIn/rotateOut）、淡入淡出（fadeIn/fadeOut）等多达 60 多种动画效果<br><a href="https://github.com/BrighterEyer/cssDemos/blob/master/css3animate.html" target="_blank">github|animate.css示例</a></p>
+<p><a href="https://www.cnblogs.com/2050/p/3409129.html" target="_blank">css3动画简介以及动画库animate.css的使用</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">过渡动画</span><br><span class="line">关键帧动画</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/04/1549259160000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/04/articles/2019/02/04/1549259160000.html/" class="article-date">
+      <time datetime="2019-02-04T05:46:00.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/04/articles/2019/02/04/1549259160000.html/">[qt] Qt windows开发环境搭建</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="http://www.qter.org/" target="_blank">Qt开源社区</a><br><a href="https://blog.csdn.net/liang19890820/article/details/50277095" target="_blank">2015年12月12日|《Qt 实战一二三》</a><br><a href="https://blog.csdn.net/vincent95/article/details/79100173" target="_blank">Qt windows开发环境搭建</a><br><a href="https://www.jb51.net/books/327831.html" target="_blank">Qt5开发及实例 PDF扫描版[135MB]</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/qt/">qt</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/04/1549259159000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/04/articles/2019/02/04/1549259159000.html/" class="article-date">
+      <time datetime="2019-02-04T05:45:59.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/04/articles/2019/02/04/1549259159000.html/">[kotlin] Android快速转战Kotlin教程</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/github_33304260/article/details/80343514" target="_blank">Android快速转战Kotlin教程</a><br>1.书籍《Kotlin-for-Android-Developers》配套代码<br><a href="https://github.com/antoniolg/Kotlin-for-Android-Developers" target="_blank">天气例子</a><br>2.Bandhook-Kotlin(★1494)<br><a href="https://github.com/antoniolg/Bandhook-Kotlin" target="_blank">Kotlin版本的音乐播放器，数据来源于LastFm</a><br>3.GankClient-Kotlin(★1216)<br><a href="https://github.com/githubwing/GankClient-Kotlin" target="_blank">gank.io kotlin实现的干货集中营Android客户端，风格采用了Material Design</a><br>4.PoiShuhui-Kotlin(★897)<br><a href="https://github.com/wuapnjie/PoiShuhui-Kotlin" target="_blank">一个用Kotlin写的简单漫画APP</a><br>5.Eyepetizer-in-Kotlin(★1167)<br><a href="https://github.com/LRH1993/Eyepetizer-in-Kotlin" target="_blank">Kotlin版本的Eyepetizer客户端</a><br>6.Tucao(★792)<br><a href="https://github.com/blackbbc/Tucao" target="_blank">Kotlin版本的吐槽客户端</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kotlin/">kotlin</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/04/1549259158000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/04/articles/2019/02/04/1549259158000.html/" class="article-date">
+      <time datetime="2019-02-04T05:45:58.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/04/articles/2019/02/04/1549259158000.html/">[python] 二维码</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Path追加环境变量</span><br><span class="line">D:\Python27;D:\Python27\Scripts</span><br></pre></td></tr></table></figure>
+<p><a href="https://brightereyer.xyz/2019/01/10/articles/2019/01/10/1547085457000.html" target="_blank">安装pip</a><br><a href="https://github.com/sylnsfar/qrcode/blob/master/README-cn.md" target="_blank">qrcode使用</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">pip install Pillow</span><br><span class="line">pip install myqr</span><br><span class="line">#普通二维码</span><br><span class="line">myqr https://github.com</span><br><span class="line">#黑白图片</span><br><span class="line">myqr https://github.com -p github.jpg</span><br><span class="line">#由黑白变彩色</span><br><span class="line">myqr https://github.com -p github.jpg -c</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://pypi.org/project/MyQR/#files" target="_blank">MyQR下载</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/04/1549251001000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/04/articles/2019/02/04/1549251001000.html/" class="article-date">
+      <time datetime="2019-02-04T03:30:01.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/04/articles/2019/02/04/1549251001000.html/">[react-native] 条形码扫描</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.jianshu.com/p/8e8bc89bfe2c" target="_blank">react-native-smart-barcode（react-native二维码扫描）</a><br><a href="https://github.com/react-native-component/react-native-smart-barcode" target="_blank">github|react-native-smart-barcode</a><br><a href="https://www.jianshu.com/p/8bef243bc35d" target="_blank">react-native-smart-barcode目前最好用的二维码扫描组件（IOS、android）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://javascript.ctolib.com/article/wiki/101267</span><br><span class="line">npm install react-native-smart-barcode --save</span><br><span class="line">npm install react-native-smart-timer-enhance --save</span><br><span class="line">react-native link</span><br></pre></td></tr></table></figure></p>
+<p>android/settings.gradle<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">include &apos;:react-native-smart-barcode&apos;</span><br><span class="line">project(&apos;:react-native-smart-barcode&apos;).projectDir = new File(rootProject.projectDir, &apos;../node_modules/react-native-smart-barcode/android&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>\node_modules\react-native-smart-barcode\ios\RCTBarcode<br>在MainApplication.java文件中（这里官方上面有错误，在这里修改一下）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">  //将原来的代码注释掉，换成这句</span><br><span class="line">  private ReactNativeHost mReactNativeHost = new ReactNativeHost(this) &#123;</span><br><span class="line">  //  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) &#123;</span><br><span class="line">  @Override</span><br><span class="line">  protected boolean getUseDeveloperSupport() &#123;</span><br><span class="line">    return BuildConfig.DEBUG;</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  @Override</span><br><span class="line">  protected List&lt;ReactPackage&gt; getPackages() &#123;</span><br><span class="line">    return Arrays.&lt;ReactPackage&gt;asList(</span><br><span class="line">            new MainReactPackage(),</span><br><span class="line">            //直接在这里添加</span><br><span class="line">            new RCTCapturePackage()</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">//添加</span><br><span class="line">public void setReactNativeHost(ReactNativeHost reactNativeHost) &#123;</span><br><span class="line">  mReactNativeHost = reactNativeHost;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">@Override</span><br><span class="line">public ReactNativeHost getReactNativeHost() &#123;</span><br><span class="line">  return mReactNativeHost;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>4.在AndroidManifest.xml文件中添加相机权限:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name=&quot;android.permission.CAMERA&quot;/&gt;</span><br><span class="line">&lt;uses-permission android:name=&quot;android.permission.VIBRATE&quot;/&gt;</span><br><span class="line">&lt;uses-feature android:name=&quot;android.hardware.camera&quot;/&gt;</span><br><span class="line">&lt;uses-feature android:name=&quot;android.hardware.camera.autofocus&quot;/&gt;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react-native</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/04/1549250900000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/04/articles/2019/02/04/1549250900000.html/" class="article-date">
+      <time datetime="2019-02-04T03:28:20.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/04/articles/2019/02/04/1549250900000.html/">[linux] linux环境配置</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://help.aliyun.com/document_detail/51376.html?spm=a2c4g.11186623.6.893.7ed32e7atqCUOT" target="_blank">阿里云文档</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/26/1548511043000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/26/articles/2019/01/26/1548511043000.html/" class="article-date">
+      <time datetime="2019-01-26T13:57:23.000Z" itemprop="datePublished">2019-01-26</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/26/articles/2019/01/26/1548511043000.html/">[前端] 获取地理位置</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;http://pv.sohu.com/cityjson?ie=utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">document.write(returnCitySN[&quot;cip&quot;]+&apos;,&apos;+returnCitySN[&quot;cname&quot;])</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/23/1548206934000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/23/articles/2019/01/23/1548206934000.html/" class="article-date">
+      <time datetime="2019-01-23T01:28:54.000Z" itemprop="datePublished">2019-01-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/23/articles/2019/01/23/1548206934000.html/">[java] 跨域</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://segmentfault.com/a/1190000012364985" target="_blank">springboot设置cors跨域请求的两种方式</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class CorsConfig &#123;</span><br><span class="line">    @Bean</span><br><span class="line">    public FilterRegistrationBean corsFilter() &#123;</span><br><span class="line">        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();</span><br><span class="line">        CorsConfiguration config = new CorsConfiguration();</span><br><span class="line">        config.setAllowCredentials(true);</span><br><span class="line">        // 设置你要允许的网站域名，如果全允许则设为 *</span><br><span class="line">//        config.addAllowedOrigin(&quot;http://localhost:8080&quot;);</span><br><span class="line">        config.addAllowedOrigin(&quot;*&quot;);</span><br><span class="line">        // 如果要限制 HEADER 或 METHOD 请自行更改</span><br><span class="line">        config.addAllowedHeader(&quot;*&quot;);</span><br><span class="line">        config.addAllowedMethod(&quot;*&quot;);</span><br><span class="line">        source.registerCorsConfiguration(&quot;/**&quot;, config);</span><br><span class="line">        FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));</span><br><span class="line">        // 这个顺序很重要哦，为避免麻烦请设置在最前</span><br><span class="line">        bean.setOrder(0);</span><br><span class="line">        return bean;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/idomyway/article/details/79572973" target="_blank">解决js ajax跨域访问报”No ‘Access-Control-Allow-Origin’ header is present on the requested resource.”错误</a><br><a href="https://www.cnblogs.com/mmzs/p/9167743.html" target="_blank">@CrossOrigin</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@EnableWebMvc</span><br><span class="line">public class WebConfig extends WebMvcConfigurerAdapter &#123;</span><br><span class="line">	@Override</span><br><span class="line">	public void addCorsMappings(CorsRegistry registry) &#123;</span><br><span class="line">		registry.addMapping(&quot;/api/**&quot;)</span><br><span class="line">			.allowedOrigins(&quot;http://domain2.com&quot;)</span><br><span class="line">			.allowedMethods(&quot;PUT&quot;, &quot;DELETE&quot;)</span><br><span class="line">			.allowedHeaders(&quot;header1&quot;, &quot;header2&quot;, &quot;header3&quot;)</span><br><span class="line">			.exposedHeaders(&quot;header1&quot;, &quot;header2&quot;)</span><br><span class="line">			.allowCredentials(false).maxAge(3600);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>springboot filter跨域<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import org.springframework.boot.web.servlet.ServletComponentScan;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">import javax.servlet.*;</span><br><span class="line">import javax.servlet.annotation.WebFilter;</span><br><span class="line">import javax.servlet.http.HttpServletRequest;</span><br><span class="line">import javax.servlet.http.HttpServletResponse;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">@ServletComponentScan</span><br><span class="line">@WebFilter(urlPatterns = &quot;/*&quot;,filterName = &quot;corsFilter&quot;)</span><br><span class="line">@Order(1)</span><br><span class="line">public class CorsFilter implements Filter &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void init(FilterConfig filterConfig) throws ServletException &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException &#123;</span><br><span class="line">        HttpServletResponse response = (HttpServletResponse) servletResponse;</span><br><span class="line">        HttpServletRequest request = (HttpServletRequest)servletRequest;</span><br><span class="line"></span><br><span class="line">        String origin = request.getHeader(&quot;Origin&quot;);</span><br><span class="line">        response.setHeader(&quot;Access-Control-Allow-Origin&quot;, origin);</span><br><span class="line">        response.setHeader(&quot;Access-Control-Allow-Methods&quot;, &quot;POST, GET, OPTIONS, DELETE&quot;);</span><br><span class="line">        response.setHeader(&quot;Access-Control-Max-Age&quot;, &quot;3600&quot;);</span><br><span class="line">        response.setHeader(&quot;Access-Control-Allow-Headers&quot;, &quot;x-requested-with,Authorization&quot;);</span><br><span class="line">        response.setHeader(&quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;);</span><br><span class="line">        String method = request.getMethod();</span><br><span class="line">        if(method.equalsIgnoreCase(&quot;OPTIONS&quot;))&#123;</span><br><span class="line">            servletResponse.getOutputStream().write(&quot;Success&quot;.getBytes(&quot;utf-8&quot;));</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            filterChain.doFilter(servletRequest, servletResponse);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void destroy() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>bean注册|不注册会报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Bean</span><br><span class="line">public FilterRegistrationBean filterRegistrationBean() &#123;  </span><br><span class="line">    FilterRegistrationBean registrationBean = new FilterRegistrationBean();  </span><br><span class="line">    CorsFilter corsFilter = new CorsFilter();  </span><br><span class="line">    registrationBean.setFilter(corsFilter);  </span><br><span class="line">    List&lt;String&gt; urlPatterns = new ArrayList&lt;String&gt;();  </span><br><span class="line">    urlPatterns.add(&quot;/*&quot;);</span><br><span class="line">    registrationBean.setUrlPatterns(urlPatterns);  </span><br><span class="line">    return registrationBean;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn package -Dmaven.test.skip=true spring-boot:repackage</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/m_jack/article/details/80497617" target="_blank">No ‘Access-Control-Allow-Origin’ header is present on the requested resource.’Ajax跨域访问解决方案</a><br>jsonp<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">    $.ajax(&#123;</span><br><span class="line">            type:&quot;GET&quot;,</span><br><span class="line">            url:&quot;http://www.deardull.com:9090/getMySeat&quot;, //访问的链接</span><br><span class="line">            dataType:&quot;jsonp&quot;,  //数据格式设置为jsonp</span><br><span class="line">            jsonp:&quot;callback&quot;,  //Jquery生成验证参数的名称</span><br><span class="line">            success:function(data)&#123;  //成功的回调函数</span><br><span class="line">                alert(data);</span><br><span class="line">            &#125;,</span><br><span class="line">            error: function (e) &#123;</span><br><span class="line">                alert(&quot;error&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">后端</span><br><span class="line">    @ResponseBody</span><br><span class="line">    @RequestMapping(&quot;/getMySeat&quot;)</span><br><span class="line">    public String getMySeatSuccess(@RequestParam(&quot;callback&quot;) String callback)&#123;</span><br><span class="line">        Gson gson=new Gson();</span><br><span class="line">        Map&lt;String,String&gt; map=new HashMap&lt;&gt;();</span><br><span class="line">        map.put(&quot;seat&quot;,&quot;1_2_06_12&quot;);</span><br><span class="line">        logger.info(callback);</span><br><span class="line">        return callback+&quot;(&quot;+gson.toJson(map)+&quot;)&quot;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.jianshu.com/p/db0d8d45c242" target="_blank">spring-boot 允许接口跨域并实现拦截（CORS）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class CorsConfig extends WebMvcConfigurerAdapter &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void addCorsMappings(CorsRegistry registry) &#123;</span><br><span class="line">        registry.addMapping(&quot;/**&quot;)</span><br><span class="line">                .allowedOrigins(&quot;*&quot;)</span><br><span class="line">                .allowCredentials(true)</span><br><span class="line">                .allowedMethods(&quot;GET&quot;, &quot;POST&quot;, &quot;DELETE&quot;, &quot;PUT&quot;)</span><br><span class="line">                .maxAge(3600);</span><br><span class="line">    &#125;</span><br><span class="line">    private CorsConfiguration buildConfig() &#123;</span><br><span class="line">        CorsConfiguration corsConfiguration = new CorsConfiguration();</span><br><span class="line">        List&lt;String&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">        list.add(&quot;*&quot;);</span><br><span class="line">        corsConfiguration.setAllowedOrigins(list);</span><br><span class="line">        /*</span><br><span class="line">        // 请求常用的三种配置，*代表允许所有，当时你也可以自定义属性（比如header只能带什么，只能是post方式等等）</span><br><span class="line">        */</span><br><span class="line">        corsConfiguration.addAllowedOrigin(&quot;*&quot;);  </span><br><span class="line">        corsConfiguration.addAllowedHeader(&quot;*&quot;); </span><br><span class="line">        corsConfiguration.addAllowedMethod(&quot;*&quot;);  </span><br><span class="line">        return corsConfiguration;</span><br><span class="line">    &#125;</span><br><span class="line">    @Bean</span><br><span class="line">    public CorsFilter corsFilter() &#123;</span><br><span class="line">        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();</span><br><span class="line">        source.registerCorsConfiguration(&quot;/**&quot;, buildConfig());</span><br><span class="line">        return new CorsFilter(source);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/23/1548206933000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/23/articles/2019/01/23/1548206933000.html/" class="article-date">
+      <time datetime="2019-01-23T01:28:53.000Z" itemprop="datePublished">2019-01-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/23/articles/2019/01/23/1548206933000.html/">[java] Multipartfile与File类型相互转换</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/zxg-blog/p/8952255.html" target="_blank">Multipartfile与File类型相互转换</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/20/1547972027000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/20/articles/2019/01/20/1547972027000.html/" class="article-date">
+      <time datetime="2019-01-20T08:13:47.000Z" itemprop="datePublished">2019-01-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/20/articles/2019/01/20/1547972027000.html/">[react-native] react-native-qq</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.jianshu.com/p/910eec152abb" target="_blank">React Native封装微信\QQ分享组件</a><br><a href="https://github.com/guangqiang-liu/react-native-shareLogin.git" target="_blank">[可用]项目Demo</a></p>
+<p><a href="https://www.jianshu.com/p/a493f6f92b34" target="_blank">react-native代码编辑|react-native实现QQ的登录和分享（图文消息分享和纯图片分享）</a></p>
+<p>给gradle配置阿里云maven<br><a href="http://faceplus.top/2017/04/22/react-native%E8%BF%9B%E5%85%A5%E5%A7%BF%E5%8A%BF/init.gradle" target="_blank">init.gradle</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">notepad %USERPROFILE%\.gradle\init.gradle</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/reactnativecn/react-native-qq" target="_blank">react-native-qq</a><br><a href="http://wiki.open.qq.com/wiki/mobile/get_simple_userinfo" target="_blank">qq腾讯开放平台获取获取用户信息文档链接</a></p>
+<p><a href="https://www.jianshu.com/p/46a9919636be" target="_blank">react native qq登录，微信登录实现(android端)</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#使用特定版本</span><br><span class="line">react-native init demo --version 0.55.4</span><br><span class="line">cd demo</span><br><span class="line">yarn add react-native-qq</span><br><span class="line">react-native link react-native-qq</span><br><span class="line"></span><br><span class="line">#android/app/build.gradle</span><br><span class="line">#defaultConfig 添加</span><br><span class="line">        manifestPlaceholders = [</span><br><span class="line">            QQ_APPID: &quot;平台申请的APPID&quot;</span><br><span class="line">        ]</span><br><span class="line"></span><br><span class="line">#&lt;manifest&gt;添加</span><br><span class="line">xmlns:tools=&quot;http://schemas.android.com/tools&quot;</span><br><span class="line">#&lt;application&gt;添加</span><br><span class="line">tools:replace=&quot;android:allowBackup&quot;</span><br><span class="line"></span><br><span class="line">react-native run-android</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/xietansheng/article/details/85092056" target="_blank">sdkmanager的使用</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#配置环境变量</span><br><span class="line">E:\Android\Sdk\tools\bin</span><br><span class="line">E:\Android\Sdk\tools</span><br><span class="line">E:\Android\Sdk\platform-tools</span><br><span class="line">#新建文件</span><br><span class="line">notepad %USERPROFILE%\.android\repositories.cfg</span><br><span class="line">sdkmanager --list</span><br><span class="line">sdkmanager --uninstall &quot;build-tools;23.0.1&quot;</span><br><span class="line">sdkmanager &quot;build-tools;23.0.1&quot;</span><br><span class="line">sdkmanager &quot;build-tools;27.0.3&quot;</span><br><span class="line">sdkmanager &quot;system-images;android-24;default;x86_64&quot;</span><br><span class="line">sdkmanager &quot;platform-tools&quot; &quot;platforms;android-26&quot;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/deeplies/article/details/71194121" target="_blank">[办法]react-native 编译构建时出错，提示 Build Tools版本过低提示</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">android list sdk -a</span><br><span class="line">android update sdk --use-sdk-wrapper</span><br><span class="line">android update sdk -a -u -t 13</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react-native</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/16/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/18/">Next &raquo;</a>
+    </nav>
+  
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 brightereyer
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

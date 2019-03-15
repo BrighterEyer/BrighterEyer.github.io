@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>BrighterEyer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BrighterEyer">
+<meta property="og:url" content="http://brightereyer.xyz/page/13/index.html">
+<meta property="og:site_name" content="BrighterEyer">
+<meta property="og:description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BrighterEyer">
+<meta name="twitter:description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+  
+    <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">brightereyer</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">用心看清世界，不要驻足停留</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/brightereyer" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Android/" style="font-size: 17.27px;">Android</a> <a href="/tags/C/" style="font-size: 10.91px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/UE4/" style="font-size: 10px;">UE4</a> <a href="/tags/api/" style="font-size: 10px;">api</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/cocos/" style="font-size: 10.91px;">cocos</a> <a href="/tags/cocos2d/" style="font-size: 13.64px;">cocos2d</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css3/" style="font-size: 10.91px;">css3</a> <a href="/tags/docker/" style="font-size: 15.45px;">docker</a> <a href="/tags/egret/" style="font-size: 10px;">egret</a> <a href="/tags/electronjs/" style="font-size: 10px;">electronjs</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/flutter/" style="font-size: 10.91px;">flutter</a> <a href="/tags/genymotion/" style="font-size: 10px;">genymotion</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 11.82px;">github</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/h5/" style="font-size: 10.91px;">h5</a> <a href="/tags/h5game/" style="font-size: 10px;">h5game</a> <a href="/tags/hexo/" style="font-size: 11.82px;">hexo</a> <a href="/tags/ionic3/" style="font-size: 10px;">ionic3</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/java/" style="font-size: 19.09px;">java</a> <a href="/tags/javaswing/" style="font-size: 10px;">javaswing</a> <a href="/tags/jq/" style="font-size: 10px;">jq</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 12.73px;">js</a> <a href="/tags/jsp/" style="font-size: 11.82px;">jsp</a> <a href="/tags/kotlin/" style="font-size: 10.91px;">kotlin</a> <a href="/tags/layui/" style="font-size: 10.91px;">layui</a> <a href="/tags/linux/" style="font-size: 12.73px;">linux</a> <a href="/tags/maven/" style="font-size: 12.73px;">maven</a> <a href="/tags/maven插件/" style="font-size: 10.91px;">maven插件</a> <a href="/tags/mysql/" style="font-size: 13.64px;">mysql</a> <a href="/tags/ngrok/" style="font-size: 10.91px;">ngrok</a> <a href="/tags/npm/" style="font-size: 10.91px;">npm</a> <a href="/tags/office/" style="font-size: 10.91px;">office</a> <a href="/tags/pdm/" style="font-size: 10px;">pdm</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/pygame/" style="font-size: 12.73px;">pygame</a> <a href="/tags/python/" style="font-size: 14.55px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/qt/" style="font-size: 10px;">qt</a> <a href="/tags/react-native/" style="font-size: 16.36px;">react-native</a> <a href="/tags/requirejs/" style="font-size: 10.91px;">requirejs</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/solo/" style="font-size: 10px;">solo</a> <a href="/tags/spring/" style="font-size: 15.45px;">spring</a> <a href="/tags/springboot/" style="font-size: 20px;">springboot</a> <a href="/tags/springboot2/" style="font-size: 10px;">springboot2</a> <a href="/tags/springcloud/" style="font-size: 10.91px;">springcloud</a> <a href="/tags/springmvc/" style="font-size: 10.91px;">springmvc</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/thinkphp/" style="font-size: 10px;">thinkphp</a> <a href="/tags/thymeleaf/" style="font-size: 10px;">thymeleaf</a> <a href="/tags/ubuntu/" style="font-size: 10.91px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vue/" style="font-size: 10.91px;">vue</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/webservice/" style="font-size: 10px;">webservice</a> <a href="/tags/二维码/" style="font-size: 10px;">二维码</a> <a href="/tags/优秀毕业设计/" style="font-size: 10px;">优秀毕业设计</a> <a href="/tags/优秀程序媛/" style="font-size: 10px;">优秀程序媛</a> <a href="/tags/前端/" style="font-size: 15.45px;">前端</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/小程序/" style="font-size: 18.18px;">小程序</a> <a href="/tags/嵌入式/" style="font-size: 10px;">嵌入式</a> <a href="/tags/工具/" style="font-size: 11.82px;">工具</a> <a href="/tags/微信/" style="font-size: 10.91px;">微信</a> <a href="/tags/微信小游戏/" style="font-size: 10px;">微信小游戏</a> <a href="/tags/快应用/" style="font-size: 10px;">快应用</a> <a href="/tags/批处理/" style="font-size: 10px;">批处理</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a> <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a> <a href="/tags/架构/" style="font-size: 10px;">架构</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/源码/" style="font-size: 10px;">源码</a> <a href="/tags/硬件/" style="font-size: 10px;">硬件</a> <a href="/tags/第三方接口/" style="font-size: 10px;">第三方接口</a> <a href="/tags/简历/" style="font-size: 10px;">简历</a> <a href="/tags/素材/" style="font-size: 10px;">素材</a> <a href="/tags/鬼畜视频制作/" style="font-size: 10px;">鬼畜视频制作</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">brightereyer</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">brightereyer</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">用心看清世界，不要驻足停留</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
+                
+                    <li><a href="/categories/digital">玩转数码</a></li>
+                
+                    <li><a href="/categories/algorithm">算法学习</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/brightereyer" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-/articles/2019/02/18/1550451300000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451300000.html/" class="article-date">
+      <time datetime="2019-02-18T00:55:00.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451300000.html/">[springboot] springboot+solr</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/larger5/article/details/79768438" target="_blank">[增删改查] SpringBoot 整合 Solr 之 SolrClient 实现 CRUD、分页接口、高亮显示</a><br><a href="https://github.com/larger5/SpringBoot_solr_base.git" target="_blank">github|SpringBoot_solr_base</a><br><a href="https://blog.csdn.net/appleyk/article/details/79280836" target="_blank">Spring-Boot+Solr搜索应用（索引数据创建+关键字高亮+thymeleaf静态html模板渲染跳转）</a><br><a href="https://blog.csdn.net/larger5/article/details/79946353" target="_blank">使用 LayUI+SpringBoot+Solr 模仿百度、做站内搜索引擎</a><br><a href="https://www.cnblogs.com/cblogs/p/solr-tutorial.html" target="_blank">Apache Solr入门教程(初学者之旅) </a><br><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">jdk8</a><br><a href="https://archive.apache.org/dist/zookeeper/" target="_blank">zookeeper</a><br><a href="https://blog.csdn.net/qiushisoftware/article/details/79043379" target="_blank">Zookeeper简介与集群搭建</a><br><a href="https://www.jianshu.com/p/1f4c70d7ef40" target="_blank">Linux ZooKeeper入门教程（一）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Zookeeper简介</span><br><span class="line">Zookeeper是一个高效的分布式协调服务，可以提供配置信息管理、命名、分布式同步、集群管理、数据库切换等服务。它不适合用来存储大量信息，可以用来存储一些配置、发布与订阅等少量信息。Hadoop、Storm、消息中间件、RPC服务框架、分布式数据库同步系统，这些都是Zookeeper的应用场景。</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/qq_26641781/article/details/80886831" target="_blank">idea Docker安装Zookeeper并进行操作</a><br><a href="https://www.cnblogs.com/kingkoo/p/8732448.html" target="_blank">使用 Docker 一步搞定 ZooKeeper 集群的搭建</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">docker pull zookeeper</span><br><span class="line">docker run --privileged=true -d --name zookeeper --publish 2181:2181 -d zookeeper:latest</span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line">#idea提供了一个Zookeeper插件，以供连接Zookeeper服务中心和查看内容</span><br><span class="line">#打开idea –&gt; Settings -&gt; Plugins,搜索Zoo进行下载安装</span><br><span class="line"></span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line">        &lt;!-- 原生zookeeper --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;zookeeper&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;3.4.6&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--Apache Curator--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.curator&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;curator-framework&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.9.0&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- zkclient --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;com.101tec&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;zkclient&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;0.9&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;log4j&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;log4j&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;1.2.17&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://tomcat.apache.org/download-80.cgi" target="_blank">tomcat8</a></p>
+<p><a href="https://blog.csdn.net/bskfnvjtlyzmv867/article/details/81623416" target="_blank">docker+centos+solr</a><br><a href="http://lucene.apache.org/solr/downloads.html" target="_blank">solr下载页</a><br><a href="http://mirrors.shu.edu.cn/apache/lucene/solr/7.7.0/solr-7.7.0.zip" target="_blank">solr-7.7.0.zip</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd solr/bin</span><br><span class="line">solr start</span><br><span class="line">solr create -c mycore1 -p 8983</span><br><span class="line">#访问</span><br><span class="line">#http://localhost:8983/solr/admin/cores?action=STATUS&amp;core=mycore1</span><br><span class="line">#solr服务器默认端口8983，访问http://localhost:8983/solr/</span><br><span class="line">solr stop -all</span><br><span class="line"></span><br><span class="line">https://github.com/x113773/testall/</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/cs_hnu_scw/article/details/79388080" target="_blank">手把手教你如何玩转Solr（包含项目实战）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://pan.baidu.com/s/1dRClm2</span><br><span class="line">olio</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.jianshu.com/p/45bc44a43485" target="_blank">使用SSM+Solr优雅的实现电商项目中的搜索功能</a><br><a href="https://github.com/TyCoding/ssm-redis-solr" target="_blank">github|SSM整合Solr实现电商项目中的搜索功能</a></p>
+<p><a href="https://blog.csdn.net/weixin_38589021/article/details/80323957" target="_blank">Docker搭建Solr-IKAnalyzer</a><br><a href="https://github.com/kingdz2008/dockerfile/tree/master/solr-ikanalyzer" target="_blank">github|solr-ikanalyzer</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build .</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/qq_26641781/article/details/81671323" target="_blank">Docker+Solr+IK</a><br><a href="https://www.cnblogs.com/yehuabin/p/10180737.html" target="_blank">docker-compose 安装solr+ikanalyzer</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it solr bash</span><br><span class="line">cd /opt/solr/server/solr</span><br><span class="line">mkdir ik_core</span><br><span class="line">cd ik_core</span><br><span class="line">mkdir data</span><br><span class="line">cp -r ../configsets/sample_techproducts_configs/conf/ .</span><br><span class="line">echo &apos;name=ik_core&apos; &gt; core.properties</span><br><span class="line">ls</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/xiaokang123456kao/article/details/72844729" target="_blank">solr简介和使用</a><br><a href="https://pan.baidu.com/s/1tIQdpXsOm_98Syuf4YQKag" target="_blank">ikanalyzer</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451299000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451299000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:59.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451299000.html/">[springboot] springboot视频播放</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/HcJsJqJSSM/article/details/80753712" target="_blank">SpringBoot基于VIP视频解析接口实现视频播放</a><br><a href="https://blog.csdn.net/qq_37164847/article/details/81668242" target="_blank">springboot2.0上传文件（视频，图片）到服务器硬盘，并保存路径至mysql,返回可直接访问的url</a><br><a href="https://gitee.com/xuhaiyan/sg" target="_blank">github|springboot2.0上传文件（图片视频）项目</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create database movies;</span><br><span class="line">use movies;</span><br><span class="line">create table video(</span><br><span class="line">	id int primary key auto_increment,</span><br><span class="line">	url varchar(255),</span><br><span class="line">	name varchar(255),</span><br><span class="line">	path varchar(255)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451298000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451298000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:58.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451298000.html/">[springboot] springboot实战专栏</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/HcJsJqJSSM/column/info/22887" target="_blank">实战专栏</a></p>
+<p>SpringBoot基于Excel模板完成下载<br><a href="https://blog.csdn.net/HcJsJqJSSM/article/details/80468598" target="_blank">IDEA+Maven+SpringBoot+BootStrap+Thymeleaf+Mysql+Excel+MyBatis+Lombok+IDEA热部署</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451297000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451297000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:57.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451297000.html/">[springboot] springboot+mybatis+generator+jpa</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/liuchengcc/p/8998043.html" target="_blank">Springboot+MyBatis+JPA集成</a><br><a href="http://www.mybatis.org/generator/index.html" target="_blank">MyBatis Generator</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clean install -Dmaven.test.skip=true</span><br><span class="line">mybatis-generator:generate</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/lkdirk/p/7079905.html" target="_blank">springBoot数据库jpa+对接mybatis</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create database mybatisjpa;</span><br><span class="line">create table t_user(</span><br><span class="line">    id int primary key auto_increment,</span><br><span class="line">    name varchar(255)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<p>pom.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;        </span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">     &lt;version&gt;5.1.21&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>application.properties<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spring.datasource.url=jdbc:mysql://localhost:3306/mybatisjpa?characterEncoding=UTF8&amp;socketTimeout=60000</span><br><span class="line">spring.datasource.username=root</span><br><span class="line">spring.datasource.password=root</span><br><span class="line">spring.datasource.driver-class-name=com.mysql.jdbc.Driver</span><br></pre></td></tr></table></figure></p>
+<p>entity/User.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public class User &#123;</span><br><span class="line">    </span><br><span class="line">    private Integer id;</span><br><span class="line">    private String name;</span><br><span class="line"></span><br><span class="line">    public Integer getId() &#123;</span><br><span class="line">        return id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setId(Integer id) &#123;</span><br><span class="line">        this.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>继承接口后会自动注入，不需要加@configuration，@bean等进行配置，可以直接@Autowired注入使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Mapper</span><br><span class="line">@Repository</span><br><span class="line">public interface UserRepository extends JpaRepository&lt;User,Integer&gt;&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>接入mybatis<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.3.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>编写dao，注意加上@Mapper,使用起来和正常mybatis一样，然后在调用处直接注入即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Mapper</span><br><span class="line">public interface UserDAO &#123;</span><br><span class="line"></span><br><span class="line">   @Select(&quot;select count(1) from User&quot;)</span><br><span class="line">   int findCount();</span><br><span class="line"></span><br><span class="line">   @Select(&quot;select id,name from User where id = #&#123;id&#125;&quot;)</span><br><span class="line">   User findById(@Param(&quot;id&quot;)int id);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/svili/p/7232323.html" target="_blank">Mybatis JPA-集成方案+源码</a><br><a href="https://github.com/cnsvili/mybatis-jpa" target="_blank">github|mybatis-jpa</a><br><a href="https://gitee.com/svili/mybatis-jpa" target="_blank">gitee|mybatis-jpa</a><br><a href="https://github.com/LittleNewbie/mybatis-jpa" target="_blank">spring+mybatis+jpa源码地址</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451296000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451296000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:56.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451296000.html/">[spring] spring+shiro</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/HeatDeath/article/details/78407092" target="_blank">springmvc+shiro</a><br><a href="https://crossoverjie.top/2016/07/15/SSM3/" target="_blank">ssm+shiro</a><br><a href="https://www.sojson.com/shiro" target="_blank">springMVC + Mybatis + Redis 的Shiro整套项目Demo</a><br><a href="https://github.com/baichengzhou/SpringMVC-Mybatis-Shiro-redis-0.2" target="_blank">SpringMVC-Mybatis-Shiro-redis-0.2</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451295000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451295000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:55.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451295000.html/">[java] 设计模式demos</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/ypmc/design-pattern" target="_blank">java设计模式demos</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451294000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451294000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:54.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451294000.html/">[flutter] flutter视频播放</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.jianshu.com/p/caf7e3cd0df6" target="_blank">简书|Flutter 视频播放</a><br><a href="https://linux.ctolib.com/shmy-dd_app.html" target="_blank">[黑人视频]是一款基于flutter实现的在线视频播放app</a></p>
+<p><a href="https://github.com/shmy/flutter_video_player" target="_blank">video_player</a><br><a href="https://github.com/shmy/flutter_toasty" target="_blank">toasty</a><br><a href="https://github.com/shmy/flutter_clipboard" target="_blank">clipboard</a><br><a href="https://github.com/shmy/flutter_loading" target="_blank">loading</a><br><a href="https://github.com/shmy/flutter_webview" target="_blank">webview</a><br><a href="https://github.com/shmy/android_intent" target="_blank">android_intent</a><br><a href="https://github.com/shmy/flutter_tx_xg" target="_blank">tx_xg</a></p>
+<p><a href="https://blog.csdn.net/Kinsomy/article/details/86083989" target="_blank">Flutter仿网易云音乐：播放界面</a><br><a href="https://github.com/KinsomyJS/flutter_netease_music" target="_blank">github|Flutter仿网易云音乐：播放界面</a><br><a href="https://www.cnblogs.com/yangyxd/p/9232308.html" target="_blank">【Flutter】Flutter 一些常用库</a><br><a href="https://jspang.com/" target="_blank">技术胖</a><br><a href="https://juejin.im/post/5a5bc8c36fb9a01ca26774eb" target="_blank">掘金|技术胖155集前端视频教程-全部免费观看</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flutter/">flutter</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451293000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451293000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:53.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451293000.html/">[java] slf4j+log4j、slf4j+logback、slf4j+log4j2总结</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.tuicool.com/articles/INveIf" target="_blank">日志门面图解</a><br><a href="https://www.cnblogs.com/huayu0815/p/5341712.html" target="_blank">slf4j+log4j+logback总结</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">总结</span><br><span class="line"></span><br><span class="line">1、slf4j提供各种抽象接口，日志应该基于slf4j的API进行日志打印，这样无论迁移到那个项目，只需要配一个实现类log4j or logback,都能正常打印日志</span><br><span class="line"></span><br><span class="line">2、slf4j的实现类不能有多个，不然冲突</span><br><span class="line"></span><br><span class="line">3、如果项目中有直接引用log4j的，可以加入log4j-over-slf4j，把旧的日志log4j适配到slf4j,这时候，再使用logback就可以了。</span><br></pre></td></tr></table></figure></p>
+<p>哪些采用了log4j<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">kafka</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">   &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">   &lt;artifactId&gt;log4j-over-slf4j&lt;/artifactId&gt;</span><br><span class="line">   &lt;version&gt;1.7.7&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>spring-boot-starter默认使用logback<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;logback-core&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;1.1.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;logback-access&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;1.1.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;1.1.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>常见组合：<br>（1）log4j+slf4j<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">slf4j-api-1.7.25.jar</span><br><span class="line">log4j-1.2.17.jar</span><br><span class="line">slf4j-log4j12-1.7.25.jar</span><br><span class="line"></span><br><span class="line">&lt;!--</span><br><span class="line">springboot</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;exclusions&gt;</span><br><span class="line">        &lt;exclusion&gt;</span><br><span class="line">            &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;</span><br><span class="line">        &lt;/exclusion&gt;</span><br><span class="line">    &lt;/exclusions&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.7.25&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;log4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;log4j&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.2.17&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.7.25&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">Logger logger = LoggerFactory.getLogger(Object.class);</span><br><span class="line">logger.error(&quot;==== log4j ====&quot;);</span><br></pre></td></tr></table></figure></p>
+<p>（2）slf4j-log4j12（注意：需要编写 log4j.properties 文件，且logback-classic 、log4j-over-slf4j  都与 slf4j-log4j12冲突）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#log4j.properties</span><br><span class="line">log4j.rootLogger=INFO, stdout</span><br><span class="line">log4j.appender.stdout=org.apache.log4j.ConsoleAppender</span><br><span class="line">log4j.appender.stdout.Target=System.out</span><br><span class="line">log4j.appender.stdout.layout=org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.stdout.layout.ConversionPattern=%d&#123;ABSOLUTE&#125; %5p %c&#123;1&#125;:%L - %m%n</span><br><span class="line"></span><br><span class="line">#pom.xml</span><br><span class="line">&lt;!--</span><br><span class="line">springboot</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;exclusions&gt;</span><br><span class="line">        &lt;exclusion&gt;</span><br><span class="line">            &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;</span><br><span class="line">        &lt;/exclusion&gt;</span><br><span class="line">    &lt;/exclusions&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.7.25&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>（3）slf4j+logback<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">slf4j-api-1.7.25.jar</span><br><span class="line">logback-core-1.2.3.jar</span><br><span class="line">logback-classic-1.2.3.jar</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.7.25&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;logback-core&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.2.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.2.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">Logger logger = LoggerFactory.getLogger(Object.class);</span><br><span class="line">logger.error(&quot;==== logback ====&quot;);</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.importnew.com/28541.html" target="_blank">logback的使用</a></p>
+<blockquote>
+<p>日志类的区别</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#logback</span><br><span class="line">private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(Object.class);</span><br><span class="line"></span><br><span class="line">#log4j</span><br><span class="line">private static final org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(Object.class);</span><br><span class="line"></span><br><span class="line">#log4j2</span><br><span class="line">private static org.apache.logging.log4j.Logger logger = org.apache.logging.log4j.LogManager.getLogger(Object.class);</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/HarderXin/article/details/80422903" target="_blank">slf4j与log4j、log4j2</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.7.25&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;log4j-api&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.7&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;log4j-core&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.7&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;log4j-slf4j-impl&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.7&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>slf4j+log4j2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如果我们在系统中需要使用slf4j和log4j2来进行日志输出的话，我们需要引入下面的jar包：</span><br><span class="line">log4j2核心jar包：log4j-api-2.7.jar和log4j-core-2.7.jar</span><br><span class="line">slf4j核心jar包：slf4j-api-1.6.4.jar</span><br><span class="line">slf4j与log4j2的桥接包：log4j-slf4j-impl-2.7.jar，这个包的作用就是使用slf4j的api，但是底层实现是基于log4j2</span><br><span class="line">所以我们获取日志仍可以通过下面的代码进行：</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import org.slf4j.Logger;</span><br><span class="line">import org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line">public class Slf4jTest &#123;</span><br><span class="line">  private static final Logger logger = LoggerFactory.getLogger(Slf4jTest2.class);</span><br><span class="line"></span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">    logger.info(&quot;hello world&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>slf4j+log4j不修改代码升级到log4j2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">如果我们系统中刚开始用的是slf4j和log4j，然后出于性能考虑，要升级到slf4j和log4j2，并且不需要改动任何代码的话(因为我们系统可能是一个大工程，然后基本上每个类都会有日志输出，改动代码可能牵一发而动全身)，出于这个考虑，我们可以这样来进行修改：</span><br><span class="line">1、删除项目中存在的Log4j1.x所必须的log4j和slf4j-log4j12等依赖，例如从我们上面做的去升级的话，需要删除log4j-1.2.17.jar和slf4j-log4j12-1.6.1.jar</span><br><span class="line">2、添加log4j2和slf4j桥接包：log4j-slf4j-impl-2.7.jar替换log4j和slf4j桥接包：slf4j-log4j12-1.6.1.jar</span><br><span class="line">3、如果我们在系统中使用了log4j的api去获取Logger的话：</span><br><span class="line">org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(Log4jTest.class)</span><br><span class="line">我们需要添加log4j-1.2-api-2.7.jar去替换log4j-1.2.17.jar</span><br><span class="line">4、将log4j的properties文件修改为log4j2的xml文件</span><br><span class="line">然后，同样在系统中使用slf4j的方式获取日志：</span><br><span class="line">org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(Self4jTest.class);</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/aben-blog/p/8968363.html" target="_blank">springboot默认集成logback说明</a><br><a href="https://www.cnblogs.com/lixuwu/p/5804793.html" target="_blank">springboot+logback</a><br><a href="https://www.cnblogs.com/zj0208/p/6149852.html" target="_blank">springboot+log4j</a>|<a href="https://blog.csdn.net/wang465745776/article/details/80384210" target="_blank">Failed to load class “org.slf4j.impl.StaticLoggerBinder”的问题</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">  &lt;exclusions&gt;</span><br><span class="line">      &lt;exclusion&gt;</span><br><span class="line">          &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;spring-boot-starter-logging&lt;/artifactId&gt;</span><br><span class="line">      &lt;/exclusion&gt;</span><br><span class="line">  &lt;/exclusions&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt; </span><br><span class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;spring-boot-starter-log4j&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;slf4j-nop&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.7.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.7.25&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>springboot+log4j2<br><a href="https://www.cnblogs.com/advancing/p/7922463.html" target="_blank">Spring Boot自定义log4j2日志文件</a><br><a href="https://blog.csdn.net/sdlyjzh/article/details/79416607" target="_blank">springboot 中 log4j2的使用及配置讲解</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">   &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">   &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">   &lt;exclusions&gt;</span><br><span class="line">      &lt;exclusion&gt;</span><br><span class="line">         &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;spring-boot-starter-logging&lt;/artifactId&gt;</span><br><span class="line">      &lt;/exclusion&gt;</span><br><span class="line">   &lt;/exclusions&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">   &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">   &lt;artifactId&gt;spring-boot-starter-log4j2&lt;/artifactId&gt;</span><br><span class="line">   &lt;version&gt;1.5.8.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/15/1550229510000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/15/articles/2019/02/15/1550229510000.html/" class="article-date">
+      <time datetime="2019-02-15T11:18:30.000Z" itemprop="datePublished">2019-02-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/15/articles/2019/02/15/1550229510000.html/">[docker] docker+php</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">docker run ubuntu:14.04 /bin/echo &apos;Hello World&apos;</span><br><span class="line">docker run -it ubuntu:14.04 /bin/bash</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install apache2</span><br><span class="line">/etc/apache2/apache2.conf</span><br><span class="line">sudo chmod 777 /var/www</span><br><span class="line">#对注册为服务的程序可以全局使用 service</span><br><span class="line">sudo service apache2 restart</span><br><span class="line">#未注册 service 需要制定到程序目录</span><br><span class="line">sudo /etc/init.d/apache2 restart</span><br><span class="line">#Nginx 和 Apache 会抢夺80端口，最好先停止其中一个再装。</span><br><span class="line">sudo apt-get install nginx</span><br><span class="line">#安装PHP5以及常用模块</span><br><span class="line">sudo apt-get install libapache2-mod-php5 php5 php5-gd php5-mysql php5-fpm php5-mcrypt php5-curl libcurl3 libcurl3-dev</span><br><span class="line">#apache的php.ini</span><br><span class="line">/etc/php5/apache2/php.ini;</span><br><span class="line">#nginx的php.ini</span><br><span class="line">/etc/php5/fpm/php.ini</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#另外装PHP的时候，也自动装了解析器，用来解析PHP语法，两个主要的文件分别在这两个目录：</span><br><span class="line">/var/run/php5-fpm.sock</span><br><span class="line">/var/run/php5-fpm.pid</span><br><span class="line">#在程序工作中，可能会因为权限问题PHP无法创建目录，这是因为在这里有个用户组配置</span><br><span class="line">/etc/php5/fpm/pool.d/www.conf</span><br><span class="line">#里面有两个默认设置是</span><br><span class="line">user = www-data</span><br><span class="line">group = www-data</span><br><span class="line">#需要给目录设置用户组以及用户为 www-data:www-data 并重启FPM</span><br><span class="line">user = www-data:www-data</span><br><span class="line">group = www-data:www-data</span><br><span class="line"></span><br><span class="line">sudo apt-get install mysql-server mysql-client</span><br><span class="line">安装过程中需要设置 root 密码，我设置的是 root。这步要记住自己设置的密码！</span><br><span class="line"></span><br><span class="line">sudo apt-get install phpmyadmin</span><br><span class="line">ln -s /usr/share/phpmyadmin /var/www/html</span><br><span class="line">phpMyAdmin 需要配置扩展目录 extension_dir，需要修改 php.ini。</span><br><span class="line"></span><br><span class="line">#假如配置 Apache 位置在这里：</span><br><span class="line">sudo vi /etc/php5/apache2/php.ini</span><br><span class="line"></span><br><span class="line">#假如配置 Nginx 位置在这里：</span><br><span class="line">sudo vi /etc/php5/fpm/php.ini</span><br><span class="line">需要做这几个改动</span><br><span class="line">extension_dir 启用，并且值等于“PHP扩展目录”</span><br><span class="line">extension=msql.so 的注释解除</span><br><span class="line">extension=curl.so 解决 curl 问题 （Nginx）</span><br><span class="line"></span><br><span class="line">记录几个重要的目录位置</span><br><span class="line">php.ini 目录：</span><br><span class="line">/etc/php5/apache2/php.ini</span><br><span class="line"></span><br><span class="line">PHP扩展目录（日期可能不同）：</span><br><span class="line">/usr/lib/php5/20131226</span><br><span class="line"></span><br><span class="line">nginx.conf 配置文件：</span><br><span class="line">/etc/nginx/nginx.conf</span><br><span class="line"></span><br><span class="line">Nginx 的 php.ini</span><br><span class="line">/etc/php5/fpm/php.ini</span><br><span class="line"></span><br><span class="line">Apache2 配置文件：</span><br><span class="line">/etc/apache2/apache2.conf</span><br><span class="line"></span><br><span class="line">phpmyadmin 所在目录：</span><br><span class="line">/usr/share/phpmyadmin</span><br><span class="line"></span><br><span class="line">phpmyadmin 配置文件：</span><br><span class="line">/usr/share/phpmyadmin/libraries/config.default.php</span><br><span class="line"></span><br><span class="line">小技巧</span><br><span class="line">安装完成可以通过命令查看执行文件位置，这样不用担心忘记</span><br><span class="line"></span><br><span class="line">which apache2</span><br><span class="line">/usr/sbin/apache2</span><br><span class="line"></span><br><span class="line">which php</span><br><span class="line">/usr/bin/php</span><br><span class="line"></span><br><span class="line">which mysql</span><br><span class="line">/usr/bin/mysql</span><br><span class="line"></span><br><span class="line">重启部分：</span><br><span class="line">service php5-fpm restart</span><br><span class="line">service nginx restart</span><br></pre></td></tr></table></figure>
+<p>不重启 nginx , 令配置生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br><span class="line">使用 Nginx + phpmyadmin 时遇到提示 缺少crypt，通过下面方式复制来，并且重启FPM服务即可</span><br><span class="line">使用 cp 命令复制文件：</span><br><span class="line">cp /etc/php5/mods-available/mcrypt.ini /etc/php5/fpm/conf.d/</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/loseself/p/8888009.html" target="_blank">Ubuntu Nginx 配置</a></p>
+<p>#docker-machine<br>gitbash docker-machine下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker-machine create --driver virtualbox --virtualbox-boot2docker-url=%USERPROFILE%\.docker\machine\cache\boot2docker.iso default</span><br><span class="line"></span><br><span class="line">docker-machine start default</span><br><span class="line">docker-machine stop default</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/a33130317/article/details/81304048" target="_blank">利用docker搭建LAMP(php5+mysql+apache2)集成环境</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#在https://hub.docker.com/下搜索 linode/lamp</span><br><span class="line"></span><br><span class="line">#拉取镜像lamp</span><br><span class="line">docker pull linode/lamp</span><br><span class="line"></span><br><span class="line">#建立docker卷</span><br><span class="line">docker volume create lamp_www           # apache的web根目录</span><br><span class="line">docker volume create lamp_apache_conf   # apache的配置目录</span><br><span class="line">docker volume create lamp_mysql_conf    # MySQL的配置目录</span><br><span class="line">docker volume create lamp_mysql_data    # MySQL的数据目录</span><br><span class="line"></span><br><span class="line">#宿主主机目录</span><br><span class="line">D:/docker/volumes</span><br><span class="line"></span><br><span class="line">docker run -it -p 80:80 -p 3306:3306 -v lamp_www:/var/www -v lamp_apache_conf:/etc/apache2 -v lamp_mysql_conf:/etc/mysql -v lamp_mysql_data:/var/lib/mysql --name lamp linode/lamp /bin/bash</span><br><span class="line"> </span><br><span class="line"># 解释：</span><br><span class="line"># docker run：运行一个container，如果后面要绑定宿主主机的0-1024端口需要使用sudo</span><br><span class="line"># -p port1:port2: 将宿主机的端口port1映射到容器中的port2</span><br><span class="line"># -v volume:path: 将宿主机的docker卷映射到容器中的指定的路径</span><br><span class="line"># -t -i linode/lamp /bin/bash：使用linode/lamp生成容器，并打开shell</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/15/1550229509000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/15/articles/2019/02/15/1550229509000.html/" class="article-date">
+      <time datetime="2019-02-15T11:18:29.000Z" itemprop="datePublished">2019-02-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/15/articles/2019/02/15/1550229509000.html/">[docker] docker</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>#docker-toolbox<br><a href="https://gitforwindows.org" target="_blank">git</a>、<a href="http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/" target="_blank">docker-toolbox</a><br><a href="https://github.com/boot2docker/boot2docker/releases" target="_blank">官方boot2docker</a><br>百度云盘boot2docker.iso<br><a href="https://pan.baidu.com/s/1nwLh1G1" target="_blank">tthd</a><br><a href="https://pan.baidu.com/s/1i6QGIg9" target="_blank">fsmb</a><br>1.注意<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果gitbash安装的位置修改了，则&quot;Docker Quickstart Terminal&quot;属性的目标也要跟着改</span><br><span class="line">正确打开&quot;Docker Quickstart Terminal&quot;后，会自动下载boot2docker.iso，过程比较缓慢</span><br></pre></td></tr></table></figure></p>
+<p>2.可以浏览器访问<a href="https://github.com/boot2docker/boot2docker/releases" target="_blank">github|boot2docker</a>,下载最新版本boot2docker.iso到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%USERPROFILE%\.docker\machine\cache\boot2docker.iso</span><br></pre></td></tr></table></figure></p>
+<p>3.使用非最新版本的boot2docker.iso<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">断开网络，双击&quot;Docker Quickstart Terminal&quot;</span><br></pre></td></tr></table></figure></p>
+<p>#docker-ce<br><a href="https://oomake.com/download/docker-windows" target="_blank">码客|docker镜像</a><br><a href="https://www.jianshu.com/p/3a339072ca7d" target="_blank">windows 10 安装docker</a><br><a href="https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe" target="_blank">Docker for Windows Installer.exe</a></p>
+<p><a href="http://www.runoob.com/docker/windows-docker-install.html" target="_blank">菜鸟教程Windows Docker</a><br><a href="https://blog.csdn.net/hunan961/article/details/79484098" target="_blank">WIN10中DOCKER的安装与使用</a><br><a href="https://blog.csdn.net/fxbin123/article/details/78474174" target="_blank">error during connect: Get http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.32/info: open //./pipe/docker_eng</a><br><a href="https://blog.csdn.net/cyuanxin/article/details/66479919" target="_blank">This error may also indicate that the docker daemon is not running</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker-machine env --shell cmd default</span><br><span class="line">#或</span><br><span class="line">#docker-machine env default</span><br><span class="line">@FOR /f &quot;tokens=*&quot; %i IN (&apos;docker-machine env default&apos;) DO @%i</span><br><span class="line">docker info</span><br><span class="line">docker-machine ls</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.runoob.com/docker/docker-container-usage.html" target="_blank">菜鸟教程|docker容器使用</a></p>
+<p>win10原生有docker<br>开启Hyper-V<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">打开控制面板</span><br><span class="line">win+r 输入 control 并回车，</span><br><span class="line">点击 程序 -&gt; 启用或关闭 Windows 功能</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/fengzheng/p/4958571.html" target="_blank">1.docker镜像操作</a><br><a href="https://www.cnblogs.com/liuyongsheng/p/6724749.html" target="_blank">2.docker镜像操作</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker tag 镜像ID name/tag:版本</span><br><span class="line">#删除所有镜像</span><br><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.jianshu.com/c/fe5f5bed05c0" target="_blank">Docker容器</a><br><a href="https://www.jianshu.com/c/aa0b21cceb92" target="_blank">Python 运维</a></p>
+<p><a href="https://www.jianshu.com/p/fb7b31a25358" target="_blank">docker决战到底(五)制作自己的Jenkins镜像</a><br><a href="https://www.cnblogs.com/ityouknow/p/8599093.html" target="_blank">Spring Boot 2.0(四)：使用 Docker 部署 Spring Boot</a><br><a href="https://blog.csdn.net/forezp/article/details/70198649" target="_blank">方志朋|史上最简单的SpringCloud教程 | 第十一篇: docker部署spring cloud项目</a><br><a href="https://blog.csdn.net/qq_24084925/article/details/78869421" target="_blank">史上最简单的SpringCloud教程 第十一篇: docker部署spring cloud项目</a></p>
+<p><a href="https://blog.csdn.net/qwssd/article/details/79259786" target="_blank">Spring Cloud Learning | 第十二篇：Docker部署Spring Cloud项目</a><br><a href="https://github.com/lingd3/SpringCloudLearning/tree/master/chapter12" target="_blank">github|源码</a></p>
+<p><a href="https://www.docker-cn.com/registry-mirror" target="_blank">docker中国官方镜像</a></p>
+<p>Dockerfile<br><a href="https://blog.csdn.net/jlnu_wanglei/article/details/78265365" target="_blank">使用Dockerfile搭建各种环境</a><br><a href="https://www.jianshu.com/p/10ed530766af" target="_blank">学习Docker之Dockerfile的命令</a><br><a href="https://github.com/vector4wang" target="_blank">github|vector4wang</a></p>
+<p>docker-compose<br><a href="https://blog.csdn.net/chinrui/article/details/79155688" target="_blank">Docker-Compose入门</a><br><a href="https://www.cnblogs.com/neptunemoon/p/6512121.html" target="_blank">使用docker-compose 大杀器来部署服务 上</a><br><a href="https://blog.csdn.net/u011781521/article/details/80464826" target="_blank">Docker(四) - Docker-Compose 详解</a></p>
+<p><a href="https://blog.csdn.net/qq_36148847/article/details/79427878" target="_blank">windows docker-compose.yml</a><br><a href="https://www.jianshu.com/p/2217cfed29d7" target="_blank">windows docker-compose.yml</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">docker-machine env --shell cmd default</span><br><span class="line">@FOR /f &quot;tokens=*&quot; %i IN (&apos;docker-machine env default&apos;) DO @%i</span><br><span class="line">docker info</span><br><span class="line">docker-machine ls</span><br><span class="line">docker-compose up --build</span><br><span class="line">#后台运行</span><br><span class="line">docker-compose up -d</span><br><span class="line">#来查看当前运行的应用</span><br><span class="line">docker-compose ps</span><br><span class="line">#允许为应用程序运行一次性命令</span><br><span class="line">docker-compose run</span><br><span class="line">#查看哪些环境变量可以用于 web 服务</span><br><span class="line">docker-compose run web env</span><br><span class="line">#停止服务</span><br><span class="line">docker-compose stop</span><br><span class="line">#停止镜像</span><br><span class="line">docker-compose down</span><br><span class="line">#down 命令完全移除容器,传递 --volumes 还可以删除 Redis 容器中所使用的数据卷</span><br><span class="line">docker-compose down --volumes</span><br></pre></td></tr></table></figure></p>
+<p>docker-compose.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line">version: &quot;3&quot;</span><br><span class="line">services:</span><br><span class="line"> </span><br><span class="line">  redis:</span><br><span class="line">    image: redis:alpine</span><br><span class="line">    ports:</span><br><span class="line">      - &quot;6379&quot;</span><br><span class="line">    networks:</span><br><span class="line">      - frontend</span><br><span class="line">    deploy:</span><br><span class="line">      replicas: 2</span><br><span class="line">      update_config:</span><br><span class="line">        parallelism: 2</span><br><span class="line">        delay: 10s</span><br><span class="line">      restart_policy:</span><br><span class="line">        condition: on-failure</span><br><span class="line"> </span><br><span class="line">  db:</span><br><span class="line">    image: postgres:9.4</span><br><span class="line">    volumes:</span><br><span class="line">      - db-data:/var/lib/postgresql/data</span><br><span class="line">    networks:</span><br><span class="line">      - backend</span><br><span class="line">    deploy:</span><br><span class="line">      placement:</span><br><span class="line">        constraints: [node.role == manager]</span><br><span class="line"> </span><br><span class="line">  vote:</span><br><span class="line">    image: dockersamples/examplevotingapp_vote:before</span><br><span class="line">    ports:</span><br><span class="line">      - 5000:80</span><br><span class="line">    networks:</span><br><span class="line">      - frontend</span><br><span class="line">    depends_on:</span><br><span class="line">      - redis</span><br><span class="line">    deploy:</span><br><span class="line">      replicas: 2</span><br><span class="line">      update_config:</span><br><span class="line">        parallelism: 2</span><br><span class="line">      restart_policy:</span><br><span class="line">        condition: on-failure</span><br><span class="line"> </span><br><span class="line">  result:</span><br><span class="line">    image: dockersamples/examplevotingapp_result:before</span><br><span class="line">    ports:</span><br><span class="line">      - 5001:80</span><br><span class="line">    networks:</span><br><span class="line">      - backend</span><br><span class="line">    depends_on:</span><br><span class="line">      - db</span><br><span class="line">    deploy:</span><br><span class="line">      replicas: 1</span><br><span class="line">      update_config:</span><br><span class="line">        parallelism: 2</span><br><span class="line">        delay: 10s</span><br><span class="line">      restart_policy:</span><br><span class="line">        condition: on-failure</span><br><span class="line"> </span><br><span class="line">  worker:</span><br><span class="line">    image: dockersamples/examplevotingapp_worker</span><br><span class="line">    networks:</span><br><span class="line">      - frontend</span><br><span class="line">      - backend</span><br><span class="line">    deploy:</span><br><span class="line">      mode: replicated</span><br><span class="line">      replicas: 1</span><br><span class="line">      labels: [APP=VOTING]</span><br><span class="line">      restart_policy:</span><br><span class="line">        condition: on-failure</span><br><span class="line">        delay: 10s</span><br><span class="line">        max_attempts: 3</span><br><span class="line">        window: 120s</span><br><span class="line">      placement:</span><br><span class="line">        constraints: [node.role == manager]</span><br><span class="line"> </span><br><span class="line">  visualizer:</span><br><span class="line">    image: dockersamples/visualizer:stable</span><br><span class="line">    ports:</span><br><span class="line">      - &quot;8080:8080&quot;</span><br><span class="line">    stop_grace_period: 1m30s</span><br><span class="line">    volumes:</span><br><span class="line">      - &quot;/var/run/docker.sock:/var/run/docker.sock&quot;</span><br><span class="line">    deploy:</span><br><span class="line">      placement:</span><br><span class="line">        constraints: [node.role == manager]</span><br><span class="line"> </span><br><span class="line">networks:</span><br><span class="line">  frontend:</span><br><span class="line">  backend:</span><br><span class="line"> </span><br><span class="line">volumes:</span><br><span class="line">  db-data:</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/crper/article/details/81291034" target="_blank">Docker折腾记: (3)Docker Compose构建Gitlab,从配置(https,邮箱验证)到基本可用</a><br><a href="https://blog.csdn.net/q85795362/article/details/82770670" target="_blank">docker-compose常用命令</a></p>
+<p><a href="https://blog.csdn.net/bbwangj/article/details/81170010" target="_blank">docker-compose部署django+nginx+mysql</a><br>项目结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># tree</span><br><span class="line">`-- dokcer-feiyu</span><br><span class="line">     |-- docker-compose.yml</span><br><span class="line">     |-- nginx</span><br><span class="line">     |   |-- Dockerfile</span><br><span class="line">     |   `-- nginx.conf</span><br><span class="line">     |-- User</span><br><span class="line">   |-- Dockerfile</span><br><span class="line">   |-- manage.py</span><br><span class="line">   |-- requirements.txt</span><br><span class="line">   |-- static</span><br><span class="line">   |-- users</span><br><span class="line">   |-- db.sqlite3</span><br><span class="line">   |-- gunicorn.conf</span><br><span class="line">   |-- media</span><br><span class="line">   |-- start.sh</span><br><span class="line">   |-- templates</span><br><span class="line">   `-- User</span><br></pre></td></tr></table></figure></p>
+<p>Dockerfile<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FROM nginx</span><br><span class="line">#对外暴露端口</span><br><span class="line">EXPOSE 80 8000</span><br><span class="line">#RUN rm /etc/nginx/conf.d/default.conf</span><br><span class="line">ADD nginx.conf  /etc/nginx/conf.d/</span><br><span class="line">RUN mkdir -p /usr/share/nginx/html/static</span><br><span class="line">RUN mkdir -p /usr/share/nginx/html/media</span><br></pre></td></tr></table></figure></p>
+<p>nginx.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">     listen      80;</span><br><span class="line">     server_name localhost;</span><br><span class="line">     charset     utf-8;</span><br><span class="line">     error_log /tmp/nginx_error.log;</span><br><span class="line">     access_log /tmp/nginx_access.log;</span><br><span class="line">     location /media &#123;</span><br><span class="line">         alias /usr/share/nginx/html/media;</span><br><span class="line">     &#125;</span><br><span class="line">     location /static &#123;</span><br><span class="line">         alias /usr/share/nginx/html/static;</span><br><span class="line">         &#125;</span><br><span class="line">     location / &#123;</span><br><span class="line">         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">         proxy_set_header Host $http_host;</span><br><span class="line">         proxy_redirect off;</span><br><span class="line">         proxy_pass http://web:8000;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Dockerfile<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">FROM python:3.5</span><br><span class="line">#MySQL-Python必须得先安装这个库</span><br><span class="line">RUN mkdir /User</span><br><span class="line">#设置工作目录</span><br><span class="line">WORKDIR /User</span><br><span class="line">#将当前目录加入到工作目录中</span><br><span class="line">ADD . /User</span><br><span class="line">#install any needed pacakges in requirements.txt，你要把所有需要安装的Python模块加到这文</span><br><span class="line">件中。</span><br><span class="line">RUN pip install -r requirements.txt</span><br><span class="line">#对外暴露端口</span><br><span class="line">EXPOSE 80 8000</span><br><span class="line">#设置环境变量</span><br><span class="line">ENV SPIDER=/User</span><br></pre></td></tr></table></figure></p>
+<p>requirements.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Django==1.18</span><br><span class="line">Pillow</span><br><span class="line">PyMySQL</span><br></pre></td></tr></table></figure></p>
+<p>settings.py<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ALLOWED_HOSTS = [&apos;*&apos;, ]</span><br><span class="line"></span><br><span class="line">DATABASES = &#123;</span><br><span class="line">    &apos;default&apos;: &#123;</span><br><span class="line">        &apos;ENGINE&apos;: &apos;django.db.backends.mysql&apos;,</span><br><span class="line">        &apos;NAME&apos;: &apos;dataname&apos;,</span><br><span class="line">        &apos;USER&apos;: &apos;root&apos;,//docker-compose.yml文件中的MYSQL_DATABASE</span><br><span class="line">        &apos;PASSWORD&apos;: &apos;123456&apos;,//docker-compose.yml文件中的MYSQL_ROOT_PASSWORD</span><br><span class="line">        &apos;HOST&apos;: &apos;db&apos;,//docker-compose.yml文件中的MYSQL_DATABASE</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>start.py<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">python manage.py collectstatic --noinput &amp;&amp;</span><br><span class="line">python manage.py migrate &amp;&amp;</span><br><span class="line">gunicorn User.wsgi:application -c gunicorn.conf</span><br></pre></td></tr></table></figure></p>
+<p>gunicorn.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">workers=4</span><br><span class="line">bind=[&apos;0.0.0.0:8000&apos;]</span><br><span class="line">proc_name=&apos;blog&apos;</span><br><span class="line">pidfile=&apos;/tmp/blog.pid&apos;</span><br><span class="line">worker_class=&apos;gevent&apos;</span><br><span class="line">max_requests=</span><br></pre></td></tr></table></figure></p>
+<p>docker-compose.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">version: &quot;3&quot;</span><br><span class="line">services:</span><br><span class="line">    db:</span><br><span class="line">       image: mysql</span><br><span class="line">       environment:</span><br><span class="line">          MYSQL_DATABASE: dataname</span><br><span class="line">          MYSQL_ROOT_PASSWORD: 123456</span><br><span class="line">       volumes:</span><br><span class="line">         - /srv/db:/var/lib/mysql</span><br><span class="line">       restart: always</span><br><span class="line">    web:</span><br><span class="line">       build: ./User</span><br><span class="line">       ports:</span><br><span class="line">       - &quot;8001:8001&quot;</span><br><span class="line">       volumes:</span><br><span class="line">       - ./User:/User</span><br><span class="line">       - /tmp/logs:/tmp</span><br><span class="line">       command: python3 manage.py runserver 0.0.0.0:8001</span><br><span class="line">   nginx:</span><br><span class="line">     build: ./nginx</span><br><span class="line">     ports:</span><br><span class="line">     - &quot;81:80&quot;</span><br><span class="line">     volumes:</span><br><span class="line">     - ./User/static:/usr/share/nginx/html/static</span><br><span class="line">     - ./User/media:/usr/share/nginx/html/media</span><br><span class="line">     links:</span><br><span class="line">     - web</span><br><span class="line">     depends_on:</span><br><span class="line">     - web</span><br><span class="line">     restart: always</span><br></pre></td></tr></table></figure></p>
+<p>启动和编译<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker-compose build</span><br><span class="line">docker-compose up</span><br><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/12/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/14/">Next &raquo;</a>
+    </nav>
+  
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 brightereyer
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
