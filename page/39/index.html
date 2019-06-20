@@ -578,7 +578,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/03/articles/2019/04/03/1554287407000.html/">[springmvc] c3p0连接池</a>
+      <a  class="article-title" href="/2019/04/03/articles/2019/04/03/1554287407000.html/">[springboot] 监听session</a>
     </h1>
   
 
@@ -589,11 +589,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://www.cnblogs.com/ygj0930/p/6405861.html" target="_blank">C3P0连接池使用教程</a></p>
-<blockquote>
-<p>maven+spring+jsp+C3P0</p>
-</blockquote>
-<p><a href="https://github.com/ygj0930/CoupleSpace" target="_blank">github|情侣日志网站</a></p>
+        <p>RequestListener.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletRequestEvent;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletRequestListener;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpSession;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RequestListener</span> <span class="keyword">implements</span> <span class="title">ServletRequestListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    Logger logger = LoggerFactory.getLogger(RequestListener.class);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">requestInitialized</span><span class="params">(ServletRequestEvent sre)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//将所有request请求都携带上httpSession</span></span><br><span class="line">        HttpSession session = ((HttpServletRequest) sre.getServletRequest()).getSession();</span><br><span class="line"></span><br><span class="line"><span class="comment">//        logger.warn("sessionId: &#123;&#125;", session.getId());</span></span><br><span class="line"><span class="comment">//        logger.warn("currentCompanyId: &#123;&#125;", session.getAttribute("targetAttr"));</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RequestListener</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">requestDestroyed</span><span class="params">(ServletRequestEvent servletRequestEvent)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -604,7 +600,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springmvc/">springmvc</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
     </div>
 
       
@@ -644,7 +640,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/03/articles/2019/04/03/1554287407000.html/">[springboot] 监听session</a>
+      <a  class="article-title" href="/2019/04/03/articles/2019/04/03/1554287407000.html/">[springmvc] c3p0连接池</a>
     </h1>
   
 
@@ -655,7 +651,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>RequestListener.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletRequestEvent;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletRequestListener;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpSession;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RequestListener</span> <span class="keyword">implements</span> <span class="title">ServletRequestListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    Logger logger = LoggerFactory.getLogger(RequestListener.class);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">requestInitialized</span><span class="params">(ServletRequestEvent sre)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//将所有request请求都携带上httpSession</span></span><br><span class="line">        HttpSession session = ((HttpServletRequest) sre.getServletRequest()).getSession();</span><br><span class="line"></span><br><span class="line"><span class="comment">//        logger.warn("sessionId: &#123;&#125;", session.getId());</span></span><br><span class="line"><span class="comment">//        logger.warn("currentCompanyId: &#123;&#125;", session.getAttribute("targetAttr"));</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RequestListener</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">requestDestroyed</span><span class="params">(ServletRequestEvent servletRequestEvent)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p><a href="https://www.cnblogs.com/ygj0930/p/6405861.html" target="_blank">C3P0连接池使用教程</a></p>
+<blockquote>
+<p>maven+spring+jsp+C3P0</p>
+</blockquote>
+<p><a href="https://github.com/ygj0930/CoupleSpace" target="_blank">github|情侣日志网站</a></p>
 
       
     </div>
@@ -666,7 +666,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springmvc/">springmvc</a></li></ul>
     </div>
 
       
