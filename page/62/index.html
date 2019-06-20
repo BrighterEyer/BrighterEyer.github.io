@@ -280,11 +280,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-/articles/2019/01/13/1547346251000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/01/10/1547085454000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/01/13/articles/2019/01/13/1547346251000.html/" class="article-date">
-      <time datetime="2019-01-13T02:24:11.000Z" itemprop="datePublished">2019-01-13</time>
+      <a  href="/2019/01/10/articles/2019/01/10/1547085454000.html/" class="article-date">
+      <time datetime="2019-01-10T01:57:34.000Z" itemprop="datePublished">2019-01-10</time>
 </a>
 
     </div>
@@ -298,7 +298,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346251000.html/">[springboot] springboot+vue</a>
+      <a  class="article-title" href="/2019/01/10/articles/2019/01/10/1547085454000.html/">[api] 天气接口</a>
     </h1>
   
 
@@ -309,8 +309,454 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://www.cnblogs.com/wlovet/p/8317282.html" target="_blank">Vue+SpringBoot+Mybatis的简单员工管理项目</a><br><a href="https://github.com/boylegu/SpringBoot-vue" target="_blank">github</a><br><a href="https://blog.csdn.net/u014098584/article/details/78912378/" target="_blank">spring boot整合vue项目</a></p>
-<p><a href="https://www.jianshu.com/p/e1c0cbbfb599" target="_blank">Vue相关开源项目库汇总(史上最全)</a><br><a href="https://code.visualstudio.com/" target="_blank">visual studio code</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">cnpm install -g vue-cli</span><br><span class="line">vue init webpack javalsj-vue</span><br><span class="line">cd javalsj-vue</span><br><span class="line">cnpm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure></p>
+        <p><a href="https://www.cnblogs.com/danyueweb/p/3521973.html" target="_blank">天气预报接口api(中国天气网)</a><br><a href="http://www.nohacks.cn/post/8.html" target="_blank">天气API接口大全（nohacks.cn 收集整理）</a><br><a href="https://www.cnblogs.com/dwb91/p/6429434.html" target="_blank" rel="noopener">java 客户端发起http请求</a><br><a href="https://www.cnblogs.com/wangshuo1/p/5583229.html" target="_blank" rel="noopener">中国天气网-天气预报接口api</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#只能获取当天天气，返回json格式</span><br><span class="line">http://www.weather.com.cn/data/sk/101110101.html</span><br><span class="line">&#123;</span><br><span class="line">    &quot;weatherinfo&quot;: &#123;</span><br><span class="line">        &quot;city&quot;: &quot;西安&quot;,</span><br><span class="line">        &quot;cityid&quot;: &quot;101110101&quot;,</span><br><span class="line">        &quot;temp&quot;: &quot;23.3&quot;,</span><br><span class="line">        &quot;WD&quot;: &quot;西南风&quot;,</span><br><span class="line">        &quot;WS&quot;: &quot;小于3级&quot;,</span><br><span class="line">        &quot;SD&quot;: &quot;52%&quot;,</span><br><span class="line">        &quot;AP&quot;: &quot;962.7hPa&quot;,</span><br><span class="line">        &quot;njd&quot;: &quot;暂无实况&quot;,</span><br><span class="line">        &quot;WSE&quot;: &quot;&lt;3&quot;,</span><br><span class="line">        &quot;time&quot;: &quot;18:00&quot;,</span><br><span class="line">        &quot;sm&quot;: &quot;1.2&quot;,</span><br><span class="line">        &quot;isRadar&quot;: &quot;1&quot;,</span><br><span class="line">        &quot;Radar&quot;: &quot;JC_RADAR_AZ9290_JB&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/kellen451/p/7130841.html" target="_blank">[转]真正的中国天气api接口xml，json</a><br><a href="http://flash.weather.com.cn/wmaps/xml/zhuhai.xml" target="_blank">xml天气接口</a><br><a href="https://blog.csdn.net/w690333243/article/details/83447564" target="_blank"></a><br><a href="http://www.heweather.com/documents/api/s6/weather-now" target="_blank">综合考虑，小编使用的是和风天气的api接口，免费，天气指标多，日免费次数1000次</a></p>
+<p>sojson<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sojson旧天气api</span><br><span class="line">https://www.sojson.com/api/weather.html</span><br><span class="line">sojson json+xml+java</span><br><span class="line">https://www.sojson.com/blog/234.html</span><br><span class="line"></span><br><span class="line">sojson 新接口</span><br><span class="line">https://www.sojson.com/blog/305.html</span><br><span class="line">#city.json文件</span><br><span class="line">http://cdn.sojson.com/_city.json</span><br><span class="line">#接口</span><br><span class="line">&quot;http://t.weather.sojson.com/api/weather/city/&quot;+city_code;</span><br></pre></td></tr></table></figure></p>
+<p>iframe天气预报<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tianqiapi.com</span><br><span class="line">http://www.tianqiapi.com/</span><br><span class="line">天气网</span><br><span class="line">http://www.tianqi.com/dingzhi/</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.kucoa.com/?t/10.html" target="_blank">js获取当前网络IP以及根据IP得到当前所在城市及天气</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ip地址查询接口</span><br><span class="line">请求方式：GET/POST</span><br><span class="line">请求地址：https://bird.ioliu.cn/ip</span><br><span class="line">返回值类型：json/jsonp/xml</span><br><span class="line"></span><br><span class="line">weather天气查询接口</span><br><span class="line">请求方式：GET</span><br><span class="line">请求地址：https://bird.ioliu.cn/weather</span><br><span class="line">返回值类型：json/jsonp</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/Cryhelyxx/article/details/40862101" target="_blank">java 根据IP地址获取地理位置</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/api/">api</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/10/1547085453000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/10/articles/2019/01/10/1547085453000.html/" class="article-date">
+      <time datetime="2019-01-10T01:57:33.000Z" itemprop="datePublished">2019-01-10</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/10/articles/2019/01/10/1547085453000.html/">[pygame] demos</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/topics/pygame" target="_blank">github|pygame</a><br><a href="https://www.pygame.org/tags/all" target="_blank">python游戏demos</a><br><a href="https://github.com/Ctipsy/free-python-games/tree/master/freegames" target="_blank">免费python游戏</a><br><a href="https://www.cnblogs.com/msxh/p/5044938.html" target="_blank">【python游戏编程之旅】第九篇—嗷大喵快跑小游戏开发实例</a><br><a href="https://github.com/XINCGer/catRunFast" target="_blank">嗷大喵快跑</a></p>
+<p><a href="https://www.jianshu.com/p/8ddeb797d1be" target="_blank">实验楼|用Python开发你的第一款游戏（开源项目合集）</a><br><a href="https://github.com/tasdikrahman/spaceShooter" target="_blank">1、使用pygame制作太空射击游戏</a><br><a href="https://www.shiyanlou.com/courses/1043" target="_blank">2、Python3 实现推理游戏Bagels</a><br><a href="https://inventwithpython.com/dodger.zip" target="_blank">3、Dodger</a><br><a href="https://inventwithpython.com/memorypuzzle.py" target="_blank">4、记忆迷宫</a><br><a href="https://inventwithpython.com/slidepuzzle.py" target="_blank">5、滑动拼图</a><br><a href="https://inventwithpython.com/wormy.py" target="_blank">6、贪吃蛇</a><br><a href="https://inventwithpython.com/tetromino.py" target="_blank">7、俄罗斯方块</a><br><a href="https://inventwithpython.com/starpusher.zip" target="_blank">8、推箱子</a><br><a href="https://inventwithpython.com/gemgem.zip" target="_blank">9、消消乐</a></p>
+<p>2048<br><a href="http://git.shiyanlou.com/littlemonkey/shiyanlou_cs368/src/master/2048.py" target="_blank">(1)2048</a><br><a href="https://www.cnblogs.com/snail-up/p/4682370.html" target="_blank">(2)2048</a><br><a href="https://www.cnblogs.com/mrchige/p/6389971.html" target="_blank">(3)2048</a><br><a href="http://gabrielecirulli.github.io/2048" target="_blank">(4)2048</a></p>
+<p>Pygame - Python游戏编程入门(1)<br><a href="https://www.cnblogs.com/wuzhanpeng/p/4264267.html" target="_blank">战斗机</a><br><a href="https://blog.csdn.net/buptlrw/article/details/41924849" target="_blank">猜数字、猜词语、谁是卧底</a><br><a href="https://github.com/triaquae/jerkoff" target="_blank">打飞机小游戏</a><br><a href="https://www.cnblogs.com/wushank/p/5326160.html" target="_blank">python之在线PK游戏（第六天）</a></p>
+<p>经典游戏<br><a href="https://www.cnblogs.com/gl1573/p/10319295.html" target="_blank">五子棋之人机对战</a><br><a href="https://www.cnblogs.com/gl1573/p/9590370.html" target="_blank">贪吃蛇</a><br><a href="https://www.cnblogs.com/gl1573/p/10213812.html" target="_blank">俄罗斯方块</a><br><a href="https://www.cnblogs.com/gl1573/p/9616584.html" target="_blank">扫雷（附源码）</a><br><a href="https://www.cnblogs.com/gl1573/p/9571560.html" target="_blank">测试打字速度</a><br><a href="http://www.cnblogs.com/coderzh/archive/2008/07/28/1255061.html" target="_blank">CoderZh首款Python联机对战游戏</a><br><a href="http://files.cnblogs.com/coderzh/NancyTetris.rar" target="_blank">CoderZh首款Python联机对战游戏|NancyTetris.rar</a><br><a href="https://www.pygame.org/project/585/" target="_blank">地牢探索游戏</a></p>
+<p>Flappy<br><a href="http://www.pygame.org/project/3436/5499" target="_blank">Flappy Block - 1.0</a><br><a href="https://www.cnblogs.com/yan1314/p/8904935.html" target="_blank">Python3 FlappyBird</a><br><a href="https://github.com/sourabhv/FlapPyBird" target="_blank">FlapPyBird</a></p>
+<p><a href="https://blog.csdn.net/yorhomwang/article/details/50879487" target="_blank">csdn|接水果小游戏</a><br><a href="https://github.com/yuehaowang/pylash_engine/tree/master/examples/get_fruits" target="_blank">github|接水果小游戏</a></p>
+<p><a href="https://github.com/search?l=Python&q=%E6%B8%B8%E6%88%8F&type=Repositories" target="_blank">github|python游戏</a><br><a href="https://github.com/mx0c/super-mario-python.git" target="_blank">python和pygame中的超级马里奥</a><br><a href="https://github.com/jatinmandav/Gaming-in-Python" target="_blank">Gaming-in-Python</a><br><a href="https://github.com/JnyJny/GameOfLife" target="_blank">Python模拟生命游戏</a><br><a href="https://ppizarror.com/pygame-menu/" target="_blank">pygame菜单组件</a><br><a href="https://github.com/Sigton/tims_adventure" target="_blank">角色扮演游戏</a><br><a href="https://github.com/buntine/SwervinMervin" target="_blank">赛车游戏</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pygame/">pygame</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/10/1547085453000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/10/articles/2019/01/10/1547085453000.html/" class="article-date">
+      <time datetime="2019-01-10T01:57:33.000Z" itemprop="datePublished">2019-01-10</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/10/articles/2019/01/10/1547085453000.html/">[python] python游戏开发</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="" target="_blank"></a><br><a href="https://www.cnblogs.com/msxh/p/5044938.html" target="_blank">【python游戏编程之旅】第九篇—嗷大喵快跑小游戏开发实例</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/XINCGer/catRunFast</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.jianshu.com/p/8ddeb797d1be" target="_blank">实验楼|用Python开发你的第一款游戏（开源项目合集）</a><br><a href="https://github.com/tasdikrahman/spaceShooter" target="_blank">1、使用pygame制作太空射击游戏</a><br><a href="https://www.shiyanlou.com/courses/1043" target="_blank">2、Python3 实现推理游戏Bagels</a><br><a href="https://inventwithpython.com/dodger.zip?27f655" target="_blank">3、Dodger</a><br><a href="https://inventwithpython.com/memorypuzzle.py" target="_blank">4、记忆迷宫</a><br><a href="https://inventwithpython.com/slidepuzzle.py" target="_blank">5、滑动拼图</a><br><a href="https://inventwithpython.com/wormy.py" target="_blank">6、贪吃蛇</a><br><a href="https://inventwithpython.com/tetromino.py" target="_blank">7、俄罗斯方块</a><br><a href="https://inventwithpython.com/starpusher.zip?27f655" target="_blank">8、推箱子</a><br><a href="https://inventwithpython.com/gemgem.zip?27f655" target="_blank">9、消消乐</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">2048</span><br><span class="line">http://git.shiyanlou.com/littlemonkey/shiyanlou_cs368/src/master/2048.py</span><br><span class="line">https://www.cnblogs.com/snail-up/p/4682370.html</span><br><span class="line">https://www.cnblogs.com/mrchige/p/6389971.html</span><br><span class="line">http://gabrielecirulli.github.io/2048</span><br></pre></td></tr></table></figure></p>
+<p>Pygame - Python游戏编程入门(1)<br><a href="https://www.cnblogs.com/wuzhanpeng/p/4264267.html" target="_blank">战斗机</a><br><a href="https://github.com/Ctipsy/free-python-games/tree/master/freegames" target="_blank">python游戏demos</a><br><a href="https://blog.csdn.net/buptlrw/article/details/41924849" target="_blank">猜数字、猜词语、谁是卧底</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/10/1547085452000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/10/articles/2019/01/10/1547085452000.html/" class="article-date">
+      <time datetime="2019-01-10T01:57:32.000Z" itemprop="datePublished">2019-01-10</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/10/articles/2019/01/10/1547085452000.html/">[webservice] webservice</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qazwsxpcm/article/details/70370490/" target="_blank">Java WebService接口生成和调用</a><br><a href="https://github.com/xuwujing/webservice_project" target="_blank">github|webservice_project</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webservice/">webservice</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/10/1547084028000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/10/articles/2019/01/10/1547084028000.html/" class="article-date">
+      <time datetime="2019-01-10T01:33:48.000Z" itemprop="datePublished">2019-01-10</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/10/articles/2019/01/10/1547084028000.html/">[spring] JPAQueryFactory</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.jianshu.com/p/2b68af9aa0f5" target="_blank">JPAQueryFactory</a><br><a href="https://github.com/mrdear/JavaWEB" target="_blank">github|JavaWEB学习</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/10/1547084027000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/10/articles/2019/01/10/1547084027000.html/" class="article-date">
+      <time datetime="2019-01-10T01:33:47.000Z" itemprop="datePublished">2019-01-10</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/10/articles/2019/01/10/1547084027000.html/">[java] java多线程</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/c10WTiybQ1Ye3/article/details/78212045" target="_blank">Java多线程</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/10/1547084026000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/10/articles/2019/01/10/1547084026000.html/" class="article-date">
+      <time datetime="2019-01-10T01:33:46.000Z" itemprop="datePublished">2019-01-10</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/10/articles/2019/01/10/1547084026000.html/">[spring] spring注解读取json文件</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">import java.io.File;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line">import java.util.concurrent.TimeUnit;</span><br><span class="line">import org.springframework.beans.factory.annotation.Value;</span><br><span class="line">import org.springframework.core.io.Resource;</span><br><span class="line">import org.springframework.stereotype.Service;</span><br><span class="line">@Service</span><br><span class="line">public class JsonService &#123;</span><br><span class="line"></span><br><span class="line">    @Value(value=&quot;classpath:static/json/filename.json&quot;)</span><br><span class="line">    private Resource data;    </span><br><span class="line">    </span><br><span class="line">    public JSONArray getJsonArray()&#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            File file = data.getFile();</span><br><span class="line">            String jsonData = this.jsonRead(file);</span><br><span class="line">            JSONArray array = JSONArray.fromObject(jsonData);</span><br><span class="line">            return array;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public JSONObject getJsonObject()&#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            File file = data.getFile();</span><br><span class="line">            String jsonData = this.jsonRead(file);</span><br><span class="line">            JSONObject jsonObj = JSONObject.fromObject(jsonData);</span><br><span class="line">            return jsonObj;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getData()&#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            File file = data.getFile();</span><br><span class="line">            long t0 = System.nanoTime();</span><br><span class="line">            String jsonData = this.jsonRead(file);</span><br><span class="line">            long t1 = System.nanoTime();</span><br><span class="line">            long millis = TimeUnit.NANOSECONDS.toMillis(t1-t0);</span><br><span class="line">            System.out.println(millis +&quot;ms&quot;);</span><br><span class="line">            return jsonData;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 读取文件类容为字符串</span><br><span class="line">     * @param file</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    private String jsonRead(File file)&#123;</span><br><span class="line">          Scanner scanner = null;</span><br><span class="line">          StringBuilder buffer = new StringBuilder();</span><br><span class="line">          try &#123;</span><br><span class="line">              scanner = new Scanner(file, &quot;utf-8&quot;);</span><br><span class="line">              while (scanner.hasNextLine()) &#123;</span><br><span class="line">                  buffer.append(scanner.nextLine());</span><br><span class="line">              &#125;</span><br><span class="line">          &#125; catch (Exception e) &#123;</span><br><span class="line">              </span><br><span class="line">          &#125; finally &#123;</span><br><span class="line">              if (scanner != null) &#123;</span><br><span class="line">                  scanner.close();</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          return buffer.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/02/1546384055000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/02/articles/2019/01/02/1546384055000.html/" class="article-date">
+      <time datetime="2019-01-01T23:07:35.000Z" itemprop="datePublished">2019-01-02</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/02/articles/2019/01/02/1546384055000.html/">[springboot] 百度文字识别</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_37525899/article/details/82558625" target="_blank">springboot中使用百度ocr实现文字识别功能<br></a><br><a href="https://blog.csdn.net/weixin_42074377/article/details/81135179" target="_blank">百度AI开放平台文字之身份证识别的实现</a><br><a href="https://github.com/bian1234/studyNote/tree/master/APILearn" target="_blank">github|APILearn/baiduaidemo</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">下载百度提供的工具类,这几个工具类都会用到，都需要下载</span><br><span class="line">FileUtil</span><br><span class="line">https://ai.baidu.com/file/658A35ABAB2D404FBF903F64D47C1F72</span><br><span class="line">Base64Util</span><br><span class="line">https://ai.baidu.com/file/C8D81F3301E24D2892968F09AE1AD6E2</span><br><span class="line">HttpUtil</span><br><span class="line">https://ai.baidu.com/file/544D677F5D4E4F17B4122FBD60DB82B3</span><br><span class="line">GsonUtils</span><br><span class="line">https://ai.baidu.com/file/470B3ACCA3FE43788B5A963BF0B625F3</span><br><span class="line"></span><br><span class="line">获取AccessTokenUtil</span><br><span class="line">import java.io.BufferedReader;</span><br><span class="line">import java.io.FileNotFoundException;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">import java.net.SocketTimeoutException;</span><br><span class="line">import java.net.URL;</span><br><span class="line">import java.net.URLConnection;</span><br><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.Map;</span><br><span class="line">import net.sf.json.JSONArray;</span><br><span class="line">import net.sf.json.JSONObject;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line">/**</span><br><span class="line"> * @Author: bian</span><br><span class="line"> * @Date: 2018/7/16 15:47</span><br><span class="line"> * @Todo:  百度API要求每个月换一次Token,因此专门写一个工具类用来更新token.</span><br><span class="line"> */</span><br><span class="line">public class AccessTokenUtil &#123;</span><br><span class="line"> </span><br><span class="line">    public static Map getToken(String clientId,String clientSecret)&#123;</span><br><span class="line"> </span><br><span class="line">        Map token = new HashMap();</span><br><span class="line">        String str = &quot;https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&amp;client_id=&quot;+clientId+&quot;&amp;client_secret=&quot;+clientSecret;</span><br><span class="line">        try &#123;</span><br><span class="line">            URL url = new URL(str);</span><br><span class="line">            URLConnection connectionData = url.openConnection();</span><br><span class="line">            connectionData.setConnectTimeout(2000);</span><br><span class="line">            BufferedReader br = new BufferedReader(new InputStreamReader(</span><br><span class="line">                    connectionData.getInputStream(), &quot;UTF-8&quot;));</span><br><span class="line">            StringBuilder sb = new StringBuilder();</span><br><span class="line">            String line = null;</span><br><span class="line">            while ((line = br.readLine()) != null)&#123;</span><br><span class="line">                sb.append(line);</span><br><span class="line">            &#125;</span><br><span class="line">            String datas = sb.toString();</span><br><span class="line">            JSONObject jsonData = JSONObject.fromObject(datas);</span><br><span class="line">            token.put(&quot;access_token&quot;, jsonData.getString(&quot;access_token&quot;).toString());</span><br><span class="line">            token.put(&quot;session_key&quot;, jsonData.getString(&quot;session_key&quot;).toString());</span><br><span class="line">            token.put(&quot;scope&quot;, jsonData.getString(&quot;scope&quot;).toString());</span><br><span class="line">            token.put(&quot;refresh_token&quot;, jsonData.getString(&quot;refresh_token&quot;).toString());</span><br><span class="line">            token.put(&quot;session_secret&quot;, jsonData.getString(&quot;session_secret&quot;).toString());</span><br><span class="line">            token.put(&quot;expires_in&quot;, jsonData.getString(&quot;expires_in&quot;).toString());</span><br><span class="line">        &#125;catch (SocketTimeoutException e) &#123;</span><br><span class="line">            System.out.println(&quot;连接超时&quot;);</span><br><span class="line">        &#125; catch (FileNotFoundException e) &#123;</span><br><span class="line">            System.out.println(&quot;加载文件出错&quot;);</span><br><span class="line">        &#125;catch (IOException e) &#123;</span><br><span class="line">            System.out.println(&quot;IOException&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        return token;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -343,11 +789,11 @@
 
 
   
-    <article id="post-/articles/2019/01/13/1547346250000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/01/02/1546384054000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/01/13/articles/2019/01/13/1547346250000.html/" class="article-date">
-      <time datetime="2019-01-13T02:24:10.000Z" itemprop="datePublished">2019-01-13</time>
+      <a  href="/2019/01/02/articles/2019/01/02/1546384054000.html/" class="article-date">
+      <time datetime="2019-01-01T23:07:34.000Z" itemprop="datePublished">2019-01-02</time>
 </a>
 
     </div>
@@ -361,7 +807,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346250000.html/">[vue] vue专栏</a>
+      <a  class="article-title" href="/2019/01/02/articles/2019/01/02/1546384054000.html/">[java] json+net.sf.json+fastjson+gson使用</a>
     </h1>
   
 
@@ -372,7 +818,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://blog.csdn.net/qq_42221334/column/info/27230" target="_blank">vue专栏</a><br><a href="https://blog.csdn.net/aaronzzq/article/details/80936708" target="_blank">Vue相关开源项目库汇总(史上最全)</a></p>
+        <p><a href="" target="_blank"></a><br>json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.json&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;json&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;20160810&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/hitwtx/articles/2468633.html" target="_blank">net.sf.json使用</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">Object obj = new Object();</span><br><span class="line">JSONObject jsonObject = JSONObject.fromObject(obj);</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;net.sf.json-lib&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;json-lib&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.4&lt;/version&gt;</span><br><span class="line">    &lt;classifier&gt;jdk15&lt;/classifier&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;net.sf.ezmorph&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;ezmorph&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.0.6&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;commons-lang&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-lang&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.6&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-lang3&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.4&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;commons-beanutils&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-beanutils&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.9.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;commons-collections&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-collections&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.2.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;commons-logging&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-logging&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.1.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/pcheng/p/6875760.html" target="_blank">fastjson</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;fastjson&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.2.32&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">String text=&quot;&quot;;</span><br><span class="line">Object obj = JSONObject.parse(text);</span><br><span class="line">JSONObject jsonObj = JSONObject.parseObject(text);</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/qinxu/p/9504412.html" target="_blank">gson基本用法</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;gson&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.8.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">Gson gson = new Gson();</span><br><span class="line">int i = gson.fromJson(&quot;100&quot;, int.class); //100</span><br><span class="line">double d = gson.fromJson(&quot;\&quot;99.99\&quot;&quot;, double.class);  //99.99</span><br><span class="line">boolean b = gson.fromJson(&quot;true&quot;, boolean.class);     // true</span><br><span class="line">String str = gson.fromJson(&quot;String&quot;, String.class);   // String</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -383,7 +832,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
     </div>
 
       
@@ -405,11 +854,11 @@
 
 
   
-    <article id="post-/articles/2019/01/13/1547346249000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/01/02/1546384053000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/01/13/articles/2019/01/13/1547346249000.html/" class="article-date">
-      <time datetime="2019-01-13T02:24:09.000Z" itemprop="datePublished">2019-01-13</time>
+      <a  href="/2019/01/02/articles/2019/01/02/1546384053000.html/" class="article-date">
+      <time datetime="2019-01-01T23:07:33.000Z" itemprop="datePublished">2019-01-02</time>
 </a>
 
     </div>
@@ -423,7 +872,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346249000.html/">[docker] docker专栏</a>
+      <a  class="article-title" href="/2019/01/02/articles/2019/01/02/1546384053000.html/">[技术] 人脸识别</a>
     </h1>
   
 
@@ -434,7 +883,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="http://www.runoob.com/docker/windows-docker-install.html" target="_blank">windows安装docker</a><br><a href="https://blog.csdn.net/Gamer_gyt/column/info/13159" target="_blank">Docker专栏</a></p>
+        <p><a href="" target="_blank"></a><br><a href="https://blog.csdn.net/qq_36538012/article/details/79852664" target="_blank">H5混合开发二维码扫描以及调用本地摄像头</a><br><a href="https://blog.csdn.net/china_jeffery/column/info/18558" target="_blank">人脸识别系统开发|基于Qt Quick+OpenCV+Dlib的人脸识别系统</a><br><a href="http://ai.baidu.com/forum/topic/show/864666" target="_blank">java人脸检测</a><br><a href="https://gitee.com/xshuai/ai/blob/master/AIDemo/src/main/java/com/xs/face/FaceDetectV3Sample.java" target="_blank">java人脸检测Demo</a><br><a href="https://pan.baidu.com/s/1ht3H9pq" target="_blank">FaceChapter.zip|uxxf</a><br><a href="https://cloud.tencent.com/developer/article/1196116" target="_blank">JDK1.8、Tomcat8、SSM框架、HTTPS、JSON、jsp、百度云</a><br><a href="https://gitee.com/xshuai/weixinxiaochengxu" target="_blank">微信小程序端人脸识别</a></p>
 
       
     </div>
@@ -445,444 +894,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/01/13/1547346248000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/13/articles/2019/01/13/1547346248000.html/" class="article-date">
-      <time datetime="2019-01-13T02:24:08.000Z" itemprop="datePublished">2019-01-13</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346248000.html/">[hexo] black-blue主题</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://geeksblog.cc/hexo-theme.html" target="_blank">业余文艺架构师|Hexo自用黑色主题</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/01/13/1547346247000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/13/articles/2019/01/13/1547346247000.html/" class="article-date">
-      <time datetime="2019-01-13T02:24:07.000Z" itemprop="datePublished">2019-01-13</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346247000.html/">[微信小游戏] 300多套微信小游戏集合</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://pan.baidu.com/s/1nwhUgid#list/path=%2F" target="_blank">度娘</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信小游戏/">微信小游戏</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/01/13/1547340797000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/13/articles/2019/01/13/1547340797000.html/" class="article-date">
-      <time datetime="2019-01-13T00:53:17.000Z" itemprop="datePublished">2019-01-13</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547340797000.html/">[egret] Egret白鹭H5小游戏开发入门</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/chengguanhui/p/5800240.html" target="_blank">Egret白鹭H5小游戏开发入门</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/egret/">egret</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/01/13/1547340797000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/13/articles/2019/01/13/1547340797000.html/" class="article-date">
-      <time datetime="2019-01-13T00:53:17.000Z" itemprop="datePublished">2019-01-13</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547340797000.html/">[h5game] h5游戏开发</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://aotu.io/index.html" target="_blank">凹凸实验室</a><br><a href="https://blog.csdn.net/yorhomwang/article/category/1192215" target="_blank">Yorhom’s Game Box的游戏开发</a><br><a href="https://fwon.github.io/escape" target="_blank">基于canvas的粒子逃脱小游戏</a><br><a href="https://github.com/fwon/Sinuous" target="_blank">源码</a><br><a href="https://cloud.tencent.com/developer/information/h5%E6%B8%B8%E6%88%8Fjs%E6%BA%90%E7%A0%81" target="_blank">腾讯云社区|h5游戏js源码</a><br><a href="https://cloud.tencent.com/developer/article/1074023" target="_blank">JS+canvas实现人机大战之五子棋</a></p>
-<p><a href="http://www.phaser.io/download/stable" target="_blank">phaser</a><br><a href="http://phaser.io/examples" target="_blank">phaser|examples</a><br><a href="https://github.com/zhangrj/Snake_Game" target="_blank">phaser|Snake_Game</a><br><a href="https://blog.csdn.net/jessicaiu/article/details/83057619" target="_blank">使用Phaser开发你的第一个H5游戏</a><br><a href="https://gitee.com/xwintop/wxGameRank" target="_blank">微信小游戏子域排行榜系统cocos示例程序</a></p>
-<p>完整的上线版微信小游戏（大鸟撞小鸟）示例程序源码<br><a href="https://gitee.com/xwintop/watchout" target="_blank">gitee地址</a><br><a href="https://github.com/864381832/watchout" target="_blank">GitHub地址</a></p>
-<p><a href="http://programmer.ischoolbar.com/index.php/article/article/id/124.html" target="_blank">收费|450多款H5小游戏源码之微信H5小游戏源码大集合持续更新中</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/h5game/">h5game</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/01/13/1547340796000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/13/articles/2019/01/13/1547340796000.html/" class="article-date">
-      <time datetime="2019-01-13T00:53:16.000Z" itemprop="datePublished">2019-01-13</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547340796000.html/">[h5] h5视频播放</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://segmentfault.com/a/1190000010377156" target="_blank">H5 视频播放解决方案</a><br><a href="https://segmentfault.com/a/1190000006461476" target="_blank">H5打造属于自己的视频播放器（HTML篇）</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/h5/">h5</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/01/13/1547340795000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/13/articles/2019/01/13/1547340795000.html/" class="article-date">
-      <time datetime="2019-01-13T00:53:15.000Z" itemprop="datePublished">2019-01-13</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547340795000.html/">[shell] shell</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="http://www.runoob.com/linux/linux-shell-process-control.html" target="_blank">Shell 流程控制</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/01/13/1547340794000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/13/articles/2019/01/13/1547340794000.html/" class="article-date">
-      <time datetime="2019-01-13T00:53:14.000Z" itemprop="datePublished">2019-01-13</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547340794000.html/">[ubuntu] ubuntu18.04配置及美化</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/ice__snow/article/details/80152068" target="_blank">Ubuntu 18.04配置及美化</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
     </div>
 
       
@@ -906,7 +918,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/61/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/60/">60</a><a class="page-number" href="/page/61/">61</a><span class="page-number current">62</span><a class="page-number" href="/page/63/">63</a><a class="page-number" href="/page/64/">64</a><span class="space">&hellip;</span><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/63/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/61/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/60/">60</a><a class="page-number" href="/page/61/">61</a><span class="page-number current">62</span><a class="page-number" href="/page/63/">63</a><a class="page-number" href="/page/64/">64</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/63/">Next &raquo;</a>
     </nav>
   
 

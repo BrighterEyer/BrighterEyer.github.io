@@ -280,11 +280,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-/articles/2019/02/25/1551025240000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/02/25/1551025225000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025240000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:40.000Z" itemprop="datePublished">2019-02-25</time>
+      <a  href="/2019/02/25/articles/2019/02/25/1551025225000.html/" class="article-date">
+      <time datetime="2019-02-24T16:20:25.000Z" itemprop="datePublished">2019-02-25</time>
 </a>
 
     </div>
@@ -298,7 +298,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025240000.html/">[Android] 百度地图交通类</a>
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025225000.html/">[ngrok] ngrok</a>
     </h1>
   
 
@@ -309,7 +309,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://github.com/chenyufeng1991/BaiduMap-TrafficAssistant" target="_blank">github|百度地图助手</a></p>
+        <p><a href="https://ngrok.com/" target="_blank">ngrok英文官网</a><br><a href="http://ngrok.ciqiuwl.cn/" target="_blank">小米球</a><br><a href="https://pan.baidu.com/s/1aoHDohmGZLqmcLTr9z16ow" target="_blank">小米球|windows客户端|6jua</a><br><a href="https://www.ngrok.cc/download.html" target="_blank">Sunny-Ngrok内网转发</a><br><a href="https://blog.csdn.net/yjc_1111/article/details/79353718" target="_blank">10分钟教你搭建自己的ngrok服务器</a><br><a href="https://blog.csdn.net/zhangguo5/article/details/77848658" target="_blank">一分钟实现内网穿透（ngrok服务器搭建）</a><br>1、必要条件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">（1）服务器，用来搭建ngrok的服务器，必须有公网ip，并且可以正常访问（本次测试使用的是Ubuntu 16.04 64位）</span><br><span class="line">（2）域名，用来生成访问域名</span><br></pre></td></tr></table></figure></p>
+<p>2、安装git 和Golang<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install build-essential golang mercurial git</span><br></pre></td></tr></table></figure></p>
+<p>3、下载源码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/tutumcloud/ngrok.git ngrok</span><br></pre></td></tr></table></figure></p>
+<p>4、生成自签名证书<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cd ngrok</span><br><span class="line">NGROK_DOMAIN=&quot;&lt;域名&gt;.xyz&quot;</span><br><span class="line">openssl genrsa -out base.key 2048</span><br><span class="line">openssl req -new -x509 -nodes -key base.key -days 10000 -subj &quot;/CN=$NGROK_DOMAIN&quot; -out base.pem</span><br><span class="line">openssl genrsa -out server.key 2048</span><br><span class="line">openssl req -new -key server.key -subj &quot;/CN=$NGROK_DOMAIN&quot; -out server.csr</span><br><span class="line">openssl x509 -req -in server.csr -CA base.pem -CAkey base.key -CAcreateserial -days 10000 -out server.crt</span><br><span class="line"></span><br><span class="line">#执行完成后需要替换证书</span><br><span class="line">cp base.pem assets/client/tls/ngrokroot.crt</span><br></pre></td></tr></table></figure></p>
+<p>5、编译<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make release-server release-client</span><br><span class="line">ls bin</span><br></pre></td></tr></table></figure></p>
+<p>6、启动服务端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#ngrokd 会开一个 4443 端口用来跟客户端通讯，可通过 -tunnelAddr=&quot;:4443&quot;指定</span><br><span class="line">./bin/ngrokd -tlsKey=server.key -tlsCrt=server.crt -domain=&quot;&lt;域名&gt;.xyz&quot; -httpAddr=&quot;:80&quot; -httpsAddr=&quot;:443&quot;</span><br></pre></td></tr></table></figure></p>
+<p>7、编译客户端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#（1）windows</span><br><span class="line">GOOS=windows GOARCH=amd64 make release-client  </span><br><span class="line">#（2）mac</span><br><span class="line">GOOS=darwin GOARCH=amd64 make release-client</span><br></pre></td></tr></table></figure></p>
+<p>8、设置本地客户端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">（1）ngrok.cfg</span><br><span class="line">server_addr: &quot;&lt;域名&gt;.xyz:4443&quot;  </span><br><span class="line">trust_host_root_certs: false  </span><br><span class="line"></span><br><span class="line">（2）startup.bat</span><br><span class="line">@echo on</span><br><span class="line">cd %cd%</span><br><span class="line">#ngrok -proto=tcp 22</span><br><span class="line">#ngrok start web</span><br><span class="line">ngrok -config=ngrok.cfg -log=ngrok.log -subdomain=&lt;子域名&gt; 8080</span><br></pre></td></tr></table></figure></p>
+<p>9、设置为系统程序，并后台运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">touch /etc/systemd/system/ngrok.service</span><br><span class="line">[Unit]</span><br><span class="line">Description=ngrok</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">ExecStart=/myweb/ngrok/bin/ngrokd -tlsKey=/myweb/ngrok/server.key -tlsCrt=/myweb/ngrok/server.crt -domain=&quot;&lt;域名&gt;.xyz&quot; -httpAddr=&quot;:80&quot; -httpsAddr=&quot;:443&quot;</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br><span class="line"></span><br><span class="line">systemctl start ngrok.service</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.jianshu.com/p/796c3411f8eb" target="_blank">Centos搭建Ngrok实现内网穿透</a><br><a href="https://github.com/inconshreveable/ngrok" target="_blank">github|ngrok</a><br><a href="https://github.com/fatedier/frp/blob/master/README_zh.md" target="_blank">github|frp</a></p>
 
       
     </div>
@@ -320,7 +329,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ngrok/">ngrok</a></li></ul>
     </div>
 
       
@@ -342,11 +351,11 @@
 
 
   
-    <article id="post-/articles/2019/02/25/1551025239000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/02/25/1551025224000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025239000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:39.000Z" itemprop="datePublished">2019-02-25</time>
+      <a  href="/2019/02/25/articles/2019/02/25/1551025224000.html/" class="article-date">
+      <time datetime="2019-02-24T16:20:24.000Z" itemprop="datePublished">2019-02-25</time>
 </a>
 
     </div>
@@ -360,7 +369,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025239000.html/">[springboot] 微信平台开发</a>
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025224000.html/">[maven] 使用Maven构建多模块项目</a>
     </h1>
   
 
@@ -371,9 +380,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://github.com/binarywang/weixin-java-pay-demo" target="_blank">微信支付</a><br><a href="https://github.com/binarywang/weixin-java-miniapp-demo" target="_blank">小程序</a></p>
-<p><a href="https://gitee.com/binary/weixin-java-mp-demo-springboot.git" target="_blank">gitee|springboot|公众号</a><br><a href="https://github.com/binarywang/weixin-java-mp-demo-springmvc" target="_blank">github|springmvc公众号</a></p>
-<p><a href="https://github.com/simplezhli/RxPay" target="_blank">实现支付宝、微信支付</a></p>
+        <p><a href="https://blog.csdn.net/benhuo931115/article/details/80674760" target="_blank">30个常用的Maven命令</a><br><a href="https://www.cnblogs.com/wkrbky/p/6352188.html" target="_blank">Maven常用命令</a><br><a href="https://www.cnblogs.com/xdp-gacl/p/4242221.html" target="_blank">使用Maven构建多模块项目</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:generate -DgroupId=com.code -Dpackaging=pom -DartifactId=system-parent -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false</span><br><span class="line">cd system-parent</span><br><span class="line">rd /s /q src</span><br><span class="line">#将pom.xml文件中&lt;packaging&gt;jar&lt;/packaging&gt;修改为&lt;packaging&gt;pom&lt;/packaging&gt;</span><br><span class="line">notepad pom.xml</span><br><span class="line">mvn archetype:generate -DgroupId=com.code -DartifactId=system-domain -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -Dpackaging=jar</span><br><span class="line">mvn archetype:generate -DgroupId=com.code -DartifactId=system-dao -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -Dpackaging=jar</span><br><span class="line">mvn archetype:generate -DgroupId=com.code -DartifactId=system-service -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -Dpackaging=jar</span><br><span class="line">mvn archetype:generate -DgroupId=com.code -DartifactId=system-web -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false -Dpackaging=war</span><br></pre></td></tr></table></figure></p>
+<p>create与generate区别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#3.0.1版本之前</span><br><span class="line">mvn archetype:create</span><br><span class="line">#3.0.1版本之后</span><br><span class="line">mvn archetype:generate</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -384,7 +392,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
     </div>
 
       
@@ -406,11 +414,11 @@
 
 
   
-    <article id="post-/articles/2019/02/25/1551025238000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/02/25/1551025223000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025238000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:38.000Z" itemprop="datePublished">2019-02-25</time>
+      <a  href="/2019/02/25/articles/2019/02/25/1551025223000.html/" class="article-date">
+      <time datetime="2019-02-24T16:20:23.000Z" itemprop="datePublished">2019-02-25</time>
 </a>
 
     </div>
@@ -424,7 +432,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025238000.html/">[springboot] 微信小程序点餐系统</a>
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025223000.html/">[jsp] 实战</a>
     </h1>
   
 
@@ -435,7 +443,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="http://www.sqmax.top/springboot-project/" target="_blank">官网</a><br><a href="https://github.com/sqmax/springboot-project" target="_blank">springboot微信小程序点餐系统后台</a></p>
+        <p><a href="https://blog.csdn.net/ryo1060732496/article/details/82951673" target="_blank">目录连接|Java Servlet 实战入门教程-00-Servlet 系列教程汇总</a></p>
+<p><a href="https://github.com/houbb/servlet-learn/tree/master/servlet-base/src/main/java/com/github/houbb/servlet/learn/base" target="_blank">JSP小项目实战—客户信息管理系统</a></p>
+<p><a href="https://blog.csdn.net/weixin_37720904/article/details/75807661" target="_blank">JSP小项目实战—客户信息管理系统</a><br><a href="https://blog.csdn.net/Fly_hps/article/details/80097808" target="_blank">JSP实战————简易用户注册、登录、认证实现</a><br><a href="https://blog.csdn.net/BlueSky_USC/article/details/72905138" target="_blank">Web基础之Servlet+JDBC+JSP项目实战记录（二）</a></p>
+<p><a href="http://blog.wangxc.club/" target="_blank">blog|spring-boot-quick</a><br><a href="https://github.com/vector4wang/spring-boot-quick" target="_blank">spring-boot-quick</a></p>
+<p><a href="https://blog.csdn.net/tiantianheheaa/article/details/82697147" target="_blank">基于MVC架构的简单javaweb登陆注册功能实现（jsp + servlet + jdbc + mysql)</a></p>
+<p><a href="https://www.cnblogs.com/weberweber/p/6740962.html" target="_blank">Servlet：从入门到实战学习—Servlet实例（@WebServlet）</a><br><a href="https://www.cnblogs.com/shuiliuhualuo/p/5996180.html" target="_blank">@WebServlet用注解来实现servlet和url的映射</a></p>
+<p><a href="http://www.cuiyongzhi.com/tags-9.html" target="_blank">jsp|cookie和session</a></p>
 
       
     </div>
@@ -446,7 +460,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsp/">jsp</a></li></ul>
     </div>
 
       
@@ -468,11 +482,11 @@
 
 
   
-    <article id="post-/articles/2019/02/25/1551025237000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/02/25/1551025222000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025237000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:37.000Z" itemprop="datePublished">2019-02-25</time>
+      <a  href="/2019/02/25/articles/2019/02/25/1551025222000.html/" class="article-date">
+      <time datetime="2019-02-24T16:20:22.000Z" itemprop="datePublished">2019-02-25</time>
 </a>
 
     </div>
@@ -486,7 +500,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025237000.html/">[批处理] 常用批处理</a>
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025222000.html/">[java] jdbc</a>
     </h1>
   
 
@@ -497,70 +511,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://github.com/auspbro/batch-snippets" target="_blank">github|batch-snippets</a><br><a href="https://github.com/VonSdite/Bat" target="_blank">github|bat</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/批处理/">批处理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/02/25/1551025236000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025236000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:36.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025236000.html/">[java] log4j与logback配置文件</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>log4j.properties<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">###设置###</span><br><span class="line">log4j.rootLogger=debug,stdout,D,E,File</span><br><span class="line"></span><br><span class="line">###输出信息到控制抬###</span><br><span class="line">log4j.appender.stdout=org.apache.log4j.ConsoleAppender</span><br><span class="line">log4j.appender.stdout.Target=System.out</span><br><span class="line">log4j.appender.stdout.layout=org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.stdout.layout.ConversionPattern=[%-5p]%d&#123;yyyy-MM-ddHH:mm:ss,SSS&#125;method:%l%n%m%n</span><br><span class="line"></span><br><span class="line">###输出INFO级别以上的日志到 logs/wechat_debug.log###</span><br><span class="line">log4j.appender.File=org.apache.log4j.DailyRollingFileAppender</span><br><span class="line">log4j.appender.File.File=logs/wechat_info.log</span><br><span class="line">log4j.appender.File.Append=true</span><br><span class="line">log4j.appender.File.Threshold=INFO</span><br><span class="line">log4j.appender.File.layout=org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.File.layout.ConversionPattern=%-d&#123;yyyy-MM-ddHH:mm:ss&#125;[%t:%r]-[%p]%m%n</span><br><span class="line"></span><br><span class="line">###输出DEBUG级别以上的日志到 logs/wechat_debug.log###</span><br><span class="line">log4j.appender.D=org.apache.log4j.DailyRollingFileAppender</span><br><span class="line">log4j.appender.D.File=logs/wechat_debug.log</span><br><span class="line">log4j.appender.D.Append=true</span><br><span class="line">log4j.appender.D.Threshold=DEBUG</span><br><span class="line">log4j.appender.D.layout=org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.D.layout.ConversionPattern=%-d&#123;yyyy-MM-ddHH:mm:ss&#125;[%t:%r]-[%p]%m%n</span><br><span class="line"></span><br><span class="line">###输出ERROR级别以上的日志到 logs/wechat_error.log###</span><br><span class="line">log4j.appender.E=org.apache.log4j.DailyRollingFileAppender</span><br><span class="line">log4j.appender.E.File=logs/wechat_error.log</span><br><span class="line">log4j.appender.E.Append=true</span><br><span class="line">log4j.appender.E.Threshold=ERROR</span><br><span class="line">log4j.appender.E.layout=org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.E.layout.ConversionPattern=%-d&#123;yyyy-MM-ddHH:mm:ss&#125;[%t:%r]-[%p]%m%n</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.cnblogs.com/warking/p/5710303.html" target="_blank">logback的使用和logback.xml详解</a></p>
+        <p><a href="https://www.cnblogs.com/zhangyinhua/p/7522375.html" target="_blank">LanceToBigData|JDBC（一）之细说JDBC</a></p>
 
       
     </div>
@@ -593,11 +544,11 @@
 
 
   
-    <article id="post-/articles/2019/02/25/1551025234000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/02/06/1550453913000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025234000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:34.000Z" itemprop="datePublished">2019-02-25</time>
+      <a  href="/2019/02/18/articles/2019/02/06/1550453913000.html/" class="article-date">
+      <time datetime="2019-02-18T01:38:33.000Z" itemprop="datePublished">2019-02-18</time>
 </a>
 
     </div>
@@ -611,7 +562,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025234000.html/">[springboot] 百度人脸识别</a>
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/06/1550453913000.html/">[编程题库] 牛客网</a>
     </h1>
   
 
@@ -622,8 +573,135 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://github.com/search?l=Java&o=desc&q=%E7%99%BE%E5%BA%A6%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB&s=stars&type=Repositories" target="_blank">github|search|百度人脸识别</a></p>
-<p><a href="https://blog.csdn.net/qq_37525899/article/details/85246173" target="_blank">springboot中使用百度人脸识别</a></p>
+        <p><a href="https://www.nowcoder.com/" target="_blank">牛客网</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/06/1550453912000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/06/1550453912000.html/" class="article-date">
+      <time datetime="2019-02-18T01:38:32.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/06/1550453912000.html/">[linux] 更换源</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="http://wiki.ubuntu.org.cn/%E6%A8%A1%E6%9D%BF:14.04source" target="_blank">ubuntu官方镜像源</a><br><a href="https://mirrors.ustc.edu.cn/repogen/" target="_blank">中科大镜像源（推荐）</a><br><a href="http://mirrors.ustc.edu.cn/" target="_blank">ustc中国官方镜像网</a><br><a href="http://mirrors.sohu.com/" target="_blank">搜狐镜像网</a><br><a href="http://mirrors.163.com/" target="_blank">网易镜像网</a><br><a href="https://opsx.alibaba.com/mirror" target="_blank">阿里巴巴开源镜像站</a><br><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank">清华开源镜像站</a><br><a href="https://blog.csdn.net/weixin_41762173/article/details/79480832" target="_blank">ubuntu更改镜像源（软件源）</a></p>
+<p>ubuntu 14.04LTS 官方默认源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty main restricted</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty universe</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty-updates universe</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty multiverse</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty-updates multiverse</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse</span><br><span class="line">deb http://security.ubuntu.com/ubuntu/ trusty-security main restricted</span><br><span class="line">deb http://security.ubuntu.com/ubuntu/ trusty-security universe</span><br><span class="line">deb http://security.ubuntu.com/ubuntu/ trusty-security multiverse</span><br></pre></td></tr></table></figure></p>
+<p>ubuntu 14.04LTS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">docker run -it ubuntu:14.04 /bin/bash</span><br><span class="line">cat /etc/apt/sources.list|grep ^[^#]</span><br><span class="line">apt-get install apt-transport-https vim</span><br><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">cat &gt; /etc/apt/sources.list &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line">apt-get update</span><br><span class="line">apt-get install</span><br></pre></td></tr></table></figure></p>
+<p>ubuntu软件操作的相关命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update  更新源</span><br><span class="line"> </span><br><span class="line">sudo apt-get install package 安装包</span><br><span class="line"> </span><br><span class="line">sudo apt-get remove package 删除包</span><br><span class="line"> </span><br><span class="line">sudo apt-cache search package 搜索软件包</span><br><span class="line"> </span><br><span class="line">sudo apt-cache show package  获取包的相关信息，如说明、大小、版本等</span><br><span class="line"> </span><br><span class="line">sudo apt-get install package --reinstall   重新安装包</span><br><span class="line"> </span><br><span class="line">sudo apt-get -f install   修复安装</span><br><span class="line"> </span><br><span class="line">sudo apt-get remove package --purge 删除包，包括配置文件等</span><br><span class="line"> </span><br><span class="line">sudo apt-get build-dep package 安装相关的编译环境</span><br><span class="line"> </span><br><span class="line">sudo apt-get upgrade 更新已安装的包</span><br><span class="line"> </span><br><span class="line">sudo apt-get dist-upgrade 升级系统</span><br><span class="line"> </span><br><span class="line">sudo apt-cache depends package 了解使用该包依赖那些包</span><br><span class="line"> </span><br><span class="line">sudo apt-cache rdepends package 查看该包被哪些包依赖</span><br><span class="line"> </span><br><span class="line">sudo apt-get source package  下载该包的源代码</span><br><span class="line"> </span><br><span class="line">sudo apt-get clean &amp;&amp; sudo apt-get autoclean 清理无用的包</span><br><span class="line"> </span><br><span class="line">sudo apt-get check 检查是否有损坏的依赖</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/xuchunlin/p/5671572.html" target="_blank">linux查看系统</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451301000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451301000.html/" class="article-date">
+      <time datetime="2019-02-18T00:55:01.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451301000.html/">[springboot] springboot使用JWT集成Ng-Alain</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/kangkanglou/article/details/84579913" target="_blank">SpringBoot使用JWT集成Ng-Alain</a><br><a href="https://github.com/ypmc/springboot-ngalain-jwt" target="_blank">github|springboot-ngalain-jwt</a></p>
 
       
     </div>
@@ -656,11 +734,11 @@
 
 
   
-    <article id="post-/articles/2019/02/25/1551025234000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/02/18/1550451300000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025234000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:34.000Z" itemprop="datePublished">2019-02-25</time>
+      <a  href="/2019/02/18/articles/2019/02/18/1550451300000.html/" class="article-date">
+      <time datetime="2019-02-18T00:55:00.000Z" itemprop="datePublished">2019-02-18</time>
 </a>
 
     </div>
@@ -674,7 +752,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025234000.html/">[Android] jniLibs</a>
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451300000.html/">[springboot] springboot+solr</a>
     </h1>
   
 
@@ -685,7 +763,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://blog.csdn.net/weixin_36838630/article/details/73826427" target="_blank">手把手教你 - JNI的基础实现</a><br><a href="https://blog.csdn.net/fang410103/article/details/83012043" target="_blank">Android中关于libs和JniLibs的各种坑</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1、如果是在eclipse中，需要放到libs下对应库的目录</span><br><span class="line"></span><br><span class="line">2、Android Studio 会默认匹配main下的jniLibs目录</span><br><span class="line"></span><br><span class="line">3、Android Studio 手动指定使用libs下的库</span><br><span class="line">#app\build.gradle中加入以下配置</span><br><span class="line">android &#123;</span><br><span class="line">    sourceSets &#123;</span><br><span class="line">        main &#123;</span><br><span class="line">            jniLibs.srcDirs = [&apos;libs&apos;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p><a href="https://blog.csdn.net/larger5/article/details/79768438" target="_blank">[增删改查] SpringBoot 整合 Solr 之 SolrClient 实现 CRUD、分页接口、高亮显示</a><br><a href="https://github.com/larger5/SpringBoot_solr_base.git" target="_blank">github|SpringBoot_solr_base</a><br><a href="https://blog.csdn.net/appleyk/article/details/79280836" target="_blank">Spring-Boot+Solr搜索应用（索引数据创建+关键字高亮+thymeleaf静态html模板渲染跳转）</a><br><a href="https://blog.csdn.net/larger5/article/details/79946353" target="_blank">使用 LayUI+SpringBoot+Solr 模仿百度、做站内搜索引擎</a><br><a href="https://www.cnblogs.com/cblogs/p/solr-tutorial.html" target="_blank">Apache Solr入门教程(初学者之旅) </a><br><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">jdk8</a><br><a href="https://archive.apache.org/dist/zookeeper/" target="_blank">zookeeper</a><br><a href="https://blog.csdn.net/qiushisoftware/article/details/79043379" target="_blank">Zookeeper简介与集群搭建</a><br><a href="https://www.jianshu.com/p/1f4c70d7ef40" target="_blank">Linux ZooKeeper入门教程（一）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Zookeeper简介</span><br><span class="line">Zookeeper是一个高效的分布式协调服务，可以提供配置信息管理、命名、分布式同步、集群管理、数据库切换等服务。它不适合用来存储大量信息，可以用来存储一些配置、发布与订阅等少量信息。Hadoop、Storm、消息中间件、RPC服务框架、分布式数据库同步系统，这些都是Zookeeper的应用场景。</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/qq_26641781/article/details/80886831" target="_blank">idea Docker安装Zookeeper并进行操作</a><br><a href="https://www.cnblogs.com/kingkoo/p/8732448.html" target="_blank">使用 Docker 一步搞定 ZooKeeper 集群的搭建</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">docker pull zookeeper</span><br><span class="line">docker run --privileged=true -d --name zookeeper --publish 2181:2181 -d zookeeper:latest</span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line">#idea提供了一个Zookeeper插件，以供连接Zookeeper服务中心和查看内容</span><br><span class="line">#打开idea –&gt; Settings -&gt; Plugins,搜索Zoo进行下载安装</span><br><span class="line"></span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line">        &lt;!-- 原生zookeeper --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;zookeeper&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;3.4.6&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--Apache Curator--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.curator&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;curator-framework&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.9.0&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- zkclient --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;com.101tec&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;zkclient&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;0.9&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;log4j&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;log4j&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;1.2.17&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://tomcat.apache.org/download-80.cgi" target="_blank">tomcat8</a></p>
+<p><a href="https://blog.csdn.net/bskfnvjtlyzmv867/article/details/81623416" target="_blank">docker+centos+solr</a><br><a href="http://lucene.apache.org/solr/downloads.html" target="_blank">solr下载页</a><br><a href="http://mirrors.shu.edu.cn/apache/lucene/solr/7.7.0/solr-7.7.0.zip" target="_blank">solr-7.7.0.zip</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd solr/bin</span><br><span class="line">solr start</span><br><span class="line">solr create -c mycore1 -p 8983</span><br><span class="line">#访问</span><br><span class="line">#http://localhost:8983/solr/admin/cores?action=STATUS&amp;core=mycore1</span><br><span class="line">#solr服务器默认端口8983，访问http://localhost:8983/solr/</span><br><span class="line">solr stop -all</span><br><span class="line"></span><br><span class="line">https://github.com/x113773/testall/</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/cs_hnu_scw/article/details/79388080" target="_blank">手把手教你如何玩转Solr（包含项目实战）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://pan.baidu.com/s/1dRClm2</span><br><span class="line">olio</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.jianshu.com/p/45bc44a43485" target="_blank">使用SSM+Solr优雅的实现电商项目中的搜索功能</a><br><a href="https://github.com/TyCoding/ssm-redis-solr" target="_blank">github|SSM整合Solr实现电商项目中的搜索功能</a></p>
+<p><a href="https://blog.csdn.net/weixin_38589021/article/details/80323957" target="_blank">Docker搭建Solr-IKAnalyzer</a><br><a href="https://github.com/kingdz2008/dockerfile/tree/master/solr-ikanalyzer" target="_blank">github|solr-ikanalyzer</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build .</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/qq_26641781/article/details/81671323" target="_blank">Docker+Solr+IK</a><br><a href="https://www.cnblogs.com/yehuabin/p/10180737.html" target="_blank">docker-compose 安装solr+ikanalyzer</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it solr bash</span><br><span class="line">cd /opt/solr/server/solr</span><br><span class="line">mkdir ik_core</span><br><span class="line">cd ik_core</span><br><span class="line">mkdir data</span><br><span class="line">cp -r ../configsets/sample_techproducts_configs/conf/ .</span><br><span class="line">echo &apos;name=ik_core&apos; &gt; core.properties</span><br><span class="line">ls</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/xiaokang123456kao/article/details/72844729" target="_blank">solr简介和使用</a><br><a href="https://pan.baidu.com/s/1tIQdpXsOm_98Syuf4YQKag" target="_blank">ikanalyzer</a></p>
 
       
     </div>
@@ -696,7 +783,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
     </div>
 
       
@@ -718,11 +805,11 @@
 
 
   
-    <article id="post-/articles/2019/02/25/1551025233000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/02/18/1550451299000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025233000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:33.000Z" itemprop="datePublished">2019-02-25</time>
+      <a  href="/2019/02/18/articles/2019/02/18/1550451299000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:59.000Z" itemprop="datePublished">2019-02-18</time>
 </a>
 
     </div>
@@ -736,7 +823,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025233000.html/">[react-native] 百度人脸识别</a>
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451299000.html/">[springboot] springboot视频播放</a>
     </h1>
   
 
@@ -747,7 +834,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://github.com/songxiaoliang/react-native-baidu-face" target="_blank">react-native-baidu-face</a></p>
+        <p><a href="https://blog.csdn.net/HcJsJqJSSM/article/details/80753712" target="_blank">SpringBoot基于VIP视频解析接口实现视频播放</a><br><a href="https://blog.csdn.net/qq_37164847/article/details/81668242" target="_blank">springboot2.0上传文件（视频，图片）到服务器硬盘，并保存路径至mysql,返回可直接访问的url</a><br><a href="https://gitee.com/xuhaiyan/sg" target="_blank">github|springboot2.0上传文件（图片视频）项目</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create database movies;</span><br><span class="line">use movies;</span><br><span class="line">create table video(</span><br><span class="line">	id int primary key auto_increment,</span><br><span class="line">	url varchar(255),</span><br><span class="line">	name varchar(255),</span><br><span class="line">	path varchar(255)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -758,7 +845,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react-native</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
     </div>
 
       
@@ -780,11 +867,11 @@
 
 
   
-    <article id="post-/articles/2019/02/25/1551025232000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/02/18/1550451298000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025232000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:32.000Z" itemprop="datePublished">2019-02-25</time>
+      <a  href="/2019/02/18/articles/2019/02/18/1550451298000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:58.000Z" itemprop="datePublished">2019-02-18</time>
 </a>
 
     </div>
@@ -798,7 +885,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025232000.html/">[Android] 红外遥控器</a>
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451298000.html/">[springboot] springboot实战专栏</a>
     </h1>
   
 
@@ -809,9 +896,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://www.jianshu.com/p/8deeab7f7f47" target="_blank">简书|Mitaer|android红外遥控器|长按</a><br><a href="https://www.jianshu.com/p/ac189aa321bd" target="_blank">简书|Mitaer|android红外遥控器</a></p>
-<p><a href="https://github.com/search?l=Java&o=desc&q=%E9%81%A5%E6%8E%A7%E5%99%A8&s=stars&type=Repositories" target="_blank">github|search|遥控器</a><br><a href="https://blog.csdn.net/qq_17766199/article/details/79466506" target="_blank">玩玩Andoid的拖拽|实现一款万能遥控器</a></p>
-<p><a href="https://github.com/JackyAndroid/AndroidTVLauncher/blob/master/README-CN.md" target="_blank">AndroidTVLauncher</a><br><a href="https://github.com/Tamicer/FocusView.git" target="_blank">安卓tv</a><br><a href="https://github.com/kingthy/TVRemoteIME" target="_blank">TVRemoteIME</a><br><a href="https://github.com/hejunlin2013/LivePlayback" target="_blank">安卓tv直播</a><br><a href="https://github.com/zhangjianhao/RemoteControler" target="_blank">万能遥控器-实现了类似小米万能遥控器的基本功能，还可以遥控电脑</a></p>
+        <p><a href="https://blog.csdn.net/HcJsJqJSSM/column/info/22887" target="_blank">实战专栏</a></p>
+<p>SpringBoot基于Excel模板完成下载<br><a href="https://blog.csdn.net/HcJsJqJSSM/article/details/80468598" target="_blank">IDEA+Maven+SpringBoot+BootStrap+Thymeleaf+Mysql+Excel+MyBatis+Lombok+IDEA热部署</a></p>
 
       
     </div>
@@ -822,70 +908,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/02/25/1551025231000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025231000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:31.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025231000.html/">[Android] Eclipse项目导入AS</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/mstk/p/6307291.html" target="_blank">Android Studio导入Eclipse项目的两种方法</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">关闭当前的项目 -&gt; 此时弹出一个Welcome对话框 -&gt; 选择Import project (Eclipse ADT, Gradle, etc.) -&gt; 选择要导入的Eclipse项目</span><br><span class="line">idea工作空间打开后，将看到一个生成android studio版本的工程</span><br></pre></td></tr></table></figure></p>
-<p>当导入的工程出现gradle报错时，可以参考以下配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#&lt;android工程名&gt;\build.gradle</span><br><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        jcenter()</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:2.2.3&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#&lt;android工程名&gt;\app\build.gradle</span><br><span class="line">apply plugin: &apos;com.android.application&apos;</span><br><span class="line">android &#123;</span><br><span class="line">    compileSdkVersion 21</span><br><span class="line">    buildToolsVersion &apos;23.0.0&apos;</span><br><span class="line"></span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        applicationId &quot;com.code.demo&quot;</span><br><span class="line">        minSdkVersion 19</span><br><span class="line">        targetSdkVersion 22</span><br><span class="line">        versionCode 1</span><br><span class="line">        versionName &quot;1.0&quot;</span><br><span class="line">    &#125;</span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            minifyEnabled false</span><br><span class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line">    compile fileTree(dir: &apos;libs&apos;, include: [&apos;*.jar&apos;])</span><br><span class="line">    testCompile &apos;junit:junit:4.12&apos;</span><br><span class="line">    compile &apos;com.android.support:appcompat-v7:22.2.1&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
     </div>
 
       
@@ -909,7 +932,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/52/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/51/">51</a><a class="page-number" href="/page/52/">52</a><span class="page-number current">53</span><a class="page-number" href="/page/54/">54</a><a class="page-number" href="/page/55/">55</a><span class="space">&hellip;</span><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/54/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/52/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/51/">51</a><a class="page-number" href="/page/52/">52</a><span class="page-number current">53</span><a class="page-number" href="/page/54/">54</a><a class="page-number" href="/page/55/">55</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/54/">Next &raquo;</a>
     </nav>
   
 

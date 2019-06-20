@@ -280,11 +280,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-/articles/2019/01/26/1548511043000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/01/16/1547605243000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/01/26/articles/2019/01/26/1548511043000.html/" class="article-date">
-      <time datetime="2019-01-26T13:57:23.000Z" itemprop="datePublished">2019-01-26</time>
+      <a  href="/2019/01/16/articles/2019/01/16/1547605243000.html/" class="article-date">
+      <time datetime="2019-01-16T02:20:43.000Z" itemprop="datePublished">2019-01-16</time>
 </a>
 
     </div>
@@ -298,7 +298,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/26/articles/2019/01/26/1548511043000.html/">[前端] 获取地理位置</a>
+      <a  class="article-title" href="/2019/01/16/articles/2019/01/16/1547605243000.html/">[docker] docker mysql5.6</a>
     </h1>
   
 
@@ -309,7 +309,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;http://pv.sohu.com/cityjson?ie=utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">document.write(returnCitySN[&quot;cip&quot;]+&apos;,&apos;+returnCitySN[&quot;cname&quot;])</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+        <p><a href="https://blog.csdn.net/qq_27565769/article/details/80731271" target="_blank">Docker 中 MySQL 数据的导入导出</a><br><a href="https://www.cnblogs.com/yuwensong/p/3955834.html" target="_blank">mysql导入导出sql文件</a><br><a href="https://www.cnblogs.com/gaogaoxingxing/p/6066533.html" target="_blank">mysql source命令超大文件导入方法总结</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">1.拉取镜像并设置密码</span><br><span class="line">docker run -p 3306:3306 --name mymysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql5.6</span><br><span class="line">docker ps</span><br><span class="line">2.导入docker数据库</span><br><span class="line">(1)容器创建备份路径</span><br><span class="line">docker exec mymysql mkdir /opt/sql_bak/</span><br><span class="line">(2)主机复制到容器</span><br><span class="line">docker cp  &lt;sql文件绝对路径&gt; mymysql:/opt/sql_bak/test.sql</span><br><span class="line">(3)进入容器的mysql</span><br><span class="line">docker exec -it mymysql mysql -uroot -p123456</span><br><span class="line">#mysql命令行</span><br><span class="line">create database test;</span><br><span class="line">use test;</span><br><span class="line">source /opt/sql_bak/test.sql</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -319,7 +320,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
     </div>
 
       
@@ -341,11 +342,11 @@
 
 
   
-    <article id="post-/articles/2019/01/23/1548206934000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/01/13/1547346253000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/01/23/articles/2019/01/23/1548206934000.html/" class="article-date">
-      <time datetime="2019-01-23T01:28:54.000Z" itemprop="datePublished">2019-01-23</time>
+      <a  href="/2019/01/13/articles/2019/01/13/1547346253000.html/" class="article-date">
+      <time datetime="2019-01-13T02:24:13.000Z" itemprop="datePublished">2019-01-13</time>
 </a>
 
     </div>
@@ -359,7 +360,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/23/articles/2019/01/23/1548206934000.html/">[java] 跨域</a>
+      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346253000.html/">[cocos2d] quick-cocos2d-x demos</a>
     </h1>
   
 
@@ -370,274 +371,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://segmentfault.com/a/1190000012364985" target="_blank">springboot设置cors跨域请求的两种方式</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class CorsConfig &#123;</span><br><span class="line">    @Bean</span><br><span class="line">    public FilterRegistrationBean corsFilter() &#123;</span><br><span class="line">        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();</span><br><span class="line">        CorsConfiguration config = new CorsConfiguration();</span><br><span class="line">        config.setAllowCredentials(true);</span><br><span class="line">        // 设置你要允许的网站域名，如果全允许则设为 *</span><br><span class="line">//        config.addAllowedOrigin(&quot;http://localhost:8080&quot;);</span><br><span class="line">        config.addAllowedOrigin(&quot;*&quot;);</span><br><span class="line">        // 如果要限制 HEADER 或 METHOD 请自行更改</span><br><span class="line">        config.addAllowedHeader(&quot;*&quot;);</span><br><span class="line">        config.addAllowedMethod(&quot;*&quot;);</span><br><span class="line">        source.registerCorsConfiguration(&quot;/**&quot;, config);</span><br><span class="line">        FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));</span><br><span class="line">        // 这个顺序很重要哦，为避免麻烦请设置在最前</span><br><span class="line">        bean.setOrder(0);</span><br><span class="line">        return bean;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/idomyway/article/details/79572973" target="_blank">解决js ajax跨域访问报”No ‘Access-Control-Allow-Origin’ header is present on the requested resource.”错误</a><br><a href="https://www.cnblogs.com/mmzs/p/9167743.html" target="_blank">@CrossOrigin</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@EnableWebMvc</span><br><span class="line">public class WebConfig extends WebMvcConfigurerAdapter &#123;</span><br><span class="line">	@Override</span><br><span class="line">	public void addCorsMappings(CorsRegistry registry) &#123;</span><br><span class="line">		registry.addMapping(&quot;/api/**&quot;)</span><br><span class="line">			.allowedOrigins(&quot;http://domain2.com&quot;)</span><br><span class="line">			.allowedMethods(&quot;PUT&quot;, &quot;DELETE&quot;)</span><br><span class="line">			.allowedHeaders(&quot;header1&quot;, &quot;header2&quot;, &quot;header3&quot;)</span><br><span class="line">			.exposedHeaders(&quot;header1&quot;, &quot;header2&quot;)</span><br><span class="line">			.allowCredentials(false).maxAge(3600);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>springboot filter跨域<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import org.springframework.boot.web.servlet.ServletComponentScan;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">import javax.servlet.*;</span><br><span class="line">import javax.servlet.annotation.WebFilter;</span><br><span class="line">import javax.servlet.http.HttpServletRequest;</span><br><span class="line">import javax.servlet.http.HttpServletResponse;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">@ServletComponentScan</span><br><span class="line">@WebFilter(urlPatterns = &quot;/*&quot;,filterName = &quot;corsFilter&quot;)</span><br><span class="line">@Order(1)</span><br><span class="line">public class CorsFilter implements Filter &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void init(FilterConfig filterConfig) throws ServletException &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException &#123;</span><br><span class="line">        HttpServletResponse response = (HttpServletResponse) servletResponse;</span><br><span class="line">        HttpServletRequest request = (HttpServletRequest)servletRequest;</span><br><span class="line"></span><br><span class="line">        String origin = request.getHeader(&quot;Origin&quot;);</span><br><span class="line">        response.setHeader(&quot;Access-Control-Allow-Origin&quot;, origin);</span><br><span class="line">        response.setHeader(&quot;Access-Control-Allow-Methods&quot;, &quot;POST, GET, OPTIONS, DELETE&quot;);</span><br><span class="line">        response.setHeader(&quot;Access-Control-Max-Age&quot;, &quot;3600&quot;);</span><br><span class="line">        response.setHeader(&quot;Access-Control-Allow-Headers&quot;, &quot;x-requested-with,Authorization&quot;);</span><br><span class="line">        response.setHeader(&quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;);</span><br><span class="line">        String method = request.getMethod();</span><br><span class="line">        if(method.equalsIgnoreCase(&quot;OPTIONS&quot;))&#123;</span><br><span class="line">            servletResponse.getOutputStream().write(&quot;Success&quot;.getBytes(&quot;utf-8&quot;));</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            filterChain.doFilter(servletRequest, servletResponse);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void destroy() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>bean注册|不注册会报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Bean</span><br><span class="line">public FilterRegistrationBean filterRegistrationBean() &#123;  </span><br><span class="line">    FilterRegistrationBean registrationBean = new FilterRegistrationBean();  </span><br><span class="line">    CorsFilter corsFilter = new CorsFilter();  </span><br><span class="line">    registrationBean.setFilter(corsFilter);  </span><br><span class="line">    List&lt;String&gt; urlPatterns = new ArrayList&lt;String&gt;();  </span><br><span class="line">    urlPatterns.add(&quot;/*&quot;);</span><br><span class="line">    registrationBean.setUrlPatterns(urlPatterns);  </span><br><span class="line">    return registrationBean;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn package -Dmaven.test.skip=true spring-boot:repackage</span><br></pre></td></tr></table></figure>
-<p><a href="https://blog.csdn.net/m_jack/article/details/80497617" target="_blank">No ‘Access-Control-Allow-Origin’ header is present on the requested resource.’Ajax跨域访问解决方案</a><br>jsonp<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">    $.ajax(&#123;</span><br><span class="line">            type:&quot;GET&quot;,</span><br><span class="line">            url:&quot;http://www.deardull.com:9090/getMySeat&quot;, //访问的链接</span><br><span class="line">            dataType:&quot;jsonp&quot;,  //数据格式设置为jsonp</span><br><span class="line">            jsonp:&quot;callback&quot;,  //Jquery生成验证参数的名称</span><br><span class="line">            success:function(data)&#123;  //成功的回调函数</span><br><span class="line">                alert(data);</span><br><span class="line">            &#125;,</span><br><span class="line">            error: function (e) &#123;</span><br><span class="line">                alert(&quot;error&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">后端</span><br><span class="line">    @ResponseBody</span><br><span class="line">    @RequestMapping(&quot;/getMySeat&quot;)</span><br><span class="line">    public String getMySeatSuccess(@RequestParam(&quot;callback&quot;) String callback)&#123;</span><br><span class="line">        Gson gson=new Gson();</span><br><span class="line">        Map&lt;String,String&gt; map=new HashMap&lt;&gt;();</span><br><span class="line">        map.put(&quot;seat&quot;,&quot;1_2_06_12&quot;);</span><br><span class="line">        logger.info(callback);</span><br><span class="line">        return callback+&quot;(&quot;+gson.toJson(map)+&quot;)&quot;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.jianshu.com/p/db0d8d45c242" target="_blank">spring-boot 允许接口跨域并实现拦截（CORS）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class CorsConfig extends WebMvcConfigurerAdapter &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void addCorsMappings(CorsRegistry registry) &#123;</span><br><span class="line">        registry.addMapping(&quot;/**&quot;)</span><br><span class="line">                .allowedOrigins(&quot;*&quot;)</span><br><span class="line">                .allowCredentials(true)</span><br><span class="line">                .allowedMethods(&quot;GET&quot;, &quot;POST&quot;, &quot;DELETE&quot;, &quot;PUT&quot;)</span><br><span class="line">                .maxAge(3600);</span><br><span class="line">    &#125;</span><br><span class="line">    private CorsConfiguration buildConfig() &#123;</span><br><span class="line">        CorsConfiguration corsConfiguration = new CorsConfiguration();</span><br><span class="line">        List&lt;String&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">        list.add(&quot;*&quot;);</span><br><span class="line">        corsConfiguration.setAllowedOrigins(list);</span><br><span class="line">        /*</span><br><span class="line">        // 请求常用的三种配置，*代表允许所有，当时你也可以自定义属性（比如header只能带什么，只能是post方式等等）</span><br><span class="line">        */</span><br><span class="line">        corsConfiguration.addAllowedOrigin(&quot;*&quot;);  </span><br><span class="line">        corsConfiguration.addAllowedHeader(&quot;*&quot;); </span><br><span class="line">        corsConfiguration.addAllowedMethod(&quot;*&quot;);  </span><br><span class="line">        return corsConfiguration;</span><br><span class="line">    &#125;</span><br><span class="line">    @Bean</span><br><span class="line">    public CorsFilter corsFilter() &#123;</span><br><span class="line">        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();</span><br><span class="line">        source.registerCorsConfiguration(&quot;/**&quot;, buildConfig());</span><br><span class="line">        return new CorsFilter(source);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/01/23/1548206933000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/23/articles/2019/01/23/1548206933000.html/" class="article-date">
-      <time datetime="2019-01-23T01:28:53.000Z" itemprop="datePublished">2019-01-23</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/23/articles/2019/01/23/1548206933000.html/">[java] Multipartfile与File类型相互转换</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/zxg-blog/p/8952255.html" target="_blank">Multipartfile与File类型相互转换</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/01/20/1547972027000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/20/articles/2019/01/20/1547972027000.html/" class="article-date">
-      <time datetime="2019-01-20T08:13:47.000Z" itemprop="datePublished">2019-01-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/20/articles/2019/01/20/1547972027000.html/">[react-native] react-native-qq</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.jianshu.com/p/910eec152abb" target="_blank">React Native封装微信\QQ分享组件</a><br><a href="https://github.com/guangqiang-liu/react-native-shareLogin.git" target="_blank">[可用]项目Demo</a></p>
-<p><a href="https://www.jianshu.com/p/a493f6f92b34" target="_blank">react-native代码编辑|react-native实现QQ的登录和分享（图文消息分享和纯图片分享）</a></p>
-<p>给gradle配置阿里云maven<br><a href="http://faceplus.top/2017/04/22/react-native%E8%BF%9B%E5%85%A5%E5%A7%BF%E5%8A%BF/init.gradle" target="_blank">init.gradle</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">notepad %USERPROFILE%\.gradle\init.gradle</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/reactnativecn/react-native-qq" target="_blank">react-native-qq</a><br><a href="http://wiki.open.qq.com/wiki/mobile/get_simple_userinfo" target="_blank">qq腾讯开放平台获取获取用户信息文档链接</a></p>
-<p><a href="https://www.jianshu.com/p/46a9919636be" target="_blank">react native qq登录，微信登录实现(android端)</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#使用特定版本</span><br><span class="line">react-native init demo --version 0.55.4</span><br><span class="line">cd demo</span><br><span class="line">yarn add react-native-qq</span><br><span class="line">react-native link react-native-qq</span><br><span class="line"></span><br><span class="line">#android/app/build.gradle</span><br><span class="line">#defaultConfig 添加</span><br><span class="line">        manifestPlaceholders = [</span><br><span class="line">            QQ_APPID: &quot;平台申请的APPID&quot;</span><br><span class="line">        ]</span><br><span class="line"></span><br><span class="line">#&lt;manifest&gt;添加</span><br><span class="line">xmlns:tools=&quot;http://schemas.android.com/tools&quot;</span><br><span class="line">#&lt;application&gt;添加</span><br><span class="line">tools:replace=&quot;android:allowBackup&quot;</span><br><span class="line"></span><br><span class="line">react-native run-android</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/xietansheng/article/details/85092056" target="_blank">sdkmanager的使用</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#配置环境变量</span><br><span class="line">E:\Android\Sdk\tools\bin</span><br><span class="line">E:\Android\Sdk\tools</span><br><span class="line">E:\Android\Sdk\platform-tools</span><br><span class="line">#新建文件</span><br><span class="line">notepad %USERPROFILE%\.android\repositories.cfg</span><br><span class="line">sdkmanager --list</span><br><span class="line">sdkmanager --uninstall &quot;build-tools;23.0.1&quot;</span><br><span class="line">sdkmanager &quot;build-tools;23.0.1&quot;</span><br><span class="line">sdkmanager &quot;build-tools;27.0.3&quot;</span><br><span class="line">sdkmanager &quot;system-images;android-24;default;x86_64&quot;</span><br><span class="line">sdkmanager &quot;platform-tools&quot; &quot;platforms;android-26&quot;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/deeplies/article/details/71194121" target="_blank">[办法]react-native 编译构建时出错，提示 Build Tools版本过低提示</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">android list sdk -a</span><br><span class="line">android update sdk --use-sdk-wrapper</span><br><span class="line">android update sdk -a -u -t 13</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react-native</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/01/19/1547901857000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/19/articles/2019/01/19/1547901857000.html/" class="article-date">
-      <time datetime="2019-01-19T12:44:17.000Z" itemprop="datePublished">2019-01-19</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/19/articles/2019/01/19/1547901857000.html/">[css] css技巧</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>截取图片特定部分作为背景<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    background-image: url(/path/to/filename.png);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    width: 50px;</span><br><span class="line">    height: 50px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    background-position: -50px -50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.cnblogs.com/starof/p/4424347.html" target="_blank">cnblogs|box-shadow讲解与示例</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">box-shadow属性向box添加一个或多个阴影。</span><br><span class="line">语法：</span><br><span class="line">box-shadow: offset-x offset-y blur spread color inset/outset;</span><br><span class="line">box-shadow: X轴偏移量 Y轴偏移量 [阴影模糊半径] [阴影扩展] [阴影颜色] [投影方式];</span><br></pre></td></tr></table></figure></p>
-<p>上下左右阴影分开<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">CSS 只让上部边有阴影</span><br><span class="line">div&#123;	</span><br><span class="line">       -moz-box-shadow:0px -15px 10px -15px #07a8fe;</span><br><span class="line">    -webkit-box-shadow:0px -15px 10px -15px #07a8fe;</span><br><span class="line">            box-shadow:0px -15px 10px -15px #07a8fe;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">CSS 只让底部边有阴影</span><br><span class="line">div&#123;	</span><br><span class="line">       -moz-box-shadow:0px 15px 10px -15px #07a8fe;</span><br><span class="line">    -webkit-box-shadow:0px 15px 10px -15px #07a8fe;</span><br><span class="line">            box-shadow:0px 15px 10px -15px #07a8fe;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">CSS 只让左边有阴影</span><br><span class="line">div&#123;	</span><br><span class="line">       -moz-box-shadow:-15px 0px 10px -15px #07a8fe;</span><br><span class="line">    -webkit-box-shadow:-15px 0px 10px -15px #07a8fe;</span><br><span class="line">            box-shadow:-15px 0px 10px -15px #07a8fe;</span><br><span class="line">&#125;</span><br><span class="line">CSS 只让右边有阴影</span><br><span class="line">div&#123;	</span><br><span class="line">       -moz-box-shadow:15px 0px 10px -15px #07a8fe;</span><br><span class="line">    -webkit-box-shadow:15px 0px 10px -15px #07a8fe;</span><br><span class="line">            box-shadow:15px 0px 10px -15px #07a8fe;</span><br><span class="line">&#125;</span><br><span class="line">左右阴影</span><br><span class="line">div:hover &#123;</span><br><span class="line">       -moz-box-shadow:-15px 0px 10px -15px #07a8fe,</span><br><span class="line">                        15px 0px 10px -15px #07a8fe;</span><br><span class="line">    -webkit-box-shadow:-15px 0px 10px -15px #07a8fe,</span><br><span class="line">                        15px 0px 10px -15px #07a8fe;</span><br><span class="line">            box-shadow:-15px 0px 10px -15px #07a8fe,</span><br><span class="line">                        15px 0px 10px -15px #07a8fe;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.cnblogs.com/sapho/p/5481257.html" target="_blank">常用阴影的实现代码</a><br><a href="https://www.cnblogs.com/wuchuanlong/p/5980766.html" target="_blank">css3 box-shadow阴影(外阴影与外发光)讲解</a><br><a href="https://www.sioe.cn/yingyong/yanse-rgb-16/" target="_blank">RGB颜色值转换成十六进制颜色码</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/01/19/1547901856000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/19/articles/2019/01/19/1547901856000.html/" class="article-date">
-      <time datetime="2019-01-19T12:44:16.000Z" itemprop="datePublished">2019-01-19</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/19/articles/2019/01/19/1547901856000.html/">[cocos2d] cocos2d-js</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/kenkofox/p/4153848.html" target="_blank">cocos2d-js 入门 （主要是HTML5）</a><br><a href="https://blog.csdn.net/qq951127336/article/details/79860040" target="_blank">csdn|森林海的棕熊</a><br><a href="https://github.com/QQ951127336/Game_byJavaScript" target="_blank">github|森林海的棕熊|cocos2d-js 游戏源码</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">10秒内吃萝卜</span><br><span class="line">拼图游戏</span><br><span class="line">连水管游戏</span><br><span class="line">跳一跳游戏</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/tonny_guan/article/details/44462165" target="_blank">第一个Cocos2d-JS游戏</a><br><a href="https://www.cnblogs.com/zsychanpin/p/6978294.html" target="_blank">搭建Cocos2d-JS开发环境</a><br><a href="https://www.cnblogs.com/tinyphp/p/5112188.html" target="_blank">Windows搭建Cocos2d-JS环境(Webstorm)</a><br><a href="https://github.com/kenkozheng/cocos2d-js/tree/master/hungry_hero" target="_blank">hungry_hero</a><br><a href="https://www.jianshu.com/p/67feb63c5b3a" target="_blank">cocos2d-js环境搭建</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/cocos2d/cocos2d-js/releases</span><br><span class="line">https://cocos2d-x.org/filedown/cocos2d-js-v3.0.zip</span><br><span class="line">https://cocos2d-x.org/filedown/cocos2d-js-v3.6.zip</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://www.cocos2d-x.org/filedown/cocos2d-x-3.7.zip" target="_blank">cocos2d-js v3.7及以后的版本，js lua c++引擎都在一起了</a><br><a href="https://docs.cocos2d-x.org/api-ref/js/v3x/" target="_blank">cocos-js api</a></p>
-<p>报错解决<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">问题：webstorm开发时忽然遇到Cannot read property &apos;style&apos; of null错误</span><br><span class="line">解决：去掉js文件中的注释</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://cocostudio.download.appget.cn/CocosStudio/v1.6.0.0/CocosStudio_v1.6.0.0.exe" target="_blank">Cocostudio 1.6</a><br><a href="https://www.cnblogs.com/luorende/p/6464181.html" target="_blank">Cocos Code IDE</a><br><a href="http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.2.0.exe" target="_blank">Cocos Code IDE 1.2.0 Win32</a><br><a href="http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.2.0.exe" target="_blank">Cocos Code IDE 1.2.0 Win64</a><br><a href="http://www.cocos2d-x.org/filedown/cocos-code-ide-mac64-1.2.0.dmg" target="_blank">Cocos Code IDE 1.2.0 Mac</a></p>
+        <p><a href="" target="_blank"></a><br><a href="https://github.com/doctording/cocos2dx_lua_snake" target="_blank">cocos2d-x lua 贪吃蛇完整项目</a><br><a href="https://gitee.com/mcyHome/Snake" target="_blank">贪吃蛇1</a><br><a href="https://github.com/ls9527/tsc" target="_blank">贪吃蛇2</a><br><a href="https://gitee.com/linuxing3/cars01" target="_blank">贪吃蛇-场景</a><br><a href="https://gitee.com/linuxing3/cars05" target="_blank">贪吃蛇-运动</a></p>
+<p><a href="http://xianwx.xyz/2018/08/29/quick-cocos-shader-share/" target="_blank">blog|quick_cocos_shader_demo</a><br><a href="https://gitee.com/xianwx/quick_cocos_shader_demo" target="_blank">github|quick_cocos_shader_demo</a><br><a href="https://gitee.com/blackcushion/baozi.git" target="_blank">quick-cocos2d-x 模仿愤怒的包子</a><br><a href="https://github.com/hanxi/quick-cocos2d-x-2048" target="_blank">2048</a><br><a href="https://github.com/booirror/MoonWarriors-Quick" target="_blank">月球战士</a><br><a href="https://gitee.com/roll1987/cocos2dx-lua-simple-plane-game.git" target="_blank">飞机战斗|开发环境：Cocos2d-x 3.2, Lua 5.1, Cocos Code IDE 1.0</a></p>
+<p><a href="https://gitee.com/yuanwu123/mario/blob/master/Mario" target="_blank">马里奥</a><br><a href="https://gitee.com/qink1564/MummyMaze" target="_blank">复刻PopCap的游戏MummyMaze，用于学习quick-Cocos2d</a><br><a href="https://gitee.com/362484032/mj_client" target="_blank">麻将</a><br><a href="https://gitee.com/fuatnow/hexlink" target="_blank">使用cocos2d-lua编写六边形连线游戏</a><br><a href="https://gitee.com/caohongtao/digger" target="_blank">基于Quick-Cocos2d-x的鼹鼠挖地游戏，包含玩法介绍</a><br><a href="https://gitee.com/uhziel/ccz_csdn" target="_blank">曹操传 quick-cocos2dx-lua 3.3 复刻</a><br><a href="https://gitee.com/linjinxin_scau/PlantsVsZombies" target="_blank">植物大战僵尸</a><br><a href="https://github.com/ls9527/ddz" target="_blank">斗地主</a><br><a href="https://github.com/philianbit/QuickCocos-maze" target="_blank">走迷宫</a></p>
 
       
     </div>
@@ -670,11 +406,11 @@
 
 
   
-    <article id="post-/articles/2019/01/10/1547817724000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/01/13/1547346252000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/01/18/articles/2019/01/10/1547817724000.html/" class="article-date">
-      <time datetime="2019-01-18T13:22:04.000Z" itemprop="datePublished">2019-01-18</time>
+      <a  href="/2019/01/13/articles/2019/01/13/1547346252000.html/" class="article-date">
+      <time datetime="2019-01-13T02:24:12.000Z" itemprop="datePublished">2019-01-13</time>
 </a>
 
     </div>
@@ -688,7 +424,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/18/articles/2019/01/10/1547817724000.html/">[java] ueditor百度富文本编辑器</a>
+      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346252000.html/">[electronjs] electronjs桌面应用开发</a>
     </h1>
   
 
@@ -699,7 +435,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://blog.csdn.net/qq_33745799/article/details/70031641" target="_blank">很详细的SpringBoot整合UEditor教程</a><br><a href="https://github.com/llldddbbb/ueditor-test" target="_blank">github|ueditor-test</a><br><a href="http://fex.baidu.com/ueditor/#start-start" target="_blank">UEditor文档</a><br><a href="https://ueditor.baidu.com/website/download.html" target="_blank">UEditor下载</a><br><a href="https://www.jianshu.com/p/231e83c13610" target="_blank">springboot集成ueditor富文本编辑器（需要修改ueditor源码）</a><br><a href="https://www.jianshu.com/p/006e65711de0" target="_blank">springboot集成ueditor富文本编辑器（不需修改ueditor源码）</a></p>
+        <p><a href="http://electronjs.org/" target="_blank">官网</a><br><a href="https://segmentfault.com/a/1190000014209821" target="_blank">【Electron实战开发】HelloWorld入门实战</a><br><a href="https://www.cnblogs.com/GoodHelper/p/8527523.html" target="_blank">spring boot + vue + element-ui全栈开发入门——基于Electron桌面应用开发</a><br><a href="https://www.jianshu.com/p/3b295544c78e" target="_blank">简书|用Electron创建跨平台应用</a><br><a href="https://blog.csdn.net/qq_33203555/article/details/82898458" target="_blank">electron快速上手</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/electron/electron-quick-start.git</span><br><span class="line">cd electron-quick-start</span><br><span class="line">npm install</span><br><span class="line">npm install electron-winstaller --save-dev</span><br><span class="line">npm install electron-packager -g</span><br><span class="line"></span><br><span class="line">package.json</span><br><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;start&quot;: &quot;electron .&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;electron-packager . bobo --out ../electron --ignore=node_modules&quot;</span><br><span class="line">&#125;</span><br><span class="line">npm run build</span><br><span class="line">vim build.js</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var electronInstaller = require(&apos;electron-winstaller&apos;);</span><br><span class="line">var path = require(&quot;path&quot;);</span><br><span class="line"></span><br><span class="line">resultPromise = electronInstaller.createWindowsInstaller(&#123;</span><br><span class="line">appDirectory: path.join(&apos;../electron/bobo-win32-x64&apos;), //刚才生成打包文件的路径</span><br><span class="line">outputDirectory: path.join(&apos;./tmp/build/installer64&apos;), //输出路径</span><br><span class="line">authors: &apos;My App Inc.&apos;,</span><br><span class="line">exe: &apos;bobo.exe&apos;, //在appDirectory寻找exe的名字</span><br><span class="line">setupMsi:&apos;bobo.msi&apos;,</span><br><span class="line">noMsi:true</span><br><span class="line">&#125;);</span><br><span class="line">resultPromise.then(() =&gt; console.log(&quot;It worked!&quot;), (e) =&gt; console.log(`No dice: $&#123;e.message&#125;`));</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">node build.js</span><br><span class="line">#桌面快捷方式</span><br><span class="line">npm i electron-squirrel-startup --save</span><br><span class="line">#在main.js添加如下代码 </span><br><span class="line">if(require(&apos;electron-squirrel-startup&apos;)) return; </span><br><span class="line">npm run packager</span><br><span class="line">node build.js</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -710,7 +448,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/electronjs/">electronjs</a></li></ul>
     </div>
 
       
@@ -732,11 +470,11 @@
 
 
   
-    <article id="post-/articles/2019/01/18/1547774454000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/01/13/1547346251000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/01/18/articles/2019/01/18/1547774454000.html/" class="article-date">
-      <time datetime="2019-01-18T01:20:54.000Z" itemprop="datePublished">2019-01-18</time>
+      <a  href="/2019/01/13/articles/2019/01/13/1547346251000.html/" class="article-date">
+      <time datetime="2019-01-13T02:24:11.000Z" itemprop="datePublished">2019-01-13</time>
 </a>
 
     </div>
@@ -750,7 +488,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/18/articles/2019/01/18/1547774454000.html/">[springboot] PageHelper</a>
+      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346251000.html/">[springboot] springboot+vue</a>
     </h1>
   
 
@@ -761,9 +499,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="http://www.cnblogs.com/1315925303zxz/p/7364552.html" target="_blank">SpringBoot集成MyBatis的分页插件PageHelper</a></p>
-<p><a href="https://www.cnblogs.com/V1haoge/p/9971036.html" target="_blank">SpringBoot整合Mybatis</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">h2</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.h2database&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;h2&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.4.196&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">swagger2</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;io.springfox&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.8.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">Lombok</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.16.20&lt;/version&gt;</span><br><span class="line">    &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.cnblogs.com/V1haoge/p/9971043.html" target="_blank">SpringBoot整合系列-PageHelper分页插件</a></p>
+        <p><a href="https://www.cnblogs.com/wlovet/p/8317282.html" target="_blank">Vue+SpringBoot+Mybatis的简单员工管理项目</a><br><a href="https://github.com/boylegu/SpringBoot-vue" target="_blank">github</a><br><a href="https://blog.csdn.net/u014098584/article/details/78912378/" target="_blank">spring boot整合vue项目</a></p>
+<p><a href="https://www.jianshu.com/p/e1c0cbbfb599" target="_blank">Vue相关开源项目库汇总(史上最全)</a><br><a href="https://code.visualstudio.com/" target="_blank">visual studio code</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">cnpm install -g vue-cli</span><br><span class="line">vue init webpack javalsj-vue</span><br><span class="line">cd javalsj-vue</span><br><span class="line">cnpm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -796,11 +533,11 @@
 
 
   
-    <article id="post-/articles/2019/01/18/1547774453000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/01/13/1547346250000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/01/18/articles/2019/01/18/1547774453000.html/" class="article-date">
-      <time datetime="2019-01-18T01:20:53.000Z" itemprop="datePublished">2019-01-18</time>
+      <a  href="/2019/01/13/articles/2019/01/13/1547346250000.html/" class="article-date">
+      <time datetime="2019-01-13T02:24:10.000Z" itemprop="datePublished">2019-01-13</time>
 </a>
 
     </div>
@@ -814,7 +551,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/18/articles/2019/01/18/1547774453000.html/">[java] 极光推送</a>
+      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346250000.html/">[vue] vue专栏</a>
     </h1>
   
 
@@ -825,7 +562,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="http://www.cnblogs.com/V1haoge/p/6439313.html" target="_blank">极光推送经验之谈-Java后台服务器实现极光推送的两种实现方式</a><br><a href="https://www.cnblogs.com/shena/p/6594091.html" target="_blank">JPush极光推送Java服务器端实例</a><br><a href="https://blog.csdn.net/qq_38689769/article/details/79869902" target="_blank">java+maven集成极光推送服务</a><br><a href="https://www.cnblogs.com/lingyejun/p/7220621.html" target="_blank">翎野|极光推送的代码实现</a><br><a href="https://github.com/66668/ZOERP" target="_blank">github|含极光推送，基于MVC框架的中欧ERP商业项目移动端项目</a><br><a href="https://github.com/good-life/pushtalk" target="_blank">推聊是一个基于极光推送 (JPush) 的手机聊天系统</a></p>
+        <p><a href="https://blog.csdn.net/qq_42221334/column/info/27230" target="_blank">vue专栏</a><br><a href="https://blog.csdn.net/aaronzzq/article/details/80936708" target="_blank">Vue相关开源项目库汇总(史上最全)</a></p>
 
       
     </div>
@@ -836,7 +573,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
     </div>
 
       
@@ -858,11 +595,11 @@
 
 
   
-    <article id="post-/articles/2019/01/17/1547724476000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/01/13/1547346249000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/01/17/articles/2019/01/17/1547724476000.html/" class="article-date">
-      <time datetime="2019-01-17T11:27:56.000Z" itemprop="datePublished">2019-01-17</time>
+      <a  href="/2019/01/13/articles/2019/01/13/1547346249000.html/" class="article-date">
+      <time datetime="2019-01-13T02:24:09.000Z" itemprop="datePublished">2019-01-13</time>
 </a>
 
     </div>
@@ -876,7 +613,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/17/articles/2019/01/17/1547724476000.html/">[springboot] springboot+jpa+sqlite</a>
+      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346249000.html/">[docker] docker专栏</a>
     </h1>
   
 
@@ -887,7 +624,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://blog.csdn.net/tianyaleixiaowu/article/details/79445561" target="_blank">springboot+jpa+sqlite</a><br><a href="http://www.cnblogs.com/hwding/p/7356382.html" target="_blank">使用Spring Boot快速构建基于SQLite数据源的应用</a><br><a href="https://www.cnblogs.com/niuzhifa/p/9279543.html" target="_blank">springboot2.0.3使用jpa和hibernate的方式配置多数据源(sqlite和mysql)</a><br><a href="https://github.com/restart1025/Spring-Boot-SQLite" target="_blank">github|Spring-Boot-SQLite</a></p>
+        <p><a href="http://www.runoob.com/docker/windows-docker-install.html" target="_blank">windows安装docker</a><br><a href="https://blog.csdn.net/Gamer_gyt/column/info/13159" target="_blank">Docker专栏</a></p>
 
       
     </div>
@@ -898,7 +635,258 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/13/1547346248000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/13/articles/2019/01/13/1547346248000.html/" class="article-date">
+      <time datetime="2019-01-13T02:24:08.000Z" itemprop="datePublished">2019-01-13</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346248000.html/">[hexo] black-blue主题</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://geeksblog.cc/hexo-theme.html" target="_blank">业余文艺架构师|Hexo自用黑色主题</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/13/1547346247000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/13/articles/2019/01/13/1547346247000.html/" class="article-date">
+      <time datetime="2019-01-13T02:24:07.000Z" itemprop="datePublished">2019-01-13</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547346247000.html/">[微信小游戏] 300多套微信小游戏集合</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://pan.baidu.com/s/1nwhUgid#list/path=%2F" target="_blank">度娘</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信小游戏/">微信小游戏</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/13/1547340797000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/13/articles/2019/01/13/1547340797000.html/" class="article-date">
+      <time datetime="2019-01-13T00:53:17.000Z" itemprop="datePublished">2019-01-13</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547340797000.html/">[egret] Egret白鹭H5小游戏开发入门</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/chengguanhui/p/5800240.html" target="_blank">Egret白鹭H5小游戏开发入门</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/egret/">egret</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/13/1547340797000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/13/articles/2019/01/13/1547340797000.html/" class="article-date">
+      <time datetime="2019-01-13T00:53:17.000Z" itemprop="datePublished">2019-01-13</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/13/articles/2019/01/13/1547340797000.html/">[h5game] h5游戏开发</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://aotu.io/index.html" target="_blank">凹凸实验室</a><br><a href="https://blog.csdn.net/yorhomwang/article/category/1192215" target="_blank">Yorhom’s Game Box的游戏开发</a><br><a href="https://fwon.github.io/escape" target="_blank">基于canvas的粒子逃脱小游戏</a><br><a href="https://github.com/fwon/Sinuous" target="_blank">源码</a><br><a href="https://cloud.tencent.com/developer/information/h5%E6%B8%B8%E6%88%8Fjs%E6%BA%90%E7%A0%81" target="_blank">腾讯云社区|h5游戏js源码</a><br><a href="https://cloud.tencent.com/developer/article/1074023" target="_blank">JS+canvas实现人机大战之五子棋</a></p>
+<p><a href="http://www.phaser.io/download/stable" target="_blank">phaser</a><br><a href="http://phaser.io/examples" target="_blank">phaser|examples</a><br><a href="https://github.com/zhangrj/Snake_Game" target="_blank">phaser|Snake_Game</a><br><a href="https://blog.csdn.net/jessicaiu/article/details/83057619" target="_blank">使用Phaser开发你的第一个H5游戏</a><br><a href="https://gitee.com/xwintop/wxGameRank" target="_blank">微信小游戏子域排行榜系统cocos示例程序</a></p>
+<p>完整的上线版微信小游戏（大鸟撞小鸟）示例程序源码<br><a href="https://gitee.com/xwintop/watchout" target="_blank">gitee地址</a><br><a href="https://github.com/864381832/watchout" target="_blank">GitHub地址</a></p>
+<p><a href="http://programmer.ischoolbar.com/index.php/article/article/id/124.html" target="_blank">收费|450多款H5小游戏源码之微信H5小游戏源码大集合持续更新中</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/h5game/">h5game</a></li></ul>
     </div>
 
       
@@ -922,7 +910,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/59/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/58/">58</a><a class="page-number" href="/page/59/">59</a><span class="page-number current">60</span><a class="page-number" href="/page/61/">61</a><a class="page-number" href="/page/62/">62</a><span class="space">&hellip;</span><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/61/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/59/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/58/">58</a><a class="page-number" href="/page/59/">59</a><span class="page-number current">60</span><a class="page-number" href="/page/61/">61</a><a class="page-number" href="/page/62/">62</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/61/">Next &raquo;</a>
     </nav>
   
 

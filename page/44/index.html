@@ -280,11 +280,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-/articles/2019/03/15/1552623369000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/03/15/1552623350000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623369000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:09.000Z" itemprop="datePublished">2019-03-15</time>
+      <a  href="/2019/03/15/articles/2019/03/15/1552623350000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:50.000Z" itemprop="datePublished">2019-03-15</time>
 </a>
 
     </div>
@@ -298,7 +298,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623369000.html/">[js] 插件</a>
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623350000.html/">[springboot] redis单机+集群+哨兵</a>
     </h1>
   
 
@@ -309,267 +309,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="http://www.ijquery.cn/" target="_blank">爱上JQuery</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623368000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623368000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:08.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623368000.html/">[mysql] 查看执行sql语句的记录日志</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>mysql查看执行sql语句的记录日志</p>
-<p>1、使用processlist<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 但是有个弊端，就是只能查看正在执行的sql语句，对应历史记录，查看不到。好处是不用设置，不会保存。</span><br><span class="line">use information_schema;</span><br><span class="line">show processlist;</span><br><span class="line">-- 或者：</span><br><span class="line">select * from information_schema.`PROCESSLIST` where info is not null;</span><br></pre></td></tr></table></figure></p>
-<p>2、开启日志模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 日志开启</span><br><span class="line">SET GLOBAL log_output = &apos;TABLE&apos;;SET GLOBAL general_log = &apos;ON&apos;;</span><br><span class="line">-- 日志关闭</span><br><span class="line">SET GLOBAL log_output = &apos;TABLE&apos;; SET GLOBAL general_log = &apos;OFF&apos;;</span><br></pre></td></tr></table></figure></p>
-<p>3、查询<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT * from mysql.general_log ORDER BY event_time DESC;</span><br><span class="line">-- date_format(event_time, &apos;%Y-%m-%d %H:%i:%s&apos;)</span><br><span class="line">select * from sys.syslogins</span><br></pre></td></tr></table></figure></p>
-<p>4、清空表（delete对于这个表，不允许使用，只能用truncate）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate table mysql.general_log;</span><br></pre></td></tr></table></figure></p>
-<p>5、MySQL中查看每个ip的连接数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select SUBSTRING_INDEX(host,&apos;:&apos;,1) as ip , count(*) from information_schema.processlist group by ip;</span><br></pre></td></tr></table></figure></p>
-<p>6、MySQL查看所有连接的客户端ip<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT substring_index(host, &apos;:&apos;,1) AS host_name,state,count(*) FROM information_schema.processlist GROUP BY state,host_name;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623367000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623367000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:07.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623367000.html/">[mysql] 触发器</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/CraryPrimitiveMan/p/4206942.html" target="_blank">MySQL的学习 - 触发器</a><br><a href="https://www.cnblogs.com/zhangzhongxian/p/7070277.html" target="_blank">MySQL触发器更新和插入操作</a></p>
-<p><a href="http://www.cnblogs.com/zzwlovegfj/archive/2012/07/04/2576989.html" target="_blank">mysql之触发器trigger|包含示例</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">触发器创建语法四要素：</span><br><span class="line">1.监视地点(table) </span><br><span class="line">2.监视事件(insert/update/delete) </span><br><span class="line">3.触发时间(after/before) </span><br><span class="line">4.触发事件(insert/update/delete)</span><br></pre></td></tr></table></figure></p>
-<p>句型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TRIGGER &lt;trigger_name&gt;</span><br><span class="line">&lt;after/before&gt; &lt;insert/update/delete&gt; ON &lt;tbl_name&gt; FOR EACH ROW</span><br><span class="line">begin</span><br><span class="line">  &lt;trigger_stmt&gt;</span><br><span class="line">end;</span><br></pre></td></tr></table></figure></p>
-<p>一个完整的创建触发器示例<br>创建site_chart_log表格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">create table site_chart_log(</span><br><span class="line">	id int(11) primary key auto_increment,</span><br><span class="line">	site_id int(11),</span><br><span class="line">	two int(11),</span><br><span class="line">	four int(11),</span><br><span class="line">	six int(11),</span><br><span class="line">	eight int(11),</span><br><span class="line">	ten int(11),</span><br><span class="line">	twelve int(11),</span><br><span class="line">	fourteen int(11),</span><br><span class="line">	eighteen int(11),</span><br><span class="line">	twenty int(11),</span><br><span class="line">	twenty2 int(11),</span><br><span class="line">	twenty4 int(11)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DELIMITER $</span><br><span class="line">create trigger tri_site_chart_log after update</span><br><span class="line">on student for each row</span><br><span class="line">begin</span><br><span class="line">declare c int;</span><br><span class="line">set c = (select stuCount from class where classID=new.classID);</span><br><span class="line">update class set stuCount = c + 1 where classID = new.classID;</span><br><span class="line">end$</span><br><span class="line">DELIMITER ;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create trigger upd_tri_site_chart_log</span><br><span class="line">after insert on StuCost for each row </span><br><span class="line">begin </span><br><span class="line"> update StuCostbyHour set HourCost = HourCost + new.Cost </span><br><span class="line"> where (TimeJD = hour(new.RecordTime) + 1) and date_format(new.RecordTime, &apos;%Y-%m-%d&apos;) = date_format(RecordTime, &apos;%Y-%m-%d&apos;); </span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">2.存储引擎与其特点</span><br><span class="line"></span><br><span class="line">特点                Myisam                    InnoDB</span><br><span class="line"></span><br><span class="line">批量插入的速度      高                           低</span><br><span class="line"></span><br><span class="line">事务安全            不支持                       支持</span><br><span class="line"></span><br><span class="line">全文索引            支持                          支持(5.5或以上版本)</span><br><span class="line"></span><br><span class="line">锁机制               表锁                           行锁</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623366000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623366000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:06.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623366000.html/">[python] python代码</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/miqi1992/python_code" target="_blank">python_code</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623364000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623364000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:04.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623364000.html/">[springboot] elaticsearch</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/anxpp/spring-boot-elasticsearch" target="_blank">spring-boot-elasticsearch</a></p>
+        <p><a href="https://github.com/whvcse/JwtPermission" target="_blank">基于jjwt实现的一套用于前后端分离项目的权限控制框架，用于实现基于token验证的Web权限框架</a></p>
+<p><a href="https://www.jianshu.com/p/ca4cebefd1cc" target="_blank">Spring boot 2.0 整合 Security JWT 前后分离 认证授权</a><br><a href="https://gitee.com/whvse/EasyWeb" target="_blank">EasyWeb基于OAuth2.0的前后端分离开发平台</a></p>
 
       
     </div>
@@ -602,11 +343,11 @@
 
 
   
-    <article id="post-/articles/2019/03/15/1552623363000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/03/15/1552623349000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623363000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:03.000Z" itemprop="datePublished">2019-03-15</time>
+      <a  href="/2019/03/15/articles/2019/03/15/1552623349000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:49.000Z" itemprop="datePublished">2019-03-15</time>
 </a>
 
     </div>
@@ -620,7 +361,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623363000.html/">[springboot] idea+lombok+@Slf4j</a>
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623349000.html/">[springboot] email、logback+lombok插件</a>
     </h1>
   
 
@@ -631,8 +372,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://blog.csdn.net/xue632777974/article/details/80437452" target="_blank">lombok @Slf4j注解</a><br><a href="https://github.com/mplushnikov/lombok-intellij-plugin/releases" target="_blank">idea lombok插件</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@Data：注解在类上；提供类所有属性的 getting 和 setting 方法，此外还提供了equals、canEqual、hashCode、toString 方法 </span><br><span class="line">@SneakyThrows：无需在签名处显式抛出异常</span><br><span class="line">@Log4j：注解在类上；为类提供一个 属性名为log 的 log4j 日志对像 </span><br><span class="line">@Slf4j: 同上 </span><br><span class="line">@NoArgsConstructor：注解在类上；为类提供一个无参的构造方法 </span><br><span class="line">@AllArgsConstructor：注解在类上；为类提供一个全参的构造方法</span><br><span class="line"></span><br><span class="line">@Setter：注解在属性上；为属性提供 setting 方法</span><br><span class="line">@Getter：注解在属性上；为属性提供 getting 方法</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.cnblogs.com/30go/p/8468981.html" target="_blank">eclipse lombok</a><br><a href="https://blog.csdn.net/qq_20698983/article/details/83962002" target="_blank">Spring boot学习之集成logback和lombok(四)</a><br><a href="https://github.com/xiaotian180/spring-boot-parent/tree/master/3.spring-boot-logback-lombok" target="_blank">github|spring-boot-logback-lombok</a></p>
+        <p><a href="https://github.com/xiaotian180/spring-boot-parent" target="_blank">spring-boot-parent</a></p>
+<p><a href="https://blog.csdn.net/qq_20698983/article/details/83421020" target="_blank">Spring Boot 使用 QQ邮箱发邮件</a><br><a href="https://blog.csdn.net/zyw_java/article/details/81635375" target="_blank">SpringBoot 2.x 集成QQ邮箱、网易系邮箱、Gmail邮箱发送邮件</a><br><a href="https://gitee.com/javen205/SpringBoot_Guide.git" target="_blank">github</a></p>
 
       
     </div>
@@ -665,11 +406,11 @@
 
 
   
-    <article id="post-/articles/2019/03/15/1552623362000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/03/15/1552623348000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623362000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:02.000Z" itemprop="datePublished">2019-03-15</time>
+      <a  href="/2019/03/15/articles/2019/03/15/1552623348000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:48.000Z" itemprop="datePublished">2019-03-15</time>
 </a>
 
     </div>
@@ -683,7 +424,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623362000.html/">[springboot] jar打包发布</a>
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623348000.html/">[springboot] 在linux下启动失败如何关闭</a>
     </h1>
   
 
@@ -694,7 +435,72 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mvn clean install -Dmaven.test.skip=true</span><br><span class="line">screen -ls</span><br><span class="line">#创建 </span><br><span class="line">screen -S &lt;名字&gt;</span><br><span class="line">#切换</span><br><span class="line">screen -r &lt;名字&gt;</span><br><span class="line">#退出</span><br><span class="line">Ctrl + A 松开Ctrl 按 D</span><br><span class="line">#查看进程</span><br><span class="line">netstat -anp | grep &lt;服务端口&gt;</span><br><span class="line">kill &lt;进程id&gt;</span><br><span class="line">java -Xms512m -Xmx512m -jar &lt;jar包名&gt; &amp;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fg</span><br><span class="line">ctrl + c</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623347000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623347000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:47.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623347000.html/">[springboot] 在service层获取session和request</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/javaofliang/article/details/52237903" target="_blank">spring在service层获取session和request</a></p>
+<p>首先要在web.xml增加如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;listener&gt;</span><br><span class="line">    &lt;listener-class&gt;org.springframework.web.context.request.RequestContextListener&lt;/listener-class&gt;</span><br><span class="line">&lt;/listener&gt;</span><br></pre></td></tr></table></figure></p>
+<p>service层调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Autowired  </span><br><span class="line">private HttpSession session;  </span><br><span class="line"></span><br><span class="line">@Autowired  </span><br><span class="line">private HttpServletRequest request; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * @return</span><br><span class="line"> * @Description：获得当前session</span><br><span class="line"> * @return: HttpSession</span><br><span class="line"> */</span><br><span class="line">public static HttpSession getSession() &#123;</span><br><span class="line">    HttpSession session = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest().getSession();// 获得当前session</span><br><span class="line">    return session;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="http://www.zuidaima.com/question/3705058816248832.htm" target="_blank">springboot配置RequestContextListener</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	@Bean</span><br><span class="line">	public RequestContextListener requestContextListener()&#123;</span><br><span class="line">	    return new RequestContextListener();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//配置 RequestContextListener</span><br><span class="line">	@Bean</span><br><span class="line">	public ServletListenerRegistrationBean&lt;RequestContextListener&gt; listenerRegistration3() &#123;</span><br><span class="line">		return new ServletListenerRegistrationBean&lt;&gt;(new RequestContextListener());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -727,11 +533,11 @@
 
 
   
-    <article id="post-/articles/2019/03/15/1552623361000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/03/15/1552623346000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623361000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:01.000Z" itemprop="datePublished">2019-03-15</time>
+      <a  href="/2019/03/15/articles/2019/03/15/1552623346000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:46.000Z" itemprop="datePublished">2019-03-15</time>
 </a>
 
     </div>
@@ -745,7 +551,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623361000.html/">[springboot] kaptcha验证码</a>
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623346000.html/">[springboot] 在线视频播放</a>
     </h1>
   
 
@@ -756,7 +562,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://blog.csdn.net/u014104286/article/details/70515004" target="_blank">springboot 集成kaptcha验证码简单实例</a><br><a href="https://blog.csdn.net/chenjin_chenjin/article/details/79149100" target="_blank">spring boot下验证码的实现</a><br><a href="https://github.com/larger5/Kaptcha.git" target="_blank">Kaptcha</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;com.github.penggle&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;kaptcha&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;2.3.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+        <p><a href="https://github.com/zhiyiTec/OnlineVideo" target="_blank">使用分离的前端+springBoot框架来实现在线视频播放功能</a><br><a href="https://github.com/joutaojian/sitvideo" target="_blank">使用SSM搭建的在线视频播放项目(包括前后台)</a><br><a href="https://github.com/mjquestc/SSMVedio" target="_blank">ssm+jsp</a><br><a href="https://github.com/iamzken/simple-video-website" target="_blank">java写的简单的在线视频播放网站</a></p>
 
       
     </div>
@@ -789,11 +595,11 @@
 
 
   
-    <article id="post-/articles/2019/03/15/1552623360000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/03/15/1552623345000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623360000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:00.000Z" itemprop="datePublished">2019-03-15</time>
+      <a  href="/2019/03/15/articles/2019/03/15/1552623345000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:45.000Z" itemprop="datePublished">2019-03-15</time>
 </a>
 
     </div>
@@ -807,7 +613,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623360000.html/">[springboot] layui+mybatis+shiro+mysql</a>
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623345000.html/">[springboot] 在线音乐播放</a>
     </h1>
   
 
@@ -818,7 +624,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://github.com/sunqibao/springboot-layui-mybatis-shiro-mysql" target="_blank">layui+mybatis+shiro+mysql</a></p>
+        <p><a href="https://github.com/sunqibao/-springboot-" target="_blank">在线音乐播放</a></p>
 
       
     </div>
@@ -851,11 +657,11 @@
 
 
   
-    <article id="post-/articles/2019/03/15/1552623359000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/03/15/1552623344000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623359000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:59.000Z" itemprop="datePublished">2019-03-15</time>
+      <a  href="/2019/03/15/articles/2019/03/15/1552623344000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:44.000Z" itemprop="datePublished">2019-03-15</time>
 </a>
 
     </div>
@@ -869,7 +675,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623359000.html/">[springboot] openoffice实现在线预览功能</a>
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623344000.html/">[springcloud] 消息总线SpringCloudBus</a>
     </h1>
   
 
@@ -880,7 +686,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://blog.csdn.net/ccc1234_/article/details/79052809" target="_blank">springboot搭建文件预览解决方案，支持目前主流格式office文件，txt文件，png，jpg等图片以及压缩文件的在线预览功能</a><br><a href="https://blog.csdn.net/weixin_40162216/article/details/82387621" target="_blank">springboot+openoffice实现在线预览功能</a><br><a href="https://github.com/Chenchicheng/file_viewer" target="_blank">github file_viewer</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用于文件的预览。支持文件类型：文本文件 、压缩文件 、office文件、pdf文件等</span><br></pre></td></tr></table></figure></p>
+        <p><a href="https://www.jianshu.com/p/70b0e95b0ec3" target="_blank">消息总线SpringCloudBus</a></p>
 
       
     </div>
@@ -891,7 +697,195 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springcloud/">springcloud</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623343000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623343000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:43.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623343000.html/">[springmvc] SpringMVC+Mybatis+Shiro+redis</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/baichengzhou/SpringMVC-Mybatis-Shiro-redis-0.2" target="_blank">SpringMVC-Mybatis-Shiro-redis</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springmvc/">springmvc</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623342000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623342000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:42.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623342000.html/">[前端] WEB技术分享博客</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.helloweba.net/" target="_blank">WEB技术分享博客</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623341000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623341000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:41.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623341000.html/">[前端] 省市区联动</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/olivianate/p/5330811.html" target="_blank">基于jQuery+JSON省市区联动效果jquery.cityselect.js</a></p>
+<p><a href="http://www.ijquery.cn/demo/cityselect/cityselect.zip" target="_blank">cityselect.zip</a></p>
+<p><a href="http://www.ijquery.cn/js/cityselect/city.min.js" target="_blank">city.mini.js</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;city&quot;&gt;</span><br><span class="line">    &lt;select class=&quot;prov&quot;&gt;&lt;/select&gt;</span><br><span class="line">    &lt;select class=&quot;city&quot; disabled=&quot;disabled&quot;&gt;&lt;/select&gt;</span><br><span class="line">    &lt;select class=&quot;dist&quot; disabled=&quot;disabled&quot;&gt;&lt;/select&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.jq22.com/jquery/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;--&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.ijquery.cn/demo/cityselect/js/jquery.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.ijquery.cn/demo/cityselect/js/jquery.cityselect.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    $(function()&#123;</span><br><span class="line">        $(&quot;#city&quot;).citySelect(&#123;</span><br><span class="line">            prov:&quot;湖南&quot;, //省份</span><br><span class="line">            city:&quot;长沙&quot;, //城市</span><br><span class="line">            dist:&quot;岳麓区&quot; //区县</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
     </div>
 
       
@@ -915,7 +909,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/43/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/">42</a><a class="page-number" href="/page/43/">43</a><span class="page-number current">44</span><a class="page-number" href="/page/45/">45</a><a class="page-number" href="/page/46/">46</a><span class="space">&hellip;</span><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/45/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/43/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/42/">42</a><a class="page-number" href="/page/43/">43</a><span class="page-number current">44</span><a class="page-number" href="/page/45/">45</a><a class="page-number" href="/page/46/">46</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/45/">Next &raquo;</a>
     </nav>
   
 

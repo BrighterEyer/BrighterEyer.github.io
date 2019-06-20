@@ -280,11 +280,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-/articles/2019/03/15/1552623347000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/03/10/1552212052000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623347000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:47.000Z" itemprop="datePublished">2019-03-15</time>
+      <a  href="/2019/03/10/articles/2019/03/10/1552212052000.html/" class="article-date">
+      <time datetime="2019-03-10T10:00:52.000Z" itemprop="datePublished">2019-03-10</time>
 </a>
 
     </div>
@@ -298,7 +298,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623347000.html/">[springboot] 在service层获取session和request</a>
+      <a  class="article-title" href="/2019/03/10/articles/2019/03/10/1552212052000.html/">[小程序] 小程序借鉴</a>
     </h1>
   
 
@@ -309,509 +309,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://blog.csdn.net/javaofliang/article/details/52237903" target="_blank">spring在service层获取session和request</a></p>
-<p>首先要在web.xml增加如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;listener&gt;</span><br><span class="line">    &lt;listener-class&gt;org.springframework.web.context.request.RequestContextListener&lt;/listener-class&gt;</span><br><span class="line">&lt;/listener&gt;</span><br></pre></td></tr></table></figure></p>
-<p>service层调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Autowired  </span><br><span class="line">private HttpSession session;  </span><br><span class="line"></span><br><span class="line">@Autowired  </span><br><span class="line">private HttpServletRequest request; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * @return</span><br><span class="line"> * @Description：获得当前session</span><br><span class="line"> * @return: HttpSession</span><br><span class="line"> */</span><br><span class="line">public static HttpSession getSession() &#123;</span><br><span class="line">    HttpSession session = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest().getSession();// 获得当前session</span><br><span class="line">    return session;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><a href="http://www.zuidaima.com/question/3705058816248832.htm" target="_blank">springboot配置RequestContextListener</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	@Bean</span><br><span class="line">	public RequestContextListener requestContextListener()&#123;</span><br><span class="line">	    return new RequestContextListener();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//配置 RequestContextListener</span><br><span class="line">	@Bean</span><br><span class="line">	public ServletListenerRegistrationBean&lt;RequestContextListener&gt; listenerRegistration3() &#123;</span><br><span class="line">		return new ServletListenerRegistrationBean&lt;&gt;(new RequestContextListener());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623346000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623346000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:46.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623346000.html/">[springboot] 在线视频播放</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/zhiyiTec/OnlineVideo" target="_blank">使用分离的前端+springBoot框架来实现在线视频播放功能</a><br><a href="https://github.com/joutaojian/sitvideo" target="_blank">使用SSM搭建的在线视频播放项目(包括前后台)</a><br><a href="https://github.com/mjquestc/SSMVedio" target="_blank">ssm+jsp</a><br><a href="https://github.com/iamzken/simple-video-website" target="_blank">java写的简单的在线视频播放网站</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623345000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623345000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:45.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623345000.html/">[springboot] 在线音乐播放</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/sunqibao/-springboot-" target="_blank">在线音乐播放</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623344000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623344000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:44.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623344000.html/">[springcloud] 消息总线SpringCloudBus</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.jianshu.com/p/70b0e95b0ec3" target="_blank">消息总线SpringCloudBus</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springcloud/">springcloud</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623343000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623343000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:43.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623343000.html/">[springmvc] SpringMVC+Mybatis+Shiro+redis</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/baichengzhou/SpringMVC-Mybatis-Shiro-redis-0.2" target="_blank">SpringMVC-Mybatis-Shiro-redis</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springmvc/">springmvc</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623342000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623342000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:42.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623342000.html/">[前端] WEB技术分享博客</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.helloweba.net/" target="_blank">WEB技术分享博客</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623341000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623341000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:41.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623341000.html/">[前端] 省市区联动</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/olivianate/p/5330811.html" target="_blank">基于jQuery+JSON省市区联动效果jquery.cityselect.js</a></p>
-<p><a href="http://www.ijquery.cn/demo/cityselect/cityselect.zip" target="_blank">cityselect.zip</a></p>
-<p><a href="http://www.ijquery.cn/js/cityselect/city.min.js" target="_blank">city.mini.js</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;city&quot;&gt;</span><br><span class="line">    &lt;select class=&quot;prov&quot;&gt;&lt;/select&gt;</span><br><span class="line">    &lt;select class=&quot;city&quot; disabled=&quot;disabled&quot;&gt;&lt;/select&gt;</span><br><span class="line">    &lt;select class=&quot;dist&quot; disabled=&quot;disabled&quot;&gt;&lt;/select&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.jq22.com/jquery/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;--&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.ijquery.cn/demo/cityselect/js/jquery.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.ijquery.cn/demo/cityselect/js/jquery.cityselect.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    $(function()&#123;</span><br><span class="line">        $(&quot;#city&quot;).citySelect(&#123;</span><br><span class="line">            prov:&quot;湖南&quot;, //省份</span><br><span class="line">            city:&quot;长沙&quot;, //城市</span><br><span class="line">            dist:&quot;岳麓区&quot; //区县</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623340000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623340000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:40.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623340000.html/">[微信] 扫码+java实现微信支付</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/search?l=Java&q=%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E6%94%AF%E4%BB%98&type=Repositories" target="_blank">github搜索| java微信扫码支付</a><br><a href="https://github.com/szhgoldeneye/WechatPay" target="_blank">github | WechatPay</a><br><a href="https://github.com/softprog/spring-boot-pay" target="_blank">github | 利用 srping boot实现的支付宝快捷支付，wap支付和微信扫码支付，公众号支付</a><br><a href="https://blog.csdn.net/qq_37345604/article/details/79742324" target="_blank">扫码支付-java实现微信支付后端篇</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信/">微信</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623339000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623339000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:39.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623339000.html/">[小程序] 省市区联动</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/chenjinxinlove/citySelect" target="_blank">省市区联动</a></p>
+        <p><a href="https://github.com/SuperKieran/weapp-artand/tree/master/pages/login" target="_blank">登陆</a><br><a href="https://github.com/SuperKieran/weapp-artand/tree/master/pages/register" target="_blank">注册</a><br><a href="https://github.com/SuperKieran/weapp-artand/tree/master/pages/register" target="_blank">二维码</a><br><a href="https://github.com/vincentSea/wechat-cnode" target="_blank">社区评论列表</a><br><a href="https://github.com/yesifeng/wechat-weapp-movie" target="_blank">搜索</a><br><a href="https://github.com/lanfeng1993/LoadDataDemo" target="_blank">分页加载</a><br><a href="https://gitee.com/zhongyoucong/order-project" target="_blank">餐厅</a></p>
 
       
     </div>
@@ -844,11 +342,11 @@
 
 
   
-    <article id="post-/articles/2019/03/15/1552623338000.html" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-/articles/2019/03/10/1552212051000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623338000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:38.000Z" itemprop="datePublished">2019-03-15</time>
+      <a  href="/2019/03/10/articles/2019/03/10/1552212051000.html/" class="article-date">
+      <time datetime="2019-03-10T10:00:51.000Z" itemprop="datePublished">2019-03-10</time>
 </a>
 
     </div>
@@ -862,7 +360,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623338000.html/">[小程序] 微信小程序导航项目</a>
+      <a  class="article-title" href="/2019/03/10/articles/2019/03/10/1552212051000.html/">[小程序] 源码大全</a>
     </h1>
   
 
@@ -873,7 +371,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://github.com/giscafer/wechat-weapp-mapdemo" target="_blank">wechat-weapp-mapdemo</a></p>
+        <p><a href="https://www.jianshu.com/p/8685a24ab008" target="_blank">简书|微信小程序开源项目整理(github)</a><br><a href="https://www.cnblogs.com/tuyile006/p/6268961.html" target="_blank">cnblogs|微信小程序实例源码大全</a><br><a href="https://www.jianshu.com/p/e49a366030bc" target="_blank">简书|微信小程序开源项目库集合</a></p>
+<blockquote>
+<p>github小程序常用组件</p>
+</blockquote>
+<p><a href="https://github.com/justjavac/awesome-wechat-weapp" target="_blank">awesome-wechat-weapp</a><br><a href="https://github.com/opendigg/awesome-github-wechat-weapp" target="_blank">awesome-github-wechat-weapp</a></p>
 
       
     </div>
@@ -885,6 +387,503 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/10/1552212049000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/10/articles/2019/03/10/1552212049000.html/" class="article-date">
+      <time datetime="2019-03-10T10:00:49.000Z" itemprop="datePublished">2019-03-10</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/10/articles/2019/03/10/1552212049000.html/">[小程序] fashop小程序商城+docker-compose+php后台</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/mojisrc/wechat-mini-shop" target="_blank">wechat-mini-shop</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/09/1552103307000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/09/articles/2019/03/09/1552103307000.html/" class="article-date">
+      <time datetime="2019-03-09T03:48:27.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/09/articles/2019/03/09/1552103307000.html/">[blog] 大前端</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="http://jeffzhong.space/sites/demo/index.html" target="_blank">前端特效</a><br><a href="https://github.com/edwardzhong?tab=repositories" target="_blank">github|前端特效</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/09/1552103306000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/09/articles/2019/03/09/1552103306000.html/" class="article-date">
+      <time datetime="2019-03-09T03:48:26.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/09/articles/2019/03/09/1552103306000.html/">[h5] demos</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/xbw12138/H5_Theme_Collect" target="_blank">h5+bootstrap demos</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/h5/">h5</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/09/1552103305000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/09/articles/2019/03/09/1552103305000.html/" class="article-date">
+      <time datetime="2019-03-09T03:48:25.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/09/articles/2019/03/09/1552103305000.html/">[css3] demos</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/kingheshan/tmooc" target="_blank">css3实战教程素材</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/09/1552103304000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/09/articles/2019/03/09/1552103304000.html/" class="article-date">
+      <time datetime="2019-03-09T03:48:24.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/09/articles/2019/03/09/1552103304000.html/">[vue] demos</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/jgchenu/vue-shopcar" target="_blank">慕课网购物车 vue.js入门教程源码+素材</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/09/1552103303000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/09/articles/2019/03/09/1552103303000.html/" class="article-date">
+      <time datetime="2019-03-09T03:48:23.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/09/articles/2019/03/09/1552103303000.html/">[架构] 后端结构师技术图谱</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/xingshaocheng/architect-awesome/blob/master/README.md" target="_blank">后端架构师技术图谱</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/09/1552103302000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/09/articles/2019/03/09/1552103302000.html/" class="article-date">
+      <time datetime="2019-03-09T03:48:22.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/09/articles/2019/03/09/1552103302000.html/">[素材] 素材</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/search?utf8=%E2%9C%93&q=%E7%B4%A0%E6%9D%90&ref=simplesearch" target="_blank">github素材</a><br><a href="https://www.easyicon.net" target="_blank" rel="noopener">easyicon</a><br><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">github登陆|阿里iconfont</a><br><a href="http://www.lanrentuku.com/" target="_blank" rel="noopener">懒人图库</a><br><a href="https://github.com/ppt-tips/awesome-ppt" target="_blank" rel="noopener">github|awesome-ppt</a><br><a href="https://icon.52112.com/" target="_blank" rel="noopener">寻图标|收费</a><br><a href="http://3png.com/" target="_blank" rel="noopener">qq微信登陆|3png三元素</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/素材/">素材</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/09/1552100736000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/09/articles/2019/03/09/1552100736000.html/" class="article-date">
+      <time datetime="2019-03-09T03:05:36.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/09/articles/2019/03/09/1552100736000.html/">[mysql] 时间查询</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/a453169345/article/details/82048654" target="_blank">以当前时间为基准的查询</a><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 查询当前日期</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">CURDATE</span>(),<span class="built_in">INTERVAL</span> <span class="number">0</span> <span class="keyword">DAY</span>) ;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">NOW</span>();</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">CURDATE</span>();</span><br><span class="line"><span class="comment">-- 如需格式化可用DATE_FORMAT函数</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_FORMAT</span>(<span class="keyword">NOW</span>(),<span class="string">'%Y-%m-%d %h:%i:%s'</span>);</span><br><span class="line"><span class="comment">-- 查询昨天</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">CURDATE</span>(),<span class="built_in">INTERVAL</span> <span class="number">1</span> <span class="keyword">DAY</span>);</span><br><span class="line"><span class="comment">-- 查询明天</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">CURDATE</span>(),<span class="built_in">INTERVAL</span> <span class="number">-1</span> <span class="keyword">DAY</span>) ;</span><br><span class="line"><span class="comment">-- 查询前一个小时</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">NOW</span>(),<span class="built_in">INTERVAL</span> <span class="number">1</span> <span class="keyword">HOUR</span>) ;</span><br><span class="line"><span class="comment">-- 查询后一个小时</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">NOW</span>(),<span class="built_in">INTERVAL</span> <span class="number">-1</span> <span class="keyword">HOUR</span>) ;</span><br><span class="line"><span class="comment">-- 查询前一分钟</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">NOW</span>(),<span class="built_in">INTERVAL</span> <span class="number">1</span> <span class="keyword">MINUTE</span>) ;</span><br><span class="line"><span class="comment">-- 查询前一年</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">NOW</span>(),<span class="built_in">INTERVAL</span> <span class="number">1</span> <span class="keyword">YEAR</span>) ;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/qq_34902684/article/details/82989844" target="_blank">mysql常用时间列表的查询（七天内、本月、本周、某天）</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
     </div>
 
       
@@ -908,7 +907,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/45/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/">44</a><a class="page-number" href="/page/45/">45</a><span class="page-number current">46</span><a class="page-number" href="/page/47/">47</a><a class="page-number" href="/page/48/">48</a><span class="space">&hellip;</span><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/47/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/45/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/">44</a><a class="page-number" href="/page/45/">45</a><span class="page-number current">46</span><a class="page-number" href="/page/47/">47</a><a class="page-number" href="/page/48/">48</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/47/">Next &raquo;</a>
     </nav>
   
 
