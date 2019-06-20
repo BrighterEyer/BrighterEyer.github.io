@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brightereyer.xyz/"/>
-  <updated>2019-05-05T00:31:03.000Z</updated>
+  <updated>2019-06-20T11:00:01.000Z</updated>
   <id>http://brightereyer.xyz/</id>
   
   <author>
@@ -17,19 +17,321 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[springboot] 专栏</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557016263000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557016263000.html/</id>
-    <published>2019-05-05T00:31:03.000Z</published>
-    <updated>2019-05-05T00:31:03.000Z</updated>
+    <title>[工具] vscode+插件</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1561028401000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1561028401000.html/</id>
+    <published>2019-06-20T11:00:01.000Z</published>
+    <updated>2019-06-20T11:00:01.000Z</updated>
     
-    <content type="html"><![CDATA[<p>blog Moshow郑锴<br><a href="https://github.com/moshowgame" target="_blank">github|moshowgame</a><br><a href="https://blog.csdn.net/moshowgame/article/details/83024867" target="_blank">SpringBoot2+WebSocket之聊天应用实战(优化版本)</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="" target="_blank"></a><br><a href="https://blog.csdn.net/qinze5857/article/details/86585232" target="_blank">vscode——详细总结篇、简单易懂debug</a><br><a href="https://segmentfault.com/a/1190000006697219" target="_blank">vscode 插件推荐 - 献给所有前端工程师（2018.4.29更新）</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;blog Moshow郑锴&lt;br&gt;&lt;a href=&quot;https://github.com/moshowgame&quot; target=&quot;_blank&quot;&gt;github|moshowgame&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/moshowga
+        &lt;p&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/qinze5857/article/details/86585232&quot; target=&quot;_blank&quot;&gt;vscode——详细总结篇、简单易懂d
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="http://brightereyer.xyz/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[react-native] react-native转小程序</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991857000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991857000.html/</id>
+    <published>2019-06-20T00:50:57.000Z</published>
+    <updated>2019-06-20T00:50:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.ctolib.com/areslabs-alita.html" target="_blank">react-native转小程序</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @areslabs/alita</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.ctolib.com/areslabs-alita.html&quot; target=&quot;_blank&quot;&gt;react-native转小程序&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[webpack] demos</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991856000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991856000.html/</id>
+    <published>2019-06-20T00:50:56.000Z</published>
+    <updated>2019-06-20T00:50:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/ruanyf/webpack-demos" target="_blank">webpack-demos</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://github.com/ruanyf/webpack-demos&quot; target=&quot;_blank&quot;&gt;webpack-demos&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="webpack" scheme="http://brightereyer.xyz/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[react-native] react-native-navigation步步深入之配置篇</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991855000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991855000.html/</id>
+    <published>2019-06-20T00:50:55.000Z</published>
+    <updated>2019-06-20T00:50:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/854c4a15b983" target="_blank">react-native-navigation步步深入之导航篇</a><br><a href="https://www.jianshu.com/p/3e3382a3c189" target="_blank">react-native-navigation步步深入之配置篇</a><br><a href="https://www.jianshu.com/p/f1e48336d1f4" target="_blank">React Native之react-navigation总结</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/854c4a15b983&quot; target=&quot;_blank&quot;&gt;react-native-navigation步步深入之导航篇&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianshu.com/
+      
+    
+    </summary>
+    
+    
+      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[react-native] 修改代码刷新后不能更新的问题</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991854000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991854000.html/</id>
+    <published>2019-06-20T00:50:54.000Z</published>
+    <updated>2019-06-20T00:50:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/89646dc10b15" target="_blank">react-native 修改代码刷新后不能更新的问题</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">watchman 会监听项目目录下的.lock文件, 所有解决办法如下:</span><br><span class="line"></span><br><span class="line">找出所有的.lock文件</span><br><span class="line">find -name &quot;*.lock&quot; .</span><br><span class="line">删除之</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/89646dc10b15&quot; target=&quot;_blank&quot;&gt;react-native 修改代码刷新后不能更新的问题&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl
+      
+    
+    </summary>
+    
+    
+      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[react-native] 微信分享</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991853000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991853000.html/</id>
+    <published>2019-06-20T00:50:53.000Z</published>
+    <updated>2019-06-20T00:50:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/1e52e37f5a29" target="_blank">微信分享</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/1e52e37f5a29&quot; target=&quot;_blank&quot;&gt;微信分享&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[react-native] react-native热更新全方位讲解</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991852000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991852000.html/</id>
+    <published>2019-06-20T00:50:52.000Z</published>
+    <updated>2019-06-20T00:50:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="" target="_blank"></a><br><a href="https://www.jianshu.com/p/8e08c7661275" target="_blank">react-native热更新全方位讲解</a><br><a href="https://blog.csdn.net/dounine/article/details/78529106" target="_blank">3分钟完成React-Native热更新</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/dounine/dounineApp</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">1. 创建React-Native项目</span><br><span class="line">react-native init dounineApp</span><br><span class="line"></span><br><span class="line">2. 安装code-push-cli</span><br><span class="line">npm install -g code-push-cli</span><br><span class="line"></span><br><span class="line">3. 注册code-push帐号</span><br><span class="line">code-push register</span><br><span class="line">Please login to Mobile Center in the browser window we&apos;ve just opened.</span><br><span class="line"></span><br><span class="line">Enter your token from the browser: </span><br><span class="line">#会弹出一个浏览器,让你注册,可以使用github帐号对其进行授权,授权成功会给一串Token,点击复制，在控制进行粘贴回车(或者使用code-push login命令)。</span><br><span class="line"></span><br><span class="line">Enter your token from the browser:  b0c9ba1f91dd232xxxxxxxxxxxxxxxxx</span><br><span class="line">#成功提示如下方</span><br><span class="line">Successfully logged-in. Your session file was written to /Users/huanghuanlai/.code-push.config. You can run the code-push logout command at any time to delete this file and terminate your session.</span><br><span class="line"></span><br><span class="line">4. 在code-push添加一个ios的app</span><br><span class="line"></span><br><span class="line">5. 继续在code-push添加一个android的app</span><br><span class="line"></span><br><span class="line">6. 在项目根目录添加react-native-code-push</span><br><span class="line">npm install react-native-code-push --save</span><br><span class="line">#或者</span><br><span class="line">yarn add react-native-code-push</span><br><span class="line"></span><br><span class="line">7. link react-native-code-push</span><br><span class="line"></span><br><span class="line">8. 在react-native的App.js文件添加自动更新代码</span><br><span class="line"></span><br><span class="line">9. 运行项目在ios模拟器上</span><br><span class="line">react-native run-ios</span><br><span class="line"></span><br><span class="line">10. 发布一个ios新版本</span><br><span class="line"></span><br><span class="line">11. 重新Load刷新应用</span><br><span class="line"></span><br><span class="line">12. 安卓发布，与上面9~11步骤是一样的，命令改成Android对应的,以下命令结果简化</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianshu.com/p/8e08c7661275&quot; target=&quot;_blank&quot;&gt;react-native热更新全方位讲解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[react-native] 从零搭建App</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991851000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991851000.html/</id>
+    <published>2019-06-20T00:50:51.000Z</published>
+    <updated>2019-06-20T00:50:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://juejin.im/post/5a9f93d96fb9a028d2077c19" target="_blank">React-Native从零搭建App（长文）</a><br><a href="https://github.com/amandakelake/ReactNativeNavigationDemo" target="_blank">ReactNativeNavigationDemo</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">核心库：React-Native@0.54.0 </span><br><span class="line">路由导航：React-Native-Navigation </span><br><span class="line">状态管理：Redux、Redux-Thunk、Redux-Saga、Redux-persist </span><br><span class="line">静态测试：Flow</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://juejin.im/post/5a9f93d96fb9a028d2077c19&quot; target=&quot;_blank&quot;&gt;React-Native从零搭建App（长文）&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/aman
+      
+    
+    </summary>
+    
+    
+      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[react-native] 美团</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991849000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991849000.html/</id>
+    <published>2019-06-20T00:50:49.000Z</published>
+    <updated>2019-06-20T00:50:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/9211f42d5c25" target="_blank">高仿美团客户端 React-Native版，支持iOS、Android</a><br><a href="https://github.com/huanxsd/MeiTuan" target="_blank">github | MeiTuan</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn install</span><br><span class="line">react-native run-android</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/9211f42d5c25&quot; target=&quot;_blank&quot;&gt;高仿美团客户端 React-Native版，支持iOS、Android&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/h
+      
+    
+    </summary>
+    
+    
+      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[react-native] genymotion</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991848000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991848000.html/</id>
+    <published>2019-06-20T00:50:48.000Z</published>
+    <updated>2019-06-20T00:50:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/jlj9520/p/9239770.html" target="_blank">React-Native + Genymotion android开发环境搭建</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">添加环境变量，路径时</span><br><span class="line">ANDROID_HOME</span><br><span class="line">D:\Android\android-sdk-windows</span><br><span class="line">PATH</span><br><span class="line">%ANDROID_HOME%\tools</span><br><span class="line">%ANDROID_HOME%\platform-tools</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/jlj9520/p/9239770.html&quot; target=&quot;_blank&quot;&gt;React-Native + Genymotion android开发环境搭建&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;hi
+      
+    
+    </summary>
+    
+    
+      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[js] 遍历子节点</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991846000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991846000.html/</id>
+    <published>2019-06-20T00:50:46.000Z</published>
+    <updated>2019-06-20T00:50:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/layaling/p/8583613.html" target="_blank">javascript DOM操作 节点的遍历</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"myul"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ul=<span class="built_in">document</span>.getElementById(<span class="string">'myul'</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;ul.childNodes.length;i++)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(ul.childNodes[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/layaling/p/8583613.html&quot; target=&quot;_blank&quot;&gt;javascript DOM操作 节点的遍历&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;t
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="http://brightereyer.xyz/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[js] 获取form下的input值</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991845000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991845000.html/</id>
+    <published>2019-06-20T00:50:45.000Z</published>
+    <updated>2019-06-20T00:50:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/liyuspace/p/8302041.html" target="_blank">js获取form下的input值</a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _form = <span class="built_in">document</span>.getElementById(<span class="string">'targetFormId'</span>);</span><br><span class="line"><span class="keyword">var</span> inputs = _form.getElementsByTagName(<span class="string">'inputName'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(inputs[<span class="number">0</span>].value);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或</span></span><br><span class="line">_form.childNodes;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/liyuspace/p/8302041.html&quot; target=&quot;_blank&quot;&gt;js获取form下的input值&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;t
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="http://brightereyer.xyz/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[js] 判断{}</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991844000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991844000.html/</id>
+    <published>2019-06-20T00:50:44.000Z</published>
+    <updated>2019-06-20T00:50:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="" target="_blank"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var c = &#123;&#125;;</span><br><span class="line">if(JSON.stringify(c) == &quot;&#123;&#125;&quot;)&#123;</span><br><span class="line">console.log(&quot;c为空对象&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;spa
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="http://brightereyer.xyz/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[springboot] vm代码生成模板</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991380000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991380000.html/</id>
+    <published>2019-06-20T00:43:00.000Z</published>
+    <updated>2019-06-20T00:43:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="" target="_blank"></a></p><p><a href="https://www.jianshu.com/p/d0daae7184b8" target="_blank">MyBatis-Plus-Generator配置</a><br><a href="https://www.cnblogs.com/lianggp/p/7573653.html" target="_blank">spring boot整合mybatis+mybatis-plus</a></p><p><a href="https://gitee.com/lgqBlog/boot_demo" target="_blank">gitee boot_demo</a><br><a href="https://gitee.com/lgqBlog/cloud_demo" target="_blank">gitee cloud_demo</a></p><p><a href="https://mp.baomidou.com/guide/generator.html#使用教程" target="_blank">官方</a><br><a href="https://blog.csdn.net/m0_37754981/article/details/80451300" target="_blank">SpringBoot+MybatisPlus+代码生成器整合(真正让你专心做业务)</a><br><a href="https://github.com/LinQiHong66/SpringBoot_MybatisPlus.git" target="_blank">springboot+mybatis+plus</a><br><a href="http://mp.baomidou.com/#/" target="_blank">mybatisPlus官网</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/d0daae7184b8&quot; target=&quot;_blank&quot;&gt;MyBatis-Plus-Generator配置&lt;/a&gt;&lt;br&gt;&lt;
       
     
     </summary>
@@ -40,158 +342,113 @@
   </entry>
   
   <entry>
-    <title>[idea] github中的idea教程</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557016262000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557016262000.html/</id>
-    <published>2019-05-05T00:31:02.000Z</published>
-    <updated>2019-05-05T00:31:02.000Z</updated>
+    <title>[蓝湖] 切图使用教程</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991379000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991379000.html/</id>
+    <published>2019-06-20T00:42:59.000Z</published>
+    <updated>2019-06-20T00:42:59.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial" target="_blank">github中的idea教程</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="" target="_blank"></a><br><a href="https://sos.lanhuapp.com/quick_view.html#sketch-插件" target="_blank">官方使用教程</a><br><a href="http://help.lanhuapp.com/hc/kb/section/1011531/" target="_blank">http://help.lanhuapp.com</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">一.上传设计图</span><br><span class="line">二. 设计图树状连线</span><br><span class="line">三. 自动标注</span><br><span class="line">四.一键切图</span><br><span class="line">五.制作交互原型</span><br><span class="line">六.产品文档共享</span><br><span class="line">七.项目资源库管理</span><br><span class="line">八.蓝湖手机 APP</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://github.com/judasn/IntelliJ-IDEA-Tutorial&quot; target=&quot;_blank&quot;&gt;github中的idea教程&lt;/a&gt;&lt;/p&gt;
-
+        &lt;p&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://sos.lanhuapp.com/quick_view.html#sketch-插件&quot; target=&quot;_blank&quot;&gt;官方使用教程&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;ht
       
     
     </summary>
     
     
-      <category term="idea" scheme="http://brightereyer.xyz/tags/idea/"/>
+      <category term="蓝湖" scheme="http://brightereyer.xyz/tags/%E8%93%9D%E6%B9%96/"/>
     
   </entry>
   
   <entry>
-    <title>[xmind] java技术栈导图</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557016261000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557016261000.html/</id>
-    <published>2019-05-05T00:31:01.000Z</published>
-    <updated>2019-05-05T00:31:01.000Z</updated>
+    <title>[redis] 开启</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991378000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991378000.html/</id>
+    <published>2019-06-20T00:42:58.000Z</published>
+    <updated>2019-06-20T00:42:58.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/chenyufeng1991/tech_repo/blob/master/Java%20EE%E6%8A%80%E6%9C%AF%E6%A0%88.xmind" target="_blank"></a><br>.xmind<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Java EE技术栈</span><br><span class="line">Java SE技术栈</span><br><span class="line">Java Web技术栈</span><br><span class="line">Linux技术栈</span><br><span class="line">MySQL技术栈</span><br><span class="line">README.md</span><br><span class="line">Spring主要jar包-思维导图</span><br><span class="line">Spring常用模块</span><br><span class="line">Spring常用注解-思维导图</span><br><span class="line">Spring特征</span><br><span class="line">Spring第三方框架集成-思维导图</span><br><span class="line">Spring装配注解比较-思维导图</span><br><span class="line">git技术栈</span><br><span class="line">redis技术栈</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/kevin-yang123/p/9946808.html" target="_blank">windows下安装 redis并开机自启动</a><br><a href="https://github.com/ServiceStack/redis-windows" target="_blank">redis-windows</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">redis-cli.exe</span><br><span class="line">shutdown</span><br><span class="line">exit</span><br><span class="line">redis-server.exe redis.windows.conf</span><br><span class="line"></span><br><span class="line">#开机自启动</span><br><span class="line">redis-server --service-install redis.windows-service.conf --loglevel verbose</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://github.com/chenyufeng1991/tech_repo/blob/master/Java%20EE%E6%8A%80%E6%9C%AF%E6%A0%88.xmind&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;.xmi
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/kevin-yang123/p/9946808.html&quot; target=&quot;_blank&quot;&gt;windows下安装 redis并开机自启动&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/
       
     
     </summary>
     
     
-      <category term="xmind" scheme="http://brightereyer.xyz/tags/xmind/"/>
+      <category term="redis" scheme="http://brightereyer.xyz/tags/redis/"/>
     
   </entry>
   
   <entry>
-    <title>[java] 工具类</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015903000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015903000.html/</id>
-    <published>2019-05-05T00:25:03.000Z</published>
-    <updated>2019-05-05T00:25:03.000Z</updated>
+    <title>[ps] 安装</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991377000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991377000.html/</id>
+    <published>2019-06-20T00:42:57.000Z</published>
+    <updated>2019-06-20T00:42:57.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://gitee.com/whvse" target="_blank">whvse的工具类</a><br><a href="https://github.com/yz-java/common-project" target="_blank">common-project</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Java后端常用工具类、缓存接口、消息队列接口、第三方支付接口封装；</span><br><span class="line">Restful接口参数验证，错误信息友好提示。</span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/chenssy89/jutils" target="_blank">jutils</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">主要包括基础工具类（时间、正则表达式、字符串、随机数等等），</span><br><span class="line">excel解析生成、word解析生成、文件操作、图片操作、敏感字、加解密、二维码生成</span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/keaijohnee/JCake" target="_blank">JCake</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1、DateUtils.java(日期处理工具类)</span><br><span class="line">2、EmailUtils.java(邮件发送工具类)</span><br><span class="line">3、FileUtils.java(文件及文件件处理工具类)</span><br><span class="line">4、HttpUtils.java(HTTP POST和GET处理工具类)</span><br><span class="line">5、StringUtils.java(字符串处理工具类)</span><br><span class="line">6、TaskUtils.java(Java多线程、队列实现任务调度)</span><br><span class="line">7、AES.java(AES加密和解密算法)</span><br><span class="line">8、MD5.java(MD5加密和解密算法)</span><br></pre></td></tr></table></figure></p><p>正则表达式验证工具类<br><a href="https://www.cnblogs.com/lr393993507/p/5234857.html" target="_blank">cnblogs|正则表达式验证工具类RegexUtils.java</a><br><a href="https://www.jianshu.com/p/583998f435d0" target="_blank">简书|工具类之RegexUtils（正则工具类）</a></p><p><a href="https://github.com/whvcse/RedisUtil" target="_blank">RedisUtil</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">封装了对Redis五种基本类型的各种操作，力求符合Redis的原生操作，使用StringRedisTemplate实现！</span><br><span class="line">key命令操作 | String数据操作 | Hash数据操作 | List数据操作 | Set数据操作 | zSet数据操作</span><br></pre></td></tr></table></figure></p><p>ReflectUtils<br>对象转成json时只转指定的字段<br><a href="https://github.com/whvcse/EasyCaptcha" target="_blank">EasyCaptcha验证码</a></p><p>HttpUtil请求类<br><a href="https://gitee.com/whvse/HttpUtil" target="_blank">HttpUtil和HttpBaseUtil</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/hnsongbiao/p/9076533.html" target="_blank">日期比较大小，js判断日期是否在区间内，js判断时间段是否在另外一个时间段内</a></p><p><a href="" target="_blank"></a><br><a href="http://www.ddooo.com/softdown/143437.htm" target="_blank">photoshop cc 2019 64位茶末余香增强直装版 v20.0.2</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意断网安装</span><br></pre></td></tr></table></figure></p><p><a href="https://blog.csdn.net/qq_35379989/article/details/83446544" target="_blank">Adobe CC2019全家桶安装、破解器+安装PS（Photoshop报错 错误代码：127）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">photoshop2019</span><br><span class="line">https://pan.baidu.com/s/1wEAXO5yVgaZELTtg1HVfoQ</span><br><span class="line"></span><br><span class="line">ps教程</span><br><span class="line">https://pan.baidu.com/s/1v7KEBfAFQaKvXeSYNP7Njw</span><br><span class="line">kdq4</span><br></pre></td></tr></table></figure></p><p><a href="http://www.ddooo.com/softdown/69400.htm" target="_blank">photoshop cc2015破解版 32&amp;64位</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://gitee.com/whvse&quot; target=&quot;_blank&quot;&gt;whvse的工具类&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/yz-java/common-project&quot; target=&quot;_blank&quot;&gt;co
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/hnsongbiao/p/9076533.html&quot; target=&quot;_blank&quot;&gt;日期比较大小，js判断日期是否在区间内，js判断时间段是否在另外一个时间段内&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;&quot; 
       
     
     </summary>
     
     
-      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
+      <category term="ps" scheme="http://brightereyer.xyz/tags/ps/"/>
     
   </entry>
   
   <entry>
-    <title>[springboot] 微信扫描登陆</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015902000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015902000.html/</id>
-    <published>2019-05-05T00:25:02.000Z</published>
-    <updated>2019-05-05T00:25:02.000Z</updated>
+    <title>[js] 判断时间范围</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991376000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560991376000.html/</id>
+    <published>2019-06-20T00:42:56.000Z</published>
+    <updated>2019-06-20T00:42:56.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/pengziliu/spring-boot-2.0-leaning.git" target="_blank"></a><br><a href="https://blog.csdn.net/lzp492782442/article/details/80268565" target="_blank">springBoot实战之揭秘网站微信扫码登录</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/hnsongbiao/p/9076533.html" target="_blank">日期比较大小，js判断日期是否在区间内，js判断时间段是否在另外一个时间段内</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">var isNowBetweenTime = function (beginTime, endTime) &#123;</span><br><span class="line">  var strb = beginTime.split (&quot;:&quot;);</span><br><span class="line">  if (strb.length != 2) &#123;</span><br><span class="line">      return false;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  var stre = endTime.split (&quot;:&quot;);</span><br><span class="line">  if (stre.length != 2) &#123;</span><br><span class="line">      return false;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  var b = new Date ();</span><br><span class="line">  var e = new Date ();</span><br><span class="line">  var n = new Date ();</span><br><span class="line"></span><br><span class="line">  b.setHours (strb[0]);</span><br><span class="line">  b.setMinutes (strb[1]);</span><br><span class="line">  e.setHours (stre[0]);</span><br><span class="line">  e.setMinutes (stre[1]);</span><br><span class="line"></span><br><span class="line">  if (n.getTime () - b.getTime () &gt; 0 &amp;&amp; n.getTime () - e.getTime () &lt; 0) &#123;</span><br><span class="line">      return true;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">      return false;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">isNowBetweenTime(&quot;06:00&quot;, &quot;17:00&quot;);</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://github.com/pengziliu/spring-boot-2.0-leaning.git&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/lzp492782442/ar
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/hnsongbiao/p/9076533.html&quot; target=&quot;_blank&quot;&gt;日期比较大小，js判断日期是否在区间内，js判断时间段是否在另外一个时间段内&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;
       
     
     </summary>
     
     
-      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
+      <category term="js" scheme="http://brightereyer.xyz/tags/js/"/>
     
   </entry>
   
   <entry>
-    <title>[前端] HTML+CSS+JS实现鼠标点击特效富强民主文明</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015901000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015901000.html/</id>
-    <published>2019-05-05T00:25:01.000Z</published>
-    <updated>2019-05-05T00:25:01.000Z</updated>
+    <title>[小程序] demo+百度天气api</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560985203000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560985203000.html/</id>
+    <published>2019-06-19T23:00:03.000Z</published>
+    <updated>2019-06-19T23:00:03.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_30467901/article/details/81751267" target="_blank">HTML+CSS+JS实现鼠标点击特效”富强””民主””文明”方法</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">//定义获取词语下标</span><br><span class="line">var a_idx = 0;</span><br><span class="line">jQuery(document).ready(function($) &#123;</span><br><span class="line">    //点击body时触发事件</span><br><span class="line">    $("body").click(function(e) &#123;</span><br><span class="line">    //需要显示的词语</span><br><span class="line">    var a = new Array("富强","民主", "文明", "和谐","自由", "平等", "公正","法治", "爱国", "敬业","诚信", "友善");</span><br><span class="line">    //设置词语给span标签</span><br><span class="line">    var $i = $("<span class="tag">&lt;<span class="name">span</span>/&gt;</span>").text(a[a_idx]);</span><br><span class="line">    //下标等于原来下标+1  余 词语总数</span><br><span class="line">    a_idx = (a_idx + 1)% a.length;</span><br><span class="line">    //获取鼠标指针的位置，分别相对于文档的左和右边缘。</span><br><span class="line">    //获取x和y的指针坐标</span><br><span class="line">    var x = e.pageX, y = e.pageY;</span><br><span class="line">    //在鼠标的指针的位置给$i定义的span标签添加css样式</span><br><span class="line">    $i.css(&#123;"z-index" : 999999999999999999999999999999999999999999999999999999999999999999999,</span><br><span class="line">        "top" : y - 20,</span><br><span class="line">        "left" : x,</span><br><span class="line">        "position" : "absolute",</span><br><span class="line">        "font-weight" : "bold",</span><br><span class="line">        "color" : "#ff6651"</span><br><span class="line">        &#125;);</span><br><span class="line">    //在body添加这个标签</span><br><span class="line">    $("body").append($i);</span><br><span class="line">        //animate() 方法执行 CSS 属性集的自定义动画。</span><br><span class="line">        //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。</span><br><span class="line">        //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp</span><br><span class="line">        $i.animate(&#123;</span><br><span class="line">            //将原来的位置向上移动180</span><br><span class="line">            "top" : y - 180,</span><br><span class="line">            "opacity" : 0</span><br><span class="line">            //1500动画的速度</span><br><span class="line">        &#125;, 1500, function() &#123;</span><br><span class="line">            //时间到了自动删除</span><br><span class="line">            $i.remove();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/michael_f2008/article/details/86600399" target="_blank"><br>利用百度地图天气API开发微信小程序</a></p><p>完整代码：GItHub项目地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/MichaelLee826/weather_forecast</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_30467901/article/details/81751267&quot; target=&quot;_blank&quot;&gt;HTML+CSS+JS实现鼠标点击特效”富强””民主””文明”方法&lt;/a&gt;&lt;br&gt;&lt;figure cla
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://brightereyer.xyz/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[php] ubuntu14中apache2+nginx+phpmyadmin+mysql</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015899000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015899000.html/</id>
-    <published>2019-05-05T00:24:59.000Z</published>
-    <updated>2019-05-05T00:24:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>apache2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install apache2</span><br><span class="line">cat /etc/apache2/apache2.conf</span><br><span class="line">sudo chmod 777 /var/www</span><br><span class="line">#对注册为服务的程序可以全局使用 service</span><br><span class="line">sudo service apache2 restart</span><br><span class="line">#未注册 service 需要制定到程序目录</span><br><span class="line">sudo /etc/init.d/apache2 restart</span><br></pre></td></tr></table></figure></p><p>nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#Nginx 和 Apache 会抢夺80端口，最好先停止其中一个再装。</span><br><span class="line">sudo apt-get install nginx</span><br></pre></td></tr></table></figure></p><p>php5<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#安装PHP5以及常用模块</span><br><span class="line">sudo apt-get install libapache2-mod-php5 php5 php5-gd php5-mysql php5-fpm php5-mcrypt php5-curl libcurl3 libcurl3-dev</span><br><span class="line">#apache的php.ini</span><br><span class="line">/etc/php5/apache2/php.ini;</span><br><span class="line">#nginx的php.ini</span><br><span class="line">/etc/php5/fpm/php.ini</span><br><span class="line"></span><br><span class="line">#另外装PHP的时候，也自动装了解析器，用来解析PHP语法，两个主要的文件分别在这两个目录：</span><br><span class="line">/var/run/php5-fpm.sock</span><br><span class="line">/var/run/php5-fpm.pid</span><br><span class="line">#在程序工作中，可能会因为权限问题PHP无法创建目录，这是因为在这里有个用户组配置</span><br><span class="line">/etc/php5/fpm/pool.d/www.conf</span><br><span class="line">#里面有两个默认设置是</span><br><span class="line">user = www-data</span><br><span class="line">group = www-data</span><br><span class="line">#需要给目录设置用户组以及用户为 www-data:www-data 并重启FPM</span><br><span class="line">user = www-data:www-data</span><br><span class="line">group = www-data:www-data</span><br></pre></td></tr></table></figure></p><p>mysql<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#安装过程中需要设置 root 密码，我设置的是 root。这步要记住自己设置的密码！</span><br><span class="line">sudo apt-get install mysql-server mysql-client</span><br></pre></td></tr></table></figure></p><p>phpmyadmin<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install phpmyadmin</span><br></pre></td></tr></table></figure></p><p>phpmyadmin配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/share/phpmyadmin /var/www/html</span><br><span class="line">#phpMyAdmin 需要配置扩展目录 extension_dir，需要修改 php.ini</span><br><span class="line">#假如配置 Apache 位置在这里：</span><br><span class="line">sudo vi /etc/php5/apache2/php.ini</span><br><span class="line">#假如配置 Nginx 位置在这里：</span><br><span class="line">sudo vi /etc/php5/fpm/php.ini</span><br><span class="line">需要做这几个改动</span><br><span class="line">extension_dir 启用，并且值等于 &quot;PHP扩展目录&quot;</span><br><span class="line">extension=msql.so 的注释解除</span><br><span class="line">extension=curl.so 解决 curl 问题 （Nginx）</span><br></pre></td></tr></table></figure></p><p>记录几个重要的目录位置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">php.ini 目录：</span><br><span class="line">/etc/php5/apache2/php.ini</span><br><span class="line"></span><br><span class="line">PHP扩展目录（日期可能不同）：</span><br><span class="line">/usr/lib/php5/20131226</span><br><span class="line"></span><br><span class="line">nginx.conf 配置文件：</span><br><span class="line">/etc/nginx/nginx.conf</span><br><span class="line"></span><br><span class="line">Nginx 的 php.ini</span><br><span class="line">/etc/php5/fpm/php.ini</span><br><span class="line"></span><br><span class="line">Apache2 配置文件：</span><br><span class="line">/etc/apache2/apache2.conf</span><br><span class="line"></span><br><span class="line">phpmyadmin 所在目录：</span><br><span class="line">/usr/share/phpmyadmin</span><br><span class="line"></span><br><span class="line">phpmyadmin 配置文件：</span><br><span class="line">/usr/share/phpmyadmin/libraries/config.default.php</span><br></pre></td></tr></table></figure></p><p>小技巧<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#安装完成可以通过命令查看执行文件位置，这样不用担心忘记</span><br><span class="line">which apache2</span><br><span class="line">/usr/sbin/apache2</span><br><span class="line"></span><br><span class="line">which php</span><br><span class="line">/usr/bin/php</span><br><span class="line"></span><br><span class="line">which mysql</span><br><span class="line">/usr/bin/mysql</span><br></pre></td></tr></table></figure></p><p>重启部分：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service php5-fpm restart</span><br><span class="line">service nginx restart</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;apache2&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="php" scheme="http://brightereyer.xyz/tags/php/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[小程序] web-view</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015898000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015898000.html/</id>
-    <published>2019-05-05T00:24:58.000Z</published>
-    <updated>2019-05-05T00:24:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/50657f9af5b4" target="_blank">微信小程序之内嵌网页(webview)</a><br><a href="https://www.jianshu.com/p/292f73512948" target="_blank">内联h5页面 webview组件</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/50657f9af5b4&quot; target=&quot;_blank&quot;&gt;微信小程序之内嵌网页(webview)&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianshu.com/p/292f735129
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/michael_f2008/article/details/86600399&quot; target=&quot;_blank&quot;&gt;&lt;br&gt;利用百度地图天气API开发微信小程序&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;完整代码：GItHub项目地址&lt;
       
     
     </summary>
@@ -202,277 +459,19 @@
   </entry>
   
   <entry>
-    <title>[小程序] web-view</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015897000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015897000.html/</id>
-    <published>2019-05-05T00:24:57.000Z</published>
-    <updated>2019-05-05T00:24:57.000Z</updated>
+    <title>[小程序] 倒计时</title>
+    <link href="http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560985202000.html/"/>
+    <id>http://brightereyer.xyz/2019/06/20//articles/2019/06/20/1560985202000.html/</id>
+    <published>2019-06-19T23:00:02.000Z</published>
+    <updated>2019-06-19T23:00:02.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/yechaoa/article/details/81985664" target="_blank">定时器setInterval</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">onLoad: function() &#123;</span><br><span class="line">this.startInterval(5,function()&#123;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line">//开启定时器</span><br><span class="line">startInterval: function(speed,callback) &#123; </span><br><span class="line">  var that = this; </span><br><span class="line">  that.data.interval = setInterval(function() &#123;</span><br><span class="line">    if (!that.data.seconds) &#123;</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        seconds: 0</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    var seconds = that.data.seconds + speed;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      seconds: seconds</span><br><span class="line">    &#125;);</span><br><span class="line">    console.log(&apos;seconds &apos; + that.data.seconds + &quot;s&quot;);</span><br><span class="line">    typeof callback == &apos;function&apos; &amp;&amp; callback();</span><br><span class="line">  &#125; , 1000 * speed);</span><br><span class="line">&#125;,</span><br><span class="line">//手动关闭</span><br><span class="line">endInterval: function() &#123; </span><br><span class="line">  var that = this; </span><br><span class="line">  clearInterval(that.data.interval)</span><br><span class="line">&#125;,</span><br><span class="line">onUnload: function() &#123;</span><br><span class="line">  // 页面关闭</span><br><span class="line">  var that = this;</span><br><span class="line">  clearInterval(that.data.interval)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/yechaoa/article/details/81985664&quot; target=&quot;_blank&quot;&gt;定时器setInterval&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;t
-      
-    
-    </summary>
-    
-    
-      <category term="小程序" scheme="http://brightereyer.xyz/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[springboot] 七牛云图片上传</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015896000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015896000.html/</id>
-    <published>2019-05-05T00:24:56.000Z</published>
-    <updated>2019-05-05T00:24:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/f53ab800de36" target="_blank">七牛云图片上传</a><br><a href="https://blog.csdn.net/niaoer2010/article/details/80183564" target="_blank">七牛云上传本地图片工具类</a><br><a href="https://www.jianshu.com/p/3ef4796fc861" target="_blank">springboot七牛云java（服务端）通用工具类</a><br><a href="https://github.com/jeesun/oauthserver" target="_blank">github|oauthserver</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/charles_tian/article/details/80669221" target="_blank">微信小程序用定时器实现倒计时效果</a><br><a href="https://www.cnblogs.com/wangyihong/p/8656121.html" target="_blank">小程序倒计时插件</a><br><a href="https://github.com/baqihg/wxTimer" target="_blank">github | wxTimer</a><br><a href="https://gitee.com/dotton/CountDown" target="_blank">github | CountDown</a><br>countDown.wxml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;text style=&quot;display: block;text-align: center;font-size: 30px;color: #f60;margin-top: 50px;&quot;&gt;</span><br><span class="line">&#123;&#123;clock&#125;&#125; &#123;&#123;micro_second&#125;&#125;</span><br><span class="line">&lt;/text&gt;</span><br></pre></td></tr></table></figure></p><p>countDown.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">/** </span><br><span class="line"> * 需要一个目标日期，初始化时，先得出到当前时间还有剩余多少秒</span><br><span class="line"> * 1.将秒数换成格式化输出为XX天XX小时XX分钟XX秒 XX</span><br><span class="line"> * 2.提供一个时钟，每10ms运行一次，渲染时钟，再总ms数自减10</span><br><span class="line"> * 3.剩余的秒次为零时，return，给出tips提示说，已经截止</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">// 定义一个总毫秒数，以一分钟为例。TODO，传入一个时间点，转换成总毫秒数</span><br><span class="line">var total_micro_second = 10000 * 1000;</span><br><span class="line"></span><br><span class="line">/* 毫秒级倒计时 */</span><br><span class="line">function count_down(that) &#123;</span><br><span class="line">  // 渲染倒计时时钟</span><br><span class="line">  that.setData(&#123;</span><br><span class="line">  clock:date_format(total_micro_second)</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  if (total_micro_second &lt;= 0) &#123;</span><br><span class="line">  that.setData(&#123;</span><br><span class="line">  clock:&quot;已经截止&quot;</span><br><span class="line">  &#125;);</span><br><span class="line">  // timeout则跳出递归</span><br><span class="line">  return ;</span><br><span class="line">  &#125;    </span><br><span class="line">  setTimeout(function()&#123;</span><br><span class="line">    // 放在最后--</span><br><span class="line">total_micro_second -= 10;</span><br><span class="line">count_down(that);</span><br><span class="line">&#125;</span><br><span class="line">,10)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 时间格式化输出，如03:25:19 86。每10ms都会调用一次</span><br><span class="line">function date_format(micro_second) &#123;</span><br><span class="line">  // 秒数</span><br><span class="line">  var second = Math.floor(micro_second / 1000);</span><br><span class="line">  // 小时位</span><br><span class="line">  var hr = Math.floor(second / 3600);</span><br><span class="line">  // 分钟位</span><br><span class="line">  var min = fill_zero_prefix(Math.floor((second - hr * 3600) / 60));</span><br><span class="line">  // 秒位</span><br><span class="line">var sec = fill_zero_prefix((second - hr * 3600 - min * 60));// equal to =&gt; var sec = second % 60;</span><br><span class="line">// 毫秒位，保留2位</span><br><span class="line">var micro_sec = fill_zero_prefix(Math.floor((micro_second % 1000) / 10));</span><br><span class="line"></span><br><span class="line">return hr + &quot;:&quot; + min + &quot;:&quot; + sec + &quot; &quot; + micro_sec;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 位数不足补零</span><br><span class="line">function fill_zero_prefix(num) &#123;</span><br><span class="line">return num &lt; 10 ? &quot;0&quot; + num : num</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">data: &#123;</span><br><span class="line">clock: &apos;&apos;</span><br><span class="line">&#125;,</span><br><span class="line">onLoad: function() &#123;</span><br><span class="line">count_down(this);</span><br><span class="line">&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/f53ab800de36&quot; target=&quot;_blank&quot;&gt;七牛云图片上传&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/niaoer2010/article/details
-      
-    
-    </summary>
-    
-    
-      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[centos] 安装GitLab并自定义域名访问GitLab管理页面</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015895000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015895000.html/</id>
-    <published>2019-05-05T00:24:55.000Z</published>
-    <updated>2019-05-05T00:24:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/ouyang_peng/article/details/72903221" target="_blank">安装GitLab并自定义域名访问GitLab管理页面</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/ouyang_peng/article/details/72903221&quot; target=&quot;_blank&quot;&gt;安装GitLab并自定义域名访问GitLab管理页面&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="centos" scheme="http://brightereyer.xyz/tags/centos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[cmd] cmd新建、删除文件和文件夹</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015894000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015894000.html/</id>
-    <published>2019-05-05T00:24:54.000Z</published>
-    <updated>2019-05-05T00:24:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>新建文件夹和文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd ..           返回上一级</span><br><span class="line">md test         新建test文件夹</span><br><span class="line">md d:\test\my   d盘下新建文件夹</span><br><span class="line">cd test         进入test文件夹</span><br><span class="line">cd .&gt; cc.txt      新建cc.txt文件</span><br><span class="line">dir             列出文件夹下所有文件及文件夹</span><br></pre></td></tr></table></figure></p><p>删除文件夹和文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd test         进入test文件夹</span><br><span class="line">dir             查看所有文件目录</span><br><span class="line">del a.txt       删除a.txt的文件</span><br><span class="line">del *.txt       删除所有后缀为.txt的文件</span><br><span class="line">rd test         删除名为test的空文件夹</span><br><span class="line">rd /s D:\test   删除D盘里的test文件夹  会出现如下 test, 是否确认(Y/N)?  直接输入 Y 在回车</span><br><span class="line">rd test/s       删除此文件夹下的所有文件  test, 是否确认(Y/N)?  直接输入 Y 在回车</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;新建文件夹和文件&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="cmd" scheme="http://brightereyer.xyz/tags/cmd/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[ubuntu] 安装ifconfig</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015893000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015893000.html/</id>
-    <published>2019-05-05T00:24:53.000Z</published>
-    <updated>2019-05-05T00:24:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt install net-tools</span><br><span class="line">apt install iputils-ping</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
-      
-    
-    </summary>
-    
-    
-      <category term="ubuntu" scheme="http://brightereyer.xyz/tags/ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[前端] Jquery实现鼠标移过小图显示大图</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015892000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015892000.html/</id>
-    <published>2019-05-05T00:24:52.000Z</published>
-    <updated>2019-05-05T00:24:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_36410795/article/details/72823525" target="_blank">Jquery实现鼠标移动/移过到商品小图片上时替换掉大图片上的图片</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_36410795/article/details/72823525&quot; target=&quot;_blank&quot;&gt;Jquery实现鼠标移动/移过到商品小图片上时替换掉大图片上的图片&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://brightereyer.xyz/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[小程序] 加减号</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015891000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015891000.html/</id>
-    <published>2019-05-05T00:24:51.000Z</published>
-    <updated>2019-05-05T00:24:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/xiaobai-y/p/7234506.html" target="_blank">小程序购物车 数量加减功能</a></p><p>wxml：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 主容器 --&gt;  </span><br><span class="line">&lt;view class=&quot;stepper&quot;&gt;  </span><br><span class="line">    &lt;!-- 减号 --&gt;  </span><br><span class="line">    &lt;text class=&quot;&#123;&#123;minusStatus&#125;&#125;&quot; bindtap=&quot;bindMinus&quot;&gt;-&lt;/text&gt;  </span><br><span class="line">    &lt;!-- 数值 --&gt;  </span><br><span class="line">    &lt;input type=&quot;number&quot; bindchange=&quot;bindManual&quot; value=&quot;&#123;&#123;num&#125;&#125;&quot; /&gt;  </span><br><span class="line">    &lt;!-- 加号 --&gt;  </span><br><span class="line">    &lt;text class=&quot;normal&quot; bindtap=&quot;bindPlus&quot;&gt;+&lt;/text&gt;  </span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure></p><p>wxss：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">/*全局样式*/  </span><br><span class="line">page &#123;  </span><br><span class="line">    padding: 20px 0;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">/*主容器*/  </span><br><span class="line">.stepper &#123;  </span><br><span class="line">    width: 80px;  </span><br><span class="line">    height: 26px;  </span><br><span class="line">    /*给主容器设一个边框*/  </span><br><span class="line">    border: 1px solid #ccc;  </span><br><span class="line">    border-radius: 3px;  </span><br><span class="line">    margin:0 auto;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">/*加号和减号*/  </span><br><span class="line">.stepper text &#123;  </span><br><span class="line">    width: 19px;  </span><br><span class="line">    line-height: 26px;  </span><br><span class="line">    text-align: center;  </span><br><span class="line">    float: left;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">/*数值*/  </span><br><span class="line">.stepper input &#123;  </span><br><span class="line">    width: 40px;  </span><br><span class="line">    height: 26px;  </span><br><span class="line">    float: left;  </span><br><span class="line">    margin: 0 auto;  </span><br><span class="line">    text-align: center;  </span><br><span class="line">    font-size: 12px;  </span><br><span class="line">    /*给中间的input设置左右边框即可*/  </span><br><span class="line">    border-left: 1px solid #ccc;  </span><br><span class="line">    border-right: 1px solid #ccc;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">/*普通样式*/  </span><br><span class="line">.stepper .normal&#123;  </span><br><span class="line">    color: black;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">/*禁用样式*/  </span><br><span class="line">.stepper .disabled&#123;  </span><br><span class="line">    color: #ccc;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>js：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;  </span><br><span class="line">    data: &#123;  </span><br><span class="line">        // input默认是1  </span><br><span class="line">        num: 1,  </span><br><span class="line">        // 使用data数据对象设置样式名  </span><br><span class="line">        minusStatus: &apos;disabled&apos;  </span><br><span class="line">    &#125;,  </span><br><span class="line">    /* 点击减号 */  </span><br><span class="line">    bindMinus: function() &#123;  </span><br><span class="line">        var num = this.data.num;  </span><br><span class="line">        // 如果大于1时，才可以减  </span><br><span class="line">        if (num &gt; 1) &#123;  </span><br><span class="line">            num --;  </span><br><span class="line">        &#125;  </span><br><span class="line">        // 只有大于一件的时候，才能normal状态，否则disable状态  </span><br><span class="line">        var minusStatus = num &lt;= 1 ? &apos;disabled&apos; : &apos;normal&apos;;  </span><br><span class="line">        // 将数值与状态写回  </span><br><span class="line">        this.setData(&#123;  </span><br><span class="line">            num: num,  </span><br><span class="line">            minusStatus: minusStatus  </span><br><span class="line">        &#125;);  </span><br><span class="line">    &#125;,  </span><br><span class="line">    /* 点击加号 */  </span><br><span class="line">    bindPlus: function() &#123;  </span><br><span class="line">        var num = this.data.num;  </span><br><span class="line">        // 不作过多考虑自增1  </span><br><span class="line">        num ++;  </span><br><span class="line">        // 只有大于一件的时候，才能normal状态，否则disable状态  </span><br><span class="line">        var minusStatus = num &lt; 1 ? &apos;disabled&apos; : &apos;normal&apos;;  </span><br><span class="line">        // 将数值与状态写回  </span><br><span class="line">        this.setData(&#123;  </span><br><span class="line">            num: num,  </span><br><span class="line">            minusStatus: minusStatus  </span><br><span class="line">        &#125;);  </span><br><span class="line">    &#125;,  </span><br><span class="line">    /* 输入框事件 */  </span><br><span class="line">    bindManual: function(e) &#123;  </span><br><span class="line">        var num = e.detail.value;  </span><br><span class="line">        // 将数值与状态写回  </span><br><span class="line">        this.setData(&#123;  </span><br><span class="line">            num: num  </span><br><span class="line">        &#125;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/xiaobai-y/p/7234506.html&quot; target=&quot;_blank&quot;&gt;小程序购物车 数量加减功能&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;wxml：&lt;br&gt;&lt;figure class=&quot;highlight pla
-      
-    
-    </summary>
-    
-    
-      <category term="小程序" scheme="http://brightereyer.xyz/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[小程序] 评价星号</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015890000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015890000.html/</id>
-    <published>2019-05-05T00:24:50.000Z</published>
-    <updated>2019-05-05T00:24:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/4d7359dfa040" target="_blank">微信小程序星星评价，拿去不谢！</a></p><p>wxml代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--星星评价--&gt;</span><br><span class="line">&lt;view class=&quot;container&quot;&gt;</span><br><span class="line">  &lt;view class=&quot;comment1-description&quot;&gt;</span><br><span class="line">    &lt;view class=&quot;star-pos&quot; style=&quot;display:flex;flex-direction:row;&quot;&gt;</span><br><span class="line">      &lt;view class=&quot;stars  &#123;&#123;flag&gt;=1? &apos;on&apos;: &apos;&apos;&#125;&#125;&quot; bindtap=&quot;changeColor1&quot;&gt;&lt;/view&gt;</span><br><span class="line">      &lt;view class=&quot;stars  &#123;&#123;flag&gt;=2? &apos;on&apos;: &apos;&apos;&#125;&#125;&quot; bindtap=&quot;changeColor2&quot;&gt;&lt;/view&gt;</span><br><span class="line">      &lt;view class=&quot;stars  &#123;&#123;flag&gt;=3? &apos;on&apos;: &apos;&apos;&#125;&#125;&quot; bindtap=&quot;changeColor3&quot;&gt;&lt;/view&gt;</span><br><span class="line">      &lt;view class=&quot;stars  &#123;&#123;flag&gt;=4? &apos;on&apos;: &apos;&apos;&#125;&#125;&quot; bindtap=&quot;changeColor4&quot;&gt;&lt;/view&gt;</span><br><span class="line">      &lt;view class=&quot;stars  &#123;&#123;flag&gt;=5? &apos;on&apos;: &apos;&apos;&#125;&#125;&quot; bindtap=&quot;changeColor5&quot;&gt;&lt;/view&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">  &lt;!--文本域  --&gt;</span><br><span class="line">  &lt;view class=&quot;weui-cells_after-title&quot;&gt;</span><br><span class="line">    &lt;view class=&quot;weui-cell&quot;&gt;</span><br><span class="line">      &lt;view class=&quot;weui-cell__bd&quot;&gt;</span><br><span class="line">        &lt;textarea class=&quot;weui-textarea&quot; bindinput=&quot;bindTextAreaChange&quot; placeholder=&quot;我要提出建议...&quot; style=&quot;height: 8em&quot; value=&quot;&#123;&#123;info&#125;&#125;&quot; maxlength=&quot;&#123;&#123;noteMaxLen&#125;&#125;&quot; focus /&gt;</span><br><span class="line">        &lt;view class=&quot;weui-textarea-counter&quot;&gt;&#123;&#123;noteNowLen&#125;&#125;/&#123;&#123;noteMaxLen&#125;&#125;&lt;/view&gt;</span><br><span class="line">      &lt;/view&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">  &lt;!--发布按钮  --&gt;</span><br><span class="line">  &lt;view class=&quot;btnSf&quot;&gt;</span><br><span class="line">    &lt;button bindtap=&quot;bindSubmit&quot;&gt;发布&lt;/button&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure></p><p>wxss代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">.comment1-description &#123;</span><br><span class="line">  padding: 30rpx 0;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: row;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.stars &#123;</span><br><span class="line">  background: url(&quot;http://wximg.youtasc.com/star.png&quot;);</span><br><span class="line">  width: 50rpx;</span><br><span class="line">  height: 50rpx;</span><br><span class="line">  background-size: 50rpx 50rpx;</span><br><span class="line">  margin-left: 30rpx;</span><br><span class="line">  transition: 600ms;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.on &#123;</span><br><span class="line">  background: url(&quot;http://wximg.youtasc.com/f_star.png&quot;);</span><br><span class="line">  width: 50rpx;</span><br><span class="line">  height: 50rpx;</span><br><span class="line">  background-size: 50rpx 50rpx;</span><br><span class="line">  transition: 1s;</span><br><span class="line">  transform: scale(1, 1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.weui-cells_after-title &#123;</span><br><span class="line">  width: 92%;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  border: 1px solid #ddd;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.btnSf &#123;</span><br><span class="line">  width: 92%;</span><br><span class="line">  margin: 30rpx auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.btnSf button &#123;</span><br><span class="line">  background: #57b6ba;</span><br><span class="line">  color: #fff;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.btnSf button:active &#123;</span><br><span class="line">  background: #5bc2c6;</span><br><span class="line">  color: #fff;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>js代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    flag: 0,</span><br><span class="line">    noteMaxLen: 300, // 最多放多少字</span><br><span class="line">    info: &quot;&quot;,</span><br><span class="line">    noteNowLen: 0,//备注当前字数</span><br><span class="line">  &#125;,</span><br><span class="line">  // 监听字数</span><br><span class="line">  bindTextAreaChange: function (e) &#123;</span><br><span class="line">    var that = this</span><br><span class="line">    var value = e.detail.value,</span><br><span class="line">      len = parseInt(value.length);</span><br><span class="line">    if (len &gt; that.data.noteMaxLen)</span><br><span class="line">      return;</span><br><span class="line">    that.setData(&#123; info: value, noteNowLen: len &#125;)</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line">  // 提交清空当前值</span><br><span class="line">  bindSubmit: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.showToast(&#123;</span><br><span class="line">      title: &apos;发布成功&apos;,</span><br><span class="line">      icon: &apos;success&apos;,</span><br><span class="line">      duration: 1500,</span><br><span class="line">      mask: false,</span><br><span class="line">      success: function () &#123;</span><br><span class="line">        that.setData(&#123; info: &apos;&apos;, noteNowLen: 0, flag: 0 &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line">  changeColor1: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      flag: 1</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  changeColor2: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      flag: 2</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  changeColor3: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      flag: 3</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  changeColor4: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      flag: 4</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  changeColor5: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      flag: 5</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><p><a href="https://blog.csdn.net/weixin_41257563/article/details/82756738" target="_blank">星星评分效果(单个评价)</a><br><a href="https://www.jb51.net/article/150081.htm" target="_blank">星星评价效果(多个同时评价)</a></p><p>代码实现</p><p>wxml文件<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--pages/evaluatepage/evaluatepage.wxml--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'container'</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'evaluate_contant'</span>&gt;</span></span><br><span class="line"> <span class="comment">&lt;!--外层循环控制有几个评价条目 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:for</span>=<span class="string">'&#123;&#123;evaluate_contant&#125;&#125;'</span> <span class="attr">wx:key</span>=<span class="string">''</span> <span class="attr">wx:for-index</span>=<span class="string">'idx'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'evaluate_item'</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'evaluate_title'</span>&gt;</span>&#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">&lt;!--星星评价 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'evaluate_box'</span>&gt;</span></span><br><span class="line">   <span class="comment">&lt;!--内层循环展示每个评价条目的星星 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;stars&#125;&#125;"</span> <span class="attr">wx:key</span>=<span class="string">''</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"star-image"</span> <span class="attr">style</span>=<span class="string">"left: &#123;&#123;item*80&#125;&#125;rpx"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;scores[idx] &gt; item ?(scores[idx]-item == 0.5?halfSrc:selectedSrc) : normalSrc&#125;&#125;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"item"</span> <span class="attr">style</span>=<span class="string">"left:0rpx"</span> <span class="attr">data-score</span>=<span class="string">"&#123;&#123;item + 0.5&#125;&#125;"</span> <span class="attr">data-idx</span>=<span class="string">'&#123;&#123;idx&#125;&#125;'</span> <span class="attr">bindtap</span>=<span class="string">"selectLeft"</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"item"</span> <span class="attr">style</span>=<span class="string">"left:20rpx"</span> <span class="attr">data-score</span>=<span class="string">"&#123;&#123;item + 1&#125;&#125;"</span> <span class="attr">data-idx</span>=<span class="string">'&#123;&#123;idx&#125;&#125;'</span> <span class="attr">bindtap</span>=<span class="string">"selectRight"</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">'submit_button'</span> <span class="attr">bindtap</span>=<span class="string">'submit_evaluate'</span> <span class="attr">type</span>=<span class="string">'primary'</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure></p><p>js文件<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line"></span><br><span class="line"> data: &#123;</span><br><span class="line"> evaluate_contant: [<span class="string">'评价条目一'</span>, <span class="string">'评价条目二'</span>, <span class="string">'评价条目三'</span>],</span><br><span class="line"> stars: [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line"> normalSrc: <span class="string">'../../images/no-star.png'</span>,</span><br><span class="line"> selectedSrc: <span class="string">'../../images/full-star.png'</span>,</span><br><span class="line"> halfSrc: <span class="string">'../../images/half-star.png'</span>,</span><br><span class="line"> score: <span class="number">0</span>,</span><br><span class="line"> scores: [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line"> &#125;,</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 提交事件</span></span><br><span class="line"> submit_evaluate: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">'评价得分'</span> + <span class="keyword">this</span>.data.scores)</span><br><span class="line"> &#125;,</span><br><span class="line"></span><br><span class="line"> <span class="comment">//点击左边,半颗星</span></span><br><span class="line"> selectLeft: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">var</span> score = e.currentTarget.dataset.score</span><br><span class="line"> <span class="keyword">if</span> (<span class="keyword">this</span>.data.score == <span class="number">0.5</span> &amp;&amp; e.currentTarget.dataset.score == <span class="number">0.5</span>) &#123;</span><br><span class="line">  score = <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">this</span>.data.scores[e.currentTarget.dataset.idx] = score,</span><br><span class="line">  <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">  scores: <span class="keyword">this</span>.data.scores,</span><br><span class="line">  score: score</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"> &#125;,</span><br><span class="line"></span><br><span class="line"> <span class="comment">//点击右边,整颗星</span></span><br><span class="line"> selectRight: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">var</span> score = e.currentTarget.dataset.score</span><br><span class="line"></span><br><span class="line"> <span class="keyword">this</span>.data.scores[e.currentTarget.dataset.idx] = score,</span><br><span class="line">  <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">  scores: <span class="keyword">this</span>.data.scores,</span><br><span class="line">  score: score</span><br><span class="line">  &#125;)</span><br><span class="line"> &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><p>wxss<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*评价区域 */</span></span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.evaluate_contant</span> <span class="selector-class">.evaluate_item</span> &#123;</span><br><span class="line"> <span class="attribute">font-size</span>: <span class="number">30</span>rpx;</span><br><span class="line"> <span class="attribute">color</span>: gray;</span><br><span class="line"> <span class="attribute">margin-left</span>: <span class="number">20</span>rpx;</span><br><span class="line"> <span class="attribute">margin-top</span>: <span class="number">30</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*评价标题 */</span></span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.evaluate_contant</span> <span class="selector-class">.evaluate_item</span> <span class="selector-class">.evaluate_title</span> &#123;</span><br><span class="line"> <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*评价盒子 */</span></span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.evaluate_contant</span> <span class="selector-class">.evaluate_item</span> <span class="selector-class">.evaluate_box</span> &#123;</span><br><span class="line"> <span class="attribute">position</span>: absolute;</span><br><span class="line"> <span class="attribute">left</span>: <span class="number">220</span>rpx;</span><br><span class="line"> <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line"> <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*星星评价的每个图片 */</span></span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.evaluate_contant</span> <span class="selector-class">.evaluate_item</span> <span class="selector-class">.evaluate_box</span> <span class="selector-class">.star-image</span> &#123;</span><br><span class="line"> <span class="attribute">position</span>: absolute;</span><br><span class="line"> <span class="attribute">width</span>: <span class="number">40</span>rpx;</span><br><span class="line"> <span class="attribute">height</span>: <span class="number">40</span>rpx;</span><br><span class="line"> <span class="attribute">src</span>: <span class="string">"../../images/no-star.png"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*星星的左边和右边区域&lt;点击左边半个星星，点击右边整个星星&gt; */</span></span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.evaluate_contant</span> <span class="selector-class">.evaluate_item</span> <span class="selector-class">.evaluate_box</span> <span class="selector-class">.star-image</span> <span class="selector-class">.item</span> &#123;</span><br><span class="line"> <span class="attribute">position</span>: absolute;</span><br><span class="line"> <span class="attribute">top</span>: <span class="number">0</span>rpx;</span><br><span class="line"> <span class="attribute">width</span>: <span class="number">20</span>rpx;</span><br><span class="line"> <span class="attribute">height</span>: <span class="number">40</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*按钮 */</span></span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.evaluate_contant</span> <span class="selector-class">.submit_button</span> &#123;</span><br><span class="line"> <span class="attribute">height</span>: <span class="number">60</span>rpx;</span><br><span class="line"> <span class="attribute">font-size</span>: <span class="number">30</span>rpx;</span><br><span class="line"> <span class="attribute">line-height</span>: <span class="number">60</span>rpx;</span><br><span class="line"> <span class="attribute">margin</span>: <span class="number">20</span>rpx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/4d7359dfa040&quot; target=&quot;_blank&quot;&gt;微信小程序星星评价，拿去不谢！&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;wxml代码&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;ta
-      
-    
-    </summary>
-    
-    
-      <category term="小程序" scheme="http://brightereyer.xyz/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[小程序] 获取日期并计算星期几</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015889000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015889000.html/</id>
-    <published>2019-05-05T00:24:49.000Z</published>
-    <updated>2019-05-05T00:24:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.pianshen.com/article/657765511/" target="_blank">获取日期并计算星期几</a><br><a href="https://github.com/Rattenking/GetPeriod" target="_blank">github|获取日期并计算星期几</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://www.pianshen.com/article/657765511/&quot; target=&quot;_blank&quot;&gt;获取日期并计算星期几&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/Rattenking/GetPeriod&quot; 
-      
-    
-    </summary>
-    
-    
-      <category term="小程序" scheme="http://brightereyer.xyz/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[小程序] template列表+数据+事件</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015888000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015888000.html/</id>
-    <published>2019-05-05T00:24:48.000Z</published>
-    <updated>2019-05-05T00:24:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/yingtian648/article/details/79813564" target="_blank">使用模板(template)填充列表项、模板中添加列表项(item)点击事件</a></p><p>模板文件listItem.wmxl<br>4个数据：id,path,title,content<br>绑定点击事件:readDetail<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;template name=&apos;list&apos;&gt;</span><br><span class="line">   &lt;view style=&quot;display:flex;flex-direction:row;margin-top:5px;background-color:#e6e6e6&quot; </span><br><span class="line">      bindtap=&apos;readDetail&apos; data-id=&apos;&#123;&#123;id&#125;&#125;&apos;&gt;</span><br><span class="line">      &lt;image style=&quot;width:40%;height:80px;&quot; src=&apos;&#123;&#123;path&#125;&#125;&apos; mode=&apos;widthFix&apos;/&gt;</span><br><span class="line">      &lt;view style=&quot;display:flex;flex-direction:column;margin-left:10px&quot;&gt;</span><br><span class="line">         &lt;text&gt;&#123;&#123;title&#125;&#125;&lt;/text&gt;</span><br><span class="line">         &lt;text&gt;&#123;&#123;content&#125;&#125;&lt;/text&gt; </span><br><span class="line">      &lt;/view&gt;</span><br><span class="line">   &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></p><p>引入<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">import</span> <span class="attr">src</span>=<span class="string">'listItem.wxml'</span>/&gt;</span><span class="comment">&lt;!--导入列表项模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;arrays&#125;&#125;"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">"list"</span> <span class="attr">data</span>=<span class="string">"&#123;&#123;id:index,path:item.path,title:item.title,content:item.content&#125;&#125;"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure></p><p>js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 页面的初始数据</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  data: &#123;</span><br><span class="line">     arrays: [&#123;</span><br><span class="line">        id:<span class="number">0</span>,</span><br><span class="line">        path:<span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1522750024551&amp;di=2a3059f66cada3c3fcf09ed6fbfa7ff0&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Feaf81a4c510fd9f9a499b16e2f2dd42a2834a42f.jpg'</span>,</span><br><span class="line">      title:<span class="string">'大源中央公园'</span>,</span><br><span class="line">      content:<span class="string">'大源'</span>&#125;,</span><br><span class="line">        &#123;</span><br><span class="line">           id: <span class="number">1</span>,</span><br><span class="line">           path:<span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1522749957085&amp;di=f63a53aa11dc3d2c6ee656ecf26a734e&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fphotoblog%2F1109%2F09%2Fc1%2F8912689_8912689_1315533674830.jpg'</span>,</span><br><span class="line">      title:<span class="string">'花园国际'</span>,</span><br><span class="line">      content:<span class="string">'花儿'</span>&#125;,</span><br><span class="line">        &#123;</span><br><span class="line">           id: <span class="number">2</span>,</span><br><span class="line">           path: <span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1522749957089&amp;di=52d63a22521f4928cefc91097853bae4&amp;imgtype=0&amp;src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F140812%2F11-140Q21045523K.jpg'</span>,</span><br><span class="line">           title: <span class="string">'大源中央公园'</span>,</span><br><span class="line">           content: <span class="string">'大源'</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">           id: <span class="number">3</span>,</span><br><span class="line">           path: <span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1522749848712&amp;di=c12381be5ff7dea1de88bbdf0128eb23&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F1c950a7b02087bf407286efaf8d3572c10dfcfd8.jpg'</span>,</span><br><span class="line">           title: <span class="string">'大源中央公园'</span>,</span><br><span class="line">           content: <span class="string">'大源'</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">           id: <span class="number">4</span>,</span><br><span class="line">           path: <span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1522749848714&amp;di=5a60edbf62ceff57de82e46de6f28b35&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fb219ebc4b74543a9f58db25114178a82b801149c.jpg'</span>,</span><br><span class="line">           title: <span class="string">'大源中央公园'</span>,</span><br><span class="line">           content: <span class="string">'大源'</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">           id: <span class="number">5</span>,</span><br><span class="line">           path: <span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1522749848720&amp;di=96beca6c27cf406900332cdd7bda8515&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dpixel_huitu%252C0%252C0%252C294%252C40%2Fsign%3Dc5f68d1bb81bb0519b29bb685f02bfd8%2F10dfa9ec8a1363270e51430a9a8fa0ec08fac74f.jpg'</span>,</span><br><span class="line">           title: <span class="string">'大源中央公园'</span>,</span><br><span class="line">           content: <span class="string">'大源'</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">           id: <span class="number">6</span>,</span><br><span class="line">           path: <span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1522749957089&amp;di=52d63a22521f4928cefc91097853bae4&amp;imgtype=0&amp;src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F140812%2F11-140Q21045523K.jpg'</span>,</span><br><span class="line">           title: <span class="string">'大源中央公园'</span>,</span><br><span class="line">           content: <span class="string">'大源'</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">           id: <span class="number">7</span>,</span><br><span class="line">           path: <span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1522749848712&amp;di=c12381be5ff7dea1de88bbdf0128eb23&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F1c950a7b02087bf407286efaf8d3572c10dfcfd8.jpg'</span>,</span><br><span class="line">           title: <span class="string">'大源中央公园'</span>,</span><br><span class="line">           content: <span class="string">'大源'</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;  </span><br><span class="line">           id: <span class="number">8</span>,</span><br><span class="line">           path: <span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1522749848714&amp;di=5a60edbf62ceff57de82e46de6f28b35&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fb219ebc4b74543a9f58db25114178a82b801149c.jpg'</span>,</span><br><span class="line">           title: <span class="string">'大源中央公园'</span>,</span><br><span class="line">           content: <span class="string">'大源'</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">           id: <span class="number">9</span>,</span><br><span class="line">           path: <span class="string">'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1522749848720&amp;di=96beca6c27cf406900332cdd7bda8515&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dpixel_huitu%252C0%252C0%252C294%252C40%2Fsign%3Dc5f68d1bb81bb0519b29bb685f02bfd8%2F10dfa9ec8a1363270e51430a9a8fa0ec08fac74f.jpg'</span>,</span><br><span class="line">           title: <span class="string">'大源中央公园'</span>,</span><br><span class="line">           content: <span class="string">'大源'</span></span><br><span class="line">        &#125;,],</span><br><span class="line">  &#125;,</span><br><span class="line">  readDetail: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//点击列表项函数</span></span><br><span class="line">     <span class="keyword">var</span> index = e.currentTarget.dataset.id; <span class="comment">//打印可以看到，此处已获取到了对应的id</span></span><br><span class="line">     <span class="built_in">console</span>.log(<span class="string">'位置：'</span>+index);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/yingtian648/article/details/79813564&quot; target=&quot;_blank&quot;&gt;使用模板(template)填充列表项、模板中添加列表项(item)点击事件&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;模板
-      
-    
-    </summary>
-    
-    
-      <category term="小程序" scheme="http://brightereyer.xyz/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[小程序] button去除边框</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015887000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015887000.html/</id>
-    <published>2019-05-05T00:24:47.000Z</published>
-    <updated>2019-05-05T00:24:47.000Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">button::after &#123;</span><br><span class="line">  border: none</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
-      
-    
-    </summary>
-    
-    
-      <category term="小程序" scheme="http://brightereyer.xyz/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[小程序] 横向滚动</title>
-    <link href="http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015886000.html/"/>
-    <id>http://brightereyer.xyz/2019/05/05//articles/2019/05/04/1557015886000.html/</id>
-    <published>2019-05-05T00:24:46.000Z</published>
-    <updated>2019-05-05T00:24:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/miu-key/p/7606024.html" target="_blank">横向滚动</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">scroll-view 中分别有上下竖向滑动和左右横向滑动</span><br><span class="line"></span><br><span class="line">1.scroll-view 中的需要滑动的元素不可以用 float 浮动；</span><br><span class="line"></span><br><span class="line">2.scroll-view 中的包裹需要滑动的元素的大盒子用 display:flex; 是没有作用的；</span><br><span class="line"></span><br><span class="line">3.scroll-view 中的需要滑动的元素要用 dislay:inline-block; 进行元素的横向编排；</span><br><span class="line"></span><br><span class="line">4.包裹 scroll-view 的大盒子有明确的宽和加上样式--&gt;  overflow:hidden;white-space:nowrap;</span><br></pre></td></tr></table></figure></p><p>.wxml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;view class=&quot;scroll_box&quot;&gt; </span><br><span class="line">    &lt;scroll-view class=&quot;scroll-view_x&quot; scroll-x style=&quot;width: auto;overflow:hidden;&quot;&gt;</span><br><span class="line"></span><br><span class="line">      &lt;view class=&quot;item_list&quot; wx:for=&quot;&#123;&#123;list&#125;&#125;&quot;&gt;</span><br><span class="line">        &lt;image src=&quot;../../images/head.jpg&quot; class=&quot;item_book_img&quot; mode=&quot;aspectFill&quot;&gt;&lt;/image&gt;</span><br><span class="line">        &lt;view class=&quot;item_book_text&quot;&gt;测试数据&lt;/view&gt;</span><br><span class="line">      &lt;/view&gt;</span><br><span class="line">     </span><br><span class="line">    &lt;/scroll-view&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure></p><p>.wxss<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.scroll_box&#123;</span><br><span class="line">   width: 100%;</span><br><span class="line">   height: 307rpx;</span><br><span class="line">   overflow: hidden;</span><br><span class="line">   padding: 20rpx;</span><br><span class="line">   background: #fff;</span><br><span class="line">   white-space: nowrap;</span><br><span class="line">&#125;</span><br><span class="line">.item_list&#123;</span><br><span class="line">   width: 160rpx;</span><br><span class="line">   height: auto;</span><br><span class="line">   margin-right: 23rpx;</span><br><span class="line">   display: inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/miu-key/p/7606024.html&quot; target=&quot;_blank&quot;&gt;横向滚动&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/charles_tian/article/details/80669221&quot; target=&quot;_blank&quot;&gt;微信小程序用定时器实现倒计时效果&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.cnblog
       
     
     </summary>

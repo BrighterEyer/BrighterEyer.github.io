@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>BrighterEyer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BrighterEyer">
+<meta property="og:url" content="http://brightereyer.xyz/page/68/index.html">
+<meta property="og:site_name" content="BrighterEyer">
+<meta property="og:description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BrighterEyer">
+<meta name="twitter:description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+  
+    <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">brightereyer</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">用心看清世界，不要驻足停留</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/brightereyer" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/AE/" style="font-size: 10px;">AE</a> <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Alpine/" style="font-size: 10px;">Alpine</a> <a href="/tags/Android/" style="font-size: 16.88px;">Android</a> <a href="/tags/C/" style="font-size: 10.63px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/PyQt5/" style="font-size: 10px;">PyQt5</a> <a href="/tags/TortoiseGit/" style="font-size: 10px;">TortoiseGit</a> <a href="/tags/TortosieGit/" style="font-size: 10px;">TortosieGit</a> <a href="/tags/UE4/" style="font-size: 10px;">UE4</a> <a href="/tags/android/" style="font-size: 10.63px;">android</a> <a href="/tags/api/" style="font-size: 11.88px;">api</a> <a href="/tags/blog/" style="font-size: 12.5px;">blog</a> <a href="/tags/centos/" style="font-size: 15px;">centos</a> <a href="/tags/centos7/" style="font-size: 11.25px;">centos7</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/cocos/" style="font-size: 11.25px;">cocos</a> <a href="/tags/cocos2d/" style="font-size: 12.5px;">cocos2d</a> <a href="/tags/cocos2d-x/" style="font-size: 10px;">cocos2d-x</a> <a href="/tags/css/" style="font-size: 18.13px;">css</a> <a href="/tags/css3/" style="font-size: 10.63px;">css3</a> <a href="/tags/debian/" style="font-size: 11.88px;">debian</a> <a href="/tags/docker/" style="font-size: 16.25px;">docker</a> <a href="/tags/egret/" style="font-size: 10px;">egret</a> <a href="/tags/electronjs/" style="font-size: 10px;">electronjs</a> <a href="/tags/es6/" style="font-size: 12.5px;">es6</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/flutter/" style="font-size: 10.63px;">flutter</a> <a href="/tags/genymotion/" style="font-size: 10px;">genymotion</a> <a href="/tags/git/" style="font-size: 13.75px;">git</a> <a href="/tags/github/" style="font-size: 11.88px;">github</a> <a href="/tags/gitlab/" style="font-size: 10px;">gitlab</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/h5/" style="font-size: 11.25px;">h5</a> <a href="/tags/h5game/" style="font-size: 10px;">h5game</a> <a href="/tags/hexo/" style="font-size: 11.88px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/ionic3/" style="font-size: 10px;">ionic3</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/java/" style="font-size: 18.75px;">java</a> <a href="/tags/javaswing/" style="font-size: 10px;">javaswing</a> <a href="/tags/jdk8/" style="font-size: 10px;">jdk8</a> <a href="/tags/jenkins/" style="font-size: 15px;">jenkins</a> <a href="/tags/jpa/" style="font-size: 10px;">jpa</a> <a href="/tags/jq/" style="font-size: 10.63px;">jq</a> <a href="/tags/js/" style="font-size: 16.25px;">js</a> <a href="/tags/jsp/" style="font-size: 11.25px;">jsp</a> <a href="/tags/kotlin/" style="font-size: 10.63px;">kotlin</a> <a href="/tags/layui/" style="font-size: 14.38px;">layui</a> <a href="/tags/linux/" style="font-size: 13.13px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 11.88px;">maven</a> <a href="/tags/maven插件/" style="font-size: 10.63px;">maven插件</a> <a href="/tags/mpvue/" style="font-size: 10px;">mpvue</a> <a href="/tags/mysql/" style="font-size: 14.38px;">mysql</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/ngrok/" style="font-size: 10.63px;">ngrok</a> <a href="/tags/npm/" style="font-size: 11.25px;">npm</a> <a href="/tags/office/" style="font-size: 10.63px;">office</a> <a href="/tags/pdm/" style="font-size: 10.63px;">pdm</a> <a href="/tags/php/" style="font-size: 11.88px;">php</a> <a href="/tags/ps/" style="font-size: 10px;">ps</a> <a href="/tags/pygame/" style="font-size: 11.88px;">pygame</a> <a href="/tags/python/" style="font-size: 13.75px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/qt/" style="font-size: 10.63px;">qt</a> <a href="/tags/rabbitmq/" style="font-size: 10px;">rabbitmq</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/react-native/" style="font-size: 17.5px;">react-native</a> <a href="/tags/redhat/" style="font-size: 11.25px;">redhat</a> <a href="/tags/redis/" style="font-size: 10.63px;">redis</a> <a href="/tags/requirejs/" style="font-size: 11.88px;">requirejs</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/serlvet/" style="font-size: 10px;">serlvet</a> <a href="/tags/servlet/" style="font-size: 11.25px;">servlet</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/solo/" style="font-size: 10px;">solo</a> <a href="/tags/spring/" style="font-size: 15px;">spring</a> <a href="/tags/springboot/" style="font-size: 19.38px;">springboot</a> <a href="/tags/springcloud/" style="font-size: 13.75px;">springcloud</a> <a href="/tags/springmvc/" style="font-size: 11.25px;">springmvc</a> <a href="/tags/sublime/" style="font-size: 10.63px;">sublime</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/swagger/" style="font-size: 10px;">swagger</a> <a href="/tags/thinkphp/" style="font-size: 10px;">thinkphp</a> <a href="/tags/thymeleaf/" style="font-size: 10px;">thymeleaf</a> <a href="/tags/ubuntu/" style="font-size: 13.13px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vue/" style="font-size: 10.63px;">vue</a> <a href="/tags/webpack/" style="font-size: 13.13px;">webpack</a> <a href="/tags/webservice/" style="font-size: 10px;">webservice</a> <a href="/tags/weui/" style="font-size: 10px;">weui</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/wxs/" style="font-size: 10px;">wxs</a> <a href="/tags/xmind/" style="font-size: 10px;">xmind</a> <a href="/tags/二维码/" style="font-size: 10px;">二维码</a> <a href="/tags/优秀毕业设计/" style="font-size: 10px;">优秀毕业设计</a> <a href="/tags/优秀程序媛/" style="font-size: 10px;">优秀程序媛</a> <a href="/tags/前端/" style="font-size: 15.63px;">前端</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/在线工具/" style="font-size: 10px;">在线工具</a> <a href="/tags/地图/" style="font-size: 10.63px;">地图</a> <a href="/tags/小程序/" style="font-size: 20px;">小程序</a> <a href="/tags/嵌入式/" style="font-size: 10px;">嵌入式</a> <a href="/tags/工具/" style="font-size: 13.13px;">工具</a> <a href="/tags/微信/" style="font-size: 10.63px;">微信</a> <a href="/tags/微信小游戏/" style="font-size: 10px;">微信小游戏</a> <a href="/tags/快应用/" style="font-size: 10px;">快应用</a> <a href="/tags/批处理/" style="font-size: 10.63px;">批处理</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a> <a href="/tags/政策/" style="font-size: 10px;">政策</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/服务器/" style="font-size: 11.25px;">服务器</a> <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a> <a href="/tags/架构/" style="font-size: 10px;">架构</a> <a href="/tags/树莓/" style="font-size: 10px;">树莓</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/源码/" style="font-size: 10px;">源码</a> <a href="/tags/百度地图/" style="font-size: 10px;">百度地图</a> <a href="/tags/硬件/" style="font-size: 10px;">硬件</a> <a href="/tags/移动web前端/" style="font-size: 10px;">移动web前端</a> <a href="/tags/第三方接口/" style="font-size: 10px;">第三方接口</a> <a href="/tags/简历/" style="font-size: 10px;">简历</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/素材/" style="font-size: 10.63px;">素材</a> <a href="/tags/蓝湖/" style="font-size: 10px;">蓝湖</a> <a href="/tags/运维/" style="font-size: 10px;">运维</a> <a href="/tags/面试/" style="font-size: 11.25px;">面试</a> <a href="/tags/鬼畜视频制作/" style="font-size: 10px;">鬼畜视频制作</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">brightereyer</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">brightereyer</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">用心看清世界，不要驻足停留</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
+                
+                    <li><a href="/categories/digital">玩转数码</a></li>
+                
+                    <li><a href="/categories/algorithm">算法学习</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/brightereyer" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-/articles/2018/10/04/1538661785000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/04/articles/2018/10/04/1538661785000.html/" class="article-date">
+      <time datetime="2018-10-04T14:03:05.000Z" itemprop="datePublished">2018-10-04</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/04/articles/2018/10/04/1538661785000.html/">[react-native] 极光推送</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.jianshu.com/p/a71512a8f921" target="_blank">React Native 集成极光推送 jpush-react-native</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react-native</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/04/1538661785000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/04/articles/2018/10/04/1538661785000.html/" class="article-date">
+      <time datetime="2018-10-04T14:03:05.000Z" itemprop="datePublished">2018-10-04</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/04/articles/2018/10/04/1538661785000.html/">[react-native] react-native填坑</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Could not GET xxx, Received status code 400 from server Bad Request<br><a href="https://blog.csdn.net/lqx_sunhan/article/details/82633275" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#build.gradle中的maven url去远程下载,这里的本地缓存目录</span><br><span class="line">start %USERPROFILE%\.gradle\caches\modules-2\files-2.1</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">notepad %USERPROFILE%\.gradle\gradle.properties</span><br><span class="line"></span><br><span class="line">systemProp.https.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyPort=80</span><br><span class="line">#systemProp.http.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">systemProp.http.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">#systemProp.http.proxyPort=80</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/lqx_sunhan/article/details/82598600" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://services.gradle.org/distributions/</span><br><span class="line">distributionUrl=file:///&lt;...&gt;/gradle-4.0-all.zip</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.jianshu.com/p/b0bb42ed69d0" target="_blank">react-native-video的坑</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yarn add react-native-video</span><br><span class="line">react-native link react-native-video</span><br><span class="line"></span><br><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        mavenLocal()</span><br><span class="line">        jcenter()</span><br><span class="line">        maven &#123;</span><br><span class="line">            url &quot;https://maven.google.com&quot;</span><br><span class="line">            // url &quot;$rootDir/../node_modules/react-native/android&quot;</span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.sunqizheng.com/blog/687.html" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A problem occurred configuring project &apos;:app&apos;.</span><br><span class="line">&gt; failed to find Build Tools revision 26.0.1</span><br><span class="line">#android/app/build.gradle文件中buildToolsVersion &quot;26.0.1&quot;改为&quot;23.0.1&quot;</span><br><span class="line">#下载sdk26.0.1</span><br><span class="line"></span><br><span class="line">react-native工程android目录下新建:</span><br><span class="line">local.properties</span><br><span class="line">sdk.dir=&lt;Sdk路径&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/f409031mn/article/details/79522129" target="_blank">react-native-vector-icons的集成</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#npm install --save react-native-vector-icons</span><br><span class="line">#或</span><br><span class="line">npm install -g yarn</span><br><span class="line">yarn add react-native-vector-icons</span><br><span class="line"></span><br><span class="line">#Android平台上的配置</span><br><span class="line">#react-native link react-native-vector-icons</span><br><span class="line">#或</span><br><span class="line">npm install -g rnpm</span><br><span class="line">rnpm link react-native-vector-icons</span><br></pre></td></tr></table></figure></p>
+<p>react-devtools<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#npm install -g react-devtools #--save-dev</span><br><span class="line">yarn add react-devtools</span><br><span class="line"></span><br><span class="line">#chrome插件</span><br><span class="line">git clone https://github.com/facebook/react-devtools.git</span><br><span class="line">cd react-devtools</span><br><span class="line">npm --registry https://registry.npm.taobao.org install</span><br><span class="line">npm run build:extension:chrome</span><br><span class="line"></span><br><span class="line">#配置package.json中命令</span><br><span class="line">#编辑package.json文件,在scripts节点中增加devtools节点</span><br><span class="line">&quot;devtools&quot;: &quot;react-devtools&quot;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/u012539700/article/details/79951605" target="_blank">Could not find method google() for arguments [] on repository container</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#替换gradle-wrapper.properties里面</span><br><span class="line">distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/sinat_31057219/article/details/78660905" target="_blank">failed to find build tools revision 26.0.1</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过AS下载sdk tools 26.0.1</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.nativebase.io/" target="_blank">native-base官网</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#native-base是一个RN的基础组件集合</span><br><span class="line">npm install native-base --save</span><br><span class="line">npm install @expo/vector-icons --save</span><br></pre></td></tr></table></figure></p>
+<p>Unable to resolve module `@babel/runtime/helpers/interopRequireDefault<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall -g @babel/runtime</span><br><span class="line">npm install --save-dev @babel/runtime</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react-native</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538617315000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/04/articles/2018/10/03/1538617315000.html/" class="article-date">
+      <time datetime="2018-10-04T01:41:55.000Z" itemprop="datePublished">2018-10-04</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/04/articles/2018/10/03/1538617315000.html/">[maven] nexus私有仓库搭建</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.sonatype.com/download-sonatype-trial" target="_blank">nexus官网</a><br><a href="https://www.sonatype.com/oss-thank-you-zip" target="_blank">nexus-2.14.1-01-bundle.zip</a><br><a href="https://www.sonatype.com/oss-thank-you-win64.zip" target="_blank">nexus-3.13.0-01-win64.zip</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">######## nexus-3.13 start ########</span><br><span class="line">#启动时间较长,请耐心等待</span><br><span class="line">nexus.exe /run</span><br><span class="line">#nexus.exe /install nexus3</span><br><span class="line">#nexus.exe /start</span><br><span class="line">#nexus.exe /stop</span><br><span class="line">#nexus.exe /status</span><br><span class="line">#nexus.exe /restart</span><br><span class="line">######## nexus-3.13 end ########</span><br><span class="line"></span><br><span class="line">访问</span><br><span class="line">127.0.0.1:8081/</span><br><span class="line">默认账号:</span><br><span class="line">admin</span><br><span class="line">密码:</span><br><span class="line">admin123</span><br></pre></td></tr></table></figure></p>
+<p>maven仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://repo1.maven.org/maven2/</span><br><span class="line">https://repo2.maven.org/maven2/</span><br><span class="line">http://maven.yonyoucloud.com/nexus/content/repositories/public/</span><br><span class="line">http://maven.aliyun.com/nexus/content/groups/public</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/zouqingfang/article/details/48732481" target="_blank">使用nexus创建maven私有仓库</a><br><a href="https://blog.csdn.net/cool_summer_moon/article/details/78779530" target="_blank">Nexus3.6 window版私服搭建安装、配置教程</a><br><a href="https://blog.csdn.net/clj198606061111/article/details/52200928" target="_blank">maven私库nexus3安装及使用</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#访问的仓库类型： </span><br><span class="line">hosted 宿主仓库：主要用于部署无法从公共仓库获取的构件以及自己或第三方的项目构件;</span><br><span class="line">proxy 代理仓库：代理公共的远程仓库;</span><br><span class="line">group 仓库组：Nexus 通过仓库组统一管理多个仓库,这样我们在项目中直接请求仓库组即可请求到仓库组管理的多个仓库.</span><br><span class="line"></span><br><span class="line">简单的说,可以上传私有的项目到hosted,以及配置proxy以获取第三方的依赖（比如可以配置中央仓库的地址）.前面两个都弄好了之后,在通过group聚合给客户提供统一的访问地址.</span><br><span class="line"></span><br><span class="line">Nexus预定义了2个本地仓库,</span><br><span class="line">maven-releases:可以存放自己项目中发布的构建, 通常是Release版本的.</span><br><span class="line">maven-snapshots:可以发布那些非release版本, 非稳定版本.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mvn package clean</span><br><span class="line">mvn deploy -e</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/qq_34531925/article/details/80165977" target="_blank">Failed to transfer file 与 Return code is 处理</a><br>pom.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br><span class="line">         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</span><br><span class="line">    &lt;groupId&gt;&#123;&#123;项目名&#125;&#125;&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;&#123;&#123;包名&#125;&#125;&lt;/artifactId&gt;</span><br><span class="line">    &lt;packaging&gt;&#123;&#123;打包方式&#125;&#125;&lt;/packaging&gt;</span><br><span class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</span><br><span class="line"></span><br><span class="line">    &lt;build&gt;</span><br><span class="line">        &lt;finalName&gt;&#123;&#123;项目名&#125;&#125;&lt;/finalName&gt;</span><br><span class="line">        &lt;plugins&gt;</span><br><span class="line">            &lt;plugin&gt;</span><br><span class="line">                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</span><br><span class="line">                &lt;configuration&gt;</span><br><span class="line">                    &lt;source&gt;1.7&lt;/source&gt;</span><br><span class="line">                    &lt;target&gt;1.7&lt;/target&gt;</span><br><span class="line">                &lt;/configuration&gt;</span><br><span class="line">            &lt;/plugin&gt;</span><br><span class="line"></span><br><span class="line">            &lt;plugin&gt;</span><br><span class="line">                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">                &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;</span><br><span class="line">                &lt;configuration&gt;</span><br><span class="line">                    &lt;skip&gt;true&lt;/skip&gt;</span><br><span class="line">                &lt;/configuration&gt;</span><br><span class="line">            &lt;/plugin&gt;</span><br><span class="line">        &lt;/plugins&gt;</span><br><span class="line">        &lt;defaultGoal&gt;compile&lt;/defaultGoal&gt;</span><br><span class="line">    &lt;/build&gt;</span><br><span class="line"></span><br><span class="line">    &lt;distributionManagement&gt;</span><br><span class="line">        &lt;repository&gt;</span><br><span class="line">            &lt;id&gt;nexus&lt;/id&gt;</span><br><span class="line">            &lt;name&gt;Releases&lt;/name&gt;</span><br><span class="line">            &lt;url&gt;http://localhost:8081/repository/maven-public/&lt;/url&gt;</span><br><span class="line">        &lt;/repository&gt;</span><br><span class="line">        &lt;snapshotRepository&gt;</span><br><span class="line">            &lt;id&gt;nexus&lt;/id&gt;</span><br><span class="line">            &lt;name&gt;Snapshots&lt;/name&gt;</span><br><span class="line">            &lt;url&gt;http://localhost:8081/repository/maven-snapshots/&lt;/url&gt;</span><br><span class="line">        &lt;/snapshotRepository&gt;</span><br><span class="line">    &lt;/distributionManagement&gt;</span><br><span class="line">&lt;/project&gt;</span><br></pre></td></tr></table></figure></p>
+<p>settings.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;settings xmlns=&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;</span><br><span class="line">          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br><span class="line">          xsi:schemaLocation=&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;localRepository&gt;&#123;&#123;本地maven仓库地址&#125;&#125;&lt;/localRepository&gt;</span><br><span class="line">    &lt;pluginGroups&gt;</span><br><span class="line">        &lt;pluginGroup&gt;org.sonatype.plugins&lt;/pluginGroup&gt;</span><br><span class="line">    &lt;/pluginGroups&gt;</span><br><span class="line">    &lt;servers&gt;</span><br><span class="line">        &lt;server&gt;</span><br><span class="line">            &lt;!--这是server的id（注意不是用户登陆的id）,该id与distributionManagement中repository元素的id相匹配. --&gt;</span><br><span class="line">            &lt;id&gt;nexus&lt;/id&gt;</span><br><span class="line">            &lt;username&gt;admin&lt;/username&gt;</span><br><span class="line">            &lt;password&gt;admin123&lt;/password&gt;</span><br><span class="line">        &lt;/server&gt;</span><br><span class="line">    &lt;/servers&gt;</span><br><span class="line"></span><br><span class="line">    &lt;mirrors&gt;</span><br><span class="line">        &lt;mirror&gt;</span><br><span class="line">            &lt;id&gt;nexus&lt;/id&gt;</span><br><span class="line">            &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;</span><br><span class="line">            &lt;url&gt;http://localhost:8081/repository/maven-public/&lt;/url&gt;</span><br><span class="line">        &lt;/mirror&gt;</span><br><span class="line">        &lt;mirror&gt;</span><br><span class="line">            &lt;id&gt;repo2&lt;/id&gt;</span><br><span class="line">            &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span><br><span class="line">            &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span><br><span class="line">        &lt;/mirror&gt;</span><br><span class="line">    &lt;/mirrors&gt;</span><br><span class="line"></span><br><span class="line">    &lt;profiles&gt;</span><br><span class="line">        &lt;profile&gt;</span><br><span class="line">            &lt;id&gt;nexus&lt;/id&gt;</span><br><span class="line">            &lt;!--远程仓库列表,它是Maven用来填充构建系统本地仓库所使用的一组远程项目.  --&gt;</span><br><span class="line">            &lt;repositories&gt;</span><br><span class="line">                &lt;!--发布版本仓库--&gt;</span><br><span class="line">                &lt;repository&gt;</span><br><span class="line">                    &lt;id&gt;nexus&lt;/id&gt;</span><br><span class="line">                    &lt;!--地址是nexus中repository（Releases/Snapshots）中对应的地址--&gt;</span><br><span class="line">                    &lt;url&gt;http://127.0.0.1:8081/repository/maven-public/&lt;/url&gt;</span><br><span class="line">                    &lt;!--true或者false表示该仓库是否为下载某种类型构件（发布版,快照版）开启. --&gt;</span><br><span class="line">                    &lt;releases&gt;</span><br><span class="line">                        &lt;enabled&gt;true&lt;/enabled&gt;</span><br><span class="line">                    &lt;/releases&gt;</span><br><span class="line">                    &lt;snapshots&gt;</span><br><span class="line">                        &lt;enabled&gt;true&lt;/enabled&gt;</span><br><span class="line">                    &lt;/snapshots&gt;</span><br><span class="line">                &lt;/repository&gt;</span><br><span class="line">            &lt;/repositories&gt;</span><br><span class="line"></span><br><span class="line">            &lt;pluginRepositories&gt;</span><br><span class="line">                &lt;pluginRepository&gt;</span><br><span class="line">                    &lt;id&gt;central&lt;/id&gt;</span><br><span class="line">                    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span><br><span class="line">                    &lt;releases&gt;</span><br><span class="line">                        &lt;enabled&gt;true&lt;/enabled&gt;</span><br><span class="line">                    &lt;/releases&gt;</span><br><span class="line">                    &lt;snapshots&gt;</span><br><span class="line">                        &lt;enabled&gt;true&lt;/enabled&gt;</span><br><span class="line">                    &lt;/snapshots&gt;</span><br><span class="line">                &lt;/pluginRepository&gt;</span><br><span class="line">            &lt;/pluginRepositories&gt;</span><br><span class="line">        &lt;/profile&gt;</span><br><span class="line">    &lt;/profiles&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--激活配置--&gt;</span><br><span class="line">    &lt;activeProfiles&gt;</span><br><span class="line">        &lt;!--profile下的id--&gt;</span><br><span class="line">        &lt;activeProfile&gt;nexus&lt;/activeProfile&gt;</span><br><span class="line">    &lt;/activeProfiles&gt;</span><br><span class="line">&lt;/settings&gt;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523137000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523137000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:17.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523137000.html/">[maven] maven</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/charlesblc/p/6104804.html" target="_blank">国内maven库镜像（阿里云）</a><br><a href="https://www.cnblogs.com/xxt19970908/p/6685777.html" target="_blank">maven阿里云中央仓库</a><br>pom使用repositories<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;repositories&gt;</span><br><span class="line">    &lt;repository&gt;</span><br><span class="line">        &lt;id&gt;aliyunmaven&lt;/id&gt;</span><br><span class="line">        &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span><br><span class="line">    &lt;/repository&gt;</span><br><span class="line">    &lt;repository&gt;</span><br><span class="line">        &lt;id&gt;spring-milestones&lt;/id&gt;</span><br><span class="line">        &lt;name&gt;Spring Milestones&lt;/name&gt;</span><br><span class="line">        &lt;url&gt;https://repo.spring.io/libs-milestone&lt;/url&gt;</span><br><span class="line">        &lt;snapshots&gt;</span><br><span class="line">            &lt;enabled&gt;true&lt;/enabled&gt;</span><br><span class="line">        &lt;/snapshots&gt;</span><br><span class="line">    &lt;/repository&gt;</span><br><span class="line">    &lt;repository&gt;</span><br><span class="line">        &lt;id&gt;spring-libs-snapshot&lt;/id&gt;</span><br><span class="line">        &lt;url&gt;https://repo.spring.io/libs-snapshot&lt;/url&gt;</span><br><span class="line">    &lt;/repository&gt;</span><br><span class="line">&lt;/repositories&gt;</span><br><span class="line">&lt;pluginRepositories&gt;</span><br><span class="line">    &lt;pluginRepository&gt;</span><br><span class="line">        &lt;id&gt;alfresco-public&lt;/id&gt;</span><br><span class="line">        &lt;url&gt;https://artifacts.alfresco.com/nexus/content/groups/public&lt;/url&gt;</span><br><span class="line">    &lt;/pluginRepository&gt;</span><br><span class="line">    &lt;pluginRepository&gt;</span><br><span class="line">        &lt;id&gt;alfresco-public-snapshots&lt;/id&gt;</span><br><span class="line">        &lt;url&gt;https://artifacts.alfresco.com/nexus/content/groups/public-snapshots&lt;/url&gt;</span><br><span class="line">        &lt;snapshots&gt;</span><br><span class="line">            &lt;enabled&gt;true&lt;/enabled&gt;</span><br><span class="line">            &lt;updatePolicy&gt;daily&lt;/updatePolicy&gt;</span><br><span class="line">        &lt;/snapshots&gt;</span><br><span class="line">    &lt;/pluginRepository&gt;</span><br><span class="line">    &lt;!--&lt;pluginRepository&gt;--&gt;</span><br><span class="line">        &lt;!--&lt;id&gt;beardedgeeks-releases&lt;/id&gt;--&gt;</span><br><span class="line">        &lt;!--&lt;url&gt;http://beardedgeeks.googlecode.com/svn/repository/releases&lt;/url&gt;--&gt;</span><br><span class="line">    &lt;!--&lt;/pluginRepository&gt;--&gt;</span><br><span class="line">    &lt;pluginRepository&gt;</span><br><span class="line">        &lt;id&gt;spring-plugins-release&lt;/id&gt;</span><br><span class="line">        &lt;url&gt;https://repo.spring.io/plugins-release&lt;/url&gt;</span><br><span class="line">    &lt;/pluginRepository&gt;</span><br><span class="line">&lt;/pluginRepositories&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/rexfang/p/7625696.html" target="_blank">Nexus 私有仓库搭建与 Maven 集成</a><br><a href="https://blog.csdn.net/boling_cavalry/article/details/79059021" target="_blank">实战maven私有仓库三部曲之一：搭建和使用</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">https://www.sonatype.com/download-oss-sonatype</span><br><span class="line">cd bin</span><br><span class="line">nexus install</span><br><span class="line">#安装完成后,浏览器访问:</span><br><span class="line">http://localhost:8081/nexus </span><br><span class="line">#默认账号:</span><br><span class="line">admin</span><br><span class="line">#密码</span><br><span class="line">admin123</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">左边 Views/Repositories 菜单下的 Repositories</span><br><span class="line">-&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523280000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523280000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:16.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523280000.html/">[ios] ios</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_31810357?t=1" target="_blank">ios</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523270000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523270000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:15.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523270000.html/">[python] python</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/yanbober" target="_blank">python</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523250000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523250000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:13.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523250000.html/">[springboot] springboot</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/ityouknow/spring-boot-examples" target="_blank">Spring Boot Examples</a><br><a href="https://gitee.com/y_project/RuoYi" target="_blank">RuoYi</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523240000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523240000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:12.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523240000.html/">[cocos] CocosCreator教程</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.byjth.com/CocosCreator/66.html" target="_blank">CocosCreator教程</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos/">cocos</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523230000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523230000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:11.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523230000.html/">[npm] cnpmjc和sinopia搭建私有仓库</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/achenyuan/article/details/82813512" target="_blank">cnpmjc和sinopia搭建私有仓库</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523220000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523220000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:10.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523220000.html/">[js] js实现map</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/mingforyou/p/7153706.html" target="_blank">js实现map</a><br><a href="https://blog.csdn.net/zhangli865621030/article/details/45307087" target="_blank">JS中的Map基本操作</a><br><a href="https://github.com/BrighterEyer/Chess/blob/master/js/commons.js" target="_blank">JS中的Map基本操作</a></p>
+<p>小程序HashMap.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">var app = getApp();</span><br><span class="line"></span><br><span class="line">/** js实现hashmap数据结构 */</span><br><span class="line">class HashMap &#123;</span><br><span class="line"></span><br><span class="line">  constructor() &#123;</span><br><span class="line">    /** 存放键的数组(遍历用到) */</span><br><span class="line">    this.keys = new Array();</span><br><span class="line">    /** 存放数据 */</span><br><span class="line">    this.data = new Object();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 放入一个键值对   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   * @param &#123;Object&#125; value   </span><br><span class="line">   */</span><br><span class="line">  put(key, value) &#123;</span><br><span class="line">    if (this.data[key] == null) &#123;</span><br><span class="line">      this.keys.push(key);</span><br><span class="line">    &#125;</span><br><span class="line">    this.data[key] = value;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取某键对应的值   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   * @return &#123;Object&#125; value   </span><br><span class="line">   */</span><br><span class="line">  get(key) &#123;</span><br><span class="line">    return this.data[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 删除一个键值对   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   */</span><br><span class="line">  remove(key) &#123;</span><br><span class="line">    this.keys.remove(key);</span><br><span class="line">    this.data[key] = null;</span><br><span class="line">    //		delete this.data[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 遍历Map,执行处理函数   </span><br><span class="line">   * @param &#123;Function&#125; 回调函数 function(key,value,index)&#123;..&#125;   </span><br><span class="line">   */</span><br><span class="line">  each(fn) &#123;</span><br><span class="line">    if (typeof fn != &apos;function&apos;) &#123;</span><br><span class="line">      return;</span><br><span class="line">    &#125;</span><br><span class="line">    var len = this.keys.length;</span><br><span class="line">    for (var i = 0; i &lt; len; i++) &#123;</span><br><span class="line">      var k = this.keys[i];</span><br><span class="line">      fn(k, this.data[k], i);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取键值数组(类似Java的entrySet())   </span><br><span class="line">   * @return 键值对象&#123;key,value&#125;的数组   </span><br><span class="line">   */</span><br><span class="line">  entrys() &#123;</span><br><span class="line">    var len = this.keys.length;</span><br><span class="line">    var entrys = new Array(len);</span><br><span class="line">    for (var i = 0; i &lt; len; i++) &#123;</span><br><span class="line">      entrys[i] = &#123;</span><br><span class="line">        key: this.keys[i],</span><br><span class="line">        value: this.data[i]</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    return entrys;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 判断Map是否为空   </span><br><span class="line">   */</span><br><span class="line">  isEmpty() &#123;</span><br><span class="line">    return this.keys.length == 0;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取键值对数量   </span><br><span class="line">   */</span><br><span class="line">  size() &#123;</span><br><span class="line">    return this.keys.length;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 重写toString    </span><br><span class="line">   */</span><br><span class="line">  toString() &#123;</span><br><span class="line">    var s = &quot;&#123;&quot;;</span><br><span class="line">    for (var i = 0; i &lt; this.keys.length; i++, s += &apos;,&apos;) &#123;</span><br><span class="line">      var k = this.keys[i];</span><br><span class="line">      s += k + &quot;=&quot; + this.data[k];</span><br><span class="line">    &#125;</span><br><span class="line">    s += &quot;&#125;&quot;;</span><br><span class="line">    return s;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default HashMap;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/67/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/66/">66</a><a class="page-number" href="/page/67/">67</a><span class="page-number current">68</span><a class="page-number" href="/page/69/">69</a><a class="page-number" href="/page/70/">70</a><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/69/">Next &raquo;</a>
+    </nav>
+  
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 brightereyer
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

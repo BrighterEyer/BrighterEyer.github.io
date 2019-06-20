@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>BrighterEyer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BrighterEyer">
+<meta property="og:url" content="http://brightereyer.xyz/page/55/index.html">
+<meta property="og:site_name" content="BrighterEyer">
+<meta property="og:description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BrighterEyer">
+<meta name="twitter:description" content="敬畏知识，巩固基础，坚持技术，才能改变命运">
+  
+    <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">brightereyer</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">用心看清世界，不要驻足停留</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/brightereyer" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/AE/" style="font-size: 10px;">AE</a> <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Alpine/" style="font-size: 10px;">Alpine</a> <a href="/tags/Android/" style="font-size: 16.88px;">Android</a> <a href="/tags/C/" style="font-size: 10.63px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/PyQt5/" style="font-size: 10px;">PyQt5</a> <a href="/tags/TortoiseGit/" style="font-size: 10px;">TortoiseGit</a> <a href="/tags/TortosieGit/" style="font-size: 10px;">TortosieGit</a> <a href="/tags/UE4/" style="font-size: 10px;">UE4</a> <a href="/tags/android/" style="font-size: 10.63px;">android</a> <a href="/tags/api/" style="font-size: 11.88px;">api</a> <a href="/tags/blog/" style="font-size: 12.5px;">blog</a> <a href="/tags/centos/" style="font-size: 15px;">centos</a> <a href="/tags/centos7/" style="font-size: 11.25px;">centos7</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/cocos/" style="font-size: 11.25px;">cocos</a> <a href="/tags/cocos2d/" style="font-size: 12.5px;">cocos2d</a> <a href="/tags/cocos2d-x/" style="font-size: 10px;">cocos2d-x</a> <a href="/tags/css/" style="font-size: 18.13px;">css</a> <a href="/tags/css3/" style="font-size: 10.63px;">css3</a> <a href="/tags/debian/" style="font-size: 11.88px;">debian</a> <a href="/tags/docker/" style="font-size: 16.25px;">docker</a> <a href="/tags/egret/" style="font-size: 10px;">egret</a> <a href="/tags/electronjs/" style="font-size: 10px;">electronjs</a> <a href="/tags/es6/" style="font-size: 12.5px;">es6</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/flutter/" style="font-size: 10.63px;">flutter</a> <a href="/tags/genymotion/" style="font-size: 10px;">genymotion</a> <a href="/tags/git/" style="font-size: 13.75px;">git</a> <a href="/tags/github/" style="font-size: 11.88px;">github</a> <a href="/tags/gitlab/" style="font-size: 10px;">gitlab</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/h5/" style="font-size: 11.25px;">h5</a> <a href="/tags/h5game/" style="font-size: 10px;">h5game</a> <a href="/tags/hexo/" style="font-size: 11.88px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/ionic3/" style="font-size: 10px;">ionic3</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/java/" style="font-size: 18.75px;">java</a> <a href="/tags/javaswing/" style="font-size: 10px;">javaswing</a> <a href="/tags/jdk8/" style="font-size: 10px;">jdk8</a> <a href="/tags/jenkins/" style="font-size: 15px;">jenkins</a> <a href="/tags/jpa/" style="font-size: 10px;">jpa</a> <a href="/tags/jq/" style="font-size: 10.63px;">jq</a> <a href="/tags/js/" style="font-size: 16.25px;">js</a> <a href="/tags/jsp/" style="font-size: 11.25px;">jsp</a> <a href="/tags/kotlin/" style="font-size: 10.63px;">kotlin</a> <a href="/tags/layui/" style="font-size: 14.38px;">layui</a> <a href="/tags/linux/" style="font-size: 13.13px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/maven/" style="font-size: 11.88px;">maven</a> <a href="/tags/maven插件/" style="font-size: 10.63px;">maven插件</a> <a href="/tags/mpvue/" style="font-size: 10px;">mpvue</a> <a href="/tags/mysql/" style="font-size: 14.38px;">mysql</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/ngrok/" style="font-size: 10.63px;">ngrok</a> <a href="/tags/npm/" style="font-size: 11.25px;">npm</a> <a href="/tags/office/" style="font-size: 10.63px;">office</a> <a href="/tags/pdm/" style="font-size: 10.63px;">pdm</a> <a href="/tags/php/" style="font-size: 11.88px;">php</a> <a href="/tags/ps/" style="font-size: 10px;">ps</a> <a href="/tags/pygame/" style="font-size: 11.88px;">pygame</a> <a href="/tags/python/" style="font-size: 13.75px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/qt/" style="font-size: 10.63px;">qt</a> <a href="/tags/rabbitmq/" style="font-size: 10px;">rabbitmq</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/react-native/" style="font-size: 17.5px;">react-native</a> <a href="/tags/redhat/" style="font-size: 11.25px;">redhat</a> <a href="/tags/redis/" style="font-size: 10.63px;">redis</a> <a href="/tags/requirejs/" style="font-size: 11.88px;">requirejs</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/serlvet/" style="font-size: 10px;">serlvet</a> <a href="/tags/servlet/" style="font-size: 11.25px;">servlet</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/solo/" style="font-size: 10px;">solo</a> <a href="/tags/spring/" style="font-size: 15px;">spring</a> <a href="/tags/springboot/" style="font-size: 19.38px;">springboot</a> <a href="/tags/springcloud/" style="font-size: 13.75px;">springcloud</a> <a href="/tags/springmvc/" style="font-size: 11.25px;">springmvc</a> <a href="/tags/sublime/" style="font-size: 10.63px;">sublime</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/swagger/" style="font-size: 10px;">swagger</a> <a href="/tags/thinkphp/" style="font-size: 10px;">thinkphp</a> <a href="/tags/thymeleaf/" style="font-size: 10px;">thymeleaf</a> <a href="/tags/ubuntu/" style="font-size: 13.13px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vue/" style="font-size: 10.63px;">vue</a> <a href="/tags/webpack/" style="font-size: 13.13px;">webpack</a> <a href="/tags/webservice/" style="font-size: 10px;">webservice</a> <a href="/tags/weui/" style="font-size: 10px;">weui</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/wxs/" style="font-size: 10px;">wxs</a> <a href="/tags/xmind/" style="font-size: 10px;">xmind</a> <a href="/tags/二维码/" style="font-size: 10px;">二维码</a> <a href="/tags/优秀毕业设计/" style="font-size: 10px;">优秀毕业设计</a> <a href="/tags/优秀程序媛/" style="font-size: 10px;">优秀程序媛</a> <a href="/tags/前端/" style="font-size: 15.63px;">前端</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/在线工具/" style="font-size: 10px;">在线工具</a> <a href="/tags/地图/" style="font-size: 10.63px;">地图</a> <a href="/tags/小程序/" style="font-size: 20px;">小程序</a> <a href="/tags/嵌入式/" style="font-size: 10px;">嵌入式</a> <a href="/tags/工具/" style="font-size: 13.13px;">工具</a> <a href="/tags/微信/" style="font-size: 10.63px;">微信</a> <a href="/tags/微信小游戏/" style="font-size: 10px;">微信小游戏</a> <a href="/tags/快应用/" style="font-size: 10px;">快应用</a> <a href="/tags/批处理/" style="font-size: 10.63px;">批处理</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a> <a href="/tags/政策/" style="font-size: 10px;">政策</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/服务器/" style="font-size: 11.25px;">服务器</a> <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a> <a href="/tags/架构/" style="font-size: 10px;">架构</a> <a href="/tags/树莓/" style="font-size: 10px;">树莓</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/源码/" style="font-size: 10px;">源码</a> <a href="/tags/百度地图/" style="font-size: 10px;">百度地图</a> <a href="/tags/硬件/" style="font-size: 10px;">硬件</a> <a href="/tags/移动web前端/" style="font-size: 10px;">移动web前端</a> <a href="/tags/第三方接口/" style="font-size: 10px;">第三方接口</a> <a href="/tags/简历/" style="font-size: 10px;">简历</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/素材/" style="font-size: 10.63px;">素材</a> <a href="/tags/蓝湖/" style="font-size: 10px;">蓝湖</a> <a href="/tags/运维/" style="font-size: 10px;">运维</a> <a href="/tags/面试/" style="font-size: 11.25px;">面试</a> <a href="/tags/鬼畜视频制作/" style="font-size: 10px;">鬼畜视频制作</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">brightereyer</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">brightereyer</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">用心看清世界，不要驻足停留</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
+                
+                    <li><a href="/categories/digital">玩转数码</a></li>
+                
+                    <li><a href="/categories/algorithm">算法学习</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/brightereyer" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-/articles/2019/02/25/1551025222000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/25/articles/2019/02/25/1551025222000.html/" class="article-date">
+      <time datetime="2019-02-24T16:20:22.000Z" itemprop="datePublished">2019-02-25</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025222000.html/">[java] jdbc</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/zhangyinhua/p/7522375.html" target="_blank">LanceToBigData|JDBC（一）之细说JDBC</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/06/1550453913000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/06/1550453913000.html/" class="article-date">
+      <time datetime="2019-02-18T01:38:33.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/06/1550453913000.html/">[编程题库] 牛客网</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.nowcoder.com/" target="_blank">牛客网</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/06/1550453912000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/06/1550453912000.html/" class="article-date">
+      <time datetime="2019-02-18T01:38:32.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/06/1550453912000.html/">[linux] 更换源</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="http://wiki.ubuntu.org.cn/%E6%A8%A1%E6%9D%BF:14.04source" target="_blank">ubuntu官方镜像源</a><br><a href="https://mirrors.ustc.edu.cn/repogen/" target="_blank">中科大镜像源（推荐）</a><br><a href="http://mirrors.ustc.edu.cn/" target="_blank">ustc中国官方镜像网</a><br><a href="http://mirrors.sohu.com/" target="_blank">搜狐镜像网</a><br><a href="http://mirrors.163.com/" target="_blank">网易镜像网</a><br><a href="https://opsx.alibaba.com/mirror" target="_blank">阿里巴巴开源镜像站</a><br><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank">清华开源镜像站</a><br><a href="https://blog.csdn.net/weixin_41762173/article/details/79480832" target="_blank">ubuntu更改镜像源（软件源）</a></p>
+<p>ubuntu 14.04LTS 官方默认源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty main restricted</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty universe</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty-updates universe</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty multiverse</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty-updates multiverse</span><br><span class="line">deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse</span><br><span class="line">deb http://security.ubuntu.com/ubuntu/ trusty-security main restricted</span><br><span class="line">deb http://security.ubuntu.com/ubuntu/ trusty-security universe</span><br><span class="line">deb http://security.ubuntu.com/ubuntu/ trusty-security multiverse</span><br></pre></td></tr></table></figure></p>
+<p>ubuntu 14.04LTS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">docker run -it ubuntu:14.04 /bin/bash</span><br><span class="line">cat /etc/apt/sources.list|grep ^[^#]</span><br><span class="line">apt-get install apt-transport-https vim</span><br><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">cat &gt; /etc/apt/sources.list &lt;&lt;EOF</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse</span><br><span class="line">EOF</span><br><span class="line">apt-get update</span><br><span class="line">apt-get install</span><br></pre></td></tr></table></figure></p>
+<p>ubuntu软件操作的相关命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update  更新源</span><br><span class="line"> </span><br><span class="line">sudo apt-get install package 安装包</span><br><span class="line"> </span><br><span class="line">sudo apt-get remove package 删除包</span><br><span class="line"> </span><br><span class="line">sudo apt-cache search package 搜索软件包</span><br><span class="line"> </span><br><span class="line">sudo apt-cache show package  获取包的相关信息，如说明、大小、版本等</span><br><span class="line"> </span><br><span class="line">sudo apt-get install package --reinstall   重新安装包</span><br><span class="line"> </span><br><span class="line">sudo apt-get -f install   修复安装</span><br><span class="line"> </span><br><span class="line">sudo apt-get remove package --purge 删除包，包括配置文件等</span><br><span class="line"> </span><br><span class="line">sudo apt-get build-dep package 安装相关的编译环境</span><br><span class="line"> </span><br><span class="line">sudo apt-get upgrade 更新已安装的包</span><br><span class="line"> </span><br><span class="line">sudo apt-get dist-upgrade 升级系统</span><br><span class="line"> </span><br><span class="line">sudo apt-cache depends package 了解使用该包依赖那些包</span><br><span class="line"> </span><br><span class="line">sudo apt-cache rdepends package 查看该包被哪些包依赖</span><br><span class="line"> </span><br><span class="line">sudo apt-get source package  下载该包的源代码</span><br><span class="line"> </span><br><span class="line">sudo apt-get clean &amp;&amp; sudo apt-get autoclean 清理无用的包</span><br><span class="line"> </span><br><span class="line">sudo apt-get check 检查是否有损坏的依赖</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/xuchunlin/p/5671572.html" target="_blank">linux查看系统</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451301000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451301000.html/" class="article-date">
+      <time datetime="2019-02-18T00:55:01.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451301000.html/">[springboot] springboot使用JWT集成Ng-Alain</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/kangkanglou/article/details/84579913" target="_blank">SpringBoot使用JWT集成Ng-Alain</a><br><a href="https://github.com/ypmc/springboot-ngalain-jwt" target="_blank">github|springboot-ngalain-jwt</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451300000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451300000.html/" class="article-date">
+      <time datetime="2019-02-18T00:55:00.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451300000.html/">[springboot] springboot+solr</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/larger5/article/details/79768438" target="_blank">[增删改查] SpringBoot 整合 Solr 之 SolrClient 实现 CRUD、分页接口、高亮显示</a><br><a href="https://github.com/larger5/SpringBoot_solr_base.git" target="_blank">github|SpringBoot_solr_base</a><br><a href="https://blog.csdn.net/appleyk/article/details/79280836" target="_blank">Spring-Boot+Solr搜索应用（索引数据创建+关键字高亮+thymeleaf静态html模板渲染跳转）</a><br><a href="https://blog.csdn.net/larger5/article/details/79946353" target="_blank">使用 LayUI+SpringBoot+Solr 模仿百度、做站内搜索引擎</a><br><a href="https://www.cnblogs.com/cblogs/p/solr-tutorial.html" target="_blank">Apache Solr入门教程(初学者之旅) </a><br><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">jdk8</a><br><a href="https://archive.apache.org/dist/zookeeper/" target="_blank">zookeeper</a><br><a href="https://blog.csdn.net/qiushisoftware/article/details/79043379" target="_blank">Zookeeper简介与集群搭建</a><br><a href="https://www.jianshu.com/p/1f4c70d7ef40" target="_blank">Linux ZooKeeper入门教程（一）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Zookeeper简介</span><br><span class="line">Zookeeper是一个高效的分布式协调服务，可以提供配置信息管理、命名、分布式同步、集群管理、数据库切换等服务。它不适合用来存储大量信息，可以用来存储一些配置、发布与订阅等少量信息。Hadoop、Storm、消息中间件、RPC服务框架、分布式数据库同步系统，这些都是Zookeeper的应用场景。</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/qq_26641781/article/details/80886831" target="_blank">idea Docker安装Zookeeper并进行操作</a><br><a href="https://www.cnblogs.com/kingkoo/p/8732448.html" target="_blank">使用 Docker 一步搞定 ZooKeeper 集群的搭建</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">docker pull zookeeper</span><br><span class="line">docker run --privileged=true -d --name zookeeper --publish 2181:2181 -d zookeeper:latest</span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line">#idea提供了一个Zookeeper插件，以供连接Zookeeper服务中心和查看内容</span><br><span class="line">#打开idea –&gt; Settings -&gt; Plugins,搜索Zoo进行下载安装</span><br><span class="line"></span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line">        &lt;!-- 原生zookeeper --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;zookeeper&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;3.4.6&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--Apache Curator--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.apache.curator&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;curator-framework&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.9.0&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- zkclient --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;com.101tec&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;zkclient&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;0.9&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;log4j&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;log4j&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;1.2.17&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://tomcat.apache.org/download-80.cgi" target="_blank">tomcat8</a></p>
+<p><a href="https://blog.csdn.net/bskfnvjtlyzmv867/article/details/81623416" target="_blank">docker+centos+solr</a><br><a href="http://lucene.apache.org/solr/downloads.html" target="_blank">solr下载页</a><br><a href="http://mirrors.shu.edu.cn/apache/lucene/solr/7.7.0/solr-7.7.0.zip" target="_blank">solr-7.7.0.zip</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd solr/bin</span><br><span class="line">solr start</span><br><span class="line">solr create -c mycore1 -p 8983</span><br><span class="line">#访问</span><br><span class="line">#http://localhost:8983/solr/admin/cores?action=STATUS&amp;core=mycore1</span><br><span class="line">#solr服务器默认端口8983，访问http://localhost:8983/solr/</span><br><span class="line">solr stop -all</span><br><span class="line"></span><br><span class="line">https://github.com/x113773/testall/</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/cs_hnu_scw/article/details/79388080" target="_blank">手把手教你如何玩转Solr（包含项目实战）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://pan.baidu.com/s/1dRClm2</span><br><span class="line">olio</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.jianshu.com/p/45bc44a43485" target="_blank">使用SSM+Solr优雅的实现电商项目中的搜索功能</a><br><a href="https://github.com/TyCoding/ssm-redis-solr" target="_blank">github|SSM整合Solr实现电商项目中的搜索功能</a></p>
+<p><a href="https://blog.csdn.net/weixin_38589021/article/details/80323957" target="_blank">Docker搭建Solr-IKAnalyzer</a><br><a href="https://github.com/kingdz2008/dockerfile/tree/master/solr-ikanalyzer" target="_blank">github|solr-ikanalyzer</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build .</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/qq_26641781/article/details/81671323" target="_blank">Docker+Solr+IK</a><br><a href="https://www.cnblogs.com/yehuabin/p/10180737.html" target="_blank">docker-compose 安装solr+ikanalyzer</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it solr bash</span><br><span class="line">cd /opt/solr/server/solr</span><br><span class="line">mkdir ik_core</span><br><span class="line">cd ik_core</span><br><span class="line">mkdir data</span><br><span class="line">cp -r ../configsets/sample_techproducts_configs/conf/ .</span><br><span class="line">echo &apos;name=ik_core&apos; &gt; core.properties</span><br><span class="line">ls</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/xiaokang123456kao/article/details/72844729" target="_blank">solr简介和使用</a><br><a href="https://pan.baidu.com/s/1tIQdpXsOm_98Syuf4YQKag" target="_blank">ikanalyzer</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451299000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451299000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:59.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451299000.html/">[springboot] springboot视频播放</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/HcJsJqJSSM/article/details/80753712" target="_blank">SpringBoot基于VIP视频解析接口实现视频播放</a><br><a href="https://blog.csdn.net/qq_37164847/article/details/81668242" target="_blank">springboot2.0上传文件（视频，图片）到服务器硬盘，并保存路径至mysql,返回可直接访问的url</a><br><a href="https://gitee.com/xuhaiyan/sg" target="_blank">github|springboot2.0上传文件（图片视频）项目</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create database movies;</span><br><span class="line">use movies;</span><br><span class="line">create table video(</span><br><span class="line">	id int primary key auto_increment,</span><br><span class="line">	url varchar(255),</span><br><span class="line">	name varchar(255),</span><br><span class="line">	path varchar(255)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451298000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451298000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:58.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451298000.html/">[springboot] springboot实战专栏</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/HcJsJqJSSM/column/info/22887" target="_blank">实战专栏</a></p>
+<p>SpringBoot基于Excel模板完成下载<br><a href="https://blog.csdn.net/HcJsJqJSSM/article/details/80468598" target="_blank">IDEA+Maven+SpringBoot+BootStrap+Thymeleaf+Mysql+Excel+MyBatis+Lombok+IDEA热部署</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451297000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451297000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:57.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451297000.html/">[springboot] springboot+mybatis+generator+jpa</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/liuchengcc/p/8998043.html" target="_blank">Springboot+MyBatis+JPA集成</a><br><a href="http://www.mybatis.org/generator/index.html" target="_blank">MyBatis Generator</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clean install -Dmaven.test.skip=true</span><br><span class="line">mybatis-generator:generate</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/lkdirk/p/7079905.html" target="_blank">springBoot数据库jpa+对接mybatis</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create database mybatisjpa;</span><br><span class="line">create table t_user(</span><br><span class="line">    id int primary key auto_increment,</span><br><span class="line">    name varchar(255)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<p>pom.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;        </span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">     &lt;version&gt;5.1.21&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>application.properties<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spring.datasource.url=jdbc:mysql://localhost:3306/mybatisjpa?characterEncoding=UTF8&amp;socketTimeout=60000</span><br><span class="line">spring.datasource.username=root</span><br><span class="line">spring.datasource.password=root</span><br><span class="line">spring.datasource.driver-class-name=com.mysql.jdbc.Driver</span><br></pre></td></tr></table></figure></p>
+<p>entity/User.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public class User &#123;</span><br><span class="line">    </span><br><span class="line">    private Integer id;</span><br><span class="line">    private String name;</span><br><span class="line"></span><br><span class="line">    public Integer getId() &#123;</span><br><span class="line">        return id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setId(Integer id) &#123;</span><br><span class="line">        this.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>继承接口后会自动注入，不需要加@configuration，@bean等进行配置，可以直接@Autowired注入使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Mapper</span><br><span class="line">@Repository</span><br><span class="line">public interface UserRepository extends JpaRepository&lt;User,Integer&gt;&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>接入mybatis<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.3.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>编写dao，注意加上@Mapper,使用起来和正常mybatis一样，然后在调用处直接注入即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Mapper</span><br><span class="line">public interface UserDAO &#123;</span><br><span class="line"></span><br><span class="line">   @Select(&quot;select count(1) from User&quot;)</span><br><span class="line">   int findCount();</span><br><span class="line"></span><br><span class="line">   @Select(&quot;select id,name from User where id = #&#123;id&#125;&quot;)</span><br><span class="line">   User findById(@Param(&quot;id&quot;)int id);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/svili/p/7232323.html" target="_blank">Mybatis JPA-集成方案+源码</a><br><a href="https://github.com/cnsvili/mybatis-jpa" target="_blank">github|mybatis-jpa</a><br><a href="https://gitee.com/svili/mybatis-jpa" target="_blank">gitee|mybatis-jpa</a><br><a href="https://github.com/LittleNewbie/mybatis-jpa" target="_blank">spring+mybatis+jpa源码地址</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451296000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451296000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:56.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451296000.html/">[spring] spring+shiro</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/HeatDeath/article/details/78407092" target="_blank">springmvc+shiro</a><br><a href="https://crossoverjie.top/2016/07/15/SSM3/" target="_blank">ssm+shiro</a><br><a href="https://www.sojson.com/shiro" target="_blank">springMVC + Mybatis + Redis 的Shiro整套项目Demo</a><br><a href="https://github.com/baichengzhou/SpringMVC-Mybatis-Shiro-redis-0.2" target="_blank">SpringMVC-Mybatis-Shiro-redis-0.2</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/18/1550451295000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/18/articles/2019/02/18/1550451295000.html/" class="article-date">
+      <time datetime="2019-02-18T00:54:55.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/18/articles/2019/02/18/1550451295000.html/">[java] 设计模式demos</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/ypmc/design-pattern" target="_blank">java设计模式demos</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/54/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/53/">53</a><a class="page-number" href="/page/54/">54</a><span class="page-number current">55</span><a class="page-number" href="/page/56/">56</a><a class="page-number" href="/page/57/">57</a><span class="space">&hellip;</span><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/56/">Next &raquo;</a>
+    </nav>
+  
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 brightereyer
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
