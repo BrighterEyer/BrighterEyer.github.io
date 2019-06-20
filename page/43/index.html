@@ -280,6 +280,378 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-/articles/2019/03/15/1552655573000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552655573000.html/" class="article-date">
+      <time datetime="2019-03-15T13:12:53.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552655573000.html/">[layui] 根据地图地址定位省市区</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>省市区联动<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        .red &#123;</span></span><br><span class="line"><span class="undefined">            color: red;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 弹出层的内容start --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"showParkingSpaceContent"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 内容显示区域start --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layuiWindownContent"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-form font-num-6"</span> <span class="attr">lay-filter</span>=<span class="string">"parkingSpaceFrom"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-form-item"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"layui-form-label"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"red"</span>&gt;</span>* <span class="tag">&lt;/<span class="name">span</span>&gt;</span>地址<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-input-inline"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"provinceName"</span> <span class="attr">name</span>=<span class="string">"provinceName"</span> <span class="attr">lay-verify</span>=<span class="string">"provinceName"</span> <span class="attr">autocomplete</span>=<span class="string">"off"</span> <span class="attr">class</span>=<span class="string">"layui-input"</span> <span class="attr">placeholder</span>=<span class="string">"省"</span> <span class="attr">disabled</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-input-inline"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"cityName"</span> <span class="attr">name</span>=<span class="string">"cityName"</span> <span class="attr">lay-verify</span>=<span class="string">"cityName"</span> <span class="attr">autocomplete</span>=<span class="string">"off"</span> <span class="attr">class</span>=<span class="string">"layui-input"</span> <span class="attr">placeholder</span>=<span class="string">"市"</span> <span class="attr">disabled</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-input-inline"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"areaName"</span> <span class="attr">name</span>=<span class="string">"areaName"</span> <span class="attr">lay-verify</span>=<span class="string">"areaName"</span> <span class="attr">autocomplete</span>=<span class="string">"off"</span> <span class="attr">class</span>=<span class="string">"layui-input"</span> <span class="attr">placeholder</span>=<span class="string">"县/区"</span> <span class="attr">disabled</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-form-item"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"layui-form-label"</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-input-inline"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"location"</span> <span class="attr">name</span>=<span class="string">"location"</span> <span class="attr">lay-verify</span>=<span class="string">"location"</span> <span class="attr">autocomplete</span>=<span class="string">"off"</span> <span class="attr">class</span>=<span class="string">"layui-input"</span> <span class="attr">placeholder</span>=<span class="string">"请填写详细地址"</span> <span class="attr">style</span>=<span class="string">"margin-top: -11px;"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div-custom"</span> <span class="attr">style</span>=<span class="string">"margin-top: -11px;"</span>&gt;</span>地图取点自动获取省/市/区<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-form-item"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"layui-form-label"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"red"</span>&gt;</span>* <span class="tag">&lt;/<span class="name">span</span>&gt;</span>经纬度<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-input-inline"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"inpLongitudeNum"</span> <span class="attr">name</span>=<span class="string">"inpLongitudeNum"</span> <span class="attr">lay-verify</span>=<span class="string">"areaName"</span> <span class="attr">autocomplete</span>=<span class="string">"off"</span> <span class="attr">class</span>=<span class="string">"layui-input"</span> <span class="attr">placeholder</span>=<span class="string">"经度"</span> <span class="attr">onkeyup</span>=<span class="string">"if(isNaN(value))execCommand('undo')"</span> <span class="attr">onafterpaste</span>=<span class="string">"if(isNaN(value))execCommand('undo')"</span> <span class="attr">disabled</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-input-inline"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"inpLatitudeNum"</span> <span class="attr">name</span>=<span class="string">"inpLatitudeNum"</span> <span class="attr">lay-verify</span>=<span class="string">"location"</span> <span class="attr">autocomplete</span>=<span class="string">"off"</span> <span class="attr">class</span>=<span class="string">"layui-input"</span> <span class="attr">placeholder</span>=<span class="string">"纬度"</span> <span class="attr">onkeyup</span>=<span class="string">"if(isNaN(value))execCommand('undo')"</span> <span class="attr">onafterpaste</span>=<span class="string">"if(isNaN(value))execCommand('undo')"</span> <span class="attr">disabled</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div-custom"</span>&gt;</span>地图取点自动获取经纬度<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-form-item"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"layui-form-label"</span>&gt;</span>城市名称<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-input-inline"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"showMapCityName"</span> <span class="attr">name</span>=<span class="string">"showMapCityName"</span> <span class="attr">oninput</span>=<span class="string">"if(value.length&gt;15)value=value.slice(0,15)"</span> <span class="attr">lay-verify</span>=<span class="string">"areaName"</span> <span class="attr">autocomplete</span>=<span class="string">"off"</span> <span class="attr">class</span>=<span class="string">"layui-input"</span> <span class="attr">placeholder</span>=<span class="string">"请输入城市名称"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div-btn"</span> <span class="attr">id</span>=<span class="string">"getNewCityName"</span>&gt;</span>定位<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div-custom"</span>&gt;</span>根据城市名可定位到地图相应位置<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"showParkingMap"</span> <span class="attr">class</span>=<span class="string">"show-parking-map-box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 内容显示区域end --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    layui.use([<span class="string">'table'</span>, <span class="string">'form'</span>, <span class="string">'laydate'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> myCity = <span class="keyword">new</span> BMap.LocalCity();</span></span><br><span class="line"><span class="undefined">        myCity.get(myFun);</span></span><br><span class="line"><span class="javascript">        oldParkingName = <span class="string">""</span>;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (type == <span class="string">"edit"</span>) &#123;</span></span><br><span class="line"><span class="javascript">            $(<span class="string">"#parkingCreateTime"</span>).removeClass(<span class="string">"none"</span>);;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="comment">// 百度地图API功能</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"showParkingMap"</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> point = <span class="keyword">new</span> BMap.Point(<span class="number">116.331398</span>, <span class="number">39.897445</span>); <span class="comment">//地图中心点</span></span></span><br><span class="line"><span class="javascript">        map.centerAndZoom(point, <span class="number">12</span>); <span class="comment">//缩放层级</span></span></span><br><span class="line"><span class="javascript">        map.enableScrollWheelZoom(); <span class="comment">// 启用滚轮放大缩小，默认禁用</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> geocoder = <span class="keyword">new</span> BMap.Geocoder(); <span class="comment">//计算</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//"定位"按钮</span></span></span><br><span class="line"><span class="javascript">        $(<span class="string">"#getNewCityName"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> cityName = $(<span class="string">"#showMapCityName"</span>).val();</span></span><br><span class="line"><span class="javascript">            <span class="keyword">if</span> (cityName != <span class="string">""</span>) &#123;</span></span><br><span class="line"><span class="javascript">                map.centerAndZoom(cityName, <span class="number">11</span>); <span class="comment">// 用城市名设置地图中心点</span></span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        map.addEventListener(<span class="string">"click"</span>, showInfo);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> ($(<span class="string">".show-parking-area-box"</span>).html() == <span class="string">""</span>) &#123;</span></span><br><span class="line"><span class="javascript">            $(<span class="string">"#big-area-box"</span>).removeClass(<span class="string">"none"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> areaObj = &#123; <span class="string">"id"</span>: <span class="number">0</span>, <span class="string">"areaName"</span>: <span class="string">""</span>, <span class="string">"longitude"</span>: longitudeOverAll, <span class="string">"latitude"</span>: latitudeOverAll &#125;;</span></span><br><span class="line"><span class="undefined">            addAreaHtmlFunction(0, areaObj);</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (type == <span class="string">"add"</span>) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="function"><span class="keyword">function</span> <span class="title">myFun</span>(<span class="params">result</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> cityName = result.name;</span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#showMapCityName"</span>).val(cityName);</span></span><br><span class="line"><span class="undefined">                map.setCenter(cityName);</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="javascript">            $(<span class="string">"#showMapCityName"</span>).val(data.cityName);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> new_point = <span class="keyword">new</span> BMap.Point(data.longitude, data.latitude)</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> marker = <span class="keyword">new</span> BMap.Marker(new_point)</span></span><br><span class="line"><span class="undefined">            map.addOverlay(marker);</span></span><br><span class="line"><span class="undefined">            map.centerAndZoom(new_point, 15);</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> myCity = <span class="keyword">new</span> BMap.LocalCity();</span></span><br><span class="line"><span class="undefined">        myCity.get(myFun);</span></span><br><span class="line"><span class="javascript">        oldParkingName = <span class="string">""</span>;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//鼠标点击地图，增加点</span></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">showInfo</span>(<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="undefined">            map.clearOverlays();</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> marker = <span class="keyword">new</span> BMap.Marker(e.point);</span></span><br><span class="line"><span class="undefined">            map.addOverlay(marker);</span></span><br><span class="line"><span class="javascript">            geocoder.getLocation(e.point, <span class="function"><span class="keyword">function</span>(<span class="params">rs</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> provincesOverAll = rs.addressComponents.province;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> cityOverAll = rs.addressComponents.city;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> countyOverAll = rs.addressComponents.district;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> detailsOverAll = rs.addressComponents.street;</span></span><br><span class="line"><span class="undefined">                longitudeOverAll = e.point.lng;</span></span><br><span class="line"><span class="undefined">                latitudeOverAll = e.point.lat;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#provinceName"</span>).val(provincesOverAll); <span class="comment">//获取省份</span></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#provinceName"</span>).css(<span class="string">"color"</span>, <span class="string">"gray"</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#cityName"</span>).val(cityOverAll); <span class="comment">//获取城市</span></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#cityName"</span>).css(<span class="string">"color"</span>, <span class="string">"gray"</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#areaName"</span>).val(countyOverAll); <span class="comment">//获取区</span></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#areaName"</span>).css(<span class="string">"color"</span>, <span class="string">"gray"</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#location"</span>).val(detailsOverAll); <span class="comment">//获取街道</span></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#inpLongitudeNum"</span>).val(longitudeOverAll); <span class="comment">//填入经度</span></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#inpLongitudeNum"</span>).css(<span class="string">"color"</span>, <span class="string">"gray"</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#inpLatitudeNum"</span>).val(latitudeOverAll); <span class="comment">//填入纬度</span></span></span><br><span class="line"><span class="javascript">                $(<span class="string">"#inpLatitudeNum"</span>).css(<span class="string">"color"</span>, <span class="string">"gray"</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">            &#125;);</span></span><br><span class="line"><span class="undefined">        &#125;;</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/layui/">layui</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552655572000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552655572000.html/" class="article-date">
+      <time datetime="2019-03-15T13:12:52.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552655572000.html/">[layui] 省市区三级联动</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/weixin_42457316/article/details/81298069" target="_blank">layui（省市区）三级联动</a><br><a href="https://github.com/shulongfei/layui_upload.git" target="_blank">github|layui（省市区）三级联动</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/layui/">layui</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623375000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623375000.html/" class="article-date">
+      <time datetime="2019-03-15T04:16:15.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623375000.html/">[Android] 在线短视频播放</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>一款纯粹的在线视频App，基于Material Design + MVP + RxJava + Retrofit + Realm + Glide<br><a href="https://github.com/GeekGhost/Ghost" target="_blank">微影</a></p>
+<p><a href="https://github.com/JackChan1999/VideoPlayer" target="_blank">在线短视频播放</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623374000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623374000.html/" class="article-date">
+      <time datetime="2019-03-15T04:16:14.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623374000.html/">[API] 实用API</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi" target="_blank">网易云API</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/API/">API</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623373000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623373000.html/" class="article-date">
+      <time datetime="2019-03-15T04:16:13.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623373000.html/">[java] Java网络编程：BIO、NIO、AIO</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/anxpp/article/details/51512200" target="_blank">Java网络编程：BIO、NIO、AIO</a><br><a href="https://github.com/anxpp/Java-IO" target="_blank">github | Java-IO </a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623372000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623372000.html/" class="article-date">
+      <time datetime="2019-03-15T04:16:12.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623372000.html/">[java] 获取当前年、月、日 、小时 、分钟、 秒、 毫秒</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/xuforeverlove/article/details/81565173" target="_balnk">java实现获取当前年、月、日 、小时 、分钟、 秒、 毫秒</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-/articles/2019/03/15/1552623371000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -535,388 +907,9 @@
 
 
   
-    <article id="post-/articles/2019/03/15/1552623367000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623367000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:07.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623367000.html/">[mysql] 触发器</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/CraryPrimitiveMan/p/4206942.html" target="_blank">MySQL的学习 - 触发器</a><br><a href="https://www.cnblogs.com/zhangzhongxian/p/7070277.html" target="_blank">MySQL触发器更新和插入操作</a></p>
-<p><a href="http://www.cnblogs.com/zzwlovegfj/archive/2012/07/04/2576989.html" target="_blank">mysql之触发器trigger|包含示例</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">触发器创建语法四要素：</span><br><span class="line">1.监视地点(table) </span><br><span class="line">2.监视事件(insert/update/delete) </span><br><span class="line">3.触发时间(after/before) </span><br><span class="line">4.触发事件(insert/update/delete)</span><br></pre></td></tr></table></figure></p>
-<p>句型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TRIGGER &lt;trigger_name&gt;</span><br><span class="line">&lt;after/before&gt; &lt;insert/update/delete&gt; ON &lt;tbl_name&gt; FOR EACH ROW</span><br><span class="line">begin</span><br><span class="line">  &lt;trigger_stmt&gt;</span><br><span class="line">end;</span><br></pre></td></tr></table></figure></p>
-<p>一个完整的创建触发器示例<br>创建site_chart_log表格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">create table site_chart_log(</span><br><span class="line">	id int(11) primary key auto_increment,</span><br><span class="line">	site_id int(11),</span><br><span class="line">	two int(11),</span><br><span class="line">	four int(11),</span><br><span class="line">	six int(11),</span><br><span class="line">	eight int(11),</span><br><span class="line">	ten int(11),</span><br><span class="line">	twelve int(11),</span><br><span class="line">	fourteen int(11),</span><br><span class="line">	eighteen int(11),</span><br><span class="line">	twenty int(11),</span><br><span class="line">	twenty2 int(11),</span><br><span class="line">	twenty4 int(11)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DELIMITER $</span><br><span class="line">create trigger tri_site_chart_log after update</span><br><span class="line">on student for each row</span><br><span class="line">begin</span><br><span class="line">declare c int;</span><br><span class="line">set c = (select stuCount from class where classID=new.classID);</span><br><span class="line">update class set stuCount = c + 1 where classID = new.classID;</span><br><span class="line">end$</span><br><span class="line">DELIMITER ;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create trigger upd_tri_site_chart_log</span><br><span class="line">after insert on StuCost for each row </span><br><span class="line">begin </span><br><span class="line"> update StuCostbyHour set HourCost = HourCost + new.Cost </span><br><span class="line"> where (TimeJD = hour(new.RecordTime) + 1) and date_format(new.RecordTime, &apos;%Y-%m-%d&apos;) = date_format(RecordTime, &apos;%Y-%m-%d&apos;); </span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">2.存储引擎与其特点</span><br><span class="line"></span><br><span class="line">特点                Myisam                    InnoDB</span><br><span class="line"></span><br><span class="line">批量插入的速度      高                           低</span><br><span class="line"></span><br><span class="line">事务安全            不支持                       支持</span><br><span class="line"></span><br><span class="line">全文索引            支持                          支持(5.5或以上版本)</span><br><span class="line"></span><br><span class="line">锁机制               表锁                           行锁</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623366000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623366000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:06.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623366000.html/">[python] python代码</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/miqi1992/python_code" target="_blank">python_code</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623364000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623364000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:04.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623364000.html/">[springboot] elaticsearch</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/anxpp/spring-boot-elasticsearch" target="_blank">spring-boot-elasticsearch</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623363000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623363000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:03.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623363000.html/">[springboot] idea+lombok+@Slf4j</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/xue632777974/article/details/80437452" target="_blank">lombok @Slf4j注解</a><br><a href="https://github.com/mplushnikov/lombok-intellij-plugin/releases" target="_blank">idea lombok插件</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@Data：注解在类上；提供类所有属性的 getting 和 setting 方法，此外还提供了equals、canEqual、hashCode、toString 方法 </span><br><span class="line">@SneakyThrows：无需在签名处显式抛出异常</span><br><span class="line">@Log4j：注解在类上；为类提供一个 属性名为log 的 log4j 日志对像 </span><br><span class="line">@Slf4j: 同上 </span><br><span class="line">@NoArgsConstructor：注解在类上；为类提供一个无参的构造方法 </span><br><span class="line">@AllArgsConstructor：注解在类上；为类提供一个全参的构造方法</span><br><span class="line"></span><br><span class="line">@Setter：注解在属性上；为属性提供 setting 方法</span><br><span class="line">@Getter：注解在属性上；为属性提供 getting 方法</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.cnblogs.com/30go/p/8468981.html" target="_blank">eclipse lombok</a><br><a href="https://blog.csdn.net/qq_20698983/article/details/83962002" target="_blank">Spring boot学习之集成logback和lombok(四)</a><br><a href="https://github.com/xiaotian180/spring-boot-parent/tree/master/3.spring-boot-logback-lombok" target="_blank">github|spring-boot-logback-lombok</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623362000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623362000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:02.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623362000.html/">[springboot] jar打包发布</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mvn clean install -Dmaven.test.skip=true</span><br><span class="line">screen -ls</span><br><span class="line">#创建 </span><br><span class="line">screen -S &lt;名字&gt;</span><br><span class="line">#切换</span><br><span class="line">screen -r &lt;名字&gt;</span><br><span class="line">#退出</span><br><span class="line">Ctrl + A 松开Ctrl 按 D</span><br><span class="line">#查看进程</span><br><span class="line">netstat -anp | grep &lt;服务端口&gt;</span><br><span class="line">kill &lt;进程id&gt;</span><br><span class="line">java -Xms512m -Xmx512m -jar &lt;jar包名&gt; &amp;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623361000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623361000.html/" class="article-date">
-      <time datetime="2019-03-15T04:16:01.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623361000.html/">[springboot] kaptcha验证码</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/u014104286/article/details/70515004" target="_blank">springboot 集成kaptcha验证码简单实例</a><br><a href="https://blog.csdn.net/chenjin_chenjin/article/details/79149100" target="_blank">spring boot下验证码的实现</a><br><a href="https://github.com/larger5/Kaptcha.git" target="_blank">Kaptcha</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;com.github.penggle&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;kaptcha&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;2.3.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/42/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><a class="page-number" href="/page/42/">42</a><span class="page-number current">43</span><a class="page-number" href="/page/44/">44</a><a class="page-number" href="/page/45/">45</a><span class="space">&hellip;</span><a class="page-number" href="/page/70/">70</a><a class="extend next" rel="next" href="/page/44/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/42/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><a class="page-number" href="/page/42/">42</a><span class="page-number current">43</span><a class="page-number" href="/page/44/">44</a><a class="page-number" href="/page/45/">45</a><span class="space">&hellip;</span><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/44/">Next &raquo;</a>
     </nav>
   
 

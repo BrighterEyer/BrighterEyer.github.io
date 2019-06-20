@@ -280,6 +280,334 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-/articles/2019/05/04/1557015867000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015867000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:27.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015867000.html/">[h5] 本地存储</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_36410795/article/details/86684994" target="_blank">Html5 本地存储 local Storage 完整功能小案例demo</a></p>
+<blockquote>
+<ol start="2">
+<li>涉及功能知识点</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">添加本地存储</span><br><span class="line">查询本地存储</span><br><span class="line">根据 index 删除本地存储</span><br><span class="line">清空本地存储</span><br><span class="line">模板引擎渲染</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>3.模板引擎渲染</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script id=&quot;localHistroy&quot; type=&quot;text/html&quot;&gt;</span><br><span class="line">    &#123;&#123;if list.length &gt; 0&#125;&#125;</span><br><span class="line">        &#123;&#123;each list value index&#125;&#125;</span><br><span class="line">            &lt;li class=&quot;mui-table-view-cell&quot;&gt;&#123;&#123;value.key&#125;&#125;</span><br><span class="line">                &lt;span class=&quot;mui-badge mui-badge-primary btn-delete fa fa-close&quot; data-index=&quot;&#123;&#123;index&#125;&#125;&quot;&gt;</span><br><span class="line">                &lt;/span&gt;</span><br><span class="line">            &lt;/li&gt;</span><br><span class="line">        &#123;&#123;/each&#125;&#125;</span><br><span class="line">    &#123;&#123;else&#125;&#125;</span><br><span class="line">        &lt;li class=&quot;mui-table-view-cell&quot;&gt;暂时没有历史记录&lt;/li&gt;</span><br><span class="line">    &#123;&#123;/if&#125;&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="4">
+<li>功能实现JS代码</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">    // 1. 点击搜索触发点击tap事件</span><br><span class="line">    // 2. 获取文本框的内容</span><br><span class="line">    //  2.1 对文本框的值进去空格去除</span><br><span class="line">    // 3. 追加值到本地存储</span><br><span class="line">    //  3.1 判断值不能为空</span><br><span class="line">    //  3.2 查询下本地存储，判断输入的值是否存在，存在则删除原来的值，往数组的最前面插入新值</span><br><span class="line">    //  3.3 本地存储一般都是对象形式，所以最好以对象形式存储</span><br><span class="line">    // 4. 文本框内容清空</span><br><span class="line"></span><br><span class="line">    // 点击搜索按钮添加数据到localStorage里面</span><br><span class="line">    $(&apos;.btn-search&apos;).on(&apos;tap&apos;,function()&#123;</span><br><span class="line">        // console.log()</span><br><span class="line">        // 获取文本框的值 去除两端空格，不会去除中间的空格</span><br><span class="line">        var inputValue = $(&apos;.input-search&apos;).val().trim();</span><br><span class="line">        // 如果内容为空提示</span><br><span class="line">        if(inputValue == &apos;&apos;)&#123;</span><br><span class="line">            mui.toast(&apos;内容不能为空&apos;,&#123; duration:&apos;long&apos;, type:&apos;div&apos; &#125;)</span><br><span class="line">            return</span><br><span class="line">        &#125;</span><br><span class="line">        // 判断内容是否存在，存在就删掉原来的，把新的加进去</span><br><span class="line">        var str = localStorage.getItem(&apos;localHistroy&apos;);</span><br><span class="line">        // 由于取出来也是一个字符串 （因为存进去是字符串 ） 取出来之后要转成真正的数组</span><br><span class="line">        var arr = JSON.parse(str) || []; // 把取出来的字符串srt 转成一个数组 如果转换失败 就使用空数组</span><br><span class="line">        for(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">            if(arr[i].key == inputValue)&#123;</span><br><span class="line">                arr.splice(i,1)</span><br><span class="line">                i--</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 往数组前面插入</span><br><span class="line">        arr.unshift(&#123;</span><br><span class="line">            key: inputValue</span><br><span class="line">        &#125;);</span><br><span class="line">        localStorage.setItem(&apos;localHistroy&apos;,JSON.stringify(arr))</span><br><span class="line">        // 文本框内容清空</span><br><span class="line">        $(&apos;.input-search&apos;).val(&apos;&apos;)</span><br><span class="line">        queryHistroty()</span><br><span class="line">    &#125;)</span><br><span class="line">    queryHistroty();</span><br><span class="line"></span><br><span class="line">    // 1. 获取本地存储</span><br><span class="line">    // 2. 渲染到模板里面</span><br><span class="line">    // 3. 添加到页面</span><br><span class="line">    // 页面加载的时候遍历本地存储的值到页面</span><br><span class="line">    function queryHistroty()&#123;</span><br><span class="line">        var str = localStorage.getItem(&apos;localHistroy&apos;)</span><br><span class="line">        var arr = JSON.parse(str) || []; // 把取出来的字符串srt 转成一个数组 如果转换失败 就使用空数组</span><br><span class="line">        var html = template(&apos;localHistroy&apos;,&#123;list : arr&#125;)</span><br><span class="line">        $(&apos;.history-list&apos;).html(html);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 1. 设置id值，并获取</span><br><span class="line">    // 2. 获取本地存储，根据 id 删除数组值</span><br><span class="line">    // 3. 重新存入本地存储</span><br><span class="line">    // 4. 刷新页面</span><br><span class="line">    // 删除指定的记录</span><br><span class="line">    $(&apos;.history-list&apos;).on(&apos;tap&apos;,&apos;.btn-delete&apos;,function()&#123;</span><br><span class="line">        var index = $(this).data(&apos;index&apos;)</span><br><span class="line">        var str = localStorage.getItem(&apos;localHistroy&apos;)</span><br><span class="line">        // 由于取出来也是一个字符串 （因为存进去是字符串 ） 取出来之后要转成真正的数组</span><br><span class="line">        var arr = JSON.parse(str) || []; // 把取出来的字符串srt 转成一个数组 如果转换失败 就使用空数组</span><br><span class="line">        arr.splice(index,1)</span><br><span class="line">        localStorage.setItem(&apos;localHistroy&apos;,JSON.stringify(arr))</span><br><span class="line">        queryHistroty()</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    // 1. 根据本地存储名清除本地存储数据</span><br><span class="line">    // 2. 重新刷新页面</span><br><span class="line">    // 清空记录</span><br><span class="line">    $(&apos;.btn-clear&apos;).on(&apos;tap&apos;,function()&#123;</span><br><span class="line">        localStorage.removeItem(&apos;localHistroy&apos;)</span><br><span class="line">        queryHistroty()</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/h5/">h5</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015866000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015866000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:26.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015866000.html/">[hexo] 评论</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/yanzi1225627/article/details/77890414" target="_blank">hexo评论</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015865000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015865000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:25.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015865000.html/">[java] 条形码</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_36410795/article/details/79052956" target="_blank">Java条形码生成技术-Barcode4j</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015864000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015864000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:24.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015864000.html/">[java] 使用POI对Excel进行读写操作</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/M_WBCG/article/details/75142807" target="_blank">java-使用POI对Excel进行读写操作</a><br>pom.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;poi&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.9&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;poi-ooxml&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.9&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>github<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://gitee.com/Crab2Died/Excel4J/blob/master/src/main/java/com/github/crab2died/ExcelUtils.java</span><br><span class="line">https://github.com/Crab2died/Excel4J/blob/master/src/main/java/com/github/crab2died/ExcelUtils.java</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/wishwzp/p/5494346.html" target="_blank">JAVA使用POI操作excel</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.单元格对齐方式</span><br><span class="line">2.单元格边框处理</span><br><span class="line">3.单元格填充色和颜色操作</span><br><span class="line">4.单元格合并</span><br><span class="line">5.字体处理</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015863000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015863000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:23.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015863000.html/">[js] 在线库</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.bootcdn.cn/clipboard.js/" target="_blank">js在线库</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-/articles/2019/05/04/1557015862000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -604,319 +932,9 @@
 
 
   
-    <article id="post-/articles/2019/05/04/1557015857000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015857000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:17.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015857000.html/">[serlvet] kaptcha验证码组件</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/libra0920/p/6116800.html" target="_blank">如何使用kaptcha验证码组件</a><br><a href="https://blog.csdn.net/gao36951/article/details/48261003" target="_blank">简单Maven的Web项目之验证码(Kaptcha篇)</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/serlvet/">serlvet</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015856000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015856000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:16.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015856000.html/">[springboot] 慕课网mybatis代码生成</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/leechenxiang/imooc-springboot-starter" target="_blank">慕课网mybatis代码生成</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015855000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015855000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:15.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015855000.html/">[springboot] rabbitmq</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/hlhdidi/p/6535677.html" target="_blank">springboot整合RabbitMQ</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015854000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015854000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:14.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015854000.html/">[springboot] 内嵌mongo</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/littleatp/p/10462395.html" target="_blank">springboot内嵌mongo</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015853000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015853000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:13.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015853000.html/">[springboot] jwt网站鉴权</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/murraco/spring-boot-jwt" target="_blank">github|spring-boot-jwt</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/24/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/70/">70</a><a class="extend next" rel="next" href="/page/26/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/24/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><span class="page-number current">25</span><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/26/">Next &raquo;</a>
     </nav>
   
 

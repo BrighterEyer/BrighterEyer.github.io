@@ -280,6 +280,378 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-/articles/2019/03/21/1553178505000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/21/articles/2019/03/21/1553178505000.html/" class="article-date">
+      <time datetime="2019-03-21T14:28:25.000Z" itemprop="datePublished">2019-03-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553178505000.html/">[java] json转实体类对象</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>pom.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.54<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>创建对象<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.annotation.JSONField;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> String a;</span><br><span class="line">	<span class="keyword">private</span> String b;	</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//对应json中的key值</span></span><br><span class="line">	<span class="meta">@JSONField</span>(name = <span class="string">"a"</span>)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> a;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setA</span><span class="params">(String a)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.a = a;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@JSONField</span>(name = <span class="string">"b"</span>)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setB</span><span class="params">(String b)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.b = b;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2、使用alibabajson把json字符串转对象<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">	     String jsonStr = <span class="string">"&#123;a:'50',b:'55'&#125;"</span>;</span><br><span class="line">	     Demo demo =  JSONStr.parseObject(jsonStr,Demo.class);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/21/1553178504000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/21/articles/2019/03/21/1553178504000.html/" class="article-date">
+      <time datetime="2019-03-21T14:28:24.000Z" itemprop="datePublished">2019-03-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553178504000.html/">[layui] 多文件上传</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">layui.use([&apos;table&apos;, &apos;form&apos;, &apos;upload&apos;], function () &#123;</span><br><span class="line">       var table = layui.table;</span><br><span class="line">       var form = layui.form;</span><br><span class="line">       var upload = layui.upload;</span><br><span class="line"></span><br><span class="line">       form.render();</span><br><span class="line"></span><br><span class="line">       var addHtml = $(&apos;#imgShowDiv&apos;).html();</span><br><span class="line">       $(&apos;#imgShowDiv&apos;).remove();</span><br><span class="line"></span><br><span class="line">       $(&quot;#imgShowBtn&quot;).click(function () &#123;</span><br><span class="line">           layer.open(&#123;</span><br><span class="line">               title: &apos;上传图片&apos;,</span><br><span class="line">               content: addHtml,</span><br><span class="line">               area: [&apos;700px&apos;, &apos;600px&apos;],</span><br><span class="line">               btn: &apos;关闭&apos;,</span><br><span class="line">               closeBtn: 1,</span><br><span class="line">               success: function () &#123;</span><br><span class="line"></span><br><span class="line">                   //多文件列表示例</span><br><span class="line">                   var imgListView = $(&apos;#imgList&apos;), uploadListIns = upload.render(&#123;</span><br><span class="line">                       elem: &apos;#imgUpload&apos;,</span><br><span class="line">                       url: contextPath + &apos;/user/uploadImp/&apos;,</span><br><span class="line">                       /*before:function(input)&#123;</span><br><span class="line">                           var data = &#123;&apos;id&apos;:&apos;2&apos;&#125;</span><br><span class="line"></span><br><span class="line">                       &#125;*/</span><br><span class="line">                       accept: &apos;file&apos;,</span><br><span class="line">                       multiple: true,</span><br><span class="line">                       auto: false,</span><br><span class="line">                       bindAction: &apos;#imgListAction&apos;,</span><br><span class="line">                       choose: function (obj) &#123;</span><br><span class="line">                           var files = this.files = obj.pushFile(); //将每次选择的文件追加到文件队列</span><br><span class="line">                           obj.preview(function (index, file, result) &#123;</span><br><span class="line">                               //debugger;</span><br><span class="line">                               var tr = $([&apos;&lt;tr id=&quot;upload-&apos; + index + &apos;&quot;&gt;&apos;,</span><br><span class="line">                                   &apos;&lt;td&gt;&apos; + file.name + &apos;&lt;/td&gt;&apos;,</span><br><span class="line">                                   &apos;&lt;td&gt;&apos; + (file.size / 1014).toFixed(1) + &apos;kb&lt;/td&gt;&apos;,</span><br><span class="line">                                   &apos;&lt;td&gt;等待上传&lt;/td&gt;&apos;,</span><br><span class="line">                                   &apos;&lt;td&gt;&apos;,</span><br><span class="line">                                   &apos;&lt;button class=&quot;layui-btn layui-btn-xs layui-btn-danger demo-delete&quot;  style=&quot;background-color: red;&quot;&gt;删除&lt;/button&gt;&apos;,</span><br><span class="line">                                   &apos;&lt;/td&gt;&apos;,</span><br><span class="line">                                   &apos;&lt;/tr&gt;&apos;].join(&apos;&apos;));</span><br><span class="line">                               //单个重传</span><br><span class="line">                               tr.find(&apos;.demo-reload&apos;).on(&apos;click&apos;, function () &#123;</span><br><span class="line">                                   obj.upload(index, file);</span><br><span class="line">                               &#125;);</span><br><span class="line"></span><br><span class="line">                               //删除</span><br><span class="line">                               tr.find(&apos;.demo-delete&apos;).on(&apos;click&apos;, function () &#123;</span><br><span class="line">                                   delete files[index]; //删除对应的文件</span><br><span class="line">                                   tr.remove();</span><br><span class="line">                                   uploadListIns.config.elem.next()[0].value = &apos;&apos;; //清空 input file 值，以免删除后出现同名文件不可选</span><br><span class="line">                               &#125;);</span><br><span class="line"></span><br><span class="line">                               imgListView.append(tr);</span><br><span class="line">                           &#125;);</span><br><span class="line">                       &#125;,</span><br><span class="line">                       before: function (obj) &#123;</span><br><span class="line">                           $(&quot;#imgListAction&quot;).attr(&quot;disabled&quot;, true);</span><br><span class="line">                           debugger;</span><br><span class="line">                       &#125;,</span><br><span class="line">                       done: function (res, index, upload) &#123;</span><br><span class="line">                           if (res.code == 200) &#123; //上传成功</span><br><span class="line">                               var tr = imgListView.find(&apos;tr#upload-&apos; + index), tds = tr.children();</span><br><span class="line">                               tds.eq(2).html(&apos;&lt;span style=&quot;color: #5FB878;&quot;&gt;上传成功&lt;/span&gt;&apos;);</span><br><span class="line">                               tds.eq(3).html(&apos;&apos;); //清空操作</span><br><span class="line">                               return delete this.files[index]; //删除文件队列已经上传成功的文件</span><br><span class="line">                           &#125;</span><br><span class="line">                           this.error(index, upload, res);</span><br><span class="line">                       &#125;,</span><br><span class="line">                       error: function (index, upload, res) &#123;</span><br><span class="line">                           var tr = imgListView.find(&apos;tr#upload-&apos; + index), tds = tr.children();</span><br><span class="line">                           tds.eq(2).html(&apos;&lt;span style=&quot;color: #FF5722;&quot;&gt;&apos; + res.msg + &apos;&lt;/span&gt;&apos;);</span><br><span class="line">                           tds.eq(3).find(&apos;.demo-reload&apos;).removeClass(&apos;layui-hide&apos;); //显示重传</span><br><span class="line">                       &#125;,</span><br><span class="line">                       allDone: function (obj) &#123;</span><br><span class="line">                           $(&quot;#imgListAction&quot;).attr(&quot;disabled&quot;, false);</span><br><span class="line">                       &#125;</span><br><span class="line">                   &#125;);</span><br><span class="line">               &#125;,</span><br><span class="line">               end: function () &#123; // 只要层被销毁了，end都会执行</span><br><span class="line">                   table.reload(&apos;userTable&apos;);</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;);</span><br><span class="line">       &#125;);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/layui/">layui</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/21/1553178503000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/21/articles/2019/03/21/1553178503000.html/" class="article-date">
+      <time datetime="2019-03-21T14:28:23.000Z" itemprop="datePublished">2019-03-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553178503000.html/">[layui] 封装模态框和ajax构建菜单</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br></pre></td><td class="code"><pre><span class="line">layui.use([<span class="string">'form'</span>, <span class="string">'layer'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> form = layui.form;</span><br><span class="line">    <span class="keyword">var</span> layer = layui.layer;</span><br><span class="line"></span><br><span class="line">    form.render();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> contextPath = <span class="string">'http://localhost'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        layerOpen(<span class="string">"编辑"</span>, [<span class="string">'50%'</span>, <span class="string">'50%'</span>], $(<span class="string">"#showContent"</span>), <span class="function"><span class="keyword">function</span>(<span class="params">form</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">            ajaxSelectBuilder(form, <span class="string">"/path/to/getMenuList"</span>, &#123;</span><br><span class="line">                companyCode: data.value</span><br><span class="line">            &#125;, $(<span class="string">"#targetSelectId"</span>), <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;</span><br><span class="line">                    id: obj.id,</span><br><span class="line">                    name: obj.name</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            form.val(<span class="string">'targetFormFilter'</span>, &#123;</span><br><span class="line"></span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">        &#125;, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">            confirmPromise(<span class="string">'是否确定请求abc操作'</span>, <span class="string">'tableFilterId'</span>, <span class="string">'/path/to/operation'</span>, &#123;</span><br><span class="line">                voData: <span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">                    id: data.id</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//ajax形成 select 选项</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxSelectBuilder</span>(<span class="params">form, menuPath, data, idSelector, objCallback</span>) </span>&#123;</span><br><span class="line">        idSelector.empty();</span><br><span class="line">        idSelector.append(<span class="string">'&lt;option value="" selected="selected"&gt;请选择&lt;/option&gt;'</span>);</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            url: contextPath + menuPath,</span><br><span class="line">            dataType: <span class="string">'json'</span>,</span><br><span class="line">            type: <span class="string">'post'</span>,</span><br><span class="line">            <span class="keyword">async</span>: <span class="literal">false</span>,</span><br><span class="line">            data: data,</span><br><span class="line">            complete: <span class="function"><span class="keyword">function</span>(<span class="params">XHR, TS</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> returnObj = <span class="built_in">eval</span>(<span class="string">'('</span> + XHR.responseText + <span class="string">')'</span>);</span><br><span class="line">                $.each(returnObj, <span class="function"><span class="keyword">function</span>(<span class="params">i, obj</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">var</span> idName = objCallback(obj);</span><br><span class="line">                    idSelector.append(<span class="string">'&lt;option value="'</span> + idName.id + <span class="string">'"&gt;'</span> + idName.name + <span class="string">'&lt;/option&gt;'</span>);</span><br><span class="line">                &#125;);</span><br><span class="line">                form.render();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">normalPromise</span>(<span class="params">tableFilterId, path, data, successCallback</span>) </span>&#123;</span><br><span class="line">        layui.use([<span class="string">'layer'</span>, <span class="string">'table'</span>, <span class="string">'form'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">let</span> layer = layui.layer;</span><br><span class="line">            <span class="keyword">let</span> table = layui.table;</span><br><span class="line">            <span class="keyword">let</span> form = layui.form;</span><br><span class="line"></span><br><span class="line">            $.ajax(&#123;</span><br><span class="line">                url: contextPath + path,</span><br><span class="line">                dataType: <span class="string">'json'</span>,</span><br><span class="line">                type: <span class="string">'post'</span>,</span><br><span class="line">                <span class="keyword">async</span>: <span class="literal">false</span>,</span><br><span class="line">                data: data,</span><br><span class="line">                complete: <span class="function"><span class="keyword">function</span>(<span class="params">XHR, TS</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">let</span> returnObj = <span class="built_in">eval</span>(<span class="string">'('</span> + XHR.responseText + <span class="string">')'</span>);</span><br><span class="line">                    <span class="keyword">if</span> (returnObj.code != <span class="number">200</span>) &#123;</span><br><span class="line">                        layer.msg(returnObj.msg, &#123;</span><br><span class="line">                            icon: <span class="number">2</span>,</span><br><span class="line">                            time: <span class="number">1500</span></span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        layer.msg(returnObj.msg, &#123;</span><br><span class="line">                            icon: <span class="number">1</span>,</span><br><span class="line">                            time: <span class="number">1500</span></span><br><span class="line">                        &#125;);</span><br><span class="line">                        <span class="keyword">typeof</span> successCallback == <span class="string">'function'</span> &amp; successCallback(returnObj.data);</span><br><span class="line">                    &#125;</span><br><span class="line">                    table.reload(tableFilterId);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">confirmPromise</span>(<span class="params">confirmTxt, tableFilterId, path, data, successCallback</span>) </span>&#123;</span><br><span class="line">        layui.use([<span class="string">'layer'</span>, <span class="string">'table'</span>, <span class="string">'form'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">let</span> layer = layui.layer;</span><br><span class="line">            <span class="keyword">let</span> table = layui.table;</span><br><span class="line">            <span class="keyword">let</span> form = layui.form;</span><br><span class="line"></span><br><span class="line">            layer.confirm(confirmTxt, <span class="function"><span class="keyword">function</span>(<span class="params">index</span>) </span>&#123;</span><br><span class="line">                $.ajax(&#123;</span><br><span class="line">                    url: contextPath + path,</span><br><span class="line">                    dataType: <span class="string">'json'</span>,</span><br><span class="line">                    type: <span class="string">'post'</span>,</span><br><span class="line">                    <span class="keyword">async</span>: <span class="literal">false</span>,</span><br><span class="line">                    data: data,</span><br><span class="line">                    complete: <span class="function"><span class="keyword">function</span>(<span class="params">XHR, TS</span>) </span>&#123;</span><br><span class="line">                        <span class="keyword">let</span> returnObj = <span class="built_in">eval</span>(<span class="string">'('</span> + XHR.responseText + <span class="string">')'</span>);</span><br><span class="line">                        <span class="keyword">if</span> (returnObj.code != <span class="number">200</span>) &#123;</span><br><span class="line">                            layer.msg(returnObj.msg, &#123;</span><br><span class="line">                                icon: <span class="number">2</span>,</span><br><span class="line">                                time: <span class="number">1500</span></span><br><span class="line">                            &#125;);</span><br><span class="line">                        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                            layer.msg(returnObj.msg, &#123;</span><br><span class="line">                                icon: <span class="number">1</span>,</span><br><span class="line">                                time: <span class="number">1500</span></span><br><span class="line">                            &#125;);</span><br><span class="line">                            <span class="keyword">typeof</span> successCallback == <span class="string">'function'</span> &amp; successCallback(returnObj.data);</span><br><span class="line">                        &#125;</span><br><span class="line">                        layer.close(index);</span><br><span class="line">                        table.reload(tableFilterId);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">layerOpen</span>(<span class="params">showTitle, area, showContentSelector, editPrepareCallback, yesCallback</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> showContent = showContentSelector.html();</span><br><span class="line">        showContentSelector.html(<span class="string">""</span>);</span><br><span class="line"></span><br><span class="line">        layui.use([<span class="string">'layer'</span>, <span class="string">'table'</span>, <span class="string">'form'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">let</span> layer = layui.layer;</span><br><span class="line">            <span class="keyword">let</span> table = layui.table;</span><br><span class="line">            <span class="keyword">let</span> form = layui.form;</span><br><span class="line"></span><br><span class="line">            layer.open(&#123;</span><br><span class="line">                type: <span class="number">1</span>,</span><br><span class="line">                id: <span class="string">'showLayui'</span>,</span><br><span class="line">                title: showTitle,</span><br><span class="line">                content: showContent,</span><br><span class="line">                area: area,</span><br><span class="line">                btn: [<span class="string">'确定'</span>, <span class="string">'取消'</span>],</span><br><span class="line">                btnAlign: <span class="string">'c'</span>,</span><br><span class="line">                success: <span class="function"><span class="keyword">function</span>(<span class="params">layero, index</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">typeof</span> editPrepareCallback == <span class="string">'function'</span> &amp; editPrepareCallback(form)</span><br><span class="line">                    form.render();</span><br><span class="line">                &#125;,</span><br><span class="line">                yes: <span class="function"><span class="keyword">function</span>(<span class="params">index, layero</span>) </span>&#123; <span class="comment">// 确定按钮</span></span><br><span class="line">                    <span class="keyword">typeof</span> yesCallback == <span class="string">'function'</span> &amp; yesCallback()</span><br><span class="line">                    layer.close(index);</span><br><span class="line">                &#125;,</span><br><span class="line">                end: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">// 只要层被销毁了，end都会执行</span></span><br><span class="line">                    showContentSelector.html(showContent);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/layui/">layui</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/21/1553178502000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/21/articles/2019/03/21/1553178502000.html/" class="article-date">
+      <time datetime="2019-03-21T14:28:22.000Z" itemprop="datePublished">2019-03-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553178502000.html/">[layui] layui+百度地图API定位</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    getLocation(</span><br><span class="line">        <span class="string">'bmapId'</span>,</span><br><span class="line">        <span class="string">'locateCityBtnId'</span>,</span><br><span class="line">        <span class="string">'locateCityId'</span>,</span><br><span class="line">        <span class="string">'provinceNameId'</span>,</span><br><span class="line">        <span class="string">'cityNameId'</span>,</span><br><span class="line">        <span class="string">'areaNameId'</span>,</span><br><span class="line">        <span class="string">'detailsLocationId'</span>,</span><br><span class="line">        <span class="string">'longitudeId'</span>,</span><br><span class="line">        <span class="string">'latitudeId'</span>,</span><br><span class="line">         data,</span><br><span class="line">        <span class="string">'add'</span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLocation</span>(<span class="params">bmapId, locateCityBtnId, locateCityId, provinceNameId, cityNameId, areaNameId, detailsLocationId, longitudeId, latitudeId, openType, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> myCity = <span class="keyword">new</span> BMap.LocalCity();</span><br><span class="line">    myCity.get(myFun);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 百度地图API功能</span></span><br><span class="line">    <span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(bmapId);</span><br><span class="line">    <span class="keyword">var</span> point = <span class="keyword">new</span> BMap.Point(<span class="number">116.331398</span>, <span class="number">39.897445</span>); <span class="comment">//地图中心点</span></span><br><span class="line">    map.centerAndZoom(point, <span class="number">12</span>); <span class="comment">//缩放层级</span></span><br><span class="line">    map.enableScrollWheelZoom(); <span class="comment">// 启用滚轮放大缩小，默认禁用</span></span><br><span class="line">    <span class="keyword">var</span> geocoder = <span class="keyword">new</span> BMap.Geocoder(); <span class="comment">//计算</span></span><br><span class="line">    <span class="comment">//"定位"按钮</span></span><br><span class="line">    $(<span class="string">"#"</span> + locateCityBtnId).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> cityName = $(<span class="string">"#"</span> + locateCityId).val();</span><br><span class="line">        <span class="keyword">if</span> (cityName != <span class="string">""</span>) &#123;</span><br><span class="line">            map.centerAndZoom(cityName, <span class="number">11</span>); <span class="comment">// 用城市名设置地图中心点</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    map.addEventListener(<span class="string">"click"</span>, showInfo);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (openType == <span class="string">"add"</span>) &#123;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">myFun</span>(<span class="params">result</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> cityName = result.name;</span><br><span class="line">            $(<span class="string">"#"</span> + locateCityId).val(cityName);</span><br><span class="line">            map.setCenter(cityName);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (openType == <span class="string">"edit"</span>) &#123;</span><br><span class="line">        $(<span class="string">"#"</span> + locateCityId).val(data.cityName);</span><br><span class="line">        <span class="keyword">var</span> new_point = <span class="keyword">new</span> BMap.Point(data.longitude, data.latitude);</span><br><span class="line">        <span class="keyword">var</span> marker = <span class="keyword">new</span> BMap.Marker(new_point);</span><br><span class="line">        map.addOverlay(marker);</span><br><span class="line">        map.centerAndZoom(new_point, <span class="number">15</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> myCity = <span class="keyword">new</span> BMap.LocalCity();</span><br><span class="line">    myCity.get(myFun);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//鼠标点击地图，增加点</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">showInfo</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        map.clearOverlays();</span><br><span class="line">        <span class="keyword">var</span> marker = <span class="keyword">new</span> BMap.Marker(e.point);</span><br><span class="line">        map.addOverlay(marker);</span><br><span class="line">        geocoder.getLocation(e.point, <span class="function"><span class="keyword">function</span>(<span class="params">rs</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> provincesOverAll = rs.addressComponents.province;</span><br><span class="line">            <span class="keyword">var</span> cityOverAll = rs.addressComponents.city;</span><br><span class="line">            <span class="keyword">var</span> countyOverAll = rs.addressComponents.district;</span><br><span class="line">            <span class="keyword">var</span> detailsOverAll = rs.addressComponents.street;</span><br><span class="line">            longitudeOverAll = e.point.lng;</span><br><span class="line">            latitudeOverAll = e.point.lat;</span><br><span class="line"></span><br><span class="line">            $(<span class="string">"#"</span> + provinceNameId).val(provincesOverAll); <span class="comment">//获取省份</span></span><br><span class="line">            $(<span class="string">"#"</span> + provinceNameId).css(<span class="string">"color"</span>, <span class="string">"gray"</span>);</span><br><span class="line"></span><br><span class="line">            $(<span class="string">"#"</span> + cityNameId).val(cityOverAll); <span class="comment">//获取城市</span></span><br><span class="line">            $(<span class="string">"#"</span> + cityNameI).css(<span class="string">"color"</span>, <span class="string">"gray"</span>);</span><br><span class="line"></span><br><span class="line">            $(<span class="string">"#"</span> + areaNameId).val(countyOverAll); <span class="comment">//获取区</span></span><br><span class="line">            $(<span class="string">"#"</span> + areaNameId).css(<span class="string">"color"</span>, <span class="string">"gray"</span>);</span><br><span class="line"></span><br><span class="line">            $(<span class="string">"#"</span> + detailsLocationId).val(detailsOverAll); <span class="comment">//获取街道</span></span><br><span class="line"></span><br><span class="line">            $(<span class="string">"#"</span> + longitudeId).val(longitudeOverAll); <span class="comment">//填入经度</span></span><br><span class="line">            $(<span class="string">"#"</span> + longitudeId).css(<span class="string">"color"</span>, <span class="string">"gray"</span>);</span><br><span class="line"></span><br><span class="line">            $(<span class="string">"#"</span> + latitudeId).val(latitudeOverAll); <span class="comment">//填入纬度</span></span><br><span class="line">            $(<span class="string">"#"</span> + latitudeId).css(<span class="string">"color"</span>, <span class="string">"gray"</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/layui/">layui</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/21/1553178501000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/21/articles/2019/03/21/1553178501000.html/" class="article-date">
+      <time datetime="2019-03-21T14:28:21.000Z" itemprop="datePublished">2019-03-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553178501000.html/">[springboot] 报错解决集合</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>包含websocket的单元测试失败<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)</span><br><span class="line"></span><br><span class="line">#或</span><br><span class="line">#@SpringBootTest(classes = SellApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/21/1553178500000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/21/articles/2019/03/21/1553178500000.html/" class="article-date">
+      <time datetime="2019-03-21T14:28:20.000Z" itemprop="datePublished">2019-03-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553178500000.html/">[layui] laypage组件常见用法总结</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.layui.com/demo/laypage.html" target="_blank">官网laypage</a><br><a href="https://www.cnblogs.com/wyy1234/p/9448519.html" target="_blank">laypage组件常见用法总结</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/layui/">layui</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-/articles/2019/03/21/1553178499000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -529,406 +901,9 @@
 
 
   
-    <article id="post-/articles/2019/03/21/1553175026000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/21/articles/2019/03/21/1553175026000.html/" class="article-date">
-      <time datetime="2019-03-21T13:30:26.000Z" itemprop="datePublished">2019-03-21</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553175026000.html/">[php] 实现简单登录注册</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/leinov/p/3745401.html" target="_blank">php注册登录系统(一)-极简</a><br><a href="https://www.awaimai.com/610.html" target="_blank">PHP cURL库函数抓取页面内容</a><br><a href="https://blog.csdn.net/qq_39630587/article/details/79768838" target="_blank">PHP实现简单注册登录系统</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/21/1553174892000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/21/articles/2019/03/21/1553174892000.html/" class="article-date">
-      <time datetime="2019-03-21T13:28:12.000Z" itemprop="datePublished">2019-03-21</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553174892000.html/">[spring] 使用maven搭建springmvc项目</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/hehaiyang/p/4578488.html" target="_blank">使用maven搭建springmvc项目</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/21/1553148888000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/21/articles/2019/03/21/1553148888000.html/" class="article-date">
-      <time datetime="2019-03-21T06:14:48.000Z" itemprop="datePublished">2019-03-21</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553148888000.html/">[前端] 解决页面input自动填充记住的账号密码</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/qq_36802726/article/details/80447144" target="_blank">解决页面input自动填充记住的账号密码</a><br><a href="https://blog.csdn.net/zora_55/article/details/79397216" target="_blank">关于input标签的记住密码</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; placeholder=&quot;账号&quot; readonly onfocus=&quot;this.removeAttribute(&apos;readonly&apos;);&quot; autocomplete=&quot;off&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
-<p>方法1：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">input标签有一个属性autocomplete属性</span><br><span class="line">该属性默认为&apos;on&apos;，所以将该属性设置为&apos;off&apos;即可禁用自动完成功能。即为：</span><br><span class="line">&lt;input type=&quot;text&quot; autocomplete=&quot;off&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
-<p>方法2：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果在fom标签内，input没有type=&apos;password&apos;标签的话，方法1即可。</span><br><span class="line">若有，则可以设置autocomplete属性为其他值，&apos;new-password&apos;</span><br></pre></td></tr></table></figure></p>
-<p>方法3：<br>在用户名和密码标签之间添加一个隐藏的input type=’password’的标签，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot;&gt;</span><br><span class="line">&lt;input type=&quot;password&quot; style=&quot;display:none&quot;&gt;</span><br><span class="line">&lt;input type=&quot;password&quot;&gt;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/21/1553148385000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/21/articles/2019/03/21/1553148385000.html/" class="article-date">
-      <time datetime="2019-03-21T06:06:25.000Z" itemprop="datePublished">2019-03-21</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553148385000.html/">[java] java设计模式</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/zailushang1996/p/8601808.html" target="_blank">java 三种工厂模式</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一、简单工厂模式</span><br><span class="line">二、工厂方法模式</span><br><span class="line">三、抽象工厂模式</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://www.runoob.com/design-pattern/design-pattern-intro.html" target="_blank">菜鸟教程|设计模式|java</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/21/1553148383000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/21/articles/2019/03/21/1553148383000.html/" class="article-date">
-      <time datetime="2019-03-21T06:06:23.000Z" itemprop="datePublished">2019-03-21</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553148383000.html/">[小程序] 打开网页</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/sennyla/WebchatShare" target="_blank">github | 微信小程序（内嵌网页分享功能）</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/21/1553148178000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/21/articles/2019/03/21/1553148178000.html/" class="article-date">
-      <time datetime="2019-03-21T06:02:58.000Z" itemprop="datePublished">2019-03-21</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/21/articles/2019/03/21/1553148178000.html/">[centos7] 部署禅道</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/wm5920/article/details/78047755" target="_blank">Linux下部署开源版 “禅道” 项目管理系统</a></p>
-<blockquote>
-<p>1.开源版安装包下载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>2.直接解压安装包到/opt目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>3.修改禅道自带apache、mysql端口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#为了不占用Server上默认的80、3306端口，我们修改禅道自带的apache、mysql端口</span><br><span class="line">#修改禅道自带apache端口：</span><br><span class="line">/opt/zbox/zbox -ap 9000</span><br><span class="line">#修改禅道自带mysql端口：</span><br><span class="line">/opt/zbox/zbox -mp 9001</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>4.重启禅道服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#开启Apache和Mysql</span><br><span class="line">/opt/zbox/zbox start</span><br><span class="line">#停止Apache和Mysql</span><br><span class="line">/opt/zbox/zbox stop</span><br><span class="line">#重启Apache和Mysql</span><br><span class="line">/opt/zbox/zbox restart</span><br><span class="line">#获取关于zbox命令的帮助</span><br><span class="line">/opt/zbox/zbox -h</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>5.创建数据库账号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/opt/zbox/auth/adduser.sh</span><br><span class="line"></span><br><span class="line">#注：(1)数据库的用户名：root，密码为空。</span><br><span class="line">#    (2)数据库管理用的是adminer，但是为了安全，访问adminer的时候需要身份验证，需要运行脚本添加账户</span><br><span class="line"></span><br><span class="line">#命令行登录禅道自带mysql数据库：</span><br><span class="line">/opt/zbox/bin/mysql -u root -P 3306 -p</span><br><span class="line"></span><br><span class="line">#如果是首次安装 &quot;禅道&quot; ，此处略过；如果之前已经装有 &quot;禅道&quot; ，想导入之前的数据，则可以导入备份的zentao.sql文件；</span><br><span class="line">#命令行导入备份的数据：</span><br><span class="line">/opt/zbox/bin/mysql -u root -P 3306 -p zentaopro &lt; zentao.sql</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>6.配置iptables防火墙规则，允许端口访问<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT -p tcp --dport 9000 -j ACCEPT</span><br><span class="line">iptables -A INPUT -p tcp --dport 9001 -j ACCEPT</span><br><span class="line">#重启防火墙，使规则生效：</span><br><span class="line">service iptables save</span><br><span class="line">service iptables restart</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>7.浏览器访问<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">http://x.x.x.x:9000</span><br><span class="line">客户端：</span><br><span class="line">http://x.x.x.x:9000/zentao/user-login-L3plbnRhby8=.html</span><br><span class="line">默认账号密码：</span><br><span class="line">admin/123456</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos7/">centos7</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/39/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><span class="page-number current">40</span><a class="page-number" href="/page/41/">41</a><a class="page-number" href="/page/42/">42</a><span class="space">&hellip;</span><a class="page-number" href="/page/70/">70</a><a class="extend next" rel="next" href="/page/41/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/39/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><span class="page-number current">40</span><a class="page-number" href="/page/41/">41</a><a class="page-number" href="/page/42/">42</a><span class="space">&hellip;</span><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/41/">Next &raquo;</a>
     </nav>
   
 

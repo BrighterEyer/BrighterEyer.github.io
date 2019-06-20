@@ -280,6 +280,321 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-/articles/2019/05/04/1557015877000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015877000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:37.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015877000.html/">[centos] nginx的https配置</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.centos.bz/2017/10/centos%E4%B8%8Bnginx%E7%9A%84https%E9%85%8D%E7%BD%AE/" target="_blank">CentOS下Nginx的HTTPS配置</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos/">centos</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015876000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015876000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:36.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015876000.html/">[springboot] 配置https</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/shouldnotappearcalm/article/details/78047047" target="_blank">csdn|<br>Springboot配置使用ssl，使用https</a><br>生成密钥证书<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -alias tomcat -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650</span><br></pre></td></tr></table></figure></p>
+<p>（1）关键字解释：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">alias  密钥别名</span><br><span class="line">storetype 指定密钥仓库类型</span><br><span class="line">keyalg 生证书的算法名称，RSA是一种非对称加密算法</span><br><span class="line">keysize 证书大小</span><br><span class="line">keystore 生成的证书文件的存储路径</span><br><span class="line">validity 证书的有效期</span><br></pre></td></tr></table></figure></p>
+<p>（2）生成证书注意：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">在输入证书生成命令之后，会提示输入：</span><br><span class="line"></span><br><span class="line">密钥库口令：证书密码，在后面的项目中配置证书时用到</span><br><span class="line">姓氏：一般没什么用，在浏览器中查看证书时会显示，用于正式场合的证书还是需要填写标准。</span><br><span class="line">组织单位：证书使用单位信息，一般没什么用，在浏览器中查看证书时会显示，用于正式场合的证书还是需要填写标准。</span><br><span class="line">组织单位名称：证书使用单位名称，一般没什么用，在浏览器中查看证书时会显示，用于正式场合的证书还是需要填写标准。</span><br><span class="line">所在的城市或区域名称:浏览器中查看证书信息时会显示。</span><br><span class="line">所在的省/市/自治区名称：浏览器中查看证书信息时会显示。</span><br><span class="line">单位的双字母国家/地区代码：国家或地区编码，浏览器中查看证书信息时会显示。</span><br></pre></td></tr></table></figure></p>
+<p>将生成的密钥证书拷贝到项目中的resource中</p>
+<p>application.properties<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#（密钥文件路径，也可以配置绝对路径）</span><br><span class="line">server.ssl.key-store=classpath:keystore.p12</span><br><span class="line">#（密钥生成时输入的密钥库口令）</span><br><span class="line">server.ssl.key-store-password=aqjcpt</span><br><span class="line">#（密钥类型，与密钥生成命令一致）</span><br><span class="line">server.ssl.keyStoreType=PKCS12</span><br><span class="line">#（密钥别名，与密钥生成命令一致）</span><br><span class="line">server.ssl.keyAlias=tomcat</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.jianshu.com/p/eb52e0f5ee85" target="_blank">简书|在Spring Boot中配置ssl证书实现https</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015875000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015875000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:35.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015875000.html/">[小程序] 禁止页面拉动</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/weixin_39872588/article/details/79580288" target="_blank">禁止页面拉动</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;enablePullDownRefresh&quot;:false,</span><br><span class="line">    &quot;disableScroll&quot;:true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015874000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015874000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:34.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015874000.html/">[地图] 点击地图查看经纬度</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="http://www.gpsspg.com/maps.htm" target="_blank">点击地图查看经纬度</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/地图/">地图</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015873000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015873000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:33.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015873000.html/">[小程序] 导航功能</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.jb51.net/article/142856.htm" target="_blank">微信小程序中进行地图导航功能的实现方法</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">wx.getLocation(&#123;</span><br><span class="line"> type: &apos;gcj02&apos;, //返回可以用于wx.openLocation的经纬度</span><br><span class="line"> success: function(res) &#123;</span><br><span class="line">  var latitude = res.latitude</span><br><span class="line">  var longitude = res.longitude</span><br><span class="line">  wx.openLocation(&#123;</span><br><span class="line">   latitude: latitude,</span><br><span class="line">   longitude: longitude,</span><br><span class="line">   name:&quot;花园桥肯德基&quot;,</span><br><span class="line">   scale: 28</span><br><span class="line">  &#125;)</span><br><span class="line"> &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-/articles/2019/05/04/1557015872000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -591,337 +906,9 @@
 
 
   
-    <article id="post-/articles/2019/05/04/1557015867000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015867000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:27.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015867000.html/">[h5] 本地存储</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/qq_36410795/article/details/86684994" target="_blank">Html5 本地存储 local Storage 完整功能小案例demo</a></p>
-<blockquote>
-<ol start="2">
-<li>涉及功能知识点</li>
-</ol>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">添加本地存储</span><br><span class="line">查询本地存储</span><br><span class="line">根据 index 删除本地存储</span><br><span class="line">清空本地存储</span><br><span class="line">模板引擎渲染</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>3.模板引擎渲染</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script id=&quot;localHistroy&quot; type=&quot;text/html&quot;&gt;</span><br><span class="line">    &#123;&#123;if list.length &gt; 0&#125;&#125;</span><br><span class="line">        &#123;&#123;each list value index&#125;&#125;</span><br><span class="line">            &lt;li class=&quot;mui-table-view-cell&quot;&gt;&#123;&#123;value.key&#125;&#125;</span><br><span class="line">                &lt;span class=&quot;mui-badge mui-badge-primary btn-delete fa fa-close&quot; data-index=&quot;&#123;&#123;index&#125;&#125;&quot;&gt;</span><br><span class="line">                &lt;/span&gt;</span><br><span class="line">            &lt;/li&gt;</span><br><span class="line">        &#123;&#123;/each&#125;&#125;</span><br><span class="line">    &#123;&#123;else&#125;&#125;</span><br><span class="line">        &lt;li class=&quot;mui-table-view-cell&quot;&gt;暂时没有历史记录&lt;/li&gt;</span><br><span class="line">    &#123;&#123;/if&#125;&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<ol start="4">
-<li>功能实现JS代码</li>
-</ol>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">    // 1. 点击搜索触发点击tap事件</span><br><span class="line">    // 2. 获取文本框的内容</span><br><span class="line">    //  2.1 对文本框的值进去空格去除</span><br><span class="line">    // 3. 追加值到本地存储</span><br><span class="line">    //  3.1 判断值不能为空</span><br><span class="line">    //  3.2 查询下本地存储，判断输入的值是否存在，存在则删除原来的值，往数组的最前面插入新值</span><br><span class="line">    //  3.3 本地存储一般都是对象形式，所以最好以对象形式存储</span><br><span class="line">    // 4. 文本框内容清空</span><br><span class="line"></span><br><span class="line">    // 点击搜索按钮添加数据到localStorage里面</span><br><span class="line">    $(&apos;.btn-search&apos;).on(&apos;tap&apos;,function()&#123;</span><br><span class="line">        // console.log()</span><br><span class="line">        // 获取文本框的值 去除两端空格，不会去除中间的空格</span><br><span class="line">        var inputValue = $(&apos;.input-search&apos;).val().trim();</span><br><span class="line">        // 如果内容为空提示</span><br><span class="line">        if(inputValue == &apos;&apos;)&#123;</span><br><span class="line">            mui.toast(&apos;内容不能为空&apos;,&#123; duration:&apos;long&apos;, type:&apos;div&apos; &#125;)</span><br><span class="line">            return</span><br><span class="line">        &#125;</span><br><span class="line">        // 判断内容是否存在，存在就删掉原来的，把新的加进去</span><br><span class="line">        var str = localStorage.getItem(&apos;localHistroy&apos;);</span><br><span class="line">        // 由于取出来也是一个字符串 （因为存进去是字符串 ） 取出来之后要转成真正的数组</span><br><span class="line">        var arr = JSON.parse(str) || []; // 把取出来的字符串srt 转成一个数组 如果转换失败 就使用空数组</span><br><span class="line">        for(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">            if(arr[i].key == inputValue)&#123;</span><br><span class="line">                arr.splice(i,1)</span><br><span class="line">                i--</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 往数组前面插入</span><br><span class="line">        arr.unshift(&#123;</span><br><span class="line">            key: inputValue</span><br><span class="line">        &#125;);</span><br><span class="line">        localStorage.setItem(&apos;localHistroy&apos;,JSON.stringify(arr))</span><br><span class="line">        // 文本框内容清空</span><br><span class="line">        $(&apos;.input-search&apos;).val(&apos;&apos;)</span><br><span class="line">        queryHistroty()</span><br><span class="line">    &#125;)</span><br><span class="line">    queryHistroty();</span><br><span class="line"></span><br><span class="line">    // 1. 获取本地存储</span><br><span class="line">    // 2. 渲染到模板里面</span><br><span class="line">    // 3. 添加到页面</span><br><span class="line">    // 页面加载的时候遍历本地存储的值到页面</span><br><span class="line">    function queryHistroty()&#123;</span><br><span class="line">        var str = localStorage.getItem(&apos;localHistroy&apos;)</span><br><span class="line">        var arr = JSON.parse(str) || []; // 把取出来的字符串srt 转成一个数组 如果转换失败 就使用空数组</span><br><span class="line">        var html = template(&apos;localHistroy&apos;,&#123;list : arr&#125;)</span><br><span class="line">        $(&apos;.history-list&apos;).html(html);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 1. 设置id值，并获取</span><br><span class="line">    // 2. 获取本地存储，根据 id 删除数组值</span><br><span class="line">    // 3. 重新存入本地存储</span><br><span class="line">    // 4. 刷新页面</span><br><span class="line">    // 删除指定的记录</span><br><span class="line">    $(&apos;.history-list&apos;).on(&apos;tap&apos;,&apos;.btn-delete&apos;,function()&#123;</span><br><span class="line">        var index = $(this).data(&apos;index&apos;)</span><br><span class="line">        var str = localStorage.getItem(&apos;localHistroy&apos;)</span><br><span class="line">        // 由于取出来也是一个字符串 （因为存进去是字符串 ） 取出来之后要转成真正的数组</span><br><span class="line">        var arr = JSON.parse(str) || []; // 把取出来的字符串srt 转成一个数组 如果转换失败 就使用空数组</span><br><span class="line">        arr.splice(index,1)</span><br><span class="line">        localStorage.setItem(&apos;localHistroy&apos;,JSON.stringify(arr))</span><br><span class="line">        queryHistroty()</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    // 1. 根据本地存储名清除本地存储数据</span><br><span class="line">    // 2. 重新刷新页面</span><br><span class="line">    // 清空记录</span><br><span class="line">    $(&apos;.btn-clear&apos;).on(&apos;tap&apos;,function()&#123;</span><br><span class="line">        localStorage.removeItem(&apos;localHistroy&apos;)</span><br><span class="line">        queryHistroty()</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/h5/">h5</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015866000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015866000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:26.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015866000.html/">[hexo] 评论</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/yanzi1225627/article/details/77890414" target="_blank">hexo评论</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015865000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015865000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:25.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015865000.html/">[java] 条形码</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/qq_36410795/article/details/79052956" target="_blank">Java条形码生成技术-Barcode4j</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015864000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015864000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:24.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015864000.html/">[java] 使用POI对Excel进行读写操作</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/M_WBCG/article/details/75142807" target="_blank">java-使用POI对Excel进行读写操作</a><br>pom.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;poi&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.9&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;poi-ooxml&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.9&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
-<p>github<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://gitee.com/Crab2Died/Excel4J/blob/master/src/main/java/com/github/crab2died/ExcelUtils.java</span><br><span class="line">https://github.com/Crab2died/Excel4J/blob/master/src/main/java/com/github/crab2died/ExcelUtils.java</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.cnblogs.com/wishwzp/p/5494346.html" target="_blank">JAVA使用POI操作excel</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.单元格对齐方式</span><br><span class="line">2.单元格边框处理</span><br><span class="line">3.单元格填充色和颜色操作</span><br><span class="line">4.单元格合并</span><br><span class="line">5.字体处理</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015863000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015863000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:23.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015863000.html/">[js] 在线库</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.bootcdn.cn/clipboard.js/" target="_blank">js在线库</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/23/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/70/">70</a><a class="extend next" rel="next" href="/page/25/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/23/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/71/">71</a><a class="extend next" rel="next" href="/page/25/">Next &raquo;</a>
     </nav>
   
 
