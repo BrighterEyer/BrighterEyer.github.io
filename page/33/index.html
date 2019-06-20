@@ -280,6 +280,571 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-/articles/2019/04/20/1555759228000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555759228000.html/" class="article-date">
+      <time datetime="2019-04-20T11:20:28.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555759228000.html/">[springboot] 配置监听器、过滤器和拦截器</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/hhhshct/p/8808115.html" target="_blank">springboot配置监听器、过滤器和拦截器</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555759227000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555759227000.html/" class="article-date">
+      <time datetime="2019-04-20T11:20:27.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555759227000.html/">[springboot] 获取当前语言环境</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/huanzi-qch/p/10000324.html" target="_blank">js读取i18n</a></p>
+<p>一、MessageSource获取国际化信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Autowired</span><br><span class="line">private org.springframework.context.MessageSource messageSource;</span><br><span class="line"></span><br><span class="line">String msg = messageSource.getMessage(&quot;welcome&quot;, null,locale);</span><br><span class="line">String msg2= messageSource.getMessage(&quot;welcome&quot;, null,locale1);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Locale locale = LocaleContextHolder.getLocale();</span><br><span class="line">//或</span><br><span class="line">Locale locale1= RequestContextUtils.getLocale(request);</span><br></pre></td></tr></table></figure></p>
+<p>二、自定义MessageSource获取国际化信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Locale;</span><br><span class="line">import javax.annotation.Resource;</span><br><span class="line">import org.springframework.context.MessageSource;</span><br><span class="line">import org.springframework.context.i18n.LocaleContextHolder;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class LocaleMessageSourceService &#123;</span><br><span class="line">    @Resource</span><br><span class="line">    private MessageSource messageSource;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @param code ：对应messages配置的key.</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line"></span><br><span class="line">    public String getMessage(String code)&#123;</span><br><span class="line">       return getMessage(code,null);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     *</span><br><span class="line">     * @param code ：对应messages配置的key.</span><br><span class="line">     * @param args : 数组参数.</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public String getMessage(String code,Object[] args)&#123;</span><br><span class="line">       return getMessage(code, args,&quot;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     *</span><br><span class="line">     * @param code ：对应messages配置的key.</span><br><span class="line">     * @param args : 数组参数.</span><br><span class="line">     * @param defaultMessage : 没有设置key的时候的默认值.</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public String getMessage(String code,Object[] args,String defaultMessage)&#123;</span><br><span class="line">       //这里使用比较方便的方法，不依赖request.</span><br><span class="line">       Locale locale = LocaleContextHolder.getLocale();</span><br><span class="line">       return messageSource.getMessage(code, args, defaultMessage, locale);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注入和使用自定义MessageSource：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Resource</span><br><span class="line">private LocaleMessageSourceService localeMessageSourceService;</span><br><span class="line"></span><br><span class="line">String msg3 = localeMessageSourceService.getMessage(&quot;welcome&quot;);</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555759226000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555759226000.html/" class="article-date">
+      <time datetime="2019-04-20T11:20:26.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555759226000.html/">[nginx] 部署多个springboot项目</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/u014174854/article/details/80464391" target="_blank">Nginx部署多个spring-boot项目(jar方式部署)</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555758315000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555758315000.html/" class="article-date">
+      <time datetime="2019-04-20T11:05:15.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555758315000.html/">[小程序] 文本超出自动缩小字体</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="" target="_blank"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">小程序的默认字体大小:</span><br><span class="line">18.79px</span><br></pre></td></tr></table></figure></p>
+<p>html文本超出自动缩小字体<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;测试&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!--我还是很萌响应式的--&gt;</span><br><span class="line">	&lt;div id=&quot;box&quot;&gt;</span><br><span class="line">	  &lt;p id=&quot;css&quot;&gt;喵喵喵喵喵喵喵喵喵喵&lt;/p&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	var box = document.getElementById(&apos;box&apos;);</span><br><span class="line">	var box = box.innerText;  //获取 div box里面的所有字</span><br><span class="line">	var cat = box.length;   //转换为字数</span><br><span class="line">	 </span><br><span class="line">	if(cat &gt;= 10)  //如果box里面字数大于或者等于10</span><br><span class="line">	&#123;</span><br><span class="line">	document.getElementById(&quot;css&quot;).style.fontSize=40+&apos;px&apos;;</span><br><span class="line">	//如果大于10个字 字体大小为40px</span><br><span class="line">	&#125;</span><br><span class="line">	else&#123;</span><br><span class="line">	//否则为80px大小</span><br><span class="line">	document.getElementById(&quot;css&quot;).style.fontSize=80+&apos;px&apos;;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/Alexin/p/3582240.html" target="_blank">html/css实现文字自动换行，超出部分出现(…)</a><br>一行文字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#当有一行文字的时候，如果想让超出部分出现（…），可以这样写：</span><br><span class="line">.wrap&#123;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  text-overflow: ellipsis;</span><br><span class="line">  white-space: nowrap;</span><br><span class="line">  width: 118px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>多行文字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#当有多行文字的时候，可以这样写:</span><br><span class="line">.wrap&#123;</span><br><span class="line">  width:220px;</span><br><span class="line">  height: 72px;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  text-overflow: ellipsis;</span><br><span class="line">  word-break: break-all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555758314000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555758314000.html/" class="article-date">
+      <time datetime="2019-04-20T11:05:14.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555758314000.html/">[小程序] wxs时间格式化</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/jiandan1127/article/details/88737432" target="_blank">微信小程序 wxs 配置工具函数(时间格式化)</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">var formatNumber = function (n) &#123;</span><br><span class="line">  n = n.toString()</span><br><span class="line">  return n[1] ? n : &apos;0&apos; + n</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">var regYear = getRegExp(&quot;(y+)&quot;, &quot;i&quot;);</span><br><span class="line"> </span><br><span class="line">var dateFormat = function (timestamp, format) &#123;</span><br><span class="line">  if (!format) &#123;</span><br><span class="line">    format = &quot;yyyy-MM-dd hh:mm:ss&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">  timestamp = parseInt(timestamp);</span><br><span class="line">  var realDate = getDate(timestamp);</span><br><span class="line">  function timeFormat(num) &#123;</span><br><span class="line">    return num &lt; 10 ? &apos;0&apos; + num : num;</span><br><span class="line">  &#125;</span><br><span class="line">  var date = [</span><br><span class="line">    [&quot;M+&quot;, timeFormat(realDate.getMonth() + 1)],</span><br><span class="line">    [&quot;d+&quot;, timeFormat(realDate.getDate())],</span><br><span class="line">    [&quot;h+&quot;, timeFormat(realDate.getHours())],</span><br><span class="line">    [&quot;m+&quot;, timeFormat(realDate.getMinutes())],</span><br><span class="line">    [&quot;s+&quot;, timeFormat(realDate.getSeconds())],</span><br><span class="line">    [&quot;q+&quot;, Math.floor((realDate.getMonth() + 3) / 3)],</span><br><span class="line">    [&quot;S+&quot;, realDate.getMilliseconds()],</span><br><span class="line">  ];</span><br><span class="line">  var reg1 = regYear.exec(format);</span><br><span class="line">  // console.log(reg1[0]);</span><br><span class="line">  if (reg1) &#123;</span><br><span class="line"> </span><br><span class="line">    format = format.replace(reg1[1], (realDate.getFullYear() + &apos;&apos;).substring(4 - reg1[1].length));</span><br><span class="line">  &#125;</span><br><span class="line">  for (var i = 0; i &lt; date.length; i++) &#123;</span><br><span class="line">    var k = date[i][0];</span><br><span class="line">    var v = date[i][1];</span><br><span class="line"> </span><br><span class="line">    var reg2 = getRegExp(&quot;(&quot; + k + &quot;)&quot;).exec(format);</span><br><span class="line">    if (reg2) &#123;</span><br><span class="line">      format = format.replace(reg2[1], reg2[1].length == 1</span><br><span class="line">        ? v : (&quot;00&quot; + v).substring((&quot;&quot; + v).length));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return format;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">module.exports = &#123;</span><br><span class="line">  dateFormat: dateFormat</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555758313000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555758313000.html/" class="article-date">
+      <time datetime="2019-04-20T11:05:13.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555758313000.html/">[小程序] 计算倒计时时分秒</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="http://www.xiaoshu168.com/wxapplet/226.html" target="_blank">计算倒计时时分秒</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br></pre></td><td class="code"><pre><span class="line">var formatNumber = function(n) &#123;</span><br><span class="line">  n = n.toString()</span><br><span class="line">  return n[1] ? n : &apos;0&apos; + n</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var dateFormat = function(date) &#123;</span><br><span class="line"></span><br><span class="line">  var year = date.getFullYear()</span><br><span class="line">  var month = date.getMonth() + 1</span><br><span class="line">  var day = date.getDate()</span><br><span class="line"></span><br><span class="line">  var hour = date.getHours()</span><br><span class="line">  var minute = date.getMinutes()</span><br><span class="line">  var second = date.getSeconds()</span><br><span class="line"></span><br><span class="line">  return [year, month, day].map(formatNumber).join(&apos;-&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function formatTime(date) &#123;</span><br><span class="line">  if (!!date) &#123;</span><br><span class="line">    if (!(date instanceof Date))</span><br><span class="line">      date = new Date(date);</span><br><span class="line">    var month = date.getMonth() + 1</span><br><span class="line">    var day = date.getDate()</span><br><span class="line">    return `$&#123;month&#125;月$&#123;day&#125;日`;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function formatDay(date) &#123;</span><br><span class="line">  if (!!date) &#123;</span><br><span class="line">    var year = date.getFullYear()</span><br><span class="line">    var month = date.getMonth() + 1</span><br><span class="line">    var day = date.getDate()</span><br><span class="line">    return [year, month, day].map(formatNumber).join(&apos;-&apos;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function formatDay2(date) &#123;</span><br><span class="line">  if (!!date) &#123;</span><br><span class="line">    var year = date.getFullYear()</span><br><span class="line">    var month = date.getMonth() + 1</span><br><span class="line">    var day = date.getDate()</span><br><span class="line">    return [year, month, day].map(formatNumber).join(&apos;/&apos;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function formatWeek(date) &#123;</span><br><span class="line">  if (!!date) &#123;</span><br><span class="line">    var day = date.getDay();</span><br><span class="line">    switch (day) &#123;</span><br><span class="line">      case 0:</span><br><span class="line">        return &apos;周日&apos;</span><br><span class="line">        break;</span><br><span class="line">      case 1:</span><br><span class="line">        return &apos;周一&apos;</span><br><span class="line">        break;</span><br><span class="line">      case 2:</span><br><span class="line">        return &apos;周二&apos;</span><br><span class="line">        break;</span><br><span class="line">      case 3:</span><br><span class="line">        return &apos;周三&apos;</span><br><span class="line">        break;</span><br><span class="line">      case 4:</span><br><span class="line">        return &apos;周四&apos;</span><br><span class="line">        break;</span><br><span class="line">      case 5:</span><br><span class="line">        return &apos;周五&apos;</span><br><span class="line">        break;</span><br><span class="line">      case 6:</span><br><span class="line">        return &apos;周六&apos;</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function formatHour(date) &#123;</span><br><span class="line">  if (!!date) &#123;</span><br><span class="line">    var hour = new Date(date).getHours();</span><br><span class="line">    var minute = new Date(date).getMinutes();</span><br><span class="line">    return [hour, minute].map(formatNumber).join(&apos;:&apos;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function timestamp(date, divisor = 1000) &#123;</span><br><span class="line">  if (date == undefined) &#123;</span><br><span class="line">    return;</span><br><span class="line">  &#125; else if (typeof date == &apos;number&apos;) &#123;</span><br><span class="line">    return Math.floor(date / divisor);</span><br><span class="line">  &#125; else if (typeof date == &apos;string&apos;) &#123;</span><br><span class="line">    var strs = date.split(/[^0-9]/);</span><br><span class="line">    return Math.floor(+new Date(strs[0] || 0, (strs[1] || 0) - 1, strs[2] || 0, strs[3] || 0, strs[4] || 0, strs[5] || 0) / divisor);</span><br><span class="line">  &#125; else if (Date.prototype.isPrototypeOf(date)) &#123;</span><br><span class="line">    return Math.floor(+date / divisor);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function detimestamp(date) &#123;</span><br><span class="line">  if (!!date) &#123;</span><br><span class="line">    return new Date(date * 1000);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function dateDiff(startDate, endDate) &#123;</span><br><span class="line">  var start_date = new Date(startDate.replace(/-/g, &quot;/&quot;));</span><br><span class="line">  var end_date = new Date(endDate.replace(/-/g, &quot;/&quot;));</span><br><span class="line"></span><br><span class="line">  console.log(start_date);</span><br><span class="line">  console.log(end_date);</span><br><span class="line"></span><br><span class="line">  //时间差的毫秒数</span><br><span class="line">  var dateDiff = end_date.getTime() - start_date.getTime();</span><br><span class="line">  //计算出相差天数</span><br><span class="line">  var dayDiff = Math.floor(dateDiff / (24 * 3600 * 1000));</span><br><span class="line"></span><br><span class="line">  //计算天数后剩余的毫秒数</span><br><span class="line">  var leave1 = dateDiff % (24 * 3600 * 1000);</span><br><span class="line"></span><br><span class="line">  //计算出小时数</span><br><span class="line">  var hours = Math.floor(leave1 / (3600 * 1000));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  //计算相差分钟数</span><br><span class="line">  //计算小时数后剩余的毫秒数</span><br><span class="line">  var leave2 = leave1 % (3600 * 1000)</span><br><span class="line">  //计算相差分钟数</span><br><span class="line">  var minutes = Math.floor(leave2 / (60 * 1000));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  //计算相差秒数</span><br><span class="line">  var leave3 = leave2 % (60 * 1000) //计算分钟数后剩余的毫秒数</span><br><span class="line">  var seconds = Math.round(leave3 / 1000)</span><br><span class="line"></span><br><span class="line">  return dayDiff;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  formatTime: formatTime,</span><br><span class="line">  formatDay: formatDay,</span><br><span class="line">  formatDay2: formatDay2,</span><br><span class="line">  formatHour: formatHour,</span><br><span class="line">  formatWeek: formatWeek,</span><br><span class="line">  timestamp: timestamp,</span><br><span class="line">  detimestamp: detimestamp,</span><br><span class="line">  dateFormat: dateFormat,</span><br><span class="line">  dateDiff: dateDiff</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555758312000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555758312000.html/" class="article-date">
+      <time datetime="2019-04-20T11:05:12.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555758312000.html/">[小程序] 计算倒计时时分秒</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="http://www.xiaoshu168.com/wxapplet/226.html" target="_blank">计算倒计时时分秒</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var timestamp = Date.parse(new Date());</span><br><span class="line">var totime = 过期的时间秒;</span><br><span class="line">//当前时间撮</span><br><span class="line">timestamp = timestamp / 1000;</span><br><span class="line">var surplus = totime - timestamp;</span><br><span class="line">if ( surplus &lt; 0 ) &#123;</span><br><span class="line">   var maxtime = surplus;</span><br><span class="line">   var second = Math.floor(maxtime % 60);       //计算秒</span><br><span class="line">   var minite = Math.floor((maxtime / 60) % 60); //计算分</span><br><span class="line">   var hour = Math.floor((maxtime / 3600) % 24); //计算小时</span><br><span class="line">   var day = Math.floor((maxtime / 3600) / 24);</span><br><span class="line">   //计算相差秒数  </span><br><span class="line">   console.log(day + &apos;天&apos; + hour + &quot;小时 &quot; + minite + &quot; 分钟&quot; + second + &apos;秒&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555758311000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555758311000.html/" class="article-date">
+      <time datetime="2019-04-20T11:05:11.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555758311000.html/">[小程序] 字符串处理</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/u013750239/article/details/81025628" target="_blank">微信小程序JS字符串操作方法汇总</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line">JS对字符串进行切割截取</span><br><span class="line"></span><br><span class="line">1.函数：split()</span><br><span class="line"></span><br><span class="line">功能：使用一个指定的分隔符把一个字符串分割存储到数组</span><br><span class="line"></span><br><span class="line">例子： str=&quot;jpg|bmp|gif|ico|png&quot;; arr=str.split(&quot;|&quot;);</span><br><span class="line"></span><br><span class="line">//arr是一个包含字符值&quot;jpg&quot;、&quot;bmp&quot;、&quot;gif&quot;、&quot;ico&quot;和&quot;png&quot;的数组</span><br><span class="line"></span><br><span class="line">2.函数：join()</span><br><span class="line"></span><br><span class="line">功能：使用您选择的分隔符将一个数组合并为一个字符串</span><br><span class="line"></span><br><span class="line">例子： var delimitedString=myArray.join(delimiter);</span><br><span class="line"></span><br><span class="line">var myList=new Array(&quot;jpg&quot;,&quot;bmp&quot;,&quot;gif&quot;,&quot;ico&quot;,&quot;png&quot;);</span><br><span class="line"></span><br><span class="line">var portableList=myList.join(&quot;|&quot;);</span><br><span class="line"></span><br><span class="line">//结果是jpg|bmp|gif|ico|png</span><br><span class="line"></span><br><span class="line">3.函数:concat（）</span><br><span class="line"></span><br><span class="line">功能：将两个数组连接在一起；</span><br><span class="line"></span><br><span class="line">例子：arr1=[1,2,3,4]</span><br><span class="line"></span><br><span class="line">　　arr2=[5,6,7,8]</span><br><span class="line"></span><br><span class="line">　　alert(arr1.concat(arr2))  //结果为[1,2,3,4,5,6,7,8]</span><br><span class="line"></span><br><span class="line">4.函数:charAt()</span><br><span class="line"></span><br><span class="line">功能：返回指定位置的字符。字符串中第一个字符的下标是 0。如果参数 index 不在 0 与 string.length 之间，该方法将返回一个空字符串。</span><br><span class="line"></span><br><span class="line">例子:var str=&apos;a,g,i,d,o,v,w,d,k,p&apos;</span><br><span class="line"></span><br><span class="line">alert(str.charAt(2))  //结果为g</span><br><span class="line"></span><br><span class="line">5:函数:charCodeAt()</span><br><span class="line"></span><br><span class="line">功能：charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数。</span><br><span class="line"></span><br><span class="line">方法 charCodeAt() 与 charAt() 方法执行的操作相似，只不过前者返回的是位于指定位置的字符的编码，而后者返回的是字符子串。</span><br><span class="line"></span><br><span class="line">例子：var str=&apos;a,g,i,d,o,v,w,d,k,p&apos;</span><br><span class="line"></span><br><span class="line">alert(str.charCodeAt(2))  //结果为103。即g的Unicode编码为103</span><br><span class="line"></span><br><span class="line">6.函数:slice(）</span><br><span class="line"></span><br><span class="line">功能：arrayObject.slice(start,end)</span><br><span class="line"></span><br><span class="line">　　start:必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。</span><br><span class="line"></span><br><span class="line">　　end:可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。</span><br><span class="line"></span><br><span class="line">　　返回一个新的数组，包含从start到end（不包括该元素）的arrayobject中的元素。</span><br><span class="line"></span><br><span class="line">例子：var str=&apos;ahji3o3s4e6p8a0sdewqdasj&apos;</span><br><span class="line"></span><br><span class="line">　　alert(str.slice(2,5))   //结果ji3</span><br><span class="line"></span><br><span class="line">7.函数:substring()</span><br><span class="line"></span><br><span class="line">定义和用法 substring 方法用于提取字符串中介于两个指定下标之间的字符。</span><br><span class="line"></span><br><span class="line">语法 stringObject.substring(start,stop)</span><br><span class="line"></span><br><span class="line">start 必需。一个非负的整数，规定要提取的子串的第一个字符在 stringObject 中的位置。</span><br><span class="line"></span><br><span class="line">stop 可选。一个非负的整数，比要提取的子串的最后一个字符在 stringObject 中的位置多 1。</span><br><span class="line"></span><br><span class="line">如果省略该参数，那么返回的子串会一直到字符串的结尾。</span><br><span class="line"></span><br><span class="line">返回 一个新的字符串，该字符串值包含 stringObject 的一个子字符串，其内容是从 start 处到 stop-1 处的所有字符，其长度为 stop 减 start。 说明 substring 方法返回的子串包括 start 处的字符，但不包括 end 处的字符。 如果 start 与 end 相等，那么该方法返回的就是一个空串（即长度为 0 的字符串）。 如果 start 比 end 大，那么该方法在提取子串之前会先交换这两个参数。 如果 start 或 end 为负数，那么它将被替换为 0。</span><br><span class="line"></span><br><span class="line">例子:var str=&apos;ahji3o3s4e6p8a0sdewqdasj&apos;</span><br><span class="line"></span><br><span class="line">alert(str.substring(2,6))   //结果为ji3o3</span><br><span class="line"></span><br><span class="line">8.函数:substr</span><br><span class="line"></span><br><span class="line">定义和用法 substr 方法用于返回一个从指定位置开始的指定长度的子字符串。</span><br><span class="line"></span><br><span class="line">语法 stringObject.substr(start [, length ])</span><br><span class="line"></span><br><span class="line">参数  start 必需。所需的子字符串的起始位置。字符串中的第一个字符的索引为 0。</span><br><span class="line"></span><br><span class="line">　　 length 可选。在返回的子字符串中应包括的字符个数。 说明 如果 length 为 0 或负数，将返回一个空字符串。 如果没有指定该参数，则子字符串将延续到stringObject的最后。</span><br><span class="line"></span><br><span class="line">举例： var str = &quot;0123456789&quot;;</span><br><span class="line"></span><br><span class="line">　　 alert(str.substring(0));------------&quot;0123456789&quot;</span><br><span class="line"></span><br><span class="line">　　 alert(str.substring(5));------------&quot;56789&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(10));-----------&quot;&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(12));-----------&quot;&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(-5));-----------&quot;0123456789&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(-10));----------&quot;0123456789&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(-12));----------&quot;0123456789&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(0,5));----------&quot;01234&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(0,10));---------&quot;0123456789&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(0,12));---------&quot;0123456789&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(2,0));----------&quot;01&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(2,2));----------&quot;&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(2,5));----------&quot;234&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(2,12));---------&quot;23456789&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(2,-2));---------&quot;01&quot;</span><br><span class="line"></span><br><span class="line">　　alert(str.substring(-1,5));---------&quot;01234&quot;</span><br><span class="line">　　alert(str.substring(-1,-5));--------&quot;&quot;</span><br><span class="line"></span><br><span class="line">js删除字符串的最后一个字符三种方法</span><br><span class="line"></span><br><span class="line">var basic = &quot;abc,def,ghi,&quot;;  </span><br><span class="line"></span><br><span class="line">第一种</span><br><span class="line">basic = basic.substr(0, basic.length - 1);  </span><br><span class="line"></span><br><span class="line">第二种</span><br><span class="line">basic = basic.substring(0, basic.length - 1);  </span><br><span class="line"></span><br><span class="line">第三种</span><br><span class="line">basic = basic.substring(0, basic.lastIndexOf(&apos;,&apos;));</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555758310000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555758310000.html/" class="article-date">
+      <time datetime="2019-04-20T11:05:10.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555758310000.html/">[小程序] 小程序+java后台文件上传</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_41417335/article/details/86631008" target="_blank">后台（java）接收前台文件上传，微信小程序文件上传</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">wx.uploadFile(&#123;</span><br><span class="line">  url: config.submitCommentUrl, //后台接口</span><br><span class="line">  header: &#123;</span><br><span class="line">    &quot;Content-Type&quot;: &quot;multipart/form-data&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  filePath: files[0], //文件路径</span><br><span class="line">  formData: &#123;</span><br><span class="line">    &apos;orderId&apos;: 1,</span><br><span class="line">    &apos;userId&apos;: 1,</span><br><span class="line">    &apos;comments&apos;: comments,</span><br><span class="line">    &apos;star&apos;: star,</span><br><span class="line">    &apos;phone&apos;: phone,</span><br><span class="line">    &apos;files&apos;: files</span><br><span class="line">  &#125;,</span><br><span class="line">  name: &apos;files&apos;, //文件名</span><br><span class="line">  success(res) &#123;</span><br><span class="line">    console.log(res.data);</span><br><span class="line">    wx.navigateBack(&#123;</span><br><span class="line">      delta: 1</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/LeoMelody/jianshu/blob/master/smallDemo/upload/upload.js" target="_blank">github|upload.js</a><br><a href="https://blog.csdn.net/wa172126691/article/details/82985427" target="_blank">多文件上传</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-/articles/2019/04/20/1555758309000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -343,597 +908,9 @@
 
 
   
-    <article id="post-/articles/2019/01/02/1555745571000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/01/02/1555745571000.html/" class="article-date">
-      <time datetime="2019-04-20T07:32:51.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/01/02/1555745571000.html/">[css] 让超出的内容显示为省略号</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/web_callback/article/details/70233759" target="_blank">html实现让超出的内容显示为省略号</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">	p&#123;</span><br><span class="line">		width:10em;/*保证文字不会被半汉字截断,显示10个文字*/</span><br><span class="line">		overflow:hidden;/*超出长度的文字隐藏*/</span><br><span class="line">		text-overflow:ellipsis;/*文字隐藏以后添加省略号*/</span><br><span class="line">		white-space:nowrap;/*强制不换行*/</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/04/20/1555732655000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555732655000.html/" class="article-date">
-      <time datetime="2019-04-20T03:57:35.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732655000.html/">[小程序] 发起支付</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="" target="_blank"></a><br><a href="https://github.com/search?l=Java&q=%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%94%AF%E4%BB%98&type=Repositories" target="_blank">github搜索”小程序支付”</a><br><a href="https://github.com/e7no/huihui" target="_blank">github | 汇汇生活</a><br><a href="https://github.com/jwcqc/WechatPayDemo" target="_blank">spring小程序后台支付 WechatPayDemo</a></p>
-<p><a href="https://gitee.com/dotton/lendoo-wx" target="_blank">github | lendoo-wx</a><br><a href="https://gitee.com/laeser/lendoo-web" target="_blank">github | nodejs后台</a></p>
-<p><a href="https://blog.csdn.net/yinlell/article/details/84666428" target="_blank">springboot+小程序支付</a></p>
-<p><a href="https://github.com/GZWgssmart/Teaching/blob/master/%E5%BE%AE%E4%BF%A1/%E5%A5%B6%E8%8C%B6/teamall/payment.txt" target="_blank">GZWgssmart</a></p>
-<p>官方<br><a href="http://www.manongjc.com/article/28970.html" target="_blank">springboot+小程序</a><br><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=11_1" target="_blank">1.下载微信官方的SDK</a><br>2.将以下文件拷到你的项目中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">package com.***.utils.wx;</span><br><span class="line"></span><br><span class="line">import java.io.ByteArrayInputStream;</span><br><span class="line">import java.io.InputStream;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @Description: 微信支付配置类</span><br><span class="line"> * @Author: hm</span><br><span class="line"> * @CreateDate: 2018/12/10 17:19.</span><br><span class="line"> * @UpdateDate: 2018/12/10 17:19.</span><br><span class="line"> * @Version: 1.0</span><br><span class="line"> */</span><br><span class="line">public class MyConfig extends WXPayConfig &#123;</span><br><span class="line"></span><br><span class="line">    private byte[] certData;</span><br><span class="line">    public MyConfig() throws Exception &#123;</span><br><span class="line">//        String certPath = &quot;classpath:apiclient_cert.p12&quot;;</span><br><span class="line">//        File file = new File(certPath);</span><br><span class="line">//        InputStream certStream = new FileInputStream(file);</span><br><span class="line">//        this.certData = new byte[(int) file.length()];</span><br><span class="line">//        certStream.read(this.certData);</span><br><span class="line">//        certStream.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String getAppID() &#123;</span><br><span class="line">        return &quot;你的appid&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String getMchID() &#123;</span><br><span class="line">        return &quot;你的商户id&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String getKey() &#123;</span><br><span class="line">        return &quot;你的商户api安全key，在商户平台api安全目录下可设置&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public InputStream getCertStream() &#123;</span><br><span class="line">        ByteArrayInputStream certBis = new ByteArrayInputStream(this.certData);</span><br><span class="line">        return certBis;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int getHttpConnectTimeoutMs() &#123;</span><br><span class="line">        return 8000;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int getHttpReadTimeoutMs() &#123;</span><br><span class="line">        return 10000;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    IWXPayDomain getWXPayDomain() &#123;</span><br><span class="line">        return new IWXPayDomain() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void report(String domain, long elapsedTimeMillis, Exception ex) &#123;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public DomainInfo getDomain(WXPayConfig config) &#123;</span><br><span class="line">                return new DomainInfo(&quot;api.mch.weixin.qq.com&quot;, false);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">4.java后台的调用统一下单接口类</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">     * 微信统一下单接口</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    @RequestMapping(value = &quot;/doUnifiedOrder&quot;, method = RequestMethod.POST)</span><br><span class="line">    public BaseResponse&lt;Map&gt; doUnifiedOrder(@RequestBody BaesRequest&lt;LicensePlate&gt; baseRequest) &#123;</span><br><span class="line">        BaseResponse&lt;Map&gt; response = new BaseResponse&lt;&gt;();</span><br><span class="line">        Map resultMap=new HashMap();</span><br><span class="line">        String openid = baseRequest.getRequestData().getOpenId();</span><br><span class="line">        MyConfig config = null;</span><br><span class="line">        WXPay wxpay =null;</span><br><span class="line">        try &#123;</span><br><span class="line">            config = new MyConfig();</span><br><span class="line">            wxpay= new WXPay(config);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        //生成的随机字符串</span><br><span class="line">        String nonce_str = WXPayUtil.generateNonceStr();</span><br><span class="line">        //获取客户端的ip地址</span><br><span class="line">        //获取本机的ip地址</span><br><span class="line">        InetAddress addr = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            addr = InetAddress.getLocalHost();</span><br><span class="line">        &#125; catch (UnknownHostException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        String spbill_create_ip = addr.getHostAddress();</span><br><span class="line">        //支付金额，需要转成字符串类型，否则后面的签名会失败</span><br><span class="line">        int  total_fee=1;</span><br><span class="line">        //商品描述</span><br><span class="line">        String body = &quot;车费支付&quot;;</span><br><span class="line">        //商户订单号</span><br><span class="line">        String out_trade_no= WXPayUtil.generateNonceStr();</span><br><span class="line">        //统一下单接口参数</span><br><span class="line">        HashMap&lt;String, String&gt; data = new HashMap&lt;String, String&gt;();</span><br><span class="line">        data.put(&quot;appid&quot;, appid);</span><br><span class="line">        data.put(&quot;mch_id&quot;, mch_id);</span><br><span class="line">        data.put(&quot;nonce_str&quot;, nonce_str);</span><br><span class="line">        data.put(&quot;body&quot;, body);</span><br><span class="line">        data.put(&quot;out_trade_no&quot;,out_trade_no);</span><br><span class="line">        data.put(&quot;total_fee&quot;, String.valueOf(total_fee));</span><br><span class="line">        data.put(&quot;spbill_create_ip&quot;, spbill_create_ip);</span><br><span class="line">        data.put(&quot;notify_url&quot;, notify_url);</span><br><span class="line">        data.put(&quot;trade_type&quot;,TRADETYPE);</span><br><span class="line">        data.put(&quot;openid&quot;, openid);</span><br><span class="line">        try &#123;</span><br><span class="line">            Map&lt;String, String&gt; rMap = wxpay.unifiedOrder(data);</span><br><span class="line">            System.out.println(&quot;统一下单接口返回: &quot; + rMap);</span><br><span class="line">            String return_code = (String) rMap.get(&quot;return_code&quot;);</span><br><span class="line">            String result_code = (String) rMap.get(&quot;result_code&quot;);</span><br><span class="line">            String nonceStr = WXPayUtil.generateNonceStr();</span><br><span class="line">            resultMap.put(&quot;nonceStr&quot;, nonceStr);</span><br><span class="line">            Long timeStamp = System.currentTimeMillis() / 1000;</span><br><span class="line">            if (&quot;SUCCESS&quot;.equals(return_code) &amp;&amp; return_code.equals(result_code)) &#123;</span><br><span class="line">                String prepayid = rMap.get(&quot;prepay_id&quot;);</span><br><span class="line">                resultMap.put(&quot;package&quot;, &quot;prepay_id=&quot;+prepayid);</span><br><span class="line">                resultMap.put(&quot;signType&quot;, &quot;MD5&quot;);</span><br><span class="line">                //这边要将返回的时间戳转化成字符串，不然小程序端调用wx.requestPayment方法会报签名错误</span><br><span class="line">                resultMap.put(&quot;timeStamp&quot;, timeStamp + &quot;&quot;);</span><br><span class="line">                //再次签名，这个签名用于小程序端调用wx.requesetPayment方法</span><br><span class="line">                resultMap.put(&quot;appId&quot;,appid);</span><br><span class="line">                String sign = WXPayUtil.generateSignature(resultMap, key);</span><br><span class="line">                resultMap.put(&quot;paySign&quot;, sign);</span><br><span class="line">                System.out.println(&quot;生成的签名paySign : &quot;+ sign);</span><br><span class="line">                response.setData(resultMap);</span><br><span class="line">                return response;</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                return  response;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            return  response;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p><a href="https://github.com/andy388/weapp-weixinpay" target="_blank">(servlet)微信小程序支付，服务端java项目+前端小程序实现</a></p>
-<p><a href="https://github.com/KevinYounGa/xcx-wxpay" target="_blank">关于微信小程序支付、退款、模板消息发送功能的demo(前后端代码)</a></p>
-<p>小程序中发起微信支付<br><a href="" target="_blank"></a><br><a href="https://www.jianshu.com/p/eafb5f80f304" target="_blank" rel="noopener">https://www.jianshu.com/p/eafb5f80f304</a></p>
-<p>小程序的实现<br><a href="" target="_blank"></a><br><a href="http://www.cnblogs.com/catcher1994/p/6664404.html" target="_blank" rel="noopener">http://www.cnblogs.com/catcher1994/p/6664404.html</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">//index.js</span><br><span class="line">//获取应用实例</span><br><span class="line">const app = getApp()</span><br><span class="line">//输入小程序的appid</span><br><span class="line">const APP_ID = &quot;小程序的appid&quot;;</span><br><span class="line">//输入小程序app_secret</span><br><span class="line">const APP_SECRET = &quot;小程序的app_secret&quot;;</span><br><span class="line">//储存获取到openid</span><br><span class="line">var OPEN_ID = &quot;&quot;;</span><br><span class="line">//储存获取到session_key</span><br><span class="line">var SESSION_KEY = &quot;&quot;;</span><br><span class="line">Page(&#123;</span><br><span class="line">  data:&#123;</span><br><span class="line">    &apos;message&apos;:&quot;发起支付&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  wxPay:function()&#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.login(&#123;</span><br><span class="line">      success:function(res)&#123;</span><br><span class="line">        wx.request(&#123;</span><br><span class="line">          url:&quot;https://xiaochengxu.e0yu.com/index.php?s=Index/get_openid&quot;,</span><br><span class="line">          data:&#123;</span><br><span class="line">            appid: APP_ID,</span><br><span class="line">            secret:APP_SECRET,</span><br><span class="line">            js_code:res.code,</span><br><span class="line">            grant_type: &apos;authorization_code&apos; </span><br><span class="line">          &#125;,</span><br><span class="line">          method:&apos;GET&apos;,</span><br><span class="line">          success:function(res)&#123;</span><br><span class="line">            //console.log(res);</span><br><span class="line">            OPEN_ID = res.data.openid;//获取到的openid             wx.request(&#123;</span><br><span class="line">              url: &quot;https://xiaochengxu.e0yu.com/index.php?s=Index/wxPay&quot;,</span><br><span class="line">              data:&#123;</span><br><span class="line">                openid:OPEN_ID,</span><br><span class="line">                total_fee:1,//充值金额 单位&quot;分&quot;</span><br><span class="line">                title:&apos;商品标题&apos;</span><br><span class="line">              &#125;,</span><br><span class="line">              method:&apos;GET&apos;,</span><br><span class="line">              success:function(result)&#123;</span><br><span class="line">                //console.log(result);</span><br><span class="line">                console.log(&apos;调起支付&apos;);</span><br><span class="line">                wx.requestPayment(&#123;</span><br><span class="line">                  &apos;timeStamp&apos;: result.data.timeStamp,</span><br><span class="line">                  &apos;nonceStr&apos;: result.data.nonceStr,</span><br><span class="line">                  &apos;package&apos;: result.data.package,</span><br><span class="line">                  &apos;signType&apos;: &apos;MD5&apos;,</span><br><span class="line">                  &apos;paySign&apos;: result.data.paySign,</span><br><span class="line">                  &apos;success&apos;: function (res) &#123;</span><br><span class="line">                    console.log(&apos;success&apos;);</span><br><span class="line">                  &#125;,</span><br><span class="line">                  &apos;fail&apos;: function (res) &#123;</span><br><span class="line">                    console.log(&apos;fail&apos;);</span><br><span class="line">                  &#125;,</span><br><span class="line">                  &apos;complete&apos;: function (res) &#123;</span><br><span class="line">                    console.log(&apos;complete&apos;);</span><br><span class="line">                  &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/04/20/1555732654000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555732654000.html/" class="article-date">
-      <time datetime="2019-04-20T03:57:34.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732654000.html/">[小程序] 构造函数</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>小程序学习：构造函数写法对比<br><a href="https://blog.csdn.net/qq_32584661/article/details/80420432" target="_blank" rel="noopener">https://blog.csdn.net/qq_32584661/article/details/80420432</a></p>
-<p>ES6写法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Test &#123;</span><br><span class="line">  constructor(x, y) &#123;</span><br><span class="line">    this.x = x;</span><br><span class="line">    this.y = y;</span><br><span class="line">  &#125;;</span><br><span class="line">  sum() &#123;</span><br><span class="line">    return this.x + this.y;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let t = new Test(10, 1000);</span><br><span class="line">let he = t.sum();</span><br><span class="line">console.log(he);</span><br></pre></td></tr></table></figure></p>
-<p>utils/PageUtil.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">var api = require(&apos;./promise&apos;);</span><br><span class="line"></span><br><span class="line">class PageUtil &#123;</span><br><span class="line"></span><br><span class="line">  constructor(context ,listName, url, limit) &#123;</span><br><span class="line">    this.context = context;</span><br><span class="line">    this.url = url;</span><br><span class="line">    this.listName = listName;</span><br><span class="line">    this.limit = limit;</span><br><span class="line">    this.currentPage = 0;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  fetchMore(currentList,callback) &#123;</span><br><span class="line">    var self = this;</span><br><span class="line">    var limit = this.limit;</span><br><span class="line">    var page = this.currentPage + 1;</span><br><span class="line">    var city = this.context.data.address;</span><br><span class="line"></span><br><span class="line">    api.post(self.url, &#123;</span><br><span class="line">      limit: limit,</span><br><span class="line">      page: page,</span><br><span class="line">      city: city,</span><br><span class="line">    &#125;).then(res =&gt; &#123;</span><br><span class="line"></span><br><span class="line">      typeof callback == &apos;function&apos; &amp;&amp; callback(res);</span><br><span class="line"></span><br><span class="line">      var pageList = res.data;</span><br><span class="line">      if (pageList == null || pageList.length == 0) &#123;</span><br><span class="line">        return;</span><br><span class="line">      &#125;</span><br><span class="line">      self.currentPage = page;</span><br><span class="line">      self.context.setData(&#123;</span><br><span class="line">        [self.listName]: currentList.concat(pageList)</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default PageUtil;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import PageUtil from &quot;../../../utils/PageUtil.js&quot;;</span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: function(options) &#123;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      options: options</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    var pageUtil = new PageUtil(this, &quot;arrays&quot;, config.order.orderListUrl, 10);</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      pageUtil: pageUtil</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    this.data.pageUtil.fetchMore(this.data.arrays,function(res)&#123;</span><br><span class="line"></span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/04/20/1555732653000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555732653000.html/" class="article-date">
-      <time datetime="2019-04-20T03:57:33.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732653000.html/">[小程序] 经纬度计算距离，单位km</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/qq_41320944/article/details/79887819" target="_blank">经纬度计算距离，单位km</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">onLoad: function (options) &#123;</span><br><span class="line">  //[0: (39.928712, 116.393345),1: (39.928722, 116.393853)] 举个栗子</span><br><span class="line"></span><br><span class="line">  this.distance(39.928712, 116.393345, 39.928722, 116.393853)</span><br><span class="line">&#125;,</span><br><span class="line"> </span><br><span class="line">distance:function(la1, lo1, la2, lo2) &#123;</span><br><span class="line"> </span><br><span class="line">   var La1 = la1 * Math.PI / 180.0;</span><br><span class="line">   var La2 = la2 * Math.PI / 180.0;</span><br><span class="line">   var La3 = La1 - La2;</span><br><span class="line"></span><br><span class="line">   var Lb3 = lo1 * Math.PI / 180.0 - lo2 * Math.PI / 180.0;</span><br><span class="line">   var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(La3 / 2), 2) + Math.cos(La1) * Math.cos(La2) * Math.pow(Math.sin(Lb3 / 2), 2)));</span><br><span class="line"></span><br><span class="line">   s = s * 6378.137;//地球半径</span><br><span class="line">   s = Math.round(s * 10000) / 10000;</span><br><span class="line"></span><br><span class="line">   &lt;!-- console.log(&quot;计算结果&quot;,s) --&gt;</span><br><span class="line">   return s;   </span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
-<p>传入参数调用distance方法即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  /**</span><br><span class="line">   * 生命周期函数--监听页面加载</span><br><span class="line">   */</span><br><span class="line">  onLoad: function (options) &#123;</span><br><span class="line">      var that = this;</span><br><span class="line">      // 以北京故宫为例计算当前位置到其的距离，北京故宫坐标（116.403802, 39.915405）</span><br><span class="line">      wx.getLocation(&#123;</span><br><span class="line">        type: &apos;gcj02&apos;,</span><br><span class="line">        success: function (res) &#123;</span><br><span class="line">          console.log(&quot;当前坐标信息：&quot;, res)</span><br><span class="line">          var distance = that.distance(res.latitude, res.longitude,39.918034,116.415192);</span><br><span class="line">          console.log(&quot;当前位置距离北京故宫：&quot;, distance, &quot;千米&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    // 举个栗子验证一下distance方法的真实性和有效性</span><br><span class="line">    // 北京故宫坐标（116.403802,39.915405），上海虹桥机场坐标(121.334421,31.200479),地图测距结果为1066.6±10</span><br><span class="line">    var testdistance=that.distance(39.915405, 116.403802, 31.200479, 121.334421);//注意经纬度别混淆</span><br><span class="line">    console.log(&quot;北京故宫-上海虹桥机场的距离为：&quot;,testdistance,&quot;千米&quot;);//结果让人很满意</span><br><span class="line">  &#125;,</span><br><span class="line">  /**</span><br><span class="line">   * @creator 新猿意码</span><br><span class="line">   * @data 2019/01/17</span><br><span class="line">   * @desc 由经纬度计算两点之间的距离，la为latitude缩写，lo为longitude</span><br><span class="line">   * @param la1 第一个坐标点的纬度</span><br><span class="line">   * @param lo1 第一个坐标点的经度</span><br><span class="line">   * @param la2 第二个坐标点的纬度</span><br><span class="line">   * @param lo2 第二个坐标点的经度</span><br><span class="line">   * @return (int)s   返回距离(单位千米或公里)</span><br><span class="line">   * @tips 注意经度和纬度参数别传反了，一般经度为0~180、纬度为0~90</span><br><span class="line">   * 具体算法不做解释，有兴趣可以了解一下球面两点之间最短距离的计算方式</span><br><span class="line">   */</span><br><span class="line">  distance: function (la1, lo1, la2, lo2) &#123;</span><br><span class="line">    var La1 = la1 * Math.PI / 180.0;</span><br><span class="line">    var La2 = la2 * Math.PI / 180.0;</span><br><span class="line">    var La3 = La1 - La2;</span><br><span class="line">    var Lb3 = lo1 * Math.PI / 180.0 - lo2 * Math.PI / 180.0;</span><br><span class="line">    var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(La3 / 2), 2) + Math.cos(La1) * Math.cos(La2) * Math.pow(Math.sin(Lb3 / 2), 2)));</span><br><span class="line">    s = s * 6378.137;</span><br><span class="line">    s = Math.round(s * 10000) / 10000;</span><br><span class="line">    s = s.toFixed(2);</span><br><span class="line">    return s;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>DistanceUtil.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">function getDistance(lat1, lng1, lat2, lng2) &#123;</span><br><span class="line">  lat1 = lat1 || 0;</span><br><span class="line">  lng1 = lng1 || 0;</span><br><span class="line">  lat2 = lat2 || 0;</span><br><span class="line">  lng2 = lng2 || 0;</span><br><span class="line"></span><br><span class="line">  var rad1 = lat1 * Math.PI / 180.0;</span><br><span class="line">  var rad2 = lat2 * Math.PI / 180.0;</span><br><span class="line">  var a = rad1 - rad2;</span><br><span class="line">  var b = lng1 * Math.PI / 180.0 - lng2 * Math.PI / 180.0;</span><br><span class="line"></span><br><span class="line">  var r = 6378137;</span><br><span class="line">  var distance = r * 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(rad1) * Math.cos(rad2) * Math.pow(Math.sin(b / 2), 2)));</span><br><span class="line"></span><br><span class="line">  /*if (distance &gt; 1000)&#123;</span><br><span class="line">    distance = Math.round(distance / 1000);</span><br><span class="line">  &#125;*/</span><br><span class="line"></span><br><span class="line">  return distance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  getDistance: getDistance</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/04/20/1555732652000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555732652000.html/" class="article-date">
-      <time datetime="2019-04-20T03:57:32.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732652000.html/">[小程序] 页面分享</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/zzwwjjdj1/article/details/79390446" target="_blank">页面分享 onShareAppMessage</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">onShareAppMessage: (res) =&gt; &#123;</span><br><span class="line">   if (res.from === &apos;button&apos;) &#123;</span><br><span class="line">     console.log(&quot;来自页面内转发按钮&quot;);</span><br><span class="line">     console.log(res.target);</span><br><span class="line">   &#125;</span><br><span class="line">   else &#123;</span><br><span class="line">     console.log(&quot;来自右上角转发菜单&quot;)</span><br><span class="line">   &#125;</span><br><span class="line">   return &#123;</span><br><span class="line">     title: &apos;妹子图片&apos;,</span><br><span class="line">     path: &apos;/pages/share/share?id=123&apos;,</span><br><span class="line">     imageUrl: &quot;/images/1.jpg&quot;,</span><br><span class="line">     success: (res) =&gt; &#123;</span><br><span class="line">       console.log(&quot;转发成功&quot;, res);</span><br><span class="line">     &#125;,</span><br><span class="line">     fail: (res) =&gt; &#123;</span><br><span class="line">       console.log(&quot;转发失败&quot;, res);</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
-<p>wxml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;view class=&quot;view&quot;&gt;</span><br><span class="line">  &lt;image class=&quot;cover-9&quot; src=&quot;&#123;&#123;img&#125;&#125;&quot; bindtap=&quot;img&quot;&gt;&lt;/image&gt;</span><br><span class="line">  &lt;view class=&quot;window-1&quot;&gt;</span><br><span class="line">    &lt;button type=&quot;default&quot; id=&quot;open&quot; bindtap=&quot;showShareMenu&quot;&gt;开启分享&lt;/button&gt;</span><br><span class="line">    &lt;button type=&quot;warn&quot; id=&quot;close&quot; bindtap=&quot;hideShareMenu&quot;&gt;关闭分享&lt;/button&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">  &lt;button type=&quot;primary&quot; open-type=&quot;share&quot; data-name=&quot;pageShare&quot; id=&quot;share&quot;&gt;点击分享&lt;/button&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
-<p>wxss<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">page&#123;</span><br><span class="line">  height: 100%;</span><br><span class="line">&#125;</span><br><span class="line">.view&#123;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 100%;</span><br><span class="line">&#125;</span><br><span class="line">.window-1&#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: row;</span><br><span class="line">  margin: 20rpx 0;</span><br><span class="line">&#125;</span><br><span class="line">.cover-9&#123;</span><br><span class="line">  width: 688rpx;</span><br><span class="line">  height: 75%;</span><br><span class="line">  margin: 0 30rpx;</span><br><span class="line">  border:2rpx solid;</span><br><span class="line">  border-radius:5px;  </span><br><span class="line">&#125;</span><br><span class="line">button&#123;</span><br><span class="line">  margin: 0 10rpx;</span><br><span class="line">  width: 100%;</span><br><span class="line">&#125;</span><br><span class="line">#share&#123;</span><br><span class="line">  width: 730rpx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/04/20/1555732651000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555732651000.html/" class="article-date">
-      <time datetime="2019-04-20T03:57:31.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732651000.html/">[小程序] wxs</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.w3cschool.cn/weixinapp/weixinapp-nvg32czm.html" target="_blank">微信小程序 WXS模块</a><br><a href="https://blog.csdn.net/dwb123456123456/article/details/82152403" target="_blank">微信小程序 wxs介绍和使用</a></p>
-<p>在.wxml页面中编写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;wxs module=&quot;filter&quot;&gt;</span><br><span class="line">var joinArray= function (array) &#123;</span><br><span class="line">	return array.join(&apos; &apos;)</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">module.exports = &#123;</span><br><span class="line">	joinArray: joinArray</span><br><span class="line">&#125;</span><br><span class="line">&lt;/wxs&gt;</span><br><span class="line"></span><br><span class="line">&lt;view&gt; &#123;&#123;filter.joinArray(names)&#125;&#125; &lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>字符串截取相关<br>wxs/string.wxs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function my_slice(str,a,b)&#123;</span><br><span class="line">  return str.slice(a,b);</span><br><span class="line">&#125;</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  slice: my_slice</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>.wxml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;wxs src=&quot;/wxs/string.wxs&quot; module=&quot;tools&quot; /&gt;</span><br><span class="line">&lt;view&gt;</span><br><span class="line">  &#123;&#123;tools.slice(&quot;123456789&quot;,0,5)&#125;&#125;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>经纬度计算相关<br>wxs/distance.wxs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function getDistance(lat1, lng1, lat2, lng2) &#123;</span><br><span class="line">  lat1 = lat1 || 0;</span><br><span class="line">  lng1 = lng1 || 0;</span><br><span class="line">  lat2 = lat2 || 0;</span><br><span class="line">  lng2 = lng2 || 0;</span><br><span class="line"></span><br><span class="line">  var rad1 = lat1 * Math.PI / 180.0;</span><br><span class="line">  var rad2 = lat2 * Math.PI / 180.0;</span><br><span class="line">  var a = rad1 - rad2;</span><br><span class="line">  var b = lng1 * Math.PI / 180.0 - lng2 * Math.PI / 180.0;</span><br><span class="line"></span><br><span class="line">  var r = 6378137;</span><br><span class="line">  var distance = r * 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(rad1) * Math.cos(rad2) * Math.pow(Math.sin(b / 2), 2)));</span><br><span class="line"></span><br><span class="line">  return distance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  getDistance: getDistance</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>.wxml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;wxs src=&quot;/wxs/string.wxs&quot; module=&quot;tools&quot; /&gt;</span><br><span class="line">&lt;view&gt;</span><br><span class="line">  &#123;&#123;tools.slice(&quot;123456789&quot;,0,5)&#125;&#125;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.jianshu.com/p/05196ed2dc96" target="_blank">邮件检验</a><br><a href="https://github.com/tomfriwel/wechatapp-wxs-tutorial/blob/master/src/wxs/common.wxs" target="_blank">github | wxs</a></p>
-<blockquote>
-<p>时间相关</p>
-</blockquote>
-<p>在.wxs中编写<br>dateformat.wxs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var localData= function (value) &#123;</span><br><span class="line">  var date = getDate(value * 1000);</span><br><span class="line">  var Month = date.getMonth() + 1;</span><br><span class="line">  var Day = date.getDate();</span><br><span class="line">  var hours = date.getHours(); //计算剩余的小时</span><br><span class="line">  var minutes = date.getMinutes(); //计算剩余的分钟</span><br><span class="line">  var Y = date.getFullYear() + &apos;年&apos;;</span><br><span class="line">  var M = Month &lt; 10 ? &apos;0&apos; + Month + &apos;月&apos; : Month + &apos;月&apos;;</span><br><span class="line">  var D = Day + 1 &lt; 10 ? &apos;0&apos; + Day + &apos;日&apos; : Day + &apos;日&apos;;</span><br><span class="line">  var H = hours &lt; 10 ? &apos;0&apos; + hours + &apos;:&apos; : hours + &apos;:&apos;</span><br><span class="line">  var m = minutes &lt; 10 ? &apos;0&apos; + minutes : minutes;</span><br><span class="line">  return M + D + &quot;   &quot; + H + m;</span><br><span class="line">&#125;</span><br><span class="line">module.exports=&#123;</span><br><span class="line">  localData:localData</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>.wxml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;wxs module=&apos;dateformat&apos; src=&apos;./dateformat.wxs&apos; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;view&gt;&#123;&#123;dateformat.localData(item.endtime)&#125;&#125;&lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/04/20/1555732650000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555732650000.html/" class="article-date">
-      <time datetime="2019-04-20T03:57:30.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732650000.html/">[小程序] 通用组件</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/qq_24734285/article/category/6645870" target="_blank">csdn 小程序组件集合</a><br><a href="https://github.com/youzouzou/wxapp" target="_blank">github|小程序组件集合</a><br><a href="https://github.com/icindy/wxParse" target="_blank">wxParse</a><br><a href="https://github.com/weui/weui-wxss" target="_blank">weui-wxss</a><br><a href="https://github.com/Tencent/weui-wxss" target="_blank">Tencent/weui-wxss</a><br><a href="https://github.com/zzjian/wx-wanandroid" target="_blank">wx-wanandroid</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/04/20/1555732649000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555732649000.html/" class="article-date">
-      <time datetime="2019-04-20T03:57:29.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732649000.html/">[小程序] 获取当前经纬度</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line"></span><br><span class="line"> data: &#123;</span><br><span class="line">    latitude: &quot;&quot;,</span><br><span class="line">    longitude: &quot;&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  GPSsubmit:function(e)&#123;</span><br><span class="line">    wx.getLocation(&#123;</span><br><span class="line">      type: &apos;wgs84&apos;,</span><br><span class="line">      success: (res)=&gt; &#123;</span><br><span class="line">        var latitude = res.latitude</span><br><span class="line">        var longitude = res.longitude</span><br><span class="line">        var speed = res.speed</span><br><span class="line">        var accuracy = res.accuracy</span><br><span class="line">        this.setData(&#123; latitude: latitude, longitude: longitude&#125;)</span><br><span class="line">        wx.showModal(&#123;</span><br><span class="line">          title: &apos;当前位置&apos;,</span><br><span class="line">          content: &apos;经度&apos; + res.longitude+ &apos;纬度&apos;+res.latitude,</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/04/20/1555732648000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555732648000.html/" class="article-date">
-      <time datetime="2019-04-20T03:57:28.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732648000.html/">[小程序] 分页加载数据</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/lanfeng1993/LoadDataDemo" target="_blank">微信小程序分页加载数据</a></p>
-<p>utils/PageUtil.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">var api = require(&apos;./promise&apos;);</span><br><span class="line"></span><br><span class="line">class PageUtil &#123;</span><br><span class="line"></span><br><span class="line">  constructor(context ,listName, url, limit) &#123;</span><br><span class="line">    this.context = context;</span><br><span class="line">    this.url = url;</span><br><span class="line">    this.listName = listName;</span><br><span class="line">    this.limit = limit;</span><br><span class="line">    this.currentPage = 0;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  fetchMore(currentList,callback) &#123;</span><br><span class="line">    var self = this;</span><br><span class="line">    var limit = this.limit;</span><br><span class="line">    var page = this.currentPage + 1;</span><br><span class="line">    var city = this.context.data.address;</span><br><span class="line"></span><br><span class="line">    api.post(self.url, &#123;</span><br><span class="line">      limit: limit,</span><br><span class="line">      page: page,</span><br><span class="line">      city: city,</span><br><span class="line">    &#125;).then(res =&gt; &#123;</span><br><span class="line"></span><br><span class="line">      typeof callback == &apos;function&apos; &amp;&amp; callback(res);</span><br><span class="line"></span><br><span class="line">      var pageList = res.data;</span><br><span class="line">      if (pageList == null || pageList.length == 0) &#123;</span><br><span class="line">        return;</span><br><span class="line">      &#125;</span><br><span class="line">      self.currentPage = page;</span><br><span class="line">      self.context.setData(&#123;</span><br><span class="line">        [self.listName]: currentList.concat(pageList)</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default PageUtil;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/32/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><span class="page-number current">33</span><a class="page-number" href="/page/34/">34</a><a class="page-number" href="/page/35/">35</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/34/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/32/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><span class="page-number current">33</span><a class="page-number" href="/page/34/">34</a><a class="page-number" href="/page/35/">35</a><span class="space">&hellip;</span><a class="page-number" href="/page/70/">70</a><a class="extend next" rel="next" href="/page/34/">Next &raquo;</a>
     </nav>
   
 

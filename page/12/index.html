@@ -280,6 +280,572 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-/articles/2019/05/23/1558610943000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/23/articles/2019/05/23/1558610943000.html/" class="article-date">
+      <time datetime="2019-05-23T11:29:03.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610943000.html/">[小程序] 调用component中的方法</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_36611526/article/details/80567964" target="_blank">调用component中的方法</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">onReady:function()&#123;</span><br><span class="line">	this.toast = this.selectComponent(&quot;#toast&quot;);</span><br><span class="line">	this.toast.showToast();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/zhu12345618/componentEventTest" target="_blank" rel="noopener">https://github.com/zhu12345618/componentEventTest</a><br><a href="https://blog.csdn.net/u013654125/article/details/80733767" target="_blank">微信小程序自定义组件Component总结</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">四、组件与外部通信事件</span><br><span class="line"></span><br><span class="line">上面的&quot;myProperty&quot;是父节点设置数据到组件里，组件传数据到父节点是用事件的方式。</span><br><span class="line"></span><br><span class="line">注册事件，index.wxml和index.js：</span><br><span class="line"></span><br><span class="line">&lt;!-- 引用组件的页面模版 --&gt;</span><br><span class="line">&lt;view&gt;</span><br><span class="line">  &lt;my-component id=&quot;test&quot; bindmyevent=&quot;myEventListener&quot;&gt;</span><br><span class="line">     &lt;view&gt;这里是插入到组件slot中的内容&lt;/view&gt; </span><br><span class="line">  &lt;/my-component&gt;</span><br><span class="line"> </span><br><span class="line">  &lt;!-- 或者可以写成 --&gt;</span><br><span class="line">  &lt;!--</span><br><span class="line">    &lt;my-component id=&quot;test&quot; bindmyevent=&quot;myEventListener&quot;&gt;</span><br><span class="line">     &lt;view&gt;这里是插入到组件slot中的内容&lt;/view&gt; </span><br><span class="line">    &lt;/my-component&gt;</span><br><span class="line">   --&gt;</span><br><span class="line">&lt;/view&gt;</span><br><span class="line">监听事件：</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line"> </span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad : function() &#123;</span><br><span class="line">      console.log(this.selectComponent(&quot;#test&quot;));</span><br><span class="line">  &#125;,</span><br><span class="line">  myEventListener: function(e) &#123;</span><br><span class="line">    console.log(&quot;Event in index&quot;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">发射事件component-tag-name.wxml和component-tag-name.js：</span><br><span class="line"></span><br><span class="line">&lt;!-- 组件模板 --&gt;</span><br><span class="line">&lt;view class=&quot;wrapper&quot;&gt;</span><br><span class="line">  &lt;button bindtap=&quot;onTap&quot;&gt;点击这个按钮将触发“myevent”事件&lt;/button&gt;</span><br><span class="line">&lt;/view&gt;</span><br><span class="line">// components/component-tag-name.js</span><br><span class="line">Component(&#123;</span><br><span class="line">  properties: &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onTap: function () &#123;</span><br><span class="line">      var myEventDetail = &#123;&#125; // detail对象，提供给事件监听函数</span><br><span class="line">      var myEventOption = &#123;&#125; // 触发事件的选项</span><br><span class="line">      this.triggerEvent(&apos;myevent&apos;, myEventDetail, myEventOption)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">--------------------- </span><br><span class="line">作者：_大猪 </span><br><span class="line">来源：CSDN </span><br><span class="line">原文：https://blog.csdn.net/u013654125/article/details/80733767 </span><br><span class="line">版权声明：本文为博主原创文章，转载请附上博文链接！</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/23/1558610942000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/23/articles/2019/05/23/1558610942000.html/" class="article-date">
+      <time datetime="2019-05-23T11:29:02.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610942000.html/">[小程序] 适配华为</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_35432904/article/details/83022301" target="_blank">适配华为</a></p>
+<p>app.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">App(&#123;</span><br><span class="line"></span><br><span class="line">  globalData: &#123;</span><br><span class="line">    isHuaWei: false,</span><br><span class="line">  &#125;,</span><br><span class="line">  onShow:function()&#123;</span><br><span class="line">    let that = this;</span><br><span class="line">    wx.getSystemInfo(&#123;</span><br><span class="line">      success:  res=&gt;&#123;</span><br><span class="line">        // console.log(&apos;手机信息res&apos;+res.model)</span><br><span class="line">        let brand= res.brand;</span><br><span class="line">        if (brand.search(&apos;HUAWEI&apos;) != -1) &#123;</span><br><span class="line">           that.globalData.isHuaWei = true</span><br><span class="line">        &#125; </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;) </span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/23/1558610941000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/23/articles/2019/05/23/1558610941000.html/" class="article-date">
+      <time datetime="2019-05-23T11:29:01.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610941000.html/">[小程序] 使用sass</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.sass.hk/guide/" target="_blank" rel="noopener">sass指南</a><br><a href="https://www.cnblogs.com/cshi/p/5622650.html" target="_blank">webstorm下设置sass</a><br><a href="https://blog.csdn.net/gao_xu_520/article/details/77731768" target="_blank">Sass创建简单的项目</a><br><a href="https://www.sass.hk/docs/" target="_blank">官方sass文档</a><br><a href="https://blog.csdn.net/qq_33024515/article/details/85100597" target="_blank">webstorm+sass</a><br><a href="https://www.jianshu.com/p/9330fc55c745" target="_blank">小程序使用sass</a><br><a href="https://www.jianshu.com/p/a99764ff3c41" target="_blank">SCSS 教程</a></p>
+<p><a href="https://www.jb51.net/softs/598714.html" target="_blank" rel="noopener">WebStorm 2019.1 激活汉化特别版(附注册码+汉化包+安装教程)</a></p>
+<p><a href="https://www.jb51.net/softs/547471.html" target="_blank" rel="noopener">WebStorm 2019 汉化包下载地址</a></p>
+<p><a href="http://jjbig.lvith.cn:8080/201802/tools/WebStormzh_jb51.rar" target="_blank" rel="noopener">WebStorm 2019 汉化包.rar</a><br>webstorm 2018.2注册码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;licenseId&quot;:&quot;ThisCrackLicenseId&quot;,</span><br><span class="line">	&quot;licenseeName&quot;:&quot;Rover12421&quot;,</span><br><span class="line">	&quot;assigneeName&quot;:&quot;Rover12421&quot;,</span><br><span class="line">	&quot;assigneeEmail&quot;:&quot;rover12421@163.com&quot;,</span><br><span class="line">	&quot;licenseRestriction&quot;:&quot;By Rover12421 Crack, Only Test! Please support 	genuine!!!&quot;,</span><br><span class="line">	&quot;checkConcurrentUse&quot;:false,</span><br><span class="line">	&quot;products&quot;:[</span><br><span class="line">		&#123;&quot;code&quot;:&quot;II&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;DM&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;AC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;RS0&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;WS&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;DPN&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;RC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;PS&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;DC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;RM&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;CL&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;PC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;DB&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;GO&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">		&#123;&quot;code&quot;:&quot;RD&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;</span><br><span class="line">	],</span><br><span class="line">	&quot;hash&quot;:&quot;2911276/0&quot;,</span><br><span class="line">	&quot;gracePeriodDays&quot;:7,</span><br><span class="line">	&quot;autoProlongated&quot;:false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">http://rubyinstaller.org/downloads/</span><br><span class="line">官网下载：</span><br><span class="line">https://www.ruby-lang.org/</span><br><span class="line"></span><br><span class="line">gem install sass</span><br><span class="line">gem sources –r http://rubygems.org/</span><br><span class="line">gem sources –a http://ruby.taobao.org/</span><br><span class="line">gem sources –l</span><br><span class="line">sass –v</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/23/1558610940000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/23/articles/2019/05/23/1558610940000.html/" class="article-date">
+      <time datetime="2019-05-23T11:29:00.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610940000.html/">[小程序] 慕课网</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/MrLeihe/GeekUI-WeApp" target="_blank">github | GeekUI-WeApp</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/23/1558610939000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/23/articles/2019/05/23/1558610939000.html/" class="article-date">
+      <time datetime="2019-05-23T11:28:59.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610939000.html/">[小程序] 获取状态栏高度</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_42445490/article/details/88827164" target="_blank">webstorm下设置sass</a></p>
+<p>app.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">App(&#123;</span><br><span class="line">  onShow: function() &#123;</span><br><span class="line">  	var self = this;</span><br><span class="line">    wx.getSystemInfo(&#123;</span><br><span class="line">        success: function (res) &#123;</span><br><span class="line">            self.globalData.statusBarHeight = res.statusBarHeight</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(res.statusBarHeight, &apos;statusBarHeight&apos;)</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>index.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const app = getApp();</span><br><span class="line">page(&#123; </span><br><span class="line">    data: &#123;</span><br><span class="line">        statusBarHeight: app.globalData.statusBarHeight</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/23/1558610938000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/23/articles/2019/05/23/1558610938000.html/" class="article-date">
+      <time datetime="2019-05-23T11:28:58.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610938000.html/">[小程序] 分享朋友圈</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/baozhuona/article/details/78570483" target="_blank">分享到朋友圈</a><br><a href="https://blog.csdn.net/bocongbo/article/details/84934973" target="_blank">微信小程序分享朋友圈</a><br><a href="https://www.jianshu.com/p/ec9a620222d6" target="_blank">小程序图片长按识别功能的实现</a><br><a href="https://github.com/jasondu/wxa-plugin-canvas" target="_blank">小程序海报组件-生成朋友圈分享海报并生成图片</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/23/1558610937000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/23/articles/2019/05/23/1558610937000.html/" class="article-date">
+      <time datetime="2019-05-23T11:28:57.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610937000.html/">[小程序] 点餐</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/codingnoob/article/details/81807285" target="_blank">点餐</a><br><a href="https://gitee.com/zhongyoucong/order-project" target="_blank">gitee | 点餐</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/23/1558610936000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/23/articles/2019/05/23/1558610936000.html/" class="article-date">
+      <time datetime="2019-05-23T11:28:56.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610936000.html/">[小程序] 城市天气</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/zytrue/p/8548374.html" target="_blank">微信小程序开发显示城市天气</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/23/1558610935000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/23/articles/2019/05/23/1558610935000.html/" class="article-date">
+      <time datetime="2019-05-23T11:28:55.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610935000.html/">[小程序] swiper左右箭头</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.jianshu.com/p/b9b2a6aca180" target="_blank" rel="noopener">swiper左右箭头</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-/articles/2019/05/23/1558610934000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -342,573 +908,9 @@
 
 
   
-    <article id="post-/articles/2019/05/23/1558610933000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/23/articles/2019/05/23/1558610933000.html/" class="article-date">
-      <time datetime="2019-05-23T11:28:53.000Z" itemprop="datePublished">2019-05-23</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610933000.html/">[小程序] 使用sass</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="http://www.showhtml5.cc/archives/503" target="_blank" rel="noopener">blog / h5网页跳转到小程序</a><br><a href="https://www.cnblogs.com/excellencesy/p/9596578.html" target="_blank" rel="noopener">小程序与h5的相互跳转</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">目前只支持小程序内嵌H5,并且只有内嵌的H5才能跳回小程序</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/23/1558610932000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/23/articles/2019/05/23/1558610932000.html/" class="article-date">
-      <time datetime="2019-05-23T11:28:52.000Z" itemprop="datePublished">2019-05-23</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610932000.html/">[小程序] easyui组件tabs</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/code-xia/p/10260539.html" target="_blank">微信小程序-tab标签栏实现教程</a><br><a href="https://github.com/qq865738120/easyUI" target="_blank">github | easyUI</a><br><a href="https://github.com/qq865738120/easyUI/tree/master/component/senior/tabs" target="_blank">github | tabs组件</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/23/1558610931000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/23/articles/2019/05/23/1558610931000.html/" class="article-date">
-      <time datetime="2019-05-23T11:28:51.000Z" itemprop="datePublished">2019-05-23</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610931000.html/">[小程序] axios-miniprogram-adapter</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/axios/axios/tree/master/dist" target="_blank">github | 小程序axios</a><br><a href="https://developers.weixin.qq.com/community/develop/doc/00046885234f0862e8c7f608756806" target="_blank">微信开放社区 | 在小程序中使用axios</a></p>
-<p><a href="https://github.com/bigmeow/axios-miniprogram-adapter" target="_blank">axios-miniprogram-adapter</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axios的小程序适配器，以便于在小程序中使用axios，支持微信、支付宝、钉钉、百度小程序</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/23/1558610930000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/23/articles/2019/05/23/1558610930000.html/" class="article-date">
-      <time datetime="2019-05-23T11:28:50.000Z" itemprop="datePublished">2019-05-23</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/23/articles/2019/05/23/1558610930000.html/">[小程序] 130个精选Demo合集</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.jianshu.com/p/b5820cf9ff58" target="_blank">【福利】微信小程序130个精选Demo合集</a><br><a href="https://www.cnblogs.com/ytkah/p/9003620.html" target="_blank">小程序源码下载[demo整理自github]</a><br><a href="https://www.cnblogs.com/shenzikun1314/p/7805168.html" target="_blank">微信小程序源码案例大全</a><br><a href="https://www.jianshu.com/p/0ecf5aba79e1" target="_blank">微信小程序精选Demo合集【持续更新中…】</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/19/1558239543000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/19/articles/2019/05/19/1558239543000.html/" class="article-date">
-      <time datetime="2019-05-19T04:19:03.000Z" itemprop="datePublished">2019-05-19</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/19/articles/2019/05/19/1558239543000.html/">[移动web前端] 前端开发</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="" target="_blank"></a><br><a href="https://www.runoob.com/w3cnote/moible-web-front-source.html" target="_blank">移动WEB前端开发资源整合</a><br><a href="https://www.cnblogs.com/jasmine-95/p/7235186.html" target="_blank">移动端页面开发的两种方式</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">一、使用meta标签使网页宽度自适应手机屏幕</span><br><span class="line">二、使用js对网页进行缩放</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.cnblogs.com/qijunjun/p/7152236.html" target="_blank">移动端页面开发流程</a><br><a href="https://blog.csdn.net/Venus_j/article/details/81056542" target="_blank">HTML5移动端手机网站开发</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">width  ----  viewport的宽度（width=device-width意思是：宽度等于设备宽度）</span><br><span class="line">height ------  viewport的高度（height=device-height意思是：高度等于设备宽度）</span><br><span class="line">initial-scale ----- 初始的缩放比例</span><br><span class="line">minimum-scale ----- 允许用户缩放到的最小比例</span><br><span class="line">maximum-scale ----- 允许用户缩放到的最大比例</span><br><span class="line">user-scalable ----- 用户是否可以手动缩放</span><br></pre></td></tr></table></figure></p>
-<p>手机网站基本框架代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>手机网站<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">""</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">""</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"telephone=no"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-capable"</span> <span class="attr">content</span>=<span class="string">"yes"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-status-bar-style"</span> <span class="attr">content</span>=<span class="string">"black"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"duanliang, duanliang920.com"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    body&#123;font-size:62.5%;font-family:"Microsoft YaHei",Arial; overflow-x:hidden; overflow-y:auto;&#125;</span></span><br><span class="line"><span class="undefined">    .viewport&#123; max-width:640px; min-width:300px; margin:0 auto;&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        大家好！这是我的第一个手机网页！</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/移动web前端/">移动web前端</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/19/1558239542000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/19/articles/2019/05/19/1558239542000.html/" class="article-date">
-      <time datetime="2019-05-19T04:19:02.000Z" itemprop="datePublished">2019-05-19</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/19/articles/2019/05/19/1558239542000.html/">[小程序] 自定义头部导航</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.jianshu.com/p/7393c800ba09" target="_blank">微信小程序 自定义头部导航栏 navigationStyle</a><br><a href="https://www.jianshu.com/p/5753a0e1754f" target="_blank">微信小程序：自定义导航栏</a><br><a href="https://blog.csdn.net/qq_33744228/article/details/83656588" target="_blank">【小程序】自定义导航栏</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/19/1558239541000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/19/articles/2019/05/19/1558239541000.html/" class="article-date">
-      <time datetime="2019-05-19T04:19:01.000Z" itemprop="datePublished">2019-05-19</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/19/articles/2019/05/19/1558239541000.html/">[小程序] 直播类</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.jianshu.com/p/7393c800ba09" target="_blank">自定义顶部</a><br><a href="https://github.com/AloneYan/WeChat-live.git" target="_blank">小程序：直播开发demo</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/19/1558239540000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/19/articles/2019/05/19/1558239540000.html/" class="article-date">
-      <time datetime="2019-05-19T04:19:00.000Z" itemprop="datePublished">2019-05-19</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/19/articles/2019/05/19/1558239540000.html/">[小程序] 折叠</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.jianshu.com/p/491c1266dd0e" target="_blank">关于微信小程序的折叠效果</a><br><a href="https://blog.csdn.net/lm1022/article/details/80604909" target="_blank">微信小程序 - 折叠展开效果</a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"page"</span>&gt;</span></span><br><span class="line">   <span class="comment">&lt;!-- 总数 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"li"</span> <span class="attr">bindtap</span>=<span class="string">'changeToggle'</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>总数<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"right gray"</span>&gt;</span>8<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">   </span><br><span class="line">   <span class="comment">&lt;!--分类 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"li"</span> <span class="attr">data-index</span>=<span class="string">"0"</span> <span class="attr">bindtap</span>=<span class="string">'changeToggle'</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>类别1<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span></span><br><span class="line">   	  3 <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"iconfont &#123;&#123;selectedFlag[0]?'icon-shangjiantou':'icon-xiala'&#125;&#125;"</span>&gt;</span> <span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">hidden</span>=<span class="string">"&#123;&#123;!selectedFlag[0]&#125;&#125;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;list01&#125;&#125;"</span> <span class="attr">wx:for-item</span>=<span class="string">"item"</span> <span class="attr">wx:for-index</span>=<span class="string">"index"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"li bg-gray"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span>&gt;</span>展开1<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"li"</span> <span class="attr">data-index</span>=<span class="string">"1"</span> <span class="attr">bindtap</span>=<span class="string">'changeToggle'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>类别2<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>0</span><br><span class="line">          <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"iconfont &#123;&#123;selectedFlag[1]?'icon-shangjiantou':'icon-xiala'&#125;&#125;"</span>&gt;</span> <span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">   </span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">hidden</span>=<span class="string">"&#123;&#123;!selectedFlag[1]&#125;&#125;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;list02&#125;&#125;"</span> <span class="attr">wx:for-item</span>=<span class="string">"item"</span> <span class="attr">wx:for-index</span>=<span class="string">"index"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"li bg-gray"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span>&gt;</span>展开2<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">   </span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"li"</span> <span class="attr">data-index</span>=<span class="string">"2"</span> <span class="attr">bindtap</span>=<span class="string">'changeToggle'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>类别3<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"right red"</span>&gt;</span>2</span><br><span class="line">          <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"iconfont &#123;&#123;selectedFlag[2]?'icon-shangjiantou':'icon-xiala'&#125;&#125;"</span>&gt;</span> <span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">hidden</span>=<span class="string">"&#123;&#123;!selectedFlag[2]&#125;&#125;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;list03&#125;&#125;"</span> <span class="attr">wx:for-item</span>=<span class="string">"item"</span> <span class="attr">wx:for-index</span>=<span class="string">"index"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"li bg-gray"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span>&gt;</span>展开3<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"li"</span> <span class="attr">data-index</span>=<span class="string">"3"</span> <span class="attr">bindtap</span>=<span class="string">'changeToggle'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>类别4<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"right red"</span>&gt;</span>3</span><br><span class="line">          <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"iconfont &#123;&#123;selectedFlag[3]?'icon-shangjiantou':'icon-xiala'&#125;&#125;"</span>&gt;</span> <span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">hidden</span>=<span class="string">"&#123;&#123;!selectedFlag[3]&#125;&#125;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;list04&#125;&#125;"</span> <span class="attr">wx:for-item</span>=<span class="string">"item"</span> <span class="attr">wx:for-index</span>=<span class="string">"index"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"li bg-gray"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span>&gt;</span>展开4<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"red"</span>&gt;</span>展开4右边<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">&lt;!-- li --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Page --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>wxss<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">/* 列表详情 */</span><br><span class="line"></span><br><span class="line">.li &#123;</span><br><span class="line">  background-color: #fff;</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: space-between;</span><br><span class="line">  font-size: 34rpx;</span><br><span class="line">  width: 92%;</span><br><span class="line">  padding: 0 4%;</span><br><span class="line">  height: 100rpx;</span><br><span class="line">  line-height: 100rpx;</span><br><span class="line">  border-bottom: 1rpx solid #f1f1f1;</span><br><span class="line">&#125;</span><br><span class="line">.bg-gray&#123;</span><br><span class="line">    background-color: #ccc!important;</span><br><span class="line">    border-bottom: 1rpx solid  #fff!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.li .icon-xiala ,.icon-shangjiantou &#123;</span><br><span class="line">  color: #999;</span><br><span class="line">  font-size: 28rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.gray &#123;</span><br><span class="line">  color: #8e8e8e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.red &#123;</span><br><span class="line">  color: #fe2e2e;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    list01: [</span><br><span class="line">      &#123; item_id: 1 &#125;, &#123; item_id: 11 &#125;, &#123; item_id: 11 &#125;,</span><br><span class="line">    ],</span><br><span class="line">    list02: [</span><br><span class="line"></span><br><span class="line">    ],</span><br><span class="line">    list03: [</span><br><span class="line">      &#123; item_id: 11 &#125;, &#123; item_id: 11 &#125;</span><br><span class="line">    ],</span><br><span class="line">    list04: [</span><br><span class="line">      &#123; item_id: 11 &#125;, &#123; item_id: 11 &#125;, &#123; item_id: 11 &#125;</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  // 展开折叠</span><br><span class="line">  selectedFlag: [false, false, false, false],</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line">  // 展开折叠选择  </span><br><span class="line">  changeToggle:function(e)&#123;</span><br><span class="line">    var index = e.currentTarget.dataset.index;</span><br><span class="line">    if (this.data.selectedFlag[index])&#123;</span><br><span class="line">      this.data.selectedFlag[index] = false;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">      this.data.selectedFlag[index] = true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      selectedFlag: this.data.selectedFlag</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://gitee.com/dggy/expendable" target="_blank">gitee|expendable</a><br><a href="https://www.jianshu.com/p/ff2483859729" target="_blank">小程序-折叠展开列表</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/19/1558239539000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/19/articles/2019/05/19/1558239539000.html/" class="article-date">
-      <time datetime="2019-05-19T04:18:59.000Z" itemprop="datePublished">2019-05-19</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/19/articles/2019/05/19/1558239539000.html/">[小程序] 视频播放</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.jianshu.com/p/caa7dd6b3e95" target="_blank">小程序视频列表中视频的播放与停止</a><br><a href="https://github.com/fengkang-aboo/miniprogress-videoList" target="_blank">miniprogress-videoList</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/70/">70</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
     </nav>
   
 

@@ -280,6 +280,582 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-/articles/2019/02/26/1551193136000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/26/articles/2019/02/26/1551193136000.html/" class="article-date">
+      <time datetime="2019-02-26T14:58:56.000Z" itemprop="datePublished">2019-02-26</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/26/articles/2019/02/26/1551193136000.html/">[docker] github_Dokerfile</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/chenyufeng1991/tomcat-centos7-dockerfile</span><br><span class="line">https://github.com/chenyufeng1991/rabbitmq-centos7-dockerfile</span><br><span class="line">https://github.com/chenyufeng1991/nginx-centos7-dockerfile</span><br><span class="line">https://github.com/chenyufeng1991/tomcat-ubuntu-dockerfile</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/26/1551193135000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/26/articles/2019/02/26/1551193135000.html/" class="article-date">
+      <time datetime="2019-02-26T14:58:55.000Z" itemprop="datePublished">2019-02-26</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/26/articles/2019/02/26/1551193135000.html/">[springboot] springboot启动热部署</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_37598011/article/details/80778915" target="_blank">SpringBoot启动热部署</a><br><a href="https://blog.csdn.net/lihongjing/article/details/82662892" target="_blank">spring boot在idea下debug调试热部署</a><br><a href="https://blog.csdn.net/isea533/article/details/70495714" target="_blank">Spring DevTools介绍</a><br>一、 通过spring-boot-devtools实现热部署<br>1、在工程项目中添加spring-boot-devtools依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;</span><br><span class="line">        &lt;optional&gt;true&lt;/optional&gt;</span><br><span class="line">        &lt;scope&gt;true&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;executable&gt;true&lt;/executable&gt;</span><br><span class="line">                &lt;fork&gt;true&lt;/fork&gt;</span><br><span class="line">                &lt;addResources&gt;true&lt;/addResources&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure></p>
+<p>2、application.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">    devtools:</span><br><span class="line">        restart:</span><br><span class="line">            #热部署生效</span><br><span class="line">          enabled: true</span><br><span class="line">          #设置重启的目录</span><br><span class="line">         #additional-paths: src/main/java</span><br><span class="line">          #classpath目录下的WEB-INF文件夹内容修改不重启</span><br><span class="line">          exclude: WEB-INF/**</span><br><span class="line">          additional-paths: src/main/java</span><br><span class="line">    freemarker:</span><br><span class="line">        #页面不加载缓存，修改即时生效</span><br><span class="line">        cache: false</span><br></pre></td></tr></table></figure></p>
+<p>3、运行程序（不可直接运行main类来启动项目）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn spring-boot:run</span><br></pre></td></tr></table></figure></p>
+<p>二、通过springloaded实现热部署<br>1、通过如下配置添加springloaded依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;springloaded&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.2.6.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;dependencies&gt;</span><br><span class="line">                &lt;dependency&gt;</span><br><span class="line">                    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">                    &lt;artifactId&gt;springloaded&lt;/artifactId&gt;</span><br><span class="line">                    &lt;version&gt;1.2.6.RELEASE&lt;/version&gt;</span><br><span class="line">                &lt;/dependency&gt;</span><br><span class="line">            &lt;/dependencies&gt;</span><br><span class="line">            &lt;executions&gt;</span><br><span class="line">                &lt;execution&gt;</span><br><span class="line">                    &lt;goals&gt;</span><br><span class="line">                        &lt;goal&gt;repackage&lt;/goal&gt;</span><br><span class="line">                    &lt;/goals&gt;</span><br><span class="line">                &lt;/execution&gt;</span><br><span class="line">            &lt;/executions&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;classifier&gt;exec&lt;/classifier&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure></p>
+<p>2、如果使用thymeleaf模板，一定要在application.properties中添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring.thymeleaf.cache=false</span><br></pre></td></tr></table></figure></p>
+<p>3、运行程序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clean package spring-boot:run -Dmaven.test.skip=true</span><br></pre></td></tr></table></figure></p>
+<p>三、idea设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">File -&gt; Settings... -&gt; Build，Execution，Deployedment -&gt; Compiler -&gt; Build Project automatically</span><br><span class="line"></span><br><span class="line">Ctrl + Shift + Alt + /，选择Registry，勾选 compiler.automake.allow.when.app.running</span><br></pre></td></tr></table></figure></p>
+<p>四、热部署调试设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">首先在pom文件中添加配置信息</span><br><span class="line">-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</span><br><span class="line"></span><br><span class="line">&lt;plugin&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">    &lt;configuration&gt;</span><br><span class="line">        &lt;executable&gt;true&lt;/executable&gt;</span><br><span class="line">        &lt;fork&gt;true&lt;/fork&gt;</span><br><span class="line">        &lt;addResources&gt;true&lt;/addResources&gt;</span><br><span class="line">        &lt;jvmArguments&gt;</span><br><span class="line">            -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</span><br><span class="line">        &lt;/jvmArguments&gt;</span><br><span class="line">    &lt;/configuration&gt;</span><br><span class="line">&lt;/plugin&gt;</span><br><span class="line"></span><br><span class="line">spring-boot:run -Drun.jvmArguments=&quot;-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005&quot;</span><br></pre></td></tr></table></figure></p>
+<p>五、rebuild快捷键<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctrl+shift+F9</span><br></pre></td></tr></table></figure></p>
+<p>六、application.properties<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#是否开启缓存</span><br><span class="line">spring.thymeleaf.cache=false</span><br><span class="line"></span><br><span class="line">#热部署生效</span><br><span class="line">devtools.restart.enabled=true</span><br><span class="line">#设置重启的目录</span><br><span class="line">devtools.restart.additional-paths=resources/**,static/**,templates/**</span><br><span class="line">#该目录下的内容修改不重启</span><br><span class="line">#devtools.restart.exclude=data/**</span><br></pre></td></tr></table></figure></p>
+<p>七、如果页面不rebuild，使用以下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn compile</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/26/1551193134000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/26/articles/2019/02/26/1551193134000.html/" class="article-date">
+      <time datetime="2019-02-26T14:58:54.000Z" itemprop="datePublished">2019-02-26</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/26/articles/2019/02/26/1551193134000.html/">[Android] 游戏开发</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_20698983/article/details/79114710" target="_blank">Android开发的消消乐游戏</a><br><a href="https://pan.baidu.com/s/1eTkO9mq" target="_blank" rel="noopener">度娘|w48l</a><br><a href="https://blog.csdn.net/xiaominghimi/column/info/androidgame" target="_blank">Android游戏开发专栏</a><br><a href="https://blog.csdn.net/mango9126/article/details/78832533" target="_blank">20个Android游戏源码，…</a></p>
+<p><a href="https://github.com/yeahatgithub/TuiXiangzi" target="_blank">推箱子</a><br><a href="https://github.com/JieYuShi/ParticleFireProject" target="_blank">OpenGL ES粒子实现简单火焰效果</a></p>
+<p><a href="https://github.com/hayukleung/HandleView" target="_blank">《贪吃蛇大作战》方向控制按钮效果实现</a></p>
+<p><a href="https://github.com/liuwei1993/mini-games.git" target="_blank">俄罗斯方块+贪吃蛇</a><br><a href="https://github.com/luoyesiqiu/Mine" target="_blank">扫雷</a><br><a href="https://github.com/Sean-Git/sean-android-puzzle" target="_blank">拼图</a></p>
+<p><a href="https://qdct01.baidupcs.com/file/265b2f0b8603637ab352ea39720fb8a8?bkt=p3-0000d9ac12c60cce20dc4e2f5041dcf81c52&fid=1973860983-250528-471462645526020&time=1551104490&sign=FDTAXGERLQBHSKfW-DCb740ccc5511e5e8fedcff06b081203-VHpQdaVjk28tItPz5m6Ztaev1mo%3D&to=90&size=8790997&sta_dx=8790997&sta_cs=0&sta_ft=7z&sta_ct=7&sta_mt=7&fm2=MH%2CYangquan%2CAnywhere%2C%2Cguangdong%2Cct&ctime=1513681604&mtime=1513681604&resv0=cdnback&resv1=0&vuk=1310677397&iv=0&htype=&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=0000d9ac12c60cce20dc4e2f5041dcf81c52&sl=76480590&expires=8h&rt=sh&r=406334321&mlogid=1297211489625083620&vbdid=3152752656&fin=MahjongSolitaire.7z&fn=MahjongSolitaire.7z&rtype=1&dp-logid=1297211489625083620&dp-callid=0.1.1&hps=1&tsl=80&csl=80&csign=XPMxw3fzbha2ji2o1SU2dlIdF40%3D&so=0&ut=6&uter=4&serv=0&uc=874179299&ti=78cccb630bb0656ea81b42417d7324e70c5d612c1bc6ea23&by=themis" target="_blank">MahjongSolitaire</a></p>
+<p><a href="https://github.com/zhaohuiyuliang/Game_fight_loadlord" target="_blank">斗地主</a><br><a href="https://github.com/zhaohuiyuliang/AndroidUnlock" target="_blank">图案解锁</a></p>
+<p><a href="https://github.com/cnRuanYF/AndroidGameExperiments" target="_blank">Android游戏开发实验 40个游戏</a></p>
+<p><a href="https://www.jianshu.com/p/12d1c0c8e974" target="_blank">Android应用libGDX引擎系列(一)-Android FrameWork 基于libGDX实现高性能动画特效（粒子特效/烟花效果篇）</a><br><a href="https://github.com/qjoy/libGDX-Android-AppEffect" target="_blank">libGDX游戏引擎</a><br><a href="https://github.com/denisk20/AndroidOpenGLESLessons" target="_blank">AndroidOpenGLESLessons</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/26/1551193133000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/26/articles/2019/02/26/1551193133000.html/" class="article-date">
+      <time datetime="2019-02-26T14:58:53.000Z" itemprop="datePublished">2019-02-26</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/26/articles/2019/02/26/1551193133000.html/">[kotlin] Android+Kotlin实战书籍博客</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/aqi00/article/details/50012511" target="_blank">Android+Kotlin实战书籍博客</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kotlin/">kotlin</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/25/1551056832000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/25/articles/2019/02/25/1551056832000.html/" class="article-date">
+      <time datetime="2019-02-25T01:07:12.000Z" itemprop="datePublished">2019-02-25</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551056832000.html/">[springboot] springboot+jpa+freemarker实现后端分页完整示例</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/EasyKotlin/chatper15_net_io_img_crawler" target="_blank">github|springboot+jpa+freemarker实现后端分页完整示例</a><br><a href="https://www.jianshu.com/p/cee11a002307" target="_blank">简书|springboot+jpa+freemarker实现后端分页完整示例</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/25/1551056831000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/25/articles/2019/02/25/1551056831000.html/" class="article-date">
+      <time datetime="2019-02-25T01:07:11.000Z" itemprop="datePublished">2019-02-25</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551056831000.html/">[java] jpa生成表注释</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/ninisui/article/details/79309081" target="_blank">jpa 生成表注释</a><br><a href="http://www.majunwei.com/view/201707241152140494.html" target="_blank">Jpa自动创建表，添加注释</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Column(name=&quot;loginname&quot;,columnDefinition=(&quot;varchar(50)  default null comment &apos;登录名&apos;&quot;))</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/u014268482/article/details/80883471" target="_blank">JPA单项一对多外键关联</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/25/1551056830000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/25/articles/2019/02/25/1551056830000.html/" class="article-date">
+      <time datetime="2019-02-25T01:07:10.000Z" itemprop="datePublished">2019-02-25</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551056830000.html/">[pdm] 根据mysql表结构生成对应的pdm</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/u011641008/article/details/79495360" target="_blank">根据mysql表结构生成对应的pdm</a><br><a href="https://www.cnblogs.com/duanxz/p/3792723.html" target="_blank">powerdesigner中将表的name在生成建表sql时生成注释</a><br><a href="https://blog.csdn.net/kun_zai/article/details/78722571" target="_blank">PowerDesigner导入mysql文件注释丢失问题解决</a><br>comment2code.vbs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">Option   Explicit</span><br><span class="line">ValidationMode   =   True</span><br><span class="line">InteractiveMode   =   im_Batch</span><br><span class="line"></span><br><span class="line">Dim   mdl   &apos;   the   current   model</span><br><span class="line"></span><br><span class="line">&apos;   get   the   current   active   model </span><br><span class="line">Set   mdl   =   ActiveModel      </span><br><span class="line">If   (mdl   Is   Nothing)   Then      </span><br><span class="line">       MsgBox   &quot;There   is   no   current   Model &quot;</span><br><span class="line">ElseIf   Not   mdl.IsKindOf(PdPDM.cls_Model)   Then</span><br><span class="line">       MsgBox   &quot;The   current   model   is   not   an   Physical   Data   model. &quot;</span><br><span class="line">Else      </span><br><span class="line">      ProcessFolder   mdl      </span><br><span class="line">End   If     </span><br><span class="line"></span><br><span class="line">Private   sub   ProcessFolder(folder)</span><br><span class="line">On Error Resume Next     </span><br><span class="line">      Dim   Tab   &apos;running     table</span><br><span class="line">       for   each   Tab   in   folder.tables</span><br><span class="line">             if   not   tab.isShortcut   then</span><br><span class="line">                  tab.name   =   tab.comment</span><br><span class="line">                  Dim   col   &apos;   running   column</span><br><span class="line">                   for   each   col   in   tab.columns</span><br><span class="line">                   if col.comment=&quot;&quot; then</span><br><span class="line">                   else</span><br><span class="line">                        col.name=   col.comment</span><br><span class="line">                   end if</span><br><span class="line">                  next</span><br><span class="line">             end   if</span><br><span class="line">      next</span><br><span class="line"></span><br><span class="line">      Dim   view   &apos;running   view</span><br><span class="line">       for   each   view   in   folder.Views</span><br><span class="line">             if   not   view.isShortcut   then</span><br><span class="line">                  view.name   =   view.comment</span><br><span class="line">             end   if</span><br><span class="line">      next</span><br><span class="line"></span><br><span class="line">      &apos;   go   into   the   sub-packages</span><br><span class="line">      Dim   f   &apos;   running   folder</span><br><span class="line">      For   Each   f   In   folder.Packages</span><br><span class="line">             if   not   f.IsShortcut   then</span><br><span class="line">                 ProcessFolder   f</span><br><span class="line">             end   if</span><br><span class="line">      Next</span><br><span class="line">end   sub</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://jingyan.baidu.com/article/851fbc3799a9143e1f15ab94.html" target="_blank">定制powerdesigner个性化菜单</a><br><a href="https://blog.csdn.net/qq_31302091/article/details/75214777" target="_blank">PowerDesigner如何将消失的工具栏显示出来</a><br><a href="https://blog.csdn.net/u011781521/article/details/78958529" target="_blank">PowerDesigner逆向导入MYSQL数据库并显示中文注释|ODBC</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pdm/">pdm</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/25/1551056829000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/25/articles/2019/02/25/1551056829000.html/" class="article-date">
+      <time datetime="2019-02-25T01:07:09.000Z" itemprop="datePublished">2019-02-25</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551056829000.html/">[js] Set集合</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/20gg-com/p/6687443.html" target="_blank">js 中 Map/Set 集合</a><br><a href="https://www.cnblogs.com/xiaoyulive/p/7906548.html" target="_blank">JS中集合对象(Array、Map、Set)及类数组对象的使用与对比</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4,4];</span><br><span class="line">var list_key = new Set(arr);</span><br><span class="line">var what = list_key.keys();</span><br><span class="line">for (let item of list_key.keys()) &#123;</span><br><span class="line">    console.log(item);</span><br><span class="line">&#125;</span><br><span class="line">arr.length == Array.from(what).length</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/25/1551025245000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/25/articles/2019/02/25/1551025245000.html/" class="article-date">
+      <time datetime="2019-02-24T16:20:45.000Z" itemprop="datePublished">2019-02-25</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025245000.html/">[springboot] springboot+微信小程序短信验证码</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/it18911008884/article/details/78520051" target="_blank">spring-boot | 集成短信验证码服务</a><br><a href="https://blog.csdn.net/wangguang1995/article/details/80092734" target="_blank">微信小程序获取手机验证码|界面好看</a><br><a href="https://blog.csdn.net/dianziagen/article/details/80805346" target="_blank">微信小程序-短信验证码</a><br><a href="https://github.com/BeijiYang/minaSmsVerification" target="_blank">github|minaSmsVerification</a><br><a href="https://github.com/NullPointer8023/springboot-mini-program" target="_blank">springboot-mini-program</a><br><a href="https://blog.csdn.net/codejas/article/details/79341919" target="_blank">慕课网：SpringBoot+MyBatis搭建迷你小程序</a><br><a href="https://blog.csdn.net/zuoliangzhu/article/details/81219900" target="_blank">包含springmvc</a><br><a href="https://blog.csdn.net/qq_32584661/article/details/80607240" target="_blank">小程序学习：全局变量的设置、获取、修改，全局方法是执行</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-/articles/2019/02/25/1551025243000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -343,577 +919,9 @@
 
 
   
-    <article id="post-/articles/2019/02/25/1551025242000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025242000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:42.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025242000.html/">[Android] 播放器</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/CarGuo/GSYVideoPlayer" target="_blank">github|<br>远光软件|Shuyu Guo<br>视频播放器（IJKplayer、ExoPlayer、MediaPlayer），<br>支持<br>HTTPS，<br>弹幕，滤镜、水印、gif截图，片头广告、中间广告，多个同时播放，<br>基本的拖动，声音、亮度调节，<br>边播边缓存，<br>视频本身自带rotation的旋转（90,270之类），<br>重力旋转与手动旋转的同步，<br>列表播放 ，直接添加控件为封面，列表全屏动画，视频加载速度，列表小窗口支持拖动，动画效果，调整比例，多分辨率切换，<br>切换播放器，进度条小窗口预览，列表切换详情页面无缝播放，其他一些小动画效果，rtsp、concat、mpeg</a></p>
-<p><a href="https://blog.csdn.net/qq_24531461/article/details/73456794" target="_blank">著名Android播放器开源项目介绍</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/Bilibili/ijkplayer</span><br><span class="line">https://github.com/google/ExoPlayer</span><br><span class="line">https://github.com/googlesamples/android-UniversalMusicPlayer</span><br><span class="line">https://github.com/CarGuo/GSYVideoPlayer</span><br><span class="line">https://github.com/lipangit/JieCaoVideoPlayer</span><br><span class="line">https://github.com/naman14/Timber</span><br><span class="line">https://github.com/ryanhoo/StylishMusicPlayer</span><br><span class="line">https://github.com/psaravan/JamsMusicPlayer</span><br><span class="line">https://github.com/andremion/Music-Player</span><br><span class="line">https://github.com/daniulive/SmarterStreaming</span><br><span class="line">https://github.com/pili-engineering/PLDroidPlayer</span><br><span class="line">https://github.com/danylovolokh/VideoPlayerManager</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/02/25/1551025241000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025241000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:41.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025241000.html/">[Android] 人脸识别</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/chenyufeng1991/BaiduMap-TrafficAssistant" target="_blank">github|百度地图助手</a><br><a href="http://www.bubblyyi.com/2016/09/13/android使用face架构包实现人脸识别/" target="_blank">Face++人脸识别demo</a><br><a href="https://github.com/kongqw/OpenCVForAndroid" target="_blank">目标检测&amp;目标追踪&amp;人脸检测&amp;人脸识别</a><br><a href="https://blog.csdn.net/weixin_40441128/article/details/82498032" target="_blank">ArcFaceDemo使用讲解</a><br>1.下载代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/andyxm/ArcFaceDemo.git</span><br></pre></td></tr></table></figure></p>
-<p>2.<a href="http://www.arcsoft.com.cn/ai/sdk/apply-1002-4.html" target="_blank">下载虹软人脸识别库</a><br><a href="https://pan.baidu.com/s/1H3H1VxGpEv7-8ODyV8G4dw" target="_blank">虹软人脸识别库|度娘|tq2w</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">获取对应的key下载对应的android SDK,将对应平台的so和jar都放入demo中的libs里</span><br><span class="line">下载的libs库后放入facelib下的Module</span><br></pre></td></tr></table></figure></p>
-<p>3.主项目在face中<br>4.FaceHelper中实现了FaceDataHelper<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">填写你的所有对应的key,和你将要查询的StudentModel,其中isSaveSdcard如果要保存到sd卡一定要设置true</span><br></pre></td></tr></table></figure></p>
-<p>5.FaceFRAbsLoop中设置分数值<br>6.存储路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">使用 Android Studio 的 Device File Explorer 可以查看路径</span><br><span class="line"></span><br><span class="line">图片的存储路径：/sdcard/Face/Images</span><br><span class="line">人脸数据存储路：/sdcard/Android/data/com.face/cache</span><br><span class="line"></span><br><span class="line">解决多张多次拍照注册ANR问题注意：</span><br><span class="line">部分开发板可能会有问题，去找你的厂商协调下 使用摄像头时，请自行调节就可以了</span><br></pre></td></tr></table></figure></p>
-<p>7.安装报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Installation failed with message Failed to finalize session : INSTALL_FAILED_NO_MATCHING_ABIS: Failed to extract native libraries, res=-113.</span><br><span class="line"></span><br><span class="line">build.gradle</span><br><span class="line">android &#123;</span><br><span class="line">  splits &#123;</span><br><span class="line">    abi &#123;</span><br><span class="line">        enable true</span><br><span class="line">        reset()</span><br><span class="line">        include &apos;x86&apos;, &apos;armeabi-v7a&apos;</span><br><span class="line">        universalApk true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/chenyufeng1991/Android-HowOld" target="_blank">使用Face++库的adt工程</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/02/25/1551025240000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025240000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:40.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025240000.html/">[Android] 百度地图交通类</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/chenyufeng1991/BaiduMap-TrafficAssistant" target="_blank">github|百度地图助手</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/02/25/1551025239000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025239000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:39.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025239000.html/">[springboot] 微信平台开发</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/binarywang/weixin-java-pay-demo" target="_blank">微信支付</a><br><a href="https://github.com/binarywang/weixin-java-miniapp-demo" target="_blank">小程序</a></p>
-<p><a href="https://gitee.com/binary/weixin-java-mp-demo-springboot.git" target="_blank">gitee|springboot|公众号</a><br><a href="https://github.com/binarywang/weixin-java-mp-demo-springmvc" target="_blank">github|springmvc公众号</a></p>
-<p><a href="https://github.com/simplezhli/RxPay" target="_blank">实现支付宝、微信支付</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/02/25/1551025238000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025238000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:38.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025238000.html/">[springboot] 微信小程序点餐系统</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="http://www.sqmax.top/springboot-project/" target="_blank">官网</a><br><a href="https://github.com/sqmax/springboot-project" target="_blank">springboot微信小程序点餐系统后台</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/02/25/1551025237000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025237000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:37.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025237000.html/">[批处理] 常用批处理</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/auspbro/batch-snippets" target="_blank">github|batch-snippets</a><br><a href="https://github.com/VonSdite/Bat" target="_blank">github|bat</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/批处理/">批处理</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/02/25/1551025236000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025236000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:36.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025236000.html/">[java] log4j与logback配置文件</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>log4j.properties<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">###设置###</span><br><span class="line">log4j.rootLogger=debug,stdout,D,E,File</span><br><span class="line"></span><br><span class="line">###输出信息到控制抬###</span><br><span class="line">log4j.appender.stdout=org.apache.log4j.ConsoleAppender</span><br><span class="line">log4j.appender.stdout.Target=System.out</span><br><span class="line">log4j.appender.stdout.layout=org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.stdout.layout.ConversionPattern=[%-5p]%d&#123;yyyy-MM-ddHH:mm:ss,SSS&#125;method:%l%n%m%n</span><br><span class="line"></span><br><span class="line">###输出INFO级别以上的日志到 logs/wechat_debug.log###</span><br><span class="line">log4j.appender.File=org.apache.log4j.DailyRollingFileAppender</span><br><span class="line">log4j.appender.File.File=logs/wechat_info.log</span><br><span class="line">log4j.appender.File.Append=true</span><br><span class="line">log4j.appender.File.Threshold=INFO</span><br><span class="line">log4j.appender.File.layout=org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.File.layout.ConversionPattern=%-d&#123;yyyy-MM-ddHH:mm:ss&#125;[%t:%r]-[%p]%m%n</span><br><span class="line"></span><br><span class="line">###输出DEBUG级别以上的日志到 logs/wechat_debug.log###</span><br><span class="line">log4j.appender.D=org.apache.log4j.DailyRollingFileAppender</span><br><span class="line">log4j.appender.D.File=logs/wechat_debug.log</span><br><span class="line">log4j.appender.D.Append=true</span><br><span class="line">log4j.appender.D.Threshold=DEBUG</span><br><span class="line">log4j.appender.D.layout=org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.D.layout.ConversionPattern=%-d&#123;yyyy-MM-ddHH:mm:ss&#125;[%t:%r]-[%p]%m%n</span><br><span class="line"></span><br><span class="line">###输出ERROR级别以上的日志到 logs/wechat_error.log###</span><br><span class="line">log4j.appender.E=org.apache.log4j.DailyRollingFileAppender</span><br><span class="line">log4j.appender.E.File=logs/wechat_error.log</span><br><span class="line">log4j.appender.E.Append=true</span><br><span class="line">log4j.appender.E.Threshold=ERROR</span><br><span class="line">log4j.appender.E.layout=org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.E.layout.ConversionPattern=%-d&#123;yyyy-MM-ddHH:mm:ss&#125;[%t:%r]-[%p]%m%n</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.cnblogs.com/warking/p/5710303.html" target="_blank">logback的使用和logback.xml详解</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/02/25/1551025234000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025234000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:34.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025234000.html/">[Android] jniLibs</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/weixin_36838630/article/details/73826427" target="_blank">手把手教你 - JNI的基础实现</a><br><a href="https://blog.csdn.net/fang410103/article/details/83012043" target="_blank">Android中关于libs和JniLibs的各种坑</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1、如果是在eclipse中，需要放到libs下对应库的目录</span><br><span class="line"></span><br><span class="line">2、Android Studio 会默认匹配main下的jniLibs目录</span><br><span class="line"></span><br><span class="line">3、Android Studio 手动指定使用libs下的库</span><br><span class="line">#app\build.gradle中加入以下配置</span><br><span class="line">android &#123;</span><br><span class="line">    sourceSets &#123;</span><br><span class="line">        main &#123;</span><br><span class="line">            jniLibs.srcDirs = [&apos;libs&apos;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/02/25/1551025234000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025234000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:34.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025234000.html/">[springboot] 百度人脸识别</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/search?l=Java&o=desc&q=%E7%99%BE%E5%BA%A6%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB&s=stars&type=Repositories" target="_blank">github|search|百度人脸识别</a></p>
-<p><a href="https://blog.csdn.net/qq_37525899/article/details/85246173" target="_blank">springboot中使用百度人脸识别</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/50/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="page-number" href="/page/50/">50</a><span class="page-number current">51</span><a class="page-number" href="/page/52/">52</a><a class="page-number" href="/page/53/">53</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/52/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/50/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="page-number" href="/page/50/">50</a><span class="page-number current">51</span><a class="page-number" href="/page/52/">52</a><a class="page-number" href="/page/53/">53</a><span class="space">&hellip;</span><a class="page-number" href="/page/70/">70</a><a class="extend next" rel="next" href="/page/52/">Next &raquo;</a>
     </nav>
   
 

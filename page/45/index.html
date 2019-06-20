@@ -280,6 +280,570 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-/articles/2019/03/15/1552623349000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623349000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:49.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623349000.html/">[springboot] email、logback+lombok插件</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/xiaotian180/spring-boot-parent" target="_blank">spring-boot-parent</a></p>
+<p><a href="https://blog.csdn.net/qq_20698983/article/details/83421020" target="_blank">Spring Boot 使用 QQ邮箱发邮件</a><br><a href="https://blog.csdn.net/zyw_java/article/details/81635375" target="_blank">SpringBoot 2.x 集成QQ邮箱、网易系邮箱、Gmail邮箱发送邮件</a><br><a href="https://gitee.com/javen205/SpringBoot_Guide.git" target="_blank">github</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623348000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623348000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:48.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623348000.html/">[springboot] 在linux下启动失败如何关闭</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fg</span><br><span class="line">ctrl + c</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623347000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623347000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:47.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623347000.html/">[springboot] 在service层获取session和request</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/javaofliang/article/details/52237903" target="_blank">spring在service层获取session和request</a></p>
+<p>首先要在web.xml增加如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;listener&gt;</span><br><span class="line">    &lt;listener-class&gt;org.springframework.web.context.request.RequestContextListener&lt;/listener-class&gt;</span><br><span class="line">&lt;/listener&gt;</span><br></pre></td></tr></table></figure></p>
+<p>service层调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Autowired  </span><br><span class="line">private HttpSession session;  </span><br><span class="line"></span><br><span class="line">@Autowired  </span><br><span class="line">private HttpServletRequest request; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * @return</span><br><span class="line"> * @Description：获得当前session</span><br><span class="line"> * @return: HttpSession</span><br><span class="line"> */</span><br><span class="line">public static HttpSession getSession() &#123;</span><br><span class="line">    HttpSession session = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest().getSession();// 获得当前session</span><br><span class="line">    return session;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="http://www.zuidaima.com/question/3705058816248832.htm" target="_blank">springboot配置RequestContextListener</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	@Bean</span><br><span class="line">	public RequestContextListener requestContextListener()&#123;</span><br><span class="line">	    return new RequestContextListener();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//配置 RequestContextListener</span><br><span class="line">	@Bean</span><br><span class="line">	public ServletListenerRegistrationBean&lt;RequestContextListener&gt; listenerRegistration3() &#123;</span><br><span class="line">		return new ServletListenerRegistrationBean&lt;&gt;(new RequestContextListener());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623346000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623346000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:46.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623346000.html/">[springboot] 在线视频播放</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/zhiyiTec/OnlineVideo" target="_blank">使用分离的前端+springBoot框架来实现在线视频播放功能</a><br><a href="https://github.com/joutaojian/sitvideo" target="_blank">使用SSM搭建的在线视频播放项目(包括前后台)</a><br><a href="https://github.com/mjquestc/SSMVedio" target="_blank">ssm+jsp</a><br><a href="https://github.com/iamzken/simple-video-website" target="_blank">java写的简单的在线视频播放网站</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623345000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623345000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:45.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623345000.html/">[springboot] 在线音乐播放</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/sunqibao/-springboot-" target="_blank">在线音乐播放</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623344000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623344000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:44.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623344000.html/">[springcloud] 消息总线SpringCloudBus</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.jianshu.com/p/70b0e95b0ec3" target="_blank">消息总线SpringCloudBus</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springcloud/">springcloud</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623343000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623343000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:43.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623343000.html/">[springmvc] SpringMVC+Mybatis+Shiro+redis</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/baichengzhou/SpringMVC-Mybatis-Shiro-redis-0.2" target="_blank">SpringMVC-Mybatis-Shiro-redis</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springmvc/">springmvc</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623342000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623342000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:42.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623342000.html/">[前端] WEB技术分享博客</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.helloweba.net/" target="_blank">WEB技术分享博客</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/15/1552623341000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/15/articles/2019/03/15/1552623341000.html/" class="article-date">
+      <time datetime="2019-03-15T04:15:41.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623341000.html/">[前端] 省市区联动</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/olivianate/p/5330811.html" target="_blank">基于jQuery+JSON省市区联动效果jquery.cityselect.js</a></p>
+<p><a href="http://www.ijquery.cn/demo/cityselect/cityselect.zip" target="_blank">cityselect.zip</a></p>
+<p><a href="http://www.ijquery.cn/js/cityselect/city.min.js" target="_blank">city.mini.js</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;city&quot;&gt;</span><br><span class="line">    &lt;select class=&quot;prov&quot;&gt;&lt;/select&gt;</span><br><span class="line">    &lt;select class=&quot;city&quot; disabled=&quot;disabled&quot;&gt;&lt;/select&gt;</span><br><span class="line">    &lt;select class=&quot;dist&quot; disabled=&quot;disabled&quot;&gt;&lt;/select&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.jq22.com/jquery/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;--&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.ijquery.cn/demo/cityselect/js/jquery.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.ijquery.cn/demo/cityselect/js/jquery.cityselect.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    $(function()&#123;</span><br><span class="line">        $(&quot;#city&quot;).citySelect(&#123;</span><br><span class="line">            prov:&quot;湖南&quot;, //省份</span><br><span class="line">            city:&quot;长沙&quot;, //城市</span><br><span class="line">            dist:&quot;岳麓区&quot; //区县</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-/articles/2019/03/15/1552623340000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -342,570 +906,9 @@
 
 
   
-    <article id="post-/articles/2019/03/15/1552623339000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623339000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:39.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623339000.html/">[小程序] 省市区联动</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/chenjinxinlove/citySelect" target="_blank">省市区联动</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/15/1552623338000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/15/articles/2019/03/15/1552623338000.html/" class="article-date">
-      <time datetime="2019-03-15T04:15:38.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/15/articles/2019/03/15/1552623338000.html/">[小程序] 微信小程序导航项目</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/giscafer/wechat-weapp-mapdemo" target="_blank">wechat-weapp-mapdemo</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/10/1552212067000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/10/articles/2019/03/10/1552212067000.html/" class="article-date">
-      <time datetime="2019-03-10T10:01:07.000Z" itemprop="datePublished">2019-03-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/10/articles/2019/03/10/1552212067000.html/">[小程序] java微信小程序支付</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/qq_30641447/article/details/73222648" target="_blank">微信小程序支付（小程序 + java后端）</a><br><a href="https://pan.baidu.com/s/1dFRVmiX" target="_blank">小程序微信支付java.zip<br></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dkx7</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/zhourenfei17/article/details/77765585" target="_blank">微信小程序支付 java</a><br><a href="https://pan.baidu.com/s/1v8QWUE1m2EnA4uAoAZtRRQ" target="_blank">demo.zip</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cgrt</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/qq_39316096/article/details/80242283" target="_blank">java-微信小程序支付代码分享</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/10/1552212065000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/10/articles/2019/03/10/1552212065000.html/" class="article-date">
-      <time datetime="2019-03-10T10:01:05.000Z" itemprop="datePublished">2019-03-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/10/articles/2019/03/10/1552212065000.html/">[小程序] 常用合法request域名</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://api.map.baidu.com</span><br><span class="line">https://apis.map.qq.com</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/10/1552212063000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/10/articles/2019/03/10/1552212063000.html/" class="article-date">
-      <time datetime="2019-03-10T10:01:03.000Z" itemprop="datePublished">2019-03-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/10/articles/2019/03/10/1552212063000.html/">[小程序] 腾讯地图</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="http://3gimg.qq.com/lightmap/xcx/jssdk/qqmap-wx-jssdk1.2.zip" target="_blank">小程序js库|qqmap-wx-jssdk1.2.zip</a><br><a href="https://lbs.qq.com/qqmap_wx_jssdk/" target="_blank">官方Hello world代码</a><br><a href="https://lbs.qq.com/guides/startup.html" target="_blank">申请开发密钥（Key）</a><br>小程序添加合法request域名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://apis.map.qq.com</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://lbs.qq.com/console/mykey.html?console=mykey" target="_blank">查看我的key</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">找出：</span><br><span class="line">key 、 授权 APP ID</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://lbs.qq.com/webservice_v1/index.html" target="_blank">WebServiceAPI 入门及使用限制</a><br><a href="https://lbs.qq.com/tool/component-route.html" target="_blank">官方路线规划组件</a><br><a href="https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wx5bc2ac602a747594&token=435650527&lang=zh_CN" target="_blank">腾讯地图路线插件</a><br><a href="https://www.jb51.net/article/107018.htm" target="_blank">使用腾讯地图SDK详解及实现步骤|qqmapsdk.search</a><br><a href="https://blog.csdn.net/muzimiaomiaopeng/article/details/82181847" target="_blank">wx.getLocation + 腾讯地图 逆地址解析</a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> QQMapWX = <span class="built_in">require</span>(<span class="string">'qqmap-wx-jssdk.js'</span>);</span><br><span class="line"><span class="keyword">var</span> qqmapsdk;</span><br><span class="line">Page(&#123;</span><br><span class="line"></span><br><span class="line">  data:&#123;</span><br><span class="line">    location:<span class="string">''</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    qqmapsdk = <span class="keyword">new</span> QQMapWX(&#123;</span><br><span class="line">      key: <span class="string">'申请的key'</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  onShow: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    qqmapsdk.search(&#123;</span><br><span class="line">      keyword: <span class="string">'酒店'</span>,</span><br><span class="line">      success: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res);</span><br><span class="line">      &#125;,</span><br><span class="line">      fail: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res);</span><br><span class="line">      &#125;,</span><br><span class="line">      complete: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  getLocation: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">    wx.getLocation(&#123;</span><br><span class="line">      success: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">        type: <span class="string">'wgs84'</span></span><br><span class="line">        qqmapsdk.reverseGeocoder(&#123;</span><br><span class="line">          location: &#123;</span><br><span class="line">            latitude: res.latitude,</span><br><span class="line">            longitude: res.longitude</span><br><span class="line">          &#125;,</span><br><span class="line">          success: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> location = e.result.address;</span><br><span class="line">            that.setData(&#123;</span><br><span class="line">              location: location</span><br><span class="line">            &#125;)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/10/1552212062000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/10/articles/2019/03/10/1552212062000.html/" class="article-date">
-      <time datetime="2019-03-10T10:01:02.000Z" itemprop="datePublished">2019-03-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/10/articles/2019/03/10/1552212062000.html/">[小程序] 百度地图</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/baidumapapi/wxapp-jsapi" target="_blank">wxapp-jsapi|小程序示例</a><br><a href="https://blog.csdn.net/michael_ouyang/article/details/55097646" target="_blank">微信小程序的百度地图获取地理位置</a><br><a href="http://lbsyun.baidu.com/apiconsole/key" target="_blank">AK列表</a><br><a href="http://www.phptext.net/article_view.php?id=790" target="_blank">问题解决|百度地图WEB API报错：APP Referer校验失败</a><br><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/config.html#permission" target="_blank">微信小程序permission设置</a><br>app.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;pages&quot;: [&quot;pages/index/index&quot;],</span><br><span class="line">  &quot;permission&quot;: &#123;</span><br><span class="line">    &quot;scope.userLocation&quot;: &#123;</span><br><span class="line">      &quot;desc&quot;: &quot;你的位置信息将用于小程序位置接口的效果展示&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/10/1552212061000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/10/articles/2019/03/10/1552212061000.html/" class="article-date">
-      <time datetime="2019-03-10T10:01:01.000Z" itemprop="datePublished">2019-03-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/10/articles/2019/03/10/1552212061000.html/">[jsp] ssm</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/zhongmiao0706/NumberOne-MM" target="_blank">Java SSM 商户管理系统</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">客户管理</span><br><span class="line">库存管理</span><br><span class="line">销售报表</span><br><span class="line"></span><br><span class="line">系统介绍： </span><br><span class="line">1.系统采用主流的 SSM 框架 jsp JSTL bootstrap html5 (PC浏览器使用) </span><br><span class="line">2.springmvc + spring4.2.5 + mybaits3.3 SSM 普通java web（非maven） 3.数据库：mysql</span><br><span class="line">4.开发工具：myeclipse eclipse idea 均可</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsp/">jsp</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/10/1552212054000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/10/articles/2019/03/10/1552212054000.html/" class="article-date">
-      <time datetime="2019-03-10T10:00:54.000Z" itemprop="datePublished">2019-03-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/10/articles/2019/03/10/1552212054000.html/">[小程序] 富文本解析</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.jianshu.com/p/50cbb428ad1c" target="_blank">简书 | wxParse富文本解析</a><br><a href="https://github.com/icindy/wxParse" target="_blank">github | wxParse</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/03/10/1552212053000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/10/articles/2019/03/10/1552212053000.html/" class="article-date">
-      <time datetime="2019-03-10T10:00:53.000Z" itemprop="datePublished">2019-03-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/10/articles/2019/03/10/1552212053000.html/">[小程序] 图表</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/xiaolin3303/wx-charts" target="_blank">wx-charts</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/44/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/43/">43</a><a class="page-number" href="/page/44/">44</a><span class="page-number current">45</span><a class="page-number" href="/page/46/">46</a><a class="page-number" href="/page/47/">47</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/46/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/44/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/43/">43</a><a class="page-number" href="/page/44/">44</a><span class="page-number current">45</span><a class="page-number" href="/page/46/">46</a><a class="page-number" href="/page/47/">47</a><span class="space">&hellip;</span><a class="page-number" href="/page/70/">70</a><a class="extend next" rel="next" href="/page/46/">Next &raquo;</a>
     </nav>
   
 

@@ -280,6 +280,567 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-/articles/2018/10/03/1538523230000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523230000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:11.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523230000.html/">[npm] cnpmjc和sinopia搭建私有仓库</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/achenyuan/article/details/82813512" target="_blank">cnpmjc和sinopia搭建私有仓库</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523220000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523220000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:10.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523220000.html/">[js] js实现map</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/mingforyou/p/7153706.html" target="_blank">js实现map</a><br><a href="https://blog.csdn.net/zhangli865621030/article/details/45307087" target="_blank">JS中的Map基本操作</a><br><a href="https://github.com/BrighterEyer/Chess/blob/master/js/commons.js" target="_blank">JS中的Map基本操作</a></p>
+<p>小程序HashMap.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">var app = getApp();</span><br><span class="line"></span><br><span class="line">/** js实现hashmap数据结构 */</span><br><span class="line">class HashMap &#123;</span><br><span class="line"></span><br><span class="line">  constructor() &#123;</span><br><span class="line">    /** 存放键的数组(遍历用到) */</span><br><span class="line">    this.keys = new Array();</span><br><span class="line">    /** 存放数据 */</span><br><span class="line">    this.data = new Object();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 放入一个键值对   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   * @param &#123;Object&#125; value   </span><br><span class="line">   */</span><br><span class="line">  put(key, value) &#123;</span><br><span class="line">    if (this.data[key] == null) &#123;</span><br><span class="line">      this.keys.push(key);</span><br><span class="line">    &#125;</span><br><span class="line">    this.data[key] = value;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取某键对应的值   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   * @return &#123;Object&#125; value   </span><br><span class="line">   */</span><br><span class="line">  get(key) &#123;</span><br><span class="line">    return this.data[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 删除一个键值对   </span><br><span class="line">   * @param &#123;String&#125; key   </span><br><span class="line">   */</span><br><span class="line">  remove(key) &#123;</span><br><span class="line">    this.keys.remove(key);</span><br><span class="line">    this.data[key] = null;</span><br><span class="line">    //		delete this.data[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 遍历Map,执行处理函数   </span><br><span class="line">   * @param &#123;Function&#125; 回调函数 function(key,value,index)&#123;..&#125;   </span><br><span class="line">   */</span><br><span class="line">  each(fn) &#123;</span><br><span class="line">    if (typeof fn != &apos;function&apos;) &#123;</span><br><span class="line">      return;</span><br><span class="line">    &#125;</span><br><span class="line">    var len = this.keys.length;</span><br><span class="line">    for (var i = 0; i &lt; len; i++) &#123;</span><br><span class="line">      var k = this.keys[i];</span><br><span class="line">      fn(k, this.data[k], i);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取键值数组(类似Java的entrySet())   </span><br><span class="line">   * @return 键值对象&#123;key,value&#125;的数组   </span><br><span class="line">   */</span><br><span class="line">  entrys() &#123;</span><br><span class="line">    var len = this.keys.length;</span><br><span class="line">    var entrys = new Array(len);</span><br><span class="line">    for (var i = 0; i &lt; len; i++) &#123;</span><br><span class="line">      entrys[i] = &#123;</span><br><span class="line">        key: this.keys[i],</span><br><span class="line">        value: this.data[i]</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    return entrys;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 判断Map是否为空   </span><br><span class="line">   */</span><br><span class="line">  isEmpty() &#123;</span><br><span class="line">    return this.keys.length == 0;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 获取键值对数量   </span><br><span class="line">   */</span><br><span class="line">  size() &#123;</span><br><span class="line">    return this.keys.length;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**   </span><br><span class="line">   * 重写toString    </span><br><span class="line">   */</span><br><span class="line">  toString() &#123;</span><br><span class="line">    var s = &quot;&#123;&quot;;</span><br><span class="line">    for (var i = 0; i &lt; this.keys.length; i++, s += &apos;,&apos;) &#123;</span><br><span class="line">      var k = this.keys[i];</span><br><span class="line">      s += k + &quot;=&quot; + this.data[k];</span><br><span class="line">    &#125;</span><br><span class="line">    s += &quot;&#125;&quot;;</span><br><span class="line">    return s;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default HashMap;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523210000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523210000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:09.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523210000.html/">[简历] java程序员简历</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/chenxingxing6/readmecxx/blob/master/README.md" target="_blank">README.md|蓝星花</a><br><a href="https://blog.csdn.net/m0_37499059/" target="_blank">csdn|蓝星花</a><br><a href="https://gitee.com/chenxingxing6/pms" target="_blank">蓝星花</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简历/">简历</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523200000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523200000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:08.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523200000.html/">[npm] ionic2</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/aiyishengyishi/article/details/78045240" target="_blank">ionic2</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523190000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523190000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:07.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523190000.html/">[jsp] jsp</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/column/details/13938.html" target="_blank">jsp</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsp/">jsp</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523180000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523180000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:06.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523180000.html/">[svn] svn获取指定版本号</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn update -r r&lt;版本数字&gt; &lt;文件名&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/svn/">svn</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523160000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523160000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:04.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523160000.html/">[git] gitbash闪退</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#报错:</span><br><span class="line">#fatal: open /dev/null or dup failed: No Such file or directory</span><br><span class="line">若以下方法解决不了,应当重装电脑</span><br></pre></td></tr></table></figure>
+<p><a href="https://pan.baidu.com/s/11N_Dtnv5Twn9LFQFoIytjg" target="_blank">null.sys</a><br>提取码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctrn</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#非即插即用驱动文件null.sys问题</span><br><span class="line">#null.sys位置:C:\Windows\System32\drivers\null.sys</span><br><span class="line">cd C:\Windows\System32</span><br><span class="line">#以管理员身份运行cmd.exe</span><br><span class="line">#sfc /scannow</span><br><span class="line">DISM.exe /Online /Cleanup-image /Scanhealth</span><br><span class="line">DISM.exe /Online /Cleanup-image /Restorehealth</span><br><span class="line">sfc /scannow</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/sdhongjun/article/details/52134172</span><br><span class="line">右键点击&quot;我的电脑&quot;-&gt;管理-&gt;计算机管理(本地)-&gt;系统工具-&gt;设备管理器，勾选显示隐藏的设备：</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523150000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523150000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:03.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523150000.html/">[java] websocket</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/yjc_1111/article/details/78831610" target="_blank">WebSocket的两种简单实现，Html5与STOMP</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2018/10/03/1538523140000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/10/03/articles/2018/10/03/1538523140000.html/" class="article-date">
+      <time datetime="2018-10-02T23:32:02.000Z" itemprop="datePublished">2018-10-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523140000.html/">[ngrok] ngrok搭建</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/zhangguo5/article/details/77848658" target="_blank">一分钟实现内网穿透（ngrok服务器搭建）</a><br><a href="https://blog.csdn.net/yjc_1111/article/details/79353718" target="_blank">10分钟教你搭建自己的ngrok服务器</a><br><a href="https://github.com/fatedier/frp/blob/master/README_zh.md" target="_blank">frp</a><br><a href="http://ngrok.ciqiuwl.cn/" target="_blank">小米球</a><br><a href="http://www.ngrok.cn/" target="_blank">ngrok中文</a><br><a href="https://www.ngrok.cc/" target="_blank">Sunny-Ngrok</a><br><a href="" target="_blank"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">#https://github.com/inconshreveable/ngrok</span><br><span class="line"></span><br><span class="line">mkdir ngrok</span><br><span class="line">apt-get update</span><br><span class="line">apt-get install git golang</span><br><span class="line">git clone https://github.com/inconshreveable/ngrok.git ngrok</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">域名添加A记录</span><br><span class="line">将*.ngrok与ngrok指向服务器公网ip</span><br><span class="line"></span><br><span class="line">#设置环境变量，Go语言的安装位置</span><br><span class="line">export GOPATH=/usr/local/ngrok/</span><br><span class="line">export NGROK_DOMAIN=&quot;ngrok.&lt;域名&gt;&quot;</span><br><span class="line">#为域名生成证书</span><br><span class="line">openssl genrsa -out rootCA.key 2048</span><br><span class="line">openssl req -x509 -new -nodes -key rootCA.key -subj &quot;/CN=$NGROK_DOMAIN&quot; -days 5000 -out rootCA.pem</span><br><span class="line">openssl genrsa -out server.key 2048</span><br><span class="line">openssl req -new -key server.key -subj &quot;/CN=$NGROK_DOMAIN&quot; -out server.csr</span><br><span class="line">openssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out server.crt -days 5000</span><br><span class="line"></span><br><span class="line">#拷贝证书到指定位置</span><br><span class="line">cp rootCA.pem assets/client/tls/ngrokroot.crt</span><br><span class="line">cp server.crt assets/server/tls/snakeoil.crt</span><br><span class="line">cp server.key assets/server/tls/snakeoil.key</span><br><span class="line"></span><br><span class="line">#########   编译 start   #########</span><br><span class="line">#86位</span><br><span class="line">#win服务端</span><br><span class="line">GOOS=windows GOARCH=386 make release-server </span><br><span class="line">#win客户端</span><br><span class="line">GOOS=windows GOARCH=386 make release-client</span><br><span class="line">#linux服务端</span><br><span class="line">GOOS=linux GOARCH=386 make release-server</span><br><span class="line">#linux客户端</span><br><span class="line">GOOS=linux GOARCH=386 make release-client</span><br><span class="line"></span><br><span class="line">#64位</span><br><span class="line">#win服务端</span><br><span class="line">GOOS=windows GOARCH=amd64 make release-server </span><br><span class="line">#win客户端</span><br><span class="line">GOOS=windows GOARCH=amd64 make release-client</span><br><span class="line">#linux服务端</span><br><span class="line">GOOS=linux GOARCH=amd64 make release-server</span><br><span class="line">#linux客户端</span><br><span class="line">GOOS=linux GOARCH=amd64 make release-client</span><br><span class="line"></span><br><span class="line">#########   编译 end   #########</span><br><span class="line">ls bin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#编辑服务端启动脚本</span><br><span class="line">vim start_ngrokd.sh</span><br><span class="line">#!/bin/bash</span><br><span class="line">./bin/ngrokd -tlsKey=&quot;snakeoil.key&quot; -tlsCrt=&quot;snakeoil.crt&quot; -domain=&quot;ngrok.&lt;域名&gt;&quot; -httpAddr=&quot;:801&quot; -httpsAddr=&quot;:802&quot; #-tunnelAddr=&quot;:4443&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#一键部署ngrok服务器（CentOS、Debian、Ubuntu）</span><br><span class="line">https://github.com/clangcn/ngrok-one-key-install</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#编辑ngrok配置文件</span><br><span class="line">notepad ngrok.cfg</span><br><span class="line">server_addr: &quot;ngrok.&lt;域名&gt;:4443&quot;</span><br><span class="line">trust_host_root_certs: false</span><br><span class="line">#</span><br><span class="line">ngrok.exe -subdomain &lt;二级域名&gt; -config=ngrok.cfg &lt;客户端端口&gt;</span><br></pre></td></tr></table></figure>
+<p><a href="http://freenat.win/" target="_blank">免费frp内网穿透服务</a><br><a href="https://www.jianshu.com/p/405fed75486c" target="_blank">Ngrok配置和使用</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ngrok/">ngrok</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-/articles/2018/10/03/1538523130000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -341,576 +902,9 @@
 
 
   
-    <article id="post-/articles/2018/10/03/1538523120000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/03/articles/2018/10/03/1538523120000.html/" class="article-date">
-      <time datetime="2018-10-02T23:32:00.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523120000.html/">[小程序] 微信小程序</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/nideshijian/article/details/54693323" target="_blank">小程序搭建</a></p>
-<p>微信小程序java后台接口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/weixin_40099554/article/details/80003058</span><br></pre></td></tr></table></figure></p>
-<p>微信小程序获取当前页面的路径的方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#使用getCurrentPages可以获取当前加载中所有的页面对象的一个数组，数组最后一个就是当前页面。</span><br><span class="line"></span><br><span class="line">#获取加载的页面</span><br><span class="line">var pages = getCurrentPages();</span><br><span class="line">#获取当前页面的对象</span><br><span class="line">var currentPage = pages[pages.length-1];</span><br><span class="line">#当前页面url</span><br><span class="line">var url = currentPage.route;</span><br><span class="line">#如果要获取url中所带的参数可以查看options</span><br><span class="line">var options = currentPage.options;</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://www.wxapp-union.com" targer="_blank" target="_blank" rel="noopener">小程序社区</a><br><a href="http://pan.baidu.com/s/1c2qTFUw" targer="_blank" target="_blank" rel="noopener">小程序手册</a><br>提取码：<br>ikms</p>
-<p><a href="http://www.lanrenmb.com/x/wenhuajiaoyu/4785.html" targer="_blank" target="_blank" rel="noopener">小程序懒人模板</a><br><a href="https://blog.csdn.net/tommenx/article/details/79773101" targer="_blank" target="_blank" rel="noopener">CSDN|考勤签到小程序</a><br><a href="http://www.cnblogs.com/kevinCoder/p/8961748.html" targer="_blank" target="_blank" rel="noopener">小程序：如何在wxml页面中调用JavaScript函数</a><br><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/" targer="_blank" target="_blank" rel="noopener">小程序官方:WXS</a><br><a href="https://github.com/Tencent/weui-wxss" targer="_blank" target="_blank" rel="noopener">官方github小程序样式库</a><br><a href="https://help.aliyun.com/document_detail/59210.html?spm=5176.sms-account.108.3.22ed1cbefyaGGJ" target="_blank">阿里云短信服务文档使用指引</a><br><a href="https://github.com/BeijiYang/minaSmsVerification" target="_blank">基于阿里云的 微信小程序 短信验证 功能模块</a></p>
-<p><a href="https://mp.weixin.qq.com/" target="_blank">微信公众平台</a><br><a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_3&index=1" target="_blank">小程序支付开发步骤</a><br><a href="https://blog.csdn.net/zhuming3834/article/details/73168056" target="_blank">微信小程序开发(五)小程序支付-统一下单</a><br><a href="https://blog.csdn.net/futruejet/article/details/72965429" target="_blank">微信小程序例子——获取用户唯一标识openid</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2018/10/03/1538523120000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/03/articles/2018/10/03/1538523120000.html/" class="article-date">
-      <time datetime="2018-10-02T23:32:00.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523120000.html/">[前端] 技巧</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>h5语音<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot; id=&quot;ttsText&quot; value=&quot;你好我的男朋友&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;button&quot; id=&quot;tts_btn&quot; onclick=&quot;doTTS()&quot; value=&quot;播放&quot;&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    function doTTS() &#123;</span><br><span class="line">        var mess = document.getElementById(&apos;ttsText&apos;).value;</span><br><span class="line">        var msg = new SpeechSynthesisUtterance(mess);</span><br><span class="line">        msg.volume = 100;</span><br><span class="line">        msg.rate = 1;</span><br><span class="line">        msg.pitch = 1.5;</span><br><span class="line">        console.log(msg);</span><br><span class="line">        window.speechSynthesis.speak(msg);</span><br><span class="line">    &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://www.jq22.com/jquery/jquery.html" target="_blank" rel="noopener">让IE浏览器支持HTML5标准</a><br>html div等比例缩小<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div&#123;transform: scale(0.5,0.5);-ms-transform: scale(0.5,0.5);&#125;</span><br></pre></td></tr></table></figure></p>
-<p>百度语音合成接口demo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://ai.baidu.com/aidemo?type=tns&amp;spd=5&amp;pit=5&amp;vol=5&amp;per=0&amp;tex=thanks you</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/lhc1105/article/details/44754259" target="_blank" rel="noopener">H5 利用navigator+Video调用摄像头进行录像</a><br><a href="http://naotu.baidu.com/home" target="_blank" rel="noopener">百度脑图</a><br><a href="https://blog.csdn.net/csdn_xuexiaoqiang/article/details/53502529" target="_blank" rel="noopener">HTML复选框checkbox默认样式修改</a><br><a href="https://www.html5tricks.com/" target="_blank" rel="noopener">html5tricks</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2018/10/03/1538523120000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/03/articles/2018/10/03/1538523120000.html/" class="article-date">
-      <time datetime="2018-10-02T23:32:00.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523120000.html/">[前端] 常用框架</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.layui.com/doc/" target="_blank">layui</a><br>amaze ~ 妹子 UI<br>HTML5 跨屏前端框架<br><a href="http://amazeui.org/" target="_blank">amaze</a><br><a href="http://echarts.baidu.com/examples/" target="_blank">echarts</a><br><a href="http://echarts.baidu.com/echarts2/doc/example/gauge1.html" target="_blank" rel="noopener">echarts仪表盘</a><br><a href="https://blog.csdn.net/qq_36330228/article/details/79945928" target="_blank" rel="noopener">echarts柱状图</a><br>前端，Java，产品经理，微信小程序，Python等200g资源合集大放送<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/qq_36538012/article/details/79852664</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2018/10/03/1538523120000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/03/articles/2018/10/03/1538523120000.html/" class="article-date">
-      <time datetime="2018-10-02T23:32:00.000Z" itemprop="datePublished">2018-10-03</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/03/articles/2018/10/03/1538523120000.html/">[小程序] wxs时间戳转换日期</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/u010651383/article/details/82810185" target="_blank"><br>微信小程序-wxs实现时间格式化过滤器（正则）</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2018/10/02/1538438401000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/02/articles/2018/10/02/1538438401000.html/" class="article-date">
-      <time datetime="2018-10-02T00:00:01.000Z" itemprop="datePublished">2018-10-02</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/02/articles/2018/10/02/1538438401000.html/">[工具] 在线工具</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="http://www.it1352.com/OnLineTools/Index" target="_blank">IT屋</a><br><a href="https://tool.lu/" target="_blank">在线工具</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2018/10/01/1538366260581.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/01/articles/2018/10/01/1538366260581.html/" class="article-date">
-      <time datetime="2018-10-01T03:57:40.000Z" itemprop="datePublished">2018-10-01</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/01/articles/2018/10/01/1538366260581.html/">[博客] 博客收集</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="http://www.stormjie.top/" target="_blank">java设计模式|stormjie</a><br><a href="https://www.jellythink.com/" target="_blank">果冻想</a><br><a href="https://www.jellythink.com/archives/category/tool-tutorials/postman" target="_blank">postman</a><br><a href="https://blog.csdn.net/acmman" target="_blank">程序员之洞</a><br><a href="https://blog.csdn.net/column/details/15759.html" target="_blank">Java Web开发的基本原理剖析</a><br><a href="http://www.sunqizheng.com/" target="_blank">一名90后博主</a><br><a href="https://blog.csdn.net/sinat_31057219?t=1" target="_blank">Android|原创较多|火星男孩</a><br><a href="https://blog.csdn.net/itcast_cn?t=1" target="_blank">CSDN|传智播客</a><br><a href="https://blog.csdn.net/vv_bug/article/details/79551403" target="_blank">React|vv_小虫</a><br><a href="https://bougieblog.cn/spider/Qk9VMzc3NkdJRQ.html" target="_blank">Bougie’s Blog</a><br><a href="https://me.csdn.net/chwshuang" target="_blank">大大的微笑的专栏</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2018/10/01/1538358849873.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/01/articles/2018/10/01/1538358849873.html/" class="article-date">
-      <time datetime="2018-10-01T01:54:09.000Z" itemprop="datePublished">2018-10-01</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/01/articles/2018/10/01/1538358849873.html/">[hexo] github + hexo</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://hexo.io/zh-cn/" target="_blank">hexo中文官网</a><br><a href="https://www.cnblogs.com/visugar/p/6821777.html" target="_blank">hexo</a><br><a href="https://blog.csdn.net/Greenovia/article/details/60576985" target="_blank">解决用Hexo和GitHub搭建博客时hexo d命令报错问题</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱地址&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;邮箱地址&quot;</span><br><span class="line">cd ~/.ssh</span><br><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br><span class="line">#hexo配置</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">vim _config.yml</span><br><span class="line">#</span><br><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> #这里的repo需要设置成git仓库的ssh链接,github用户名注意区分大小写</span><br><span class="line"> repo: git@github.com:&lt;github用户名&gt;/&lt;github用户名&gt;.github.io.git</span><br><span class="line"> branch: master</span><br><span class="line"></span><br><span class="line">#网站部署</span><br><span class="line">hexo clean  #清除缓存文件db.json和已生成的静态文件public</span><br><span class="line">hexo g   #生成网站静态文件到默认设置的public文件夹</span><br><span class="line">hexo d   #部署网站到设定的仓库</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://visugar.com/2017/08/01/20170801HexoPlugins/" target="_blank">Hexo博客添加SEO-评论系统-阅读统计-站长统计</a><br><a href="https://ziyuan.baidu.com" target="_blank">百度站长统计</a><br><a href="https://www.jianshu.com/p/465830080ea9" target="_blank">hexo+github,搭建属于自己的博客</a><br><a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank">hexo主题</a><br><a href="https://link.jianshu.com?t=https://github.com/daisygao/hexo-themes-cover" target="_blank" rel="noopener">Cover</a>- A chic theme with facebook-like cover photo<br><a href="https://link.jianshu.com?t=https://github.com/henryhuang/oishi" target="_blank" rel="noopener">Oishi</a>- A white theme based on Landscape plus and Writing.<br><a href="https://link.jianshu.com?t=https://github.com/hardywu/hexo-theme-sidebar" target="_blank" rel="noopener">Sidebar</a>- Another theme based on Light with a simple sidebar<br><a href="https://link.jianshu.com?t=https://github.com/SuperKieran/TKL" target="_blank" rel="noopener">TKL</a>- A responsive design theme for Hexo. 一个设计优雅的响应式主题<br><a href="https://link.jianshu.com?t=https://github.com/levonlin/Tinnypp" target="_blank" rel="noopener">Tinnypp</a>- A clean, simple theme based on Tinny<br><a href="https://link.jianshu.com?t=https://github.com/yunlzheng/hexo-themes-writing" target="_blank" rel="noopener">Writing</a>- A small and simple hexo theme based on Light<br><a href="https://link.jianshu.com?t=https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia</a>- Responsive and simple style 优雅简洁响应式主题，我用得就是这个<br><a href="https://link.jianshu.com?t=https://github.com/Voidly/pacman" target="_blank" rel="noopener">Pacman voidy</a>- A theme with dynamic tagcloud and dynamic snow</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2018/10/01/1538358532907.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/01/articles/2018/10/01/1538358532907.html/" class="article-date">
-      <time datetime="2018-10-01T01:52:57.000Z" itemprop="datePublished">2018-10-01</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/01/articles/2018/10/01/1538358532907.html/">[github]windows github ssh-key</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://git-scm.com/downloads" target="_blank">git bash</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱地址&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;邮箱地址&quot;</span><br><span class="line">cd ~/.ssh</span><br><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br><span class="line">echo &quot;# hexo&quot; &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git remote add origin https://github.com/&lt;github用户名&gt;/hexo.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2018/10/01/1538352002000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/10/01/articles/2018/10/01/1538352002000.html/" class="article-date">
-      <time datetime="2018-10-01T00:00:02.000Z" itemprop="datePublished">2018-10-01</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/01/articles/2018/10/01/1538352002000.html/">[工具] 时间戳转换</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="http://tool.chinaz.com/Tools/unixtime.aspx" target="_blank">站长工具</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/67/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/66/">66</a><a class="page-number" href="/page/67/">67</a><span class="page-number current">68</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/69/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/67/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/66/">66</a><a class="page-number" href="/page/67/">67</a><span class="page-number current">68</span><a class="page-number" href="/page/69/">69</a><a class="page-number" href="/page/70/">70</a><a class="extend next" rel="next" href="/page/69/">Next &raquo;</a>
     </nav>
   
 

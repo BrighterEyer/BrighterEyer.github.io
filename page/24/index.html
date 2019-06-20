@@ -280,6 +280,583 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-/articles/2019/05/04/1557015872000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015872000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:32.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015872000.html/">[blog] 百撕可乐</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/web1/" target="_blank">百撕可乐</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015871000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015871000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:31.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015871000.html/">[servlet] MultiPartEmail邮件发送</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/openblogs/article/details/22125429" target="_blank">Apache公司MultiPartEmail 邮件发送</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">public class SendServlet extends HttpServlet &#123;</span><br><span class="line"></span><br><span class="line">    private Map&lt;String,String&gt; map = new LinkedHashMap&lt;String,String&gt;();</span><br><span class="line">    </span><br><span class="line">    public void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            //处理上传文件，保存到指定服务端目录下，并返回这个上传的文件</span><br><span class="line">            File file = doAttachment(request);</span><br><span class="line">            //创建一个复杂邮件，即文本+附件</span><br><span class="line">            MultiPartEmail multiPartEmail = new MultiPartEmail();</span><br><span class="line">            multiPartEmail.setHostName(&quot;smtp.163.com&quot;);</span><br><span class="line">            multiPartEmail.setAuthentication(&quot;runsin0723&quot;,get163password());</span><br><span class="line">            multiPartEmail.setCharset(&quot;UTF-8&quot;);</span><br><span class="line">            multiPartEmail.setFrom(map.get(&quot;from&quot;));</span><br><span class="line">            multiPartEmail.addTo(map.get(&quot;to&quot;));</span><br><span class="line">            multiPartEmail.setSubject(map.get(&quot;subject&quot;));</span><br><span class="line">            multiPartEmail.setMsg(map.get(&quot;msg&quot;));</span><br><span class="line">            //如果有附件</span><br><span class="line">            if(file != null)&#123;</span><br><span class="line">                //创建附件</span><br><span class="line">                EmailAttachment emailAttachment = new EmailAttachment();</span><br><span class="line">                //封装附件的位置</span><br><span class="line">                emailAttachment.setPath(file.getPath());</span><br><span class="line">                //封装附件的标题</span><br><span class="line">                emailAttachment.setName(file.getName());</span><br><span class="line">                //将附件加入到上述的邮件中</span><br><span class="line">                multiPartEmail.attach(emailAttachment);</span><br><span class="line">            &#125;</span><br><span class="line">            //发送邮件</span><br><span class="line">            multiPartEmail.send();</span><br><span class="line">            response.setContentType(&quot;text/html;charset=UTF-8&quot;);</span><br><span class="line">            PrintWriter pw = response.getWriter();</span><br><span class="line">            pw.write(&quot;&lt;script&gt;&quot; + &quot;window.alert(&apos;发送成功&apos;);&quot; + &quot;window.location.href=&apos;&quot;+request.getContextPath()+&quot;/send.jsp&apos;&quot; + &quot;&lt;/script&gt;&quot;);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private File doAttachment(HttpServletRequest request) throws Exception&#123;</span><br><span class="line">        File file = null;</span><br><span class="line">        DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();</span><br><span class="line">        ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);</span><br><span class="line">        servletFileUpload.setHeaderEncoding(&quot;UTF-8&quot;);</span><br><span class="line">        List&lt;FileItem&gt; fileItemList = servletFileUpload.parseRequest(request);</span><br><span class="line">        for(FileItem fileItem : fileItemList)&#123;</span><br><span class="line">            if(fileItem.isFormField())&#123;</span><br><span class="line">                String fieldName = fileItem.getFieldName();</span><br><span class="line">                String fieldValue = fileItem.getString(&quot;UTF-8&quot;);</span><br><span class="line">                //收集fieldName和fieldValue</span><br><span class="line">                map.put(fieldName,fieldValue);</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                String name = fileItem.getName();</span><br><span class="line">                File temp = new File(name);</span><br><span class="line">                String realFileName = temp.getName();</span><br><span class="line">                String uploadPath = this.getServletContext().getRealPath(&quot;/WEB-INF/upload&quot;);</span><br><span class="line">                //封装上传文件保存的目录</span><br><span class="line">                file = new File(uploadPath + &quot;/&quot; + realFileName);</span><br><span class="line">                fileItem.write(file);</span><br><span class="line">                fileItem.delete();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return file;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static void main(String[] args) throws Exception&#123;</span><br><span class="line">        File file = new File(&quot;e:/163password.txt&quot;);</span><br><span class="line">        FileReader fileReader = new FileReader(file);</span><br><span class="line">        BufferedReader bufferedReader = new BufferedReader(fileReader);</span><br><span class="line">        return bufferedReader.readLine();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/servlet/">servlet</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015870000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015870000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:30.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015870000.html/">[centos] 搭建邮件服务器</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/chris-cp/p/4843407.html" target="_blank">centos搭建邮件服务器</a></p>
+<p>安装过程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line">1.安装Postfix</span><br><span class="line">yum -y install postfix</span><br><span class="line">安装完成还需要替换系统自带的sendmail：</span><br><span class="line"></span><br><span class="line">rpm -e sendmail</span><br><span class="line">#或</span><br><span class="line">#yum remove sendmail</span><br><span class="line"></span><br><span class="line">#修改MTA（默认邮件传输代理）</span><br><span class="line">alternatives --config mta</span><br><span class="line"></span><br><span class="line">#检查一下是不是已经设置成功了。</span><br><span class="line">alternatives --display mta</span><br><span class="line">#第一行可以看到mta的状态。 例如：mat - status is manual.</span><br><span class="line"></span><br><span class="line">2.安装Dovecot</span><br><span class="line">yum -y install dovecot</span><br><span class="line">3.配置Postfix</span><br><span class="line">编辑/etc/postfix/main.cf，可以下载下来修改，也可以使用vi进行编辑：</span><br><span class="line"></span><br><span class="line">vi /etc/postfix/main.cf</span><br><span class="line">修改如下：</span><br><span class="line"></span><br><span class="line"># 75行: 取消注释，设置hostname</span><br><span class="line">myhostname = mail.lomu.me</span><br><span class="line"># 83行: 取消注释，设置域名</span><br><span class="line">mydomain = lomu.me</span><br><span class="line"># 99行: 取消注释</span><br><span class="line">myorigin = $mydomain</span><br><span class="line"># 116行: 修改</span><br><span class="line">inet_interfaces = all</span><br><span class="line"># 119行: 推荐ipv4，如果支持ipv6，则可以为all</span><br><span class="line">inet_protocols = ipv4</span><br><span class="line"># 164行: 添加</span><br><span class="line">mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain</span><br><span class="line"># 264行: 取消注释，指定内网和本地的IP地址范围</span><br><span class="line">mynetworks = 127.0.0.0/8, 10.0.0.0/24</span><br><span class="line"># 419行: 取消注释，邮件保存目录</span><br><span class="line">home_mailbox = Maildir/</span><br><span class="line"># 571行: 添加</span><br><span class="line">smtpd_banner = $myhostname ESMTP</span><br><span class="line"></span><br><span class="line"># 添加到最后</span><br><span class="line"># 规定邮件最大尺寸为10M</span><br><span class="line">message_size_limit = 10485760</span><br><span class="line"># 规定收件箱最大容量为1G</span><br><span class="line">mailbox_size_limit = 1073741824</span><br><span class="line"># SMTP认证</span><br><span class="line">smtpd_sasl_type = dovecot</span><br><span class="line">smtpd_sasl_path = private/auth</span><br><span class="line">smtpd_sasl_auth_enable = yes</span><br><span class="line">smtpd_sasl_security_options = noanonymous</span><br><span class="line">smtpd_sasl_local_domain = $myhostname</span><br><span class="line">smtpd_recipient_restrictions = permit_mynetworks,permit_auth_destination,permit_sasl_authenticated,reject</span><br><span class="line">修改好了之后使用/etc/rc.d/init.d/postfix start开启postfix，使用chkconfig postfix on将postfix开机启动。</span><br><span class="line"></span><br><span class="line">4.配置Dovecot</span><br><span class="line">修改如下：</span><br><span class="line"></span><br><span class="line">vi /etc/dovecot/dovecot.conf</span><br><span class="line"># 26行: 如果不使用IPv6，请修改为*</span><br><span class="line">listen = *</span><br><span class="line"></span><br><span class="line">vi /etc/dovecot/conf.d/10-auth.conf</span><br><span class="line"># 9行: 取消注释并修改</span><br><span class="line">disable_plaintext_auth = no</span><br><span class="line"># 97行: 添加</span><br><span class="line">auth_mechanisms = plain login</span><br><span class="line"></span><br><span class="line">vi /etc/dovecot/conf.d/10-mail.conf</span><br><span class="line"># 30行: 取消注释并添加</span><br><span class="line">mail_location = maildir:~/Maildir</span><br><span class="line"></span><br><span class="line">vi /etc/dovecot/conf.d/10-master.conf</span><br><span class="line"># 88-90行: 取消注释并添加</span><br><span class="line"># Postfix smtp验证</span><br><span class="line">unix_listener /var/spool/postfix/private/auth &#123;</span><br><span class="line">    mode = 0666</span><br><span class="line">    user = postfix</span><br><span class="line">    group = postfix</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/etc/rc.d/init.d/dovecot start</span><br><span class="line"></span><br><span class="line">chkconfig dovecot on</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">5.域名解析</span><br><span class="line">最后别忘了还需要进行域名解析工作。</span><br><span class="line"></span><br><span class="line">添加一个子域名mail，A记录解析到服务器IP。</span><br><span class="line"></span><br><span class="line">再添加一个MX记录，主机记录为空，记录值为上面解析的二级域名mail.lomu.me，优先级10。</span><br><span class="line"></span><br><span class="line">注意：解析生效可能需要一段时间。</span><br><span class="line"></span><br><span class="line">6.邮箱使用</span><br><span class="line">一切都弄好以后，就可以使用Foxmail等第三方软件来收发邮件了。在这里需要说一下，系统用户就是邮件的用户，例如root，就是一个邮箱用户，邮箱是root@domain.com，密码就是root的密码，所以需要创建用户，只要使用useradd创建用户，再使用passwd设置密码。</span><br><span class="line"></span><br><span class="line">好了，假如我们创建一个admin的用户：</span><br><span class="line"></span><br><span class="line"># 创建用户</span><br><span class="line">useradd admin</span><br><span class="line">#设置密码，会要求输入两次密码</span><br><span class="line">passwd admin</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos/">centos</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015869000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015869000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:29.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015869000.html/">[springboot] elasticsearch+quartz</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/simonsfan/springboot-quartz-demo" target="_blank">springboot-quartz-demo</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015868000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015868000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:28.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015868000.html/">[git] git的使用</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_36410795/article/details/87925528" target="_blank">Git 使用详解</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015867000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015867000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:27.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015867000.html/">[h5] 本地存储</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_36410795/article/details/86684994" target="_blank">Html5 本地存储 local Storage 完整功能小案例demo</a></p>
+<blockquote>
+<ol start="2">
+<li>涉及功能知识点</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">添加本地存储</span><br><span class="line">查询本地存储</span><br><span class="line">根据 index 删除本地存储</span><br><span class="line">清空本地存储</span><br><span class="line">模板引擎渲染</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>3.模板引擎渲染</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script id=&quot;localHistroy&quot; type=&quot;text/html&quot;&gt;</span><br><span class="line">    &#123;&#123;if list.length &gt; 0&#125;&#125;</span><br><span class="line">        &#123;&#123;each list value index&#125;&#125;</span><br><span class="line">            &lt;li class=&quot;mui-table-view-cell&quot;&gt;&#123;&#123;value.key&#125;&#125;</span><br><span class="line">                &lt;span class=&quot;mui-badge mui-badge-primary btn-delete fa fa-close&quot; data-index=&quot;&#123;&#123;index&#125;&#125;&quot;&gt;</span><br><span class="line">                &lt;/span&gt;</span><br><span class="line">            &lt;/li&gt;</span><br><span class="line">        &#123;&#123;/each&#125;&#125;</span><br><span class="line">    &#123;&#123;else&#125;&#125;</span><br><span class="line">        &lt;li class=&quot;mui-table-view-cell&quot;&gt;暂时没有历史记录&lt;/li&gt;</span><br><span class="line">    &#123;&#123;/if&#125;&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="4">
+<li>功能实现JS代码</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">    // 1. 点击搜索触发点击tap事件</span><br><span class="line">    // 2. 获取文本框的内容</span><br><span class="line">    //  2.1 对文本框的值进去空格去除</span><br><span class="line">    // 3. 追加值到本地存储</span><br><span class="line">    //  3.1 判断值不能为空</span><br><span class="line">    //  3.2 查询下本地存储，判断输入的值是否存在，存在则删除原来的值，往数组的最前面插入新值</span><br><span class="line">    //  3.3 本地存储一般都是对象形式，所以最好以对象形式存储</span><br><span class="line">    // 4. 文本框内容清空</span><br><span class="line"></span><br><span class="line">    // 点击搜索按钮添加数据到localStorage里面</span><br><span class="line">    $(&apos;.btn-search&apos;).on(&apos;tap&apos;,function()&#123;</span><br><span class="line">        // console.log()</span><br><span class="line">        // 获取文本框的值 去除两端空格，不会去除中间的空格</span><br><span class="line">        var inputValue = $(&apos;.input-search&apos;).val().trim();</span><br><span class="line">        // 如果内容为空提示</span><br><span class="line">        if(inputValue == &apos;&apos;)&#123;</span><br><span class="line">            mui.toast(&apos;内容不能为空&apos;,&#123; duration:&apos;long&apos;, type:&apos;div&apos; &#125;)</span><br><span class="line">            return</span><br><span class="line">        &#125;</span><br><span class="line">        // 判断内容是否存在，存在就删掉原来的，把新的加进去</span><br><span class="line">        var str = localStorage.getItem(&apos;localHistroy&apos;);</span><br><span class="line">        // 由于取出来也是一个字符串 （因为存进去是字符串 ） 取出来之后要转成真正的数组</span><br><span class="line">        var arr = JSON.parse(str) || []; // 把取出来的字符串srt 转成一个数组 如果转换失败 就使用空数组</span><br><span class="line">        for(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">            if(arr[i].key == inputValue)&#123;</span><br><span class="line">                arr.splice(i,1)</span><br><span class="line">                i--</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 往数组前面插入</span><br><span class="line">        arr.unshift(&#123;</span><br><span class="line">            key: inputValue</span><br><span class="line">        &#125;);</span><br><span class="line">        localStorage.setItem(&apos;localHistroy&apos;,JSON.stringify(arr))</span><br><span class="line">        // 文本框内容清空</span><br><span class="line">        $(&apos;.input-search&apos;).val(&apos;&apos;)</span><br><span class="line">        queryHistroty()</span><br><span class="line">    &#125;)</span><br><span class="line">    queryHistroty();</span><br><span class="line"></span><br><span class="line">    // 1. 获取本地存储</span><br><span class="line">    // 2. 渲染到模板里面</span><br><span class="line">    // 3. 添加到页面</span><br><span class="line">    // 页面加载的时候遍历本地存储的值到页面</span><br><span class="line">    function queryHistroty()&#123;</span><br><span class="line">        var str = localStorage.getItem(&apos;localHistroy&apos;)</span><br><span class="line">        var arr = JSON.parse(str) || []; // 把取出来的字符串srt 转成一个数组 如果转换失败 就使用空数组</span><br><span class="line">        var html = template(&apos;localHistroy&apos;,&#123;list : arr&#125;)</span><br><span class="line">        $(&apos;.history-list&apos;).html(html);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 1. 设置id值，并获取</span><br><span class="line">    // 2. 获取本地存储，根据 id 删除数组值</span><br><span class="line">    // 3. 重新存入本地存储</span><br><span class="line">    // 4. 刷新页面</span><br><span class="line">    // 删除指定的记录</span><br><span class="line">    $(&apos;.history-list&apos;).on(&apos;tap&apos;,&apos;.btn-delete&apos;,function()&#123;</span><br><span class="line">        var index = $(this).data(&apos;index&apos;)</span><br><span class="line">        var str = localStorage.getItem(&apos;localHistroy&apos;)</span><br><span class="line">        // 由于取出来也是一个字符串 （因为存进去是字符串 ） 取出来之后要转成真正的数组</span><br><span class="line">        var arr = JSON.parse(str) || []; // 把取出来的字符串srt 转成一个数组 如果转换失败 就使用空数组</span><br><span class="line">        arr.splice(index,1)</span><br><span class="line">        localStorage.setItem(&apos;localHistroy&apos;,JSON.stringify(arr))</span><br><span class="line">        queryHistroty()</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    // 1. 根据本地存储名清除本地存储数据</span><br><span class="line">    // 2. 重新刷新页面</span><br><span class="line">    // 清空记录</span><br><span class="line">    $(&apos;.btn-clear&apos;).on(&apos;tap&apos;,function()&#123;</span><br><span class="line">        localStorage.removeItem(&apos;localHistroy&apos;)</span><br><span class="line">        queryHistroty()</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/h5/">h5</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015866000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015866000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:26.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015866000.html/">[hexo] 评论</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/yanzi1225627/article/details/77890414" target="_blank">hexo评论</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015865000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015865000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:25.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015865000.html/">[java] 条形码</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_36410795/article/details/79052956" target="_blank">Java条形码生成技术-Barcode4j</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/05/04/1557015864000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/05/05/articles/2019/05/04/1557015864000.html/" class="article-date">
+      <time datetime="2019-05-05T00:24:24.000Z" itemprop="datePublished">2019-05-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015864000.html/">[java] 使用POI对Excel进行读写操作</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/M_WBCG/article/details/75142807" target="_blank">java-使用POI对Excel进行读写操作</a><br>pom.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;poi&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.9&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;poi-ooxml&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.9&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>github<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://gitee.com/Crab2Died/Excel4J/blob/master/src/main/java/com/github/crab2died/ExcelUtils.java</span><br><span class="line">https://github.com/Crab2died/Excel4J/blob/master/src/main/java/com/github/crab2died/ExcelUtils.java</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/wishwzp/p/5494346.html" target="_blank">JAVA使用POI操作excel</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.单元格对齐方式</span><br><span class="line">2.单元格边框处理</span><br><span class="line">3.单元格填充色和颜色操作</span><br><span class="line">4.单元格合并</span><br><span class="line">5.字体处理</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-/articles/2019/05/04/1557015863000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -342,581 +919,9 @@
 
 
   
-    <article id="post-/articles/2019/05/04/1557015862000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015862000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:22.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015862000.html/">[linux] 常用软件</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="" target="_blank"></a><br><a href="https://www.linuxprobe.com/nginx-9000-forward-80.html" target="_blank">如何用nginx在本地把9000端口转发到80端口上</a><br><a href="https://www.linuxidc.com/" target="_blank">linux公社</a></p>
-<p><a href="https://www.lulinux.com/" target="_blank">小撸linux</a><br><a href="https://www.lulinux.com/archives/5557" target="_blank">我的Linux桌面常用软件列表 (2019年春)</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">TIM：开机必备聊天软件，deepinwine运行环境，稳定到爆，跟WINDOWS里的TIM没什么两样。</span><br><span class="line">Xonotic：偶尔放松时玩的第一人称射击游戏。</span><br><span class="line">网页版网易云音乐：一条chrome命令实现的网页版独立应用，对我来说播放音乐不是特别重要的需求，有这个就够了。</span><br><span class="line">Firefox v58开发者版：这个v58版本的Firefox开发者版是我的默认浏览器，可以用到很多被官方强制清退的旧插件（如Scribefire、Hide Caption Titlebar Plus），非常适合我。</span><br><span class="line">Remmina：远程桌面控制软件，同时使用多台电脑的时候用到。</span><br><span class="line">PCManFM：小巧、强大、适用的文件管理器。</span><br><span class="line">xfce4-terminal：小巧适用的终端管理器。</span><br><span class="line">XTerm：终端管理器备胎，好好配置一下，还是美美哒。</span><br><span class="line">PhpStorm：无比强大的PHP开发IDE，无忧开发Wordpress网站。</span><br><span class="line">Sublime Text 3：非常强大的前端开发工具，我主要用它来编辑CSS和js文件，其中的代码格式化美化插件用的好爽。</span><br><span class="line">mysql-workbench：非常强大的MySQL可视化管理器，navicat的替代品，运行速度比wine版navicat快很多。唯一的缺憾就是没有中文语言包。</span><br><span class="line">VirtualBox：运行一些Windows软件或测试观赏多个Linux发行版的时候会用到。</span><br><span class="line">Terminator：分屏终端管理器。</span><br><span class="line">Firefox：上面那个Firefox开发者版的备胎，很少用。主要用处就是“撑撑场面”。</span><br><span class="line">Google Chrome：浏览器备胎，因为Chrome及其衍生版市场份额很高，所以必须用它来测试前端代码兼容性。</span><br><span class="line">Chromium：浏览器备胎。</span><br><span class="line">Geany：小巧而又强大的文本编辑器，一直用它来做笔记。我不用EverNote之类的软件做笔记，因为不方便在文件管理器里直接点击文本查看。</span><br><span class="line">pamac-manager：Manjaro系统默认的软件管理器，默认可查AUR，非常好用。</span><br><span class="line">gVim：本人不太喜欢这种所谓“编辑器之神”，被某些人吹到天上去了，结果配置的过程中非常浪费时间，效果也就一般般。不过写shell脚本的时候一定会用它，Ctrl+G一键美化脚本。</span><br><span class="line">xfce4-taskmanager：用它来杀死卡顿的应用程序。它有一个特点，可以快速定位应用程序窗口。</span><br><span class="line">FileZilla：上传FTP文件，web开发者必备。</span><br><span class="line">gcolor2：简单适用的取色器。</span><br><span class="line">Spectacle：截图工具的备胎，定时矩形截图的时候就用它。</span><br><span class="line">SimpleScreenRecorder：小巧而又强大的录屏工具，录制的视频效果非常好。</span><br><span class="line">kruler：屏幕直尺，设计作图必备。</span><br><span class="line">lxappearance：用来调整LXDE桌面的观感。时不时换换字体和鼠标指针主题，是很快乐的一件事。</span><br><span class="line">Falkon：好用的浏览器备胎，轻量，火狐浏览器无法观看视频的时候会用到它。</span><br><span class="line">gucharmap：字符映射表，用它来选取特殊字符插入到文本代码中。</span><br><span class="line">LibreOffice Writer：这个不用我介绍。我不怎么用办公软件，我主要喜欢它的Linux桌面兼容性，字体渲染比wps好多了。</span><br><span class="line">deepin计算器：最养眼的计算器。</span><br><span class="line">Audacious：听本地MOD音乐的时候会用到。MOD音乐格式很神奇，体积超小，播放时间却跟mp3一样长。</span><br><span class="line">xfce4-mime-settings：设置文件关联应用程序的图形化工具，Linux桌面找不到第2个这样的工具。</span><br><span class="line">Evolution：收发邮件的利器，各方面功能都比较完善，汉化也做得不错。</span><br><span class="line">pavucontrol：音量控制器。录屏的时候要用它来调整音道以便录入系统本身正在播放的音乐。</span><br><span class="line">然后是图中没有显示图标的应用程序，主要是在文件管理器中跟具体的文件关联的常用程序：</span><br><span class="line"></span><br><span class="line">Viewnior：小巧、强大、实用的图片查看器，可以查看图像的尺寸。我将其设置为跟所有图片关联。</span><br><span class="line">KolourPaint：小巧而又强大的图片注释编辑工具，裁剪、缩放、添加文字、添加圆圈、橡皮擦、喷雾罐……该有的功能都有。截图之后我就用它来添加注释。本文最上面那张图就是用KolourPaint加工编辑的，其中的曲线像思维导图一样可以随意变换弯曲度，很有用。另外，KolourPaint本身也可以截图。</span><br><span class="line">xed：轻巧的文本编辑器，与所有文本格式文件关联。</span><br><span class="line">SMPlayer：所有媒体格式通吃的媒体播放器，还最不消耗系统资源，比VLC、deepin-movie都轻量许多。</span><br><span class="line">deepin-screenshot：深度公司出品的小巧而又强大的截图工具，配合快捷键用的很爽。</span><br><span class="line">FontForge：字体查看和编辑工具，Web开发调用图标字体的时候常常用它来查看字符编码。</span><br><span class="line">PhotoShop 7：Gimp太拙劣，Krita又太不稳定，所以做复杂图像，我只用17年前的ps7。它能用wine稳定运行，其强大的图层样式功能，甩Gimp好几条街。</span><br><span class="line">inkscape：矢量图形制作必备工具。</span><br><span class="line">最后还有截图中完全没有显示、在系统和桌面底层运行的关键应用程序，为我的桌面工作效率提供N臂之力：</span><br><span class="line"></span><br><span class="line">Compiz：超级窗口管理器，可以设置多个快捷键、热键，可以平铺4个窗口，可以设置窗口变换过程中的3d特效，使我的定制LXDE桌面有了现代化的观感。</span><br><span class="line">AWN：全称叫avant-window-navigator，一种可以使用多种applets的dock面板，配合gnomenu和dockbarx，可以实现跟Windows 10的效果，我在《撸linux“游戏”成果展示》博文里有过介绍。</span><br><span class="line">dockbarx：一种模仿Windows 7高效图标式任务栏的应用，兼容于AWN和xfce面板。</span><br><span class="line">EasyStroke：此应用将浏览器里的鼠标手势应用到了系统级别，以致使用文件管理器跟使用浏览器一样方便，我最常用的两个手势是关闭标签和新建标签。</span><br><span class="line">cron：不用cron的肯定不是Linux高级用户。</span><br><span class="line">dunst：可以使不同程序的通知播放不同提示声音的系统通知应用，兼容于所有桌面环境和纯窗口管理器环境。上手曲线陡直，最终用起来还是很爽。每逢国外邮件到达，dunst就会发出动听的警示音，间接地提高了我的赚钱效率。</span><br><span class="line">fcitx-sogoupinyin：Linux下最好用的中文拼音输入法。</span><br><span class="line">zsh：sh的增强版，有很多不错的功能，包括命令补全和自动纠正等。</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.cnblogs.com/BCOI/p/8596574.html" target="_blank">在Linux上安装QQ</a><br><a href="https://github.com/askme765cs/Wine-QQ-TIM/releases" target="_blank">Linux/Ubuntu下使用TIM</a><br><a href="https://www.jianshu.com/p/bd7d8648c650" target="_blank">移动开发数据平台</a></p>
-<p>在Linux上安装微信<br>方案一：从ubuntu的Snap中下载安装微信<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install snapd snapd-xdg-open</span><br><span class="line">sudo snap install electronic-chat</span><br><span class="line">#命令启动：</span><br><span class="line">electronic-chat</span><br><span class="line">#移除微信客户端</span><br><span class="line">sudo snao remove electronic-wechat</span><br></pre></td></tr></table></figure></p>
-<p>方案二：利用GitHub在安装Linux微信客户端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#github</span><br><span class="line">#https://github.com/geeeeeeeeek/electronic-wechat/releases</span><br><span class="line">wget https://github.com/geeeeeeeeek/electronic-wechat/releases/download/V2.0/linux-x64.tar.gz</span><br><span class="line">tar xvf linux-x64.tar.gz</span><br><span class="line">./electronic-chat</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.jianshu.com/p/e7e85ab38105" target="_blank">electronic-wechat.desktop</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/usr/share/applications/electronic-wechat.desktop</span><br><span class="line"></span><br><span class="line">[Desktop Entry]</span><br><span class="line">Name=Electronic Wechat</span><br><span class="line">Name[zh_CN]=微信电脑版</span><br><span class="line">Name[zh_TW]=微信电脑版</span><br><span class="line">Exec=/opt/electronic-wechat/electronic-wechat</span><br><span class="line">Icon=/opt/electronic-wechat/resources/electronic-wechat.png</span><br><span class="line">Terminal=false</span><br><span class="line">X-MultipleArgs=false</span><br><span class="line">Type=Application</span><br><span class="line">Encoding=UTF-8</span><br><span class="line">Categories=Application;Utility;Network;InstantMessaging;</span><br><span class="line">StartupNotify=false</span><br></pre></td></tr></table></figure></p>
-<p>linux安装wps<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/u013115811/article/details/79140408/</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015861000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015861000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:21.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015861000.html/">[小程序] iphonex适配</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/superlizhao/p/8329386.html" target="_blank">iPhoneX适配</a></p>
-<p><a href="https://www.2cto.com/kf/201808/770691.html" target="_blank">微信小程序适配之iPhone X</a><br>app.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">App(&#123;</span><br><span class="line">  // 全局数据</span><br><span class="line">  globalData: &#123; // 其他数据定义 ...</span><br><span class="line">    isIPhoneX: false, // 当前设备是否为 iPhone X</span><br><span class="line">  &#125;,</span><br><span class="line">  // 小程序启动入口</span><br><span class="line">  onLaunch: function(options) &#123;　 // 其他启动代码...</span><br><span class="line">    // 判断设备是否为 iPhone X</span><br><span class="line">    this.checkIsIPhoneX()</span><br><span class="line">  &#125;,</span><br><span class="line">  checkIsIPhoneX: function() &#123;</span><br><span class="line">    const self = this;</span><br><span class="line">    wx.getSystemInfo(&#123;</span><br><span class="line">      success: function(res) &#123; // 根据 model 进行判断</span><br><span class="line">        if (res.model.search(&apos;iPhone X&apos;) != -1) &#123;</span><br><span class="line">          self.globalData.isIPhoneX = true</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>(1)在每个页面的.js中先读取app.js中的isIPhoneX值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const app = getApp();</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">	data: &#123;</span><br><span class="line">		isIPhoneX: app.globalData.isIPhoneX</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;view wx:if=&quot;&#123;&#123;isIphoneX&#125;&#125;&quot; class=&quot;&#123;&#123;isIphoneX?&apos;fix-iphonex-button&apos;:&apos;&apos;&#125;&#125;&quot;&gt;</span><br><span class="line">  这是一个吸底按钮区域</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
-<p>(2)然后在样式文件中对某一个视图View分别为普通屏幕和 iPhone X 屏幕写两种样式，如下：<br>app.wxss<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.fix-iphonex-button &#123;</span><br><span class="line"> bottom:68rpx!important;</span><br><span class="line">&#125;</span><br><span class="line">.fix-iphonex-button::after &#123;</span><br><span class="line"> content: &apos; &apos;;</span><br><span class="line"> position: fixed;</span><br><span class="line"> bottom: 0!important;</span><br><span class="line"> height: 68rpx!important;</span><br><span class="line"> width: 100%;</span><br><span class="line"> background: #fff;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>顶部区别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.navi-bar-view &#123;</span><br><span class="line">  height: 64px;</span><br><span class="line">&#125;</span><br><span class="line">.navi-bar-view-IPX &#123;</span><br><span class="line">  height: 88px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.fix-iphonex-button &#123;</span><br><span class="line"> width: 100%;</span><br><span class="line"> height: 48px; /* 吸底按钮的高度 */</span><br><span class="line"> bottom: 0;</span><br><span class="line"> opacity: 0.95;</span><br><span class="line"> position: fixed;</span><br><span class="line"> border-top-style: solid;</span><br><span class="line"> border-top-width: 0.5px; /* 分割线的高度 */</span><br><span class="line"> border-color: lightgrey;</span><br><span class="line"> background-color: #F8F8F8;</span><br><span class="line">&#125;</span><br><span class="line">.fix-iphonex-button &#123;</span><br><span class="line"> /* iPhone X 内容往上偏移 34px */</span><br><span class="line"> padding-bottom: 34px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015860000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015860000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:20.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015860000.html/">[github] testall持续更新中···</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/x113773/testall/" target="_blank">testall持续更新中···</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">自动化运维工具Ansible</span><br><span class="line">CORS 跨域资源共享</span><br><span class="line">开启https协议</span><br><span class="line">MyBatis</span><br><span class="line">Spring Boot Redis</span><br><span class="line">SnakeYAML</span><br><span class="line">Solr</span><br><span class="line">Spring Security</span><br><span class="line">Remember-Me</span><br><span class="line">Swagger</span><br><span class="line">ZipEntry</span><br><span class="line"></span><br><span class="line">#运行</span><br><span class="line">solr start</span><br><span class="line">redis-server.exe</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015859000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015859000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:19.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015859000.html/">[小程序] demos</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/ljybill/miniprogram-utils/blob/master/custom-tabbar/README.md" target="_blank">github|自定义tabBar</a><br><a href="https://github.com/awesome-tips/awesome-tips-wx-app" target="_blank">github|awesome-tips-wx-app</a><br><a href="https://pan.baidu.com/s/1Qin5OFqf_aZ6mIKsaFtdow" target="_blank">knse</a><br><a href="https://blog.csdn.net/small_lack/article/details/80959278" target="_blank">自定义tabbar</a><br><a href="https://github.com/harveyqing/BearDiary" target="_blank">微信小程序之小熊の日记（#记录 #工具 #媒体）</a><br><a href="https://github.com/wechat-miniprogram/miniprogram-demo" target="_blank">小程序官方demo|miniprogram-demo</a><br><a href="http://www.cnblogs.com/gaogaoyanjiu/p/9537657.html" target="_blank">微信小程序开源Demo精选</a></p>
-<p><a href="https://www.jianshu.com/p/65bc62529639" target="_blank">微信小程序开发资源汇总</a><br><a href="https://www.jianshu.com/c/23f278ae3d61" target="_blank">简书专栏 | 小程序</a><br><a href="https://www.jianshu.com/p/4969b36b75e3" target="_blank">近期200+热门微信小程序demo源码下载汇总</a><br><a href="https://github.com/SuperKieran/weapp-artand" target="_blank">weapp-artand | api.js</a><br><a href="http://www.see-source.com/minapp.html" target="_blank">看源社区 | 小程序专栏</a><br><a href="http://javascript.ctolib.com/categories/javascript-wechat-weapp.html" target="_blank">微信小程序项目汇总</a></p>
-<p><a href="http://www.xcxwo.com" target="_blank">小程序窝</a><br><a href="http://www.xcxwo.com/cate/component/c6ff2ede04749f548db996b5c4b6bc23" target="_blank">小程序窝-发现小程序组件</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015858000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015858000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:18.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015858000.html/">[springboot] 电商系统</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/waitingfy/mall" target="_blank">github|电商系统</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015857000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015857000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:17.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015857000.html/">[serlvet] kaptcha验证码组件</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/libra0920/p/6116800.html" target="_blank">如何使用kaptcha验证码组件</a><br><a href="https://blog.csdn.net/gao36951/article/details/48261003" target="_blank">简单Maven的Web项目之验证码(Kaptcha篇)</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/serlvet/">serlvet</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015856000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015856000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:16.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015856000.html/">[springboot] 慕课网mybatis代码生成</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/leechenxiang/imooc-springboot-starter" target="_blank">慕课网mybatis代码生成</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015855000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015855000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:15.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015855000.html/">[springboot] rabbitmq</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/hlhdidi/p/6535677.html" target="_blank">springboot整合RabbitMQ</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-/articles/2019/05/04/1557015854000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/05/05/articles/2019/05/04/1557015854000.html/" class="article-date">
-      <time datetime="2019-05-05T00:24:14.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/05/05/articles/2019/05/04/1557015854000.html/">[springboot] 内嵌mongo</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/littleatp/p/10462395.html" target="_blank">springboot内嵌mongo</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/23/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/69/">69</a><a class="extend next" rel="next" href="/page/25/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/23/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/70/">70</a><a class="extend next" rel="next" href="/page/25/">Next &raquo;</a>
     </nav>
   
 
