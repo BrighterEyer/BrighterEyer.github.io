@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,69 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/04/20/1555759229000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555759229000.html/" class="article-date">
-      <time datetime="2019-04-20T11:20:29.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555759229000.html/">[springboot] 工程内配置https</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.jianshu.com/p/8d4aba3b972d" target="_blank">SpringBoot配置HTTPS,并实现HTTP访问自动转HTTPS访问</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -alias tomcat -keyalg RSA -keystore ./server.keystore</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 443</span><br><span class="line">  tomcat:</span><br><span class="line">    uri-encoding: UTF-8</span><br><span class="line">  servlet:</span><br><span class="line">    context-path: /</span><br><span class="line">  #https</span><br><span class="line">  ssl:</span><br><span class="line">    enabled: true</span><br><span class="line">    key-store: classpath:file.key</span><br><span class="line">    key-store-password: 你的密码</span><br><span class="line">    key-store-type: JKS</span><br><span class="line"></span><br><span class="line">server.port=443</span><br><span class="line">server.ssl.enabled=true</span><br><span class="line">server.ssl.key-store=server.keystore</span><br><span class="line">server.ssl.key-alias=tomcat</span><br><span class="line">server.ssl.key-store-password=123456</span><br><span class="line">server.ssl.key-store-type=JKS</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/04/20/1555759228000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -876,6 +813,69 @@
           
         <p><a href="https://blog.csdn.net/qq_41417335/article/details/86631008" target="_blank">后台（java）接收前台文件上传，微信小程序文件上传</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">wx.uploadFile(&#123;</span><br><span class="line">  url: config.submitCommentUrl, //后台接口</span><br><span class="line">  header: &#123;</span><br><span class="line">    &quot;Content-Type&quot;: &quot;multipart/form-data&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  filePath: files[0], //文件路径</span><br><span class="line">  formData: &#123;</span><br><span class="line">    &apos;orderId&apos;: 1,</span><br><span class="line">    &apos;userId&apos;: 1,</span><br><span class="line">    &apos;comments&apos;: comments,</span><br><span class="line">    &apos;star&apos;: star,</span><br><span class="line">    &apos;phone&apos;: phone,</span><br><span class="line">    &apos;files&apos;: files</span><br><span class="line">  &#125;,</span><br><span class="line">  name: &apos;files&apos;, //文件名</span><br><span class="line">  success(res) &#123;</span><br><span class="line">    console.log(res.data);</span><br><span class="line">    wx.navigateBack(&#123;</span><br><span class="line">      delta: 1</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p><a href="https://github.com/LeoMelody/jianshu/blob/master/smallDemo/upload/upload.js" target="_blank">github|upload.js</a><br><a href="https://blog.csdn.net/wa172126691/article/details/82985427" target="_blank">多文件上传</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555758309000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555758309000.html/" class="article-date">
+      <time datetime="2019-04-20T11:05:09.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555758309000.html/">[小程序] 手动打开地理位置授权</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.jianshu.com/p/e232c3c9af37" target="_blank">简书|获取位置信息</a><br><a href="https://www.cnblogs.com/cckui/p/10002435.html" target="_blank">地理位置授权wx.getLocation</a><br><a href="https://blog.csdn.net/maria028/article/details/82804955" target="_blank">open-type</a><br><a href="https://blog.csdn.net/qiushi_1990/article/details/87822772" target="_blank">弹出用户授权弹窗，微信小程序引导用户授权，获取位置经纬度</a><br>gps.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line"> getLocation() &#123;</span><br><span class="line">  this.checkLocation();</span><br><span class="line"></span><br><span class="line">  let that = this;</span><br><span class="line">  wx.chooseLocation(&#123;</span><br><span class="line">   success: function(res) &#123;</span><br><span class="line">    var latitude = res.latitude</span><br><span class="line">    var longitude = res.longitude;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">     address: &quot;经纬度：&quot; + longitude + &quot;, &quot; + latitude,</span><br><span class="line">    &#125;)</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"> &#125;,</span><br><span class="line"> //校验位置权限是否打开</span><br><span class="line"> checkLocation() &#123;</span><br><span class="line">  let that = this;</span><br><span class="line">  //选择位置，需要用户授权</span><br><span class="line">  wx.getSetting(&#123;</span><br><span class="line">   success(res) &#123;</span><br><span class="line">    if (!res.authSetting[&apos;scope.userLocation&apos;]) &#123;</span><br><span class="line">     wx.authorize(&#123;</span><br><span class="line">      scope: &apos;scope.userLocation&apos;,</span><br><span class="line">      success() &#123;</span><br><span class="line">       wx.showToast(&#123; //这里提示失败原因</span><br><span class="line">        title: &apos;授权成功！&apos;,</span><br><span class="line">        duration: 1500</span><br><span class="line">       &#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">      fail() &#123;</span><br><span class="line">       that.showSettingToast(&apos;需要授权位置信息&apos;);</span><br><span class="line">      &#125;</span><br><span class="line">     &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"> &#125;,</span><br><span class="line"> // 打开权限设置页提示框</span><br><span class="line"> showSettingToast: function (e) &#123;</span><br><span class="line">  wx.showModal(&#123;</span><br><span class="line">   title: &apos;提示！&apos;,</span><br><span class="line">   confirmText: &apos;去设置&apos;,</span><br><span class="line">   showCancel: false,</span><br><span class="line">   content: e,</span><br><span class="line">   success: function (res) &#123;</span><br><span class="line">    if (res.confirm) &#123;</span><br><span class="line">     wx.navigateTo(&#123;</span><br><span class="line">      url: &apos;../setting/setting&apos;,</span><br><span class="line">     &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"> &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>app.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> &quot;pages&quot;: [</span><br><span class="line">  &quot;pages/index/index&quot;,</span><br><span class="line">  &quot;pages/setting/setting&quot;</span><br><span class="line"> ],</span><br><span class="line"> &quot;window&quot;: &#123;</span><br><span class="line">  &quot;backgroundTextStyle&quot;: &quot;light&quot;,</span><br><span class="line">  &quot;navigationBarBackgroundColor&quot;: &quot;#fff&quot;,</span><br><span class="line">  &quot;navigationBarTitleText&quot;: &quot;WeChat&quot;,</span><br><span class="line">  &quot;navigationBarTextStyle&quot;: &quot;black&quot;</span><br><span class="line"> &#125;,</span><br><span class="line"> &quot;permission&quot;: &#123;</span><br><span class="line">  &quot;scope.userLocation&quot;: &#123;</span><br><span class="line">   &quot;desc&quot;: &quot;你的位置信息将用于小程序位置接口的效果展示&quot;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>

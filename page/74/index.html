@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,72 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/04/20/1555732617000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555732617000.html/" class="article-date">
-      <time datetime="2019-04-20T03:56:57.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732617000.html/">[小程序] 获取用户信息的两种方法</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="" target="_blank"></a></p>
-<p><a href="https://blog.csdn.net/lucky_Zeng/article/details/80066479" target="_blank">获取用户信息的两种方法wx.getUserInfo&amp;open-data</a><br>(1)wx.getUserInfo方式<br>wxss<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">onLoad: function (options) &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    //获取用户信息</span><br><span class="line">    wx.getUserInfo(&#123;</span><br><span class="line">        success: function (res) &#123;</span><br><span class="line">            console.log(res);</span><br><span class="line">            that.data.userInfo = res.userInfo;</span><br><span class="line">            that.setData(&#123;</span><br><span class="line">                userInfo: that.data.userInfo</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>wxml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 需要使用 button 来授权登录 --&gt;</span><br><span class="line">&lt;button wx:if=&quot;&#123;&#123;canIUse&#125;&#125;&quot; open-type=&quot;getUserInfo&quot; bindgetuserinfo=&quot;bindGetUserInfo&quot;&gt;授权登录&lt;/button&gt;</span><br><span class="line">&lt;view wx:else&gt;请升级微信版本&lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
-<p>js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    canIUse: wx.canIUse(&apos;button.open-type.getUserInfo&apos;)</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: function() &#123;</span><br><span class="line">    // 查看是否授权</span><br><span class="line">    wx.getSetting(&#123;</span><br><span class="line">      success: function(res)&#123;</span><br><span class="line">        if (res.authSetting[&apos;scope.userInfo&apos;]) &#123;</span><br><span class="line">          // 已经授权，可以直接调用 getUserInfo 获取头像昵称</span><br><span class="line">          wx.getUserInfo(&#123;</span><br><span class="line">            success: function(res) &#123;</span><br><span class="line">              console.log(res.userInfo)</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  bindGetUserInfo: function(e) &#123;</span><br><span class="line">    console.log(e.detail.userInfo)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>(2)open-data<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 如果只是展示用户头像昵称，可以使用 &lt;open-data /&gt; 组件 --&gt;</span><br><span class="line">&lt;open-data type=&quot;userAvatarUrl&quot;&gt;&lt;/open-data&gt;</span><br><span class="line">&lt;open-data type=&quot;userNickName&quot;&gt;&lt;/open-data&gt;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/04/20/1555732616000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -922,6 +856,68 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springmvc/">springmvc</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/03/1554287406000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/03/articles/2019/04/03/1554287406000.html/" class="article-date">
+      <time datetime="2019-04-03T10:30:06.000Z" itemprop="datePublished">2019-04-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/03/articles/2019/04/03/1554287406000.html/">[spring] spring+security</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.cnblogs.com/hehaiyang/category/649866.html" target="_blank">SpringSecurity 3.2入门</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">（1） 框架介绍</span><br><span class="line">（2） 环境搭建</span><br><span class="line">（3） 单用户登录</span><br><span class="line">（4） 登录密码加密</span><br><span class="line">（5） 自定义登录页面</span><br><span class="line">（6） 简单介绍默认使用的十一个过滤器</span><br><span class="line">（7） 自定义权限控制介绍</span><br><span class="line">（8） 自定义权限控制数据库设计</span><br><span class="line">（9） 自定义权限控制代码实现</span><br><span class="line">（10）自定义权限控制认证及授权的过程</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li></ul>
     </div>
 
       

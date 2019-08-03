@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,72 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/04/24/1556103614000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/24/articles/2019/04/24/1556103614000.html/" class="article-date">
-      <time datetime="2019-04-24T11:00:14.000Z" itemprop="datePublished">2019-04-24</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/24/articles/2019/04/24/1556103614000.html/">[小程序] 自定义底部tab</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.jianshu.com/p/8f1894e82dc6" target="_blank">weui小程序自定义底部tab</a><br><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/custom-tabbar.html" target="_blank">自定义tabBar</a><br>templates/tabbar.wxml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;template name=&quot;tabBar&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;view class=&quot;tab-bar&quot; style=&quot;color: &#123;&#123;tabBar.color&#125;&#125;; background: &#123;&#123;tarBar.backgroundColor&#125;&#125;; &#123;&#123;tabBar.position==&apos;top&apos;? &apos;top: 0&apos; : &apos;bottom: 0&apos;&#125;&#125;; &#123;&#123;tabBar.borderStyle? (tabBar.position==&apos;top&apos;? &apos;border-bottom: solid 1px &apos;+tabBar.borderStyle + &apos;;&apos; : &apos;border-top: solid 1px &apos;+tabBar.borderStyle + &apos;;&apos;) : &apos;&apos;&#125;&#125;&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;block wx:for=&quot;&#123;&#123;tabBar.list&#125;&#125;&quot; wx:key=&quot;pagePath&quot;&gt;</span><br><span class="line"></span><br><span class="line">      &lt;navigator url=&quot;&#123;&#123;item.pagePath&#125;&#125;&quot; open-type=&quot;redirect&quot; class=&quot;&#123;&#123;item.styleClass&#125;&#125;&quot; style=&quot;&#123;&#123;item.active? &apos;color: &apos;+(item.selectedColor? item.selectedColor : tabBar.selectedColor) : &apos;&apos;&#125;&#125;&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;image src=&quot;&#123;&#123;item.selectedIconPath&#125;&#125;&quot; wx:if=&quot;&#123;&#123;item.active&#125;&#125;&quot; class=&quot;bottom-tabbar-icon&quot;&gt;&lt;/image&gt;</span><br><span class="line">        &lt;image src=&quot;&#123;&#123;item.iconPath&#125;&#125;&quot;  wx:if=&quot;&#123;&#123;!item.active&#125;&#125;&quot; class=&quot;bottom-tabbar-icon&quot;&gt;&lt;/image&gt;</span><br><span class="line">        &lt;text&gt;&#123;&#123;item.text&#125;&#125;&lt;/text&gt;</span><br><span class="line"></span><br><span class="line">      &lt;/navigator&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/block&gt;</span><br><span class="line"></span><br><span class="line">    &lt;view class=&quot;clear&quot;&gt;&lt;/view&gt;</span><br><span class="line"></span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></p>
-<p>app.wxss<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">.bottom-tabbar-icon &#123;</span><br><span class="line">  width: 23px;</span><br><span class="line">  height: 23px;</span><br><span class="line">  display: block;</span><br><span class="line">  margin: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.clear &#123;</span><br><span class="line">  clear: both;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tab-bar &#123;</span><br><span class="line">  background-color:rgb(243, 243, 243);</span><br><span class="line">  opacity: .8;</span><br><span class="line">  position: fixed;</span><br><span class="line">  width: 100%;</span><br><span class="line">  /* padding: 0px 2%; */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">App(&#123;</span><br><span class="line"> editTabBar: function () &#123;</span><br><span class="line">    var _curPageArr = getCurrentPages();</span><br><span class="line">    var _curPage = _curPageArr[_curPageArr.length - 1];</span><br><span class="line">    var _pagePath = _curPage.__route__;</span><br><span class="line">    if (_pagePath.indexOf(&apos;/&apos;) != 0) &#123;</span><br><span class="line">      _pagePath = &apos;/&apos; + _pagePath;</span><br><span class="line">    &#125;</span><br><span class="line">    var tabBar = this.globalData.tabBar;</span><br><span class="line">    for (var i = 0; i &lt; tabBar.list.length; i++) &#123;</span><br><span class="line">      tabBar.list[i].active = false;</span><br><span class="line">      if (tabBar.list[i].pagePath == _pagePath) &#123;</span><br><span class="line">        tabBar.list[i].active = true;//根据页面地址设置当前页面状态</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    _curPage.setData(&#123;</span><br><span class="line">      tabBar: tabBar</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line"> </span><br><span class="line">  globalData: &#123;</span><br><span class="line"></span><br><span class="line">    tabBar: &#123;</span><br><span class="line">      color: &quot;#a9b7b7&quot;,</span><br><span class="line">      selectedColor: &quot;#ff8124&quot;,</span><br><span class="line">      borderStyle: &quot;white&quot;,</span><br><span class="line">      list: [</span><br><span class="line">        &#123;</span><br><span class="line">          selectedIconPath: &quot;/images/logo.png&quot;,</span><br><span class="line">          iconPath: &quot;/images/logo.png&quot;,</span><br><span class="line">          pagePath: &quot;/pages/index/index&quot;,</span><br><span class="line">          text: &quot;首页&quot;,</span><br><span class="line">          styleClass: &quot;menu-item&quot;,</span><br><span class="line">          selected: false,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          selectedIconPath: &quot;/images/logo.png&quot;,</span><br><span class="line">          iconPath: &quot;/images/logo.png&quot;,</span><br><span class="line">          pagePath: &quot;/pages/mine/index&quot;,</span><br><span class="line">          text: &quot;我的&quot;,</span><br><span class="line">          styleClass: &quot;menu-item&quot;,</span><br><span class="line">          selected: false</span><br><span class="line">        &#125;</span><br><span class="line">      ],</span><br><span class="line">      position: &quot;bottom&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>index.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const app = getApp()</span><br><span class="line"> </span><br><span class="line">Page(&#123;</span><br><span class="line">  onLoad: function (options) &#123;</span><br><span class="line">    app.editTabBar();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>index.wxml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;import src=&quot;../../templates/tabbar.wxml&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;view class=&quot;container&quot;&gt;</span><br><span class="line">  &lt;template is=&quot;tabBar&quot; data=&quot;&#123;&#123;tabBar&#125;&#125;&quot; /&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/04/24/1556103613000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -915,6 +849,73 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/百度地图/">百度地图</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/24/1556103604000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/24/articles/2019/04/24/1556103604000.html/" class="article-date">
+      <time datetime="2019-04-24T11:00:04.000Z" itemprop="datePublished">2019-04-24</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/24/articles/2019/04/24/1556103604000.html/">[springboot] 解决JS处理Long类型丢失精度</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/lyj2018gyq/article/details/83593066" target="_blank">解决JS处理Long类型丢失精度</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Jackson、FastJson</span><br></pre></td></tr></table></figure></p>
+<p>二、后端解决<br>2.1 Jackson<br>Spring MVC中默认是使用了Jackson的。通过重写转换器解决。</p>
+<p>注意添加两个注解。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">import com.fasterxml.jackson.databind.ObjectMapper;</span><br><span class="line">import com.fasterxml.jackson.databind.module.SimpleModule;</span><br><span class="line">import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;</span><br><span class="line">import com.leyou.order.interceptor.LoginInterceptor;</span><br><span class="line">import com.leyou.order.properties.JwtProperties;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.boot.context.properties.EnableConfigurationProperties;</span><br><span class="line">import org.springframework.context.annotation.Bean;</span><br><span class="line">import org.springframework.context.annotation.Configuration;</span><br><span class="line">import org.springframework.http.converter.HttpMessageConverter;</span><br><span class="line">import org.springframework.http.converter.StringHttpMessageConverter;</span><br><span class="line">import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;</span><br><span class="line">import org.springframework.web.servlet.config.annotation.EnableWebMvc;</span><br><span class="line">import org.springframework.web.servlet.config.annotation.InterceptorRegistry;</span><br><span class="line">import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;</span><br><span class="line">import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</span><br><span class="line"> </span><br><span class="line">import java.math.BigInteger;</span><br><span class="line">import java.nio.charset.Charset;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">@Configuration</span><br><span class="line">@EnableWebMvc</span><br><span class="line">public class MvcConfig implements WebMvcConfigurer &#123;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    @Override</span><br><span class="line">    public void configureMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters) &#123;</span><br><span class="line"> </span><br><span class="line">        MappingJackson2HttpMessageConverter jackson2HttpMessageConverter =</span><br><span class="line">                new MappingJackson2HttpMessageConverter();</span><br><span class="line"> </span><br><span class="line">        ObjectMapper objectMapper = new ObjectMapper();</span><br><span class="line">        SimpleModule simpleModule = new SimpleModule();</span><br><span class="line">        simpleModule.addSerializer(BigInteger.class, ToStringSerializer.instance);</span><br><span class="line">        simpleModule.addSerializer(Long.class, ToStringSerializer.instance);</span><br><span class="line">        simpleModule.addSerializer(Long.TYPE, ToStringSerializer.instance);</span><br><span class="line">        objectMapper.registerModule(simpleModule);</span><br><span class="line">        jackson2HttpMessageConverter.setObjectMapper(objectMapper);</span><br><span class="line">        converters.add(jackson2HttpMessageConverter);</span><br><span class="line">        converters.add(new StringHttpMessageConverter(Charset.forName(&quot;UTF-8&quot;)));</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.2 Fastjson<br>在Spring Boot中将Jackson替换为fastjson一般会有两种方式：<br>第一种：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class WebConfig extends WebMvcConfigurerAdapter &#123;</span><br><span class="line"> </span><br><span class="line">    @Bean</span><br><span class="line">    public HttpMessageConverters fastJsonHttpMessageConverter() &#123;</span><br><span class="line">        return new HttpMessageConverters(new FastJsonHttpMessageConverter());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>第二种：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class WebConfig extends WebMvcConfigurerAdapter &#123;</span><br><span class="line"> </span><br><span class="line">    @Override</span><br><span class="line">    public void configureMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters) &#123;</span><br><span class="line">        FastJsonHttpMessageConverter fastConverter = </span><br><span class="line">        new FastJsonHttpMessageConverter();</span><br><span class="line"> </span><br><span class="line">        FastJsonConfig fastJsonConfig = new FastJsonConfig();</span><br><span class="line">        fastJsonConfig.setSerializerFeatures(SerializerFeature.PrettyFormat);</span><br><span class="line">        fastConverter.setFastJsonConfig(fastJsonConfig);</span><br><span class="line">        converters.add(fastConverter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>替换成fastjson之后，对于精度丢失问题，解决方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@EnableWebMvc</span><br><span class="line">@Configuration</span><br><span class="line">public class WebConfig extends WebMvcConfigurerAdapter &#123;</span><br><span class="line"> </span><br><span class="line">    @Override</span><br><span class="line">    public void configureMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters) &#123;</span><br><span class="line">        FastJsonHttpMessageConverter fastConverter = </span><br><span class="line">        new FastJsonHttpMessageConverter();</span><br><span class="line"> </span><br><span class="line">        FastJsonConfig fastJsonConfig = new FastJsonConfig();</span><br><span class="line">        SerializeConfig serializeConfig = SerializeConfig.globalInstance;</span><br><span class="line">        serializeConfig.put(BigInteger.class, ToStringSerializer.instance);</span><br><span class="line">        serializeConfig.put(Long.class, ToStringSerializer.instance);</span><br><span class="line">        serializeConfig.put(Long.TYPE, ToStringSerializer.instance);</span><br><span class="line">        fastJsonConfig.setSerializeConfig(serializeConfig);</span><br><span class="line">        fastConverter.setFastJsonConfig(fastJsonConfig);</span><br><span class="line">        converters.add(fastConverter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
     </div>
 
       

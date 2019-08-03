@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,70 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/04/20/1555759240000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555759240000.html/" class="article-date">
-      <time datetime="2019-04-20T11:20:40.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555759240000.html/">[springboot] 国际化</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.cnblogs.com/GoodHelper/p/6824492.html" target="_blank">玩转spring boot - 国际化</a></p>
-<p>resources/i18n文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resources/i18n/login.properties</span><br><span class="line">resources/i18n/login_en_US.properties</span><br><span class="line">resources/i18n/login_zh_CN.properties</span><br></pre></td></tr></table></figure></p>
-<p>config/LocaleConfig.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Locale;</span><br><span class="line"></span><br><span class="line">import org.springframework.boot.autoconfigure.EnableAutoConfiguration;</span><br><span class="line">import org.springframework.context.annotation.Bean;</span><br><span class="line">import org.springframework.context.annotation.ComponentScan;</span><br><span class="line">import org.springframework.context.annotation.Configuration;</span><br><span class="line">import org.springframework.web.servlet.LocaleResolver;</span><br><span class="line">import org.springframework.web.servlet.config.annotation.InterceptorRegistry;</span><br><span class="line">import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;</span><br><span class="line">import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;</span><br><span class="line">import org.springframework.web.servlet.i18n.SessionLocaleResolver;</span><br><span class="line"></span><br><span class="line">@Configuration</span><br><span class="line">@EnableAutoConfiguration</span><br><span class="line">@ComponentScan</span><br><span class="line">public class LocaleConfig extends WebMvcConfigurerAdapter &#123;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public LocaleResolver localeResolver() &#123;</span><br><span class="line">        SessionLocaleResolver slr = new SessionLocaleResolver();</span><br><span class="line">        // 由默认properties解决，这里代码还是决定不了默认语言</span><br><span class="line">        slr.setDefaultLocale(Locale.CHINA);</span><br><span class="line">        return slr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public LocaleChangeInterceptor localeChangeInterceptor() &#123;</span><br><span class="line">        LocaleChangeInterceptor lci = new LocaleChangeInterceptor();</span><br><span class="line">        // 参数名</span><br><span class="line">        lci.setParamName(&quot;lang&quot;);</span><br><span class="line">        return lci;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void addInterceptors(InterceptorRegistry registry) &#123;</span><br><span class="line">        registry.addInterceptor(localeChangeInterceptor());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;a href=&quot;/?lang=en_US&quot;&gt;English(US)&lt;/a&gt;</span><br><span class="line">    &lt;a href=&quot;/?lang=zh_CN&quot;&gt;简体中文&lt;/a&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/04/20/1555759239000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -874,6 +810,69 @@
           
         <p><a href="http://www.forever24.cn/archives/512" target="_blank">springboot与vue集成</a></p>
 
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555759229000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555759229000.html/" class="article-date">
+      <time datetime="2019-04-20T11:20:29.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555759229000.html/">[springboot] 工程内配置https</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.jianshu.com/p/8d4aba3b972d" target="_blank">SpringBoot配置HTTPS,并实现HTTP访问自动转HTTPS访问</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -alias tomcat -keyalg RSA -keystore ./server.keystore</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 443</span><br><span class="line">  tomcat:</span><br><span class="line">    uri-encoding: UTF-8</span><br><span class="line">  servlet:</span><br><span class="line">    context-path: /</span><br><span class="line">  #https</span><br><span class="line">  ssl:</span><br><span class="line">    enabled: true</span><br><span class="line">    key-store: classpath:file.key</span><br><span class="line">    key-store-password: 你的密码</span><br><span class="line">    key-store-type: JKS</span><br><span class="line"></span><br><span class="line">server.port=443</span><br><span class="line">server.ssl.enabled=true</span><br><span class="line">server.ssl.key-store=server.keystore</span><br><span class="line">server.ssl.key-alias=tomcat</span><br><span class="line">server.ssl.key-store-password=123456</span><br><span class="line">server.ssl.key-store-type=JKS</span><br></pre></td></tr></table></figure>
       
     </div>
     

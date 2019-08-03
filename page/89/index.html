@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -280,69 +280,6 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-/articles/2019/02/25/1551025234000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/02/25/articles/2019/02/25/1551025234000.html/" class="article-date">
-      <time datetime="2019-02-24T16:20:34.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025234000.html/">[springboot] 百度人脸识别</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/search?l=Java&o=desc&q=%E7%99%BE%E5%BA%A6%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB&s=stars&type=Repositories" target="_blank">github|search|百度人脸识别</a></p>
-<p><a href="https://blog.csdn.net/qq_37525899/article/details/85246173" target="_blank">springboot中使用百度人脸识别</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
     <article id="post-/articles/2019/02/25/1551025233000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -550,7 +487,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025230000.html/">[Android] AndroidStudio报错处理集合</a>
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025230000.html/">[小程序] 天气</a>
     </h1>
   
 
@@ -561,50 +498,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://blog.csdn.net/qq_36982160/article/details/80722093" target="_blank">Android Studio解决org.gradle.api.resources.ResourceException: Could not get resource</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">勾选 Enabled embedded Maven repository</span><br></pre></td></tr></table></figure></p>
-<p>版本不兼容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">The versions of the Android Gradle plugin and Gradle are not compatible.</span><br><span class="line">Please do one of the following:&lt;ul&gt;&lt;li&gt;Update your plugin to version 2.4. This will require changes to build.gradle due to API changes.</span><br><span class="line">Open migration guide&lt;/li&gt;&lt;li&gt;Downgrade Gradle to version 3.5.</span><br><span class="line">Fix Gradle wrapper and re-import project&lt;/li&gt;&lt;/ul&gt;</span><br></pre></td></tr></table></figure></p>
-<p>解决版不兼容<br><a href="https://brightereyer.xyz/2018/12/18//articles/2018/12/18/1545145002000.html" target="_blank">gradle对应sdk</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#工程根目录 -&gt; gradle目录 -&gt; wrapper -&gt; gradle-wrapper.properties</span><br><span class="line">distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip</span><br><span class="line"></span><br><span class="line">#build.gradle</span><br><span class="line">buildscript&#123;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">       classpath &apos;com.android.tools.build:gradle:3.0.1&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://services.gradle.org/distributions/gradle-3.5-all.zip" target="_blank">gradle-3.5-all.zip</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%USERPROFILE%\.gradle\wrapper\dists\gradle-3.5-all</span><br></pre></td></tr></table></figure></p>
-<p>aapt.exe finished with non-zero exit value 1<br><a href="https://blog.csdn.net/zhangfengwu2014/article/details/79315548" target="_blank">原因分析</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">1. 对图片的审查严格</span><br><span class="line">解决思路：把jpg格式的图片全部替换为png格式的图片 </span><br><span class="line">2. 添加的包重复</span><br><span class="line">解决思路：把build.gradle添加的重复的包去掉 </span><br><span class="line">3. 可能是缓存导致的</span><br><span class="line">解决思路：重新创建一下工程。 </span><br><span class="line">4. Android Studio 问题</span><br><span class="line">解决思路：重启后打开</span><br><span class="line">5. Clean、Rebuild 缓存问题</span><br><span class="line">解决思路：gradle 同步一下</span><br><span class="line">6. SDK 版本问题</span><br><span class="line">解决思路：百度一下</span><br><span class="line">7. 项目中各种包之间版本互斥问题</span><br><span class="line">解决思路：百度一下</span><br><span class="line"></span><br><span class="line">像&lt;TextInputLayout&gt;这样的标签属于android.support.design下面，</span><br><span class="line">需要在 build.gradle的dependencies里添加support:design</span><br><span class="line">例</span><br><span class="line">dependencies&#123;</span><br><span class="line">    compile &apos;com.android.support:design:26.0.0-alpha1&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/qq_24118527/article/details/83586161" taret="_blank" target="_blank" rel="noopener">分析解决</a><br>1、<a href="http://www.cnblogs.com/weizhxa/p/9950696.html" target="_blank">查看错误定位命令</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#首先要关闭AAPT2</span><br><span class="line">#在gradle.properties中添加下面代码,重新编译下</span><br><span class="line">android.enableAapt2=false</span><br><span class="line"></span><br><span class="line">#gradlew processDebugResources --debug</span><br><span class="line">gradlew compileDebugSources --stacktrace -info</span><br><span class="line"></span><br><span class="line">#注意第一个 [ERROR]</span><br><span class="line"></span><br><span class="line">00:26:13.830 [DEBUG] [org.gradle.process.internal.DefaultExecHandle] Changing state to: FAILED</span><br><span class="line">00:26:13.830 [DEBUG] [org.gradle.process.internal.DefaultExecHandle] Process &apos;command &apos;E:\Android\Sdk\build-tools\22.0.1\aapt.exe&apos;&apos; finished with exit value 1 (state: FAILED)</span><br><span class="line">00:26:13.853 [ERROR] [org.gradle.api.Project] G:\workspaces\android\BluetoothChat\app\build\intermediates\res\merged\debug\values\values.xml:366: AAPT: Attribute &quot;layout_behavior&quot; has already been defined</span><br><span class="line"></span><br><span class="line">00:26:13.854 [ERROR] [org.gradle.api.Project] G:\workspaces\android\BluetoothChat\app\build\intermediates\res\merged\debug\values\values.xml:366: AAPT: Attribute &quot;layout_anchor&quot; has already been defined</span><br></pre></td></tr></table></figure></p>
-<p>2、检查下 targetSdkVersion 和引入的 support 包版本是否一致<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile &apos;com.android.support:appcompat-v7:23.+&apos;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/r8hzgemq/article/details/51239643" target="_blank">AndroidStudio十佳常见编译或运行错误集锦</a></p>
-<p><a href="https://blog.csdn.net/u012336923/article/details/48289485" target="_blank">android中No resource found that matches android:TextAppearance.Material.Widget.Button.Inverse问题</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#将23</span><br><span class="line">compile &apos;com.android.support:appcompat-v7:23.0.1&apos;</span><br><span class="line">#降为22</span><br><span class="line">compile &apos;com.android.support:appcompat-v7:22.2.1&apos;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/waa_studio/article/details/78732460" target="_blank">Android Studio 项目使用support v7时的各种问题</a><br>1、修改maven仓库url<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        jcenter()</span><br><span class="line">        mavenCentral()</span><br><span class="line">        maven &#123; url:&apos;https://jitpack.io&apos; &#125;</span><br><span class="line">        maven &#123; url:&apos;https://maven.google.com&apos; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:1.5.0&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>2、打开SDK Manager，勾选Android Support Repository</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Android SDK -&gt; SDK Tools -&gt; Support Repository -&gt; Android Support Repository -&gt; Apply</span><br></pre></td></tr></table></figure>
-<p><a href="https://blog.csdn.net/mhl18820672087/article/details/78385361" target="_blank">Failed to resolve:com.android.support:appcompat-v7:报错处理</a></p>
-<blockquote>
-<p>1、compileSdkVersion 21成功版本</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">build.gradle</span><br><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        jcenter()</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:2.2.3&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">build.gradle</span><br><span class="line">apply plugin: &apos;com.android.application&apos;</span><br><span class="line">android &#123;</span><br><span class="line">    compileSdkVersion 21</span><br><span class="line">    buildToolsVersion &apos;23.0.0&apos;</span><br><span class="line"></span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        applicationId &quot;com.code.demo&quot;</span><br><span class="line">        minSdkVersion 19</span><br><span class="line">        targetSdkVersion 22</span><br><span class="line">        versionCode 1</span><br><span class="line">        versionName &quot;1.0&quot;</span><br><span class="line">    &#125;</span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            minifyEnabled false</span><br><span class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line">    compile fileTree(dir: &apos;libs&apos;, include: [&apos;*.jar&apos;])</span><br><span class="line">    testCompile &apos;junit:junit:4.12&apos;</span><br><span class="line">    compile &apos;com.android.support:appcompat-v7:22.2.1&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>2、compileSdkVersion 26成功版本</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    compileSdkVersion 26</span><br><span class="line">    buildToolsVersion &quot;27.0.0&quot;</span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        applicationId &quot;com.code.demo&quot;</span><br><span class="line">        minSdkVersion 19</span><br><span class="line">        targetSdkVersion 26</span><br><span class="line">        versionCode 1</span><br><span class="line">        versionName &quot;1.0&quot;</span><br><span class="line">        testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;</span><br><span class="line">    &#125;</span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            minifyEnabled false</span><br><span class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">dependencies &#123;</span><br><span class="line">    compile fileTree(dir: &apos;libs&apos;, include: [&apos;*.jar&apos;])</span><br><span class="line">    androidTestCompile(&apos;com.android.support.test.espresso:espresso-core:2.2.2&apos;, &#123;</span><br><span class="line">        exclude group: &apos;com.android.support&apos;, module: &apos;support-annotations&apos;</span><br><span class="line">    &#125;)</span><br><span class="line">    compile &apos;com.android.support:appcompat-v7:26+&apos;</span><br><span class="line">    testCompile &apos;junit:junit:4.12&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Android Studio报 Cannot find System Java Compiler解决方法</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">快捷键 Ctrl + Alt +Shift + S</span><br><span class="line">#或 File -&gt; Project Structrue... -&gt; SDK Location -&gt; JDK location</span><br><span class="line">默认是使用embedded JDK，将 Use embedded JDK 前面勾去掉，指定一个JDK地址</span><br></pre></td></tr></table></figure>
-<p><a href="https://blog.csdn.net/zxccxzzxz/article/details/82986956" target="_blank">No resource identifier found for attribute ‘appComponentFactory’ in package ‘android’</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#添加以下代码到 app/build.gradle 并且升级 SDK 版本号:</span><br><span class="line">android &#123;</span><br><span class="line">    compileSdkVersion 28</span><br><span class="line">    buildToolsVersion &apos;28.0.3&apos;</span><br><span class="line">	defaultConfig &#123;</span><br><span class="line">        targetSdkVersion 28</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">configurations.all &#123;</span><br><span class="line">    resolutionStrategy.force &apos;com.android.support:support-v4:26.1.0&apos;</span><br><span class="line">    resolutionStrategy.force &apos;com.android.support:appcompat-v7:26.1.0&apos;</span><br><span class="line">    resolutionStrategy.force &apos;com.android.support:recyclerview-v7:26.1.0&apos;</span><br><span class="line">    resolutionStrategy.force &apos;com.android.support:cardview-v7:26.1.0&apos;</span><br><span class="line">    resolutionStrategy.force &apos;com.android.support:design:26.1.0&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#修改 AndroidManifest.xml 中的 Application 代码块 :</span><br><span class="line">&lt;application</span><br><span class="line">        android:name=&quot;.HelloApplication&quot;</span><br><span class="line">        &lt;!-- 关键两行代码 --&gt;</span><br><span class="line">        android:appComponentFactory=&quot;任意字符&quot;</span><br><span class="line">        tools:replace=&quot;android:appComponentFactory&quot;</span><br><span class="line">        android:icon=&quot;@drawable/icon&quot;</span><br><span class="line">        android:label=&quot;@string/app_name&quot;</span><br><span class="line">        android:largeHeap=&quot;true&quot;</span><br><span class="line">        android:theme=&quot;@style/Theme.AppCompat.Light.NoActionBar&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/application&gt;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>启动Genymotion模拟器报错</p>
-</blockquote>
-<p><a href="https://blog.csdn.net/qq_34476727/article/details/74910379" target="_blank">Device supports x86,but APK only supports armeabi-v7a</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app\build.gradle</span><br><span class="line">android &#123;</span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        ndk &#123;</span><br><span class="line">            //设置支持的SO库架构</span><br><span class="line">            abiFilters &apos;armeabi&apos;,&apos;armeabi-v7a&apos;,&apos;armeabi-v8a&apos;,&quot;x86&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.jianshu.com/p/a781ad09b092" target="_blank">INSTALL_FAILED_NO_MATCHING_ABIS解决办法</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app\build.gradle文件中添加以下代码:</span><br><span class="line">android &#123;</span><br><span class="line">    splits &#123;</span><br><span class="line">        abi &#123;</span><br><span class="line">            enable true</span><br><span class="line">            reset()</span><br><span class="line">            include &apos;x86&apos;, &apos;armeabi-v7a&apos;,&apos;x86_64&apos;</span><br><span class="line">            universalApk true</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>The minSdk version should not be declared in the android manifest file.</p>
-</blockquote>
-<p>解决方案<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#Androidstudio3.0 以后不能在AndroidManifest.xml设置最小版本sdk,必须在 gradle里设置</span><br><span class="line">AndroidManifest.xml</span><br><span class="line">#删除</span><br><span class="line">&lt;uses-sdk android:targetSdkVersion=&quot;&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>Unsupported method: BaseConfig.getApplicationIdSuffix()</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#将 build.gradle 中的</span><br><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        mavenCentral()</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:1.1.1&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#改成：</span><br><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        mavenCentral()</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:2.2.3&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Failed to resolve: com.afollestad:material-dialogs:0.7.3.1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#访问一下链接，列出了现有的material-dialogs，选择存在的版本</span><br><span class="line">https://jcenter.bintray.com/com/afollestad/material-dialogs/core/</span><br><span class="line"></span><br><span class="line">compile &apos;com.afollestad.material-dialogs:core:0.9.1.0&apos;</span><br><span class="line">compile &apos;com.afollestad.material-dialogs:commons:0.9.1.0&apos;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
+        <p><a href="https://github.com/zhangliwen1101/WeatherWidget" target="_blank">WeatherWidget</a></p>
 
       
     </div>
@@ -615,7 +509,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
     </div>
 
       
@@ -717,7 +611,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025230000.html/">[小程序] 天气</a>
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025230000.html/">[Android] AndroidStudio报错处理集合</a>
     </h1>
   
 
@@ -728,7 +622,50 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://github.com/zhangliwen1101/WeatherWidget" target="_blank">WeatherWidget</a></p>
+        <p><a href="https://blog.csdn.net/qq_36982160/article/details/80722093" target="_blank">Android Studio解决org.gradle.api.resources.ResourceException: Could not get resource</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">勾选 Enabled embedded Maven repository</span><br></pre></td></tr></table></figure></p>
+<p>版本不兼容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">The versions of the Android Gradle plugin and Gradle are not compatible.</span><br><span class="line">Please do one of the following:&lt;ul&gt;&lt;li&gt;Update your plugin to version 2.4. This will require changes to build.gradle due to API changes.</span><br><span class="line">Open migration guide&lt;/li&gt;&lt;li&gt;Downgrade Gradle to version 3.5.</span><br><span class="line">Fix Gradle wrapper and re-import project&lt;/li&gt;&lt;/ul&gt;</span><br></pre></td></tr></table></figure></p>
+<p>解决版不兼容<br><a href="https://brightereyer.xyz/2018/12/18//articles/2018/12/18/1545145002000.html" target="_blank">gradle对应sdk</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#工程根目录 -&gt; gradle目录 -&gt; wrapper -&gt; gradle-wrapper.properties</span><br><span class="line">distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip</span><br><span class="line"></span><br><span class="line">#build.gradle</span><br><span class="line">buildscript&#123;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">       classpath &apos;com.android.tools.build:gradle:3.0.1&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://services.gradle.org/distributions/gradle-3.5-all.zip" target="_blank">gradle-3.5-all.zip</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%USERPROFILE%\.gradle\wrapper\dists\gradle-3.5-all</span><br></pre></td></tr></table></figure></p>
+<p>aapt.exe finished with non-zero exit value 1<br><a href="https://blog.csdn.net/zhangfengwu2014/article/details/79315548" target="_blank">原因分析</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">1. 对图片的审查严格</span><br><span class="line">解决思路：把jpg格式的图片全部替换为png格式的图片 </span><br><span class="line">2. 添加的包重复</span><br><span class="line">解决思路：把build.gradle添加的重复的包去掉 </span><br><span class="line">3. 可能是缓存导致的</span><br><span class="line">解决思路：重新创建一下工程。 </span><br><span class="line">4. Android Studio 问题</span><br><span class="line">解决思路：重启后打开</span><br><span class="line">5. Clean、Rebuild 缓存问题</span><br><span class="line">解决思路：gradle 同步一下</span><br><span class="line">6. SDK 版本问题</span><br><span class="line">解决思路：百度一下</span><br><span class="line">7. 项目中各种包之间版本互斥问题</span><br><span class="line">解决思路：百度一下</span><br><span class="line"></span><br><span class="line">像&lt;TextInputLayout&gt;这样的标签属于android.support.design下面，</span><br><span class="line">需要在 build.gradle的dependencies里添加support:design</span><br><span class="line">例</span><br><span class="line">dependencies&#123;</span><br><span class="line">    compile &apos;com.android.support:design:26.0.0-alpha1&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/qq_24118527/article/details/83586161" taret="_blank" target="_blank" rel="noopener">分析解决</a><br>1、<a href="http://www.cnblogs.com/weizhxa/p/9950696.html" target="_blank">查看错误定位命令</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#首先要关闭AAPT2</span><br><span class="line">#在gradle.properties中添加下面代码,重新编译下</span><br><span class="line">android.enableAapt2=false</span><br><span class="line"></span><br><span class="line">#gradlew processDebugResources --debug</span><br><span class="line">gradlew compileDebugSources --stacktrace -info</span><br><span class="line"></span><br><span class="line">#注意第一个 [ERROR]</span><br><span class="line"></span><br><span class="line">00:26:13.830 [DEBUG] [org.gradle.process.internal.DefaultExecHandle] Changing state to: FAILED</span><br><span class="line">00:26:13.830 [DEBUG] [org.gradle.process.internal.DefaultExecHandle] Process &apos;command &apos;E:\Android\Sdk\build-tools\22.0.1\aapt.exe&apos;&apos; finished with exit value 1 (state: FAILED)</span><br><span class="line">00:26:13.853 [ERROR] [org.gradle.api.Project] G:\workspaces\android\BluetoothChat\app\build\intermediates\res\merged\debug\values\values.xml:366: AAPT: Attribute &quot;layout_behavior&quot; has already been defined</span><br><span class="line"></span><br><span class="line">00:26:13.854 [ERROR] [org.gradle.api.Project] G:\workspaces\android\BluetoothChat\app\build\intermediates\res\merged\debug\values\values.xml:366: AAPT: Attribute &quot;layout_anchor&quot; has already been defined</span><br></pre></td></tr></table></figure></p>
+<p>2、检查下 targetSdkVersion 和引入的 support 包版本是否一致<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile &apos;com.android.support:appcompat-v7:23.+&apos;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/r8hzgemq/article/details/51239643" target="_blank">AndroidStudio十佳常见编译或运行错误集锦</a></p>
+<p><a href="https://blog.csdn.net/u012336923/article/details/48289485" target="_blank">android中No resource found that matches android:TextAppearance.Material.Widget.Button.Inverse问题</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#将23</span><br><span class="line">compile &apos;com.android.support:appcompat-v7:23.0.1&apos;</span><br><span class="line">#降为22</span><br><span class="line">compile &apos;com.android.support:appcompat-v7:22.2.1&apos;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/waa_studio/article/details/78732460" target="_blank">Android Studio 项目使用support v7时的各种问题</a><br>1、修改maven仓库url<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        jcenter()</span><br><span class="line">        mavenCentral()</span><br><span class="line">        maven &#123; url:&apos;https://jitpack.io&apos; &#125;</span><br><span class="line">        maven &#123; url:&apos;https://maven.google.com&apos; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:1.5.0&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>2、打开SDK Manager，勾选Android Support Repository</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Android SDK -&gt; SDK Tools -&gt; Support Repository -&gt; Android Support Repository -&gt; Apply</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/mhl18820672087/article/details/78385361" target="_blank">Failed to resolve:com.android.support:appcompat-v7:报错处理</a></p>
+<blockquote>
+<p>1、compileSdkVersion 21成功版本</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">build.gradle</span><br><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        jcenter()</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:2.2.3&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">build.gradle</span><br><span class="line">apply plugin: &apos;com.android.application&apos;</span><br><span class="line">android &#123;</span><br><span class="line">    compileSdkVersion 21</span><br><span class="line">    buildToolsVersion &apos;23.0.0&apos;</span><br><span class="line"></span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        applicationId &quot;com.code.demo&quot;</span><br><span class="line">        minSdkVersion 19</span><br><span class="line">        targetSdkVersion 22</span><br><span class="line">        versionCode 1</span><br><span class="line">        versionName &quot;1.0&quot;</span><br><span class="line">    &#125;</span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            minifyEnabled false</span><br><span class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line">    compile fileTree(dir: &apos;libs&apos;, include: [&apos;*.jar&apos;])</span><br><span class="line">    testCompile &apos;junit:junit:4.12&apos;</span><br><span class="line">    compile &apos;com.android.support:appcompat-v7:22.2.1&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2、compileSdkVersion 26成功版本</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    compileSdkVersion 26</span><br><span class="line">    buildToolsVersion &quot;27.0.0&quot;</span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        applicationId &quot;com.code.demo&quot;</span><br><span class="line">        minSdkVersion 19</span><br><span class="line">        targetSdkVersion 26</span><br><span class="line">        versionCode 1</span><br><span class="line">        versionName &quot;1.0&quot;</span><br><span class="line">        testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;</span><br><span class="line">    &#125;</span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            minifyEnabled false</span><br><span class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">dependencies &#123;</span><br><span class="line">    compile fileTree(dir: &apos;libs&apos;, include: [&apos;*.jar&apos;])</span><br><span class="line">    androidTestCompile(&apos;com.android.support.test.espresso:espresso-core:2.2.2&apos;, &#123;</span><br><span class="line">        exclude group: &apos;com.android.support&apos;, module: &apos;support-annotations&apos;</span><br><span class="line">    &#125;)</span><br><span class="line">    compile &apos;com.android.support:appcompat-v7:26+&apos;</span><br><span class="line">    testCompile &apos;junit:junit:4.12&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Android Studio报 Cannot find System Java Compiler解决方法</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">快捷键 Ctrl + Alt +Shift + S</span><br><span class="line">#或 File -&gt; Project Structrue... -&gt; SDK Location -&gt; JDK location</span><br><span class="line">默认是使用embedded JDK，将 Use embedded JDK 前面勾去掉，指定一个JDK地址</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/zxccxzzxz/article/details/82986956" target="_blank">No resource identifier found for attribute ‘appComponentFactory’ in package ‘android’</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#添加以下代码到 app/build.gradle 并且升级 SDK 版本号:</span><br><span class="line">android &#123;</span><br><span class="line">    compileSdkVersion 28</span><br><span class="line">    buildToolsVersion &apos;28.0.3&apos;</span><br><span class="line">	defaultConfig &#123;</span><br><span class="line">        targetSdkVersion 28</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">configurations.all &#123;</span><br><span class="line">    resolutionStrategy.force &apos;com.android.support:support-v4:26.1.0&apos;</span><br><span class="line">    resolutionStrategy.force &apos;com.android.support:appcompat-v7:26.1.0&apos;</span><br><span class="line">    resolutionStrategy.force &apos;com.android.support:recyclerview-v7:26.1.0&apos;</span><br><span class="line">    resolutionStrategy.force &apos;com.android.support:cardview-v7:26.1.0&apos;</span><br><span class="line">    resolutionStrategy.force &apos;com.android.support:design:26.1.0&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#修改 AndroidManifest.xml 中的 Application 代码块 :</span><br><span class="line">&lt;application</span><br><span class="line">        android:name=&quot;.HelloApplication&quot;</span><br><span class="line">        &lt;!-- 关键两行代码 --&gt;</span><br><span class="line">        android:appComponentFactory=&quot;任意字符&quot;</span><br><span class="line">        tools:replace=&quot;android:appComponentFactory&quot;</span><br><span class="line">        android:icon=&quot;@drawable/icon&quot;</span><br><span class="line">        android:label=&quot;@string/app_name&quot;</span><br><span class="line">        android:largeHeap=&quot;true&quot;</span><br><span class="line">        android:theme=&quot;@style/Theme.AppCompat.Light.NoActionBar&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/application&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>启动Genymotion模拟器报错</p>
+</blockquote>
+<p><a href="https://blog.csdn.net/qq_34476727/article/details/74910379" target="_blank">Device supports x86,but APK only supports armeabi-v7a</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app\build.gradle</span><br><span class="line">android &#123;</span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        ndk &#123;</span><br><span class="line">            //设置支持的SO库架构</span><br><span class="line">            abiFilters &apos;armeabi&apos;,&apos;armeabi-v7a&apos;,&apos;armeabi-v8a&apos;,&quot;x86&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.jianshu.com/p/a781ad09b092" target="_blank">INSTALL_FAILED_NO_MATCHING_ABIS解决办法</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app\build.gradle文件中添加以下代码:</span><br><span class="line">android &#123;</span><br><span class="line">    splits &#123;</span><br><span class="line">        abi &#123;</span><br><span class="line">            enable true</span><br><span class="line">            reset()</span><br><span class="line">            include &apos;x86&apos;, &apos;armeabi-v7a&apos;,&apos;x86_64&apos;</span><br><span class="line">            universalApk true</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>The minSdk version should not be declared in the android manifest file.</p>
+</blockquote>
+<p>解决方案<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#Androidstudio3.0 以后不能在AndroidManifest.xml设置最小版本sdk,必须在 gradle里设置</span><br><span class="line">AndroidManifest.xml</span><br><span class="line">#删除</span><br><span class="line">&lt;uses-sdk android:targetSdkVersion=&quot;&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>Unsupported method: BaseConfig.getApplicationIdSuffix()</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#将 build.gradle 中的</span><br><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        mavenCentral()</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:1.1.1&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#改成：</span><br><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        mavenCentral()</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:2.2.3&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Failed to resolve: com.afollestad:material-dialogs:0.7.3.1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#访问一下链接，列出了现有的material-dialogs，选择存在的版本</span><br><span class="line">https://jcenter.bintray.com/com/afollestad/material-dialogs/core/</span><br><span class="line"></span><br><span class="line">compile &apos;com.afollestad.material-dialogs:core:0.9.1.0&apos;</span><br><span class="line">compile &apos;com.afollestad.material-dialogs:commons:0.9.1.0&apos;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
 
       
     </div>
@@ -739,7 +676,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
     </div>
 
       
@@ -926,6 +863,68 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/02/25/1551025227000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/02/25/articles/2019/02/25/1551025227000.html/" class="article-date">
+      <time datetime="2019-02-24T16:20:27.000Z" itemprop="datePublished">2019-02-25</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/02/25/articles/2019/02/25/1551025227000.html/">[微信] 微信公众号开发</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://wiki.jikexueyuan.com/project/java-wechat/16.html" target="_blank">极客学院|微信公众号开发</a><br><a href="http://www.cuiyongzhi.com/tags-1.html" target="_blank">blog|微信公众号开发</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信/">微信</a></li></ul>
     </div>
 
       

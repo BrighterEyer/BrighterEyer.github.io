@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,70 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/06/07/1559868901000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/06/07/articles/2019/06/07/1559868901000.html/" class="article-date">
-      <time datetime="2019-06-07T00:55:01.000Z" itemprop="datePublished">2019-06-07</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/06/07/articles/2019/06/07/1559868901000.html/">[jenkins] docker+svn+php</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="" target="_blank"></a><br><a href="https://blog.csdn.net/resilient/article/details/88039989" target="_blank">docker+jenkins 构建 PHP持续集成环境</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker pull voduytuan/jenkins-php-docker</span><br><span class="line">cd /var</span><br><span class="line">mkdir -p /d/docker/jenkins-php-docker</span><br><span class="line">cd /d/docker/jenkins-php-docker</span><br><span class="line">yum install -y</span><br><span class="line">git clone https://github.com/naxhh/jenkins-php-docker</span><br><span class="line"></span><br><span class="line">docker run -d -P -v /d/docker/jenkins-php-docker:/var/jenkins_home:rw voduytuan/jenkins-php-docker</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.cnblogs.com/xiangsikai/p/10057087.html" target="_blank">Docker+Jenkins+Maven+SVN搭建持续集成环境</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/u014477164/article/details/76686286" target="_blank">jenkins 实现PHP持续集成部署</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo </span><br><span class="line">rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key </span><br><span class="line">yum install -y jenkins \</span><br><span class="line">java \</span><br><span class="line">java-1.8.0-openjdk \</span><br><span class="line">php \</span><br><span class="line">php-devel \</span><br><span class="line">php-pear \</span><br><span class="line">re2c \</span><br><span class="line">php-pear-phing</span><br><span class="line"></span><br><span class="line">service jenkins start</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa</span><br><span class="line">scp ~/.ssh/ras.pub root@B:/root/.ssh/authorized_keys</span><br><span class="line">ssh root@B</span><br><span class="line"></span><br><span class="line">#配置Publish Over SSH Plugin</span><br><span class="line">Jenkins SSH Key：生成rsa的时候设置的ssh key，若没有设置则留空</span><br><span class="line">Key：填上A服务器私钥的内容。默认路径 ~/.ssh/id_rsa </span><br><span class="line">Hosename:填上B服务器的IP</span><br><span class="line">username:填上B服务器的帐号</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd /var/lib/jenkins/workspace/git</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jenkins/">jenkins</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/06/07/1559868900000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -883,6 +819,70 @@
 <p>2、配置module<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">    rules: [&#123;</span><br><span class="line">      test: /\.css$/,</span><br><span class="line">      use: [&#123;</span><br><span class="line">          loader: &quot;style-loader&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          loader: &quot;css-loader&quot;</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure></p>
 <p>3、验证<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">先建立./dist/index.html,引入./dist/entry.js样式</span><br><span class="line">再建立./src/index.css,引入./src/entry.js中</span><br><span class="line">运行 npm run start</span><br></pre></td></tr></table></figure></p>
 <p><a href="https://me.csdn.net/fmm1993" target="_blank">webpack4</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/06/03/1559570798000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/06/03/articles/2019/06/03/1559570798000.html/" class="article-date">
+      <time datetime="2019-06-03T14:06:38.000Z" itemprop="datePublished">2019-06-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/06/03/articles/2019/06/03/1559570798000.html/">[webpack] 小程序</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/mx_csdn/article/details/85709999" target="_blank">webpack工程化小程序开发</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">webpack编译打包构建小程序</span><br><span class="line">webpack工程化小程序开发</span><br><span class="line">1、新建项目文件（如：wx-mini）</span><br><span class="line">2、创建package.json文件</span><br><span class="line">3、安装项目依赖包（或插件包）</span><br><span class="line">4、项目目录构建</span><br><span class="line">5、在项目个目录下，新建 .babelrc 文件，用来将es6转化为es5</span><br><span class="line">6、执行 npm run dev 或 yarn dev (如果有安装yarn)，生成dist文件，将整个dist文件放入微信开发者工具即可</span><br><span class="line">7、执行npm run build 或 yarn build (如果有安装yarn),打包正式文件，之后将整个dist文件上传到个人微信公众平台即可</span><br><span class="line">8、如果需要将项目推送到远程git，可以添加 .gitignore 文件，用来过滤不需提交的文件，如：</span><br><span class="line">9、eslint代码规范检测</span><br><span class="line">10、webpack自带一个插件uglifyjs-webpack-plugin来压缩js</span><br><span class="line">11、打包时，去掉js中的console、debugger等</span><br><span class="line">12、压缩wxml、wxss、json文件</span><br></pre></td></tr></table></figure></p>
+<p>3、安装项目依赖包（或插件包）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#安装babel，babel的作用是将es6的语法编译成浏览器认识的语法es5</span><br><span class="line">npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-stage-0 babel-eslint babel-plugin-lodash babel-plugin-transform-runtime </span><br><span class="line"></span><br><span class="line">#用于打包文件</span><br><span class="line">npm install --save-dev file-loader</span><br><span class="line"></span><br><span class="line">#用于编译sass</span><br><span class="line">npm install --save-dev sass-loader node-sass</span><br><span class="line"></span><br><span class="line">#用于webpack.config.babel.js配置&lt;注意：webpack版本为3.X.X，4.X.X会有一定的问题，如果使用4.X.X，需要对webpack.config.babel.js配置文件做一定的修改&gt;</span><br><span class="line">npm install webpack wxapp-webpack-plugin wxml-loader xml-loader copy-webpack-plugin cross-env</span><br><span class="line"></span><br><span class="line">#一个一致性、模块化、高性能的 JavaScript 实用工具库</span><br><span class="line">npm install --save lodash</span><br></pre></td></tr></table></figure></p>
+<p>webpack工程化小程序开发<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#使用 webpack, babel, scss 开发的微信小程序项目脚手架</span><br><span class="line">https://github.com/webpersonalserver/wx-mini</span><br></pre></td></tr></table></figure></p>
 
       
     </div>

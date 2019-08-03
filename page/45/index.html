@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,72 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/06/03/1559566669000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/06/03/articles/2019/06/03/1559566669000.html/" class="article-date">
-      <time datetime="2019-06-03T12:57:49.000Z" itemprop="datePublished">2019-06-03</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/06/03/articles/2019/06/03/1559566669000.html/">[小程序] 云函数demos</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://www.jianshu.com/p/aae02ff2fc5a" target="_blank">微信云开发之-云函数、云存储、云数据库、云用户管理</a><br><a href="https://github.com/wechat-miniprogram/miniprogram-demo/tree/master/cloudfunctions" target="_blank">github | cloudfunctions</a><br><a href="https://blog.csdn.net/hunhun1122/article/details/82861973" target="_blank">小程序云开发demo详解</a></p>
-<p>github 之 lxljl<br><a href="https://www.jianshu.com/u/42d09b11b311" target="_blank">简书 - 极品新</a><br><a href="https://github.com/lxljl/wx-tool" target="_blank">微信小程序 云开发 云函数模板例子</a><br><a href="https://github.com/lxljl/wx-tool" target="_blank">微信小程序工具类</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">showToast --- 显示消息提示框</span><br><span class="line">showModal --- 显示模态对话框</span><br><span class="line">requestPayment --- 微信支付</span><br><span class="line">cloudGetPay --- 云函数微信支付</span><br><span class="line">localEncoding --- 读取本地文件内容</span><br><span class="line">arrayEqual --- 判断两个数组是否相等</span><br><span class="line">isEmptyObject --- 判断obj是否为空</span><br><span class="line">randomColor --- 随机生成颜色</span><br><span class="line">randomNum --- 生成指定范围随机数</span><br><span class="line">bankSpace --- 银行卡每四位+空格</span><br><span class="line">getOptionsSync --- 获取小程序启动时的参数</span><br><span class="line">trim --- 去除两端空格</span><br><span class="line">isNew --- 检测是否是新版本</span><br><span class="line">isNum --- 检测数字</span><br><span class="line">isPhone --- 检测该手机号是否正确</span><br><span class="line">isMail --- 检测该邮箱是否正确</span><br><span class="line">isPlate --- 检测该车牌号是否正确</span><br><span class="line">isIdCard --- 判断是否为身份证</span><br><span class="line">validateURL --- 合法uri</span><br><span class="line">validateLowerCase --- 是否小写字母</span><br><span class="line">validateUpperCase --- 是否大写字母</span><br><span class="line">validatAlphabets --- 是否大小写字母</span><br><span class="line">digitUppercase --- 现金额转大写</span><br><span class="line">decimalAdd --- 浮点数相加</span><br><span class="line">getDistance --- 计算两点的距离</span><br><span class="line">uuid --- 返回一个v4兼容的UUID</span><br><span class="line">getUsernameColor --- 通过哈希函数获取用户名的颜色</span><br><span class="line">isLength --- 检测该字符串是否为空</span><br><span class="line">formatSeconds --- 把秒转为 时分秒</span><br><span class="line">parseTime --- 格式化时间</span><br><span class="line">formatTime --- 返回目标时间距离当前时间时长</span><br><span class="line">stringfyQueryString --- 对象序列化</span><br><span class="line">isBack --- 该页面是否可以返回上一页</span><br><span class="line">successBack --- 成功后返回上一页</span><br><span class="line">getQueryString --- 获取url参数</span><br><span class="line">bMapTransQQMap --- 百度地图经纬度转腾讯地图经纬度</span><br><span class="line">qqMapTransBMap --- 腾讯地图经纬度转百度地图经纬度</span><br><span class="line">cloudFn --- 云函数调用</span><br><span class="line">cloudDataBase --- 云数据库调用</span><br><span class="line">makePy --- 提取中文首字母</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/lxljl/cloudFns" target="_blank"> 微信小程序云函数合集 | cloudFns</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">login --- 微信登录</span><br><span class="line">getUserInfo --- 获取用户信息</span><br><span class="line">setUserInfo --- 设置用户信息</span><br><span class="line">decode --- 微信用户信息解密</span><br><span class="line">sendSms --- 发送手机短信验证码</span><br><span class="line">getPay --- 微信支付模板</span><br><span class="line">getWXACodeUnlimit --- 微信一维码</span><br><span class="line">setToken --- 微信access_token</span><br><span class="line">sendMsg --- 发送模板消息</span><br><span class="line">getQRcode --- 生成二维码</span><br><span class="line">translation --- 百度翻译</span><br><span class="line">getlist --- 查询列表模板</span><br><span class="line">setPix --- 上传图片并写入数据模板</span><br><span class="line">getBaiKeCrawler --- 百度百科植物类</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/TencentCloudBase/tcb-router" target="_blank">小程序·云开发 云函数类 koa 路由工具</a><br><a href="https://www.jianshu.com/p/52739d7914c0" target="_blank">【一】10分钟精通微信小程序 | 获取用户openid</a></p>
-<p><a href="https://www.jianshu.com/p/f95adbba3b65" target="_blank">第二章 “我要点爆”微信小程序点爆页面的实现与云函数和云存储的应用</a><br><a href="https://github.com/xiedong2016/dbx" target="_blank">小程序 我要点爆</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/06/03/1559566668000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -886,6 +820,70 @@
       
           
         <p><a href="" target="_blank"></a><br><a href="https://blog.csdn.net/hxfghgh/article/details/82830700" target="_blank">使用module和class封装和提取一个对象</a><br><a href="https://blog.csdn.net/mygirlgod/article/details/81055863" target="_blank">小程序page的js中调用新的js类对象</a><br><a href="https://www.jianshu.com/p/9d104e169002" target="_blank">小程序js模块化</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/06/03/1559566658000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/06/03/articles/2019/06/03/1559566658000.html/" class="article-date">
+      <time datetime="2019-06-03T12:57:38.000Z" itemprop="datePublished">2019-06-03</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/06/03/articles/2019/06/03/1559566658000.html/">[小程序] 自定义组件Component的使用</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html" target="_blank">微信官方文档 - Component构造器</a></p>
+<p><a href="https://github.com/fuxingkai/frankui-weapp" target="_blank">github | frankui-weapp | 自定义组件</a><br><a href="https://github.com/ChanceYu/weapp" target="_blank">github | weapp | 自定义组件</a><br><a href="https://github.com/phonycode/wuss-weapp" target="_blank">github | wuss-weapp | 一款高质量，组件齐全，高自定义的微信小程序 UI 组件库</a></p>
+<p><a href="https://github.com/search?l=JavaScript&q=%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6&type=Repositories" target="_blank">github | 小程序 | 自定义组件</a><br><a href="https://github.com/zhu12345618/slotDemo" target="_blank">slotDemo</a><br><a href="https://github.com/zhu12345618/componentEventTest" target="_blank">componentEventTest</a><br><a href="https://blog.csdn.net/qq_17470165/article/details/81211923" target="_blank">自定义组件Component的使用</a><br><a href="https://www.jianshu.com/p/17b7b15e72b3" target="_blank">小程序-component组件</a><br><a href="https://www.jianshu.com/p/8a2a730d9e60/" target="_blank">手把手教你实现微信小程序中的自定义组件</a></p>
 
       
     </div>

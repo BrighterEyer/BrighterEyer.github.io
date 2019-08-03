@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,73 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/04/24/1556103604000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/24/articles/2019/04/24/1556103604000.html/" class="article-date">
-      <time datetime="2019-04-24T11:00:04.000Z" itemprop="datePublished">2019-04-24</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/24/articles/2019/04/24/1556103604000.html/">[springboot] 解决JS处理Long类型丢失精度</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/lyj2018gyq/article/details/83593066" target="_blank">解决JS处理Long类型丢失精度</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Jackson、FastJson</span><br></pre></td></tr></table></figure></p>
-<p>二、后端解决<br>2.1 Jackson<br>Spring MVC中默认是使用了Jackson的。通过重写转换器解决。</p>
-<p>注意添加两个注解。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">import com.fasterxml.jackson.databind.ObjectMapper;</span><br><span class="line">import com.fasterxml.jackson.databind.module.SimpleModule;</span><br><span class="line">import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;</span><br><span class="line">import com.leyou.order.interceptor.LoginInterceptor;</span><br><span class="line">import com.leyou.order.properties.JwtProperties;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.boot.context.properties.EnableConfigurationProperties;</span><br><span class="line">import org.springframework.context.annotation.Bean;</span><br><span class="line">import org.springframework.context.annotation.Configuration;</span><br><span class="line">import org.springframework.http.converter.HttpMessageConverter;</span><br><span class="line">import org.springframework.http.converter.StringHttpMessageConverter;</span><br><span class="line">import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;</span><br><span class="line">import org.springframework.web.servlet.config.annotation.EnableWebMvc;</span><br><span class="line">import org.springframework.web.servlet.config.annotation.InterceptorRegistry;</span><br><span class="line">import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;</span><br><span class="line">import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</span><br><span class="line"> </span><br><span class="line">import java.math.BigInteger;</span><br><span class="line">import java.nio.charset.Charset;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">@Configuration</span><br><span class="line">@EnableWebMvc</span><br><span class="line">public class MvcConfig implements WebMvcConfigurer &#123;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    @Override</span><br><span class="line">    public void configureMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters) &#123;</span><br><span class="line"> </span><br><span class="line">        MappingJackson2HttpMessageConverter jackson2HttpMessageConverter =</span><br><span class="line">                new MappingJackson2HttpMessageConverter();</span><br><span class="line"> </span><br><span class="line">        ObjectMapper objectMapper = new ObjectMapper();</span><br><span class="line">        SimpleModule simpleModule = new SimpleModule();</span><br><span class="line">        simpleModule.addSerializer(BigInteger.class, ToStringSerializer.instance);</span><br><span class="line">        simpleModule.addSerializer(Long.class, ToStringSerializer.instance);</span><br><span class="line">        simpleModule.addSerializer(Long.TYPE, ToStringSerializer.instance);</span><br><span class="line">        objectMapper.registerModule(simpleModule);</span><br><span class="line">        jackson2HttpMessageConverter.setObjectMapper(objectMapper);</span><br><span class="line">        converters.add(jackson2HttpMessageConverter);</span><br><span class="line">        converters.add(new StringHttpMessageConverter(Charset.forName(&quot;UTF-8&quot;)));</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>2.2 Fastjson<br>在Spring Boot中将Jackson替换为fastjson一般会有两种方式：<br>第一种：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class WebConfig extends WebMvcConfigurerAdapter &#123;</span><br><span class="line"> </span><br><span class="line">    @Bean</span><br><span class="line">    public HttpMessageConverters fastJsonHttpMessageConverter() &#123;</span><br><span class="line">        return new HttpMessageConverters(new FastJsonHttpMessageConverter());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>第二种：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class WebConfig extends WebMvcConfigurerAdapter &#123;</span><br><span class="line"> </span><br><span class="line">    @Override</span><br><span class="line">    public void configureMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters) &#123;</span><br><span class="line">        FastJsonHttpMessageConverter fastConverter = </span><br><span class="line">        new FastJsonHttpMessageConverter();</span><br><span class="line"> </span><br><span class="line">        FastJsonConfig fastJsonConfig = new FastJsonConfig();</span><br><span class="line">        fastJsonConfig.setSerializerFeatures(SerializerFeature.PrettyFormat);</span><br><span class="line">        fastConverter.setFastJsonConfig(fastJsonConfig);</span><br><span class="line">        converters.add(fastConverter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>替换成fastjson之后，对于精度丢失问题，解决方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@EnableWebMvc</span><br><span class="line">@Configuration</span><br><span class="line">public class WebConfig extends WebMvcConfigurerAdapter &#123;</span><br><span class="line"> </span><br><span class="line">    @Override</span><br><span class="line">    public void configureMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters) &#123;</span><br><span class="line">        FastJsonHttpMessageConverter fastConverter = </span><br><span class="line">        new FastJsonHttpMessageConverter();</span><br><span class="line"> </span><br><span class="line">        FastJsonConfig fastJsonConfig = new FastJsonConfig();</span><br><span class="line">        SerializeConfig serializeConfig = SerializeConfig.globalInstance;</span><br><span class="line">        serializeConfig.put(BigInteger.class, ToStringSerializer.instance);</span><br><span class="line">        serializeConfig.put(Long.class, ToStringSerializer.instance);</span><br><span class="line">        serializeConfig.put(Long.TYPE, ToStringSerializer.instance);</span><br><span class="line">        fastJsonConfig.setSerializeConfig(serializeConfig);</span><br><span class="line">        fastConverter.setFastJsonConfig(fastJsonConfig);</span><br><span class="line">        converters.add(fastConverter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/04/24/1556103603000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -988,6 +921,75 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555759260000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555759260000.html/" class="article-date">
+      <time datetime="2019-04-20T11:21:00.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555759260000.html/">[docker] docker+jenkins持续集成</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://www.docker-cn.com/registry-mirror" target="_blank">Docker 中国官方镜像加速</a><br><a href="https://yeasy.gitbooks.io/docker_practice/content/install/mirror.html" target="_blank">docker中文文档</a></p>
+<p>windows下docker配置镜像加速<br>方法（1）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker-machine ssh default</span><br><span class="line">sudo sed -i &quot;s|EXTRA_ARGS=&apos;|EXTRA_ARGS=&apos;--registry-mirror=https://registry.docker-cn.com |g&quot; /var/lib/boot2docker/profile</span><br><span class="line">exit</span><br><span class="line">docker-machine restart default</span><br><span class="line">docker-machine env</span><br></pre></td></tr></table></figure></p>
+<p>方法（2）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker --registry-mirror=https://registry.docker-cn.com daemon</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/jinqier/p/9686833.html" target="_blank">jenkins+Docker持续化部署(笔记）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#查看registry-mirror</span><br><span class="line">docker info</span><br></pre></td></tr></table></figure></p>
+<p>gitub+jenkins<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/AliyunContainerService/docker-jenkins</span><br><span class="line">cd docker-jenkins/jenkins</span><br><span class="line">#docker build -t denverdino/jenkins .</span><br><span class="line">docker build -t jenkins .</span><br></pre></td></tr></table></figure></p>
+<p>Dockerfile<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM jenkins</span><br><span class="line">USER root</span><br><span class="line">RUN apt-get update &amp;&amp; apt-get install -y sudo &amp;&amp; rm -rf /var/lib/apt/lists/* </span><br><span class="line">RUN echo &quot;jenkins ALL=NOPASSWD: ALL&quot; &gt;&gt; /etc/sudoers</span><br><span class="line">USER jenkins</span><br></pre></td></tr></table></figure></p>
+<p>基于Dockerfile构建镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t jenkins:2.0 . --registry-mirror=https://registry.docker-cn.com daemon</span><br></pre></td></tr></table></figure></p>
+<p>基于新镜像启动Jenkins容器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker rm -f myjenkins</span><br><span class="line">#docker run -d -p 8080:8080 -p 50000:50000 -v $(pwd)/data:/var/jenkins_home --name myjenkins denverdino/jenkins</span><br><span class="line">docker run -d -p 8080:8080 -p 50000:50000 -v /d/docker/jenkins_node:/var/jenkins_home --name myjenkins denverdino/jenkins</span><br><span class="line">docker logs myjenkins</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker stop $(docker ps -a -q)</span><br><span class="line">docker rm $(docker ps -a -q)</span><br><span class="line">#docker rmi $(docker images | grep &quot;^&lt;none&gt;&quot; | awk &quot;&#123;print $3&#125;&quot;)</span><br><span class="line">docker rmi $(docker images -q)</span><br><span class="line">docker volume rm $(docker volume ls -q)</span><br><span class="line">docker image prune</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
     </div>
 
       

@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,76 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/01/10/1547085456000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/01/10/articles/2019/01/10/1547085456000.html/" class="article-date">
-      <time datetime="2019-01-10T01:57:36.000Z" itemprop="datePublished">2019-01-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/01/10/articles/2019/01/10/1547085456000.html/">[layui] layui技巧</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="" target="_blank"></a><br>layui table表格框溢出时不会自动关闭解决方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.layui-table-tips-main,.layui-table-tips-c&#123;display:none&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
-<p>layui 令模态框的选项溢出框体时，选项可见<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.layui-layer-page .layui-layer-content,#showLayui&#123;overflow: visible;&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
-<p>layui 令模态框的选项溢出框体时，横向固定，竖直方向可滚动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.layui-layer-page .layui-layer-content,#showLayui&#123;</span><br><span class="line">  overflow-x: hidden;</span><br><span class="line">  overflow-y: scroll;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>layui select动态拼接option<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#selectedId&quot;).empty();</span><br><span class="line">$(&quot;#selectedId&quot;).append(&apos;&lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;请选择&lt;/option&gt;&apos;);</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: url,</span><br><span class="line">    dataType: &apos;json&apos;,</span><br><span class="line">    type: &apos;post&apos;,</span><br><span class="line">    async: false,</span><br><span class="line">    data: &#123;&#125;,</span><br><span class="line">    complete: function (XHR, TS) &#123;</span><br><span class="line">        var returnObj = eval(&apos;(&apos; + XHR.responseText + &apos;)&apos;);</span><br><span class="line">        $.each(returnObj, function (i, obj) &#123;</span><br><span class="line">            $(&quot;#selectedId&quot;).append(&apos;&lt;option value=&quot;&apos; + obj.id + &apos;&quot;&gt;&apos; + obj.value + &apos;&lt;/option&gt;&apos;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>layui select手动选中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var data = &#123;</span><br><span class="line">    id:1,</span><br><span class="line">    value:&quot;123&quot;</span><br><span class="line">&#125;;</span><br><span class="line">$(&quot;#targetId&quot;).val(data.value);</span><br><span class="line">$(&quot;#targetId&quot;).siblings(&quot;div.layui-form-select&quot;).find(&apos;dl dd[lay-value=&apos; + data.id + &apos;]&apos;).click();</span><br></pre></td></tr></table></figure></p>
-<p>只读+灰色<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var data = &#123;</span><br><span class="line">    id:1,</span><br><span class="line">    value:&quot;123&quot;</span><br><span class="line">&#125;;</span><br><span class="line">$(&quot;#targetId&quot;).val(data.value);</span><br><span class="line">$(&quot;#targetId&quot;).attr(&quot;readonly&quot;,&quot;true&quot;);</span><br><span class="line">$(&quot;#targetId&quot;).css(&quot;color&quot;,&quot;gray&quot;);</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/weixin_42457316/article/details/81298069" target="_blank">layui省市区联动</a><br>layui input框校验<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;input</span><br><span class="line">id=&quot;&quot;</span><br><span class="line">name=&quot;&quot;</span><br><span class="line">class=&quot;layui-input&quot;</span><br><span class="line">type=&quot;text&quot;</span><br><span class="line">placeholder=&quot;&quot;</span><br><span class="line">onblur=&quot;check(this)&quot;</span><br><span class="line">onkeyup=&quot;this.value=this.value.replace(/[^0-9.]/g,&apos;&apos;)&quot;</span><br><span class="line">onafterpaste=&quot;if(this.value.length==1)&#123;this.value=this.value.replace(/[^1-9]/g,&apos;0&apos;)&#125;else&#123;this.value=this.value.replace(/\D/g,&apos;&apos;)&#125;&quot;</span><br><span class="line">oninput=&quot;if(value.length&gt;5)value=value.slice(0,5)&quot;</span><br><span class="line">maxlength=&quot;50&quot;</span><br><span class="line">style=&quot;text-transform:uppercase;&quot;&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function check(e) &#123;</span><br><span class="line">    var re = /^\d+(?=\.&#123;0,1&#125;\d+$|$)/</span><br><span class="line">    if (e.value != &quot;&quot;) &#123;</span><br><span class="line">        if (!re.test(e.value)) &#123;</span><br><span class="line">            alert(&quot;请输入正确的数字&quot;);</span><br><span class="line">            e.value = &quot;&quot;;</span><br><span class="line">            e.focus();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-<p>jq监听属性变化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#divId&quot;).bind(&quot;input propertychange&quot;,function()&#123;</span><br><span class="line">	var str = $(&quot;#divId&quot;).val();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>layui模态框形成和销毁<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var showContent = $(&quot;#modelContentId&quot;);</span><br><span class="line">layer.open(&#123;</span><br><span class="line">  content: &apos;测试回调&apos;,</span><br><span class="line">  success: function(layero, index)&#123;</span><br><span class="line">    console.log(layero, index);</span><br><span class="line">  &#125;</span><br><span class="line">  yes: function(index, layero)&#123;</span><br><span class="line">    //如果设定了yes回调，需进行手工关闭</span><br><span class="line">    layer.close(index);</span><br><span class="line">  &#125;,</span><br><span class="line">  end: function()&#123;</span><br><span class="line">    $(&apos;#modelContentId&apos;).html(showContent);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/layui/">layui</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/01/10/1547085455000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -900,6 +830,71 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/01/02/1546384054000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/01/02/articles/2019/01/02/1546384054000.html/" class="article-date">
+      <time datetime="2019-01-01T23:07:34.000Z" itemprop="datePublished">2019-01-02</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/01/02/articles/2019/01/02/1546384054000.html/">[java] json+net.sf.json+fastjson+gson使用</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="" target="_blank"></a><br>json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.json&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;json&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;20160810&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/hitwtx/articles/2468633.html" target="_blank">net.sf.json使用</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">Object obj = new Object();</span><br><span class="line">JSONObject jsonObject = JSONObject.fromObject(obj);</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;net.sf.json-lib&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;json-lib&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.4&lt;/version&gt;</span><br><span class="line">    &lt;classifier&gt;jdk15&lt;/classifier&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;net.sf.ezmorph&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;ezmorph&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.0.6&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;commons-lang&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-lang&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.6&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-lang3&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.4&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;commons-beanutils&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-beanutils&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.9.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;commons-collections&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-collections&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.2.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;commons-logging&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;commons-logging&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.1.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/pcheng/p/6875760.html" target="_blank">fastjson</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;fastjson&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.2.32&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">String text=&quot;&quot;;</span><br><span class="line">Object obj = JSONObject.parse(text);</span><br><span class="line">JSONObject jsonObj = JSONObject.parseObject(text);</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/qinxu/p/9504412.html" target="_blank">gson基本用法</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;gson&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.8.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">Gson gson = new Gson();</span><br><span class="line">int i = gson.fromJson(&quot;100&quot;, int.class); //100</span><br><span class="line">double d = gson.fromJson(&quot;\&quot;99.99\&quot;&quot;, double.class);  //99.99</span><br><span class="line">boolean b = gson.fromJson(&quot;true&quot;, boolean.class);     // true</span><br><span class="line">String str = gson.fromJson(&quot;String&quot;, String.class);   // String</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
     </div>
 
       

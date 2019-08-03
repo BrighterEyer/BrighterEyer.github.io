@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,71 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/06/07/1559876652000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/06/07/articles/2019/06/07/1559876652000.html/" class="article-date">
-      <time datetime="2019-06-07T03:04:12.000Z" itemprop="datePublished">2019-06-07</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/06/07/articles/2019/06/07/1559876652000.html/">[es6] 语法与代码</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="" target="_blank"></a><br><a href="https://www.jianshu.com/p/abfca2d76cf1" target="_blank">简书 | ES6 高级语法</a><br><a href="https://blog.csdn.net/qq_35036255/article/details/80344748" target="_blank">ES6笔记上（深入浅出ES6—阮一峰）</a></p>
-<p>es6闭包<br>方法1：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const personUnkonwAge = ((&#123;name, gender&#125;) =&gt; (&#123;name,gender&#125;))(person)</span><br><span class="line">console.log(personUnkonwAge)</span><br></pre></td></tr></table></figure></p>
-<p>方法2：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let &#123;name, ...personUnknowName&#125; = person;</span><br><span class="line">console.log(personUnknowName);</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.jianshu.com/p/87008f4f8513" target="_blank">ES6新特性</a><br><a href="https://www.jianshu.com/p/ac1787f6c50f" target="_blank">ES6中常用的10个新特性讲解</a><br><a href="https://www.cnblogs.com/Marydon20170307/p/8676611.html" target="_blank">js 替换json属性中的键名</a><br><a href="" target="_blank">js 批量替换json属性</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/es6/">es6</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/06/07/1559870087000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -893,6 +828,70 @@
       
           
         <p><a href="https://www.jianshu.com/p/63b012ee52ea" target="_blank">持续集成Jenkins+Gitlab</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#环境准备</span><br><span class="line">cat /etc/redhat-release</span><br><span class="line">uname -r</span><br><span class="line"></span><br><span class="line">#更换阿里yum源</span><br><span class="line">cd /etc/yum.repos.d</span><br><span class="line">wget http://mirrors.aliyun.com/epel/epel-release-latest-7.noarch.rpm</span><br><span class="line">yum update -y</span><br><span class="line"></span><br><span class="line">#更换gitlab，yum源为清华大学</span><br><span class="line">vim /etc/yum.repos.d/gitlab-ce.repo</span><br><span class="line">[gitlab-ce]</span><br><span class="line">name=gitlab-ce</span><br><span class="line">baseurl=http://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7</span><br><span class="line">repo_gpgcheck=0</span><br><span class="line">gpgcheck=0</span><br><span class="line">enabled=1</span><br><span class="line">gpgkey=https://packages.gitlab.com/gpg.key</span><br><span class="line"></span><br><span class="line">yum makecache</span><br><span class="line">yum install -y gitlab-ce</span><br><span class="line"></span><br><span class="line">#安装依赖</span><br><span class="line">yum install curl policycoreutils openssh-server openssh-clients postfix -y</span><br><span class="line"></span><br><span class="line">#启动postfix</span><br><span class="line">systemctl start postfix</span><br><span class="line"></span><br><span class="line">#安装gitlab-ce，版本为gitlab-ce.x86_64 0:10.6.4-ce.0.el7</span><br><span class="line">yum install -y gitlab-ce</span><br><span class="line"></span><br><span class="line">#配置并启动gitlab，比较久，需要耐心等待一下，在此之前需要保证80端口不被占用</span><br><span class="line">gitlab-ctl reconfigure</span><br><span class="line"></span><br><span class="line">#查看启动状态 全部为run说明正常启动</span><br><span class="line">gitlab-ctl status</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jenkins/">jenkins</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/06/07/1559868901000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/06/07/articles/2019/06/07/1559868901000.html/" class="article-date">
+      <time datetime="2019-06-07T00:55:01.000Z" itemprop="datePublished">2019-06-07</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/06/07/articles/2019/06/07/1559868901000.html/">[jenkins] docker+svn+php</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="" target="_blank"></a><br><a href="https://blog.csdn.net/resilient/article/details/88039989" target="_blank">docker+jenkins 构建 PHP持续集成环境</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker pull voduytuan/jenkins-php-docker</span><br><span class="line">cd /var</span><br><span class="line">mkdir -p /d/docker/jenkins-php-docker</span><br><span class="line">cd /d/docker/jenkins-php-docker</span><br><span class="line">yum install -y</span><br><span class="line">git clone https://github.com/naxhh/jenkins-php-docker</span><br><span class="line"></span><br><span class="line">docker run -d -P -v /d/docker/jenkins-php-docker:/var/jenkins_home:rw voduytuan/jenkins-php-docker</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/xiangsikai/p/10057087.html" target="_blank">Docker+Jenkins+Maven+SVN搭建持续集成环境</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/u014477164/article/details/76686286" target="_blank">jenkins 实现PHP持续集成部署</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo </span><br><span class="line">rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key </span><br><span class="line">yum install -y jenkins \</span><br><span class="line">java \</span><br><span class="line">java-1.8.0-openjdk \</span><br><span class="line">php \</span><br><span class="line">php-devel \</span><br><span class="line">php-pear \</span><br><span class="line">re2c \</span><br><span class="line">php-pear-phing</span><br><span class="line"></span><br><span class="line">service jenkins start</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa</span><br><span class="line">scp ~/.ssh/ras.pub root@B:/root/.ssh/authorized_keys</span><br><span class="line">ssh root@B</span><br><span class="line"></span><br><span class="line">#配置Publish Over SSH Plugin</span><br><span class="line">Jenkins SSH Key：生成rsa的时候设置的ssh key，若没有设置则留空</span><br><span class="line">Key：填上A服务器私钥的内容。默认路径 ~/.ssh/id_rsa </span><br><span class="line">Hosename:填上B服务器的IP</span><br><span class="line">username:填上B服务器的帐号</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd /var/lib/jenkins/workspace/git</span><br></pre></td></tr></table></figure></p>
 
       
     </div>

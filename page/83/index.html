@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,68 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/03/10/1552212053000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/03/10/articles/2019/03/10/1552212053000.html/" class="article-date">
-      <time datetime="2019-03-10T10:00:53.000Z" itemprop="datePublished">2019-03-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/03/10/articles/2019/03/10/1552212053000.html/">[小程序] 图表</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/xiaolin3303/wx-charts" target="_blank">wx-charts</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/03/10/1552212052000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -883,6 +821,69 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/素材/">素材</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/03/09/1552100736000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/03/09/articles/2019/03/09/1552100736000.html/" class="article-date">
+      <time datetime="2019-03-09T03:05:36.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/03/09/articles/2019/03/09/1552100736000.html/">[mysql] 时间查询</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/a453169345/article/details/82048654" target="_blank">以当前时间为基准的查询</a><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 查询当前日期</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">CURDATE</span>(),<span class="built_in">INTERVAL</span> <span class="number">0</span> <span class="keyword">DAY</span>) ;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">NOW</span>();</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">CURDATE</span>();</span><br><span class="line"><span class="comment">-- 如需格式化可用DATE_FORMAT函数</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_FORMAT</span>(<span class="keyword">NOW</span>(),<span class="string">'%Y-%m-%d %h:%i:%s'</span>);</span><br><span class="line"><span class="comment">-- 查询昨天</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">CURDATE</span>(),<span class="built_in">INTERVAL</span> <span class="number">1</span> <span class="keyword">DAY</span>);</span><br><span class="line"><span class="comment">-- 查询明天</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">CURDATE</span>(),<span class="built_in">INTERVAL</span> <span class="number">-1</span> <span class="keyword">DAY</span>) ;</span><br><span class="line"><span class="comment">-- 查询前一个小时</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">NOW</span>(),<span class="built_in">INTERVAL</span> <span class="number">1</span> <span class="keyword">HOUR</span>) ;</span><br><span class="line"><span class="comment">-- 查询后一个小时</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">NOW</span>(),<span class="built_in">INTERVAL</span> <span class="number">-1</span> <span class="keyword">HOUR</span>) ;</span><br><span class="line"><span class="comment">-- 查询前一分钟</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">NOW</span>(),<span class="built_in">INTERVAL</span> <span class="number">1</span> <span class="keyword">MINUTE</span>) ;</span><br><span class="line"><span class="comment">-- 查询前一年</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DATE_SUB</span>(<span class="keyword">NOW</span>(),<span class="built_in">INTERVAL</span> <span class="number">1</span> <span class="keyword">YEAR</span>) ;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/qq_34902684/article/details/82989844" target="_blank">mysql常用时间列表的查询（七天内、本月、本周、某天）</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
     </div>
 
       

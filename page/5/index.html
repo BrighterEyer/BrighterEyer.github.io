@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -738,68 +738,6 @@
 
 
   
-    <article id="post-/articles/2019/07/13/1563016134000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/07/13/articles/2019/07/13/1563016134000.html/" class="article-date">
-      <time datetime="2019-07-13T11:08:54.000Z" itemprop="datePublished">2019-07-13</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/07/13/articles/2019/07/13/1563016134000.html/">[小程序] 富文本解析</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://blog.csdn.net/weixin_40659577/article/details/80662091" target="_blank">浅谈小程序开发的坑 - 富文本解析</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">convertHtmlToText(inputText) &#123;</span><br><span class="line">  var returnText = &quot;&quot; + inputText;</span><br><span class="line">  returnText = returnText.replace(/&lt;\/div&gt;/ig, &apos;\r\n&apos;);</span><br><span class="line">  returnText = returnText.replace(/&lt;\/li&gt;/ig, &apos;\r\n&apos;);</span><br><span class="line">  returnText = returnText.replace(/&lt;li&gt;/ig, &apos;  *  &apos;);</span><br><span class="line">  returnText = returnText.replace(/&lt;\/ul&gt;/ig, &apos;\r\n&apos;);</span><br><span class="line">  //-- remove BR tags and replace them with line break</span><br><span class="line">  returnText = returnText.replace(/&lt;br\s*[\/]?&gt;/gi, &quot;\r\n&quot;);</span><br><span class="line"></span><br><span class="line">  //-- remove P and A tags but preserve what&apos;s inside of them</span><br><span class="line">  returnText = returnText.replace(/&lt;p.*?&gt;/gi, &quot;\r\n&quot;);</span><br><span class="line">  returnText = returnText.replace(/&lt;a.*href=&quot;(.*?)&quot;.*&gt;(.*?)&lt;\/a&gt;/gi, &quot; $2 ($1)&quot;);</span><br><span class="line"></span><br><span class="line">  //-- remove all inside SCRIPT and STYLE tags</span><br><span class="line">  returnText = returnText.replace(/&lt;script.*&gt;[\w\W]&#123;1,&#125;(.*?)[\w\W]&#123;1,&#125;&lt;\/script&gt;/gi, &quot;&quot;);</span><br><span class="line">  returnText = returnText.replace(/&lt;style.*&gt;[\w\W]&#123;1,&#125;(.*?)[\w\W]&#123;1,&#125;&lt;\/style&gt;/gi, &quot;&quot;);</span><br><span class="line">  //-- remove all else</span><br><span class="line">  returnText = returnText.replace(/&lt;(?:.|\s)*?&gt;/g, &quot;&quot;);</span><br><span class="line"></span><br><span class="line">  //-- get rid of more than 2 multiple line breaks:</span><br><span class="line">  returnText = returnText.replace(/(?:(?:\r\n|\r|\n)\s*)&#123;2,&#125;/gim, &quot;\r\n\r\n&quot;);</span><br><span class="line"></span><br><span class="line">  //-- get rid of more than 2 spaces:</span><br><span class="line">  returnText = returnText.replace(/ +(?= )/g, &apos;&apos;);</span><br><span class="line"></span><br><span class="line">  //-- get rid of html-encoded characters:</span><br><span class="line">  returnText = returnText.replace(/ /gi, &quot; &quot;);</span><br><span class="line">  returnText = returnText.replace(/&amp;/gi, &quot;&amp;&quot;);</span><br><span class="line">  returnText = returnText.replace(/&quot;/gi, &apos;&quot;&apos;);</span><br><span class="line">  returnText = returnText.replace(/&lt;/gi, &apos;&lt;&apos;);</span><br><span class="line">  returnText = returnText.replace(/&gt;/gi, &apos;&gt;&apos;);</span><br><span class="line"></span><br><span class="line">  return returnText;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
     <article id="post-/articles/2019/07/13/1563016133000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -905,6 +843,68 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/视频制作/">视频制作</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/07/13/1563016131000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/07/13/articles/2019/07/13/1563016131000.html/" class="article-date">
+      <time datetime="2019-07-13T11:08:51.000Z" itemprop="datePublished">2019-07-13</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/07/13/articles/2019/07/13/1563016131000.html/">[蓝湖] 使用教程</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="" target="_blank"></a><br><a href="https://sos.lanhuapp.com/#%E9%A6%96%E9%A1%B5" target="_blank">蓝湖 一分钟教程</a><br><a href="https://lanhuapp.com/?home" target="_blank">官方首页</a><br><a href="https://lanhuapp.com/web/#/user/register?referrer=home" target="_blank">注册页</a><br><a href="https://lanhuapp.com/xd" target="_blank">官方蓝湖下载和教程</a><br><a href="https://lanhuapp.com/ps?comeFrom=%E7%94%BB%E5%B8%83%E9%A1%B5%E6%B7%BB%E5%8A%A0%E8%AE%BE%E8%AE%A1%E5%9B%BE%E6%8C%89%E9%92%AE" target="_blank">Adobe Photoshop 插件 自动标注</a><br><a href="https://lanhuapp.com/prd?%E4%B8%BB%E5%AE%98%E7%BD%91%E9%A1%B6%E9%83%A8Banner" target="_blank">让 Axure 文档无缝连接设计图</a><br><a href="http://help.lanhuapp.com/hc/" target="_blank">蓝湖 帮助文档知识库</a><br><a href="https://www.jianshu.com/p/78a00f029fa0" target="_blank">UI&amp;产品&amp;开发协作利器 - 蓝湖</a><br><a href="https://jingyan.baidu.com/article/48b37f8ddd00b81a6564887d.html" target="_blank"></a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/蓝湖/">蓝湖</a></li></ul>
     </div>
 
       

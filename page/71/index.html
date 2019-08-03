@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,69 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/04/20/1555732648000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555732648000.html/" class="article-date">
-      <time datetime="2019-04-20T03:57:28.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732648000.html/">[小程序] 分页加载数据</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/lanfeng1993/LoadDataDemo" target="_blank">微信小程序分页加载数据</a></p>
-<p>utils/PageUtil.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">var api = require(&apos;./promise&apos;);</span><br><span class="line"></span><br><span class="line">class PageUtil &#123;</span><br><span class="line"></span><br><span class="line">  constructor(context ,listName, url, limit) &#123;</span><br><span class="line">    this.context = context;</span><br><span class="line">    this.url = url;</span><br><span class="line">    this.listName = listName;</span><br><span class="line">    this.limit = limit;</span><br><span class="line">    this.currentPage = 0;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  fetchMore(currentList,callback) &#123;</span><br><span class="line">    var self = this;</span><br><span class="line">    var limit = this.limit;</span><br><span class="line">    var page = this.currentPage + 1;</span><br><span class="line">    var city = this.context.data.address;</span><br><span class="line"></span><br><span class="line">    api.post(self.url, &#123;</span><br><span class="line">      limit: limit,</span><br><span class="line">      page: page,</span><br><span class="line">      city: city,</span><br><span class="line">    &#125;).then(res =&gt; &#123;</span><br><span class="line"></span><br><span class="line">      typeof callback == &apos;function&apos; &amp;&amp; callback(res);</span><br><span class="line"></span><br><span class="line">      var pageList = res.data;</span><br><span class="line">      if (pageList == null || pageList.length == 0) &#123;</span><br><span class="line">        return;</span><br><span class="line">      &#125;</span><br><span class="line">      self.currentPage = page;</span><br><span class="line">      self.context.setData(&#123;</span><br><span class="line">        [self.listName]: currentList.concat(pageList)</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default PageUtil;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/04/20/1555732647000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -894,6 +831,69 @@
 <p><a href="https://blog.csdn.net/kelisentian/article/details/72793158" target="_blank">多选button</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;block wx:for=&quot;&#123;&#123;array&#125;&#125;&quot; wx:for-item=&quot;item&quot;&gt;</span><br><span class="line">&lt;view class=&quot;chose-txt&quot; data-price=&quot;&#123;&#123;item.price&#125;&#125;&quot;  data-id=&quot;&#123;&#123;index&#125;&#125;&quot; bindtap=&quot;choseTxtColor&quot; style=&quot;&#123;&#123;index == id?&apos;background:url(../resource/button/on_chose.png) right no-repeat; border:1rpx solid #e8580c; color: #e8580c&apos;:&apos;baciground:url();border:1rpx solid gainsboro;color:gray&apos;&#125;&#125;&quot;&gt;</span><br><span class="line">                &lt;text class=&quot;chose-p&quot; &gt;&#123;&#123;item.name&#125;&#125;&lt;/text&gt;</span><br><span class="line">                 &lt;text class=&quot;chose-p&quot; &gt;&#123;&#123;item.price&#125;&#125;元&lt;/text&gt;</span><br><span class="line">&lt;/view&gt;</span><br><span class="line">&lt;/block&gt;</span><br></pre></td></tr></table></figure></p>
 <p>.wxss<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.chose-txt&#123;</span><br><span class="line">  border-radius: 6px;  font-size: 26rpx;   height: 40px;  width:  27.5%;  margin: 5px; float: left;padding-top: 5px;</span><br><span class="line">&#125;</span><br><span class="line">.chose-p&#123;</span><br><span class="line">  line-height: 18px; width: 100%; height:20px; text-align:  center; float: left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var id ; </span><br><span class="line">page&#123;</span><br><span class="line">    array: [&#123; name: &apos;单拍&apos;, price: &apos;198&apos;&#125;, &#123; name: &apos;亲子套餐&apos;, price: &apos;398&apos; &#125;,   &#123; name: &apos;活动套餐&apos;, price: &apos;598&apos; &#125;,  &#123; name: &apos;女王套餐&apos;, price: &apos;1198&apos; &#125; ],</span><br><span class="line">    id:0,             //进入页面时，默认选择第0个，如果不需要默认选中，注释掉就可以了</span><br><span class="line">&#125;,</span><br><span class="line">choseTxtColor:function(e)&#123;</span><br><span class="line">    var id = e.currentTarget.dataset.id;  //获取自定义的ID值</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      id:id </span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555732638000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555732638000.html/" class="article-date">
+      <time datetime="2019-04-20T03:57:18.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732638000.html/">[小程序] 微信扫码点餐小程序</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://github.com/zhyqieqie/wechatscan" target="_blank">微信扫码点餐小程序 1</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">微信扫码点餐小程序支持预约、外卖、优惠券、在线支付等功能，是一个运营级的产品。小程序前端开源，供参考。</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/A13253565831/wxapp_newRestaurant" target="_blank">微信扫码点餐小程序 2</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">此小程序集搜索排序,支付,外卖,扫码,选桌,预约点餐,定位,转账,支付押金,点餐记录,外卖记录,评价,待付款等支持多门店</span><br></pre></td></tr></table></figure></p>
 
       
     </div>

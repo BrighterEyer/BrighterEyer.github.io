@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,69 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/04/20/1555732638000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/04/20/articles/2019/04/20/1555732638000.html/" class="article-date">
-      <time datetime="2019-04-20T03:57:18.000Z" itemprop="datePublished">2019-04-20</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732638000.html/">[小程序] 微信扫码点餐小程序</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="https://github.com/zhyqieqie/wechatscan" target="_blank">微信扫码点餐小程序 1</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">微信扫码点餐小程序支持预约、外卖、优惠券、在线支付等功能，是一个运营级的产品。小程序前端开源，供参考。</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/A13253565831/wxapp_newRestaurant" target="_blank">微信扫码点餐小程序 2</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">此小程序集搜索排序,支付,外卖,扫码,选桌,预约点餐,定位,转账,支付押金,点餐记录,外卖记录,评价,待付款等支持多门店</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/04/20/1555732637000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -871,6 +808,71 @@
           
         <p><a href="https://www.cnblogs.com/freeliver54/p/7728498.html" target="_blank">实现图片上传功能</a></p>
 <p>js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">var api = require(&apos;/utils/api.js&apos;);</span><br><span class="line">var config = require(&apos;/config.js&apos;);</span><br><span class="line">var app = getApp();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line"></span><br><span class="line">  data: &#123;</span><br><span class="line">    files: [],</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  uploadPhoto(e) &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.chooseImage(&#123;</span><br><span class="line">      count: 1, // 默认9</span><br><span class="line">      sizeType: [&apos;original&apos;, &apos;compressed&apos;], // 可以指定是原图还是压缩图，默认二者都有</span><br><span class="line">      sourceType: [&apos;album&apos;, &apos;camera&apos;], // 可以指定来源是相册还是相机，默认二者都有</span><br><span class="line">      success: function(res) &#123;</span><br><span class="line">        //返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片</span><br><span class="line">        var tempFilePaths = res.tempFilePaths;</span><br><span class="line">        console.log(&apos;本地图片的路径:&apos;, tempFilePaths)</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          files: [tempFilePaths]</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  uploadImage: function(tempFilePaths) &#123;</span><br><span class="line">    wx.showToast(&#123;</span><br><span class="line">      icon: &quot;loading&quot;,</span><br><span class="line">      title: &quot;正在上传&quot;,</span><br><span class="line">      duration: 2000</span><br><span class="line">    &#125;);</span><br><span class="line">    wx.uploadFile(&#123;</span><br><span class="line">      url: config.uploadUrl,</span><br><span class="line">      filePath: tempFilePaths[0], //文件value</span><br><span class="line">      name: &apos;file&apos;, //文件key</span><br><span class="line">      header: &#123;</span><br><span class="line">        &quot;Content-Type&quot;: &quot;multipart/form-data&quot;</span><br><span class="line">      &#125;,</span><br><span class="line">      formData: &#123;</span><br><span class="line">        //和服务器约定的token, 一般也可以放在header中</span><br><span class="line">        userId: app.gloablData.userInfo.userId</span><br><span class="line">      &#125;,</span><br><span class="line">      success: function(res) &#123;         //上传成功返回数据</span><br><span class="line">        console.log(&apos;上传成功返回的数据&apos;, JSON.parse(res.data).data);</span><br><span class="line">        if (res.statusCode != 200) &#123;</span><br><span class="line">          wx.showModal(&#123;</span><br><span class="line">            title: &apos;提示&apos;,</span><br><span class="line">            content: &apos;上传失败&apos;,</span><br><span class="line">            showCancel: false</span><br><span class="line">          &#125;)</span><br><span class="line">          return;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      fail: function(e) &#123;</span><br><span class="line">        console.log(e);</span><br><span class="line">        wx.showModal(&#123;</span><br><span class="line">          title: &apos;提示&apos;,</span><br><span class="line">          content: &apos;上传失败&apos;,</span><br><span class="line">          showCancel: false</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">      complete: function() &#123;</span><br><span class="line">        wx.hideToast(); //隐藏Toast</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/04/20/1555732627000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/04/20/articles/2019/04/20/1555732627000.html/" class="article-date">
+      <time datetime="2019-04-20T03:57:07.000Z" itemprop="datePublished">2019-04-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/04/20/articles/2019/04/20/1555732627000.html/">[小程序] textarea文本域字数控制+显示已输入字数</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://blog.csdn.net/qq_42345906/article/details/85336060" target="_blank">textarea文本域字数控制+显示已输入字数</a></p>
+<p>.wxml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;view class=&quot;conts&quot;&gt;</span><br><span class="line">    &lt;textarea class=&quot;areas&quot; placeholder=&apos;空空如也，快点评论吧&apos; minlength=&quot;&#123;&#123;min&#125;&#125;&quot; maxlength=&quot;&#123;&#123;max&#125;&#125;&quot; bindinput=&quot;inputs&quot;&gt; </span><br><span class="line">        &lt;text class=&quot;currentWordNumber&quot;&gt;&#123;&#123;currentWordNumber&#125;&#125;/&#123;&#123;max&#125;&#125;&lt;/text&gt;</span><br><span class="line">        &lt;text class=&quot;hint&quot;&gt;&#123;&#123;texts&#125;&#125;&#123;&#123;num&#125;&#125;&#123;&#123;textss&#125;&#125;&lt;/text&gt;</span><br><span class="line">    &lt;/textarea&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
+<p>.wxss<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">.conts&#123;</span><br><span class="line">  width: 750rpx;</span><br><span class="line">  height: auto;</span><br><span class="line">  border: 1rpx soldi red;</span><br><span class="line">  margin-top: 30rpx;</span><br><span class="line">&#125;</span><br><span class="line">.areas&#123;</span><br><span class="line">  height:152rpx;</span><br><span class="line">  font-size: 30rpx;</span><br><span class="line">  text-indent: 28rpx;</span><br><span class="line">  border: 1rpx solid gainsboro;</span><br><span class="line">  padding-top: 30rpx;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  overflow: hidden;   </span><br><span class="line">  position: relative; </span><br><span class="line">&#125;</span><br><span class="line">.currentWordNumber&#123;</span><br><span class="line">  font-size: 28rpx;</span><br><span class="line">  color: gray;</span><br><span class="line">  position: absolute;</span><br><span class="line">  left: 480rpx;</span><br><span class="line">  top: -6rpx;</span><br><span class="line">&#125;</span><br><span class="line">.hint&#123;</span><br><span class="line">   font-size: 28rpx;</span><br><span class="line">   position: absolute;</span><br><span class="line">   top: 130rpx;</span><br><span class="line">   left: 320rpx;</span><br><span class="line">   color: #FF6600;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    texts: &quot;至少需要15个字&quot;,</span><br><span class="line">    min: 15,//最少字数</span><br><span class="line">    max: 520, //最多字数 (根据自己需求改变) </span><br><span class="line">    currentWordNumber:0</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  //字数限制  </span><br><span class="line">  inputs: function (e) &#123;</span><br><span class="line">    // 获取输入框的内容</span><br><span class="line">    var value = e.detail.value;</span><br><span class="line">    // 获取输入框内容的长度</span><br><span class="line">    var len = parseInt(value.length);</span><br><span class="line">    console.log(len)</span><br><span class="line">    //最少字数限制</span><br><span class="line">    if (len &lt;= this.data.min)</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        texts: &quot;至少还需要&quot;,</span><br><span class="line">        textss: &quot;字&quot;,</span><br><span class="line">        num:this.data.min-len</span><br><span class="line">      &#125;)</span><br><span class="line">    else if (len &gt; this.data.min)</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        texts: &quot; &quot;,</span><br><span class="line">        textss: &quot; &quot;,</span><br><span class="line">        num:&apos;&apos;</span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      currentWordNumber: len //当前字数  </span><br><span class="line">    &#125;);</span><br><span class="line">    //最多字数限制</span><br><span class="line">    if (len &gt; this.data.max) return;</span><br><span class="line">    // 当输入框内容的长度大于最大长度限制（max)时，终止setData()的执行</span><br><span class="line"></span><br><span class="line">    console.log(this.data)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>

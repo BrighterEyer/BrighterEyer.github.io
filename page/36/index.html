@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="BrighterEyer" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
   <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
@@ -279,68 +279,6 @@
     </div>
 </nav>
       <div class="body-wrap">
-  
-    <article id="post-/articles/2019/06/23/1561296357000.html" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2019/06/23/articles/2019/06/23/1561296357000.html/" class="article-date">
-      <time datetime="2019-06-23T13:25:57.000Z" itemprop="datePublished">2019-06-23</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2019/06/23/articles/2019/06/23/1561296357000.html/">[题目] vue</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="" target="_blank"></a><br><a href="https://www.cnblogs.com/fanlinqiang/p/7940379.html" target="_blank">vue 试题</a><br><a href="https://blog.csdn.net/hlx20080808/article/details/82498285" target="_blank">Vue.js面试题整理</a><br><a href="https://blog.csdn.net/weixin_39466493/article/details/88195892" target="_blank">2019前端面试题汇总（主要为Vue）</a><br><a href="https://blog.csdn.net/RedaTao/article/details/80617514" target="_blank">2018前端VUE面试题总结</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/题目/">题目</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
   
     <article id="post-/articles/2019/06/23/1561296356000.html" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -874,6 +812,68 @@
         <p><a href="" target="_blank"></a><br><a href="https://www.jianshu.com/p/8e08c7661275" target="_blank">react-native热更新全方位讲解</a><br><a href="https://blog.csdn.net/dounine/article/details/78529106" target="_blank">3分钟完成React-Native热更新</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/dounine/dounineApp</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">1. 创建React-Native项目</span><br><span class="line">react-native init dounineApp</span><br><span class="line"></span><br><span class="line">2. 安装code-push-cli</span><br><span class="line">npm install -g code-push-cli</span><br><span class="line"></span><br><span class="line">3. 注册code-push帐号</span><br><span class="line">code-push register</span><br><span class="line">Please login to Mobile Center in the browser window we&apos;ve just opened.</span><br><span class="line"></span><br><span class="line">Enter your token from the browser: </span><br><span class="line">#会弹出一个浏览器,让你注册,可以使用github帐号对其进行授权,授权成功会给一串Token,点击复制，在控制进行粘贴回车(或者使用code-push login命令)。</span><br><span class="line"></span><br><span class="line">Enter your token from the browser:  b0c9ba1f91dd232xxxxxxxxxxxxxxxxx</span><br><span class="line">#成功提示如下方</span><br><span class="line">Successfully logged-in. Your session file was written to /Users/huanghuanlai/.code-push.config. You can run the code-push logout command at any time to delete this file and terminate your session.</span><br><span class="line"></span><br><span class="line">4. 在code-push添加一个ios的app</span><br><span class="line"></span><br><span class="line">5. 继续在code-push添加一个android的app</span><br><span class="line"></span><br><span class="line">6. 在项目根目录添加react-native-code-push</span><br><span class="line">npm install react-native-code-push --save</span><br><span class="line">#或者</span><br><span class="line">yarn add react-native-code-push</span><br><span class="line"></span><br><span class="line">7. link react-native-code-push</span><br><span class="line"></span><br><span class="line">8. 在react-native的App.js文件添加自动更新代码</span><br><span class="line"></span><br><span class="line">9. 运行项目在ios模拟器上</span><br><span class="line">react-native run-ios</span><br><span class="line"></span><br><span class="line">10. 发布一个ios新版本</span><br><span class="line"></span><br><span class="line">11. 重新Load刷新应用</span><br><span class="line"></span><br><span class="line">12. 安卓发布，与上面9~11步骤是一样的，命令改成Android对应的,以下命令结果简化</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react-native</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-/articles/2019/06/20/1560991851000.html" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/06/20/articles/2019/06/20/1560991851000.html/" class="article-date">
+      <time datetime="2019-06-20T00:50:51.000Z" itemprop="datePublished">2019-06-20</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/06/20/articles/2019/06/20/1560991851000.html/">[react-native] 从零搭建App</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><a href="https://juejin.im/post/5a9f93d96fb9a028d2077c19" target="_blank">React-Native从零搭建App（长文）</a><br><a href="https://github.com/amandakelake/ReactNativeNavigationDemo" target="_blank">ReactNativeNavigationDemo</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">核心库：React-Native@0.54.0 </span><br><span class="line">路由导航：React-Native-Navigation </span><br><span class="line">状态管理：Redux、Redux-Thunk、Redux-Saga、Redux-persist </span><br><span class="line">静态测试：Flow</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
