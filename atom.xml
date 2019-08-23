@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brightereyer.xyz/"/>
-  <updated>2019-08-20T11:07:34.000Z</updated>
+  <updated>2019-08-23T12:21:10.000Z</updated>
   <id>http://brightereyer.xyz/</id>
   
   <author>
@@ -17,114 +17,88 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[移动web] H5下拉刷新上拉加载更多</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299254000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299254000.html/</id>
-    <published>2019-08-20T11:07:34.000Z</published>
-    <updated>2019-08-20T11:07:34.000Z</updated>
+    <title>[我的想法与行动] 学设计</title>
+    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566562870000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566562870000.html/</id>
+    <published>2019-08-23T12:21:10.000Z</published>
+    <updated>2019-08-23T12:21:10.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="http://www.jq22.com/jquery-info14467" target="_blank">H5下拉刷新上拉加载更多</a></p>]]></content>
+    <content type="html"><![CDATA[<p>结合设计师的建议总结学设计基本的要求：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1、装软件</span><br><span class="line">2、找教程、跟着练，或者寻求建议</span><br><span class="line">3、找对素材</span><br><span class="line">4、向 一些优秀 作品看齐</span><br><span class="line">5、期模仿加优化，后期创作</span><br><span class="line">6、经常会发到自己个人网站上，有大神点评给建议，或者有那种举例子优化前和优化后的的小视频看一看</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;http://www.jq22.com/jquery-info14467&quot; target=&quot;_blank&quot;&gt;H5下拉刷新上拉加载更多&lt;/a&gt;&lt;/p&gt;
-
+        &lt;p&gt;结合设计师的建议总结学设计基本的要求：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;lin
       
     
     </summary>
     
     
-      <category term="移动web" scheme="http://brightereyer.xyz/tags/%E7%A7%BB%E5%8A%A8web/"/>
+      <category term="我的想法与行动" scheme="http://brightereyer.xyz/tags/%E6%88%91%E7%9A%84%E6%83%B3%E6%B3%95%E4%B8%8E%E8%A1%8C%E5%8A%A8/"/>
     
   </entry>
   
   <entry>
-    <title>[阿里云] SSL数字证书Nginx配置部署指导</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299253000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299253000.html/</id>
-    <published>2019-08-20T11:07:33.000Z</published>
-    <updated>2019-08-20T11:07:33.000Z</updated>
+    <title>[软件] VS2010旗舰版安装必读</title>
+    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566562869000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566562869000.html/</id>
+    <published>2019-08-23T12:21:09.000Z</published>
+    <updated>2019-08-23T12:21:09.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://help.aliyun.com/video_detail/54216.html?spm=5176.2000002.0.0.51ce52e8G0bBmT" target="_blank">SSL数字证书Nginx配置部署指导</a><br><a href="https://help.aliyun.com/knowledge_detail/95491.html" target="_blank">Nginx/Tengine服务器安装SSL证书</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="thunder://QUFlZDJrOi8vfGZpbGV8Y25fdmlzdWFsX3N0dWRpb18yMDEwX3Byb2Zlc3Npb25hbF94ODZfZHZkXzUzMjE0NS5pc298MjU5MTg0NDM1Mnw2MDAxMjUzNDMxQUZFNTczRTQzNDRGNUEwQjFEOUNBQ3wvWlo=" target="_blank">迅雷链接 VS2010 专业版（中文版本）</a><br><a href="thunder://QUFlZDJrOi8vfGZpbGV8Y25fdmlzdWFsX3N0dWRpb18yMDEwX3VsdGltYXRlX3g4Nl9kdmRfNTMyMzQ3Lmlzb3wyNjg1OTgyNzIwfDRhZTYyMjg5MzNkZGU0OWQ5YmZhNGMzNDY3YzgzMWMyfFpa" target="_blank">迅雷链接 VS2010 旗舰版（中文版本）</a></p><p><a href="https://pan.baidu.com/s/1LAXfr_7R7qvhztqFw0iaRA" target="_blank">度娘链接 VS2010</a></p><p>VS2010 旗舰版可用Key：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YCFHQ9DWCYDKV88T2TMHG7BHP</span><br></pre></td></tr></table></figure></p><p>注意：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">中文版为iso镜像文件，使用 Daemon Tools 虚拟光驱软件载入进行安装。中文版镜像已包含Key，安装后即已激活，不需要像英文版所说的卸载时填注册码。</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://help.aliyun.com/video_detail/54216.html?spm=5176.2000002.0.0.51ce52e8G0bBmT&quot; target=&quot;_blank&quot;&gt;SSL数字证书Nginx配置部署指导&lt;/a&gt;&lt;br&gt;&lt;
+        &lt;p&gt;&lt;a href=&quot;thunder://QUFlZDJrOi8vfGZpbGV8Y25fdmlzdWFsX3N0dWRpb18yMDEwX3Byb2Zlc3Npb25hbF94ODZfZHZkXzUzMjE0NS5pc298MjU5MTg0NDM1Mnw2MDAxMjUzND
       
     
     </summary>
     
     
-      <category term="阿里云" scheme="http://brightereyer.xyz/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+      <category term="软件" scheme="http://brightereyer.xyz/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
-    <title>[weui] 移动web前端购物车加减按钮</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299252000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299252000.html/</id>
-    <published>2019-08-20T11:07:32.000Z</published>
-    <updated>2019-08-20T11:07:32.000Z</updated>
+    <title>[游戏] 五子棋大战</title>
+    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566559919000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566559919000.html/</id>
+    <published>2019-08-23T11:31:59.000Z</published>
+    <updated>2019-08-23T11:31:59.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://yq.aliyun.com/articles/643617" target="_blank">购物车加减按钮</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://mp.weixin.qq.com/s/8FjP2LgzadHeGA27HfWCHw" target="_blank">一个开源的五子棋大战送给各位小伙伴!</a><br><a href="https://github.com/lenve/GobangGame" target="_blank">GobangGame</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://yq.aliyun.com/articles/643617&quot; target=&quot;_blank&quot;&gt;购物车加减按钮&lt;/a&gt;&lt;/p&gt;
-
+        &lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/8FjP2LgzadHeGA27HfWCHw&quot; target=&quot;_blank&quot;&gt;一个开源的五子棋大战送给各位小伙伴!&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/lenve/G
       
     
     </summary>
     
     
-      <category term="weui" scheme="http://brightereyer.xyz/tags/weui/"/>
+      <category term="游戏" scheme="http://brightereyer.xyz/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
   <entry>
-    <title>[weui] swiper</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299251000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299251000.html/</id>
-    <published>2019-08-20T11:07:31.000Z</published>
-    <updated>2019-08-20T11:07:31.000Z</updated>
+    <title>[svn] 分支管理</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566480276000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566480276000.html/</id>
+    <published>2019-08-22T13:24:37.000Z</published>
+    <updated>2019-08-22T13:24:37.000Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&apos;text/javascript&apos; src=&apos;/js/swiper.js&apos; charset=&apos;utf-8&apos;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;swiper-container&quot; data-space-between=&apos;10&apos; data-pagination=&apos;.swiper-pagination&apos; data-autoplay=&quot;1000&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;swiper-wrapper&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  $(&quot;.swiper-container&quot;).swiper(config);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/justry_deng/article/details/82259470" target="_blank">TortoiseSVN打分支、合并分支、切换分支</a><br><a href="https://www.jianshu.com/p/187c9fe1d7ca" target="_blank">SVN分支</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
-      
-    
-    </summary>
-    
-    
-      <category term="weui" scheme="http://brightereyer.xyz/tags/weui/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[svn] 利用钩子脚本功能实现代码同步到web目录</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299250000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299250000.html/</id>
-    <published>2019-08-20T11:07:30.000Z</published>
-    <updated>2019-08-20T11:07:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.51cto.com/tianxingzhe/1655385" target="_blank">svn利用钩子脚本功能实现代码同步到web目录</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.51cto.com/tianxingzhe/1655385&quot; target=&quot;_blank&quot;&gt;svn利用钩子脚本功能实现代码同步到web目录&lt;/a&gt;&lt;/p&gt;
-
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/justry_deng/article/details/82259470&quot; target=&quot;_blank&quot;&gt;TortoiseSVN打分支、合并分支、切换分支&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www
       
     
     </summary>
@@ -135,352 +109,377 @@
   </entry>
   
   <entry>
-    <title>[springboot] 指定spring.profiles.active启动</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299249000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299249000.html/</id>
-    <published>2019-08-20T11:07:29.000Z</published>
-    <updated>2019-08-20T11:07:29.000Z</updated>
+    <title>[AE] 文字漂浮</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471024000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471024000.html/</id>
+    <published>2019-08-22T10:50:24.000Z</published>
+    <updated>2019-08-22T10:50:24.000Z</updated>
     
-    <content type="html"><![CDATA[<p>纯mvn启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn spring-boot:run -Ptest</span><br></pre></td></tr></table></figure></p><p><a href="https://docs.spring.io/spring-boot/docs/2.0.1.RELEASE/maven-plugin/examples/run-profiles.html" target="_blank">spring-boot mvn 启动参考资料</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">spring-boot 1.x mvn启动使用</span><br><span class="line">mvn spring-boot:run -Drun.profiles=test</span><br><span class="line"></span><br><span class="line">spring-boot 2.x mvn启动使用</span><br><span class="line">mvn spring-boot:run -Dspring-boot.run.profiles=test</span><br></pre></td></tr></table></figure></p><p>java方式启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar -Dspring.profiles.active=test demo-0.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure></p><p>Application.java启动类启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--spring.profiles.active=prod</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="http://pan.baidu.com/s/1EjGKmJ6fUuDanb1IUEHa1A" target="_blank">AE 文字漂浮 练习素材和音效</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">提取码：</span><br><span class="line">rg7s</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;纯mvn启动&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;
+        &lt;p&gt;&lt;a href=&quot;http://pan.baidu.com/s/1EjGKmJ6fUuDanb1IUEHa1A&quot; target=&quot;_blank&quot;&gt;AE 文字漂浮 练习素材和音效&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;t
       
     
     </summary>
     
     
-      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
+      <category term="AE" scheme="http://brightereyer.xyz/tags/AE/"/>
     
   </entry>
   
   <entry>
-    <title>[springboot] 整合jsp</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299248000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299248000.html/</id>
-    <published>2019-08-20T11:07:28.000Z</published>
-    <updated>2019-08-20T11:07:28.000Z</updated>
+    <title>[api] 百度地图api根据地址获取所属省市</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471023000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471023000.html/</id>
+    <published>2019-08-22T10:50:23.000Z</published>
+    <updated>2019-08-22T10:50:23.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_39885435/article/details/82556112" target="_blank">SpringBoot整合JSP</a><br><a href="https://github.com/fk123456?tab=repositories" target="_blank">github 事例</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/cc_1209/article/details/85208113" target="_blank">百度地图api根据地址获取所属省市</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_39885435/article/details/82556112&quot; target=&quot;_blank&quot;&gt;SpringBoot整合JSP&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.c
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/cc_1209/article/details/85208113&quot; target=&quot;_blank&quot;&gt;百度地图api根据地址获取所属省市&lt;/a&gt;&lt;/p&gt;
+
       
     
     </summary>
     
     
-      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
+      <category term="api" scheme="http://brightereyer.xyz/tags/api/"/>
     
   </entry>
   
   <entry>
-    <title>[springboot] 拦截器无效，不起作用</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299247000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299247000.html/</id>
-    <published>2019-08-20T11:07:27.000Z</published>
-    <updated>2019-08-20T11:07:27.000Z</updated>
+    <title>[git] 多人开发Git分支管理详解</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471021000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471021000.html/</id>
+    <published>2019-08-22T10:50:21.000Z</published>
+    <updated>2019-08-22T10:50:21.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/u012862619/article/details/81557779" target="_blank">Spring Boot 拦截器无效，不起作用</a></p><p>将拦截器配置到SpringBoot环境中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">目前（2.0.4.RELEASE版本）WebMvcConfigurerAdapter已过时，如果你执意要用的话，应该没啥坑。但是被强迫症时刻针对的人，坑就来啦。 </span><br><span class="line">WebMvcConfigurerAdapter过时了，那么用谁来代替呢？机智的人可能早就发现了，过时的这个只不过是个适配器（适配器模式），那就可以直接使用它所实现的那个接口啊，就是WebMvcConfigurer呗。对，就是这个，别犹豫了。。我就被百度坑得不轻，具体说说怎么被坑的吧。</span><br></pre></td></tr></table></figure></p><p>必须加上@Configuration注解，这样里边的@Bean才能起作用，Spring才能统一管理当前的拦截器实例。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class WebMvcConfig implements WebMvcConfigurer &#123;</span><br><span class="line"></span><br><span class="line">    private final ApiSecurityProperties security;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    public WebMvcConfig(ApiSecurityProperties security) &#123;</span><br><span class="line">        this.security = security;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public SecurityInterceptor securityInterceptor() &#123;</span><br><span class="line">        return new SecurityInterceptor(security);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void addInterceptors(InterceptorRegistry registry) &#123;</span><br><span class="line">        // 添加拦截器</span><br><span class="line">        registry.addInterceptor(securityInterceptor()).addPathPatterns(&quot;/api/**&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/ialexanderi/article/details/83217090" target="_blank">多人开发Git分支管理详解</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">查看分支:</span><br><span class="line">git branch -a </span><br><span class="line"></span><br><span class="line">创建分支:</span><br><span class="line">git branch name </span><br><span class="line"></span><br><span class="line">切换分支:</span><br><span class="line">git checkout name </span><br><span class="line"></span><br><span class="line">创建并切换:</span><br><span class="line">git checkout -b name </span><br><span class="line"></span><br><span class="line">合并某分支到当前分支:</span><br><span class="line">git merge name </span><br><span class="line"></span><br><span class="line">删除分支:</span><br><span class="line">git branch -d name </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">查看分支合并</span><br><span class="line">git log --graph --pretty=oneline --abbrev-commit</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">8.分支管理策略 </span><br><span class="line">下面我们来说一下一般企业中开发一个项目的分支策略： </span><br><span class="line"></span><br><span class="line">主分支 master </span><br><span class="line">开发分支 develop </span><br><span class="line">功能分支 feature </span><br><span class="line">预发布分支  release </span><br><span class="line">bug 分支 fixbug </span><br><span class="line">其它分支 other</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/u012862619/article/details/81557779&quot; target=&quot;_blank&quot;&gt;Spring Boot 拦截器无效，不起作用&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;将拦截器配置到SpringBoot环境
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/ialexanderi/article/details/83217090&quot; target=&quot;_blank&quot;&gt;多人开发Git分支管理详解&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;
       
     
     </summary>
     
     
-      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
+      <category term="git" scheme="http://brightereyer.xyz/tags/git/"/>
     
   </entry>
   
   <entry>
-    <title>[springboot] 静态资源拦截</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299246000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299246000.html/</id>
-    <published>2019-08-20T11:07:26.000Z</published>
-    <updated>2019-08-20T11:07:26.000Z</updated>
+    <title>[git] 根据commitId获取版本代码</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471020000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471020000.html/</id>
+    <published>2019-08-22T10:50:20.000Z</published>
+    <updated>2019-08-22T10:50:20.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="" target="_blank"></a><br><a href="https://blog.csdn.net/liu911025/article/details/81516114" target="_blank">springboot静态资源配置</a></p><p>WebMvcConfigurer接口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://yq.aliyun.com/articles/617307</span><br></pre></td></tr></table></figure></p><p><a href="https://www.cnblogs.com/kangkaii/p/9023751.html" target="_blank">问题描述：使用springboot 2.0后，按照springboot 1.5版本（以下简称旧版）的方式去配置项目。结果发现静态资源访问不到了，本文对此情况分析、处理</a><br><a href="https://www.cnblogs.com/kingsonfu/p/10386601.html" target="_blank">springboot2.0+ 使用拦截器导致静态资源被拦截</a><br><a href="https://www.jianshu.com/p/6469e9c37605" target="_blank">微服务SpringBoot2.0：静态资源和拦截器处理</a></p><p>SpringMVC： No mapping found for HTTP request with URI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">&lt;resources&gt;</span><br><span class="line">    &lt;resource&gt;</span><br><span class="line">    &lt;directory&gt;src/main/java&lt;/directory&gt;</span><br><span class="line">    &lt;includes&gt;</span><br><span class="line">        &lt;include&gt;**/*.properties&lt;/include&gt;</span><br><span class="line">        &lt;include&gt;**/*.xml&lt;/include&gt;</span><br><span class="line">    &lt;/includes&gt;</span><br><span class="line">    &lt;filtering&gt;false&lt;/filtering&gt;</span><br><span class="line">    &lt;/resource&gt;</span><br><span class="line">    &lt;resource&gt;</span><br><span class="line">    &lt;directory&gt;src/main/resources&lt;/directory&gt;</span><br><span class="line">    &lt;includes&gt;</span><br><span class="line">        &lt;include&gt;**/*.properties&lt;/include&gt;</span><br><span class="line">        &lt;include&gt;**/*.xml&lt;/include&gt;</span><br><span class="line">    &lt;/includes&gt;</span><br><span class="line">    &lt;filtering&gt;false&lt;/filtering&gt;</span><br><span class="line">    &lt;/resource&gt;</span><br><span class="line">&lt;/resources&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p>查看提交记录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show commit_id</span><br></pre></td></tr></table></figure></p><p>回退命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#回退到上个版本</span><br><span class="line">git reset --hard HEAD^</span><br><span class="line"></span><br><span class="line">#回退到前3次提交之前，以此类推，回退到n次提交之前</span><br><span class="line">git reset --hard HEAD~3</span><br><span class="line"></span><br><span class="line">#退到/进到 指定commit的sha码</span><br><span class="line">git reset --hard commit_id</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">强推到远程：</span><br><span class="line">git push origin HEAD --force</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/liu911025/article/details/81516114&quot; target=&quot;_blank&quot;&gt;springboot静态资源配置&lt;/a
+        &lt;p&gt;查看提交记录：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;
       
     
     </summary>
     
     
-      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
+      <category term="git" scheme="http://brightereyer.xyz/tags/git/"/>
     
   </entry>
   
   <entry>
-    <title>[springboot] 读取静态资源文件</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299245000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299245000.html/</id>
-    <published>2019-08-20T11:07:25.000Z</published>
-    <updated>2019-08-20T11:07:25.000Z</updated>
+    <title>[github] 仓库移交方法</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471019000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471019000.html/</id>
+    <published>2019-08-22T10:50:19.000Z</published>
+    <updated>2019-08-22T10:50:19.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/tiegenZ/article/details/80922103" target="_blank">SpringBoot项目读取静态资源文件</a><br><a href="http://www.matools.com/blog/190160341" target="_blank">springboot项目实现静态文件映射任意路径</a></p><p><a href="https://blog.csdn.net/sanpic/article/details/79519070" target="_blank">Springboot中关于 static 和 templates的注意事项, 以及webjars的配置</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.默认情况下, 网页存放于static目录下, 默认的&quot;/&quot;指向的是 ~/resouces/static/index.html文件</span><br><span class="line">2.如果引入了thymeleaf, 则默认指向的地址为 ~/resouces/templates/index.html</span><br></pre></td></tr></table></figure></p><p><a href="https://blog.csdn.net/qaq_666666/article/details/83383840" target="_blank">WebMvcConfigurer静态资源配置</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class WebConfig implements WebMvcConfigurer &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) &#123;</span><br><span class="line">        configurer.enable();</span><br><span class="line">    &#125;</span><br><span class="line">    @Bean</span><br><span class="line">    public InternalResourceViewResolver internalResourceViewResolver()&#123;</span><br><span class="line">        InternalResourceViewResolver resolver = new InternalResourceViewResolver();</span><br><span class="line">        resolver.setPrefix(&quot;/WEB-INF/views/&quot;);</span><br><span class="line">        resolver.setSuffix(&quot;.html&quot;);</span><br><span class="line">        return resolver;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/huutu/article/details/51355964" target="_blank">在Github上仓库移交的方法</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/tiegenZ/article/details/80922103&quot; target=&quot;_blank&quot;&gt;SpringBoot项目读取静态资源文件&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.matools.
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/huutu/article/details/51355964&quot; target=&quot;_blank&quot;&gt;在Github上仓库移交的方法&lt;/a&gt;&lt;/p&gt;
+
       
     
     </summary>
     
     
-      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
+      <category term="github" scheme="http://brightereyer.xyz/tags/github/"/>
     
   </entry>
   
   <entry>
-    <title>[springboot] thymeleaf配置</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299244000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299244000.html/</id>
-    <published>2019-08-20T11:07:24.000Z</published>
-    <updated>2019-08-20T11:07:24.000Z</updated>
+    <title>[java] excel加水印</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471018000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471018000.html/</id>
+    <published>2019-08-22T10:50:18.000Z</published>
+    <updated>2019-08-22T10:50:18.000Z</updated>
     
-    <content type="html"><![CDATA[<p>【注意】不进行配置的话，controller会找不到页面路径</p><p><a href="https://blog.csdn.net/weixin_39723544/article/details/82721279" target="_blank">springboot Thymeleaf</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- ThymeLeaf 依赖 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p><p>application.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">###ThymeLeaf配置</span><br><span class="line">spring:</span><br><span class="line">  thymeleaf:</span><br><span class="line">    #模板的模式，支持 HTML, XML TEXT JAVASCRIPT</span><br><span class="line">    mode: HTML5</span><br><span class="line">    #编码 可不用配置</span><br><span class="line">    encoding: UTF-8</span><br><span class="line">    #内容类别,可不用配置</span><br><span class="line">    content-type: text/html</span><br><span class="line">    #开发配置为false,避免修改模板还要重启服务器</span><br><span class="line">    cache: false</span><br><span class="line">    #配置模板路径，默认是templates，可以不用配置</span><br><span class="line">    prefix: classpath:/templates</span><br></pre></td></tr></table></figure></p><p>application.properties<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#thymeleaf配置</span><br><span class="line">spring.thymeleaf.mode=HTML5</span><br><span class="line">spring.thymeleaf.encoding=UTF-8</span><br><span class="line">spring.thymeleaf.content-type=text/html</span><br><span class="line">spring.thymeleaf.prefix=classpath:/templates/</span><br><span class="line">spring.thymeleaf.suffix=.html</span><br><span class="line">#热部署文件，页面不产生缓存，及时更新</span><br><span class="line">spring.thymeleaf.cache=false</span><br><span class="line">spring.resources.chain.strategy.content.enabled=true</span><br><span class="line">spring.resources.chain.strategy.content.paths=/**</span><br></pre></td></tr></table></figure></p><p>spring-boot-starter-thymeleaf版本配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.1.3.RELEASE</span><br></pre></td></tr></table></figure></p><p><a href="https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf" target="_blank">spring-boot-starter-thymeleaf maven各版本</a></p><p>thymeleaf单独版本配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;properties&gt;</span><br><span class="line">   &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;</span><br><span class="line">   &lt;thymeleaf.version&gt;3.0.0.RELEASE&lt;/thymeleaf.version&gt;</span><br><span class="line">   &lt;thymeleaf-layout-dialect.version&gt;2.0.0&lt;/thymeleaf-layout-dialect.version&gt;</span><br><span class="line"> &lt;/properties&gt;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/5ebf2217f0be" target="_blank">excel加水印</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;【注意】不进行配置的话，controller会找不到页面路径&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_39723544/article/details/82721279&quot; target=&quot;_blank&quot;&gt;springboot
+        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/5ebf2217f0be&quot; target=&quot;_blank&quot;&gt;excel加水印&lt;/a&gt;&lt;/p&gt;
+
       
     
     </summary>
     
     
-      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
+      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
     
   </entry>
   
   <entry>
-    <title>[springboot] js+es6语法</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299243000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299243000.html/</id>
-    <published>2019-08-20T11:07:23.000Z</published>
-    <updated>2019-08-20T11:07:23.000Z</updated>
+    <title>[java] http请求工具类</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471017000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471017000.html/</id>
+    <published>2019-08-22T10:50:17.000Z</published>
+    <updated>2019-08-22T10:50:17.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_35275233/article/details/87909876" target="_blank">SpringCloud 学习笔记 前端（二） ES6语法相关介绍</a></p><p><a href="https://blog.csdn.net/mf_717714/article/details/84621691" target="_blank">使用srcipt引入js的情况下使用ES6的export的import语法</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;script src=&quot;api.js&quot; type=&quot;module&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;util.js&quot; type=&quot;module&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;module&quot;&gt;</span><br><span class="line">import &#123; Obj, argu &#125; from &apos;./util.js&apos;</span><br><span class="line">var a = argu(10);</span><br><span class="line">var b = Obj.add(10);</span><br><span class="line">var c = Obj.reduce(10);</span><br><span class="line">console.log(&apos;index&apos;,a, b, c)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_18769269/article/details/90439124" target="_blank">java http请求工具类</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><span class="line">import org.apache.commons.lang.StringUtils;</span><br><span class="line">import org.apache.commons.logging.Log;</span><br><span class="line">import org.apache.commons.logging.LogFactory;</span><br><span class="line"></span><br><span class="line">import java.io.*;</span><br><span class="line">import java.net.HttpURLConnection;</span><br><span class="line">import java.net.URL;</span><br><span class="line">import java.net.URLConnection;</span><br><span class="line">import java.net.URLEncoder;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Map;</span><br><span class="line"></span><br><span class="line">public class HttpUtil &#123;</span><br><span class="line">    public static final String DEFAULT_CHARSET = &quot;utf-8&quot;;</span><br><span class="line"></span><br><span class="line">    public static final Log logger = LogFactory.getLog(HttpUtil.class);</span><br><span class="line">    public static String doGet(String baseUrl, Map&lt;String, String&gt; paramMap) &#123;</span><br><span class="line">        StringBuffer queryString = new StringBuffer();</span><br><span class="line">        for (String param : paramMap.keySet()) &#123;</span><br><span class="line">            String value = paramMap.get(param);</span><br><span class="line">            if (StringUtils.isNotBlank(value)) &#123;</span><br><span class="line">                try &#123;</span><br><span class="line">                    value = URLEncoder.encode(value, DEFAULT_CHARSET);</span><br><span class="line">                &#125; catch (UnsupportedEncodingException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">                queryString.append(param).append(&quot;=&quot;).append(value).append(&quot;&amp;&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return doGet(baseUrl, queryString.toString());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 向指定URL发送GET方法的请求</span><br><span class="line">     *</span><br><span class="line">     * @param baseUrl 发送请求的URL</span><br><span class="line">     * @param param   请求参数，请求参数应该是 name1=value1&amp;name2=value2 的形式。</span><br><span class="line">     * @return URL 所代表远程资源的响应结果</span><br><span class="line">     */</span><br><span class="line">    public static String doGet(String baseUrl, String param) &#123;</span><br><span class="line">        String result = &quot;&quot;;</span><br><span class="line">        BufferedReader in = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            String urlNameString =baseUrl;</span><br><span class="line">            if(param!=null)&#123;</span><br><span class="line">                urlNameString = baseUrl + &quot;?&quot; + param;</span><br><span class="line">            &#125;</span><br><span class="line">            logger.info(&quot;http请求：&quot; + urlNameString);</span><br><span class="line">            URL realUrl = new URL(urlNameString);</span><br><span class="line">            // 打开和URL之间的连接</span><br><span class="line">            HttpURLConnection connection = (HttpURLConnection) realUrl.openConnection();</span><br><span class="line">            // 设置通用的请求属性</span><br><span class="line">            connection.setRequestProperty(&quot;Content-Type&quot;, &quot;text/plain; charset=utf-8&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;Charsert&quot;, DEFAULT_CHARSET);</span><br><span class="line">            connection.setRequestProperty(&quot;accept&quot;, &quot;*/*&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;connection&quot;, &quot;Keep-Alive&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;user-agent&quot;,</span><br><span class="line">                    &quot;Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)&quot;);</span><br><span class="line">            // 建立实际的连接</span><br><span class="line">            connection.connect();</span><br><span class="line">            if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) &#123;</span><br><span class="line">                // 获取所有响应头字段</span><br><span class="line">                Map&lt;String, List&lt;String&gt;&gt; map = connection.getHeaderFields();</span><br><span class="line">                // 遍历所有的响应头字段</span><br><span class="line">                for (String key : map.keySet()) &#123;</span><br><span class="line">                    logger.info(key + &quot;---&gt;&quot; + map.get(key));</span><br><span class="line">                &#125;</span><br><span class="line">                // 定义 BufferedReader输入流来读取URL的响应</span><br><span class="line">                in = new BufferedReader(new InputStreamReader(</span><br><span class="line">                        connection.getInputStream()));</span><br><span class="line">                String line;</span><br><span class="line">                while ((line = in.readLine()) != null) &#123;</span><br><span class="line">                    result += line;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.info(&quot;发送GET请求出现异常！&quot; + e);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        // 使用finally块来关闭输入流</span><br><span class="line">        finally &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                if (in != null) &#123;</span><br><span class="line">                    in.close();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; catch (Exception e2) &#123;</span><br><span class="line">                e2.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static String doGet(String baseUrl) &#123;</span><br><span class="line">        return doGet(baseUrl,&quot;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 向指定 URL 发送POST方法的请求</span><br><span class="line">     *</span><br><span class="line">     * @param url   发送请求的 URL</span><br><span class="line">     * @param param 请求参数，请求参数应该是 name1=value1&amp;name2=value2 的形式。</span><br><span class="line">     * @return 所代表远程资源的响应结果</span><br><span class="line">     */</span><br><span class="line">    public static String doPost(String url, String param) &#123;</span><br><span class="line">        PrintWriter out = null;</span><br><span class="line">        BufferedReader in = null;</span><br><span class="line">        String result = &quot;&quot;;</span><br><span class="line">        try &#123;</span><br><span class="line">            URL realUrl = new URL(url);</span><br><span class="line">            // 打开和URL之间的连接</span><br><span class="line">            URLConnection connection = realUrl.openConnection();</span><br><span class="line">            // 设置通用的请求属性</span><br><span class="line">            connection.setRequestProperty(&quot;Content-Type&quot;, &quot;text/plain; charset=utf-8&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;Charsert&quot;, &quot;UTF-8&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;accept&quot;, &quot;*/*&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;connection&quot;, &quot;Keep-Alive&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;user-agent&quot;,</span><br><span class="line">                    &quot;Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)&quot;);</span><br><span class="line">            // 发送POST请求必须设置如下两行</span><br><span class="line">            connection.setDoOutput(true);</span><br><span class="line">            connection.setDoInput(true);</span><br><span class="line">            // 获取URLConnection对象对应的输出流</span><br><span class="line">            out = new PrintWriter(connection.getOutputStream());</span><br><span class="line">            // 发送请求参数</span><br><span class="line">            out.print(param);</span><br><span class="line">            // flush输出流的缓冲</span><br><span class="line">            out.flush();</span><br><span class="line">            // 定义BufferedReader输入流来读取URL的响应</span><br><span class="line">            in = new BufferedReader(</span><br><span class="line">                    new InputStreamReader(connection.getInputStream()));</span><br><span class="line">            String line;</span><br><span class="line">            while ((line = in.readLine()) != null) &#123;</span><br><span class="line">                result += line;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.info(&quot;发送 POST 请求出现异常！&quot; + e);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        //使用finally块来关闭输出流、输入流</span><br><span class="line">        finally &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                if (out != null) &#123;</span><br><span class="line">                    out.close();</span><br><span class="line">                &#125;</span><br><span class="line">                if (in != null) &#123;</span><br><span class="line">                    in.close();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; catch (IOException ex) &#123;</span><br><span class="line">                ex.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_35275233/article/details/87909876&quot; target=&quot;_blank&quot;&gt;SpringCloud 学习笔记 前端（二） ES6语法相关介绍&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_18769269/article/details/90439124&quot; target=&quot;_blank&quot;&gt;java http请求工具类&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain
       
     
     </summary>
     
     
-      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
+      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
     
   </entry>
   
   <entry>
-    <title>[shell] 截取最后一列</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299242000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299242000.html/</id>
-    <published>2019-08-20T11:07:22.000Z</published>
-    <updated>2019-08-20T11:07:22.000Z</updated>
+    <title>[java] Java数据类型和MySql数据类型对应一览表</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471016000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471016000.html/</id>
+    <published>2019-08-22T10:50:16.000Z</published>
+    <updated>2019-08-22T10:50:16.000Z</updated>
     
-    <content type="html"><![CDATA[<p>shell 截取最后一列<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat yyb.txt | awk -F_ &apos;&#123;print pring substr($0,1,length-length($NF))&#125;&apos; </span><br><span class="line"></span><br><span class="line">echo &apos;1,TENCENT_oaoHX0_f9cansGa2b0RXASLj9HwE_1&apos;|awk -F &apos;,&apos; &apos;&#123;print substr($2,1,match($2,/_[0-9]+$/)-1)&#125;&apos;</span><br></pre></td></tr></table></figure></p><p><a href="https://blog.csdn.net/david_xtd/article/details/25888907" target="_blank">awk取最后一列</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">| sed -n &apos;$p&apos;| awk &apos;&#123;print $NF&#125;&apos;</span><br></pre></td></tr></table></figure></p><p>例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp|grep 9020 | sed -n &apos;$p&apos;| awk &apos;&#123;print $NF&#125;&apos;| tr -cd &quot;[0-9]&quot;</span><br></pre></td></tr></table></figure></p><p>shell命令-从字符串中提取数字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;2014年7月21日&quot; | tr -cd &quot;[0-9]&quot;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/defonds/article/details/46681701" target="_blank">Java数据类型和MySql数据类型对应一览表</a><br><a href="https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-reference-type-conversions.html" target="_blank">mysql官方表</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;shell 截取最后一列&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/s
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/defonds/article/details/46681701&quot; target=&quot;_blank&quot;&gt;Java数据类型和MySql数据类型对应一览表&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://dev.mysq
       
     
     </summary>
     
     
-      <category term="shell" scheme="http://brightereyer.xyz/tags/shell/"/>
+      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
     
   </entry>
   
   <entry>
-    <title>[shell] 常用shell脚本</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299241000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299241000.html/</id>
-    <published>2019-08-20T11:07:21.000Z</published>
-    <updated>2019-08-20T11:07:21.000Z</updated>
+    <title>[java] Mybatis处理枚举类型</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471015000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471015000.html/</id>
+    <published>2019-08-22T10:50:15.000Z</published>
+    <updated>2019-08-22T10:50:15.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.jb51.net/article/148941.htm" target="_blank">分享9个实战及面试常用Linux Shell脚本编写</a><br><a href="https://www.jb51.net/article/135168.htm" target="_blank">分享70个经典的 Shell 脚本面试题与答案</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="" target="_blank"></a><br><a href="https://blog.csdn.net/qq_28988969/article/details/78605735" target="_blank">Mybatis处理枚举类型</a><br><a href="https://segmentfault.com/a/1190000012564028" target="_blank">使用MyBatis简化枚举类值的存储和读取</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://www.jb51.net/article/148941.htm&quot; target=&quot;_blank&quot;&gt;分享9个实战及面试常用Linux Shell脚本编写&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.jb51.net/article
+        &lt;p&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/qq_28988969/article/details/78605735&quot; target=&quot;_blank&quot;&gt;Mybatis处理枚举类型&lt;/a&gt;
       
     
     </summary>
     
     
-      <category term="shell" scheme="http://brightereyer.xyz/tags/shell/"/>
+      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
     
   </entry>
   
   <entry>
-    <title>[nginx] 配置静态资源直接访问</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299240000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299240000.html/</id>
-    <published>2019-08-20T11:07:20.000Z</published>
-    <updated>2019-08-20T11:07:20.000Z</updated>
+    <title>[java] 处理表情包存储</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471014000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471014000.html/</id>
+    <published>2019-08-22T10:50:14.000Z</published>
+    <updated>2019-08-22T10:50:14.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/youcong/p/10060303.html" target="_blank">nginx配置静态资源直接访问</a></p><p>配置图片访问路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name localhost;</span><br><span class="line"></span><br><span class="line">        #charset koi8-r;</span><br><span class="line"></span><br><span class="line">        #access_log logs/host.access.log main;</span><br><span class="line"> </span><br><span class="line">        location ~ .*\.(gif|jpg|jpeg|png)$ &#123;</span><br><span class="line">               expires 24h;</span><br><span class="line">               root /usr/local/nginx/html/images;#指定图片存放路径</span><br><span class="line">               access_log /usr/local/nginx/logs/images.log;#日志存放路径</span><br><span class="line">               proxy_store on;</span><br><span class="line">               proxy_store_access user:rw group:rw all:rw;</span><br><span class="line">               proxy_temp_path /usr/local/nginx/html/images;#图片访问路径</span><br><span class="line">               proxy_redirect off;</span><br><span class="line">               proxy_set_header Host 127.0.0.1;</span><br><span class="line">               client_max_body_size 10m;</span><br><span class="line">               client_body_buffer_size 1280k;</span><br><span class="line">               proxy_connect_timeout 900;</span><br><span class="line">               proxy_send_timeout 900;</span><br><span class="line">               proxy_read_timeout 900;</span><br><span class="line">               proxy_buffer_size 40k;</span><br><span class="line">               proxy_buffers 40 320k;</span><br><span class="line">               proxy_busy_buffers_size 640k;</span><br><span class="line">               proxy_temp_file_write_size 640k;</span><br><span class="line">               if ( !-e $request_filename)</span><br><span class="line">               &#123;</span><br><span class="line">                         proxy_pass http://127.0.0.1;#默认80端口</span><br><span class="line">               &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        location / &#123;</span><br><span class="line">               root /usr/local/nginx/html/images; #html访问路径</span><br><span class="line">               index index.html index2.htm; #html文件名称</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><a href="https://www.jianshu.com/p/889fcd3a20ba" target="_blank">nginx配置相关</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">在nginx下配置对应的 静态资源文件夹、访问日志</span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name 127.0.0.1;</span><br><span class="line">    access_log /usr/local/nginx/logs/mapi-access.log;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass http://127.0.0.1:80;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><a href="https://www.cnblogs.com/sanduzxcvbnm/p/11310316.html" target="_blank" rel="noopener">nginx配置：静态访问txt文件</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name 127.0.0.1;</span><br><span class="line">    access_log /usr/local/nginx/logs/mapi-access.log;</span><br><span class="line"></span><br><span class="line">    location MP_verify_ZAdcMvTbvMcSxIDe.txt &#123;</span><br><span class="line">        alias /usr/local/nginx/txt/MP_verify_ZAdcMvTbvMcSxIDe.txt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location ~ \.(txt|json)$ &#123;</span><br><span class="line">    root /usr/local/nginx/txt/;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Nginx配置txt、pdf、doc、xls等文件直接下载的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if ($request_filename ~* ^.*?\.(txt|pdf|doc|xls)$)&#123;  </span><br><span class="line">    add_header Content-Disposition: &apos;attachment;&apos;;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/samHuangLiang/article/details/80677844" target="_blank">java 处理表情包存储</a></p><p>1、引入依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;com.vdurmont&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;emoji-java&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.2.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p><p>2、<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#将表情符号转为字符后存储到数据库</span><br><span class="line">EmojiParser.parseToAliases(string);</span><br><span class="line"></span><br><span class="line">#将数据库查询字符转为表情符号</span><br><span class="line">EmojiParser.parseToUnicode(string);</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/youcong/p/10060303.html&quot; target=&quot;_blank&quot;&gt;nginx配置静态资源直接访问&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;配置图片访问路径&lt;br&gt;&lt;figure class=&quot;highlight
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/samHuangLiang/article/details/80677844&quot; target=&quot;_blank&quot;&gt;java 处理表情包存储&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1、引入依赖&lt;br&gt;&lt;figure class=&quot;h
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[java] 支付宝和微信（APP支付，提现，退款）</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471013000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471013000.html/</id>
+    <published>2019-08-22T10:50:13.000Z</published>
+    <updated>2019-08-22T10:50:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_37711237/article/details/79932836" target="_blank">JAVA支付宝和微信（APP支付，提现，退款）</a></p><p><a href="https://blog.csdn.net/Goldmeng/article/details/86302004" target="_blank">微信提现——企业付款到零钱demo（超详细小白都看得懂的）</a></p><p><a href="https://github.com/janlle/java-pay" target="_blank">java-pay（不含sql，但含mapper）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">微信App、小程序、微信扫码支付、微信退款、支付宝App、扫码支付，提现、退款</span><br><span class="line"></span><br><span class="line">java-pay</span><br><span class="line">基于 Spring Boot 的各种支付对接微信App支付、小程序支付、微信扫码支付、微信退款、支付宝App支付、扫码支付，提现、退款</span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/Homiss/WechatPay" target="_blank">WechatPay（可独立）|网站微信扫码支付、退款以及回调功能实现</a></p><p><a href="https://gitee.com/52itstyle/spring-boot-pay" target="_blank">小柒2012-spring-boot-pay</a></p><p><a href="https://github.com/egzosn/pay-java-parent" target="_blank">pay-java-parent</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">全能第三方支付对接Java开发工具包.优雅的轻量级支付模块集成支付对接支付整合（微信,支付宝,银联,友店,富友,跨境支付paypal,payoneer(P卡派安盈)易极付）app,扫码,网页支付刷卡付条码付刷脸付转账服务商模式、支持多种支付类型多支付账户，支付与业务完全剥离，简单几行代码即可实现支付，简单快速完成支付模块的开发，可轻松嵌入到任何系统里 目前仅是一个开发工具包（即SDK），只提供简单Web实现，建议使用maven或gradle引用本项目即可使用本SDK提供的各种支付相关</span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/Jasonandy/springboot-wx" target="_blank">springboot-wx</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.wx-apps 大概需要的实现的功能模块</span><br><span class="line">微信小程序Java和后台</span><br><span class="line"></span><br><span class="line">1.整合小程序</span><br><span class="line"></span><br><span class="line">2.接口服务</span><br><span class="line"></span><br><span class="line">3.对外提供api网关服务</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">9.xxx</span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/tiankong0310/springboot-weixin-alipay" target="_blank">springboot-weixin-alipay</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">springboot-weixin-alipay通用商城(小程序,微信,app,网站)支付项目,</span><br><span class="line">基于springboot2.0+freemarker+mybatis+druid,</span><br><span class="line">实现了支付宝，微信支付功能，用户列表,商品列表,选择购买,提交订单,扫码支付,订单表单提交支付功能</span><br><span class="line">已使用支付项目地址：</span><br><span class="line">https://gitee.com/tiankong0310/my-shop.git</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_37711237/article/details/79932836&quot; target=&quot;_blank&quot;&gt;JAVA支付宝和微信（APP支付，提现，退款）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[jpa] 使用idea从数据库快速生成SpringDataJPA实体类</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471012000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471012000.html/</id>
+    <published>2019-08-22T10:50:12.000Z</published>
+    <updated>2019-08-22T10:50:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/bodhitree/p/9469052.html" target="_blank">idea 从数据库快速生成Spring Data JPA实体类</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">第一步:</span><br><span class="line">调出 Persistence 窗口</span><br><span class="line">File -&gt; Project Structure... -&gt; Moduals -&gt; (+) Hibernate</span><br><span class="line"></span><br><span class="line">第二步:</span><br><span class="line">打开 Persistence 窗口</span><br><span class="line"></span><br><span class="line">Persistence 右键选择 -&gt; By Database Schema -&gt; Generate Persistence Mapping</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/bodhitree/p/9469052.html&quot; target=&quot;_blank&quot;&gt;idea 从数据库快速生成Spring Data JPA实体类&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highligh
+      
+    
+    </summary>
+    
+    
+      <category term="jpa" scheme="http://brightereyer.xyz/tags/jpa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[jquery] 获取和修改img的src</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471011000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471011000.html/</id>
+    <published>2019-08-22T10:50:11.000Z</published>
+    <updated>2019-08-22T10:50:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>获取：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#imgId&quot;)[0].src;</span><br></pre></td></tr></table></figure></p><p>修改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#imgId&quot;).attr(&apos;src&apos;,path);</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;获取：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre
+      
+    
+    </summary>
+    
+    
+      <category term="jquery" scheme="http://brightereyer.xyz/tags/jquery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[layui] 省市区联动(含下载)</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471010000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471010000.html/</id>
+    <published>2019-08-22T10:50:10.000Z</published>
+    <updated>2019-08-22T10:50:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.jpw.net/code/636431820895762098" target="_blank">基于layui开发的省市区三级联动下拉框（含下载）</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.jpw.net/code/636431820895762098&quot; target=&quot;_blank&quot;&gt;基于layui开发的省市区三级联动下拉框（含下载）&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="layui" scheme="http://brightereyer.xyz/tags/layui/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[mysql] 计算经纬度距离</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471009000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471009000.html/</id>
+    <published>2019-08-22T10:50:09.000Z</published>
+    <updated>2019-08-22T10:50:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/jiafuwei/p/5699091.html" target="_blank">mysql计算经纬度距离</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql距离计算，单位m，以及排序</span><br><span class="line">lon 经度 lat 纬度</span><br><span class="line">一般地图上显示的坐标顺序为，纬度在前（范围-90~90），经度在后（范围-180~180）</span><br><span class="line">首先新建一张表，里面包含经纬度</span><br></pre></td></tr></table></figure></p><p>新建customer表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">SET FOREIGN_KEY_CHECKS=0;</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Table structure for customer</span><br><span class="line">-- ----------------------------</span><br><span class="line">DROP TABLE IF EXISTS `customer`;</span><br><span class="line">CREATE TABLE `customer` (</span><br><span class="line">  `id` int(11) unsigned NOT NULL auto_increment COMMENT &apos;自增主键&apos;,</span><br><span class="line">  `name` varchar(50) NOT NULL COMMENT &apos;名称&apos;,</span><br><span class="line">  `lon` double(9,6) NOT NULL COMMENT &apos;经度&apos;,</span><br><span class="line">  `lat` double(8,6) NOT NULL COMMENT &apos;纬度&apos;,</span><br><span class="line">  PRIMARY KEY  (`id`)</span><br><span class="line">) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT=&apos;商户表&apos;;</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Records of customer</span><br><span class="line">-- ----------------------------</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;1&apos;, &apos;天津市区&apos;, &apos;117.315575&apos;, &apos;39.133462&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;2&apos;, &apos;北京市区&apos;, &apos;116.407999&apos;, &apos;39.894073&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;3&apos;, &apos;保定&apos;, &apos;115.557124&apos;, &apos;38.853490&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;4&apos;, &apos;石家庄&apos;, &apos;114.646458&apos;, &apos;38.072369&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;5&apos;, &apos;昌平区1&apos;, &apos;116.367180&apos;, &apos;40.009561&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;6&apos;, &apos;海淀区2&apos;, &apos;116.313425&apos;, &apos;39.973078&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;7&apos;, &apos;海淀区1&apos;, &apos;116.329236&apos;, &apos;39.987231&apos;);</span><br></pre></td></tr></table></figure></p><p>传入参数 纬度 40.0497810000 经度 116.3424590000<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">/*传入的参数为  纬度 纬度 经度 ASC升序由近至远 DESC 降序 由远到近 */</span><br><span class="line">SELECT</span><br><span class="line">    *,</span><br><span class="line">    ROUND(</span><br><span class="line">        6378.138 * 2 * ASIN(</span><br><span class="line">            SQRT(</span><br><span class="line">                POW(</span><br><span class="line">                    SIN(</span><br><span class="line">                        (</span><br><span class="line">                            40.0497810000 * PI() / 180 - lat * PI() / 180</span><br><span class="line">                        ) / 2</span><br><span class="line">                    ),</span><br><span class="line">                    2</span><br><span class="line">                ) + COS(40.0497810000 * PI() / 180) * COS(lat * PI() / 180) * POW(</span><br><span class="line">                    SIN(</span><br><span class="line">                        (</span><br><span class="line">                            116.3424590000 * PI() / 180 - lon * PI() / 180</span><br><span class="line">                        ) / 2</span><br><span class="line">                    ),</span><br><span class="line">                    2</span><br><span class="line">                )</span><br><span class="line">            )</span><br><span class="line">        ) * 1000</span><br><span class="line">    ) AS juli</span><br><span class="line">FROM</span><br><span class="line">    customer</span><br><span class="line">ORDER BY</span><br><span class="line">    juli ASC</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/jiafuwei/p/5699091.html&quot; target=&quot;_blank&quot;&gt;mysql计算经纬度距离&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="mysql" scheme="http://brightereyer.xyz/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[nginx] Nginx+Tomcat搭建集群,SpringSession+Redis实现Session共享</title>
+    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471008000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471008000.html/</id>
+    <published>2019-08-22T10:50:08.000Z</published>
+    <updated>2019-08-22T10:50:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://mp.weixin.qq.com/s/xK0fOKRYrkNFR6s_bRP56Q" target="_blank">Nginx+Tomcat搭建集群，Spring Session+Redis实现Session共享</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/xK0fOKRYrkNFR6s_bRP56Q&quot; target=&quot;_blank&quot;&gt;Nginx+Tomcat搭建集群，Spring Session+Redis实现Session共享&lt;/a&gt;&lt;/p&gt;
+
       
     
     </summary>
     
     
       <category term="nginx" scheme="http://brightereyer.xyz/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[maven] 打包显示本地时区</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299239000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299239000.html/</id>
-    <published>2019-08-20T11:07:19.000Z</published>
-    <updated>2019-08-20T11:07:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://cloud.tencent.com/developer/ask/42360" target="_blank">maven.build.time戳中显示本地时区</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;groupId&gt;com.code.api&lt;/groupId&gt;</span><br><span class="line">&lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;</span><br><span class="line">&lt;artifactId&gt;com.code.api&lt;/artifactId&gt;</span><br><span class="line">&lt;packaging&gt;jar&lt;/packaging&gt;</span><br><span class="line"></span><br><span class="line">&lt;properties&gt;</span><br><span class="line">    &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span><br><span class="line">    &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span><br><span class="line">    &lt;maven.compiler.encoding&gt;UTF-8&lt;/maven.compiler.encoding&gt;</span><br><span class="line">    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;</span><br><span class="line">    &lt;project.build.locales&gt;zh_CN&lt;/project.build.locales&gt;</span><br><span class="line"></span><br><span class="line">    &lt;maven.build.timestamp.format&gt;yyyy-MM-dd_HH_mm&lt;/maven.build.timestamp.format&gt;</span><br><span class="line">&lt;/properties&gt;</span><br><span class="line"></span><br><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;finalName&gt;$&#123;project.artifactId&#125;-$&#123;project.version&#125;&lt;/finalName&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 根据时间戳命名文件 --&gt;</span><br><span class="line">    &lt;!--&lt;finalName&gt;$&#123;project.artifactId&#125;-$&#123;maven.build.timestamp&#125;&lt;/finalName&gt;--&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://cloud.tencent.com/developer/ask/42360&quot; target=&quot;_blank&quot;&gt;maven.build.time戳中显示本地时区&lt;/a&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="maven" scheme="http://brightereyer.xyz/tags/maven/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[linux] 结束指定端口进程</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299238000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299238000.html/</id>
-    <published>2019-08-20T11:07:18.000Z</published>
-    <updated>2019-08-20T11:07:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>结束指定端口进程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat -apn | grep 4040</span><br><span class="line">kill -9 pid</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;结束指定端口进程&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://brightereyer.xyz/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[js] 手机号格式验证</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299237000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299237000.html/</id>
-    <published>2019-08-20T11:07:17.000Z</published>
-    <updated>2019-08-20T11:07:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>手机号码校验规则<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let valid_rule = /^(13[0-9]|14[5-9]|15[012356789]|166|17[0-8]|18[0-9]|19[8-9])[0-9]&#123;8&#125;$/;</span><br><span class="line">if(!valid_rule.test(phone_number)) &#123;</span><br><span class="line">    alert(&apos;手机号码格式有误&apos;);</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;手机号码校验规则&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="js" scheme="http://brightereyer.xyz/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[jqweui] 计数器</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299236000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299236000.html/</id>
-    <published>2019-08-20T11:07:16.000Z</published>
-    <updated>2019-08-20T11:07:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://jqweui.com/extends#count" target="_blank">jqweui 计数器</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var MAX = 99, MIN = 1;</span><br><span class="line">$(&apos;.weui-count__decrease&apos;).click(function (e) &#123;</span><br><span class="line">  var $input = $(e.currentTarget).parent().find(&apos;.weui-count__number&apos;);</span><br><span class="line">  var number = parseInt($input.val() || &quot;0&quot;) - 1</span><br><span class="line">  if (number &lt; MIN) number = MIN;</span><br><span class="line">  $input.val(number)</span><br><span class="line">&#125;)</span><br><span class="line">$(&apos;.weui-count__increase&apos;).click(function (e) &#123;</span><br><span class="line">  var $input = $(e.currentTarget).parent().find(&apos;.weui-count__number&apos;);</span><br><span class="line">  var number = parseInt($input.val() || &quot;0&quot;) + 1</span><br><span class="line">  if (number &gt; MAX) number = MAX;</span><br><span class="line">  $input.val(number)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://jqweui.com/extends#count&quot; target=&quot;_blank&quot;&gt;jqweui 计数器&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;
-      
-    
-    </summary>
-    
-    
-      <category term="jqweui" scheme="http://brightereyer.xyz/tags/jqweui/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[jqweui] jqweui</title>
-    <link href="http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299235000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/20//articles/2019/08/20/1566299235000.html/</id>
-    <published>2019-08-20T11:07:15.000Z</published>
-    <updated>2019-08-20T11:07:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="" target="_blank"></a><br><a href="http://jqweui.com/" target="_blank">jqweui.com</a><br><a href="http://jqweui.com/components" target="_blank">jqweui 组件</a><br><a href="http://wodeditu.com/" target="_blank">weui swiper</a><br><a href="https://blog.csdn.net/qq_29598161/article/details/78430321" target="_blank">weui+swiper 滑动底部导航栏切换 类似微信切换效果</a><br><a href="https://www.cnblogs.com/cherryshuang/p/8491751.html" target="_blank">jquery weui轮播图的使用</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://jqweui.com/&quot; target=&quot;_blank&quot;&gt;jqweui.com&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://jqweui.com/components&quot; 
-      
-    
-    </summary>
-    
-    
-      <category term="jqweui" scheme="http://brightereyer.xyz/tags/jqweui/"/>
     
   </entry>
   
