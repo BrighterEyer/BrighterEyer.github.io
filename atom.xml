@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brightereyer.xyz/"/>
-  <updated>2019-08-23T12:21:10.000Z</updated>
+  <updated>2019-08-23T15:03:23.000Z</updated>
   <id>http://brightereyer.xyz/</id>
   
   <author>
@@ -15,6 +15,168 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[springboot] 使用weixin-java-pay</title>
+    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566572603000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566572603000.html/</id>
+    <published>2019-08-23T15:03:23.000Z</published>
+    <updated>2019-08-23T15:03:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">   &lt;groupId&gt;com.github.binarywang&lt;/groupId&gt;</span><br><span class="line">   &lt;artifactId&gt;weixin-java-pay&lt;/artifactId&gt;</span><br><span class="line">   &lt;version&gt;3.2.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p><p><a href="https://www.cnblogs.com/zd-aw123/p/9810862.html" target="_blank">使用weixin-java-tools完成微信授权登录、微信支付的示例</a><br><a href="https://gitee.com/binary/weixin-java-pay-demo" target="_blank">weixin-java-pay-demo</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">function onBridgeReady()&#123;</span><br><span class="line">  WeixinJSBridge.invoke(</span><br><span class="line">    &apos;getBrandWCPayRequest&apos;, &#123;</span><br><span class="line">      &quot;appId&quot;:&quot;wx31fd1e1bad23db37&quot;,   //公众号名称，由商户传入</span><br><span class="line">      &quot;timeStamp&quot;:wxData.timeStamp,     //时间戳，自1970年以来的秒数</span><br><span class="line">      &quot;nonceStr&quot;:wxData.nonceStr, //随机串</span><br><span class="line">      &quot;package&quot;:wxData.packageValue,</span><br><span class="line">      &quot;signType&quot;:wxData.signType,     //微信签名方式：</span><br><span class="line">      &quot;paySign&quot;:wxData.paySign //微信签名</span><br><span class="line">    &#125;,</span><br><span class="line">    function(res)&#123;</span><br><span class="line">      console.log(res.err_desc)</span><br><span class="line">      if(res.err_msg == &quot;get_brand_wcpay_request:ok&quot; )&#123;</span><br><span class="line">        // 使用以上方式判断前端返回,微信团队郑重提示：</span><br><span class="line">        //res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">var wxData=&#123;&#125;;</span><br><span class="line">function pay(orderId)&#123;</span><br><span class="line">  $.ajax(&#123;</span><br><span class="line">    url:&quot;统一下单方法url&quot;,</span><br><span class="line">    type:&apos;get&apos;,</span><br><span class="line">    data:&#123;orderNo:orderId&#125;,</span><br><span class="line">    beforeSend: function (xhr) &#123;</span><br><span class="line">      xhr.setRequestHeader(&quot;token&quot;, $.cookie(&quot;token&quot;));</span><br><span class="line">    &#125;,</span><br><span class="line">    crossDomain: true,</span><br><span class="line">    success:function(result)&#123;</span><br><span class="line">      wxData=result.data;</span><br><span class="line">      if (typeof WeixinJSBridge == &quot;undefined&quot;) &#123;</span><br><span class="line">        if (document.addEventListener) &#123;</span><br><span class="line">          document.addEventListener(&apos;WeixinJSBridgeReady&apos;, onBridgeReady, false);</span><br><span class="line">        &#125; else if (document.attachEvent) &#123;</span><br><span class="line">          document.attachEvent(&apos;WeixinJSBridgeReady&apos;, onBridgeReady);</span><br><span class="line">          document.attachEvent(&apos;onWeixinJSBridgeReady&apos;, onBridgeReady);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        onBridgeReady();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;依赖&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;s
+      
+    
+    </summary>
+    
+    
+      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[mysql] 判断字段是否为空</title>
+    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566571323000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566571323000.html/</id>
+    <published>2019-08-23T14:42:03.000Z</published>
+    <updated>2019-08-23T14:42:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>MySql判断是否为null或空字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ISNULL(aBegBalRule) || LENGTH(trim(aBegBalRule))&lt;1</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;MySql判断是否为null或空字符串&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td c
+      
+    
+    </summary>
+    
+    
+      <category term="mysql" scheme="http://brightereyer.xyz/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[java] 根据内容生成二维码图片</title>
+    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570822000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570822000.html/</id>
+    <published>2019-08-23T14:33:42.000Z</published>
+    <updated>2019-08-23T14:33:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/zfy0098/p/5582982.html" target="_blank">java根据内容生成二维码图片</a><br><a href="https://www.jianshu.com/p/5f73f2afb1ff" target="_blank">java生成二维码</a><br><a href="https://gitee.com/rwxing/QRCodeTest" target="_blank">github源码</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/zfy0098/p/5582982.html&quot; target=&quot;_blank&quot;&gt;java根据内容生成二维码图片&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianshu.com/p/5f73f2
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[jq] 生成二维码</title>
+    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570822000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570822000.html/</id>
+    <published>2019-08-23T14:33:42.000Z</published>
+    <updated>2019-08-23T14:33:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.jq22.com/jquery-info294" target="_blank">jquery二维码生成插件jquery.qrcode.js 的使用</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;qrcode&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.qrcode.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    jQuery(function()&#123;</span><br><span class="line">    jQuery(&apos;#qrcode&apos;).qrcode(&quot;http://www.jq22.com&quot;);</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p><p><a href="https://raw.githubusercontent.com/jeromeetienne/jquery-qrcode/master/jquery.qrcode.min.js" target="_blank">jquery.qrcode.min.js</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.jq22.com/jquery-info294&quot; target=&quot;_blank&quot;&gt;jquery二维码生成插件jquery.qrcode.js 的使用&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;ta
+      
+    
+    </summary>
+    
+    
+      <category term="jq" scheme="http://brightereyer.xyz/tags/jq/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[maven] 创建java工程，并运行</title>
+    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570821000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570821000.html/</id>
+    <published>2019-08-23T14:33:41.000Z</published>
+    <updated>2019-08-23T14:33:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/oschina_41790905/article/details/79475187" target="_blank">IntelliJ IDEA 如何创建一个普通的java项目，及创建java文件并运行</a></p><p><a href="https://www.cnblogs.com/hzyhx/p/10943887.html" target="_blank">maven创建基本java工程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:generate -DgroupId=com.demo -DartifactId=simpleQrcode -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false</span><br></pre></td></tr></table></figure></p><p><a href="https://www.yiibai.com/maven/maven_creating_project.html" target="_blank">Maven创建Java项目</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:generate</span><br><span class="line">-DgroupId=com.companyname.bank </span><br><span class="line">-DartifactId=consumerBanking </span><br><span class="line">-DarchetypeArtifactId=maven-archetype-quickstart </span><br><span class="line">-DinteractiveMode=false</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/oschina_41790905/article/details/79475187&quot; target=&quot;_blank&quot;&gt;IntelliJ IDEA 如何创建一个普通的java项目，及创建java文件并运行&lt;/a&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="maven" scheme="http://brightereyer.xyz/tags/maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[软件] 使用postman传数组数据</title>
+    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570820000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570820000.html/</id>
+    <published>2019-08-23T14:33:40.000Z</published>
+    <updated>2019-08-23T14:33:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/gitByLegend/p/10611192.html" target="_blank">使用postman传数组数据</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/gitByLegend/p/10611192.html&quot; target=&quot;_blank&quot;&gt;使用postman传数组数据&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="http://brightereyer.xyz/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[vue] webstorm创建和运行vue</title>
+    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570819000.html/"/>
+    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570819000.html/</id>
+    <published>2019-08-23T14:33:39.000Z</published>
+    <updated>2019-08-23T14:33:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/ad8c3b480ef3" target="_blank">使用webstorm来创建并且运行vue项目详细教程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install --global vue-cli</span><br><span class="line">npm install -g vue</span><br><span class="line">npm install -g vue-router</span><br><span class="line">vue init webpack vuedemo</span><br><span class="line">cd vuedemo</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/ad8c3b480ef3&quot; target=&quot;_blank&quot;&gt;使用webstorm来创建并且运行vue项目详细教程&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="http://brightereyer.xyz/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>[我的想法与行动] 学设计</title>
@@ -315,171 +477,6 @@
     
     
       <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[java] 处理表情包存储</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471014000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471014000.html/</id>
-    <published>2019-08-22T10:50:14.000Z</published>
-    <updated>2019-08-22T10:50:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/samHuangLiang/article/details/80677844" target="_blank">java 处理表情包存储</a></p><p>1、引入依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;com.vdurmont&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;emoji-java&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.2.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p><p>2、<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#将表情符号转为字符后存储到数据库</span><br><span class="line">EmojiParser.parseToAliases(string);</span><br><span class="line"></span><br><span class="line">#将数据库查询字符转为表情符号</span><br><span class="line">EmojiParser.parseToUnicode(string);</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/samHuangLiang/article/details/80677844&quot; target=&quot;_blank&quot;&gt;java 处理表情包存储&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;1、引入依赖&lt;br&gt;&lt;figure class=&quot;h
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[java] 支付宝和微信（APP支付，提现，退款）</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471013000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471013000.html/</id>
-    <published>2019-08-22T10:50:13.000Z</published>
-    <updated>2019-08-22T10:50:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_37711237/article/details/79932836" target="_blank">JAVA支付宝和微信（APP支付，提现，退款）</a></p><p><a href="https://blog.csdn.net/Goldmeng/article/details/86302004" target="_blank">微信提现——企业付款到零钱demo（超详细小白都看得懂的）</a></p><p><a href="https://github.com/janlle/java-pay" target="_blank">java-pay（不含sql，但含mapper）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">微信App、小程序、微信扫码支付、微信退款、支付宝App、扫码支付，提现、退款</span><br><span class="line"></span><br><span class="line">java-pay</span><br><span class="line">基于 Spring Boot 的各种支付对接微信App支付、小程序支付、微信扫码支付、微信退款、支付宝App支付、扫码支付，提现、退款</span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/Homiss/WechatPay" target="_blank">WechatPay（可独立）|网站微信扫码支付、退款以及回调功能实现</a></p><p><a href="https://gitee.com/52itstyle/spring-boot-pay" target="_blank">小柒2012-spring-boot-pay</a></p><p><a href="https://github.com/egzosn/pay-java-parent" target="_blank">pay-java-parent</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">全能第三方支付对接Java开发工具包.优雅的轻量级支付模块集成支付对接支付整合（微信,支付宝,银联,友店,富友,跨境支付paypal,payoneer(P卡派安盈)易极付）app,扫码,网页支付刷卡付条码付刷脸付转账服务商模式、支持多种支付类型多支付账户，支付与业务完全剥离，简单几行代码即可实现支付，简单快速完成支付模块的开发，可轻松嵌入到任何系统里 目前仅是一个开发工具包（即SDK），只提供简单Web实现，建议使用maven或gradle引用本项目即可使用本SDK提供的各种支付相关</span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/Jasonandy/springboot-wx" target="_blank">springboot-wx</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.wx-apps 大概需要的实现的功能模块</span><br><span class="line">微信小程序Java和后台</span><br><span class="line"></span><br><span class="line">1.整合小程序</span><br><span class="line"></span><br><span class="line">2.接口服务</span><br><span class="line"></span><br><span class="line">3.对外提供api网关服务</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">9.xxx</span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/tiankong0310/springboot-weixin-alipay" target="_blank">springboot-weixin-alipay</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">springboot-weixin-alipay通用商城(小程序,微信,app,网站)支付项目,</span><br><span class="line">基于springboot2.0+freemarker+mybatis+druid,</span><br><span class="line">实现了支付宝，微信支付功能，用户列表,商品列表,选择购买,提交订单,扫码支付,订单表单提交支付功能</span><br><span class="line">已使用支付项目地址：</span><br><span class="line">https://gitee.com/tiankong0310/my-shop.git</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_37711237/article/details/79932836&quot; target=&quot;_blank&quot;&gt;JAVA支付宝和微信（APP支付，提现，退款）&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[jpa] 使用idea从数据库快速生成SpringDataJPA实体类</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471012000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471012000.html/</id>
-    <published>2019-08-22T10:50:12.000Z</published>
-    <updated>2019-08-22T10:50:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/bodhitree/p/9469052.html" target="_blank">idea 从数据库快速生成Spring Data JPA实体类</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">第一步:</span><br><span class="line">调出 Persistence 窗口</span><br><span class="line">File -&gt; Project Structure... -&gt; Moduals -&gt; (+) Hibernate</span><br><span class="line"></span><br><span class="line">第二步:</span><br><span class="line">打开 Persistence 窗口</span><br><span class="line"></span><br><span class="line">Persistence 右键选择 -&gt; By Database Schema -&gt; Generate Persistence Mapping</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/bodhitree/p/9469052.html&quot; target=&quot;_blank&quot;&gt;idea 从数据库快速生成Spring Data JPA实体类&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highligh
-      
-    
-    </summary>
-    
-    
-      <category term="jpa" scheme="http://brightereyer.xyz/tags/jpa/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[jquery] 获取和修改img的src</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471011000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471011000.html/</id>
-    <published>2019-08-22T10:50:11.000Z</published>
-    <updated>2019-08-22T10:50:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>获取：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#imgId&quot;)[0].src;</span><br></pre></td></tr></table></figure></p><p>修改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#imgId&quot;).attr(&apos;src&apos;,path);</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;获取：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre
-      
-    
-    </summary>
-    
-    
-      <category term="jquery" scheme="http://brightereyer.xyz/tags/jquery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[layui] 省市区联动(含下载)</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471010000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471010000.html/</id>
-    <published>2019-08-22T10:50:10.000Z</published>
-    <updated>2019-08-22T10:50:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.jpw.net/code/636431820895762098" target="_blank">基于layui开发的省市区三级联动下拉框（含下载）</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://www.jpw.net/code/636431820895762098&quot; target=&quot;_blank&quot;&gt;基于layui开发的省市区三级联动下拉框（含下载）&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="layui" scheme="http://brightereyer.xyz/tags/layui/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[mysql] 计算经纬度距离</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471009000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471009000.html/</id>
-    <published>2019-08-22T10:50:09.000Z</published>
-    <updated>2019-08-22T10:50:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/jiafuwei/p/5699091.html" target="_blank">mysql计算经纬度距离</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql距离计算，单位m，以及排序</span><br><span class="line">lon 经度 lat 纬度</span><br><span class="line">一般地图上显示的坐标顺序为，纬度在前（范围-90~90），经度在后（范围-180~180）</span><br><span class="line">首先新建一张表，里面包含经纬度</span><br></pre></td></tr></table></figure></p><p>新建customer表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">SET FOREIGN_KEY_CHECKS=0;</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Table structure for customer</span><br><span class="line">-- ----------------------------</span><br><span class="line">DROP TABLE IF EXISTS `customer`;</span><br><span class="line">CREATE TABLE `customer` (</span><br><span class="line">  `id` int(11) unsigned NOT NULL auto_increment COMMENT &apos;自增主键&apos;,</span><br><span class="line">  `name` varchar(50) NOT NULL COMMENT &apos;名称&apos;,</span><br><span class="line">  `lon` double(9,6) NOT NULL COMMENT &apos;经度&apos;,</span><br><span class="line">  `lat` double(8,6) NOT NULL COMMENT &apos;纬度&apos;,</span><br><span class="line">  PRIMARY KEY  (`id`)</span><br><span class="line">) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT=&apos;商户表&apos;;</span><br><span class="line"></span><br><span class="line">-- ----------------------------</span><br><span class="line">-- Records of customer</span><br><span class="line">-- ----------------------------</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;1&apos;, &apos;天津市区&apos;, &apos;117.315575&apos;, &apos;39.133462&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;2&apos;, &apos;北京市区&apos;, &apos;116.407999&apos;, &apos;39.894073&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;3&apos;, &apos;保定&apos;, &apos;115.557124&apos;, &apos;38.853490&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;4&apos;, &apos;石家庄&apos;, &apos;114.646458&apos;, &apos;38.072369&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;5&apos;, &apos;昌平区1&apos;, &apos;116.367180&apos;, &apos;40.009561&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;6&apos;, &apos;海淀区2&apos;, &apos;116.313425&apos;, &apos;39.973078&apos;);</span><br><span class="line">INSERT INTO `customer` VALUES (&apos;7&apos;, &apos;海淀区1&apos;, &apos;116.329236&apos;, &apos;39.987231&apos;);</span><br></pre></td></tr></table></figure></p><p>传入参数 纬度 40.0497810000 经度 116.3424590000<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">/*传入的参数为  纬度 纬度 经度 ASC升序由近至远 DESC 降序 由远到近 */</span><br><span class="line">SELECT</span><br><span class="line">    *,</span><br><span class="line">    ROUND(</span><br><span class="line">        6378.138 * 2 * ASIN(</span><br><span class="line">            SQRT(</span><br><span class="line">                POW(</span><br><span class="line">                    SIN(</span><br><span class="line">                        (</span><br><span class="line">                            40.0497810000 * PI() / 180 - lat * PI() / 180</span><br><span class="line">                        ) / 2</span><br><span class="line">                    ),</span><br><span class="line">                    2</span><br><span class="line">                ) + COS(40.0497810000 * PI() / 180) * COS(lat * PI() / 180) * POW(</span><br><span class="line">                    SIN(</span><br><span class="line">                        (</span><br><span class="line">                            116.3424590000 * PI() / 180 - lon * PI() / 180</span><br><span class="line">                        ) / 2</span><br><span class="line">                    ),</span><br><span class="line">                    2</span><br><span class="line">                )</span><br><span class="line">            )</span><br><span class="line">        ) * 1000</span><br><span class="line">    ) AS juli</span><br><span class="line">FROM</span><br><span class="line">    customer</span><br><span class="line">ORDER BY</span><br><span class="line">    juli ASC</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/jiafuwei/p/5699091.html&quot; target=&quot;_blank&quot;&gt;mysql计算经纬度距离&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="mysql" scheme="http://brightereyer.xyz/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[nginx] Nginx+Tomcat搭建集群,SpringSession+Redis实现Session共享</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471008000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471008000.html/</id>
-    <published>2019-08-22T10:50:08.000Z</published>
-    <updated>2019-08-22T10:50:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://mp.weixin.qq.com/s/xK0fOKRYrkNFR6s_bRP56Q" target="_blank">Nginx+Tomcat搭建集群，Spring Session+Redis实现Session共享</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/xK0fOKRYrkNFR6s_bRP56Q&quot; target=&quot;_blank&quot;&gt;Nginx+Tomcat搭建集群，Spring Session+Redis实现Session共享&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="nginx" scheme="http://brightereyer.xyz/tags/nginx/"/>
     
   </entry>
   
