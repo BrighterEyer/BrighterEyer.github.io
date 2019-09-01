@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brightereyer.xyz/"/>
-  <updated>2019-08-23T15:03:23.000Z</updated>
+  <updated>2019-09-01T02:49:22.000Z</updated>
   <id>http://brightereyer.xyz/</id>
   
   <author>
@@ -17,273 +17,398 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[springboot] 使用weixin-java-pay</title>
-    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566572603000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566572603000.html/</id>
-    <published>2019-08-23T15:03:23.000Z</published>
-    <updated>2019-08-23T15:03:23.000Z</updated>
+    <title>[婚礼] 流程</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567306162000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567306162000.html/</id>
+    <published>2019-09-01T02:49:22.000Z</published>
+    <updated>2019-09-01T02:49:22.000Z</updated>
     
-    <content type="html"><![CDATA[<p>依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">   &lt;groupId&gt;com.github.binarywang&lt;/groupId&gt;</span><br><span class="line">   &lt;artifactId&gt;weixin-java-pay&lt;/artifactId&gt;</span><br><span class="line">   &lt;version&gt;3.2.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p><p><a href="https://www.cnblogs.com/zd-aw123/p/9810862.html" target="_blank">使用weixin-java-tools完成微信授权登录、微信支付的示例</a><br><a href="https://gitee.com/binary/weixin-java-pay-demo" target="_blank">weixin-java-pay-demo</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">function onBridgeReady()&#123;</span><br><span class="line">  WeixinJSBridge.invoke(</span><br><span class="line">    &apos;getBrandWCPayRequest&apos;, &#123;</span><br><span class="line">      &quot;appId&quot;:&quot;wx31fd1e1bad23db37&quot;,   //公众号名称，由商户传入</span><br><span class="line">      &quot;timeStamp&quot;:wxData.timeStamp,     //时间戳，自1970年以来的秒数</span><br><span class="line">      &quot;nonceStr&quot;:wxData.nonceStr, //随机串</span><br><span class="line">      &quot;package&quot;:wxData.packageValue,</span><br><span class="line">      &quot;signType&quot;:wxData.signType,     //微信签名方式：</span><br><span class="line">      &quot;paySign&quot;:wxData.paySign //微信签名</span><br><span class="line">    &#125;,</span><br><span class="line">    function(res)&#123;</span><br><span class="line">      console.log(res.err_desc)</span><br><span class="line">      if(res.err_msg == &quot;get_brand_wcpay_request:ok&quot; )&#123;</span><br><span class="line">        // 使用以上方式判断前端返回,微信团队郑重提示：</span><br><span class="line">        //res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">var wxData=&#123;&#125;;</span><br><span class="line">function pay(orderId)&#123;</span><br><span class="line">  $.ajax(&#123;</span><br><span class="line">    url:&quot;统一下单方法url&quot;,</span><br><span class="line">    type:&apos;get&apos;,</span><br><span class="line">    data:&#123;orderNo:orderId&#125;,</span><br><span class="line">    beforeSend: function (xhr) &#123;</span><br><span class="line">      xhr.setRequestHeader(&quot;token&quot;, $.cookie(&quot;token&quot;));</span><br><span class="line">    &#125;,</span><br><span class="line">    crossDomain: true,</span><br><span class="line">    success:function(result)&#123;</span><br><span class="line">      wxData=result.data;</span><br><span class="line">      if (typeof WeixinJSBridge == &quot;undefined&quot;) &#123;</span><br><span class="line">        if (document.addEventListener) &#123;</span><br><span class="line">          document.addEventListener(&apos;WeixinJSBridgeReady&apos;, onBridgeReady, false);</span><br><span class="line">        &#125; else if (document.attachEvent) &#123;</span><br><span class="line">          document.attachEvent(&apos;WeixinJSBridgeReady&apos;, onBridgeReady);</span><br><span class="line">          document.attachEvent(&apos;onWeixinJSBridgeReady&apos;, onBridgeReady);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        onBridgeReady();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.hunliji.com/bai_ke/detail_28619" target="_blank">小型婚礼</a></p><p><a href="https://baike.baidu.com/item/%E5%B0%8F%E5%9E%8B%E5%A9%9A%E5%AE%B4/15628711" target="_blank">百度百科-小型婚宴</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;依赖&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;s
+        &lt;p&gt;&lt;a href=&quot;https://www.hunliji.com/bai_ke/detail_28619&quot; target=&quot;_blank&quot;&gt;小型婚礼&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://baike.baidu.com/item/%E5%B0%8F%E5%
       
     
     </summary>
     
     
-      <category term="springboot" scheme="http://brightereyer.xyz/tags/springboot/"/>
+      <category term="婚礼" scheme="http://brightereyer.xyz/tags/%E5%A9%9A%E7%A4%BC/"/>
     
   </entry>
   
   <entry>
-    <title>[mysql] 判断字段是否为空</title>
-    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566571323000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566571323000.html/</id>
-    <published>2019-08-23T14:42:03.000Z</published>
-    <updated>2019-08-23T14:42:03.000Z</updated>
+    <title>[ps] 选区圆角</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304618000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304618000.html/</id>
+    <published>2019-09-01T02:23:38.000Z</published>
+    <updated>2019-09-01T02:23:38.000Z</updated>
     
-    <content type="html"><![CDATA[<p>MySql判断是否为null或空字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ISNULL(aBegBalRule) || LENGTH(trim(aBegBalRule))&lt;1</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://zhidao.baidu.com/question/37895935.html" target="_blank">ps 矩形变圆角</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、在电脑上打开PS软件，选择矩形选框工具，在绘图区绘制出一个矩形选区。</span><br><span class="line">2、然后在“选择”菜单页面下依次选择选项“修改/平滑”。</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;MySql判断是否为null或空字符串&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td c
+        &lt;p&gt;&lt;a href=&quot;https://zhidao.baidu.com/question/37895935.html&quot; target=&quot;_blank&quot;&gt;ps 矩形变圆角&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td 
       
     
     </summary>
     
     
-      <category term="mysql" scheme="http://brightereyer.xyz/tags/mysql/"/>
+      <category term="ps" scheme="http://brightereyer.xyz/tags/ps/"/>
     
   </entry>
   
   <entry>
-    <title>[java] 根据内容生成二维码图片</title>
-    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570822000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570822000.html/</id>
-    <published>2019-08-23T14:33:42.000Z</published>
-    <updated>2019-08-23T14:33:42.000Z</updated>
+    <title>[ps] 通道抠图</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304617000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304617000.html/</id>
+    <published>2019-09-01T02:23:37.000Z</published>
+    <updated>2019-09-01T02:23:37.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/zfy0098/p/5582982.html" target="_blank">java根据内容生成二维码图片</a><br><a href="https://www.jianshu.com/p/5f73f2afb1ff" target="_blank">java生成二维码</a><br><a href="https://gitee.com/rwxing/QRCodeTest" target="_blank">github源码</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://jingyan.baidu.com/article/91f5db1b1795a01c7f05e31b.html" target="_blank">用色彩范围抠图</a></p><p><a href="https://jingyan.baidu.com/article/54b6b9c0a2f0d12d583b473f.html" target="_blank">ps通道人像抠图方法（头发丝）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">（1）首先打开 &quot;通道图层&quot; ，查看 &quot;红&quot; 、 &quot;绿&quot; 、 &quot;蓝&quot; 哪一个通道图层中，前景和背景比较分明（若都不太分明，通常选择绿通道）。并复制该颜色通道图层进行操作。</span><br><span class="line"></span><br><span class="line">（2）&quot;Ctrl+L&quot; 打开 &quot;色阶&quot; 工具，拖动三角滚动条，使得前景与背景比较分明，可以用黑色或白色吸管进行定场，其中白色在图片中为可见部分，黑色为不可见部分。完成定场后，可以通过 &quot;Ctrl&quot; 并点击该通道图层存储该选区，但选中的白色通常为背景部分，所以可以通过 &quot;选择&quot; → &quot;反向&quot; ，选择前景部分。</span><br><span class="line"></span><br><span class="line">（3）&quot;Ctrl+J&quot; 即可将刚才选中的内容，保存到新建的图层上。即可完成抠图。</span><br><span class="line"></span><br><span class="line">（4）如果一次不能抠图成功，如（人的发丝等）可能需要多次，可以通过魔棒、钢笔、套索工具等，对原图进行扣图， &quot;Ctrl&quot; 保存选取， &quot;Ctrl+J&quot; 新建图层，最后再通过 &quot;Ctrl+E&quot; 合并抠图图层，即可完成抠图。</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/zfy0098/p/5582982.html&quot; target=&quot;_blank&quot;&gt;java根据内容生成二维码图片&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.jianshu.com/p/5f73f2
+        &lt;p&gt;&lt;a href=&quot;https://jingyan.baidu.com/article/91f5db1b1795a01c7f05e31b.html&quot; target=&quot;_blank&quot;&gt;用色彩范围抠图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jingyan.bai
       
     
     </summary>
     
     
-      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
+      <category term="ps" scheme="http://brightereyer.xyz/tags/ps/"/>
     
   </entry>
   
   <entry>
-    <title>[jq] 生成二维码</title>
-    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570822000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570822000.html/</id>
-    <published>2019-08-23T14:33:42.000Z</published>
-    <updated>2019-08-23T14:33:42.000Z</updated>
+    <title>[ps] 去掉标尺线</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304616000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304616000.html/</id>
+    <published>2019-09-01T02:23:36.000Z</published>
+    <updated>2019-09-01T02:23:36.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="http://www.jq22.com/jquery-info294" target="_blank">jquery二维码生成插件jquery.qrcode.js 的使用</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;qrcode&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.qrcode.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    jQuery(function()&#123;</span><br><span class="line">    jQuery(&apos;#qrcode&apos;).qrcode(&quot;http://www.jq22.com&quot;);</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p><p><a href="https://raw.githubusercontent.com/jeromeetienne/jquery-qrcode/master/jquery.qrcode.min.js" target="_blank">jquery.qrcode.min.js</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://jingyan.baidu.com/article/ff411625f846d312e5823775.html" target="_blank">ps怎样隐藏标尺线，ps标尺辅助线怎么去掉</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + ;</span><br><span class="line">Ctrl + H</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;http://www.jq22.com/jquery-info294&quot; target=&quot;_blank&quot;&gt;jquery二维码生成插件jquery.qrcode.js 的使用&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;ta
+        &lt;p&gt;&lt;a href=&quot;https://jingyan.baidu.com/article/ff411625f846d312e5823775.html&quot; target=&quot;_blank&quot;&gt;ps怎样隐藏标尺线，ps标尺辅助线怎么去掉&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;hig
       
     
     </summary>
     
     
-      <category term="jq" scheme="http://brightereyer.xyz/tags/jq/"/>
+      <category term="ps" scheme="http://brightereyer.xyz/tags/ps/"/>
     
   </entry>
   
   <entry>
-    <title>[maven] 创建java工程，并运行</title>
-    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570821000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570821000.html/</id>
-    <published>2019-08-23T14:33:41.000Z</published>
-    <updated>2019-08-23T14:33:41.000Z</updated>
+    <title>[ps] 练习</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304615000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304615000.html/</id>
+    <published>2019-09-01T02:23:35.000Z</published>
+    <updated>2019-09-01T02:23:35.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/oschina_41790905/article/details/79475187" target="_blank">IntelliJ IDEA 如何创建一个普通的java项目，及创建java文件并运行</a></p><p><a href="https://www.cnblogs.com/hzyhx/p/10943887.html" target="_blank">maven创建基本java工程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:generate -DgroupId=com.demo -DartifactId=simpleQrcode -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false</span><br></pre></td></tr></table></figure></p><p><a href="https://www.yiibai.com/maven/maven_creating_project.html" target="_blank">Maven创建Java项目</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mvn archetype:generate</span><br><span class="line">-DgroupId=com.companyname.bank </span><br><span class="line">-DartifactId=consumerBanking </span><br><span class="line">-DarchetypeArtifactId=maven-archetype-quickstart </span><br><span class="line">-DinteractiveMode=false</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/av18792821" targe="_blank" target="_blank" rel="noopener">哔哩哔哩 - 敬伟PS教程</a></p><p><a href="http://pan.baidu.com/s/1x4x02T8GNoIp34-s_KhRfQ" targe="_blank" target="_blank" rel="noopener">PS CS6教程入门到创意压缩包</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c1o0</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/oschina_41790905/article/details/79475187&quot; target=&quot;_blank&quot;&gt;IntelliJ IDEA 如何创建一个普通的java项目，及创建java文件并运行&lt;/a&gt;&lt;
+        &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/av18792821&quot; targe=&quot;_blank&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;哔哩哔哩 - 敬伟PS教程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http:
       
     
     </summary>
     
     
-      <category term="maven" scheme="http://brightereyer.xyz/tags/maven/"/>
+      <category term="ps" scheme="http://brightereyer.xyz/tags/ps/"/>
     
   </entry>
   
   <entry>
-    <title>[软件] 使用postman传数组数据</title>
-    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570820000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570820000.html/</id>
-    <published>2019-08-23T14:33:40.000Z</published>
-    <updated>2019-08-23T14:33:40.000Z</updated>
+    <title>[ps] 粒子消散</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304614000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304614000.html/</id>
+    <published>2019-09-01T02:23:34.000Z</published>
+    <updated>2019-09-01T02:23:34.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/gitByLegend/p/10611192.html" target="_blank">使用postman传数组数据</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/av32592728" target="_blank">【PS教程】4分钟快速学会粒子消散效果</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">注意有三层</span><br><span class="line">1.纯人物</span><br><span class="line">2.备份纯人物</span><br><span class="line">3.通过滤镜液化的人物</span><br><span class="line">4.纯白背景</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/gitByLegend/p/10611192.html&quot; target=&quot;_blank&quot;&gt;使用postman传数组数据&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/av32592728&quot; target=&quot;_blank&quot;&gt;【PS教程】4分钟快速学会粒子消散效果&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;t
+      
+    
+    </summary>
+    
+    
+      <category term="ps" scheme="http://brightereyer.xyz/tags/ps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[ps] 获取一张图片的大小信息</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304613000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304613000.html/</id>
+    <published>2019-09-01T02:23:33.000Z</published>
+    <updated>2019-09-01T02:23:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://zhidao.baidu.com/question/171357027.html" target="_blank">获取和调整图片的大小信息</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://zhidao.baidu.com/question/171357027.html&quot; target=&quot;_blank&quot;&gt;获取和调整图片的大小信息&lt;/a&gt;&lt;/p&gt;
 
       
     
     </summary>
     
     
-      <category term="软件" scheme="http://brightereyer.xyz/tags/%E8%BD%AF%E4%BB%B6/"/>
+      <category term="ps" scheme="http://brightereyer.xyz/tags/ps/"/>
     
   </entry>
   
   <entry>
-    <title>[vue] webstorm创建和运行vue</title>
-    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570819000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566570819000.html/</id>
-    <published>2019-08-23T14:33:39.000Z</published>
-    <updated>2019-08-23T14:33:39.000Z</updated>
+    <title>[ps] 故障字体</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304612000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304612000.html/</id>
+    <published>2019-09-01T02:23:32.000Z</published>
+    <updated>2019-09-01T02:23:32.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/ad8c3b480ef3" target="_blank">使用webstorm来创建并且运行vue项目详细教程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install --global vue-cli</span><br><span class="line">npm install -g vue</span><br><span class="line">npm install -g vue-router</span><br><span class="line">vue init webpack vuedemo</span><br><span class="line">cd vuedemo</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/av44190010" target="_blank">3分钟学会制作故障字体</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/ad8c3b480ef3&quot; target=&quot;_blank&quot;&gt;使用webstorm来创建并且运行vue项目详细教程&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table
+        &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/av44190010&quot; target=&quot;_blank&quot;&gt;3分钟学会制作故障字体&lt;/a&gt;&lt;/p&gt;
+
       
     
     </summary>
     
     
-      <category term="vue" scheme="http://brightereyer.xyz/tags/vue/"/>
+      <category term="ps" scheme="http://brightereyer.xyz/tags/ps/"/>
     
   </entry>
   
   <entry>
-    <title>[我的想法与行动] 学设计</title>
-    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566562870000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566562870000.html/</id>
-    <published>2019-08-23T12:21:10.000Z</published>
-    <updated>2019-08-23T12:21:10.000Z</updated>
+    <title>[pr] 朦胧美</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304553000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304553000.html/</id>
+    <published>2019-09-01T02:22:33.000Z</published>
+    <updated>2019-09-01T02:22:33.000Z</updated>
     
-    <content type="html"><![CDATA[<p>结合设计师的建议总结学设计基本的要求：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1、装软件</span><br><span class="line">2、找教程、跟着练，或者寻求建议</span><br><span class="line">3、找对素材</span><br><span class="line">4、向 一些优秀 作品看齐</span><br><span class="line">5、期模仿加优化，后期创作</span><br><span class="line">6、经常会发到自己个人网站上，有大神点评给建议，或者有那种举例子优化前和优化后的的小视频看一看</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/av64345573" target="_blank">【PR教程】给你的VLOG来点“朦胧美”</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;结合设计师的建议总结学设计基本的要求：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;lin
+        &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/av64345573&quot; target=&quot;_blank&quot;&gt;【PR教程】给你的VLOG来点“朦胧美”&lt;/a&gt;&lt;/p&gt;
+
       
     
     </summary>
     
     
-      <category term="我的想法与行动" scheme="http://brightereyer.xyz/tags/%E6%88%91%E7%9A%84%E6%83%B3%E6%B3%95%E4%B8%8E%E8%A1%8C%E5%8A%A8/"/>
+      <category term="pr" scheme="http://brightereyer.xyz/tags/pr/"/>
     
   </entry>
   
   <entry>
-    <title>[软件] VS2010旗舰版安装必读</title>
-    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566562869000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566562869000.html/</id>
-    <published>2019-08-23T12:21:09.000Z</published>
-    <updated>2019-08-23T12:21:09.000Z</updated>
+    <title>[pr] 开场的帷幕拉开效果</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304552000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304552000.html/</id>
+    <published>2019-09-01T02:22:32.000Z</published>
+    <updated>2019-09-01T02:22:32.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="thunder://QUFlZDJrOi8vfGZpbGV8Y25fdmlzdWFsX3N0dWRpb18yMDEwX3Byb2Zlc3Npb25hbF94ODZfZHZkXzUzMjE0NS5pc298MjU5MTg0NDM1Mnw2MDAxMjUzNDMxQUZFNTczRTQzNDRGNUEwQjFEOUNBQ3wvWlo=" target="_blank">迅雷链接 VS2010 专业版（中文版本）</a><br><a href="thunder://QUFlZDJrOi8vfGZpbGV8Y25fdmlzdWFsX3N0dWRpb18yMDEwX3VsdGltYXRlX3g4Nl9kdmRfNTMyMzQ3Lmlzb3wyNjg1OTgyNzIwfDRhZTYyMjg5MzNkZGU0OWQ5YmZhNGMzNDY3YzgzMWMyfFpa" target="_blank">迅雷链接 VS2010 旗舰版（中文版本）</a></p><p><a href="https://pan.baidu.com/s/1LAXfr_7R7qvhztqFw0iaRA" target="_blank">度娘链接 VS2010</a></p><p>VS2010 旗舰版可用Key：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YCFHQ9DWCYDKV88T2TMHG7BHP</span><br></pre></td></tr></table></figure></p><p>注意：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">中文版为iso镜像文件，使用 Daemon Tools 虚拟光驱软件载入进行安装。中文版镜像已包含Key，安装后即已激活，不需要像英文版所说的卸载时填注册码。</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/av46107309" target="_blank">【PR教程】开场的帷幕拉开效果</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;thunder://QUFlZDJrOi8vfGZpbGV8Y25fdmlzdWFsX3N0dWRpb18yMDEwX3Byb2Zlc3Npb25hbF94ODZfZHZkXzUzMjE0NS5pc298MjU5MTg0NDM1Mnw2MDAxMjUzND
+        &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/av46107309&quot; target=&quot;_blank&quot;&gt;【PR教程】开场的帷幕拉开效果&lt;/a&gt;&lt;/p&gt;
+
       
     
     </summary>
     
     
-      <category term="软件" scheme="http://brightereyer.xyz/tags/%E8%BD%AF%E4%BB%B6/"/>
+      <category term="pr" scheme="http://brightereyer.xyz/tags/pr/"/>
     
   </entry>
   
   <entry>
-    <title>[游戏] 五子棋大战</title>
-    <link href="http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566559919000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/23//articles/2019/08/23/1566559919000.html/</id>
-    <published>2019-08-23T11:31:59.000Z</published>
-    <updated>2019-08-23T11:31:59.000Z</updated>
+    <title>[android] 聊天软件</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304467000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304467000.html/</id>
+    <published>2019-09-01T02:21:07.000Z</published>
+    <updated>2019-09-01T02:21:07.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://mp.weixin.qq.com/s/8FjP2LgzadHeGA27HfWCHw" target="_blank">一个开源的五子棋大战送给各位小伙伴!</a><br><a href="https://github.com/lenve/GobangGame" target="_blank">GobangGame</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_39846310/article/details/80718341" target="_blank">在线聊天App研发说明(android学习总结)</a></p><p><a href="https://github.com/xiuweikang/IM.git" target="_blank">github | IM</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">简单的仿QQ聊天安卓APP</span><br><span class="line"></span><br><span class="line">该项目用JAVA的socket实现，包含客户端，服务器与数据库，如果想运行需要注意一下几点：</span><br><span class="line"></span><br><span class="line">服务器更改配置文件dbcpconfig.properties</span><br><span class="line">我已经将所需的依赖库也上传了，如果还缺少某些依赖库，需要你自己去下</span><br><span class="line">注意客户端的端口号应与服务器的端口号一致。</span><br><span class="line">客户端出现服务器异常时，请注意客户端的SERVER_IP，需要保证客户端ping通服务器</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/8FjP2LgzadHeGA27HfWCHw&quot; target=&quot;_blank&quot;&gt;一个开源的五子棋大战送给各位小伙伴!&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/lenve/G
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_39846310/article/details/80718341&quot; target=&quot;_blank&quot;&gt;在线聊天App研发说明(android学习总结)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https:/
       
     
     </summary>
     
     
-      <category term="游戏" scheme="http://brightereyer.xyz/tags/%E6%B8%B8%E6%88%8F/"/>
+      <category term="android" scheme="http://brightereyer.xyz/tags/android/"/>
     
   </entry>
   
   <entry>
-    <title>[svn] 分支管理</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566480276000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566480276000.html/</id>
-    <published>2019-08-22T13:24:37.000Z</published>
-    <updated>2019-08-22T13:24:37.000Z</updated>
+    <title>[全栈] app+后台</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304466000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567304466000.html/</id>
+    <published>2019-09-01T02:21:06.000Z</published>
+    <updated>2019-09-01T02:21:06.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/justry_deng/article/details/82259470" target="_blank">TortoiseSVN打分支、合并分支、切换分支</a><br><a href="https://www.jianshu.com/p/187c9fe1d7ca" target="_blank">SVN分支</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/500550b0d502" target="_blank">android+springboot+docker</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn package -DskipTests</span><br></pre></td></tr></table></figure></p><p><a href="https://www.cnblogs.com/BobAdmin/articles/8404961.html" target="_blank">用SpringBoot搭建自己的Android后台</a></p><p>Android端GitHub地址：<br><a href="https://github.com/bobLion/TestMyServer.git" target="_blank">github TestMyServer</a><br>服务端GitHub地址：<br><a href="https://github.com/bobLion/test_my_sql.git" target="_blank">github test_my_sql</a></p><p><a href="" target="_blank"></a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/justry_deng/article/details/82259470&quot; target=&quot;_blank&quot;&gt;TortoiseSVN打分支、合并分支、切换分支&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www
+        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/500550b0d502&quot; target=&quot;_blank&quot;&gt;android+springboot+docker&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;
       
     
     </summary>
     
     
-      <category term="svn" scheme="http://brightereyer.xyz/tags/svn/"/>
+      <category term="全栈" scheme="http://brightereyer.xyz/tags/%E5%85%A8%E6%A0%88/"/>
     
   </entry>
   
   <entry>
-    <title>[AE] 文字漂浮</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471024000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471024000.html/</id>
-    <published>2019-08-22T10:50:24.000Z</published>
-    <updated>2019-08-22T10:50:24.000Z</updated>
+    <title>[qt] QT5.10.0安装教程图文教程</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567297356000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567297356000.html/</id>
+    <published>2019-09-01T00:22:36.000Z</published>
+    <updated>2019-09-01T00:22:36.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="http://pan.baidu.com/s/1EjGKmJ6fUuDanb1IUEHa1A" target="_blank">AE 文字漂浮 练习素材和音效</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">提取码：</span><br><span class="line">rg7s</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/chenmingjun/p/8392713.html" target="_blank">QT5.10.0安装教程图文教程</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;http://pan.baidu.com/s/1EjGKmJ6fUuDanb1IUEHa1A&quot; target=&quot;_blank&quot;&gt;AE 文字漂浮 练习素材和音效&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;t
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/chenmingjun/p/8392713.html&quot; target=&quot;_blank&quot;&gt;QT5.10.0安装教程图文教程&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="qt" scheme="http://brightereyer.xyz/tags/qt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[素材] 视频</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567296079000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567296079000.html/</id>
+    <published>2019-09-01T00:01:19.000Z</published>
+    <updated>2019-09-01T00:01:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://hd1080.pro/" target="_blank">HD1080 视频素材酷</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">视频可以保存</span><br></pre></td></tr></table></figure></p><p><a href="https://www.bilibili.com/video/av27152859/" target="_blank">184个绿幕视频素材</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">绿屏素材 应该可以通过颜色抠图 抠除绿色</span><br></pre></td></tr></table></figure></p><p><a href="https://pan.baidu.com/s/1XCD7flzcP_1RtYR4i2KlDA" target="_blank">素材-云盘地址</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">提取码:</span><br><span class="line">5194</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">www.videezy.com--OK(一切正常)</span><br><span class="line">www.wedistill.io-----OK(一切正常)</span><br><span class="line">www.video.net-------ERROR(域名已被回收)</span><br><span class="line">www.vidsplay.net----UNKNOW(www.vidsplay.net的服务器可能已失效或被墙)</span><br><span class="line">www.pixabay.com---OK(一切正常)</span><br></pre></td></tr></table></figure><p><a href="https://www.acgbbs.net/forum.php?mod=guide&view=hot&page=2&mobile=2" target="_blank">动漫素材</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://hd1080.pro/&quot; target=&quot;_blank&quot;&gt;HD1080 视频素材酷&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;spa
+      
+    
+    </summary>
+    
+    
+      <category term="素材" scheme="http://brightereyer.xyz/tags/%E7%B4%A0%E6%9D%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[设计] 手机app首页</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567296078000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567296078000.html/</id>
+    <published>2019-09-01T00:01:18.000Z</published>
+    <updated>2019-09-01T00:01:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/av56896193" target="_blank">UI设计之如何设计APP首页界面教程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">课程主题：APP首页设计</span><br><span class="line">运用软件：AD + Adobe XD</span><br><span class="line">知识点：</span><br><span class="line">1、app首页设计规范。</span><br><span class="line">2、AD、XD软件基础。</span><br><span class="line">3、运营设计。</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/av56896193&quot; target=&quot;_blank&quot;&gt;UI设计之如何设计APP首页界面教程&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="设计" scheme="http://brightereyer.xyz/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[设计] 视频制作主题</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567296077000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567296077000.html/</id>
+    <published>2019-09-01T00:01:17.000Z</published>
+    <updated>2019-09-01T00:01:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">手机页面</span><br><span class="line"></span><br><span class="line">web页面</span><br><span class="line"></span><br><span class="line">转场</span><br><span class="line"></span><br><span class="line">表情包</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
+    </summary>
+    
+    
+      <category term="设计" scheme="http://brightereyer.xyz/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[AE] 分钟就能学会制作手写字体特效</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567296076000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567296076000.html/</id>
+    <published>2019-09-01T00:01:16.000Z</published>
+    <updated>2019-09-01T00:01:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/av63454836" target="_blank">【AE教程】2分钟就能学会制作手写字体特效</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/av63454836&quot; target=&quot;_blank&quot;&gt;【AE教程】2分钟就能学会制作手写字体特效&lt;/a&gt;&lt;/p&gt;
+
       
     
     </summary>
@@ -294,189 +419,72 @@
   </entry>
   
   <entry>
-    <title>[api] 百度地图api根据地址获取所属省市</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471023000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471023000.html/</id>
-    <published>2019-08-22T10:50:23.000Z</published>
-    <updated>2019-08-22T10:50:23.000Z</updated>
+    <title>[小程序] 扫普通链接二维码打开小程序</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567295380000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567295380000.html/</id>
+    <published>2019-08-31T23:49:40.000Z</published>
+    <updated>2019-08-31T23:49:40.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/cc_1209/article/details/85208113" target="_blank">百度地图api根据地址获取所属省市</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://developers.weixin.qq.com/miniprogram/introduction/qrcode.html#%E6%B5%8B%E8%AF%95%E8%B0%83%E8%AF%95" target="_blank">官方 扫普通链接二维码打开小程序</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/cc_1209/article/details/85208113&quot; target=&quot;_blank&quot;&gt;百度地图api根据地址获取所属省市&lt;/a&gt;&lt;/p&gt;
-
+        &lt;p&gt;&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/introduction/qrcode.html#%E6%B5%8B%E8%AF%95%E8%B0%83%E8%AF%95&quot; target=&quot;_blank&quot;&gt;官方 扫
       
     
     </summary>
     
     
-      <category term="api" scheme="http://brightereyer.xyz/tags/api/"/>
+      <category term="小程序" scheme="http://brightereyer.xyz/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
-    <title>[git] 多人开发Git分支管理详解</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471021000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471021000.html/</id>
-    <published>2019-08-22T10:50:21.000Z</published>
-    <updated>2019-08-22T10:50:21.000Z</updated>
+    <title>[小程序] 接口生成小程序二维码</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567295379000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567295379000.html/</id>
+    <published>2019-08-31T23:49:39.000Z</published>
+    <updated>2019-08-31T23:49:39.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/ialexanderi/article/details/83217090" target="_blank">多人开发Git分支管理详解</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">查看分支:</span><br><span class="line">git branch -a </span><br><span class="line"></span><br><span class="line">创建分支:</span><br><span class="line">git branch name </span><br><span class="line"></span><br><span class="line">切换分支:</span><br><span class="line">git checkout name </span><br><span class="line"></span><br><span class="line">创建并切换:</span><br><span class="line">git checkout -b name </span><br><span class="line"></span><br><span class="line">合并某分支到当前分支:</span><br><span class="line">git merge name </span><br><span class="line"></span><br><span class="line">删除分支:</span><br><span class="line">git branch -d name </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">查看分支合并</span><br><span class="line">git log --graph --pretty=oneline --abbrev-commit</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">8.分支管理策略 </span><br><span class="line">下面我们来说一下一般企业中开发一个项目的分支策略： </span><br><span class="line"></span><br><span class="line">主分支 master </span><br><span class="line">开发分支 develop </span><br><span class="line">功能分支 feature </span><br><span class="line">预发布分支  release </span><br><span class="line">bug 分支 fixbug </span><br><span class="line">其它分支 other</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/daipianpian/p/9239452.html" target="_blank">【直接有用】模拟生成带参跳到指定页面的小程序码</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">注意：</span><br><span class="line">(1)未发布的小程序扫面之后打不开</span><br><span class="line">(2)通过该接口生成的小程序码，永久有效，但数量有效，请谨慎使用。</span><br><span class="line"></span><br><span class="line">利用appid，appsecret，获取access_token： </span><br><span class="line">https://mp.weixin.qq.com/debug/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">接口地址：</span><br><span class="line">https://api.weixin.qq.com/wxa/getwxacode?access_token=ACCESS_TOKEN</span><br><span class="line"></span><br><span class="line">方式：</span><br><span class="line">POST</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">参数：</span><br><span class="line">（1）POST 参数说明：</span><br><span class="line">pathString 不能为空，最大长度 128 字节</span><br><span class="line">widthInt430二维码的宽度</span><br><span class="line">auto_colorBoolfalse自动配置线条颜色，如果颜色依然是黑色，则说明不建议配置主色调</span><br><span class="line">line_colorObject&#123;&quot;r&quot;:&quot;0&quot;,&quot;g&quot;:&quot;0&quot;,&quot;b&quot;:&quot;0&quot;&#125;auth_color 为 false 时生效，使用 rgb 设置颜色 例如 &#123;&quot;r&quot;:&quot;xxx&quot;,&quot;g&quot;:&quot;xxx&quot;,&quot;b&quot;:&quot;xxx&quot;&#125;</span><br><span class="line"></span><br><span class="line">postman参数设置</span><br><span class="line"></span><br><span class="line">raw、JSON(application/json)</span><br><span class="line"></span><br><span class="line">&#123;&quot;path&quot;:&quot;pages/index/detail?id=123&quot;,&quot;width&quot;:430,&quot;auto_color&quot;:false,&quot;line_color&quot;:&#123;&quot;r&quot;:0,&quot;g&quot;:0,&quot;b&quot;:0&#125;&#125;</span><br></pre></td></tr></table></figure><p>以上参考以下2点：<br><a href="https://blog.csdn.net/hknishi_zs/article/details/80683986" target="_blank">(1)微信小程序 获取小程序码和二维码java接口开发</a><br><a href="https://blog.csdn.net/hknishi_zs/article/details/80683802" target="_blank">(2)微信小程序 微信通过扫码跳到任意一个小程序页面</a></p><p><a href="https://blog.csdn.net/brightming/article/details/81953571" target="_blank">微信小程序扫描二维码、小程序码进入并获得携带参数</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">一、生成二维码 </span><br><span class="line">1、获取appid，appsecret，利用工具： </span><br><span class="line">https://mp.weixin.qq.com/debug/</span><br><span class="line">获取access_token</span><br><span class="line"></span><br><span class="line">2、利用接口产生二维码 </span><br><span class="line">https://developers.weixin.qq.com/miniprogram/dev/api/qrcode.html</span><br><span class="line">可以利用postman来进行：</span><br></pre></td></tr></table></figure></p><p>js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">onLoad(options) &#123;</span><br><span class="line">  if (options.scene) &#123;</span><br><span class="line">    console.log(&quot;has scene&quot;);</span><br><span class="line">    var scene = decodeURIComponent(options.scene);</span><br><span class="line">    console.log(&quot;scene is &quot;, scene);</span><br><span class="line">    var arrPara = scene.split(&quot;&amp;&quot;);</span><br><span class="line">    var arr = [];</span><br><span class="line">    for (var i in arrPara) &#123;</span><br><span class="line">      arr = arrPara[i].split(&quot;=&quot;);</span><br><span class="line">      wx.setStorageSync(arr[0],arr[1]);</span><br><span class="line">      console.log(&quot;setStorageSync:&quot;,arr[0],&quot;=&quot;,arr[1]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    console.log(&quot;no scene&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/ialexanderi/article/details/83217090&quot; target=&quot;_blank&quot;&gt;多人开发Git分支管理详解&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;
+        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/daipianpian/p/9239452.html&quot; target=&quot;_blank&quot;&gt;【直接有用】模拟生成带参跳到指定页面的小程序码&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight pla
       
     
     </summary>
     
     
-      <category term="git" scheme="http://brightereyer.xyz/tags/git/"/>
+      <category term="小程序" scheme="http://brightereyer.xyz/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
-    <title>[git] 根据commitId获取版本代码</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471020000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471020000.html/</id>
-    <published>2019-08-22T10:50:20.000Z</published>
-    <updated>2019-08-22T10:50:20.000Z</updated>
+    <title>[口琴] 平凡之路</title>
+    <link href="http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567295378000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/01//articles/2019/09/01/1567295378000.html/</id>
+    <published>2019-08-31T23:49:38.000Z</published>
+    <updated>2019-08-31T23:49:38.000Z</updated>
     
-    <content type="html"><![CDATA[<p>查看提交记录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show commit_id</span><br></pre></td></tr></table></figure></p><p>回退命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#回退到上个版本</span><br><span class="line">git reset --hard HEAD^</span><br><span class="line"></span><br><span class="line">#回退到前3次提交之前，以此类推，回退到n次提交之前</span><br><span class="line">git reset --hard HEAD~3</span><br><span class="line"></span><br><span class="line">#退到/进到 指定commit的sha码</span><br><span class="line">git reset --hard commit_id</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">强推到远程：</span><br><span class="line">git push origin HEAD --force</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;查看提交记录：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="git" scheme="http://brightereyer.xyz/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[github] 仓库移交方法</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471019000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471019000.html/</id>
-    <published>2019-08-22T10:50:19.000Z</published>
-    <updated>2019-08-22T10:50:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/huutu/article/details/51355964" target="_blank">在Github上仓库移交的方法</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/av6926382" target="_blank">【口琴奏】平凡之路</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">转自je吧</span><br><span class="line">#1#1#4#4(67)#1#1 #1#1#4#4332#1</span><br><span class="line">#1#1#4 (67)#1 #1#1(6)222#1(6)</span><br><span class="line">#1#1#4#4(67)#1#1 #1#1#4#4332#1</span><br><span class="line">#1#1#4 (67)#1 #1#1(6)222#1(6)</span><br><span class="line">3#4#56#563#4#4 32#1#1#1#1(7)</span><br><span class="line">3#4#56#563#4#4 #466 6667</span><br><span class="line">3#4#56#56【#1#432#1#1】7</span><br><span class="line">#4#56 6#56 6#567 6#56</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#1#1#1#4#4(67)#1#1 #1#1#4#4332#1</span><br><span class="line">#1#1#1#4 (67)#1 #1#1(6)222#1(6)</span><br><span class="line">3#4#56#563#4#4 32#1#1#1#1(7)</span><br><span class="line">3#4#56#563#4#4 #466 6667</span><br><span class="line">3#4#56#56【#1#432#1#1】7</span><br><span class="line">#4#56 6#56 6#567 6#56</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">666 666 666 #5#56</span><br><span class="line">666 666 666 #5#56</span><br><span class="line">666 666 666 #5#56</span><br><span class="line">666 666 666 #5#56</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/huutu/article/details/51355964&quot; target=&quot;_blank&quot;&gt;在Github上仓库移交的方法&lt;/a&gt;&lt;/p&gt;
-
+        &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/av6926382&quot; target=&quot;_blank&quot;&gt;【口琴奏】平凡之路&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=
       
     
     </summary>
     
     
-      <category term="github" scheme="http://brightereyer.xyz/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[java] excel加水印</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471018000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471018000.html/</id>
-    <published>2019-08-22T10:50:18.000Z</published>
-    <updated>2019-08-22T10:50:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/5ebf2217f0be" target="_blank">excel加水印</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/5ebf2217f0be&quot; target=&quot;_blank&quot;&gt;excel加水印&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[java] http请求工具类</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471017000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471017000.html/</id>
-    <published>2019-08-22T10:50:17.000Z</published>
-    <updated>2019-08-22T10:50:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_18769269/article/details/90439124" target="_blank">java http请求工具类</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><span class="line">import org.apache.commons.lang.StringUtils;</span><br><span class="line">import org.apache.commons.logging.Log;</span><br><span class="line">import org.apache.commons.logging.LogFactory;</span><br><span class="line"></span><br><span class="line">import java.io.*;</span><br><span class="line">import java.net.HttpURLConnection;</span><br><span class="line">import java.net.URL;</span><br><span class="line">import java.net.URLConnection;</span><br><span class="line">import java.net.URLEncoder;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Map;</span><br><span class="line"></span><br><span class="line">public class HttpUtil &#123;</span><br><span class="line">    public static final String DEFAULT_CHARSET = &quot;utf-8&quot;;</span><br><span class="line"></span><br><span class="line">    public static final Log logger = LogFactory.getLog(HttpUtil.class);</span><br><span class="line">    public static String doGet(String baseUrl, Map&lt;String, String&gt; paramMap) &#123;</span><br><span class="line">        StringBuffer queryString = new StringBuffer();</span><br><span class="line">        for (String param : paramMap.keySet()) &#123;</span><br><span class="line">            String value = paramMap.get(param);</span><br><span class="line">            if (StringUtils.isNotBlank(value)) &#123;</span><br><span class="line">                try &#123;</span><br><span class="line">                    value = URLEncoder.encode(value, DEFAULT_CHARSET);</span><br><span class="line">                &#125; catch (UnsupportedEncodingException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">                queryString.append(param).append(&quot;=&quot;).append(value).append(&quot;&amp;&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return doGet(baseUrl, queryString.toString());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 向指定URL发送GET方法的请求</span><br><span class="line">     *</span><br><span class="line">     * @param baseUrl 发送请求的URL</span><br><span class="line">     * @param param   请求参数，请求参数应该是 name1=value1&amp;name2=value2 的形式。</span><br><span class="line">     * @return URL 所代表远程资源的响应结果</span><br><span class="line">     */</span><br><span class="line">    public static String doGet(String baseUrl, String param) &#123;</span><br><span class="line">        String result = &quot;&quot;;</span><br><span class="line">        BufferedReader in = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            String urlNameString =baseUrl;</span><br><span class="line">            if(param!=null)&#123;</span><br><span class="line">                urlNameString = baseUrl + &quot;?&quot; + param;</span><br><span class="line">            &#125;</span><br><span class="line">            logger.info(&quot;http请求：&quot; + urlNameString);</span><br><span class="line">            URL realUrl = new URL(urlNameString);</span><br><span class="line">            // 打开和URL之间的连接</span><br><span class="line">            HttpURLConnection connection = (HttpURLConnection) realUrl.openConnection();</span><br><span class="line">            // 设置通用的请求属性</span><br><span class="line">            connection.setRequestProperty(&quot;Content-Type&quot;, &quot;text/plain; charset=utf-8&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;Charsert&quot;, DEFAULT_CHARSET);</span><br><span class="line">            connection.setRequestProperty(&quot;accept&quot;, &quot;*/*&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;connection&quot;, &quot;Keep-Alive&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;user-agent&quot;,</span><br><span class="line">                    &quot;Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)&quot;);</span><br><span class="line">            // 建立实际的连接</span><br><span class="line">            connection.connect();</span><br><span class="line">            if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) &#123;</span><br><span class="line">                // 获取所有响应头字段</span><br><span class="line">                Map&lt;String, List&lt;String&gt;&gt; map = connection.getHeaderFields();</span><br><span class="line">                // 遍历所有的响应头字段</span><br><span class="line">                for (String key : map.keySet()) &#123;</span><br><span class="line">                    logger.info(key + &quot;---&gt;&quot; + map.get(key));</span><br><span class="line">                &#125;</span><br><span class="line">                // 定义 BufferedReader输入流来读取URL的响应</span><br><span class="line">                in = new BufferedReader(new InputStreamReader(</span><br><span class="line">                        connection.getInputStream()));</span><br><span class="line">                String line;</span><br><span class="line">                while ((line = in.readLine()) != null) &#123;</span><br><span class="line">                    result += line;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.info(&quot;发送GET请求出现异常！&quot; + e);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        // 使用finally块来关闭输入流</span><br><span class="line">        finally &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                if (in != null) &#123;</span><br><span class="line">                    in.close();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; catch (Exception e2) &#123;</span><br><span class="line">                e2.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static String doGet(String baseUrl) &#123;</span><br><span class="line">        return doGet(baseUrl,&quot;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 向指定 URL 发送POST方法的请求</span><br><span class="line">     *</span><br><span class="line">     * @param url   发送请求的 URL</span><br><span class="line">     * @param param 请求参数，请求参数应该是 name1=value1&amp;name2=value2 的形式。</span><br><span class="line">     * @return 所代表远程资源的响应结果</span><br><span class="line">     */</span><br><span class="line">    public static String doPost(String url, String param) &#123;</span><br><span class="line">        PrintWriter out = null;</span><br><span class="line">        BufferedReader in = null;</span><br><span class="line">        String result = &quot;&quot;;</span><br><span class="line">        try &#123;</span><br><span class="line">            URL realUrl = new URL(url);</span><br><span class="line">            // 打开和URL之间的连接</span><br><span class="line">            URLConnection connection = realUrl.openConnection();</span><br><span class="line">            // 设置通用的请求属性</span><br><span class="line">            connection.setRequestProperty(&quot;Content-Type&quot;, &quot;text/plain; charset=utf-8&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;Charsert&quot;, &quot;UTF-8&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;accept&quot;, &quot;*/*&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;connection&quot;, &quot;Keep-Alive&quot;);</span><br><span class="line">            connection.setRequestProperty(&quot;user-agent&quot;,</span><br><span class="line">                    &quot;Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)&quot;);</span><br><span class="line">            // 发送POST请求必须设置如下两行</span><br><span class="line">            connection.setDoOutput(true);</span><br><span class="line">            connection.setDoInput(true);</span><br><span class="line">            // 获取URLConnection对象对应的输出流</span><br><span class="line">            out = new PrintWriter(connection.getOutputStream());</span><br><span class="line">            // 发送请求参数</span><br><span class="line">            out.print(param);</span><br><span class="line">            // flush输出流的缓冲</span><br><span class="line">            out.flush();</span><br><span class="line">            // 定义BufferedReader输入流来读取URL的响应</span><br><span class="line">            in = new BufferedReader(</span><br><span class="line">                    new InputStreamReader(connection.getInputStream()));</span><br><span class="line">            String line;</span><br><span class="line">            while ((line = in.readLine()) != null) &#123;</span><br><span class="line">                result += line;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.info(&quot;发送 POST 请求出现异常！&quot; + e);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        //使用finally块来关闭输出流、输入流</span><br><span class="line">        finally &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                if (out != null) &#123;</span><br><span class="line">                    out.close();</span><br><span class="line">                &#125;</span><br><span class="line">                if (in != null) &#123;</span><br><span class="line">                    in.close();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; catch (IOException ex) &#123;</span><br><span class="line">                ex.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_18769269/article/details/90439124&quot; target=&quot;_blank&quot;&gt;java http请求工具类&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[java] Java数据类型和MySql数据类型对应一览表</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471016000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471016000.html/</id>
-    <published>2019-08-22T10:50:16.000Z</published>
-    <updated>2019-08-22T10:50:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/defonds/article/details/46681701" target="_blank">Java数据类型和MySql数据类型对应一览表</a><br><a href="https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-reference-type-conversions.html" target="_blank">mysql官方表</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/defonds/article/details/46681701&quot; target=&quot;_blank&quot;&gt;Java数据类型和MySql数据类型对应一览表&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://dev.mysq
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[java] Mybatis处理枚举类型</title>
-    <link href="http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471015000.html/"/>
-    <id>http://brightereyer.xyz/2019/08/22//articles/2019/08/22/1566471015000.html/</id>
-    <published>2019-08-22T10:50:15.000Z</published>
-    <updated>2019-08-22T10:50:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="" target="_blank"></a><br><a href="https://blog.csdn.net/qq_28988969/article/details/78605735" target="_blank">Mybatis处理枚举类型</a><br><a href="https://segmentfault.com/a/1190000012564028" target="_blank">使用MyBatis简化枚举类值的存储和读取</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/qq_28988969/article/details/78605735&quot; target=&quot;_blank&quot;&gt;Mybatis处理枚举类型&lt;/a&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://brightereyer.xyz/tags/java/"/>
+      <category term="口琴" scheme="http://brightereyer.xyz/tags/%E5%8F%A3%E7%90%B4/"/>
     
   </entry>
   
