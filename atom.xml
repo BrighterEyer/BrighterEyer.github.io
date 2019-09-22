@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brightereyer.xyz/"/>
-  <updated>2019-09-14T01:48:48.000Z</updated>
+  <updated>2019-09-22T06:22:26.000Z</updated>
   <id>http://brightereyer.xyz/</id>
   
   <author>
@@ -17,386 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[react-native] 隐藏状态栏</title>
-    <link href="http://brightereyer.xyz/2019/09/14//articles/2019/09/14/1568425728000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/14//articles/2019/09/14/1568425728000.html/</id>
-    <published>2019-09-14T01:48:48.000Z</published>
-    <updated>2019-09-14T01:48:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_28484355/article/details/81320019" target="_blank">ReactNative——如何隐藏状态栏（实现沉浸式）</a><br><a href="https://blog.csdn.net/changsimeng/article/details/68068240" target="_blank">react-native沉浸式状态栏</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import React,&#123;Component&#125; from &apos;react&apos;;</span><br><span class="line">import &#123;Text,View, StatusBar&#125; from &apos;react-native&apos;;</span><br><span class="line"></span><br><span class="line">export default class MainPage extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return(</span><br><span class="line">            &lt;View style=&#123;&#123;flex: 1&#125;&#125;&gt;</span><br><span class="line">                &lt;StatusBar backgroundColor=&quot;#ff0000&quot;</span><br><span class="line">                           translucent=&#123;true&#125;</span><br><span class="line">                           hidden=&#123;true&#125;</span><br><span class="line">                           animated=&#123;true&#125;/&gt;</span><br><span class="line">                &lt;Text&gt;HelloWord&lt;/&gt;</span><br><span class="line">            &lt;/View&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_28484355/article/details/81320019&quot; target=&quot;_blank&quot;&gt;ReactNative——如何隐藏状态栏（实现沉浸式）&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] 横竖屏</title>
-    <link href="http://brightereyer.xyz/2019/09/14//articles/2019/09/14/1568425726000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/14//articles/2019/09/14/1568425726000.html/</id>
-    <published>2019-09-14T01:48:46.000Z</published>
-    <updated>2019-09-14T01:48:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/dc5581e22a48" target="_blank">react-native-orientation 横屏实现</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install react-native-orientation --save</span><br><span class="line">react-native link react-native-orientation</span><br></pre></td></tr></table></figure></p><p>引入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import Orientation from &apos;react-native-orientation&apos;;</span><br><span class="line"></span><br><span class="line"># 1.在进去这个页面的时候强制横屏</span><br><span class="line"></span><br><span class="line">componentWillMount() &#123;</span><br><span class="line">       Orientation.lockToLandscape();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># 2.在退出当前页面的时候强制竖屏</span><br><span class="line"></span><br><span class="line">componentWillUnmount() &#123;</span><br><span class="line">       Orientation.lockToPortrait();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>AppScreen.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">import Orientation from &apos;react-native-orientation&apos;;</span><br><span class="line"></span><br><span class="line">export default class AppScreen extends Component &#123;</span><br><span class="line">  // ...</span><br><span class="line"></span><br><span class="line">  componentWillMount() &#123;</span><br><span class="line">    // The getOrientation method is async. It happens sometimes that</span><br><span class="line">    // you need the orientation at the moment the JS runtime starts running on device.</span><br><span class="line">    // `getInitialOrientation` returns directly because its a constant set at the</span><br><span class="line">    // beginning of the JS runtime.</span><br><span class="line"></span><br><span class="line">     // 判断横竖屏幕</span><br><span class="line">    const initial = Orientation.getInitialOrientation();</span><br><span class="line">    if (initial === &apos;PORTRAIT&apos;) &#123;</span><br><span class="line">      // do something</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      // do something else</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  componentDidMount() &#123;</span><br><span class="line">    // this locks the view to Portrait Mode</span><br><span class="line">    Orientation.lockToPortrait();</span><br><span class="line"></span><br><span class="line">    // this locks the view to Landscape Mode</span><br><span class="line">    // Orientation.lockToLandscape();</span><br><span class="line"></span><br><span class="line">    // this unlocks any previous locks to all Orientations</span><br><span class="line">    // Orientation.unlockAllOrientations();</span><br><span class="line"></span><br><span class="line">    Orientation.addOrientationListener(this._orientationDidChange);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  _orientationDidChange = (orientation) =&gt; &#123;</span><br><span class="line">    if (orientation === &apos;LANDSCAPE&apos;) &#123;</span><br><span class="line">      // do something with landscape layout</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      // do something with portrait layout</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  componentWillUnmount() &#123;</span><br><span class="line">    Orientation.getOrientation((err, orientation) =&gt; &#123;</span><br><span class="line">      console.log(`Current Device Orientation: $&#123;orientation&#125;`);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // Remember to remove listener</span><br><span class="line">    Orientation.removeOrientationListener(this._orientationDidChange);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    // ...</span><br><span class="line"></span><br><span class="line">    return (</span><br><span class="line">      // ...</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/dc5581e22a48&quot; target=&quot;_blank&quot;&gt;react-native-orientation 横屏实现&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;ta
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] SectionList组件</title>
-    <link href="http://brightereyer.xyz/2019/09/14//articles/2019/09/14/1568425725000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/14//articles/2019/09/14/1568425725000.html/</id>
-    <published>2019-09-14T01:48:45.000Z</published>
-    <updated>2019-09-14T01:48:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/vipstone/p/7250625.html" target="_blank">史上最易懂——ReactNative分组列表SectionList使用详情及示例详解</a><br>SectionList组件使用Demo通讯录<br><a href="https://github.com/vipstone/react-nation-sectionlist" target="_blank">react-nation-sectionlist</a></p><p><a href="https://www.jianshu.com/p/8672bff8db01" target="_blank">react-native 之 SectionList的使用</a><br><a href="https://github.com/gjjggg/SectionList" target="_blank">github SectionList</a></p><p><a href="http://bbs.reactnative.cn/topic/4912/%E5%85%B3%E4%BA%8E-sectionlist-%E7%BB%84%E4%BB%B6-%E7%9A%84scrolltolocation-%E6%96%B9%E6%B3%95%E9%97%AE%E9%A2%98" target="_blank">SectionList组件的scrollToLocation方法</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;SectionList</span><br><span class="line">ref=&#123;ref =&gt; this.sectionList = ref&#125;</span><br><span class="line">renderItem=&#123;(&#123;item&#125;) =&gt; this._renderItem(item)&#125;</span><br><span class="line">renderSectionHeader=&#123;(&#123;section&#125;) =&gt; this._renderSectionHeader(section)&#125;</span><br><span class="line">sections=&#123;this.state.dataSource&#125;</span><br><span class="line">stickySectionHeadersEnabled=&#123;true&#125;</span><br><span class="line">getItemLayout=&#123;this._getItemLayout&#125;</span><br><span class="line">ListFooterComponent=&#123;() =&gt; (&lt;Text style=&#123;styles.footerText&#125;&gt;没有更多啦&lt;/Text&gt;)&#125;</span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line">每个分组里的列表项的高度都为 45</span><br><span class="line">每个分组头部高度都为 20</span><br><span class="line">index 是要跳转到分组的索引</span><br><span class="line">data 为所有数据</span><br><span class="line"></span><br><span class="line">_getItemLayout(data, index) &#123;</span><br><span class="line">return &#123;length: 45, offset: 45 * index + 20, index: index&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">this.sectionList.scrollToLocation(&#123;</span><br><span class="line">sectionIndex: index,</span><br><span class="line">itemIndex: 0,</span><br><span class="line">viewPosition: 0,</span><br><span class="line">viewOffset: 0,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><p>博客包含代码<br><a href="https://www.jianshu.com/p/86ae1a2ed61d" target="_blank">react-native SectionList实现分组列表</a><br><a href="https://www.jianshu.com/p/65a6a6d42abc" target="_blank">React Native使用SectionList打造单词本，包含分组的跳转</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/vipstone/p/7250625.html&quot; target=&quot;_blank&quot;&gt;史上最易懂——ReactNative分组列表SectionList使用详情及示例详解&lt;/a&gt;&lt;br&gt;SectionList组件
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] android更改仓库</title>
-    <link href="http://brightereyer.xyz/2019/09/14//articles/2019/09/14/1568425724000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/14//articles/2019/09/14/1568425724000.html/</id>
-    <published>2019-09-14T01:48:44.000Z</published>
-    <updated>2019-09-14T01:48:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.gradle.api.ProjectConfigurationException: A problem occurred configuring project &apos;:app&apos;</span><br></pre></td></tr></table></figure></p><p><a href="https://blog.csdn.net/weixin_40811410/article/details/84348344" target="_blank">解决AndroidStudio编译时报错：org.gradle.api.ProjectConfigurationException；编译报错Read Time out</a></p><p>解决方法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">使用开源中国的maven库：阿里云的速度比较快，更稳定</span><br><span class="line">阿里云的：</span><br><span class="line">http://maven.aliyun.com/nexus/content/groups/public/</span><br><span class="line"></span><br><span class="line">OSChina的仓库地址：</span><br><span class="line">http://maven.oschina.net/content/groups/public/</span><br><span class="line"></span><br><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        jcenter()</span><br><span class="line">        maven&#123;url &apos;http://maven.aliyun.com/nexus/content/groups/public/&apos;&#125;</span><br><span class="line">        google()</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &apos;com.android.tools.build:gradle:3.2.1&apos;</span><br><span class="line">        classpath &apos;com.google.gms:google-services:4.0.1&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        jcenter()</span><br><span class="line">        maven&#123;url &apos;http://maven.aliyun.com/nexus/content/groups/public/&apos;&#125;</span><br><span class="line">        google()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">task clean(type: Delete) &#123;</span><br><span class="line">    delete rootProject.buildDir</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>然后再运行gradle命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">若此时问题并没有解决，可能是因为jcenter()仍然会去下载国外网站的内容。可以再次修改为</span><br><span class="line">gradlew clean uploadArchives</span><br></pre></td></tr></table></figure></p><p>解决方法二：</p><p>1、 修改单独项目<br>在项目的build.gradle文件中，修改repositories配置<br>由：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">    mavenCentral()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">    maven&#123; url &apos;http://maven.aliyun.com/nexus/content/groups/public/&apos;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>2、 更改所有项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">如果想一次更改所有的仓库地址，可以在USER_HOME/.gradle/（如C:\Users\hellowood.gradle）文件夹下添加init.gradle文件来配置。</span><br><span class="line">获取在单个项目的.gradle下修改对当前项目起作用。</span><br><span class="line">init.gradle：</span><br><span class="line"></span><br><span class="line">allprojects&#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        def REPOSITORY_URL = &apos;http://maven.aliyun.com/nexus/content/groups/public/&apos;</span><br><span class="line">        all &#123; ArtifactRepository repo -&gt;</span><br><span class="line">            if(repo instanceof MavenArtifactRepository)&#123;</span><br><span class="line">                def url = repo.url.toString()</span><br><span class="line">                if (url.startsWith(&apos;https://repo1.maven.org/maven2&apos;) || url.startsWith(&apos;https://jcenter.bintray.com/&apos;)) &#123;</span><br><span class="line">                    remove repo</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url REPOSITORY_URL</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">这样就可以在项目编译的时候从阿里的仓库中下载依赖了</span><br><span class="line"></span><br><span class="line">init.build脚本可以参考</span><br><span class="line"></span><br><span class="line">https://docs.gradle.org/current/userguide/init_scripts.html</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;问题&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[吃] 冰皮月饼</title>
-    <link href="http://brightereyer.xyz/2019/09/14//articles/2019/09/14/1568425723000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/14//articles/2019/09/14/1568425723000.html/</id>
-    <published>2019-09-14T01:48:43.000Z</published>
-    <updated>2019-09-14T01:48:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://baike.baidu.com/item/%E5%86%B0%E7%9A%AE%E6%9C%88%E9%A5%BC/6011528" target="_blank">百度百科 冰皮月饼</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://baike.baidu.com/item/%E5%86%B0%E7%9A%AE%E6%9C%88%E9%A5%BC/6011528&quot; target=&quot;_blank&quot;&gt;百度百科 冰皮月饼&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="吃" scheme="http://brightereyer.xyz/tags/%E5%90%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[婚礼] 婚礼当天流程</title>
-    <link href="http://brightereyer.xyz/2019/09/13//articles/2019/09/13/1568334274000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/13//articles/2019/09/13/1568334274000.html/</id>
-    <published>2019-09-13T00:24:34.000Z</published>
-    <updated>2019-09-13T00:24:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="婚礼当天流程"><a href="#婚礼当天流程" class="headerlink" title="婚礼当天流程"></a>婚礼当天流程</h1><h2 id="1-现场布置"><a href="#1-现场布置" class="headerlink" title="1.现场布置"></a>1.现场布置</h2><h3 id="桌椅、位置"><a href="#桌椅、位置" class="headerlink" title="桌椅、位置"></a>桌椅、位置</h3><h3 id="diy的物品"><a href="#diy的物品" class="headerlink" title="diy的物品"></a>diy的物品</h3><h3 id="鲜花"><a href="#鲜花" class="headerlink" title="鲜花"></a>鲜花</h3><h3 id="食品"><a href="#食品" class="headerlink" title="食品"></a>食品</h3><h3 id="舞台、场地布置"><a href="#舞台、场地布置" class="headerlink" title="舞台、场地布置"></a>舞台、场地布置</h3><h2 id="2-化妆"><a href="#2-化妆" class="headerlink" title="2.化妆"></a>2.化妆</h2><h3 id="新郎"><a href="#新郎" class="headerlink" title="新郎"></a>新郎</h3><ul><li>发型做好</li></ul><h3 id="新娘"><a href="#新娘" class="headerlink" title="新娘"></a>新娘</h3><ul><li>化妆完成</li><li>通知新郎</li></ul><h2 id="3-进场"><a href="#3-进场" class="headerlink" title="3.进场"></a>3.进场</h2><h2 id="4-致辞-婚宴"><a href="#4-致辞-婚宴" class="headerlink" title="4.致辞+婚宴"></a>4.致辞+婚宴</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul><li>主持人</li><li>音响</li><li>结婚证书、戒指</li><li>气球、彩带到位</li></ul><h3 id="新人入场"><a href="#新人入场" class="headerlink" title="新人入场"></a>新人入场</h3><ul><li>奏乐</li><li>彩带</li><li>踩气球</li></ul><h3 id="过门"><a href="#过门" class="headerlink" title="过门"></a>过门</h3><ul><li><p>主持人</p><ul><li>介绍</li></ul></li><li><p>主婚人</p><ul><li>致词</li></ul></li><li><p>证婚人</p><ul><li><p>宣读</p><ul><li>结婚证书</li></ul></li></ul></li><li><p>新人</p><ul><li>切蛋糕</li></ul></li></ul><h3 id="婚宴"><a href="#婚宴" class="headerlink" title="婚宴"></a>婚宴</h3><ul><li><p>婚宴开始</p><ul><li>进食</li></ul></li><li><p>婚宴结束</p><ul><li>宾客与新人合影</li></ul></li></ul><h2 id="5-活动"><a href="#5-活动" class="headerlink" title="5.活动"></a>5.活动</h2><h3 id="打麻将"><a href="#打麻将" class="headerlink" title="打麻将"></a>打麻将</h3><h3 id="唱歌跳舞"><a href="#唱歌跳舞" class="headerlink" title="唱歌跳舞"></a>唱歌跳舞</h3><h3 id="看电影"><a href="#看电影" class="headerlink" title="看电影"></a>看电影</h3><h2 id="摄影摄像"><a href="#摄影摄像" class="headerlink" title="摄影摄像"></a>摄影摄像</h2><h3 id="拍摄"><a href="#拍摄" class="headerlink" title="拍摄"></a>拍摄</h3><ul><li><p>全程</p><ul><li><p>摄影a</p><ul><li>新娘</li><li>从化妆开始</li></ul></li><li><p>摄影b</p><ul><li>新郎</li></ul></li><li><p>摄影c</p><ul><li>婚礼仪式</li></ul></li></ul></li><li><p>适时拍摄</p></li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;婚礼当天流程&quot;&gt;&lt;a href=&quot;#婚礼当天流程&quot; class=&quot;headerlink&quot; title=&quot;婚礼当天流程&quot;&gt;&lt;/a&gt;婚礼当天流程&lt;/h1&gt;&lt;h2 id=&quot;1-现场布置&quot;&gt;&lt;a href=&quot;#1-现场布置&quot; class=&quot;headerlink&quot; titl
-      
-    
-    </summary>
-    
-    
-      <category term="婚礼" scheme="http://brightereyer.xyz/tags/%E5%A9%9A%E7%A4%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] 预设占位placeholder</title>
-    <link href="http://brightereyer.xyz/2019/09/13//articles/2019/09/13/1568332424000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/13//articles/2019/09/13/1568332424000.html/</id>
-    <published>2019-09-12T23:53:44.000Z</published>
-    <updated>2019-09-12T23:53:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/984ef99641f5" target="_blank">React Native预设占位placeholder</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/984ef99641f5&quot; target=&quot;_blank&quot;&gt;React Native预设占位placeholder&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] 项目基本框架</title>
-    <link href="http://brightereyer.xyz/2019/09/13//articles/2019/09/13/1568332423000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/13//articles/2019/09/13/1568332423000.html/</id>
-    <published>2019-09-12T23:53:43.000Z</published>
-    <updated>2019-09-12T23:53:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>此项目致力于构建一套最基础，最精简，可维护的react-native项目，支持ios，android<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/duheng/Mozi</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;此项目致力于构建一套最基础，最精简，可维护的react-native项目，支持ios，android&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;lin
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] 打印机RNPrint</title>
-    <link href="http://brightereyer.xyz/2019/09/13//articles/2019/09/13/1568332422000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/13//articles/2019/09/13/1568332422000.html/</id>
-    <published>2019-09-12T23:53:42.000Z</published>
-    <updated>2019-09-12T23:53:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install react-native-print --save</span><br><span class="line">#RN版本06.0不需要执行此操作，06.0会自动依赖</span><br><span class="line">react-native link react-native-print</span><br></pre></td></tr></table></figure></p><p>RNPrinter.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;;</span><br><span class="line">import &#123;</span><br><span class="line">  AppRegistry,</span><br><span class="line">  Button,</span><br><span class="line">  StyleSheet,</span><br><span class="line">  NativeModules,</span><br><span class="line">  Platform,</span><br><span class="line">  Text,</span><br><span class="line">  View</span><br><span class="line">&#125; from &apos;react-native&apos;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import RNPrint from &apos;react-native-print&apos;;</span><br><span class="line"></span><br><span class="line">export default class RNPrinter extends Component &#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    selectedPrinter: null</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // @NOTE iOS Only</span><br><span class="line">  selectPrinter = async () =&gt; &#123;</span><br><span class="line">    const selectedPrinter = await RNPrint.selectPrinter(&#123; x: 100, y: 100 &#125;)</span><br><span class="line">    this.setState(&#123; selectedPrinter &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // @NOTE iOS Only</span><br><span class="line">  silentPrint = async () =&gt; &#123;</span><br><span class="line">    if (!this.state.selectedPrinter) &#123;</span><br><span class="line">      alert(&apos;Must Select Printer First&apos;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    const jobName = await RNPrint.print(&#123;</span><br><span class="line">      printerURL: this.state.selectedPrinter.url,</span><br><span class="line">      html: &apos;&lt;h1&gt;Silent Print&lt;/h1&gt;&apos;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  async printHTML() &#123;</span><br><span class="line">    await RNPrint.print(&#123;</span><br><span class="line">      html: &apos;&lt;h1&gt;Heading 1&lt;/h1&gt;&lt;h2&gt;Heading 2&lt;/h2&gt;&lt;h3&gt;Heading 3&lt;/h3&gt;&apos;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  async printRemotePDF() &#123;</span><br><span class="line">    await RNPrint.print(&#123; filePath: &apos;https://graduateland.com/api/v2/users/jesper/cv&apos; &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  customOptions = () =&gt; &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View&gt;</span><br><span class="line">        &#123;this.state.selectedPrinter &amp;&amp;</span><br><span class="line">          &lt;View&gt;</span><br><span class="line">            &lt;Text&gt;&#123;`Selected Printer Name: $&#123;this.state.selectedPrinter.name&#125;`&#125;&lt;/Text&gt;</span><br><span class="line">            &lt;Text&gt;&#123;`Selected Printer URI: $&#123;this.state.selectedPrinter.url&#125;`&#125;&lt;/Text&gt;</span><br><span class="line">          &lt;/View&gt;</span><br><span class="line">        &#125;</span><br><span class="line">      &lt;Button onPress=&#123;this.selectPrinter&#125; title=&quot;Select Printer&quot; /&gt;</span><br><span class="line">      &lt;Button onPress=&#123;this.silentPrint&#125; title=&quot;Silent Print&quot; /&gt;</span><br><span class="line">    &lt;/View&gt;</span><br><span class="line"></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View style=&#123;styles.container&#125;&gt;</span><br><span class="line">        &#123;Platform.OS === &apos;ios&apos; &amp;&amp; this.customOptions()&#125;</span><br><span class="line">        &lt;View style=&#123;[&#123;paddingBottom:50&#125;]&#125;&gt;</span><br><span class="line">            &lt;Button onPress=&#123;this.printHTML&#125; title=&quot;打印HTML内容0.60&quot;  /&gt;</span><br><span class="line">        &lt;/View&gt;</span><br><span class="line">        &lt;Button onPress=&#123;this.printRemotePDF&#125; title=&quot;打印PDF&quot; /&gt;</span><br><span class="line">      &lt;/View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const styles = StyleSheet.create(&#123;</span><br><span class="line">  container: &#123;</span><br><span class="line">    flex: 1,</span><br><span class="line">    justifyContent: &apos;center&apos;,</span><br><span class="line">    alignItems: &apos;center&apos;,</span><br><span class="line">    backgroundColor: &apos;#F5FCFF&apos;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;安装&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;s
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] RN页面的flex布局</title>
-    <link href="http://brightereyer.xyz/2019/09/13//articles/2019/09/13/1568332421000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/13//articles/2019/09/13/1568332421000.html/</id>
-    <published>2019-09-12T23:53:41.000Z</published>
-    <updated>2019-09-12T23:53:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.bbsmax.com/A/WpdK4k9NzV/" target="_blank">RN页面的flex布局</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.bbsmax.com/A/WpdK4k9NzV/&quot; target=&quot;_blank&quot;&gt;RN页面的flex布局&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[在线文档] 腾讯在线文档</title>
-    <link href="http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298538000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298538000.html/</id>
-    <published>2019-09-12T14:28:58.000Z</published>
-    <updated>2019-09-12T14:28:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://docs.qq.com/desktop/?</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla
-      
-    
-    </summary>
-    
-    
-      <category term="在线文档" scheme="http://brightereyer.xyz/tags/%E5%9C%A8%E7%BA%BF%E6%96%87%E6%A1%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] 与android原生交互</title>
-    <link href="http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298537000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298537000.html/</id>
-    <published>2019-09-12T14:28:57.000Z</published>
-    <updated>2019-09-12T14:28:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_25827845/article/details/52862892" target="_blank">React-Native开发之原生模块封装（Android)升级版</a></p><p><a href="https://blog.csdn.net/junhuahouse/article/details/80699705" target="_blank">react-native 与android原生交互</a><br>原生模块的逻辑实现:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">编写原生逻辑 </span><br><span class="line">暴露原模块接口向js </span><br><span class="line">注册原生模块 </span><br><span class="line">导出、导入react-native原生模块</span><br></pre></td></tr></table></figure></p><p><a href="https://blog.csdn.net/qq_23575795/article/details/80899478" target="_blank">React-native调用Android原生模块</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/RightOfHand/FirstApp</span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/crazycodeboy/RNStudyNotes/blob/master/React%20Native%E5%8E%9F%E7%94%9F%E7%BB%84%E4%BB%B6%E5%BC%80%E5%8F%91/RN+Android%20%E5%8E%9F%E7%94%9F%E7%BB%84%E4%BB%B6%E5%BC%80%E5%8F%91.md" target="_blank">RN+Android 原生组件开发###</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_25827845/article/details/52862892&quot; target=&quot;_blank&quot;&gt;React-Native开发之原生模块封装（Android)升级版&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] 全局变量</title>
-    <link href="http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298536000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298536000.html/</id>
-    <published>2019-09-12T14:28:56.000Z</published>
-    <updated>2019-09-12T14:28:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/75b7f67a3733" target="_blank">简书 | React Native 全局变量的使用</a><br><a href="https://blog.csdn.net/u012878818/article/details/75103330" target="_blank">csdn | React Native 全局变量的使用</a></p><p><a href="https://www.cnblogs.com/wukong1688/p/11009254.html" target="_blank">[RN] React Native 定义全局变量</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">一、导出和导入</span><br><span class="line">// 定义的页面 global.js</span><br><span class="line">var global = &#123;authorization: null,language: &apos;English&apos;,token:&apos;BMKHDHHE*&amp;^^@@&apos;&#125;;</span><br><span class="line">module.exports = global;</span><br><span class="line"></span><br><span class="line">// 调用的页面</span><br><span class="line">let global = require(&apos;./global&apos;);</span><br><span class="line">global.userToken = &apos;token&apos;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">二、声明全局变量（nodejs中的global对象：用于定义整个runtime时期的全局变量）        </span><br><span class="line">新建文件variables.js:</span><br><span class="line">global.variables = &#123;authorization: null,language: &apos;English&apos;&#125;  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">入口文件（比如App.js文件）导入，全局使用</span><br><span class="line">import &apos;./variables.js&apos;;     </span><br><span class="line">&#123;global.variables.language&#125;</span><br></pre></td></tr></table></figure></p><p><a href="https://www.jianshu.com/p/6f2f8a8a1984" target="_blank">React native全局变量的使用(跨组件的通信)</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/75b7f67a3733&quot; target=&quot;_blank&quot;&gt;简书 | React Native 全局变量的使用&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/u0128788
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] 检测设备状态</title>
-    <link href="http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298535000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298535000.html/</id>
-    <published>2019-09-12T14:28:55.000Z</published>
-    <updated>2019-09-12T14:28:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/b56207e3e346" target="_blank">React-Native 检测是否处于wifi状态</a><br><a href="https://blog.csdn.net/sinat_17775997/article/details/76577923" target="_blank">ReactNative判断网络状态</a><br><a href="https://reactnative.cn/docs/next/netinfo/" target="_blank">React-Native NetInfo</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/react-native-community/react-native-netinfo</span><br><span class="line"></span><br><span class="line">yarn add @react-native-community/netinfo</span><br><span class="line">react-native link @react-native-community/netinfo</span><br><span class="line">import NetInfo from &quot;@react-native-community/netinfo&quot;</span><br></pre></td></tr></table></figure><p>请求网络信息需要先在应用的AndroidManifest.xml文件中添加如下权限字段，申请相关权限：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import &#123;NetInfo&#125; from &apos;react-native&apos;;</span><br><span class="line"></span><br><span class="line">let wifiTip = false;</span><br><span class="line"></span><br><span class="line">export default class WifiDemo extends Component&lt;Props&gt; &#123;</span><br><span class="line"></span><br><span class="line">    //监听网络状态改变</span><br><span class="line">    handleConnectivityChange(status) &#123;</span><br><span class="line">        console.log(&apos;status change:&apos; + status);</span><br><span class="line">        if(status === &apos;wifi&apos; )&#123;</span><br><span class="line">            Alert.alert(&apos;网络检测&apos;, &apos;请网络是否wifi状态,注意您的流量哦&apos;, [</span><br><span class="line">                &#123;</span><br><span class="line">                    text: &apos;好的&apos;, onPress: ()=&gt; &#123;</span><br><span class="line">                    wifiTip = true;</span><br><span class="line">                &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            ])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentWillMount() &#123;</span><br><span class="line">        NetInfo.fetch().done((status)=&gt; &#123;</span><br><span class="line">            console.log(&apos;Status:&apos;+status);</span><br><span class="line">            if((status !== &apos;wifi&apos;  )&amp;&amp; wifiTip )&#123;</span><br><span class="line">                Alert.alert(&apos;网络检测&apos;, &apos;请网络是否wifi状态,注意您的流量哦&apos;, [</span><br><span class="line">                    &#123;</span><br><span class="line">                        text: &apos;不再提示&apos;, onPress: ()=&gt; &#123;</span><br><span class="line">                        wifiTip = false;</span><br><span class="line">                    &#125;&#125;,</span><br><span class="line">                    &#123;</span><br><span class="line">                        text: &apos;好的&apos;, onPress: ()=&gt; &#123;</span><br><span class="line">                            wifiTip = true;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                ])</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        //监听网络状态改变</span><br><span class="line">        NetInfo.addEventListener(&apos;change&apos;, this.handleConnectivityChange);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentWillUnmount() &#123;</span><br><span class="line">        //取消网络状态监听</span><br><span class="line">        NetInfo.removeEventListener(&apos;change&apos;, this.handleConnectivityChange);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/b56207e3e346&quot; target=&quot;_blank&quot;&gt;React-Native 检测是否处于wifi状态&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/sinat_17
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] 打包和安装到手机</title>
-    <link href="http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298534000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298534000.html/</id>
-    <published>2019-09-12T14:28:54.000Z</published>
-    <updated>2019-09-12T14:28:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/u011272795/article/details/77161942" target="_blank">react-native 打包apk 之 安卓离线包全过程</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native bundle --entry-file index.js --platform android --dev false --bundle-output ./android/app/src/main/assets/index.android.bundle --assets-dest ./android/app/src/main/res/</span><br></pre></td></tr></table></figure><p>打安卓包的话，react-native bundle 可以替换为 react-native unbundle 做到拆分功能<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native unbundle --entry-file index.js --platform android --dev false --bundle-output ./android/app/src/main/assets/index.android.bundle --assets-dest ./android/app/src/main/res/</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd android &amp;&amp; gradlew assembleRelease</span><br><span class="line">cd android &amp;&amp; gradlew assembleDebug</span><br></pre></td></tr></table></figure><p><a href="https://www.cnblogs.com/yindada/p/9838517.html" target="_blank">使用adb命令安装安卓apk包</a></p><p><a href="https://pan.baidu.com/s/1mgGkNZM" target="_blank">adb工具</a></p><p>命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">adb version</span><br><span class="line">adb devices</span><br><span class="line">#安装</span><br><span class="line">adb -s 设备编号 install apk的完整路径</span><br><span class="line">#卸载</span><br><span class="line">adb uninstall -r apk所在路径</span><br><span class="line">#覆盖安装</span><br><span class="line">adb install -r apk所在路径</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/u011272795/article/details/77161942&quot; target=&quot;_blank&quot;&gt;react-native 打包apk 之 安卓离线包全过程&lt;/a&gt;&lt;/p&gt;
-&lt;figure class=&quot;
-      
-    
-    </summary>
-    
-    
-      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] 编译打包</title>
-    <link href="http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298533000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298533000.html/</id>
-    <published>2019-09-12T14:28:53.000Z</published>
-    <updated>2019-09-12T14:28:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://reactnative.cn/docs/0.43/signed-apk-android.html" target="_blank">react-native官方打包</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd android &amp;&amp; ./gradlew assembleRelease</span><br><span class="line">cd android &amp;&amp; ./gradlew assembleDebug</span><br></pre></td></tr></table></figure></p><p><a href="https://blog.csdn.net/u011272795/article/details/77161942" target="_blank">react-native 安卓离线包</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">react-native bundle --entry-file index.js --platform android --dev false --bundle-output ./android/app/src/main/assets/index.android.bundle --assets-dest ./android/app/src/main/res/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#打安卓包的话，react-native bundle 可以替换为 react-native unbundle 做到拆分功能 </span><br><span class="line"></span><br><span class="line">react-native unbundle --entry-file index.js --platform android --dev false --bundle-output ./android/app/src/main/assets/index.android.bundle --assets-dest ./android/app/src/main/res/</span><br></pre></td></tr></table></figure></p><p>生成.keystore文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000</span><br><span class="line"></span><br><span class="line">--alias别名参数后面 在 应用签名时需要用到</span><br><span class="line"></span><br><span class="line">Key store path : 签名文件路径</span><br><span class="line">Password : 签名密码</span><br><span class="line">Confirm : 确认密码</span><br><span class="line">Alias : 别名</span><br><span class="line">Validity ( years ) : 有限期 （年）</span><br><span class="line">First and Last Name : 全名</span><br><span class="line">Organizational Unit : 组织单位</span><br><span class="line">Organization : 组织</span><br><span class="line">City or Locality : 城市或地方</span><br><span class="line">State or Province : 州或省</span><br><span class="line">Country Code(XX) : 国家代码</span><br></pre></td></tr></table></figure></p><p>gradle.properties<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">~/.gradle/gradle.properties</span><br><span class="line">或</span><br><span class="line">%USERPROFILE%/.gradle/gradle.properties</span><br><span class="line"></span><br><span class="line">MYAPP_RELEASE_STORE_FILE=my-release-key.keystore</span><br><span class="line">MYAPP_RELEASE_KEY_ALIAS=my-key-alias</span><br><span class="line">MYAPP_RELEASE_STORE_PASSWORD=*****</span><br><span class="line">MYAPP_RELEASE_KEY_PASSWORD=*****</span><br></pre></td></tr></table></figure></p><p>android/app/build.gradle<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    ...</span><br><span class="line">    defaultConfig &#123; ... &#125;</span><br><span class="line">    signingConfigs &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            storeFile file(MYAPP_RELEASE_STORE_FILE)</span><br><span class="line">            storePassword MYAPP_RELEASE_STORE_PASSWORD</span><br><span class="line">            keyAlias MYAPP_RELEASE_KEY_ALIAS</span><br><span class="line">            keyPassword MYAPP_RELEASE_KEY_PASSWORD</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            ...</span><br><span class="line">            signingConfig signingConfigs.release</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>生成签名apk<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#在RN项目根目录运行:</span><br><span class="line">#生产包</span><br><span class="line">cd android &amp;&amp; gradlew assembleRelease</span><br><span class="line">#测试包</span><br><span class="line">cd android &amp;&amp; gradlew assembleDebug</span><br></pre></td></tr></table></figure></p><p><a href="https://www.jianshu.com/p/d6af7197d49f" target="_blank">发布RN项目的安卓Release版本</a></p><p><a href="https://www.cnblogs.com/weizhxa/p/9950696.html" target="_blank">gradlew命令打包详细讲解</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gradlew compileDebug --stacktrace -info </span><br><span class="line">#或</span><br><span class="line">gradlew compileDebug --stacktrace -debug </span><br><span class="line"></span><br><span class="line">#显示的错误信息最详细，建议直接用这个</span><br><span class="line">gradlew compileDebugSources --stacktrace -info</span><br></pre></td></tr></table></figure></p><p><a href="https://blog.csdn.net/ddddwwww2/article/details/53085537" target="_blank">gradlew命令打包详细讲解</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1、全渠道release版本打包：</span><br><span class="line">./gradlew assembleRelease</span><br><span class="line"></span><br><span class="line">2、全渠道debug版本打包：</span><br><span class="line">./gradlew assembleDebug</span><br><span class="line"></span><br><span class="line">3、单个渠道release版本打包：</span><br><span class="line">./gradlew assembleGoogleRelease</span><br><span class="line"></span><br><span class="line">4、单个渠道debug版本打包：</span><br><span class="line">./gradlew assembleGoogleDebug</span><br><span class="line"></span><br><span class="line">5、单个渠道打包：</span><br><span class="line">./gradlew assembleGoogle</span><br><span class="line"></span><br><span class="line">这个会生成release和debug两个版本的apk</span><br></pre></td></tr></table></figure></p><p>以下估计不管用，没试过；这边是将原先安装在手机上的测试包卸载，再重新运行打包安装上的<br>报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Unable to load script.Make sure you&apos;re either running a metro server</span><br><span class="line">（run &apos;react-native start&apos; ） or that</span><br><span class="line">your bundle &apos;index.android.bundle&apos; is packaged correctly for release.</span><br></pre></td></tr></table></figure></p><p><a href="https://segmentfault.com/a/1190000019529044" target="_blank">segmentfault报以上错解决方案</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res</span><br><span class="line"></span><br><span class="line">react-native run-android</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://reactnative.cn/docs/0.43/signed-apk-android.html&quot; target=&quot;_blank&quot;&gt;react-native官方打包&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain
-      
-    
-    </summary>
-    
-    
-      <category term="android" scheme="http://brightereyer.xyz/tags/android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[react-native] Alert</title>
-    <link href="http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298532000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298532000.html/</id>
-    <published>2019-09-12T14:28:52.000Z</published>
-    <updated>2019-09-12T14:28:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Alert.alert(&apos;网络检测&apos;, &apos;请网络是否wifi状态,注意您的流量哦&apos;, [</span><br><span class="line">    &#123;</span><br><span class="line">        text: &apos;好的&apos;, onPress: () =&gt; &#123;</span><br><span class="line">            that.setState(&#123;</span><br><span class="line">                isWifiOnline: true,</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>]]></content>
+    <title>[蓝湖] 传动图</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133346000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133346000.html/</id>
+    <published>2019-09-22T06:22:26.000Z</published>
+    <updated>2019-09-22T06:22:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">可否增加上传GIF的动效</span><br><span class="line">https://lanhu.kf5.com/hc/community/question/1013760/</span><br><span class="line"></span><br><span class="line">ae转psd</span><br><span class="line">https://jingyan.baidu.com/article/00a07f3804ecf782d128dc74.html</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -408,18 +35,18 @@
     </summary>
     
     
-      <category term="android" scheme="http://brightereyer.xyz/tags/android/"/>
+      <category term="蓝湖" scheme="http://brightereyer.xyz/tags/%E8%93%9D%E6%B9%96/"/>
     
   </entry>
   
   <entry>
-    <title>[android] 打包编译</title>
-    <link href="http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298531000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298531000.html/</id>
-    <published>2019-09-12T14:28:51.000Z</published>
-    <updated>2019-09-12T14:28:51.000Z</updated>
+    <title>[xd] 自动切图</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133345000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133345000.html/</id>
+    <published>2019-09-22T06:22:25.000Z</published>
+    <updated>2019-09-22T06:22:25.000Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">android studio中使用terminal工具。在android studio最下面的底部菜单栏中有（如果没有那cmd中进入项目根目录后）：</span><br><span class="line"></span><br><span class="line">(1)windows中使用命令</span><br><span class="line">gradlew compileDebugSource --stacktrace -info</span><br><span class="line"></span><br><span class="line">(2)linux/mac中使用</span><br><span class="line">./gradlew compileDebugSource --stacktrace -info</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">linux/mac系统中出现 权限不够，请直接在Terminal中 执行 chmod +x gradlew</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">android.enableAapt2=true</span><br><span class="line">gradlew clean build</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Cannot resolve symbol &apos;R&apos;</span><br><span class="line"></span><br><span class="line">Build-&gt;ReBuild project</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">AdobeXD自动标注切图和交互原型插件摹客iDoc（内含福利）</span><br><span class="line">https://www.xdccpro.com/archives/2102</span><br><span class="line"></span><br><span class="line">https://idoc.mockplus.cn/download/xd</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -431,53 +58,427 @@
     </summary>
     
     
+      <category term="xd" scheme="http://brightereyer.xyz/tags/xd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[xd] 我的页面</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133344000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133344000.html/</id>
+    <published>2019-09-22T06:22:24.000Z</published>
+    <updated>2019-09-22T06:22:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.iguoguo.net/2018/120216.html" target="_blank">app setting设置页面 ui .xd素材下载</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.iguoguo.net/2018/120216.html&quot; target=&quot;_blank&quot;&gt;app setting设置页面 ui .xd素材下载&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="xd" scheme="http://brightereyer.xyz/tags/xd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[xd] 弹出式对话框素材</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133343000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133343000.html/</id>
+    <published>2019-09-22T06:22:23.000Z</published>
+    <updated>2019-09-22T06:22:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AdobeXD弹出式对话框素材</span><br><span class="line">https://blog.csdn.net/futudeniaodan/article/details/52317650</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="xd" scheme="http://brightereyer.xyz/tags/xd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[xd] 插件</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133342000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133342000.html/</id>
+    <published>2019-09-22T06:22:22.000Z</published>
+    <updated>2019-09-22T06:22:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Adobe XD 插件汇总</span><br><span class="line">https://www.xdccpro.com/archives/2093</span><br><span class="line"></span><br><span class="line">预览设计稿插件</span><br><span class="line">AdobeXD实时预览设计稿插件-DesignMirror</span><br><span class="line">https://www.xdccpro.com/archives/1146</span><br><span class="line"></span><br><span class="line">Axhub，一键复制iconfont图标到XD插件</span><br><span class="line">https://www.xdccpro.com/archives/318</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
+    </summary>
+    
+    
+      <category term="xd" scheme="http://brightereyer.xyz/tags/xd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[xd] web端设计功能整理</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133341000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133341000.html/</id>
+    <published>2019-09-22T06:22:21.000Z</published>
+    <updated>2019-09-22T06:22:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">0145Material UI原型</span><br><span class="line">https://xd.94xy.com/sucai/247.html</span><br><span class="line"></span><br><span class="line">https://pan.baidu.com/share/init?surl=gllOiIkzuTX5u3SUi-K-IQ</span><br><span class="line">6ebs</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">0427后台管理模板</span><br><span class="line">https://xd.94xy.com/sucai/190.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">AdobeXD弹出式对话框素材</span><br><span class="line">https://www.xdccpro.com/archives/1159</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">后台数据页面设计</span><br><span class="line">https://www.xdccpro.com/archives/770</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">AdobeXD网站组件</span><br><span class="line">https://www.xdccpro.com/archives/2125</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">饿了么前端设计规范组件ELEMENT UI</span><br><span class="line">https://www.xdccpro.com/archives/2078</span><br><span class="line"></span><br><span class="line">登录表单网页</span><br><span class="line">https://www.xdccpro.com/archives/678</span><br><span class="line"></span><br><span class="line">后台登录页面设计</span><br><span class="line">https://www.xdccpro.com/archives/681</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
+    </summary>
+    
+    
+      <category term="xd" scheme="http://brightereyer.xyz/tags/xd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[xd] app端设计功能整理</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133340000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133340000.html/</id>
+    <published>2019-09-22T06:22:20.000Z</published>
+    <updated>2019-09-22T06:22:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="" target="_blank"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line">0.手机状态栏</span><br><span class="line"></span><br><span class="line">1.顶部导航栏</span><br><span class="line"></span><br><span class="line">2.底部标签</span><br><span class="line"></span><br><span class="line">3.轮播图</span><br><span class="line"></span><br><span class="line">4.网格布局（网格图片 2列）</span><br><span class="line">https://www.xdccpro.com/archives/1136</span><br><span class="line"></span><br><span class="line">5.横向滚动</span><br><span class="line"></span><br><span class="line">6.整个页面上下滚动</span><br><span class="line"></span><br><span class="line">7.列表</span><br><span class="line"></span><br><span class="line">8.搜索框</span><br><span class="line"></span><br><span class="line">9.地址切换</span><br><span class="line"></span><br><span class="line">10.弹窗</span><br><span class="line"></span><br><span class="line">11.时间选择组件</span><br><span class="line"></span><br><span class="line">12.详细页</span><br><span class="line"></span><br><span class="line">13.表单页</span><br><span class="line"></span><br><span class="line">14.登录页</span><br><span class="line"></span><br><span class="line">15.订单页（顶部标签+列表）</span><br><span class="line"></span><br><span class="line">16.我的页面</span><br><span class="line"></span><br><span class="line">17.收货地址</span><br><span class="line"></span><br><span class="line">18.评论列表（头像+文字内容+评论图片）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">19.侧边栏</span><br><span class="line"></span><br><span class="line">20.数字键盘</span><br><span class="line">https://www.xdccpro.com/archives/1629</span><br><span class="line"></span><br><span class="line">21.全部键盘</span><br><span class="line"></span><br><span class="line">22.天气图标</span><br><span class="line">https://www.xdccpro.com/archives/1195</span><br><span class="line"></span><br><span class="line">23.按钮组件</span><br><span class="line">AdobeXD按钮组件大全</span><br><span class="line">https://www.xdccpro.com/archives/1155</span><br><span class="line"></span><br><span class="line">24.分享icon（微信、qq、没有支付宝）</span><br><span class="line">https://www.xdccpro.com/archives/818</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">0156外卖应用模板</span><br><span class="line">https://xd.94xy.com/sucai/282.html</span><br><span class="line">含横向滚动</span><br><span class="line">https://pan.baidu.com/share/init?surl=c9GyQaaB9w4z0I7JPXENBg</span><br><span class="line">1yke</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">0155社交UI模板</span><br><span class="line">https://xd.94xy.com/sucai/281.html</span><br><span class="line">含侧边栏和搜索框</span><br><span class="line">https://pan.baidu.com/share/init?surl=-ZAKUeRCAgfjAm8p4FDLLg</span><br><span class="line">8byv</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">100+交互设计UIKIT大礼包</span><br><span class="line">https://www.xdccpro.com/archives/1122</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">0225UI组件包</span><br><span class="line">https://xd.94xy.com/sucai/209.html</span><br><span class="line">时间组件+多项标签</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">0223WeUI 小程序控件</span><br><span class="line">https://xd.94xy.com/sucai/205.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">水果图标</span><br><span class="line">https://xd.94xy.com/sucai/74.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">WeUI基础样式库</span><br><span class="line">https://xd.94xy.com/sucai/72.html</span><br><span class="line"></span><br><span class="line">UIME应用130个页面</span><br><span class="line">https://xd.94xy.com/sucai/61.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">简约登录注册页+简约购物车</span><br><span class="line">https://www.xdccpro.com/archives/1095</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">轮播图+横向滚动</span><br><span class="line">https://www.xdccpro.com/archives/842</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">在线书城APPUI设计（含有搜索框+轮播图+横向滚动+底部标签）</span><br><span class="line">https://www.xdccpro.com/archives/1252</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">522个交互设计图标集（wifi、蓝牙、等手机icon）</span><br><span class="line">https://www.xdccpro.com/archives/1453</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;spa
+      
+    
+    </summary>
+    
+    
+      <category term="xd" scheme="http://brightereyer.xyz/tags/xd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[xd] AntDesign组件包</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133339000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133339000.html/</id>
+    <published>2019-09-22T06:22:19.000Z</published>
+    <updated>2019-09-22T06:22:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://xd.94xy.com/sucai/359.html" target="_blank">0167书店移动端UI Kit</a><br><a href="https://www.xdccpro.com/archives/1214" target="_blank">阿里设计规范AntDesign官方组件包</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://xd.94xy.com/sucai/359.html&quot; target=&quot;_blank&quot;&gt;0167书店移动端UI Kit&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.xdccpro.com/archives/1214&quot; targe
+      
+    
+    </summary>
+    
+    
+      <category term="xd" scheme="http://brightereyer.xyz/tags/xd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[windows] 安装watchman</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133338000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133338000.html/</id>
+    <published>2019-09-22T06:22:18.000Z</published>
+    <updated>2019-09-22T06:22:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://facebook.github.io/watchman/docs/install.html" target="_blank">watchman</a><br><a href="https://ci.appveyor.com/api/buildjobs/vkp4mmk1cri9jsel/artifacts/watchman.zip" target="_blank">Download latest watchman.zip</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://facebook.github.io/watchman/docs/install.html&quot; target=&quot;_blank&quot;&gt;watchman&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://ci.appveyor.com/api/buil
+      
+    
+    </summary>
+    
+    
+      <category term="windows" scheme="http://brightereyer.xyz/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[ui] ui中国</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133337000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133337000.html/</id>
+    <published>2019-09-22T06:22:17.000Z</published>
+    <updated>2019-09-22T06:22:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.ui.cn/detail/491864.html" target="_blank">中秋佳节 皓月当空</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.ui.cn/detail/491864.html&quot; target=&quot;_blank&quot;&gt;中秋佳节 皓月当空&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="ui" scheme="http://brightereyer.xyz/tags/ui/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[react-native] 监听设备返回键</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133321000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133321000.html/</id>
+    <published>2019-09-22T06:22:01.000Z</published>
+    <updated>2019-09-22T06:22:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/8ca9221c70fb" target="_blank">React Native开发-监听设备返回键</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/8ca9221c70fb&quot; target=&quot;_blank&quot;&gt;React Native开发-监听设备返回键&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[react-native] 加载图片</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133320000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133320000.html/</id>
+    <published>2019-09-22T06:22:00.000Z</published>
+    <updated>2019-09-22T06:22:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_42206243/article/details/98756202" target="_blank">react-native加载图片的几种方式</a><br>1、Image的缩放模式resizeMode<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#保持图片宽高比缩放直到图片宽和高都等于或者大于容器宽高，默认属性</span><br><span class="line">cover</span><br><span class="line"></span><br><span class="line">#保持图片宽高比缩放直到图片宽高小于或等于容器宽高</span><br><span class="line">contain</span><br><span class="line"></span><br><span class="line">#拉伸，不保持图片宽高比拉伸，直到图片铺满容器宽高</span><br><span class="line">stretch</span><br><span class="line"></span><br><span class="line">#维持图片宽高比平铺图片(只在ios平台可用)</span><br><span class="line">repeat</span><br><span class="line"></span><br><span class="line">#图片居中但是不拉伸</span><br><span class="line">center</span><br></pre></td></tr></table></figure></p><p>2、加载网络图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">使用例子:</span><br><span class="line">&lt;Image</span><br><span class="line">style=&#123;&#123;width:50,height:50,borderWidth:1&#125;&#125;</span><br><span class="line">source=&#123;&#123;uri:&apos;https://avatar.csdn.net/7/4/C/1_u013519084.jpg?1541993124&apos; &#125;&#125;</span><br><span class="line">/&gt;</span><br><span class="line">显示网络图片需要指定宽和高，否者不能显示出来</span><br></pre></td></tr></table></figure></p><p>3、显示andorid/ios原生图片，分别在andorid项目建立drawable文件夹放入图片，在Ios项目图片文件夹下放入同名图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source=&#123;&#123;uri:&apos;ic_bike&apos;&#125;&#125;</span><br><span class="line">#原生项目的图片和网路图片加载需要指定大小才可显示，style里使用tintColor可以图片资源着上新的颜色</span><br></pre></td></tr></table></figure></p><p>4、使用本地文件系统资源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">指定uri路径，andorid路径使用 &quot;file:///&quot;+路径，注意android 7.0手机文件权限问题</span><br></pre></td></tr></table></figure></p><p><a href="http://facebook.github.io/react-native/docs/images.html" target="_blank">英文文档解释</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_42206243/article/details/98756202&quot; target=&quot;_blank&quot;&gt;react-native加载图片的几种方式&lt;/a&gt;&lt;br&gt;1、Image的缩放模式resizeM
+      
+    
+    </summary>
+    
+    
+      <category term="react-native" scheme="http://brightereyer.xyz/tags/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[ps] 人物修图</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133289000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133289000.html/</id>
+    <published>2019-09-22T06:21:29.000Z</published>
+    <updated>2019-09-22T06:21:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_37815596/article/details/89737252" target="_blank">PS人物修图</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_37815596/article/details/89737252&quot; target=&quot;_blank&quot;&gt;PS人物修图&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="ps" scheme="http://brightereyer.xyz/tags/ps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[pr] 扭曲rgb转场</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133288000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133288000.html/</id>
+    <published>2019-09-22T06:21:28.000Z</published>
+    <updated>2019-09-22T06:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/av22628827" target="_blank">扭曲rgb转场</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/av22628827&quot; target=&quot;_blank&quot;&gt;扭曲rgb转场&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="pr" scheme="http://brightereyer.xyz/tags/pr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[c4d] 文章教程</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133287000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133287000.html/</id>
+    <published>2019-09-22T06:21:27.000Z</published>
+    <updated>2019-09-22T06:21:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.zcool.com.cn/discover/17!8!695!0!0!!!!2!-1!2" target="_blank">zcool</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Ant design</span><br><span class="line"></span><br><span class="line">Material</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.zcool.com.cn/discover/17!8!695!0!0!!!!2!-1!2&quot; target=&quot;_blank&quot;&gt;zcool&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;t
+      
+    
+    </summary>
+    
+    
+      <category term="c4d" scheme="http://brightereyer.xyz/tags/c4d/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[c4d] 动画</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133286000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133286000.html/</id>
+    <published>2019-09-22T06:21:26.000Z</published>
+    <updated>2019-09-22T06:21:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.c4d.cn/" target="_blank">c4d.cn</a><br><a href="https://www.newcger.com/works/26854.html" target="_blank">中秋c4d小动画</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.c4d.cn/&quot; target=&quot;_blank&quot;&gt;c4d.cn&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.newcger.com/works/26854.html&quot; target=&quot;_blank&quot;&gt;中秋c4d小动画&lt;/a
+      
+    
+    </summary>
+    
+    
+      <category term="c4d" scheme="http://brightereyer.xyz/tags/c4d/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[blog] flutter</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133285000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133285000.html/</id>
+    <published>2019-09-22T06:21:25.000Z</published>
+    <updated>2019-09-22T06:21:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://zhoushaoting.com/" target="_blank">pheromone.github.io</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://zhoushaoting.com/&quot; target=&quot;_blank&quot;&gt;pheromone.github.io&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://brightereyer.xyz/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[android] 引用so文件</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133284000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133284000.html/</id>
+    <published>2019-09-22T06:21:24.000Z</published>
+    <updated>2019-09-22T06:21:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/520c28b93971" target="_blank">Android如何引入及调用第三方.so文件</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">buildTypes &#123;</span><br><span class="line">release &#123;</span><br><span class="line">minifyEnabled false</span><br><span class="line">proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sourceSets &#123;</span><br><span class="line">    main &#123;</span><br><span class="line">        jniLibs.srcDirs = [&apos;jnilibs&apos;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/520c28b93971&quot; target=&quot;_blank&quot;&gt;Android如何引入及调用第三方.so文件&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr
+      
+    
+    </summary>
+    
+    
       <category term="android" scheme="http://brightereyer.xyz/tags/android/"/>
     
   </entry>
   
   <entry>
-    <title>[adobe] xd资源网</title>
-    <link href="http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298530000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298530000.html/</id>
-    <published>2019-09-12T14:28:50.000Z</published>
-    <updated>2019-09-12T14:28:50.000Z</updated>
+    <title>[android] 小票打印机</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133283000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133283000.html/</id>
+    <published>2019-09-22T06:21:23.000Z</published>
+    <updated>2019-09-22T06:21:23.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.xdccpro.com/archives/category/uikit" target="_blank">XD 资源网</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p>android wifi 打印机<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/search?utf8=%E2%9C%93&amp;q=android+wifi+%E6%89%93%E5%8D%B0%E6%9C%BA&amp;ref=simplesearch</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://www.xdccpro.com/archives/category/uikit&quot; target=&quot;_blank&quot;&gt;XD 资源网&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl
+        &lt;p&gt;android wifi 打印机&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td clas
       
     
     </summary>
     
     
-      <category term="adobe" scheme="http://brightereyer.xyz/tags/adobe/"/>
+      <category term="android" scheme="http://brightereyer.xyz/tags/android/"/>
     
   </entry>
   
   <entry>
-    <title>[adobe] xd素材</title>
-    <link href="http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298529000.html/"/>
-    <id>http://brightereyer.xyz/2019/09/12//articles/2019/09/12/1568298529000.html/</id>
-    <published>2019-09-12T14:28:49.000Z</published>
-    <updated>2019-09-12T14:28:49.000Z</updated>
+    <title>[android] 各个系统下ping IP+端口的方法</title>
+    <link href="http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133282000.html/"/>
+    <id>http://brightereyer.xyz/2019/09/22//articles/2019/09/22/1569133282000.html/</id>
+    <published>2019-09-22T06:21:22.000Z</published>
+    <updated>2019-09-22T06:21:22.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.xdccpro.com/archives/1403" target="_blank">60+猫狗宠物图标</a><br><a href="https://www.xdccpro.com/archives/2125" target="_blank">AdobeXD网站组件（表单相关）</a><br><a href="https://www.xdccpro.com/archives/1725" target="_blank">商业icon</a><br><a href="https://www.xdccpro.com/archives/1748" target="_blank">有星星</a><br><a href="https://www.xdccpro.com/archives/625" target="_blank">APP启动页</a><br><a href="https://www.xdccpro.com/archives/2256" target="_blank">QQ小程序设计规范UIKIT</a><br><a href="https://www.xdccpro.com/archives/1195" target="_blank">天气</a><br><a href="https://www.xdccpro.com/archives/1056" target="_blank">导航栏</a><br><a href="https://www.xdccpro.com/archives/720" target="_blank">MD风格聊天APP交互流程</a><br><a href="https://www.xdccpro.com/archives/653" target="_blank">日程APP设计（含搜索框）</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">手机顶部状态栏</span><br><span class="line">tab和列表</span><br><span class="line">表单组件</span><br><span class="line">横向和竖向列表</span><br><span class="line">模态框</span><br><span class="line">登录页</span><br><span class="line">时间控件</span><br><span class="line">顶部导航栏</span><br><span class="line">底部导航栏</span><br><span class="line">手机键盘</span><br></pre></td></tr></table></figure><p><a href="https://xd.94xy.com/" target="_blank">XD中文网</a></p><p><a href="https://www.xdccpro.com/archives/644" target="_blank">web登录页面</a><a href="https://www.xdccpro.com/archives/770" target="_blank">web网页（后台数据页面设计）</a><br><a href="https://www.xdccpro.com/archives/1159" target="_blank">AdobeXD弹出式对话框素材</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/ljp345775/article/details/82657591" target="_blank">android ping IP</a><br><a href="https://blog.csdn.net/qq_37751990/article/details/82286912" target="_blank">各个系统下ping IP+端口的方法</a><br><a href="https://blog.csdn.net/futudeniaodan/article/details/52317650" target="_blank">Java实现ping功能的三种方法</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://www.xdccpro.com/archives/1403&quot; target=&quot;_blank&quot;&gt;60+猫狗宠物图标&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.xdccpro.com/archives/2125&quot; target=&quot;
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/ljp345775/article/details/82657591&quot; target=&quot;_blank&quot;&gt;android ping IP&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/
       
     
     </summary>
     
     
-      <category term="adobe" scheme="http://brightereyer.xyz/tags/adobe/"/>
+      <category term="android" scheme="http://brightereyer.xyz/tags/android/"/>
     
   </entry>
   
