@@ -401,7 +401,7 @@
          
   
     <h1 itemprop="name">
-      <a  class="archive-article-title" href="/2019/03/06/articles/2019/03/06/1551874715000.html/">[小程序] 常用工具类及网站</a>
+      <a  class="archive-article-title" href="/2019/03/06/articles/2019/03/06/1551874715000.html/">[小程序] 登录注册页面设计</a>
     </h1>
   
 
@@ -434,7 +434,7 @@
          
   
     <h1 itemprop="name">
-      <a  class="archive-article-title" href="/2019/03/06/articles/2019/03/06/1551874715000.html/">[小程序] 登录注册页面设计</a>
+      <a  class="archive-article-title" href="/2019/03/06/articles/2019/03/06/1551874715000.html/">[小程序] 常用工具类及网站</a>
     </h1>
   
 
@@ -543,7 +543,7 @@
          
   
     <h1 itemprop="name">
-      <a  class="archive-article-title" href="/2018/10/03/articles/2018/10/03/1538523120000.html/">[小程序] wxs时间戳转换日期</a>
+      <a  class="archive-article-title" href="/2018/10/03/articles/2018/10/03/1538523120000.html/">[小程序] 微信小程序</a>
     </h1>
   
 
@@ -576,7 +576,7 @@
          
   
     <h1 itemprop="name">
-      <a  class="archive-article-title" href="/2018/10/03/articles/2018/10/03/1538523120000.html/">[小程序] 微信小程序</a>
+      <a  class="archive-article-title" href="/2018/10/03/articles/2018/10/03/1538523120000.html/">[小程序] wxs时间戳转换日期</a>
     </h1>
   
 
@@ -642,15 +642,88 @@
 </footer>
 
     </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
     <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?395fecde0b2581b6cf8a17ce6698298a";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?395fecde0b2581b6cf8a17ce6698298a";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
 </script>
+
+    <button class="hide-labels">TAG 开关</button>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(".article-info").toggle(200);
+            });
+        });
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
 
   </div>
 </body>

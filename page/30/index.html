@@ -670,7 +670,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/08/03/articles/2019/08/03/1564825449000.html/">[珠海] 社保卡</a>
+      <a  class="article-title" href="/2019/08/03/articles/2019/08/03/1564825449000.html/">[通行证] 港澳通行证</a>
     </h1>
   
 
@@ -681,7 +681,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="http://zh.bendibao.com/live/shebaoka/" target="_blank">珠海 - 社保卡</a></p>
+        <p><a href="http://zh.bendibao.com/live/2014813/40244.shtm" target="_blank">珠海市港澳通行证办理地点一览（上班时间+咨询电话）</a></p>
+<p><a href="https://s.nia.gov.cn/mps/bszy/wlgaot/sqgowl/201903/t20190313_1002.html" target="_blank">港澳通行证</a></p>
 
       
     </div>
@@ -692,7 +693,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/珠海/">珠海</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/通行证/">通行证</a></li></ul>
     </div>
 
       
@@ -732,7 +733,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/08/03/articles/2019/08/03/1564825449000.html/">[通行证] 港澳通行证</a>
+      <a  class="article-title" href="/2019/08/03/articles/2019/08/03/1564825449000.html/">[珠海] 社保卡</a>
     </h1>
   
 
@@ -743,8 +744,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="http://zh.bendibao.com/live/2014813/40244.shtm" target="_blank">珠海市港澳通行证办理地点一览（上班时间+咨询电话）</a></p>
-<p><a href="https://s.nia.gov.cn/mps/bszy/wlgaot/sqgowl/201903/t20190313_1002.html" target="_blank">港澳通行证</a></p>
+        <p><a href="http://zh.bendibao.com/live/shebaoka/" target="_blank">珠海 - 社保卡</a></p>
 
       
     </div>
@@ -755,7 +755,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/通行证/">通行证</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/珠海/">珠海</a></li></ul>
     </div>
 
       
@@ -943,15 +943,76 @@
 </footer>
 
     </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
     <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?395fecde0b2581b6cf8a17ce6698298a";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?395fecde0b2581b6cf8a17ce6698298a";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
 </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
 
   </div>
 </body>
