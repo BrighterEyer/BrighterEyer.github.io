@@ -72,7 +72,7 @@
           <h1 class="header-author"><a href="/">brightereyer</a></h1>
         </hgroup>
         
-        <p class="header-subtitle">用心看清世界，不要驻足停留</p>
+        <p class="header-subtitle">用心看清世界，驻足停留一会儿</p>
         
         
             <form>
@@ -220,7 +220,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                    <div id="js-aboutme">爱动漫,爱编程</div>
                 </section>
                 
             </div>
@@ -246,7 +246,7 @@
               <h1 class="header-author"><a href="/" title="回到主页">brightereyer</a></h1>
             </hgroup>
             
-            <p class="header-subtitle">用心看清世界，不要驻足停留</p>
+            <p class="header-subtitle">用心看清世界，驻足停留一会儿</p>
             
             <nav class="header-menu">
                 <ul>
@@ -298,7 +298,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/04/articles/2018/10/04/1538661785000.html/">[react-native] 极光推送</a>
+      <a  class="article-title" href="/2018/10/04/articles/2018/10/04/1538661785000.html/">[react-native] react-native填坑</a>
     </h1>
   
 
@@ -309,7 +309,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://www.jianshu.com/p/a71512a8f921" target="_blank">React Native 集成极光推送 jpush-react-native</a></p>
+        <p>Could not GET xxx, Received status code 400 from server Bad Request<br><a href="https://blog.csdn.net/lqx_sunhan/article/details/82633275" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#build.gradle中的maven url去远程下载,这里的本地缓存目录</span><br><span class="line">start %USERPROFILE%\.gradle\caches\modules-2\files-2.1</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">notepad %USERPROFILE%\.gradle\gradle.properties</span><br><span class="line"></span><br><span class="line">systemProp.https.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyPort=80</span><br><span class="line">#systemProp.http.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">systemProp.http.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">#systemProp.http.proxyPort=80</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/lqx_sunhan/article/details/82598600" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://services.gradle.org/distributions/</span><br><span class="line">distributionUrl=file:///&lt;...&gt;/gradle-4.0-all.zip</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.jianshu.com/p/b0bb42ed69d0" target="_blank">react-native-video的坑</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yarn add react-native-video</span><br><span class="line">react-native link react-native-video</span><br><span class="line"></span><br><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        mavenLocal()</span><br><span class="line">        jcenter()</span><br><span class="line">        maven &#123;</span><br><span class="line">            url &quot;https://maven.google.com&quot;</span><br><span class="line">            // url &quot;$rootDir/../node_modules/react-native/android&quot;</span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.sunqizheng.com/blog/687.html" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A problem occurred configuring project &apos;:app&apos;.</span><br><span class="line">&gt; failed to find Build Tools revision 26.0.1</span><br><span class="line">#android/app/build.gradle文件中buildToolsVersion &quot;26.0.1&quot;改为&quot;23.0.1&quot;</span><br><span class="line">#下载sdk26.0.1</span><br><span class="line"></span><br><span class="line">react-native工程android目录下新建:</span><br><span class="line">local.properties</span><br><span class="line">sdk.dir=&lt;Sdk路径&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/f409031mn/article/details/79522129" target="_blank">react-native-vector-icons的集成</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#npm install --save react-native-vector-icons</span><br><span class="line">#或</span><br><span class="line">npm install -g yarn</span><br><span class="line">yarn add react-native-vector-icons</span><br><span class="line"></span><br><span class="line">#Android平台上的配置</span><br><span class="line">#react-native link react-native-vector-icons</span><br><span class="line">#或</span><br><span class="line">npm install -g rnpm</span><br><span class="line">rnpm link react-native-vector-icons</span><br></pre></td></tr></table></figure></p>
+<p>react-devtools<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#npm install -g react-devtools #--save-dev</span><br><span class="line">yarn add react-devtools</span><br><span class="line"></span><br><span class="line">#chrome插件</span><br><span class="line">git clone https://github.com/facebook/react-devtools.git</span><br><span class="line">cd react-devtools</span><br><span class="line">npm --registry https://registry.npm.taobao.org install</span><br><span class="line">npm run build:extension:chrome</span><br><span class="line"></span><br><span class="line">#配置package.json中命令</span><br><span class="line">#编辑package.json文件,在scripts节点中增加devtools节点</span><br><span class="line">&quot;devtools&quot;: &quot;react-devtools&quot;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/u012539700/article/details/79951605" target="_blank">Could not find method google() for arguments [] on repository container</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#替换gradle-wrapper.properties里面</span><br><span class="line">distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/sinat_31057219/article/details/78660905" target="_blank">failed to find build tools revision 26.0.1</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过AS下载sdk tools 26.0.1</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.nativebase.io/" target="_blank">native-base官网</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#native-base是一个RN的基础组件集合</span><br><span class="line">npm install native-base --save</span><br><span class="line">npm install @expo/vector-icons --save</span><br></pre></td></tr></table></figure></p>
+<p>Unable to resolve module `@babel/runtime/helpers/interopRequireDefault<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall -g @babel/runtime</span><br><span class="line">npm install --save-dev @babel/runtime</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -360,7 +370,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2018/10/04/articles/2018/10/04/1538661785000.html/">[react-native] react-native填坑</a>
+      <a  class="article-title" href="/2018/10/04/articles/2018/10/04/1538661785000.html/">[react-native] 极光推送</a>
     </h1>
   
 
@@ -371,17 +381,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Could not GET xxx, Received status code 400 from server Bad Request<br><a href="https://blog.csdn.net/lqx_sunhan/article/details/82633275" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#build.gradle中的maven url去远程下载,这里的本地缓存目录</span><br><span class="line">start %USERPROFILE%\.gradle\caches\modules-2\files-2.1</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">notepad %USERPROFILE%\.gradle\gradle.properties</span><br><span class="line"></span><br><span class="line">systemProp.https.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyPort=80</span><br><span class="line">#systemProp.http.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">systemProp.http.nonProxyHosts=dl.google.com</span><br><span class="line">#systemProp.https.proxyHost=mirrors.neusoft.edu.cn</span><br><span class="line">#systemProp.http.proxyPort=80</span><br></pre></td></tr></table></figure>
-<p><a href="https://blog.csdn.net/lqx_sunhan/article/details/82598600" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://services.gradle.org/distributions/</span><br><span class="line">distributionUrl=file:///&lt;...&gt;/gradle-4.0-all.zip</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.jianshu.com/p/b0bb42ed69d0" target="_blank">react-native-video的坑</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yarn add react-native-video</span><br><span class="line">react-native link react-native-video</span><br><span class="line"></span><br><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        mavenLocal()</span><br><span class="line">        jcenter()</span><br><span class="line">        maven &#123;</span><br><span class="line">            url &quot;https://maven.google.com&quot;</span><br><span class="line">            // url &quot;$rootDir/../node_modules/react-native/android&quot;</span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://www.sunqizheng.com/blog/687.html" target="_blank">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A problem occurred configuring project &apos;:app&apos;.</span><br><span class="line">&gt; failed to find Build Tools revision 26.0.1</span><br><span class="line">#android/app/build.gradle文件中buildToolsVersion &quot;26.0.1&quot;改为&quot;23.0.1&quot;</span><br><span class="line">#下载sdk26.0.1</span><br><span class="line"></span><br><span class="line">react-native工程android目录下新建:</span><br><span class="line">local.properties</span><br><span class="line">sdk.dir=&lt;Sdk路径&gt;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/f409031mn/article/details/79522129" target="_blank">react-native-vector-icons的集成</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#npm install --save react-native-vector-icons</span><br><span class="line">#或</span><br><span class="line">npm install -g yarn</span><br><span class="line">yarn add react-native-vector-icons</span><br><span class="line"></span><br><span class="line">#Android平台上的配置</span><br><span class="line">#react-native link react-native-vector-icons</span><br><span class="line">#或</span><br><span class="line">npm install -g rnpm</span><br><span class="line">rnpm link react-native-vector-icons</span><br></pre></td></tr></table></figure></p>
-<p>react-devtools<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#npm install -g react-devtools #--save-dev</span><br><span class="line">yarn add react-devtools</span><br><span class="line"></span><br><span class="line">#chrome插件</span><br><span class="line">git clone https://github.com/facebook/react-devtools.git</span><br><span class="line">cd react-devtools</span><br><span class="line">npm --registry https://registry.npm.taobao.org install</span><br><span class="line">npm run build:extension:chrome</span><br><span class="line"></span><br><span class="line">#配置package.json中命令</span><br><span class="line">#编辑package.json文件,在scripts节点中增加devtools节点</span><br><span class="line">&quot;devtools&quot;: &quot;react-devtools&quot;</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/u012539700/article/details/79951605" target="_blank">Could not find method google() for arguments [] on repository container</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#替换gradle-wrapper.properties里面</span><br><span class="line">distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://blog.csdn.net/sinat_31057219/article/details/78660905" target="_blank">failed to find build tools revision 26.0.1</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过AS下载sdk tools 26.0.1</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://www.nativebase.io/" target="_blank">native-base官网</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#native-base是一个RN的基础组件集合</span><br><span class="line">npm install native-base --save</span><br><span class="line">npm install @expo/vector-icons --save</span><br></pre></td></tr></table></figure></p>
-<p>Unable to resolve module `@babel/runtime/helpers/interopRequireDefault<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall -g @babel/runtime</span><br><span class="line">npm install --save-dev @babel/runtime</span><br></pre></td></tr></table></figure></p>
+        <p><a href="https://www.jianshu.com/p/a71512a8f921" target="_blank">React Native 集成极光推送 jpush-react-native</a></p>
 
       
     </div>
@@ -961,66 +961,15 @@
 </footer>
 
     </div>
-    
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-<script src="/js/main.js"></script>
-
     <script>
-        $(document).ready(function() {
-            var backgroundnum = 1;
-            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-        })
-    </script>
-
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
-</div>
-<script>
-    $(document).ready(function() {
-        if ($("#comments").length < 1) {
-            $("#scroll > a:nth-child(2)").hide();
-        };
-    })
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?395fecde0b2581b6cf8a17ce6698298a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 </script>
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-
-  <script language="javascript">
-    $(function() {
-        $("a[title]").each(function() {
-            var a = $(this);
-            var title = a.attr('title');
-            if (title == undefined || title == "") return;
-            a.data('title', title).removeAttr('title').hover(
-            function() {
-                var offset = a.offset();
-                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
-                    top: offset.top - a.outerHeight() - 15,
-                    left: offset.left + a.outerWidth()/2 + 1
-                }).fadeIn(function() {
-                    var pop = $(this);
-                    setTimeout(function() {
-                        pop.remove();
-                    }, pop.text().length * 800);
-                });
-            }, function() {
-                $("#anchortitlecontainer").remove();
-            });
-        });
-    });
-</script>
-
 
   </div>
 </body>
